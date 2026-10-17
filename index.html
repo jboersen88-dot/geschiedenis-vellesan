@@ -101,10 +101,6 @@ h1{font-family:"Fraunces",Georgia,serif; font-weight:900; font-size:clamp(36px,6
 .chap.c-coral{--stripe:var(--coral)}
 .chap.c-teal{--stripe:var(--teal); color:var(--teal-ink)}
 .chap.c-teal .go{color:var(--teal-ink)}
-.chap.no-img{background:var(--brand); border:1px solid var(--brand-line)}
-.chap.no-img::after{background:none}
-.chap.no-img .chap-era{background:color-mix(in srgb, var(--brand-fg) 14%, transparent)}
-.chap.no-img p{color:var(--brand-muted)}
 @media (hover:hover) and (pointer:fine){
   .chap:hover img{transform:scale(1.06)}
   .chap:hover .go{transform:translate(4px,-4px)}
@@ -173,7 +169,8 @@ footer{padding-block:28px; display:flex; justify-content:space-between; flex-wra
         </div>
         <span class="go" aria-hidden="true">→</span>
       </a>
-      <a class="chap c-coral no-img" href="h3-sociale-verhoudingen.html" data-reveal>
+      <a class="chap c-coral" href="h3-sociale-verhoudingen.html" data-reveal>
+        <img src="img/geschiedenis/sociale-kwestie.jpg" alt="Jonge arbeidsters aan het werk in een vlasfabriek, 1900">
         <div class="chap-body">
           <span class="chap-era">Hoofdstuk 3</span>
           <h3>De sociale verhoudingen in Nederland</h3>

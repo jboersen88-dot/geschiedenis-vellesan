@@ -71,6 +71,13 @@ h1{font-family:"Fraunces",Georgia,serif; font-weight:900; font-size:clamp(30px,5
 .blok-head{display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; margin-bottom:6px}
 .blok-num{font-family:"Fraunces",Georgia,serif; font-weight:700; font-size:14px; color:var(--stripe)}
 .blok h2{font-family:"Fraunces",Georgia,serif; font-weight:700; font-size:23px; margin:4px 0 14px}
+.blok-grid{display:grid; grid-template-columns:1.3fr 1fr; gap:24px; align-items:start}
+@media (max-width:620px){.blok-grid{grid-template-columns:1fr}}
+.blok-img{border-radius:14px; overflow:hidden; border:1px solid var(--line)}
+.blok-img img{display:block; width:100%; height:100%; object-fit:cover; transition:transform 350ms var(--ease-out)}
+@media (hover:hover) and (pointer:fine){ .blok-img:hover img{transform:scale(1.045)} }
+@media (prefers-reduced-motion: reduce){ .blok-img img, .blok-img:hover img{transition:none; transform:none} }
+.img-credit{font-size:11.5px; color:var(--muted); margin-top:6px}
 .kernpunten{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:10px}
 .kernpunten li{display:flex; gap:10px; font-size:14.5px; line-height:1.55; color:var(--fg)}
 .kernpunten li::before{content:"—"; color:var(--stripe); flex-shrink:0; font-weight:700}
@@ -114,12 +121,20 @@ footer{padding-block:28px; display:flex; justify-content:space-between; flex-wra
     <article class="blok c" data-reveal>
       <div class="blok-head"><span class="blok-num">PARAGRAAF 1</span></div>
       <h2>De sociale kwestie</h2>
-      <ul class="kernpunten">
-        <li>Een groot overschot aan werknemers zorgt voor lage lonen, onzekerheid, lange werkdagen, korte pauzes en onveilige fabrieken.</li>
-        <li>Journalisten, schrijvers, artsen en pastoors beginnen hierover te schrijven — de sociale kwestie krijgt aandacht.</li>
-      </ul>
-      <div class="tags"><span class="tag">Sociale kwestie</span></div>
-      <div class="video"><span class="dot"></span> Video schooltv.nl toevoegen</div>
+      <div class="blok-grid">
+        <div>
+          <ul class="kernpunten">
+            <li>Een groot overschot aan werknemers zorgt voor lage lonen, onzekerheid, lange werkdagen, korte pauzes en onveilige fabrieken.</li>
+            <li>Journalisten, schrijvers, artsen en pastoors beginnen hierover te schrijven — de sociale kwestie krijgt aandacht.</li>
+          </ul>
+          <div class="tags"><span class="tag">Sociale kwestie</span></div>
+          <div class="video"><span class="dot"></span> Video schooltv.nl toevoegen</div>
+        </div>
+        <div>
+          <div class="blok-img"><img src="img/geschiedenis/sociale-kwestie.jpg" alt="Jonge arbeidsters aan het werk in het zwingelkot van een vlasfabriek, 1900"></div>
+          <p class="img-credit">Jonge arbeidsters in een vlasfabriek, 1900 (België) — Industriemuseum Gent, CC0</p>
+        </div>
+      </div>
     </article>
 
     <article class="blok t" data-reveal>
