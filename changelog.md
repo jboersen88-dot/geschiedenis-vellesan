@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-17 · structuur: Geschiedenis jaar 3 met vier boekjes
+
+- **`index.html` is nu het jaaroverzicht "Geschiedenis jaar 3"** met vier boekjes: boekje 1 "De industriële samenleving in Nederland" en boekje 2 "Sociale zekerheid en verzorgingsstaat in Nederland" zijn klikbaar, met hun vier hoofdstukken op de kaart. Boekje 3 en 4 staan als "Volgt in het tweede deel van het jaar".
+- **De startpagina van boekje 1 heet nu `boekje-1.html`** (verplaatst met `git mv`, inhoud gelijk; "Jaar 3" toegevoegd in de nav). De terug-links van app, kaart, beeldquiz, doe-boek, nakijken en verhaal wijzen naar `boekje-1.html`.
+- Boekje 2: de nav heeft "Jaar 3" en "Boekje 1"; het doe-boek H4 (boekje 1) is uit de games van boekje 2 gehaald.
+- Let op voor later: `boekje-2/app.html` bevat nog links naar `presenteer.html` en `filmvragen.html`. Die verschijnen pas als boekje 2 dia's (`DECK`) of films (`FILMS`) heeft. Pas dan `bouw.py` aan, zodat ze naar de dia's en films van boekje 2 wijzen.
+
 ## 2026-10-17 · boekje 2: Sociale zekerheid en verzorgingsstaat (eerste opzet)
 
 Bron: "Geschiedenis jaar 3 sociale zekerheid en verzorgingstaat - alle stukken tekst.docx" (OneDrive) en de Flow-beelden in Downloads. PowerPoints maakt de docent zelf; die zijn niet gemaakt.

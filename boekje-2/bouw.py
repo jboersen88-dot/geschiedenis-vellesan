@@ -54,7 +54,7 @@ s = re.sub(r"Alles voor het boekje De industriële samenleving op één plek:[^<
            "Alles voor het boekje Sociale zekerheid en verzorgingsstaat op één plek: leerdoelen om af te vinken, begrippen, een tijdlijn, oorzaak en gevolg, een vraagbank, games, de Kijkwijzer spotprenten, onderzoeksopdrachten en de examentraining. De PowerPoints volgen.", s)
 s = s.replace("De industriële samenleving", "Sociale zekerheid en verzorgingsstaat")
 s = re.sub(r"background-image:url\(https://drive\.google\.com/thumbnail\?id=[^)]*\)", "background-image:url(../img/flow/arbeidsbeurs.jpg)", s, count=1)
-s = s.replace('href="index.html"', 'href="index.html"')
+s = s.replace('href="boekje-1.html"', 'href="index.html"')
 
 # oefentoetsen van boekje 1 vervangen door de examentraining van boekje 2
 s = re.sub(r'<div class="row"><a class="btn" href="toets\.html\?t=t1">H1 \+ H2</a><a class="btn" href="toets\.html\?t=t2">H3 \+ H4</a><a class="btn" href="toets\.html\?t=t3">H1 t/m H4</a></div>',
@@ -66,6 +66,8 @@ s = s.replace("Meerkeuze kijkt zichzelf na, bij de open vragen kijk je zelf na m
 # games die alleen boekje 1-vragen hebben weglaten; kaart en beeldquiz passen bij H2
 s = re.sub(r'<a class="gtile" href="nakijken\.html".*?</a>', "", s, flags=re.S)
 s = re.sub(r'<a class="gtile" href="racer\.html".*?</a>', "", s, flags=re.S)
+s = re.sub(r'<a class="gtile" href="doeboek\.html".*?</a>', "", s, flags=re.S)
+assert "doeboek.html" not in s
 s = s.replace('href="kaart.html"', 'href="../kaart.html"').replace('href="beeldquiz.html"', 'href="../beeldquiz.html"')
 for gone in ["racer.html", "nakijken.html", "toets.html?t="]:
     assert gone not in s, gone
