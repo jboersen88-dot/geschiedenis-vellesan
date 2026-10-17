@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Presenteren · Geschiedenis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--coral:#ff8d90;--ease-out:cubic-bezier(.23,1,.32,1)}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:#0b231d;color:#e9f3ef;font-family:"Inter",system-ui,sans-serif;overflow:hidden}
+.stage{position:fixed;inset:0;bottom:44px}
+.stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;transform:scale(1.012);transition:opacity .3s var(--ease-out),transform .5s var(--ease-out)}
+.stage img.on{opacity:1;transform:none}
+.bar{position:fixed;left:0;right:0;bottom:0;height:44px;display:flex;align-items:center;gap:12px;padding:0 max(14px,env(safe-area-inset-left)) env(safe-area-inset-bottom) max(14px,env(safe-area-inset-right));background:#123a30;font-size:13px;font-weight:700;transition:opacity .4s var(--ease-out)}
+.bar.idle{opacity:0}
+.prog{flex:1;height:4px;border-radius:4px;background:rgba(255,255,255,.16);overflow:hidden}
+.prog i{display:block;height:100%;width:0;background:var(--coral);transition:width .3s var(--ease-out)}
+button,a{border:1px solid rgba(255,255,255,.22);background:transparent;color:#fff;border-radius:9px;padding:6px 10px;font:inherit;text-decoration:none;cursor:pointer}
+button:hover,a:hover{background:rgba(255,255,255,.12)}
+.cnt{font-variant-numeric:tabular-nums;min-width:64px}
+.hit{position:fixed;top:0;bottom:44px;width:30%;border:0;background:transparent;border-radius:0}
+.hit:hover{background:transparent}.hit.l{left:0}.hit.r{right:0}
+@media (prefers-reduced-motion:reduce){.stage img{transition:opacity .01ms}}
+</style>
+</head>
+<body>
+<div class="stage"><img alt=""><img alt=""></div>
+<button class="hit l" aria-label="Vorige dia"></button><button class="hit r" aria-label="Volgende dia"></button>
+<div class="bar"><a href="app.html">← Leeromgeving</a><span class="cnt"></span><div class="prog"><i></i></div><button id="fs">⛶ Schermvullend</button></div>
+<script>
+(function(){
+var DECK={"H1":21,"H2":9,"H3":27,"H4":44};
+var h=(new URLSearchParams(location.search).get("h")||"H1").toUpperCase();if(!DECK[h])h="H1";
+var N=DECK[h],i=1,imgs=document.querySelectorAll(".stage img"),front=0,cnt=document.querySelector(".cnt"),bar=document.querySelector(".prog i");
+document.title="Presenteren · "+h;
+function src(n){return "slides/"+h+"/"+(n<10?"0":"")+n+".jpg";}
+function go(n){n=Math.min(Math.max(1,n),N);var nx=imgs[1-front],cu=imgs[front];nx.onload=function(){nx.className="on";cu.className="";front=1-front;};nx.src=src(n);nx.alt="Dia "+n+" van "+N;i=n;cnt.textContent=n+" / "+N;bar.style.width=(n/N*100)+"%";if(n<N){new Image().src=src(n+1);}}
+document.querySelector(".hit.l").onclick=function(){go(i-1);};
+document.querySelector(".hit.r").onclick=function(){go(i+1);};
+document.getElementById("fs").onclick=function(){if(document.fullscreenElement)document.exitFullscreen();else document.documentElement.requestFullscreen&&document.documentElement.requestFullscreen().catch(function(){});};
+addEventListener("keydown",function(e){if(["ArrowRight"," ","PageDown","Enter"].includes(e.key)){e.preventDefault();go(i+1);}else if(["ArrowLeft","PageUp","Backspace"].includes(e.key)){e.preventDefault();go(i-1);}else if(e.key==="Home")go(1);else if(e.key==="End")go(N);else if(e.key==="f")document.getElementById("fs").click();});
+var sx=null;addEventListener("pointerdown",function(e){sx=e.clientX;});addEventListener("pointerup",function(e){if(sx===null)return;var d=e.clientX-sx;sx=null;if(Math.abs(d)>50)go(i+(d<0?1:-1));});
+var t,b=document.querySelector(".bar");function wake(){b.classList.remove("idle");clearTimeout(t);t=setTimeout(function(){b.classList.add("idle");},2500);}addEventListener("mousemove",wake);wake();
+go(1);
+})();
+</script>
+</body>
+</html>
