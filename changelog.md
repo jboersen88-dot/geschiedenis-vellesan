@@ -172,3 +172,4 @@ Aanleiding: de eerste versie was "een standaard website". Je bestaande Google Si
 - "Kopie van Hoofdstuk 1" (jaar 2) heet op de site "Hoofdstuk 1 · lesstof en PowerPoints".
 - Voorpagina: banner naar Economie.
 - Getest: alle 35 inhoudspagina's bouwen zonder fouten; kijkvenster, vinkjes, film; telefoon (375 px) zonder horizontale scroll.
+- 18 okt 01:45: tegel "Spotprent analyseren" in app.html noemt nu alle prenten (1903–1936, ook examenprenten). Gecontroleerd: alle 11 prenten en hun examenvragen vallen binnen de grenzen van de AI-nakijker.
