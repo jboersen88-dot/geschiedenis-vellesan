@@ -164,3 +164,11 @@ Aanleiding: de eerste versie was "een standaard website". Je bestaande Google Si
 - Niet gedaan: echte iPad-test, donkere modus per pagina, handmatige speeltest van de games. Oefentoets 3 vraag 3 (oorzaak-gevolgketen) heeft het juiste antwoord marginaal als langste (4 tekens); bewust zo gelaten.
 - `YT_ID` voor H1 en H2 staat nog leeg: vul die in zodra de YouTube-ID's bekend zijn.
 - 23:40: **alles naar Claude.** ai.js (Leg uit, nakijken.html, kaart.html, doeboek.html) en Leg uit in app.html en boekje-2/app.html gebruiken nu de Claude-Worker in plaats van Gemini; geen Google-adres meer in de repo. ai.js zet de oude aanroep om naar het nakijkverzoek (begrip = uitleg met 2 punten, hoofdstuk uit de paragraaf, boekje 2 vast op SZ). Getest op alle vijf de pagina's.
+
+## 18 okt, 00:30 — Economie (stuk 1 van 3): meneerboersen.nl nagebouwd
+- `economie/`: overzicht (index.html), jaarpagina (jaar.html?j=jaar-2|3|4) en hoofdstukpagina (h.html?p=…) in de huisstijl, opgebouwd uit `economie/data/paginas.json` = alle 41 Economie-pagina's die nu in het menu van meneerboersen.nl staan (opgehaald met `economie/data/crawl.py`): 303 Drive-bestanden, 30 YouTube-films, 98 links (Nearpod, Edpuzzle, Socrative, Schooltv), 836 leerdoelen.
+- Per hoofdstuk: foto-hero (Unsplash, gratis licentie; 14 thema's in `economie/img/`), navigatie per paragraaf, leerdoelen als afvinklijst (alleen op het apparaat), Drive-bestanden openen in een kijkvenster, YouTube pas laden na klik (youtube-nocookie), online oefeningen als knoppen.
+- 9 lesapps van meneerboersen.nl (jaar 2 H1–H4, jaar 4 H1, H2, H3, SE3 + EDU-Racer) staan in `economie/apps/` en zijn ingebed. Het Gemini-adres is eruit gehaald; ze vallen terug op hun lokale controle tot de koppeling met Claude (stuk 2).
+- "Kopie van Hoofdstuk 1" (jaar 2) heet op de site "Hoofdstuk 1 · lesstof en PowerPoints".
+- Voorpagina: banner naar Economie.
+- Getest: alle 35 inhoudspagina's bouwen zonder fouten; kijkvenster, vinkjes, film; telefoon (375 px) zonder horizontale scroll.

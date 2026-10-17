@@ -1,0 +1,1071 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hoofdstuk 3 Aan het werk</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+--plum:#3b1534;--plum-2:#5a1f4f;--berry:#a01a58;--berry-soft:#fbe8f0;
+--bg:#f7f3f1;--card:#ffffff;--ink:#251b25;--muted:#6d6270;--line:#ece3e7;
+--ok:#1d8a5a;--ok-soft:#e1f4ea;--bad:#c0392b;--bad-soft:#fbe9e7;--warn-soft:#fff3d6;
+--p1:#a01a58;--p2:#2f6fb0;--p3:#23866a;--p4:#d0731c;
+--shadow:0 1px 2px rgba(59,21,52,.06),0 8px 24px rgba(59,21,52,.07);
+--r:18px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font-family:"Plus Jakarta Sans",system-ui,-apple-system,sans-serif;font-size:15.5px;line-height:1.5}
+button{font:inherit;cursor:pointer;color:inherit}
+a{color:inherit}
+svg.i{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.app{height:100vh;min-height:620px;display:flex;flex-direction:column;max-width:1180px;margin:0 auto;padding:14px 14px 0}
+
+.top{background:linear-gradient(120deg,var(--plum) 0%,var(--plum-2) 55%,var(--berry) 100%);color:#fff;border-radius:22px;padding:16px 18px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.top:after{content:"";position:absolute;right:-60px;top:-80px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.18),rgba(255,255,255,0) 70%);pointer-events:none}
+.badge{width:52px;height:52px;border-radius:16px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);display:grid;place-items:center;font-weight:800;font-size:20px;letter-spacing:-.02em}
+.ttl{flex:1 1 220px;min-width:0}
+.ttl small{display:block;opacity:.75;font-size:12.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+.ttl b{display:block;font-size:22px;font-weight:800;letter-spacing:-.02em;line-height:1.2}
+.ring{--v:0;width:46px;height:46px;border-radius:50%;background:conic-gradient(#ffd6e8 calc(var(--v)*1%),rgba(255,255,255,.18) 0);display:grid;place-items:center;flex:none}
+.ring span{width:36px;height:36px;border-radius:50%;background:var(--plum-2);display:grid;place-items:center;font-size:11.5px;font-weight:800}
+.prog{display:flex;align-items:center;gap:10px;font-size:13px;opacity:.95}
+nav.tabs{display:flex;gap:6px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);padding:5px;border-radius:14px;flex:1 1 100%;flex-wrap:wrap}
+nav.tabs button{flex:1 1 auto;display:flex;align-items:center;justify-content:center;gap:8px;border:0;background:transparent;color:rgba(255,255,255,.85);padding:10px 12px;border-radius:10px;font-weight:700;font-size:14.5px;white-space:nowrap;transition:background .15s}
+nav.tabs button:hover{background:rgba(255,255,255,.12);color:#fff}
+nav.tabs button[aria-selected=true]{background:#fff;color:var(--plum);box-shadow:0 2px 8px rgba(0,0,0,.15)}
+
+main{flex:1;overflow:auto;padding:16px 2px 20px;scroll-behavior:smooth}
+.panel[hidden]{display:none}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow)}
+.pad{padding:20px}
+h2{font-size:22px;letter-spacing:-.02em;margin:0 0 4px;color:var(--plum)}
+h3{font-size:16.5px;margin:0 0 6px;color:var(--plum);letter-spacing:-.01em}
+.muted{color:var(--muted)}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--berry)}
+.btn{display:inline-flex;align-items:center;gap:8px;border:0;border-radius:12px;padding:10px 16px;font-weight:700;background:var(--berry);color:#fff;text-decoration:none;font-size:14.5px}
+.btn:hover{filter:brightness(1.07)}
+.btn.ghost{background:#fff;color:var(--plum);border:1.5px solid var(--line)}
+.btn.ghost:hover{border-color:var(--berry)}
+.btn.soft{background:var(--berry-soft);color:var(--berry)}
+.btn:disabled{opacity:.45;cursor:default;filter:none}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:800;color:#fff;border-radius:8px;padding:3px 8px}
+
+.hero{display:grid;grid-template-columns:1.4fr 1fr;gap:16px;margin-bottom:16px}
+.hero .intro{padding:24px;position:relative;overflow:hidden}
+.hero .intro h2{font-size:28px;line-height:1.15;margin:6px 0 10px}
+.hero .intro p{margin:0 0 16px;color:var(--muted);max-width:520px}
+.blob{position:absolute;right:-30px;bottom:-40px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#ffd6e8,#fbe8f0 60%,transparent 61%);opacity:.9}
+.coins{position:absolute;right:30px;bottom:26px;display:flex;gap:6px;align-items:flex-end}
+.coins i{display:block;width:30px;border-radius:7px;background:linear-gradient(180deg,#f2b134,#d99412);box-shadow:inset 0 -3px 0 rgba(0,0,0,.12)}
+.route{padding:20px;display:flex;flex-direction:column;gap:10px}
+.step{display:flex;gap:12px;align-items:center;border:1.5px solid var(--line);border-radius:14px;padding:12px 14px;background:#fff;text-align:left;width:100%}
+.step:hover{border-color:var(--berry);transform:translateY(-1px)}
+.step .n{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;font-weight:800;color:#fff;flex:none}
+.step b{display:block}
+.step span{font-size:13px;color:var(--muted)}
+.step svg{margin-left:auto;color:var(--muted)}
+.pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.pcard{padding:0;overflow:hidden;display:flex;flex-direction:column;text-align:left;border:1px solid var(--line);background:#fff;border-radius:var(--r);box-shadow:var(--shadow);transition:transform .15s}
+.pcard:hover{transform:translateY(-3px)}
+.pcard .band{height:84px;position:relative;display:flex;align-items:flex-end;padding:12px 14px;color:#fff}
+.pcard .band b{font-size:34px;font-weight:800;letter-spacing:-.03em;line-height:1}
+.pcard .band:after{content:"";position:absolute;right:-20px;top:-20px;width:90px;height:90px;border-radius:50%;background:rgba(255,255,255,.16)}
+.pcard .body{padding:14px;display:flex;flex-direction:column;gap:8px;flex:1}
+.pcard .body h3{margin:0}
+.pcard .body p{margin:0;font-size:13.5px;color:var(--muted);flex:1}
+.bar{height:7px;background:#f1e8ec;border-radius:9px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;border-radius:9px;transition:width .3s}
+.pcard .meta{display:flex;justify-content:space-between;font-size:12.5px;color:var(--muted)}
+.tip{margin-top:14px;font-size:13px;color:var(--muted);display:flex;gap:8px;align-items:center}
+
+.les{display:grid;grid-template-columns:220px 1fr;gap:16px;align-items:start}
+.rail{padding:10px;display:flex;flex-direction:column;gap:6px;position:sticky;top:0}
+.rail button{display:flex;gap:10px;align-items:center;border:0;background:transparent;border-radius:12px;padding:10px;text-align:left;font-weight:700;font-size:14px;color:var(--ink)}
+.rail button .dot{width:30px;height:30px;border-radius:9px;color:#fff;display:grid;place-items:center;font-size:12px;font-weight:800;flex:none}
+.rail button[aria-current=true]{background:var(--berry-soft)}
+.rail button:hover{background:#f6eef2}
+.rail .mini{font-size:11.5px;color:var(--muted);font-weight:600;display:block}
+.viewer{position:relative;width:100%;aspect-ratio:16/9;background:#1d1220;border-radius:14px;overflow:hidden}
+.viewer iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.viewer .ph{position:absolute;inset:0;display:grid;place-items:center;color:#fff;opacity:.7;font-weight:700}
+.lhead{display:flex;justify-content:space-between;align-items:flex-end;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.two{display:grid;grid-template-columns:1.3fr 1fr;gap:14px;margin-top:14px}
+.qlist{display:flex;flex-direction:column;gap:8px}
+.q{display:flex;gap:10px;align-items:flex-start;border:1.5px solid var(--line);border-radius:12px;padding:10px 12px;background:#fff;text-align:left;font-size:14px}
+.q .tick{width:22px;height:22px;border-radius:7px;border:2px solid #d9c9d1;display:grid;place-items:center;flex:none;margin-top:1px;color:#fff}
+.q.on{border-color:var(--ok);background:var(--ok-soft)}
+.q.on .tick{background:var(--ok);border-color:var(--ok)}
+.q .tick svg{width:14px;height:14px;opacity:0}
+.q.on .tick svg{opacity:1}
+.goals label{display:flex;gap:9px;align-items:flex-start;padding:7px 0;border-top:1px dashed var(--line);font-size:13.5px;cursor:pointer}
+.goals input{accent-color:var(--berry);width:16px;height:16px;margin-top:3px;flex:none}
+.goals label.done span{color:var(--muted);text-decoration:line-through}
+
+.sub{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+.sub button,.filters button{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:7px 14px;font-weight:700;font-size:13.5px;color:var(--muted)}
+.sub button[aria-selected=true],.filters button.on{background:var(--plum);border-color:var(--plum);color:#fff}
+.lab[hidden]{display:none}
+.filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.cgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}
+.flip{perspective:900px;height:168px;cursor:pointer}
+.flip .in{position:relative;width:100%;height:100%;transition:transform .45s;transform-style:preserve-3d}
+.flip.open .in{transform:rotateY(180deg)}
+.flip .f,.flip .b{position:absolute;inset:0;backface-visibility:hidden;border-radius:16px;padding:14px 16px;display:flex;flex-direction:column;border:1px solid var(--line);background:#fff;box-shadow:var(--shadow)}
+.flip .f{justify-content:center}
+.flip .f strong{font-size:18px;color:var(--plum);margin-top:6px;letter-spacing:-.01em}
+.flip .f small{color:var(--muted);margin-top:auto;font-size:12px}
+.flip .b{transform:rotateY(180deg);background:#fff9fc;font-size:14px;overflow:auto}
+.flip .b em{display:block;margin-top:6px;color:var(--muted);font-style:normal;font-size:13px}
+.flip.known .f{border-color:var(--ok);box-shadow:inset 0 0 0 1.5px var(--ok)}
+.flip .chk{position:absolute;top:10px;right:12px;font-size:12px;font-weight:800;color:var(--ok)}
+.ex{max-width:780px}
+.qq{font-size:18px;font-weight:700;margin:2px 0 14px;letter-spacing:-.01em}
+.opts{display:grid;gap:8px}
+.opt{border:2px solid var(--line);background:#fff;border-radius:12px;padding:12px 14px;text-align:left;font-weight:700}
+.opt:hover:not(:disabled){border-color:var(--berry)}
+.opt.f{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:14.5px}
+.opt.right{border-color:var(--ok);background:var(--ok-soft)}
+.opt.wrong{border-color:var(--bad);background:var(--bad-soft)}
+.opt:disabled{cursor:default}
+.fb{margin-top:12px;border-radius:12px;padding:12px 14px;font-size:14.5px}
+.fb.ok{background:var(--ok-soft);color:#135c3c}.fb.no{background:var(--bad-soft);color:#7d2219}.fb.mid{background:var(--warn-soft);color:#6b4500}
+code,.calc{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:14px}
+.calc{display:block;margin-top:6px;white-space:pre-wrap}
+.inp{display:flex;align-items:center;border:2px solid var(--line);border-radius:12px;background:#fff;padding:0 12px}
+.inp:focus-within{border-color:var(--berry)}
+.inp b{color:var(--muted)}
+.inp input{border:0;outline:0;font:inherit;font-size:18px;padding:9px 6px;width:140px;background:transparent}
+.score{display:flex;gap:14px;color:var(--muted);font-size:13.5px;margin-bottom:10px;flex-wrap:wrap}
+.score b{color:var(--ink)}
+.steps{background:#f8f1f5;border-radius:14px;padding:12px 16px;font-size:14px;margin-bottom:14px}
+.steps ol{margin:6px 0 0;padding-left:20px}
+.statement{border-collapse:collapse;margin:4px 0 6px;font-size:15px;min-width:280px}
+.statement td{padding:7px 12px;border-bottom:1px solid var(--line)}
+.statement td:last-child{text-align:right;font-family:ui-monospace,Menlo,Consolas,monospace}
+.statement tr.ask td{font-weight:800;color:var(--berry)}
+.done-card{text-align:center;padding:26px}
+.done-card .big{font-size:44px;font-weight:800;color:var(--plum)}
+
+
+.qhome{text-align:center;padding:18px 10px}
+.qbig{font-size:46px;line-height:1}
+.qhome h3{font-size:22px;margin:8px 0 4px}
+.qhome p{max-width:460px;margin:0 auto 14px}
+.qtop{display:flex;align-items:center;gap:12px}
+.qprog{flex:1;height:8px;background:#f1e8ec;border-radius:9px;overflow:hidden}
+.qprog i{display:block;height:100%;background:linear-gradient(90deg,var(--berry),#e2457f);border-radius:9px}
+.opt{display:flex;gap:12px;align-items:center;min-height:52px;touch-action:manipulation}
+.ol{width:30px;height:30px;border-radius:9px;background:#f4ecf0;color:var(--plum);display:grid;place-items:center;font-weight:800;font-size:13px;flex:none}
+.opt.right .ol{background:var(--ok);color:#fff}.opt.wrong .ol{background:var(--bad);color:#fff}
+.review{margin-top:16px;text-align:left}
+.review h3{margin-bottom:8px}
+.rv{border:1.5px solid var(--line);border-radius:12px;padding:10px 12px;margin-bottom:8px;font-size:14px;background:#fff}
+.confetti{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:50}
+.confetti i{position:absolute;top:-20px;width:10px;height:16px;border-radius:3px;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(1300px) rotate(720deg);opacity:.6}}
+.gpick{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.gtile{border:0;border-radius:22px;padding:26px;text-align:left;color:#fff;display:flex;flex-direction:column;gap:8px;min-height:230px;box-shadow:var(--shadow);touch-action:manipulation;transition:transform .15s}
+.gtile:hover{transform:translateY(-3px)}
+.gtile[data-game=swipe]{background:linear-gradient(135deg,#3b1534,#a01a58)}
+.gtile[data-game=memory]{background:linear-gradient(135deg,#1f4f86,#23866a)}
+.gtile .gico{font-size:44px}
+.gtile b{font-size:24px;letter-spacing:-.02em}
+.gtile span{opacity:.9}
+.gtile em{margin-top:auto;font-style:normal;font-weight:800;background:rgba(255,255,255,.16);align-self:flex-start;border-radius:999px;padding:5px 12px;font-size:13px}
+.arena{position:relative;border-radius:22px;background:radial-gradient(circle at 50% 20%,#6a2559,#2a0f26 70%);color:#fff;padding:16px;min-height:600px;display:flex;flex-direction:column;overflow:hidden;user-select:none;-webkit-user-select:none}
+.arena.lvlup:before{content:"";position:absolute;inset:0;background:rgba(255,255,255,.12);animation:flash .5s ease-out forwards;pointer-events:none}
+@keyframes flash{to{opacity:0}}
+.hud{display:flex;gap:14px;align-items:center;justify-content:space-between;font-size:15px;flex-wrap:wrap}
+.hud b{font-size:22px;font-variant-numeric:tabular-nums}
+.lvl{background:rgba(255,255,255,.14);padding:4px 12px;border-radius:999px;font-weight:800;font-size:13px}
+.mult{background:rgba(255,255,255,.14);padding:4px 12px;border-radius:999px;font-weight:800}
+.gstop{border:0;background:rgba(255,255,255,.14);color:#fff;width:38px;height:38px;border-radius:12px;font-size:16px;touch-action:manipulation}
+.mult.hot{background:#f2b134;color:#3b1534;animation:pulse .6s ease-in-out infinite alternate}
+@keyframes pulse{to{transform:scale(1.12)}}
+.tbar{height:8px;background:rgba(255,255,255,.15);border-radius:9px;margin:12px 0 10px;overflow:hidden}
+.tbar i{display:block;height:100%;background:linear-gradient(90deg,#f2b134,#e2457f);transition:width 1s linear}
+.zones{flex:1;display:grid;grid-template-columns:1fr 1.4fr 1fr;gap:14px;align-items:stretch}
+.zone{border:2px dashed rgba(255,255,255,.35);background:rgba(255,255,255,.06);color:#fff;border-radius:20px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;font-size:15px;padding:10px;touch-action:manipulation;transition:background .15s,transform .15s}
+.zone b{font-size:20px;text-align:center;line-height:1.2}
+.zone span{font-size:28px;opacity:.7}
+.zone.near{background:rgba(255,255,255,.18);transform:scale(1.03)}
+.zone.good{background:rgba(29,138,90,.55);border-color:#7be0b0}
+.zone.bad{background:rgba(192,57,43,.55);border-color:#ff9a8f;animation:shake .3s}
+@keyframes shake{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.deck{display:grid;place-items:center;position:relative}
+.scard{width:100%;max-width:320px;aspect-ratio:4/3.2;background:#fff;color:var(--ink);border-radius:24px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;box-shadow:0 18px 40px rgba(0,0,0,.35);cursor:grab;touch-action:none;padding:16px;text-align:center}
+.scard.enter{animation:pop .22s ease-out}
+@keyframes pop{from{transform:scale(.85);opacity:0}}
+.scard .emo{font-size:64px;line-height:1}
+.scard b{font-size:22px;letter-spacing:-.01em}
+.scard.ok{box-shadow:0 0 0 6px #7be0b0}.scard.no{box-shadow:0 0 0 6px #ff9a8f}
+.ghint{text-align:center;opacity:.7;font-size:13px;margin-top:12px}
+.toast{position:absolute;left:50%;bottom:58px;transform:translateX(-50%);background:#fff;color:var(--bad);font-weight:800;padding:8px 16px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.3);animation:pop .2s}
+.gend{text-align:center;padding:20px}
+.gend .big{font-size:52px;font-weight:800;color:var(--plum)}
+.mhud{display:flex;gap:16px;align-items:center;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap}
+.mgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.mtile{position:relative;height:138px;border:0;border-radius:16px;padding:0;background:transparent;perspective:800px;touch-action:manipulation}
+.mtile .back,.mtile .front{position:absolute;inset:0;border-radius:16px;display:grid;place-items:center;padding:10px;backface-visibility:hidden;transition:transform .35s}
+.mtile .back{background:linear-gradient(135deg,#1f4f86,#23866a);color:#fff;font-size:34px;font-weight:800}
+.mtile .front{background:#fff;border:2px solid var(--line);transform:rotateY(180deg);font-size:13px;line-height:1.35;color:var(--ink)}
+.mtile.term .front b{font-size:17px;color:var(--plum)}
+.mtile.open .back,.mtile.done .back{transform:rotateY(180deg)}
+.mtile.open .front,.mtile.done .front{transform:rotateY(360deg)}
+.mtile.done .front{border-color:var(--ok);background:var(--ok-soft)}
+.mtile.miss .front{border-color:var(--bad);background:var(--bad-soft)}
+@media (max-width:700px){
+.gpick{grid-template-columns:1fr}
+.zones{grid-template-columns:1fr 1fr;grid-template-areas:"deck deck" "l r"}
+.deck{grid-area:deck;min-height:260px}.zone.left{grid-area:l}.zone.right{grid-area:r}
+.zone{min-height:96px}
+.mgrid{grid-template-columns:repeat(3,1fr)}
+}
+
+.tgrid{display:grid;grid-template-columns:1.25fr 1fr;gap:16px;align-items:start}
+.timer{display:flex;align-items:center;gap:16px}
+.clock{--v:100;width:110px;height:110px;border-radius:50%;background:conic-gradient(var(--berry) calc(var(--v)*1%),#f1e8ec 0);display:grid;place-items:center;flex:none}
+.clock span{width:90px;height:90px;border-radius:50%;background:#fff;display:grid;place-items:center;font-weight:800;font-size:22px;color:var(--plum);font-variant-numeric:tabular-nums}
+.doc{position:relative;width:100%;height:560px;border-radius:14px;overflow:hidden;background:#eee;border:1px solid var(--line)}
+.doc iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.locked{height:220px;border-radius:14px;border:2px dashed #e1cfd8;display:grid;place-items:center;text-align:center;padding:20px;color:var(--muted);background:repeating-linear-gradient(45deg,#fff,#fff 10px,#fcf6f9 10px,#fcf6f9 20px)}
+.locked svg{width:28px;height:28px;color:var(--berry)}
+.grade{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.grade .out{font-size:34px;font-weight:800;color:var(--plum);min-width:70px}
+details{border:1px solid var(--line);border-radius:14px;padding:12px 16px;background:#fff}
+summary{cursor:pointer;font-weight:700;color:var(--plum)}
+.links{display:flex;flex-direction:column;gap:8px;margin-top:10px}
+.links a{display:flex;align-items:center;gap:10px;padding:10px 12px;border:1.5px solid var(--line);border-radius:12px;text-decoration:none;font-weight:600}
+.links a:hover{border-color:var(--berry)}
+
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.film .viewer{border-radius:14px 14px 0 0}
+.film .txt{padding:16px 18px}
+.poster{position:absolute;inset:0;border:0;padding:0;background:linear-gradient(135deg,#3b1534,#a01a58);display:grid;place-items:center;cursor:pointer}
+.poster img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.poster .play{position:relative;width:76px;height:76px;border-radius:50%;background:rgba(255,255,255,.92);display:grid;place-items:center;box-shadow:0 8px 30px rgba(0,0,0,.35);transition:transform .15s}
+.poster:hover .play{transform:scale(1.08)}
+.poster .play svg{width:32px;height:32px;fill:var(--berry);margin-left:4px}
+.alt{display:inline-block;margin-top:10px;font-size:13px;color:var(--muted)}
+
+@media (max-width:900px){
+.hero,.tgrid,.two,.fgrid{grid-template-columns:1fr}
+.pgrid{grid-template-columns:1fr 1fr}
+.les{grid-template-columns:1fr}
+.rail{flex-direction:row;overflow:auto;position:static}
+.rail button{flex:none}
+}
+@media (max-width:560px){
+.pgrid{grid-template-columns:1fr}
+nav.tabs button span{display:none}
+.ttl b{font-size:19px}
+.blob,.coins{display:none}
+.hero .intro h2{font-size:24px}
+}
+@media (max-width:900px){.hero .intro p{max-width:none}.coins{opacity:.35}}
+
+:root{--p1:#a01a58;--p2:#d0731c;--p3:#7b3fa6;--p4:#c43d3d;--p5:#2f6fb0;--p6:#23866a;--p7:#0f7c8c;--p8:#4a4fb0}
+.chh{display:flex;align-items:center;gap:10px;margin:20px 2px 10px;font-size:17px;color:var(--plum)}
+.chh:first-of-type{margin-top:4px}
+.chh .cn{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;color:#fff;font-size:13px;font-weight:800;flex:none}
+.chh small{font-weight:600;color:var(--muted);font-size:13px;margin-left:auto}
+.checkcard{margin-top:18px}
+.checkhead{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap;margin-bottom:10px}
+.checkhead .bar{width:220px;max-width:100%}
+.clist{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.citem{display:flex;gap:10px;align-items:center;border:1.5px solid var(--line);border-radius:12px;padding:9px 10px 9px 12px;background:#fff;font-size:14px}
+.citem.on{border-color:var(--ok);background:var(--ok-soft)}
+.citem .tick{width:24px;height:24px;border-radius:7px;border:2px solid #d9c9d1;display:grid;place-items:center;flex:none;color:#fff;background:#fff;padding:0}
+.citem.on .tick{background:var(--ok);border-color:var(--ok)}
+.citem .tick svg{width:14px;height:14px;opacity:0}
+.citem.on .tick svg{opacity:1}
+.citem .ctxt{flex:1;min-width:0}
+.citem .go{border:0;background:var(--berry-soft);color:var(--berry);font-weight:800;font-size:12.5px;border-radius:999px;padding:5px 10px;white-space:nowrap;flex:none}
+.citem .go:hover{filter:brightness(.97)}
+.rail .rh{font-size:11.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:8px 10px 2px}
+.xtra{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.xtra .xi{display:flex;align-items:center;gap:8px;border:1.5px solid var(--line);border-radius:12px;padding:8px 10px;background:#fff;font-size:13.5px;font-weight:700}
+.xtra .xi a{font-size:12.5px;font-weight:800;text-decoration:none;color:var(--berry);background:var(--berry-soft);border-radius:999px;padding:4px 10px}
+.vpick{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px}
+.vbtn{border:2px solid var(--line);border-radius:16px;padding:14px;background:#fff;text-align:left;display:flex;flex-direction:column;gap:4px;touch-action:manipulation;transition:border-color .15s,transform .15s}
+.vbtn:hover{transform:translateY(-2px);border-color:#e3c3d3}
+.vbtn[aria-pressed=true]{border-color:var(--berry);background:var(--berry-soft)}
+.vbtn b{font-size:18px;color:var(--plum);letter-spacing:-.01em}
+.vbtn span{font-size:13px;font-weight:700}
+.vbtn small{font-size:12.5px;color:var(--muted)}
+.lvls{display:flex;gap:6px;flex-wrap:wrap;margin-top:4px}
+.lvls i{font-style:normal;font-size:11.5px;font-weight:800;border-radius:7px;padding:2px 7px;background:#f1e8ec;color:var(--plum)}
+.lvls i.v{background:var(--plum);color:#fff}
+.mats{display:flex;flex-direction:column;gap:8px;margin-top:10px}
+.mat{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:10px 12px;border:1.5px solid var(--line);border-radius:12px;font-weight:700;font-size:14px}
+.mat .row{margin-left:auto;gap:6px}
+.mat a{font-size:12.5px;font-weight:800;text-decoration:none;color:var(--berry);background:var(--berry-soft);border-radius:999px;padding:5px 11px}
+.statement.cpi td{text-align:right;font-family:ui-monospace,Menlo,Consolas,monospace}
+.statement.cpi td:first-child{text-align:left;font-family:inherit}
+.statement.cpi tr:first-child td{font-family:inherit;color:var(--muted);font-size:13px}
+@media (max-width:900px){
+.clist{grid-template-columns:1fr}
+.vpick{grid-template-columns:1fr 1fr}
+.rail .rh{display:none}
+}
+
+.vpick{grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
+.xtra .xi{flex-wrap:wrap}
+#fFilters{margin-bottom:14px}
+
+/* ---------- leg uit ---------- */
+.lu textarea{width:100%;min-height:110px;border:2px solid var(--line);border-radius:12px;padding:12px 14px;font:inherit;font-size:15.5px;resize:vertical;background:#fff;color:var(--ink)}
+.lu textarea:focus{outline:0;border-color:var(--berry)}
+.lu .lubox{border-radius:14px;padding:14px 16px;margin-top:12px;font-size:14.5px}
+.lu .lubox p{margin:6px 0 0}
+.lu .lubox.goed{background:var(--ok-soft)}.lu .lubox.bijna{background:var(--warn-soft)}.lu .lubox.nognietgoed{background:var(--bad-soft)}
+.lu .badge2{display:inline-flex;align-items:center;gap:6px;font-weight:800;border-radius:999px;padding:4px 12px;font-size:13.5px;color:#fff}
+.lu .badge2.goed{background:var(--ok)}.lu .badge2.bijna{background:#c98a0b}.lu .badge2.nognietgoed{background:var(--bad)}
+.lu .model{margin-top:10px;border-left:4px solid var(--line);padding:6px 12px;color:var(--muted);font-size:14px}
+.lu .note{font-size:12.5px;color:var(--muted);margin-top:8px}
+</style>
+</head>
+<body>
+<div class="app">
+<div class="top">
+<div class="badge">H3</div>
+<div class="ttl"><small>Economie · jaar 2 · mavo · hoofdstuk 3</small><b>Aan het werk?</b></div>
+<div class="prog"><div class="ring" id="ring"><span id="ringTxt">0%</span></div><div>jouw voortgang<br><b id="progTxt" style="font-weight:800">0 leerdoelen</b></div></div>
+<nav class="tabs" role="tablist">
+<button role="tab" data-tab="start" aria-selected="true"><svg class="i" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg><span>Start</span></button>
+<button role="tab" data-tab="les" aria-selected="false"><svg class="i" viewBox="0 0 24 24"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2z"/><path d="M22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg><span>Lesstof</span></button>
+<button role="tab" data-tab="lab" aria-selected="false"><svg class="i" viewBox="0 0 24 24"><path d="M9 3h6"/><path d="M10 3v6L4.5 19a1.5 1.5 0 0 0 1.3 2h12.4a1.5 1.5 0 0 0 1.3-2L14 9V3"/><path d="M7 15h10"/></svg><span>Oefenlab</span></button>
+<button role="tab" data-tab="toets" aria-selected="false"><svg class="i" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg><span>Oefentoetsen</span></button>
+<button role="tab" data-tab="films" aria-selected="false"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m10 8 6 4-6 4z"/></svg><span>Filmpjes</span></button>
+</nav>
+</div>
+
+<main id="main">
+<!-- START -->
+<section class="panel" id="start">
+<div class="hero">
+<div class="card intro">
+<div class="eyebrow">Hoofdstuk 3 · Werk</div>
+<h2>Aan het werk?<br>Begin hier.</h2>
+<p>Alles voor hoofdstuk 3 op één plek: de PowerPoint per paragraaf, leerdoelen om af te vinken, begrippen en rekensommen oefenen, een vraagbank met meer dan 100 vragen, games, filmpjes en oefentoetsen met nakijkblad.</p>
+<div class="row"><button class="btn" data-go="les" data-par="3.1"><svg class="i" viewBox="0 0 24 24"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2z"/><path d="M22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg>Begin met 3.1</button><button class="btn ghost" data-go="toets">Naar de oefentoetsen</button></div>
+<div class="blob"></div>
+<div class="coins"><i style="height:22px"></i><i style="height:36px"></i><i style="height:52px"></i><i style="height:70px;background:linear-gradient(180deg,#e2457f,#a01a58)"></i></div>
+</div>
+<div class="card route">
+<div class="eyebrow">Jouw route door hoofdstuk 3</div>
+<button class="step" data-go="les"><span class="n" style="background:var(--p5)">1</span><div><b>Leer</b><span>De PowerPoint en je leerdoelen per paragraaf</span></div><svg class="i" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button>
+<button class="step" data-go="lab"><span class="n" style="background:var(--p6)">2</span><div><b>Oefen</b><span>Begrippen, formules, rekentrainer, quiz en games</span></div><svg class="i" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button>
+<button class="step" data-go="toets"><span class="n" style="background:var(--berry)">3</span><div><b>Test jezelf</b><span>Oefentoetsen en oefenvragen met nakijkblad</span></div><svg class="i" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button>
+</div>
+</div>
+<h3 class="chh"><span class="cn" style="background:var(--p5)">H3</span>Aan het werk?<small id="ch3txt"></small></h3>
+<div class="pgrid" id="pgrid3"></div>
+<div class="card pad checkcard">
+<div class="checkhead"><div><div class="eyebrow">Checklist</div><h2>Dit moet je kunnen na hoofdstuk 3</h2><div class="muted" style="font-size:13.5px">Vink af wat je beheerst. Twijfel je? Klik op <b>Oefen</b>.</div></div>
+<div><div class="bar"><i id="cBar" style="background:var(--ok)"></i></div><div class="muted" style="font-size:12.5px;margin-top:4px" id="cTxt"></div></div></div>
+<div class="clist" id="clist"></div>
+</div>
+<div class="tip"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01"/><path d="M11 12h1v4h1"/></svg>Je voortgang wordt bewaard op dit apparaat, in deze browser.</div>
+</section>
+
+<!-- LESSTOF -->
+<section class="panel" id="les" hidden>
+<div class="les">
+<div class="card rail" id="rail"></div>
+<div>
+<div class="card pad">
+<div class="lhead">
+<div><div class="eyebrow" id="lEyebrow">Paragraaf 1.1</div><h2 id="lTitle"></h2></div>
+<div class="row"><a class="btn ghost" id="lOpen" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>Open PowerPoint</a><button class="btn soft" id="lPractice">Oefen begrippen</button></div>
+</div>
+<div class="viewer" id="lViewer"><div class="ph">PowerPoint laden…</div></div>
+<div class="xtra" id="lExtra"></div>
+</div>
+<div class="two">
+<div class="card pad"><h3>Kun jij dit beantwoorden?</h3><p class="muted" style="margin:0 0 10px;font-size:13.5px">Klik op een vraag als je het antwoord weet.</p><div class="qlist" id="lQs"></div></div>
+<div class="card pad goals"><h3>Leerdoelen</h3><div class="bar" style="margin:8px 0 6px"><i id="lBar"></i></div><div class="muted" style="font-size:12.5px;margin-bottom:4px" id="lBarTxt"></div><div id="lGoals"></div></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- OEFENLAB -->
+<section class="panel" id="lab" hidden>
+<div class="card pad">
+<div class="row" style="justify-content:space-between;margin-bottom:12px"><div><div class="eyebrow">Oefenlab</div><h2>Oefen zo vaak als je wilt</h2></div></div>
+<div class="sub" role="tablist" id="labNav">
+<button data-lab="begrippen" aria-selected="true">Begrippen</button>
+<button data-lab="leguit" aria-selected="false">🤖 Leg uit</button>
+<button data-lab="formule" aria-selected="false">Welke formule?</button>
+<button data-lab="reken" aria-selected="false">Rekentrainer</button>
+<button data-lab="quiz" aria-selected="false">⚡ Quiz</button>
+<button data-lab="games" aria-selected="false">🎮 Games</button>
+</div>
+<div class="lab" id="lab-begrippen">
+<div class="filters" id="cardFilters"></div>
+<div class="cgrid" id="cardGrid"></div>
+<div class="row" style="justify-content:space-between;margin-top:12px"><span class="muted" id="cardCount"></span><button class="btn ghost" id="cardReset">Alle kaarten omdraaien</button></div>
+</div>
+<div class="lab ex lu" id="lab-leguit" hidden>
+<div class="steps"><b>Leg het begrip uit in je eigen woorden</b><ol><li>Typ wat het begrip betekent en geef een voorbeeld.</li><li>Tik op <b>Laat nakijken</b>: je krijgt te horen wat goed is, wat er nog mist en wat niet klopt.</li><li>Gebruik geen namen of andere persoonlijke informatie in je antwoord.</li></ol></div>
+<div class="filters" id="luFilters"></div><div class="score" id="luScore"></div><div id="luCard"></div>
+</div>
+<div class="lab ex" id="lab-formule" hidden>
+<div class="steps"><b>Stappenplan bij elke rekenvraag</b><ol>
+<li>Wat wordt er gevraagd: een <b>%</b> of een bedrag in <b>€</b>?</li>
+<li>Welke gegevens heb je: een brutoloon en inhoudingen, een uurloon, oud en nieuw, een percentage, een diagram?</li>
+<li>Kies de juiste formule en schrijf je berekening op.</li>
+<li>Rond goed af: euro's op <b>2</b> decimalen, procenten op <b>1</b> decimaal.</li></ol></div>
+<div class="score" id="fScore"></div><div id="fCard"></div>
+</div>
+<div class="lab ex" id="lab-reken" hidden>
+<div class="filters" id="rModes"></div><div class="score" id="rScore"></div><div id="rCard"></div>
+<p class="muted" style="font-size:13px">Tip: typ bedragen met een komma, zoals 12,50. Op je rekenmachine is de komma een punt.</p>
+</div>
+<div class="lab ex" id="lab-quiz" hidden><div class="score" id="qScore"></div><div id="qCard"></div></div>
+<div class="lab" id="lab-games" hidden><div id="gWrap"></div></div>
+</div>
+</section>
+
+<!-- TOETS -->
+<section class="panel" id="toets" hidden>
+<div class="card pad" style="margin-bottom:16px">
+<div class="eyebrow">Kies je oefening</div><h2>Oefentoetsen en oefenvragen</h2>
+<p class="muted" style="margin:2px 0 0;font-size:14px;max-width:760px">Maak eerst de opdracht zonder boek en zonder hulp. Kijk daarna je werk na met het nakijkblad en reken je cijfer uit.</p>
+<div class="vpick" id="vPick"></div>
+</div>
+<div class="tgrid">
+<div class="card pad">
+<div class="lhead"><div><div class="eyebrow">Stap 1</div><h2 id="tTitle">Oefentoets</h2><div class="muted" style="font-size:13.5px" id="tMeta"></div></div>
+<a class="btn ghost" target="_blank" rel="noopener" id="tOpen"><svg class="i" viewBox="0 0 24 24"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>Openen / printen</a></div>
+<div class="doc" id="tDoc"></div>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px">
+<div class="card pad" id="timerCard">
+<div class="eyebrow">Stap 2</div><h3>Zet de klok aan</h3>
+<div class="timer"><div class="clock" id="clock"><span id="clockTxt">50:00</span></div>
+<div><p class="muted" style="margin:0 0 10px;font-size:13.5px" id="clockMsg"></p>
+<div class="row"><button class="btn" id="tStart">Start</button><button class="btn ghost" id="tReset">Opnieuw</button></div></div></div>
+</div>
+<div class="card pad">
+<div class="eyebrow">Stap 3</div><h3>Kijk je werk na</h3>
+<div id="nakijk"></div>
+</div>
+<div class="card pad">
+<div class="eyebrow">Stap 4</div><h3>Wat is je cijfer?</h3>
+<div class="grade"><div class="inp"><input id="pts" inputmode="decimal" placeholder="behaald" style="width:90px"><b>van</b><input id="ptsMax" inputmode="decimal" placeholder="max" style="width:80px"></div><div class="out" id="grade">-</div></div>
+<div class="muted" style="font-size:13px;margin-top:6px" id="gradeMsg"></div>
+</div>
+<details open><summary>Meer oefenmateriaal</summary>
+<div class="mats" id="mats"></div></details>
+</div>
+</div>
+</section>
+
+<!-- FILMPJES -->
+<section class="panel" id="films" hidden>
+<div class="filters" id="fFilters"></div>
+<div class="fgrid" id="fgrid"></div>
+</section>
+</main>
+</div>
+
+<script>
+(function(){
+"use strict";
+var DRIVE=function(id){return "https://drive.google.com/file/d/"+id+"/preview";};
+var VIEW=function(id){return "https://drive.google.com/file/d/"+id+"/view";};
+var CHECK='<svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>';
+var EXT='<svg class="i" viewBox="0 0 24 24" style="width:14px;height:14px"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>';
+var LNK=function(x){return x.indexOf('http')===0?x:VIEW(x);};
+var MAT={"ov": ["Oefenvragen 3.1", [["Opdracht", "1qj60y2zWmDvmCYGwfzfYDWaGjcDkAzg4"], ["Nakijkblad", "1T_HoHGzBEDNtkrcCmOOq4ia_ZCYZ58TR"]]], "h12": ["Herhaling 3.1 en 3.2 (PowerPoint)", [["PowerPoint", "1ZMsf22fGKeVndaZVAP0nnL53KiLVrZA4"]]], "h34": ["Herhaling 3.3 en 3.4 (PowerPoint)", [["PowerPoint", "1DBvBgJMr0bHfzD4eIOqhGlcXAgYZAVew"]]], "fo": ["Informatieblad: alle formules en wanneer je ze gebruikt", [["Document", "1uN2-GEoYyQ7xXfTCvwjzURL5LRuVEWhL"]]]};
+var PARS=[{"id": "3.1", "ch": 3, "t": "Hoe ga jij geld verdienen?", "c": "var(--p5)", "file": "1EiIHJ0XnSUzsRjEpiPzsJRarpdPmM6kb", "x": ["ov", "h12"], "sum": "Werkgever en werknemer, de arbeidsovereenkomst, proeftijd, cao, brutoloon en nettoloon.", "q": ["Wat is het verschil tussen een werknemer en een werkgever?", "Wat zijn de belangrijkste onderdelen van een arbeidsovereenkomst?", "Wat is een cao en wat wordt daarin geregeld?", "Waarom is een proeftijd belangrijk en hoe lang mag deze duren?", "Wat is het verschil tussen brutoloon en nettoloon?", "Welke inhoudingen worden gedaan op het brutoloon?", "Wat is het risico van het hebben van een eigen bedrijf in vergelijking met werken in loondienst?", "Wat is een bedrijfstak en hoe hangt dit samen met een cao?", "Hoe bereken je het nettoloon?"]}, {"id": "3.2", "ch": 3, "t": "Wat voor baan wil jij?", "c": "var(--p6)", "file": "169578pcv_atbZsSojs2aAhjdH4Toajks", "x": ["h12"], "sum": "Vaste en tijdelijke banen, voltijd en deeltijd, de drie productiesectoren en arbeidsverdeling.", "q": ["Wat is het verschil tussen een voltijdbaan en een deeltijdbaan?", "Wat zijn de drie productiesectoren en welke soorten bedrijven horen daarbij?", "Wat zijn de voordelen van arbeidsverdeling voor een bedrijf?", "Welke factoren kunnen invloed hebben op jouw keuze voor een bepaald beroep?", "Waarom is specialisatie een voordeel voor een werknemer en een bedrijf?", "Wat is het verschil tussen een vaste baan en een tijdelijke baan?", "Wat is het nut van arbeidsverdeling in een groep of bedrijf?", "Wat zijn voorbeelden van beroepen in de dienstverlenende sector?", "Hoe lees je een cirkeldiagram af?"]}, {"id": "3.3", "ch": 3, "t": "Hoe is het werk geregeld?", "c": "var(--p8)", "file": "1G1UU-X9xUMfsPeLtivvZJp7hg6ZZXvD5", "x": ["h34"], "sum": "Minimumloon en minimumjeugdloon, de Arbowet en Arbeidstijdenwet, robots en scholing.", "q": ["Wat is het minimumloon en voor wie geldt dit?", "Wat is het verschil tussen het minimumloon en het minimumjeugdloon?", "Welke twee wetten zijn gericht op veilige en gezonde arbeidsomstandigheden?", "Wat staat er in de Arbowet en waarom is deze wet belangrijk?", "Hoe zorgen technologische ontwikkelingen voor veranderingen op de arbeidsmarkt?", "Wat zijn voorbeelden van banen die ontstaan door technologische ontwikkelingen?", "Wat is ongeschoold werk en hoe verschilt dit van geschoold werk?", "Waarom is bijscholing belangrijk, ook als je al een baan hebt?", "Welke regels gelden er voor werktijden en rusttijden voor jongeren?", "Hoe kun je ervoor zorgen dat je veilig kunt werken op een bouwplaats?"]}, {"id": "3.4", "ch": 3, "t": "Wat als er geen werk is?", "c": "var(--p4)", "file": "1DNqr0iPPmY_MVsx_r-ZEo_l-u0Txw2aG", "x": ["h34"], "sum": "Ontslag en opzegtermijn, werkloosheid, het UWV en de WW-uitkering.", "q": ["Wat is ontslag en welke vormen van ontslag zijn er?", "Wanneer word je officieel als werkloos beschouwd? Geef alle regels waaraan je moet voldoen.", "Wat is een opzegtermijn en waarom is deze belangrijk?", "Hoe ontstaat werkloosheid en wat zijn de gevolgen ervan?", "Wat zijn de taken van het UWV voor werklozen?", "Wanneer heb je recht op een WW-uitkering? Leg alle regels goed uit.", "Hoe hoog is een WW-uitkering en hoe verandert dit over de tijd? Leg dit goed uit.", "Welke gevolgen kan werkloosheid hebben op je dagelijks leven?", "Hoe helpt het UWV werklozen bij het vinden van een nieuwe baan? Noem twee voorbeelden.", "Hoe lees je een lijndiagram af?"]}];
+var GOALS={"3.1": ["Ik kan uitleggen wat een werkgever is.", "Ik kan uitleggen wat een werknemer is.", "Ik kan het verschil tussen een werkgever en een werknemer uitleggen en van allebei een voorbeeld geven.", "Ik kan uitleggen wie winst als inkomen heeft.", "Ik kan een voordeel en een risico noemen van een eigen bedrijf vergeleken met werken in loondienst.", "Ik kan uitleggen wat een vacature is.", "Ik kan de stappen van solliciteren in de goede volgorde noemen.", "Ik kan uitleggen wat een arbeidsovereenkomst is.", "Ik kan drie voorbeelden van arbeidsvoorwaarden noemen.", "Ik kan uitleggen wat een proeftijd is en hoe lang die maximaal mag duren.", "Ik kan uitleggen waarom een proeftijd handig is voor de werkgever en voor de werknemer.", "Ik kan uitleggen wat een bedrijfstak is en drie voorbeelden noemen.", "Ik kan uitleggen wat een cao is en wat erin geregeld wordt.", "Ik kan uitleggen voor wie een cao geldt en wie de afspraken maken.", "Ik kan het verschil tussen brutoloon en nettoloon uitleggen.", "Ik kan de twee inhoudingen op het brutoloon noemen.", "Ik kan uitleggen waarvoor de overheid de inhoudingen gebruikt.", "Ik kan het nettoloon berekenen.", "Ik kan uitleggen wat er met je inhoudingen gebeurt als je salaris hoger wordt.", "Ik kan gegevens aflezen uit een staafdiagram."], "3.2": ["Ik kan het verschil uitleggen tussen een vaste baan en een tijdelijke baan.", "Ik kan uitleggen wat flexibel werken (een flexbaan) is en een voorbeeld geven.", "Ik kan uitleggen waarom werknemers graag een vaste baan willen en waarom werkgevers daarover twijfelen.", "Ik kan uitleggen wat een voltijdbaan is en hoeveel uur je dan meestal werkt.", "Ik kan uitleggen wat een deeltijdbaan is.", "Ik kan twee groepen noemen die vaak in deeltijd werken.", "Ik kan de drie productiesectoren noemen.", "Ik kan uitleggen wat agrarische bedrijven doen en er voorbeelden van geven.", "Ik kan uitleggen wat industriële bedrijven doen en er voorbeelden van geven.", "Ik kan uitleggen wat dienstverlenende bedrijven doen en er voorbeelden van geven.", "Ik kan bij een bedrijf of beroep zeggen in welke productiesector het hoort.", "Ik kan uitleggen wat arbeidsverdeling is.", "Ik kan twee voordelen van arbeidsverdeling noemen.", "Ik kan uitleggen wat specialiseren is en waarom dat een voordeel is voor de werknemer en het bedrijf.", "Ik kan noemen wat invloed heeft op mijn keuze voor een beroep.", "Ik kan gegevens aflezen uit een cirkeldiagram.", "Ik kan uitrekenen hoeveel procent een deel van een cirkeldiagram is."], "3.3": ["Ik kan uitleggen wat het minimumloon is.", "Ik kan uitleggen waar het minimumloon geregeld is.", "Ik kan uitleggen wat het minimumjeugdloon is en voor wie het geldt.", "Ik kan uitleggen hoe het minimumjeugdloon samenhangt met het minimumloon en je leeftijd.", "Ik kan het minimumjeugdloon berekenen met een percentage van het minimumloon.", "Ik kan berekenen hoeveel procent een jeugdloon is van het minimumloon.", "Ik kan de twee wetten noemen die werknemers beschermen.", "Ik kan uitleggen wat er in de Arbowet staat en twee voorbeelden geven.", "Ik kan uitleggen wat er in de Arbeidstijdenwet staat en wat er voor jongeren anders is.", "Ik kan uitleggen hoe een cao samenhangt met de Arbowet en de Arbeidstijdenwet.", "Ik kan uitleggen wat technologische ontwikkelingen zijn.", "Ik kan uitleggen hoe technologische ontwikkelingen het werk veranderen.", "Ik kan uitleggen wat technologische ontwikkelingen betekenen voor het aantal banen.", "Ik kan twee voorbeelden noemen van nieuwe beroepen.", "Ik kan uitleggen wat ongeschoold werk is en voorbeelden geven.", "Ik kan uitleggen wat geschoold werk is en voorbeelden geven.", "Ik kan uitleggen waarom bijscholing belangrijk is, ook als je al een baan hebt."], "3.4": ["Ik kan uitleggen wat ontslag is.", "Ik kan drie manieren noemen waarop een baan kan stoppen.", "Ik kan uitleggen wat een opzegtermijn is en waarom die nuttig is voor de werknemer en de werkgever.", "Ik kan uitleggen wanneer iemand werkloos is.", "Ik kan de voorwaarden noemen om officieel als werkloze te worden meegeteld.", "Ik kan uitleggen hoe werkloosheid ontstaat.", "Ik kan uitleggen wanneer de werkloosheid stijgt en wanneer die daalt.", "Ik kan gegevens aflezen uit een lijndiagram.", "Ik kan gevolgen van werkloosheid voor iemands dagelijks leven noemen.", "Ik kan uitleggen wat het UWV is.", "Ik kan de twee taken van het UWV noemen.", "Ik kan uitleggen wat de WW is.", "Ik kan de regels noemen om recht te hebben op een WW-uitkering.", "Ik kan uitleggen hoe hoog een WW-uitkering is.", "Ik kan een WW-uitkering berekenen.", "Ik kan uitleggen hoe automatisering en robotisering in de toekomst het werk veranderen."]};
+var NORIG={"3.1":20,"3.2":17,"3.3":17,"3.4":16};
+/*SEL*/var SEL=null;/*ENDSEL*/
+PARS.forEach(function(p){var all=GOALS[p.id],ix=(SEL&&SEL[p.id])||all.map(function(_,i){return i;}).slice(0,NORIG[p.id]);p.gi=ix;p.g=ix.map(function(i){return all[i];});});
+function P(id){for(var i=0;i<PARS.length;i++)if(PARS[i].id===id)return PARS[i];}
+function tag(id){return '<span class="chip" style="background:'+P(id).c+'">'+id+'</span>';}
+var CHK=[["Het verschil tussen een werkgever en een werknemer uitleggen", "3.1", "quiz"], ["Uitleggen wat er in een arbeidsovereenkomst staat en wat een proeftijd is", "3.1", "quiz"], ["Uitleggen wat een cao is en voor welke bedrijfstak die geldt", "3.1", "quiz"], ["Het nettoloon berekenen: brutoloon − inhoudingen", "3.1", "reken", "netto"], ["Uitrekenen wat ik verdien per week of per maand", "3.1", "reken", "loon"], ["Een staafdiagram, cirkeldiagram en lijndiagram aflezen", "3.2", "reken", "diagram"], ["Vaste, tijdelijke en flexibele banen uitleggen", "3.2", "quiz"], ["Het verschil tussen voltijd en deeltijd uitleggen", "3.2", "quiz"], ["De drie productiesectoren noemen en bedrijven indelen", "3.2", "quiz"], ["Uitleggen wat arbeidsverdeling en specialisatie zijn", "3.2", "quiz"], ["Uitleggen wat het minimumloon en het minimumjeugdloon zijn", "3.3", "quiz"], ["Het minimumjeugdloon uitrekenen met een percentage", "3.3", "reken", "jeugd"], ["De Arbowet en de Arbeidstijdenwet uitleggen", "3.3", "quiz"], ["Uitleggen wat robots en scholing betekenen voor werk", "3.3", "quiz"], ["Ontslag en opzegtermijn uitleggen", "3.4", "quiz"], ["Uitleggen wanneer iemand werkloos is en wat het UWV doet", "3.4", "quiz"], ["De regels voor een WW-uitkering noemen", "3.4", "quiz"], ["Een WW-uitkering uitrekenen (75% en 70%)", "3.4", "reken", "ww"]];
+
+var KEY="h3v2-app-v1",S={goals:{},qs:{},known:{},unlock:{},check:{},ver:1};
+try{var s=JSON.parse(localStorage.getItem(KEY));if(s&&s.goals)S=Object.assign(S,s);}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}
+
+var tabs=document.querySelectorAll("nav.tabs button"),main=document.getElementById("main");
+function show(name){
+tabs.forEach(function(b){b.setAttribute("aria-selected",b.dataset.tab===name?"true":"false");});
+document.querySelectorAll(".panel").forEach(function(p){p.hidden=p.id!==name;});
+main.scrollTop=0;
+if(name!=="lab"&&SW)gamesHome();
+if(name==="les")loadLes();
+if(name==="toets")loadToets();
+if(name==="films")renderFilms();
+}
+tabs.forEach(function(b){b.addEventListener("click",function(){show(b.dataset.tab);});});
+document.addEventListener("click",function(e){
+var g=e.target.closest("[data-go]");if(g){if(g.dataset.par)cur=g.dataset.par;show(g.dataset.go);}
+var l=e.target.closest("[data-golab]");if(l){show("lab");showLab(l.dataset.golab);
+if(l.dataset.mode){mode=l.dataset.mode;newR();}
+if(l.dataset.qpar){quizPar=l.dataset.qpar;quizHome();}}
+});
+
+function goalCount(id){var p=P(id),d=0;p.gi.forEach(function(gi){if(S.goals[id+"-"+gi])d++;});return d;}
+function totals(ch){var t=0,d=0;PARS.forEach(function(p){if(ch&&p.ch!==ch)return;t+=p.g.length;d+=goalCount(p.id);});return [d,t];}
+function renderProgress(){
+var x=totals(),pct=x[1]?Math.round(x[0]/x[1]*100):0;
+document.getElementById("ring").style.setProperty("--v",pct);
+document.getElementById("ringTxt").textContent=pct+"%";
+document.getElementById("progTxt").textContent=x[0]+" van "+x[1]+" leerdoelen";
+renderCards();
+}
+
+function renderCards(){
+[3].forEach(function(ch){
+document.getElementById("pgrid"+ch).innerHTML=PARS.filter(function(p){return p.ch===ch;}).map(function(p){
+var d=goalCount(p.id),n=p.g.length||1;
+return '<button class="pcard" data-go="les" data-par="'+p.id+'"><div class="band" style="background:linear-gradient(135deg,'+p.c+',color-mix(in srgb,'+p.c+' 70%,#000))"><b>'+p.id+'</b></div>'+
+'<div class="body"><h3>'+p.t+'</h3><p>'+p.sum+'</p><div class="bar"><i style="width:'+(d/n*100)+'%;background:'+p.c+'"></i></div><div class="meta"><span>'+d+' van '+n+' leerdoelen</span><span style="font-weight:700;color:var(--plum)">Open les →</span></div></div></button>';
+}).join("");
+var t=totals(ch);document.getElementById("ch"+ch+"txt").textContent=t[0]+" van "+t[1]+" leerdoelen";
+});
+}
+function renderCheck(){
+var n=0;
+document.getElementById("clist").innerHTML=CHK.map(function(c,i){var on=!!S.check[i];if(on)n++;
+var go=c[2]==="reken"?' data-golab="reken" data-mode="'+c[3]+'"':' data-golab="quiz" data-qpar="'+c[1]+'"';
+return '<div class="citem'+(on?" on":"")+'"><button class="tick" data-c="'+i+'" aria-label="Afvinken">'+CHECK+'</button><span class="ctxt">'+c[0]+'</span>'+tag(c[1])+'<button class="go"'+go+'>Oefen →</button></div>';}).join("");
+document.getElementById("cBar").style.width=(n/CHK.length*100)+"%";
+document.getElementById("cTxt").textContent=n+" van "+CHK.length+" onderdelen beheerst";
+}
+document.getElementById("clist").addEventListener("click",function(e){var b=e.target.closest("[data-c]");if(!b)return;var i=b.dataset.c;if(S.check[i])delete S.check[i];else S.check[i]=1;save();renderCheck();});
+
+var cur="3.1";
+function loadLes(){
+var p=P(cur),last=0;
+document.getElementById("rail").innerHTML=PARS.map(function(x){var d=goalCount(x.id),h="";
+if(x.ch!==last){last=x.ch;h='<div class="rh">Hoofdstuk '+x.ch+'</div>';}
+return h+'<button data-par="'+x.id+'" aria-current="'+(x.id===cur)+'"><span class="dot" style="background:'+x.c+'">'+x.id+'</span><span>'+x.t+'<span class="mini">'+d+'/'+x.g.length+' leerdoelen</span></span></button>';}).join("");
+document.getElementById("lEyebrow").textContent="Hoofdstuk "+p.ch+" · paragraaf "+p.id;
+document.getElementById("lEyebrow").style.color=p.c;
+document.getElementById("lTitle").textContent=p.t;
+document.getElementById("lOpen").href=VIEW(p.file);
+var v=document.getElementById("lViewer");
+if(v.dataset.file!==p.file){v.dataset.file=p.file;v.innerHTML='<div class="ph">PowerPoint laden…</div><iframe src="'+DRIVE(p.file)+'" allow="autoplay" loading="lazy" title="PowerPoint '+p.id+'"></iframe>';}
+document.getElementById("lExtra").innerHTML=p.x.map(function(k){var m=MAT[k];return '<div class="xi">📝 '+m[0]+m[1].map(function(l){return '<a target="_blank" rel="noopener" href="'+LNK(l[1])+'">'+l[0]+' ↗</a>';}).join("")+'</div>';}).join("");
+document.getElementById("lQs").innerHTML=p.q.map(function(q,i){var k=p.id+"-"+i,on=!!S.qs[k];
+return '<button class="q'+(on?" on":"")+'" data-q="'+k+'"><span class="tick">'+CHECK+'</span><span>'+q+'</span></button>';}).join("");
+var d=goalCount(p.id);
+document.getElementById("lBar").style.width=(d/(p.g.length||1)*100)+"%";
+document.getElementById("lBar").style.background=p.c;
+document.getElementById("lBarTxt").textContent=d+" van "+p.g.length+" behaald";
+document.getElementById("lGoals").innerHTML=p.g.map(function(g,j){var k=p.id+"-"+p.gi[j],on=!!S.goals[k];
+return '<label class="'+(on?"done":"")+'"><input type="checkbox" data-k="'+k+'"'+(on?" checked":"")+'><span>'+g+'</span></label>';}).join("");
+}
+document.getElementById("rail").addEventListener("click",function(e){var b=e.target.closest("[data-par]");if(b){cur=b.dataset.par;loadLes();}});
+document.getElementById("lQs").addEventListener("click",function(e){var b=e.target.closest("[data-q]");if(!b)return;var k=b.dataset.q;if(S.qs[k])delete S.qs[k];else S.qs[k]=1;save();b.classList.toggle("on");});
+document.getElementById("lGoals").addEventListener("change",function(e){var k=e.target.dataset.k;if(!k)return;if(e.target.checked)S.goals[k]=1;else delete S.goals[k];save();loadLes();renderProgress();});
+document.getElementById("lPractice").addEventListener("click",function(){cardFilter=cur;show("lab");showLab("begrippen");renderFlash();});
+
+
+var VERS=[{"n": 1, "t": "Oefentoets 3.1 t/m 3.4", "tags": ["hele hoofdstuk", "meerkeuze + open + rekenen"], "min": 0, "toets": "1TLNksUEEWqtizCkAyGOhzHSl9HpaxaNx", "nk": "1-YVGpahn0DYo-raQY-qglvirgVY3OTtP", "meta": "20 meerkeuzevragen, 10 open vragen en 5 rekenvragen"}, {"n": 2, "t": "Oefentoets 3.1 en 3.2", "tags": ["3.1 + 3.2", "meerkeuze + open"], "min": 0, "toets": "1srPQilUv13g91zYvq7FKcXxdSVbwiXmJ", "nk": "1CZ3st7YmXriy_R9vV2SyuwmHTrWzPfJV", "meta": "9 meerkeuzevragen en 11 open vragen"}, {"n": 3, "t": "Oefenvragen 3.1", "tags": ["3.1", "werk en loon"], "min": 0, "toets": "1qj60y2zWmDvmCYGwfzfYDWaGjcDkAzg4", "nk": "1T_HoHGzBEDNtkrcCmOOq4ia_ZCYZ58TR", "meta": "Werkgever, solliciteren, arbeidsovereenkomst, cao en loon"}];
+function V(){return VERS[(S.ver||1)-1]||VERS[0];}
+var T=50*60,left=T,tick=null;
+function renderVPick(){
+document.getElementById("vPick").innerHTML=VERS.map(function(v){
+return '<button class="vbtn" data-v="'+v.n+'" aria-pressed="'+(v.n===S.ver)+'"><b>'+v.t+'</b><div class="lvls">'+v.tags.map(function(t){return '<i>'+t+'</i>';}).join("")+'</div><small>'+(v.min?v.min+' minuten · ':'')+(v.nk?'met nakijkblad':'zonder nakijkblad')+'</small></button>';}).join("");
+}
+function loadToets(){
+var v=V();renderVPick();
+document.getElementById("tTitle").textContent=v.t;
+document.getElementById("tMeta").textContent=v.meta+(v.min?" · "+v.min+" minuten":"");
+document.getElementById("tOpen").href=VIEW(v.toets);
+var d=document.getElementById("tDoc");
+if(d.dataset.id!==v.toets){d.dataset.id=v.toets;d.innerHTML='<iframe src="'+DRIVE(v.toets)+'" loading="lazy" title="'+v.t+'"></iframe>';}
+renderNakijk();
+document.getElementById("timerCard").style.display=v.min?"":"none";
+if(v.min&&T!==v.min*60&&!tick){T=v.min*60;left=T;drawClock();}
+if(v.pts)document.getElementById("ptsMax").value=v.pts;
+document.getElementById("clockMsg").textContent="Je hebt "+(v.min||50)+" minuten. Maak de toets zonder boek en zonder hulp, met je rekenmachine.";
+gradeIt();
+}
+document.getElementById("vPick").addEventListener("click",function(e){var b=e.target.closest("[data-v]");if(!b)return;S.ver=+b.dataset.v;save();
+clearInterval(tick);tick=null;var st=document.getElementById("tStart");st.disabled=false;st.textContent="Start";T=(V().min||50)*60;left=T;drawClock();loadToets();});
+function renderNakijk(){
+var v=V(),box=document.getElementById("nakijk");
+if(!v.nk){box.innerHTML='<p class="muted" style="margin:0">Bij deze oefening is (nog) geen nakijkblad. Bespreek je antwoorden met je docent of met een klasgenoot.</p>';return;}
+if(!S.unlock[v.n]){box.innerHTML='<div class="locked"><div><svg class="i" viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><p style="margin:8px 0 12px">Het nakijkblad gaat open als je klaar bent met de oefening.</p><button class="btn" id="unlock">Ik ben klaar, laat het nakijkblad zien</button></div></div>';return;}
+box.innerHTML='<div class="doc" style="height:420px"><iframe src="'+DRIVE(v.nk)+'" loading="lazy" title="Nakijkblad"></iframe></div><div class="row" style="margin-top:10px"><a class="btn ghost" target="_blank" rel="noopener" href="'+VIEW(v.nk)+'">Nakijkblad openen</a><button class="btn ghost" id="relock">Weer verbergen</button></div>';
+}
+document.getElementById("nakijk").addEventListener("click",function(e){
+if(e.target.closest("#unlock")){S.unlock[V().n]=1;save();renderNakijk();}
+if(e.target.closest("#relock")){delete S.unlock[V().n];save();renderNakijk();}
+});
+function drawClock(){var m=Math.floor(left/60),s=left%60;document.getElementById("clockTxt").textContent=(m<10?"0":"")+m+":"+(s<10?"0":"")+s;document.getElementById("clock").style.setProperty("--v",left/T*100);}
+document.getElementById("tStart").addEventListener("click",function(){
+var b=this;
+if(tick){clearInterval(tick);tick=null;b.textContent="Verder";return;}
+b.textContent="Pauze";
+tick=setInterval(function(){left--;drawClock();if(left<=0){clearInterval(tick);tick=null;b.textContent="Klaar!";b.disabled=true;document.getElementById("clockTxt").textContent="Tijd!";}},1000);
+});
+document.getElementById("tReset").addEventListener("click",function(){clearInterval(tick);tick=null;left=T;drawClock();var b=document.getElementById("tStart");b.disabled=false;b.textContent="Start";});
+function gradeIt(){
+var a=document.getElementById("pts"),b=document.getElementById("ptsMax"),v=parseFloat(a.value.replace(",",".")),max=parseFloat(b.value.replace(",",".")),g=document.getElementById("grade"),m=document.getElementById("gradeMsg");
+g.style.color="";
+if(a.value===""||b.value===""){g.textContent="-";m.textContent="Cijfer = behaalde punten : maximum × 9 + 1. Het maximum staat in het nakijkblad.";return;}
+if(isNaN(v)||isNaN(max)||max<=0||v<0||v>max){g.textContent="-";m.textContent="Controleer je punten: ze moeten tussen 0 en het maximum liggen.";return;}
+var c=Math.round((v/max*9+1)*10)/10;g.textContent=c.toFixed(1).replace(".",",");
+g.style.color=c>=5.5?"var(--ok)":"var(--bad)";
+m.textContent=c>=8?"Top! Jij bent er klaar voor.":c>=6.5?"Goed bezig. Kijk nog even naar je fouten.":c>=5.5?"Voldoende, maar oefen je zwakke punten nog.":"Nog even oefenen: begin bij het Oefenlab.";
+}
+document.getElementById("pts").addEventListener("input",gradeIt);
+document.getElementById("ptsMax").addEventListener("input",gradeIt);
+document.getElementById("mats").innerHTML=["ov","h12","h34","fo"].map(function(k){var m=MAT[k];
+return '<div class="mat">📝 '+m[0]+'<div class="row">'+m[1].map(function(l){return '<a target="_blank" rel="noopener" href="'+LNK(l[1])+'">'+l[0]+' ↗</a>';}).join("")+'</div></div>';}).join("");
+
+var FILMS=[
+{par:"3.1",film:"16N5D3Uk7W3dtGwI9u8KE6zPuN2LAx5CF",k:"Instructiefilm",t:"Van week naar maand",d:"Weekloon omrekenen naar maandloon: keer 52 en gedeeld door 12. Niet keer 4!",lab:"reken",mode:"maand",btn:"Oefen: week ↔ maand"},
+{par:"alle",film:"1EN_S_SEca6zPTW3gp4XepzGCes8qs4-y",k:"Instructiefilm",t:"Welke formule gebruik je?",d:"Stappenplan om de juiste formule te kiezen, bijvoorbeeld bij procenten.",lab:"formule",btn:"Oefen: welke formule?"}];
+var ff="alle";
+function renderFilms(){
+document.getElementById("fFilters").innerHTML=["alle"].concat(PARS.map(function(p){return p.id;}).filter(function(id){return FILMS.some(function(f){return f.par===id;});})).map(function(f){return '<button data-ff="'+f+'" class="'+(f===ff?"on":"")+'">'+(f==="alle"?"Alle filmpjes":f+" "+P(f).t)+'</button>';}).join("");
+document.getElementById("fgrid").innerHTML=FILMS.filter(function(f){return ff==="alle"||f.par===ff||f.par==="alle";}).map(function(f){var id=f.yt||f.film,url=f.yt?"https://www.youtube.com/watch?v="+f.yt:VIEW(f.film);
+return '<div class="card film"><div class="viewer" '+(f.yt?'data-yt="'+f.yt+'"':'data-film="'+f.film+'"')+'></div><div class="txt"><div class="eyebrow">'+f.k+(f.par!=="alle"?' · '+f.par:'')+'</div><h3>'+f.t+'</h3><p class="muted" style="margin:0">'+f.d+'</p><div class="row" style="margin-top:12px"><button class="btn soft" data-golab="'+f.lab+'"'+(f.mode?' data-mode="'+f.mode+'"':'')+(f.qpar?' data-qpar="'+f.qpar+'"':'')+'>'+f.btn+'</button><a class="btn ghost" target="_blank" rel="noopener" href="'+url+'">Open in nieuw tabblad ↗</a></div></div></div>';}).join("");
+loadFilms();
+}
+function loadFilms(){
+document.querySelectorAll("[data-yt]").forEach(function(v){if(v.firstChild)return;var id=v.dataset.yt;
+v.innerHTML='<button class="poster" aria-label="Speel filmpje af"><img src="https://img.youtube.com/vi/'+id+'/hqdefault.jpg" alt="" onerror="this.remove()"><span class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></button>';});
+document.querySelectorAll("[data-film]").forEach(function(v){if(v.firstChild)return;var id=v.dataset.film;
+v.innerHTML='<button class="poster" aria-label="Speel filmpje af"><img src="https://drive.google.com/thumbnail?id='+id+'&sz=w1200" alt="" onerror="this.remove()"><span class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></button>';});
+}
+document.getElementById("fFilters").addEventListener("click",function(e){var b=e.target.closest("[data-ff]");if(b){ff=b.dataset.ff;renderFilms();}});
+document.getElementById("films").addEventListener("click",function(e){var b=e.target.closest(".poster");if(!b)return;var v=b.parentNode;
+if(v.dataset.yt)v.innerHTML='<div class="ph">Laden…</div><iframe src="https://www.youtube.com/embed/'+v.dataset.yt+'?autoplay=1&rel=0" allow="autoplay; fullscreen; encrypted-media" allowfullscreen title="Introfilm"></iframe>';
+else v.innerHTML='<div class="ph">Laden…</div><iframe src="'+DRIVE(v.dataset.film)+'" allow="autoplay; fullscreen" allowfullscreen title="Instructiefilm"></iframe>';});
+renderFilms();
+
+function showLab(name){
+document.querySelectorAll("#labNav button").forEach(function(b){b.setAttribute("aria-selected",b.dataset.lab===name?"true":"false");});
+document.querySelectorAll(".lab").forEach(function(l){l.hidden=l.id!=="lab-"+name;});
+if(name!=="games"&&SW)gamesHome();
+}
+document.getElementById("labNav").addEventListener("click",function(e){var b=e.target.closest("[data-lab]");if(b)showLab(b.dataset.lab);});
+
+var CARDS=[["3.1", "Werkgever", "Iemand die een of meer personen in dienst heeft en hun loon betaalt.", "De eigenaar van een supermarkt met 30 medewerkers."], ["3.1", "Werknemer", "Iemand die in loondienst werkt voor een werkgever.", "Een vakkenvuller bij de supermarkt."], ["3.1", "Eigen bedrijf", "Je bent je eigen baas. De winst is je inkomen. Risico: zonder opdrachten geen inkomen.", "Een zelfstandige schilder."], ["3.1", "Vacature", "Een baan waarvoor een bedrijf iemand zoekt.", "Gezocht: kassamedewerker (16+)."], ["3.1", "Solliciteren", "Reageren op een vacature met een sollicitatiebrief en cv, daarna een sollicitatiegesprek.", "Je laat zien waarom jij de beste kandidaat bent."], ["3.1", "Arbeidsovereenkomst", "Een afspraak dat je als werknemer in loondienst bepaald werk komt doen.", "Je contract met je werkgever."], ["3.1", "Arbeidsvoorwaarden", "Afspraken over je werk, zoals het aantal uren, je loon en je vakantiedagen.", "24 uur per week, € 2.300 bruto, 25 vakantiedagen."], ["3.1", "Proeftijd", "Periode waarin werkgever en werknemer kijken of het bevalt. Mag meteen stoppen. Maximaal twee maanden.", "De eerste maand van je nieuwe baan."], ["3.1", "Bedrijfstak", "Een groep gelijksoortige bedrijven.", "De bouw, de zorg, het onderwijs."], ["3.1", "Cao", "Collectieve arbeidsovereenkomst: gezamenlijke afspraken over arbeidsvoorwaarden voor een bedrijfstak.", "De cao voor de horeca."], ["3.1", "Brutoloon", "Het loon dat je afspreekt, waarop nog niets is ingehouden.", "€ 2.400 per maand in je contract."], ["3.1", "Inhoudingen", "Loonbelasting en sociale premies die van je brutoloon afgaan.", "De werkgever betaalt ze aan de overheid."], ["3.1", "Nettoloon", "Het loon dat je op je bankrekening ontvangt: brutoloon − inhoudingen.", "€ 2.400 − € 480 = € 1.920."], ["3.1", "Staafdiagram", "Diagram met staven om aantallen of bedragen te vergelijken.", "Het aantal werknemers per bedrijfstak."], ["3.2", "Vaste baan", "Een baan zonder einddatum (onbepaalde tijd).", "Een docent met een vast contract."], ["3.2", "Tijdelijke baan", "Een baan voor een afgesproken periode.", "Een jaarcontract of vakantiewerk."], ["3.2", "Flexibel werk", "Je werkt als de werkgever je nodig heeft.", "Pakketjes bezorgen, werken in een strandtent."], ["3.2", "Voltijdbaan", "Een volledige dag- en weektaak: meestal 36, 38 of 40 uur per week. Ook: fulltimebaan.", "Vijf dagen van acht uur."], ["3.2", "Deeltijdbaan", "Je werkt minder uren dan een volledige werkweek. Ook: parttimebaan.", "Drie dagen per week werken."], ["3.2", "Productiesectoren", "De indeling van bedrijven: agrarisch, industrieel en dienstverlenend.", "Boer, fabriek, kapper."], ["3.2", "Agrarische bedrijven", "Produceren grondstoffen waarvoor ze de natuur nodig hebben.", "Akkerbouw, melkveehouderij, tuinbouw."], ["3.2", "Industriële bedrijven", "Maken goederen van grondstoffen en materialen.", "Fietsenfabriek, bakkerij, meubelmakerij."], ["3.2", "Dienstverlenende bedrijven", "Leveren diensten.", "Winkel, kapper, restaurant, school."], ["3.2", "Arbeidsverdeling", "Het werk in een bedrijf is verdeeld in verschillende banen met eigen taken.", "De kok kookt, de ober bedient."], ["3.2", "Specialiseren", "Je richt je op het werk waar je goed in bent. Dat gaat beter en sneller.", "Een loodgieter die alleen cv-ketels repareert."], ["3.2", "Cirkeldiagram", "Laat zien hoe een geheel in delen is verdeeld. De hele cirkel is 100%.", "80% dienstverlening, 17% industrie, 3% agrarisch."], ["3.3", "Minimumloon", "Het brutoloon dat een werknemer van 21 jaar en ouder minstens per uur moet verdienen. Staat in de wet.", "Stel: € 13,27 per uur."], ["3.3", "Minimumjeugdloon", "Minimumloon voor 15 tot 21 jaar: een percentage van het minimumloon. Hoe jonger, hoe lager.", "19 jaar: 60% van € 13,27 = € 7,96."], ["3.3", "Arbowet", "Regels voor veilige en gezonde arbeidsomstandigheden.", "Een helm op de bouwplaats, een goede bureaustoel."], ["3.3", "Arbeidstijdenwet", "Regels voor werk- en rusttijden, met extra regels voor jongeren.", "Hoe lang je mag werken en wanneer je pauze hebt."], ["3.3", "Technologische ontwikkelingen", "Nieuwe kennis van de techniek en nieuwe uitvindingen. Banen verdwijnen en nieuwe banen ontstaan.", "Robots, drones, 3D-printers."], ["3.3", "Ongeschoold werk", "Werk waarvoor je geen beroepsopleiding nodig hebt.", "Vakkenvuller, folderbezorger."], ["3.3", "Geschoold werk", "Werk waarvoor je eerst een beroepsopleiding of cursus doet.", "App-bouwer, kapper, loodgieter."], ["3.3", "Bijscholing", "Cursussen volgen terwijl je al werkt, om bij te blijven in je beroep.", "Een docent die leert werken met AI."], ["3.4", "Ontslag", "Het einde van je arbeidsovereenkomst. Je wordt ontslagen of je neemt zelf ontslag.", "Je baas heeft geen werk meer voor je."], ["3.4", "Opzegtermijn", "De tijd tussen het moment van ontslag en de einddatum van je baan. Meestal één of twee maanden.", "Tijd om ander werk of een vervanger te zoeken."], ["3.4", "Werkloos", "Je hebt geen baan, bent tussen 15 jaar en de pensioenleeftijd, zoekt actief werk en kunt meteen beginnen.", "Iemand die solliciteert maar nog geen baan heeft."], ["3.4", "Werkloosheid", "Er zijn te weinig betaalde banen voor iedereen die wil werken. Stijgt vaak als het slecht gaat met de economie.", "In een crisis stijgt de werkloosheid."], ["3.4", "Lijndiagram", "Laat zien hoe iets in de loop van de tijd stijgt of daalt.", "Het aantal werklozen per jaar."], ["3.4", "UWV", "Overheidsinstelling: bepaalt of je recht hebt op WW en helpt je een baan te vinden.", "Inschrijven binnen een week na je ontslag."], ["3.4", "WW-uitkering", "Uitkering volgens de Werkloosheidswet: eerste twee maanden 75%, daarna 70% van je laatste brutoloon.", "€ 2.000 bruto → € 1.500, daarna € 1.400."], ["3.4", "Regels voor de WW", "Ontslag niet je eigen schuld, minstens 26 weken gewerkt, binnen een week ingeschreven bij het UWV, direct kunnen beginnen.", "Zelf ontslag nemen = geen WW."]];
+var cardFilter="alle",cf=document.getElementById("cardFilters"),cg=document.getElementById("cardGrid");
+function inSel(par,f){return f==="alle"||par===f||(f==="H1"&&par.charAt(0)==="1")||(f==="H2"&&par.charAt(0)==="2");}
+function selLabel(f){return f==="alle"?"Alles":f==="H1"?"Hoofdstuk 1":f==="H2"?"Hoofdstuk 2":f;}
+function renderFlash(){
+cf.innerHTML=["alle"].concat(PARS.map(function(p){return p.id;})).concat(["oefenen"]).map(function(f){
+var label=f==="oefenen"?"Nog niet gekend":selLabel(f);
+return '<button data-f="'+f+'" class="'+(f===cardFilter?"on":"")+'"'+(P(f)?' title="'+P(f).t+'"':'')+'>'+label+'</button>';}).join("");
+var html="",k=0;
+CARDS.forEach(function(c,i){
+var known=!!S.known[i];if(known)k++;
+if(cardFilter==="oefenen"){if(known)return;}
+else if(!inSel(c[0],cardFilter))return;
+html+='<div class="flip'+(known?" known":"")+'" data-i="'+i+'" tabindex="0" role="button" aria-label="Begrip: '+c[1]+'"><div class="in">'+
+'<div class="f">'+(known?'<span class="chk">✓ gekend</span>':'')+'<div>'+tag(c[0])+'</div><strong>'+c[1]+'</strong><small>klik om om te draaien</small></div>'+
+'<div class="b"><div>'+c[2]+'</div><em>Voorbeeld: '+c[3]+'</em><div class="row" style="margin-top:auto;padding-top:8px"><button class="btn" style="padding:6px 12px;font-size:13px;background:'+(known?'#8a7f88':'var(--ok)')+'" data-know="'+i+'">'+(known?"Toch nog oefenen":"✓ Ik wist het")+'</button></div></div></div></div>';
+});
+cg.innerHTML=html||'<div class="card pad">Alles gekend in deze selectie. Knap werk!</div>';
+document.getElementById("cardCount").textContent=k+" van "+CARDS.length+" begrippen gekend";
+}
+cf.addEventListener("click",function(e){var f=e.target.dataset.f;if(f){cardFilter=f;renderFlash();}});
+cg.addEventListener("click",function(e){
+var kn=e.target.dataset.know;
+if(kn!==undefined){e.stopPropagation();if(S.known[kn])delete S.known[kn];else S.known[kn]=1;save();renderFlash();return;}
+var c=e.target.closest(".flip");if(c)c.classList.toggle("open");
+});
+cg.addEventListener("keydown",function(e){if((e.key==="Enter"||e.key===" ")&&e.target.classList.contains("flip")){e.preventDefault();e.target.classList.toggle("open");}});
+document.getElementById("cardReset").addEventListener("click",function(){cg.querySelectorAll(".flip.open").forEach(function(c){c.classList.remove("open");});});
+
+function rnd(a,b){return Math.floor(Math.random()*(b-a+1))+a;}
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+function r(x,d){var m=Math.pow(10,d);return Math.round((x+(x>=0?1:-1)*1e-9)*m)/m;}
+var nf2=new Intl.NumberFormat("nl-NL",{minimumFractionDigits:2,maximumFractionDigits:2});
+var nf1=new Intl.NumberFormat("nl-NL",{minimumFractionDigits:1,maximumFractionDigits:1});
+function eur(x){return (x<0?"−€":"€")+nf2.format(Math.abs(x));}
+function pc(x){return (x<0?"−":"")+nf1.format(Math.abs(x))+"%";}
+function num(x){return new Intl.NumberFormat("nl-NL",{maximumFractionDigits:4}).format(x);}
+function i1(x){return nf1.format(x);}
+var SUP={2:"²",3:"³",4:"⁴",5:"⁵",6:"⁶",7:"⁷",8:"⁸"};
+function parse(s,d){s=String(s).trim().replace(/[€%\s]/g,"").replace(/[−–]/g,"-");if(!s)return NaN;
+if(s.indexOf(",")>-1){s=s.replace(/\./g,"").replace(",",".");}
+else if((s.match(/\./g)||[]).length>1||(d===0&&/^-?\d{1,3}(\.\d{3})+$/.test(s))){s=s.replace(/\./g,"");}
+return parseFloat(s);}
+function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+function verdict(v,a,dec,abs){if(isNaN(v))return null;if(abs){v=Math.abs(v);a=Math.abs(a);}
+var tol=dec===3?0.00051:dec===2?0.0051:dec===1?0.051:0.51;if(Math.abs(v-a)<=tol)return "ok";
+if(!abs&&a!==0&&Math.abs(Math.abs(v)-Math.abs(a))<=tol)return "sign";
+if(Math.abs(v-a)<=Math.max(Math.abs(a)*0.01,dec===2?0.02:0.2))return "mid";return "no";}
+function vmsg(res){return res==="ok"?"✓ Helemaal goed!":res==="sign"?"Bijna! Let op het teken: is het een stijging (+) of een daling (−)?":res==="mid"?"Bijna! Controleer je afronding.":"✗ Helaas, dat klopt niet.";}
+function answerRow(id,u){return '<div class="row" style="margin-top:12px"><div class="inp">'+(u==="€"?"<b>€</b>":"")+'<input id="'+id+'In" inputmode="decimal" autocomplete="off" placeholder="je antwoord">'+(u==="%"?"<b>%</b>":"")+'</div><button class="btn" id="'+id+'Check">Controleer</button></div><div id="'+id+'Fb"></div>';}
+function money(a,b){return rnd(a*100,b*100)/100;}
+function stmt(rows,cls){return '<table class="statement'+(cls?" "+cls:"")+'">'+rows.map(function(x){return '<tr'+(x[x.length-1]===1?' class="ask"':'')+'>'+x.filter(function(c){return c!==1;}).map(function(c){return '<td>'+c+'</td>';}).join("")+'</tr>';}).join("")+'</table>';}
+function qp(t){return '<p class="qq">'+t+'</p>';}
+
+var FORM={
+netto:"brutoloon − inhoudingen",
+bruto:"nettoloon + inhoudingen",
+loon:"uurloon × aantal uren",
+maand:"weekbedrag × 52 : 12",
+week:"maandbedrag × 12 : 52",
+jeugd:"percentage : 100 × minimumloon",
+ww:"percentage : 100 × laatste brutoloon",
+pct:"(nieuw − oud) : oud × 100",
+procvan:"(percentage : 100) × totaal",
+perc:"deel : geheel × 100",
+verschil:"waarde 1 − waarde 2",
+cirkel:"100% − de andere delen"
+};
+
+var MODES=[["netto","Bruto en netto"],["loon","Loon per week/maand"],["maand","Week ↔ maand"],["jeugd","Minimumjeugdloon"],["ww","WW-uitkering"],["pct","Procent verandering"],["procvan","Procent van een bedrag"],["perc","Hoeveel procent?"],["diagram","Diagrammen"]];
+
+var RGEN={
+maand:function(){
+if(Math.random()<0.55){var w=pick([["Je verdient met je bijbaan ",35,140],["Je krijgt aan zakgeld ",8,25],["Je gezin geeft aan boodschappen ",120,240]]),x=money(w[1],w[2]),j=r(x*52,2),a=r(x*52/12,2);
+return{f:"maand",h:"Hoeveel is dat per maand? (2 decimalen)",body:qp(w[0]+eur(x)+" per week."),a:a,d:2,u:"€",calc:"Week → maand: × 52 : 12\n"+eur(x)+" × 52 = "+eur(j)+" per jaar\n"+eur(j)+" : 12 = "+eur(a)+" per maand\n(Niet × 4: een maand is langer dan 4 weken!)"};}
+var m=pick([["Je huur is ",450,950],["Je telefoonabonnement kost ",12,45],["Je sportcontributie is ",15,40],["Je verdient met je bijbaan ",180,520]]),y=money(m[1],m[2]),j2=r(y*12,2),b=r(y*12/52,2);
+return{f:"week",h:"Hoeveel is dat per week? (2 decimalen)",body:qp(m[0]+eur(y)+" per maand."),a:b,d:2,u:"€",calc:"Maand → week: × 12 : 52\n"+eur(y)+" × 12 = "+eur(j2)+" per jaar\n"+eur(j2)+" : 52 = "+eur(b)+" per week"};},
+pct:function(){var v=pick([
+function(){var o=pick([5,6,7.5,8,10,12.5]),n=r(o+pick([0.5,1,1.5,2,2.5]),2);return ["Vorig jaar kreeg je "+eur(o)+" zakgeld per week. Nu krijg je "+eur(n)+".",o,n,"Met hoeveel procent is je zakgeld gestegen?"];},
+function(){var o=rnd(780,960),n=o+rnd(15,70);return ["Vorig schooljaar zaten er "+o+" leerlingen op school. Dit schooljaar zijn het er "+n+".",o,n,"Met hoeveel procent is het aantal leerlingen gestegen?"];},
+function(){var o=rnd(145,175)/100,n=r(o+rnd(6,25)/100,2);return ["Een liter benzine kostte vorig jaar "+eur(o)+". Nu kost een liter "+eur(n)+".",o,n,"Met hoeveel procent is de prijs gestegen?"];},
+function(){var o=rnd(65,98)*10,n=o-rnd(3,14)*10;return ["Een tweedehands scooter was vorig jaar "+eur(o)+" waard. Nu is hij "+eur(n)+" waard.",o,n,"Met hoeveel procent is de waarde gedaald?"];},
+function(){var o=rnd(72,89)*10,n=o+rnd(2,6)*5;return ["De huur van een studio ging van "+eur(o)+" naar "+eur(n)+" per maand.",o,n,"Met hoeveel procent is de huur gestegen?"];},
+function(){var o=rnd(2100,2600),n=o+rnd(40,140);return ["Het brutoloon van Fatima ging van "+eur(o)+" naar "+eur(n)+" per maand.",o,n,"Met hoeveel procent is haar loon gestegen?"];}
+])();var a=r((v[2]-v[1])/v[1]*100,1);
+return{f:"pct",h:v[3]+" (1 decimaal)",body:qp(v[0]),a:a,d:1,u:"%",abs:a<0,calc:"Procentuele verandering = (nieuw − oud) : oud × 100\n("+num(v[2])+" − "+num(v[1])+") : "+num(v[1])+" × 100 = "+pc(a)+(a<0?"\nDus een daling van "+pc(-a):" gestegen")};},
+netto:function(){var nm=pick(["Sem","Lisa","Mo","Fatima","Daan","Noor"]),job=pick(["in een kledingwinkel","in de zorg","bij een bouwbedrijf","in een restaurant","op een kantoor","in een fabriek"]),b=rnd(170,340)*10,lb=r(b*rnd(8,18)/100,2),sp=r(b*rnd(4,12)/100,2),k=rnd(1,4);
+if(k<=2){var a=r(b-lb-sp,2);return{f:"netto",h:"Bereken het nettoloon van "+nm+" per maand. (2 decimalen)",body:qp(nm+" werkt "+job+". Het brutoloon is "+eur(b)+" per maand.")+stmt([["Brutoloon",eur(b)],["Loonbelasting","− "+eur(lb)],["Sociale premies","− "+eur(sp)],["Nettoloon","?",1]]),a:a,d:2,u:"€",calc:"Nettoloon = brutoloon − inhoudingen\nInhoudingen: "+eur(lb)+" + "+eur(sp)+" = "+eur(r(lb+sp,2))+"\n"+eur(b)+" − "+eur(r(lb+sp,2))+" = "+eur(a)};}
+if(k===3){var inh=r(lb+sp,2),n=r(b-inh,2);return{f:"bruto",h:"Wat is het brutoloon van "+nm+"? (2 decimalen)",body:qp(nm+" krijgt "+eur(n)+" op de bankrekening. Er is "+eur(inh)+" ingehouden voor loonbelasting en premies."),a:b,d:2,u:"€",calc:"Brutoloon = nettoloon + inhoudingen\n"+eur(n)+" + "+eur(inh)+" = "+eur(b)};}
+var inh2=r(lb+sp,2),p=r(inh2/b*100,1);return{f:"perc",h:"Hoeveel procent van het brutoloon wordt ingehouden? (1 decimaal)",body:qp("Het brutoloon van "+nm+" is "+eur(b)+" per maand. Er wordt "+eur(inh2)+" ingehouden voor loonbelasting en premies."),a:p,d:1,u:"%",calc:"Percentage = deel : geheel × 100\n"+num(inh2)+" : "+num(b)+" × 100 = "+pc(p)};},
+loon:function(){var u=pick([6.12,7.40,8.03,9.25,10.65,11.20,12.48,13.68,14.40]),h=pick([6,8,10,12,14,16,20,24]),w=r(u*h,2),k=rnd(1,3);
+if(k<=2)return{f:"loon",h:"Hoeveel verdien je per week (bruto)? (2 decimalen)",body:qp("Je werkt "+h+" uur per week "+pick(["in de supermarkt","bij de bakker","in een restaurant","als bezorger","in een tuincentrum"])+". Je uurloon is "+eur(u)+"."),a:w,d:2,u:"€",calc:"Weekloon = uurloon × aantal uren\n"+eur(u)+" × "+h+" = "+eur(w)};
+var m=r(w*52/12,2);return{f:"loon",h:"Hoeveel verdien je gemiddeld per maand (bruto)? (2 decimalen)",body:qp("Je werkt elke week "+h+" uur voor "+eur(u)+" per uur."),a:m,d:2,u:"€",calc:"Weekloon: "+eur(u)+" × "+h+" = "+eur(w)+"\nPer maand: "+eur(w)+" × 52 : 12 = "+eur(m)+"\n(Niet × 4!)"};},
+jeugd:function(){var base=pick([13.27,13.68,14.06,14.40]),t=[[15,30],[16,34.5],[17,39.5],[18,50],[19,60],[20,80]],x=pick(t),k=rnd(1,3);
+var tbl=stmt([["Leeftijd","% van het minimumloon"]].concat(t.map(function(y){return [y[0]+" jaar",num(y[1])+"%"];})).concat([["21 jaar en ouder","100%"]]),"cpi");
+if(k<=2){var a=r(x[1]/100*base,2);return{f:"jeugd",h:"Wat is het minimumjeugdloon per uur voor iemand van "+x[0]+" jaar? (2 decimalen)",body:qp("Stel: het minimumloon (21 jaar en ouder) is "+eur(base)+" per uur. Gebruik de tabel.")+tbl,a:a,d:2,u:"€",calc:"Minimumjeugdloon = percentage : 100 × minimumloon\n"+num(x[1])+" : 100 × "+num(base)+" = "+eur(a)};}
+var j=r(x[1]/100*base,2),p=r(j/base*100,1);return{f:"perc",h:"Hoeveel procent van het minimumloon krijgt deze "+x[0]+"-jarige? (1 decimaal)",body:qp("Het minimumloon voor 21 jaar en ouder is "+eur(base)+" per uur. Een "+x[0]+"-jarige verdient minimaal "+eur(j)+" per uur."),a:p,d:1,u:"%",calc:"Percentage = deel : geheel × 100\n"+num(j)+" : "+num(base)+" × 100 = "+pc(p)};},
+ww:function(){var b=rnd(150,380)*10,k=rnd(1,4),a75=r(0.75*b,2),a70=r(0.70*b,2);
+if(k===1)return{f:"ww",h:"Hoeveel WW krijg je per maand in de eerste twee maanden? (2 decimalen)",body:qp("Je bent ontslagen en hebt recht op WW. Je laatste brutoloon was "+eur(b)+" per maand."),a:a75,d:2,u:"€",calc:"De eerste twee maanden: 75% van je laatste brutoloon\n75 : 100 × "+num(b)+" = "+eur(a75)};
+if(k===2)return{f:"ww",h:"Hoeveel WW krijg je per maand na de eerste twee maanden? (2 decimalen)",body:qp("Je laatste brutoloon was "+eur(b)+" per maand. Je bent al drie maanden werkloos."),a:a70,d:2,u:"€",calc:"Na twee maanden: 70% van je laatste brutoloon\n70 : 100 × "+num(b)+" = "+eur(a70)};
+if(k===3){var n=pick([4,5,6,8,10]),tot=r(2*a75+(n-2)*a70,2);return{f:"ww",h:"Hoeveel WW krijg je in totaal in de eerste "+n+" maanden? (2 decimalen)",body:qp("Je laatste brutoloon was "+eur(b)+" per maand. Je bent "+n+" maanden werkloos en krijgt al die tijd WW."),a:tot,d:2,u:"€",calc:"Maand 1 en 2: 75% van "+eur(b)+" = "+eur(a75)+" per maand → 2 × "+eur(a75)+" = "+eur(r(2*a75,2))+"\nMaand 3 t/m "+n+": 70% van "+eur(b)+" = "+eur(a70)+" per maand → "+(n-2)+" × "+eur(a70)+" = "+eur(r((n-2)*a70,2))+"\nTotaal: "+eur(tot)};}
+var d=r(a75-a70,2);return{f:"ww",h:"Hoeveel euro gaat je WW per maand omlaag na de eerste twee maanden? (2 decimalen)",body:qp("Je laatste brutoloon was "+eur(b)+" per maand. Je krijgt eerst 75% en daarna 70%."),a:d,d:2,u:"€",calc:"Eerst: 75% van "+eur(b)+" = "+eur(a75)+"\nDaarna: 70% van "+eur(b)+" = "+eur(a70)+"\nVerschil: "+eur(a75)+" − "+eur(a70)+" = "+eur(d)};},
+procvan:function(){var v=pick([
+function(){var t=rnd(24,40)*1000,p=pick([2,3,4,5]);return ["Een bedrijf geeft alle werknemers een bonus van "+p+"% over hun jaarsalaris. Sarah verdient "+eur(t)+" per jaar.",p,t,"Hoeveel euro bonus krijgt Sarah?"];},
+function(){var t=rnd(190,320)*10,p=pick([1.5,2,2.5,3,3.5,4]);return ["De nieuwe cao geeft "+num(p)+"% loonsverhoging. Je brutoloon is "+eur(t)+" per maand.",p,t,"Hoeveel euro gaat je brutoloon per maand omhoog?"];},
+function(){var t=rnd(200,330)*10,p=pick([10,12,15,18,20]);return ["Van een brutoloon van "+eur(t)+" gaat "+p+"% af aan loonbelasting.",p,t,"Hoeveel euro loonbelasting betaal je?"];},
+function(){var t=pick([1200,1500,2400,3600]),p=pick([25,40,60,75]);return ["Een bedrijf heeft "+num(t)+" werknemers. Daarvan werkt "+p+"% in deeltijd.",p,t,"Hoeveel werknemers werken in deeltijd?"];}
+])(),a=r(v[1]/100*v[2],2),isn=v[3].indexOf("werknemers werken")>-1;
+return{f:"procvan",h:v[3]+(isn?" (hele aantallen)":" (2 decimalen)"),body:qp(v[0]),a:isn?r(a,0):a,d:isn?0:2,u:isn?"":"€",calc:"Bedrag = (percentage : 100) × totaal\n("+num(v[1])+" : 100) × "+num(v[2])+" = "+(isn?num(r(a,0)):eur(a))};},
+perc:function(){var v=pick([
+function(){var t=pick([24,25,28,30]),d=rnd(4,t-6);return ["In een klas van "+t+" leerlingen hebben er "+d+" een bijbaan.",d,t,"Hoeveel procent van de klas heeft een bijbaan?"];},
+function(){var t=rnd(180,320)*10,d=r(t*rnd(12,28)/100,2);return ["Van een brutoloon van "+eur(t)+" wordt "+eur(d)+" ingehouden.",d,t,"Hoeveel procent van het brutoloon wordt ingehouden?"];},
+function(){var t=pick([40,60,80,120,250]),d=rnd(Math.round(t*0.1),Math.round(t*0.7));return ["Een bedrijf heeft "+t+" werknemers. "+d+" van hen werken in deeltijd.",d,t,"Hoeveel procent werkt in deeltijd?"];},
+function(){var t=rnd(600,900)*10,d=rnd(30,70)*10;return ["In een dorp wonen "+num(t)+" mensen die willen werken. Er zijn "+num(d)+" werklozen.",d,t,"Hoeveel procent van de mensen die willen werken is werkloos?"];}
+])(),a=r(v[1]/v[2]*100,1);
+return{f:"perc",h:v[3]+" (1 decimaal)",body:qp(v[0]),a:a,d:1,u:"%",calc:"Percentage = deel : geheel × 100\n"+num(v[1])+" : "+num(v[2])+" × 100 = "+pc(a)};},
+diagram:function(){
+var COLS=["var(--p5)","var(--p6)","var(--p8)","var(--p4)","var(--p2)","var(--p3)"];
+function axis(W,H,L,B){return '<line x1="'+L+'" y1="'+(H-B)+'" x2="'+(W-10)+'" y2="'+(H-B)+'" style="stroke:var(--muted)"/><line x1="'+L+'" y1="14" x2="'+L+'" y2="'+(H-B)+'" style="stroke:var(--muted)"/>';}
+function bar(lbl,val,unit,title){var W=520,H=240,L=40,B=34,n=val.length,mx=Math.max.apply(null,val)*1.15,bw=(W-L-20)/n,s='<svg viewBox="0 0 '+W+' '+H+'" style="width:100%;max-width:520px;height:auto" role="img" aria-label="'+title+'">'+axis(W,H,L,B);
+val.forEach(function(v,i){var h=(H-B-20)*v/mx,x=L+i*bw+bw*0.18,w=bw*0.64,y=H-B-h;s+='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="3" style="fill:'+COLS[i%COLS.length]+'"/><text x="'+(x+w/2)+'" y="'+(y-5)+'" text-anchor="middle" style="fill:var(--ink);font-size:12px;font-weight:700">'+num(v)+'</text><text x="'+(x+w/2)+'" y="'+(H-B+16)+'" text-anchor="middle" style="fill:var(--muted);font-size:11.5px">'+lbl[i]+'</text>';});
+return '<div style="margin:6px 0"><b style="font-size:14px">'+title+'</b><div class="muted" style="font-size:12.5px">'+unit+'</div>'+s+'</svg></div>';}
+function line(lbl,val,unit,title){var W=520,H=240,L=40,B=34,n=val.length,mn=Math.min.apply(null,val)*0.85,mx=Math.max.apply(null,val)*1.1,dx=(W-L-40)/(n-1),pts=val.map(function(v,i){return [L+20+i*dx,H-B-10-(H-B-30)*(v-mn)/(mx-mn)];}),s='<svg viewBox="0 0 '+W+' '+H+'" style="width:100%;max-width:520px;height:auto" role="img" aria-label="'+title+'">'+axis(W,H,L,B);
+s+='<polyline fill="none" points="'+pts.map(function(p){return p[0]+','+p[1];}).join(' ')+'" style="stroke:var(--berry);stroke-width:3"/>';
+pts.forEach(function(p,i){s+='<circle cx="'+p[0]+'" cy="'+p[1]+'" r="4.5" style="fill:var(--berry)"/><text x="'+p[0]+'" y="'+(p[1]-9)+'" text-anchor="middle" style="fill:var(--ink);font-size:12px;font-weight:700">'+num(val[i])+'</text><text x="'+p[0]+'" y="'+(H-B+16)+'" text-anchor="middle" style="fill:var(--muted);font-size:11.5px">'+lbl[i]+'</text>';});
+return '<div style="margin:6px 0"><b style="font-size:14px">'+title+'</b><div class="muted" style="font-size:12.5px">'+unit+'</div>'+s+'</svg></div>';}
+function pie(parts,title,hide){var R=90,cx=100,cy=100,a0=-Math.PI/2,tot=0;parts.forEach(function(p){tot+=p[1];});var s='<svg viewBox="0 0 200 200" style="width:190px;max-width:100%;height:auto;flex:none" role="img" aria-label="'+title+'">';
+parts.forEach(function(p,i){var a1=a0+2*Math.PI*p[1]/tot,lg=(a1-a0)>Math.PI?1:0;s+='<path d="M'+cx+','+cy+' L'+(cx+R*Math.cos(a0))+','+(cy+R*Math.sin(a0))+' A'+R+','+R+' 0 '+lg+' 1 '+(cx+R*Math.cos(a1))+','+(cy+R*Math.sin(a1))+' Z" style="fill:'+COLS[i%COLS.length]+';stroke:var(--card);stroke-width:2"/>';a0=a1;});
+var leg='<div style="display:flex;flex-direction:column;gap:6px;font-size:13.5px">'+parts.map(function(p,i){return '<div style="display:flex;gap:8px;align-items:center"><span style="width:14px;height:14px;border-radius:4px;flex:none;background:'+COLS[i%COLS.length]+'"></span><span>'+p[0]+': <b>'+(i===hide?'?':p[2])+'</b></span></div>';}).join("")+'</div>';
+return '<div style="margin:6px 0"><b style="font-size:14px">'+title+'</b><div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:6px">'+s+'</svg>'+leg+'</div></div>';}
+var k=rnd(1,4),yrs=[2019,2020,2021,2022,2023,2024,2025];
+if(k===1){var v=yrs.map(function(){return rnd(320,560);}),i=rnd(0,3),j=rnd(i+2,6),a=r((v[j]-v[i])/v[i]*100,1);
+return{f:"pct",h:"Met hoeveel procent veranderde het aantal werklozen van "+yrs[i]+" tot "+yrs[j]+"? (1 decimaal, min-teken bij een daling)",body:line(yrs,v,"Aantal werklozen in Nederland (× 1.000) · fictieve cijfers","Lijndiagram: werkloosheid"),a:a,d:1,u:"%",calc:"Aflezen: "+yrs[i]+" = "+v[i]+" en "+yrs[j]+" = "+v[j]+"\nProcentuele verandering = (nieuw − oud) : oud × 100\n("+v[j]+" − "+v[i]+") : "+v[i]+" × 100 = "+pc(a)+(a<0?"\nDe werkloosheid is gedaald.":"\nDe werkloosheid is gestegen.")};}
+if(k===2){var sec=shuffle(["Zorg","Bouw","Onderwijs","Horeca","Industrie","Handel"]).slice(0,5),v2=sec.map(function(){return rnd(8,60);}),x=rnd(0,4),y;do{y=rnd(0,4);}while(y===x);var d=v2[x]-v2[y];
+return{f:"verschil",h:"Hoeveel vacatures (× 1.000) waren er in de "+sec[x].toLowerCase()+" meer of minder dan in de "+sec[y].toLowerCase()+"? (min-teken als het er minder zijn)",body:bar(sec,v2,"Aantal vacatures per bedrijfstak (× 1.000) · fictieve cijfers","Staafdiagram: vacatures"),a:d,d:0,u:"",calc:"Aflezen: "+sec[x]+" = "+v2[x]+", "+sec[y]+" = "+v2[y]+"\n"+v2[x]+" − "+v2[y]+" = "+num(d)+" (× 1.000 = "+num(d*1000)+" vacatures)"};}
+if(k===3){var ag=rnd(2,4),ind=rnd(13,20),di=100-ag-ind,parts=[["Agrarisch",ag,ag+"%"],["Industrieel",ind,ind+"%"],["Dienstverlenend",di,di+"%"]],h=rnd(0,2),ans=parts[h][1];
+return{f:"cirkel",h:"Hoeveel procent van de werkenden werkt in de "+(parts[h][0]==="Agrarisch"?"agrarische":parts[h][0]==="Industrieel"?"industriële":"dienstverlenende")+" sector?",body:pie(parts,"Cirkeldiagram: werkenden per productiesector (fictieve cijfers)",h),a:ans,d:0,u:"%",calc:"De hele cirkel is 100%.\n100% − "+parts.filter(function(_,i){return i!==h;}).map(function(p){return p[2];}).join(" − ")+" = "+ans+"%"};}
+var tt=pick([200,250,400,500,800]),a1=Math.round(tt*rnd(30,50)/100),a2=Math.round(tt*rnd(15,30)/100),a3=tt-a1-a2,ps=[["Voltijd",a1,a1+" werknemers"],["Deeltijd",a2,a2+" werknemers"],["Flexibel",a3,a3+" werknemers"]],w=rnd(0,2),aw=r(ps[w][1]/tt*100,1);
+return{f:"perc",h:"Hoeveel procent van de werknemers werkt "+["in voltijd","in deeltijd","flexibel"][w]+"? (1 decimaal)",body:pie(ps,"Cirkeldiagram: werknemers van een bedrijf (totaal "+tt+")",-1),a:aw,d:1,u:"%",calc:"Totaal: "+tt+" werknemers\nPercentage = deel : geheel × 100\n"+ps[w][1]+" : "+tt+" × 100 = "+pc(aw)};}
+};
+
+
+var fs={good:0,total:0,streak:0},fq=null,fCard=document.getElementById("fCard");
+var FMODES=["netto","loon","maand","jeugd","ww","pct","procvan","perc"],lastF="";
+function fScore(){document.getElementById("fScore").innerHTML="Goed: <b>"+fs.good+"</b> van "+fs.total+" &nbsp;·&nbsp; Reeks: <b>"+fs.streak+"</b>";}
+function newF(){var m;do{m=pick(FMODES);}while(m===lastF);lastF=m;fq=RGEN[m]();fq.phase=1;
+var others=shuffle(Object.keys(FORM).filter(function(k){return k!==fq.f;})).slice(0,3),opts=shuffle([fq.f].concat(others));
+fCard.innerHTML='<div class="muted" style="font-size:13px">Stap 1 van 2 · kies de juiste formule</div>'+fq.body+'<p style="font-weight:700;margin:4px 0 12px">'+fq.h+'</p><div class="opts">'+opts.map(function(k){return '<button class="opt f" data-k="'+k+'">'+FORM[k]+'</button>';}).join("")+'</div><div id="fFb0"></div>';fScore();}
+fCard.addEventListener("click",function(e){
+var b=e.target.closest("[data-k]");
+if(b&&fq.phase===1){fq.phase=2;var ok=b.dataset.k===fq.f;fq.formulaOk=ok;
+fCard.querySelectorAll(".opt").forEach(function(x){x.disabled=true;if(x.dataset.k===fq.f)x.classList.add("right");else if(x===b)x.classList.add("wrong");});
+document.getElementById("fFb0").innerHTML='<div class="fb '+(ok?"ok":"no")+'">'+(ok?"✓ Goede formule!":"✗ Niet deze. De juiste formule is: <code>"+FORM[fq.f]+"</code>")+'</div><div class="muted" style="font-size:13px;margin-top:14px">Stap 2 van 2 · reken het uit</div>'+answerRow("f",fq.u);
+var inp=document.getElementById("fIn");inp.addEventListener("keydown",function(ev){if(ev.key==="Enter")checkF();});
+document.getElementById("fCheck").addEventListener("click",checkF);}
+if(e.target.id==="fNext")newF();
+});
+function checkF(){var v=parse(document.getElementById("fIn").value,fq.d),res=verdict(v,fq.a,fq.d,fq.abs);if(!res)return;
+fs.total++;if(res==="ok"&&fq.formulaOk){fs.good++;fs.streak++;}else fs.streak=0;
+document.getElementById("fCheck").disabled=true;document.getElementById("fIn").disabled=true;
+document.getElementById("fFb").innerHTML='<div class="fb '+(res==="sign"?"mid":res)+'">'+vmsg(res)+'<span class="calc">'+fq.calc+'</span></div><div class="row" style="margin-top:12px"><button class="btn" id="fNext">Volgende som →</button></div>';fScore();}
+newF();
+
+var mode="netto",rs={good:0,total:0,streak:0},rq=null,rCard=document.getElementById("rCard"),rModes=document.getElementById("rModes");
+function rScore(){document.getElementById("rScore").innerHTML="Goed: <b>"+rs.good+"</b> van "+rs.total+" &nbsp;·&nbsp; Reeks: <b>"+rs.streak+"</b>";}
+function newR(){
+rModes.innerHTML=MODES.map(function(m){return '<button data-m="'+m[0]+'" class="'+(m[0]===mode?"on":"")+'">'+m[1]+'</button>';}).join("");
+rq=RGEN[mode]();
+rCard.innerHTML=rq.body+'<p style="font-weight:700;margin:8px 0 0">'+rq.h+'</p>'+(rq.f!=="cpi"?'<div class="muted" style="font-size:13px;margin-top:4px">Formule: <code>'+FORM[rq.f]+'</code></div>':'')+answerRow("r",rq.u);
+var inp=document.getElementById("rIn");inp.addEventListener("keydown",function(ev){if(ev.key==="Enter")checkR();});
+document.getElementById("rCheck").addEventListener("click",checkR);rScore();
+}
+function checkR(){
+var v=parse(document.getElementById("rIn").value,rq.d),res=verdict(v,rq.a,rq.d,rq.abs);if(!res)return;
+rs.total++;if(res==="ok"){rs.good++;rs.streak++;}else rs.streak=0;
+document.getElementById("rCheck").disabled=true;document.getElementById("rIn").disabled=true;
+document.getElementById("rFb").innerHTML='<div class="fb '+(res==="sign"?"mid":res)+'">'+vmsg(res)+'<span class="calc">'+rq.calc+'</span></div><div class="row" style="margin-top:12px"><button class="btn" id="rNext">Volgende som →</button></div>';
+document.getElementById("rNext").addEventListener("click",newR);rScore();
+}
+rModes.addEventListener("click",function(e){var m=e.target.dataset.m;if(m){mode=m;newR();}});
+newR();
+var BANK=[["3.1", "Wat is een werkgever?", ["Iemand die een of meer personen in dienst heeft en hun loon betaalt", "Iemand die in loondienst werkt", "Iemand die werkloos is", "Iemand die een uitkering krijgt"], "De werkgever heeft mensen in dienst en betaalt hun loon."], ["3.1", "Wat is een werknemer?", ["Iemand die in loondienst werkt voor een werkgever", "De eigenaar van een bedrijf", "Iemand die de cao maakt", "Iemand die bij het UWV werkt"], "Wie in loondienst werkt, is werknemer."], ["3.1", "Welke taak hoort bij een werkgever?", ["Leidinggeven aan het personeel", "Alleen uitvoerende taken doen", "Een WW-uitkering aanvragen", "Loonbelasting ontvangen"], "Een werkgever stuurt het personeel aan."], ["3.1", "Hoe verdienen de meeste mensen in Nederland hun inkomen?", ["Als werknemer", "Met een eigen bedrijf", "Met een uitkering", "Met rente"], "In Nederland werken de meeste mensen in loondienst."], ["3.1", "Wat is het inkomen van iemand met een eigen bedrijf?", ["Winst", "Loon", "Een uitkering", "Premie"], "Voor een ondernemer is de winst het inkomen."], ["3.1", "Wat is een risico van een eigen bedrijf?", ["Als je geen opdrachten hebt, heb je geen inkomen", "Je mag zelf niets bepalen", "Je krijgt altijd minder vakantiedagen", "Je moet een proeftijd hebben"], "Geen opdrachten betekent geen inkomen."], ["3.1", "Wat is een voordeel van een eigen bedrijf?", ["Je kunt alles zelf bepalen", "Je hebt altijd een vast inkomen", "Je hebt nooit risico", "Je krijgt altijd een WW-uitkering"], "Met een eigen bedrijf ben je je eigen baas."], ["3.1", "Wat is een vacature?", ["Een baan waarvoor een bedrijf iemand zoekt", "Een vrije dag", "Een afspraak over je loon", "Een loonstrook"], "Bij een vacature zoekt een bedrijf nieuw personeel."], ["3.1", "Wat stuur je mee als je solliciteert?", ["Een sollicitatiebrief en je cv", "Je loonstrook", "Je arbeidsovereenkomst", "Je cao"], "In je cv staan je opleiding en werkervaring."], ["3.1", "Wat is het doel van een sollicitatiegesprek?", ["Laten zien waarom jij aangenomen moet worden", "Je loon onderhandelen met de vakbond", "Je ontslag aanvragen", "Je opzegtermijn bespreken met het UWV"], "In het gesprek leer je elkaar kennen."], ["3.1", "Wat is een arbeidsovereenkomst?", ["Een afspraak dat je als werknemer bepaald werk komt doen voor een werkgever", "Een afspraak voor een hele bedrijfstak", "Een wet over veilig werken", "Een uitkering bij werkloosheid"], "Je sluit hem af met je eigen werkgever."], ["3.1", "Wat is een arbeidsvoorwaarde?", ["Een afspraak over je werk, zoals je loon of je vakantiedagen", "Een eis om werkloos te zijn", "Een regel van het UWV", "Een sollicitatiebrief"], "Arbeidsvoorwaarden staan in de arbeidsovereenkomst."], ["3.1", "Welke staat NIET in een arbeidsovereenkomst?", ["Je nettoloon", "Het aantal uren per week", "Het aantal vakantiedagen", "De proeftijd"], "In de arbeidsovereenkomst staat het brutoloon."], ["3.1", "Hoe lang mag een proeftijd maximaal duren?", ["Twee maanden", "Twee weken", "Zes maanden", "Een jaar"], "Een proeftijd mag niet langer dan twee maanden duren."], ["3.1", "Wat kan er tijdens de proeftijd gebeuren?", ["Werkgever en werknemer mogen de arbeidsovereenkomst meteen beëindigen", "De werkgever hoeft geen loon te betalen", "De werknemer krijgt dubbel loon", "Er geldt een opzegtermijn van drie maanden"], "Bevalt het niet, dan mag je meteen stoppen."], ["3.1", "Waarom is een proeftijd handig?", ["Werkgever en werknemer kunnen kijken of het bevalt", "Dan hoeft er geen cao te zijn", "Dan betaal je geen belasting", "Dan heb je recht op WW"], "Het is een testperiode voor allebei."], ["3.1", "Wat is een bedrijfstak?", ["Een groep gelijksoortige bedrijven", "Een afdeling binnen één bedrijf", "Een soort uitkering", "Een wet over werktijden"], "Bijvoorbeeld de bouw, de zorg of het onderwijs."], ["3.1", "Wat betekent cao?", ["Collectieve arbeidsovereenkomst", "Centrale arbeidsorganisatie", "Contract voor alle ondernemers", "Collectieve arbeidsomstandigheden"], "Collectief betekent gezamenlijk."], ["3.1", "Wat staat er in een cao?", ["Afspraken over arbeidsvoorwaarden voor een bedrijfstak, zoals loon, werktijden en vakantiedagen", "Regels om werkloos te zijn", "Je persoonlijke sollicitatiebrief", "De hoogte van je WW-uitkering"], "Een cao geldt voor alle werknemers in die bedrijfstak."], ["3.1", "Voor wie geldt een cao?", ["Voor de werknemers in een bedrijfstak (of een groot bedrijf)", "Alleen voor de directeur", "Alleen voor werklozen", "Voor iedereen in Nederland"], "Grote bedrijven zoals KLM hebben soms een eigen cao."], ["3.1", "Wie maken volgens de PowerPoint de afspraken in een cao?", ["Werkgevers, werknemers en de overheid", "Alleen de werkgever", "Alleen het UWV", "De Belastingdienst"], "Ze maken samen afspraken voor een bedrijfstak."], ["3.1", "Wat is brutoloon?", ["Het loon dat je afspreekt, waarop nog niets is ingehouden", "Het loon dat op je bankrekening komt", "Het loon na aftrek van belasting", "Je loon per jaar"], "Het brutoloon staat in je arbeidsovereenkomst."], ["3.1", "Wat is nettoloon?", ["Het loon dat je op je bankrekening ontvangt", "Het loon voor de inhoudingen", "Het minimumloon", "De loonbelasting"], "Nettoloon = brutoloon − inhoudingen."], ["3.1", "Welke inhoudingen gaan van je brutoloon af?", ["Loonbelasting en sociale premies", "Huur en boodschappen", "Rente en aflossing", "Premie en eigen risico"], "De werkgever betaalt deze aan de overheid."], ["3.1", "Waarvoor gebruikt de overheid onder andere de inhoudingen?", ["Voor uitkeringen bij werkloosheid en arbeidsongeschiktheid", "Voor de winst van bedrijven", "Voor de vakantie van werknemers", "Voor de cao van de bouw"], "Zo betaalt de overheid bijvoorbeeld de WW."], ["3.1", "Sem verdient € 2.400 bruto. Er wordt € 480 ingehouden. Wat is zijn nettoloon?", ["€ 1.920", "€ 2.880", "€ 2.400", "€ 480"], "2.400 − 480 = € 1.920."], ["3.1", "Wat gebeurt er met de inhoudingen als je salaris hoger wordt?", ["Je betaalt meer inhoudingen", "Je betaalt minder inhoudingen", "De inhoudingen blijven gelijk", "Je betaalt geen inhoudingen meer"], "Hoe hoger je salaris, hoe meer belasting je betaalt."], ["3.1", "Wie betaalt de inhoudingen op je brutoloon aan de overheid?", ["De werkgever", "De werknemer zelf", "Het UWV", "De vakbond"], "In loondienst regelt je baas dit."], ["3.1", "Waarvoor gebruik je een staafdiagram?", ["Om aantallen of bedragen met elkaar te vergelijken", "Om te laten zien hoe een geheel in procenten is verdeeld", "Om een cao te maken", "Om je nettoloon te berekenen"], "Hoe hoger de staaf, hoe groter de waarde."], ["3.2", "Wat is een vaste baan?", ["Een baan zonder einddatum", "Een baan voor een paar maanden", "Een baan alleen in de zomer", "Een baan zonder loon"], "Een vaste baan is voor onbepaalde tijd."], ["3.2", "Wat is een tijdelijke baan?", ["Een baan voor een afgesproken periode", "Een baan tot je pensioen", "Een baan zonder contract", "Een baan van minder dan 10 uur"], "Bijvoorbeeld een contract voor één jaar."], ["3.2", "Waarom willen veel werknemers een vaste baan?", ["Ze hebben dan meer zekerheid over hun inkomen", "Ze verdienen dan altijd het dubbele", "Ze hoeven dan geen belasting te betalen", "Ze hebben dan geen proeftijd"], "Met een vast contract weet je dat je elke maand loon krijgt."], ["3.2", "Waarom twijfelen werkgevers soms om iemand meteen een vaste baan te geven?", ["Bij een vast contract is ontslag moeilijker en duurder", "Een vaste werknemer mag geen vakantie nemen", "Een vaste baan is verboden", "Dan moet de werkgever de cao betalen"], "De werkgever zit dan langer aan de werknemer vast."], ["3.2", "Wat is flexibel werken?", ["Werken wanneer de baas je nodig heeft", "Altijd 40 uur per week werken", "Werken zonder werkgever", "Werken in de proeftijd"], "Bijvoorbeeld bezorgen of werken in een strandtent."], ["3.2", "Hoeveel uur werk je meestal met een voltijdbaan?", ["36, 38 of 40 uur per week", "20 uur per week", "12 uur per week", "60 uur per week"], "Dat verschilt per bedrijf."], ["3.2", "Wat is een ander woord voor voltijdbaan?", ["Fulltimebaan", "Parttimebaan", "Bijbaan", "Flexbaan"], "Voltijd = fulltime."], ["3.2", "Wat is een deeltijdbaan?", ["Je werkt minder uren dan een volledige werkweek", "Je werkt alleen in het weekend voor een uitkering", "Je werkt bij twee bedrijven tegelijk", "Je werkt alleen in de proeftijd"], "Deeltijd = parttime."], ["3.2", "Welke groep werkt volgens de PowerPoint vaak in deeltijd?", ["Jongeren", "Directeuren", "Werklozen", "Robots"], "Ook vrouwen en ouderen werken vaak parttime."], ["3.2", "Welke drie productiesectoren zijn er?", ["Agrarisch, industrieel en dienstverlenend", "Voltijd, deeltijd en flex", "Bruto, netto en minimum", "Arbowet, cao en WW"], "Zo deel je bedrijven in."], ["3.2", "Bij welk soort bedrijf werkt een boer die graan verbouwt?", ["Een agrarisch bedrijf", "Een industrieel bedrijf", "Een dienstverlenend bedrijf", "Een overheidsbedrijf"], "Agrarische bedrijven hebben de natuur nodig."], ["3.2", "Wat doen agrarische bedrijven?", ["Ze produceren grondstoffen met behulp van de natuur", "Ze maken goederen van grondstoffen", "Ze leveren diensten", "Ze betalen uitkeringen"], "Bijvoorbeeld akkerbouw, veehouderij en tuinbouw."], ["3.2", "Wat doen industriële bedrijven?", ["Ze maken goederen van grondstoffen en materialen", "Ze verbouwen graan", "Ze knippen haar", "Ze geven les"], "Bijvoorbeeld een fietsenfabriek of een bakkerij."], ["3.2", "Wat doen dienstverlenende bedrijven?", ["Ze leveren diensten", "Ze maken goederen", "Ze verbouwen groente", "Ze maken staal"], "Bijvoorbeeld een kapper, een winkel of een school."], ["3.2", "Een fabriek maakt fietsen. In welke sector hoort dit bedrijf?", ["Industrieel", "Agrarisch", "Dienstverlenend", "Geen enkele"], "Van materialen naar een product."], ["3.2", "Een kapperszaak hoort bij de ...", ["dienstverlenende sector", "industriële sector", "agrarische sector", "bouwsector"], "Een kapper levert een dienst."], ["3.2", "Een melkveehouderij hoort bij de ...", ["agrarische sector", "industriële sector", "dienstverlenende sector", "zorgsector"], "Koeien houden voor melk is agrarisch."], ["3.2", "Een bakkerij die brood maakt, hoort volgens het boek bij de ...", ["industriële sector", "agrarische sector", "dienstverlenende sector", "financiële sector"], "Van meel (grondstof) maakt de bakker brood."], ["3.2", "Een supermarkt hoort bij de ...", ["dienstverlenende sector", "industriële sector", "agrarische sector", "bouwsector"], "Een winkel verkoopt producten: dat is een dienst."], ["3.2", "Een leraar werkt in de ...", ["dienstverlenende sector", "industriële sector", "agrarische sector", "productiesector"], "Lesgeven is een dienst."], ["3.2", "Tata Steel maakt staal. Welke sector is dat?", ["Industrieel", "Agrarisch", "Dienstverlenend", "Ambachtelijk"], "Van grondstof naar product."], ["3.2", "Wat is arbeidsverdeling?", ["Het werk wordt verdeeld in verschillende banen met eigen taken", "Iedereen doet precies hetzelfde werk", "Het loon wordt eerlijk verdeeld", "Werklozen krijgen werk van het UWV"], "Iedereen heeft een eigen taak."], ["3.2", "Wat is een voordeel van arbeidsverdeling?", ["Het werk gaat sneller en beter", "Iedereen verdient hetzelfde", "Je hoeft geen opleiding te volgen", "Er zijn geen werkgevers meer nodig"], "Je wordt goed in je eigen taak."], ["3.2", "Wat is specialiseren?", ["Je richt je op het werk waar je goed in bent", "Je doet zoveel mogelijk verschillende taken", "Je stopt met werken", "Je werkt in deeltijd"], "Specialisten zijn een voordeel voor een bedrijf."], ["3.2", "Waarom is specialisatie een voordeel voor een bedrijf?", ["Werk waar je goed in bent, doe je beter en sneller", "Specialisten hoeven geen loon", "Specialisten werken altijd parttime", "Het bedrijf betaalt dan geen belasting"], "Dat verhoogt de kwaliteit."], ["3.2", "Hoeveel procent is een hele cirkel in een cirkeldiagram?", ["100%", "50%", "360%", "10%"], "De delen samen zijn altijd 100%."], ["3.2", "Wanneer gebruik je vooral een cirkeldiagram?", ["Om te laten zien hoe een geheel in delen is verdeeld", "Om een ontwikkeling in de tijd te laten zien", "Om je nettoloon te berekenen", "Om een cao af te spreken"], "Vooral handig bij een verdeling in procenten."], ["3.2", "In een cirkeldiagram is de dienstverlening 80% en industrie 17%. Hoeveel procent is agrarisch?", ["3%", "97%", "20%", "83%"], "100 − 80 − 17 = 3%."], ["3.2", "Waar vind je bij een diagram welke kleur bij welk deel hoort?", ["In de legenda", "In de titel", "In de cao", "Op de y-as"], "De legenda legt de kleuren uit."], ["3.3", "Wat is het minimumloon?", ["Het brutoloon dat een werknemer van 21 jaar en ouder minstens per uur moet verdienen", "Het laagste nettoloon in een cao", "Het loon tijdens de proeftijd", "De hoogte van de WW-uitkering"], "Het minimumloon staat in de wet."], ["3.3", "Waar is het minimumloon geregeld?", ["In de wet", "In je arbeidsovereenkomst", "In de cao van de bouw", "Bij het UWV"], "De overheid bepaalt het minimumloon."], ["3.3", "Voor wie geldt het minimumjeugdloon?", ["Voor jongeren van 15 tot 21 jaar", "Voor iedereen onder de 30", "Alleen voor scholieren met een bijbaan op zaterdag", "Voor werklozen"], "Vanaf 21 jaar geldt het volledige minimumloon."], ["3.3", "Wat geldt voor het minimumjeugdloon?", ["Hoe jonger je bent, hoe lager het is", "Hoe jonger je bent, hoe hoger het is", "Het is voor iedere leeftijd gelijk", "Het is altijd 75% van het minimumloon"], "Het is een percentage van het minimumloon van een 21-jarige."], ["3.3", "Waarom heeft de overheid een minimumloon?", ["Zodat werknemers genoeg verdienen om van te kunnen leven", "Zodat bedrijven meer winst maken", "Zodat iedereen hetzelfde verdient", "Zodat jongeren niet gaan werken"], "Het beschermt werknemers tegen een te laag loon."], ["3.3", "Het minimumloon is € 13,27 per uur. Een 19-jarige krijgt € 7,96. Hoeveel procent is dat?", ["60%", "40%", "80%", "167%"], "7,96 : 13,27 × 100 = 60%."], ["3.3", "Het minimumloon is € 14,00. Een 18-jarige krijgt 50%. Hoeveel is dat per uur?", ["€ 7,00", "€ 5,00", "€ 9,33", "€ 14,50"], "50 : 100 × 14,00 = € 7,00."], ["3.3", "Welke twee wetten beschermen de veiligheid en gezondheid van werknemers?", ["De Arbowet en de Arbeidstijdenwet", "De Werkloosheidswet en de cao", "De wet op het minimumloon en de WW", "De Warenwet en de Arbowet"], "Arbo betekent arbeidsomstandigheden."], ["3.3", "Wat betekent Arbo?", ["Arbeidsomstandigheden", "Arbeidsovereenkomst", "Arbeidsbureau", "Arbeidsbonus"], "De Arbowet gaat over veilige en gezonde arbeidsomstandigheden."], ["3.3", "Wat is een voorbeeld van een regel uit de Arbowet?", ["Je draagt reflecterende kleding als je langs de weg werkt", "Je krijgt 25 vakantiedagen", "Je minimumloon is € 13,27", "Je proeftijd is twee maanden"], "Ook een goede bureaustoel op kantoor hoort erbij."], ["3.3", "Waarom dragen bouwvakkers een helm en veiligheidsschoenen?", ["Om veilig te kunnen werken, zoals de Arbowet regelt", "Omdat de cao dat zegt over hun loon", "Om minder belasting te betalen", "Omdat het UWV dat verplicht"], "Veilig en gezond werken."], ["3.3", "Waarover gaat de Arbeidstijdenwet?", ["Over werk- en rusttijden", "Over het minimumloon", "Over ontslag", "Over de WW-uitkering"], "Voor jongeren gelden speciale regels."], ["3.3", "Waarom gelden er in de Arbeidstijdenwet speciale regels voor jongeren?", ["Om hen extra te beschermen", "Omdat ze meer verdienen", "Omdat ze geen school hebben", "Omdat ze geen cao hebben"], "Jongeren mogen bijvoorbeeld minder lang werken."], ["3.3", "Wat is de relatie tussen een cao en de Arbowet?", ["De cao is een aanvulling en moet zich aan de wet houden", "De cao is belangrijker dan de wet", "De Arbowet geldt alleen als er geen cao is", "Er is geen relatie"], "De wetten zijn de basis voor alle werkenden."], ["3.3", "Wat zijn technologische ontwikkelingen?", ["Nieuwe kennis van de techniek en nieuwe uitvindingen", "Nieuwe cao-afspraken", "Nieuwe regels van het UWV", "Meer werkloosheid"], "Denk aan drones, robots en slimme telefoons."], ["3.3", "Wat is een gevolg van robots in bedrijven?", ["Het werk gaat sneller en goedkoper, maar sommige banen verdwijnen", "Iedereen krijgt meer loon", "Er zijn geen werknemers meer nodig", "Bedrijven betalen geen belasting meer"], "Robots nemen werk over van mensen."], ["3.3", "Welk beroep is ontstaan door technologische ontwikkelingen?", ["Dronepiloot", "Bakker", "Boer", "Kapper"], "Ook 3D-printspecialist en robotmonteur."], ["3.3", "Wat is ongeschoold werk?", ["Werk waarvoor je geen beroepsopleiding nodig hebt", "Werk zonder loon", "Werk op school", "Werk in de proeftijd"], "Bijvoorbeeld vakkenvuller of folderbezorger."], ["3.3", "Welk beroep is geschoold werk?", ["Loodgieter", "Vakkenvuller", "Folderbezorger", "Afwasser in een restaurant"], "Voor geschoold werk volg je een opleiding."], ["3.3", "Wat is bijscholing?", ["Cursussen volgen terwijl je al een baan hebt", "Een opleiding voordat je gaat werken", "Een sollicitatiegesprek", "Werken in deeltijd"], "Zo blijf je op de hoogte van nieuwe ontwikkelingen."], ["3.3", "Waarom is bijscholing belangrijk?", ["Je blijft op de hoogte van de nieuwste ontwikkelingen in je beroep", "Je hoeft dan geen belasting te betalen", "Je krijgt dan een WW-uitkering", "Je mag dan langer werken dan de wet toestaat"], "Bijvoorbeeld leraren die leren werken met AI."], ["3.3", "Waarom is een goede opleiding belangrijk voor later?", ["Je vindt makkelijker een baan en verdient vaak meer", "Je hoeft dan nooit meer te leren", "Je krijgt dan altijd een vaste baan", "Je betaalt dan geen inhoudingen"], "Door automatisering is er meer vraag naar geschoold personeel."], ["3.3", "Een 17-jarige krijgt 39,5% van het minimumloon van € 13,27. Hoeveel is dat per uur?", ["€ 5,24", "€ 3,95", "€ 33,59", "€ 8,03"], "39,5 : 100 × 13,27 = € 5,24."], ["3.3", "Waar staat wat jij als 16-jarige minimaal per uur moet verdienen?", ["In de wet over het minimum(jeugd)loon", "In de Arbeidstijdenwet", "In je cv", "In de WW"], "Het minimumjeugdloon is wettelijk geregeld."], ["3.4", "Wat is ontslag?", ["Het einde van je arbeidsovereenkomst", "Het begin van je proeftijd", "Een loonsverhoging", "Een vacature"], "Er komt een eind aan je baan."], ["3.4", "Op welke twee manieren kan ontslag gaan?", ["Je wordt ontslagen of je neemt zelf ontslag", "Je wordt bruto of netto ontslagen", "Je krijgt WW of bijstand", "Je krijgt een cao of een arbeidsovereenkomst"], "Ook een tijdelijk contract kan aflopen."], ["3.4", "Wat is een opzegtermijn?", ["De tijd tussen het moment van ontslag en de einddatum van je baan", "De tijd voordat je mag beginnen", "De proeftijd", "De duur van je WW-uitkering"], "Een opzegtermijn is meestal één of twee maanden."], ["3.4", "Waarom is een opzegtermijn handig voor de werkgever?", ["Hij heeft tijd om nieuw personeel te zoeken", "Hij hoeft dan geen loon te betalen", "Hij krijgt geld van het UWV", "Hij mag dan de cao veranderen"], "Als jij ontslag neemt, kan je baas een vervanger zoeken."], ["3.4", "Waarom is een opzegtermijn handig voor de werknemer die wordt ontslagen?", ["Hij heeft tijd om ander werk te zoeken", "Hij krijgt dan dubbel loon", "Hij hoeft dan niet meer te werken", "Hij krijgt dan meteen een vaste baan"], "Je kunt in die periode al solliciteren."], ["3.4", "Wanneer ben je werkloos?", ["Als je wilt werken, maar er geen werk voor je is", "Als je in deeltijd werkt", "Als je met pensioen bent", "Als je op school zit"], "Je wilt werken, maar hebt geen baan."], ["3.4", "Welke voorwaarde hoort bij officieel werkloos zijn?", ["Je bent actief op zoek naar werk", "Je hebt een bijbaan", "Je bent ouder dan de pensioenleeftijd", "Je wilt niet werken"], "Je moet ook meteen kunnen beginnen."], ["3.4", "Tussen welke leeftijden kun je officieel werkloos zijn?", ["Tussen 15 jaar en de pensioenleeftijd", "Tussen 18 en 21 jaar", "Tussen 12 en 15 jaar", "Alleen boven de 21 jaar"], "Je moet tussen 15 jaar en de pensioenleeftijd zijn."], ["3.4", "Wie telt NIET mee als werkloze?", ["Iemand die geen werk heeft en ook niet zoekt", "Iemand die geen baan heeft en actief zoekt", "Iemand die meteen kan beginnen en geen baan heeft", "Iemand van 30 zonder baan die solliciteert"], "Wie niet zoekt, telt niet mee."], ["3.4", "Wanneer ontstaat werkloosheid?", ["Als er te weinig betaalde banen zijn voor iedereen die wil werken", "Als er te veel vacatures zijn", "Als iedereen een vaste baan heeft", "Als het minimumloon omhoog gaat"], "Dat gebeurt vaak als het slecht gaat met de economie."], ["3.4", "Wat gebeurt er met de werkloosheid als werkgevers meer personeel nodig hebben?", ["Die daalt", "Die stijgt", "Die blijft gelijk", "Die verdwijnt helemaal"], "Meer vacatures = minder werklozen."], ["3.4", "Wat doen bedrijven vaak bij een economische crisis?", ["Ze bezuinigen en ontslaan personeel", "Ze nemen veel nieuw personeel aan", "Ze verhogen alle lonen", "Ze geven iedereen een vaste baan"], "Minder verkoop betekent minder winst."], ["3.4", "Waarvoor gebruik je een lijndiagram?", ["Om te laten zien hoe iets in de loop van de tijd stijgt of daalt", "Om een verdeling in procenten te laten zien", "Om je loonstrook te lezen", "Om een cao te maken"], "Bijvoorbeeld de werkloosheid per jaar."], ["3.4", "Wat is een gevolg van werkloosheid?", ["Je hebt minder geld te besteden", "Je krijgt meer vakantiedagen", "Je loon stijgt", "Je krijgt een vaste baan"], "Ook minder regelmaat en minder contact met collega's."], ["3.4", "Welk gevolg van werkloosheid is niet financieel?", ["Je mist contact met collega's", "Je hebt minder geld", "Je krijgt een lagere uitkering", "Je kunt minder sparen"], "Werkloosheid heeft ook sociale gevolgen."], ["3.4", "Wat is het UWV?", ["Een overheidsinstelling die werklozen helpt", "Een vakbond", "Een uitzendbureau van een bedrijf", "Een bank"], "Bij het UWV schrijf je je in als je werkloos wordt."], ["3.4", "Welke twee taken heeft het UWV?", ["Bepalen of je recht hebt op WW en je helpen een baan te vinden", "Cao's maken en lonen betalen", "Het minimumloon bepalen en belasting innen", "Bedrijven oprichten en personeel ontslaan"], "Uitkering en werk zoeken."], ["3.4", "Wat betekent WW?", ["Werkloosheidswet", "Werknemerswet", "Werkgeverswet", "Wettelijk werk"], "De WW-uitkering krijg je als je werkloos bent."], ["3.4", "Welke regel geldt voor een WW-uitkering?", ["Je hebt minstens 26 weken in loondienst gewerkt", "Je hebt zelf ontslag genomen", "Je schrijft je binnen een jaar in bij het UWV", "Je hoeft niet te kunnen beginnen"], "Het ontslag mag ook niet je eigen schuld zijn."], ["3.4", "Binnen hoeveel tijd na je ontslag moet je je inschrijven bij het UWV?", ["Binnen een week", "Binnen een jaar", "Binnen drie maanden", "Dat maakt niet uit"], "Snel inschrijven is een regel van de WW."], ["3.4", "Krijg je WW als je zelf ontslag neemt?", ["Nee, het ontslag mag niet je eigen schuld zijn", "Ja, altijd", "Ja, maar alleen de eerste maand", "Alleen als je jonger bent dan 21"], "Je moet ontslag gekregen hebben of je contract moet zijn afgelopen."], ["3.4", "Hoe hoog is de WW-uitkering in de eerste twee maanden?", ["75% van je laatste brutoloon", "70% van je laatste brutoloon", "100% van je nettoloon", "50% van je brutoloon"], "Daarna wordt het 70%."], ["3.4", "Hoe hoog is de WW-uitkering na de eerste twee maanden?", ["70% van je laatste brutoloon", "75% van je laatste brutoloon", "60% van je nettoloon", "Niets meer"], "Eerst 75%, daarna 70%."], ["3.4", "Je verdiende € 2.000 bruto per maand. Hoeveel WW krijg je in de eerste twee maanden per maand?", ["€ 1.500", "€ 1.400", "€ 2.000", "€ 500"], "75 : 100 × 2.000 = € 1.500."], ["3.4", "Je verdiende € 2.000 bruto per maand. Hoeveel WW krijg je per maand na twee maanden?", ["€ 1.400", "€ 1.500", "€ 600", "€ 2.000"], "70 : 100 × 2.000 = € 1.400."], ["3.4", "Wat is het verschil tussen ontslag en een contract dat niet verlengd wordt?", ["Bij een tijdelijk contract stopt je baan op de afgesproken einddatum", "Er is geen verschil", "Bij ontslag krijg je altijd meer loon", "Bij een tijdelijk contract krijg je nooit WW"], "Je contract loopt dan gewoon af."], ["3.4", "Wat is automatisering?", ["Machines nemen werk over van mensen", "Mensen gaan meer uren werken", "Het minimumloon stijgt automatisch", "Je cao wordt automatisch verlengd"], "Robotisering is een vorm daarvan."], ["3.4", "Hoe helpt het UWV werklozen bij het vinden van een baan?", ["Met hulp bij solliciteren en het aanbieden van vacatures", "Door hun schulden te betalen", "Door hen een eigen bedrijf te geven", "Door de cao te veranderen"], "Werklozen moeten ook zelf solliciteren."]];
+
+S.qseen=S.qseen||{};S.qwrong=S.qwrong||{};
+var quizPar="alle",quizMode="mix",qs=[],qi=0,qGood=0,qWrongList=[],qCard=document.getElementById("qCard");
+function poolFor(par){return BANK.map(function(_,i){return i;}).filter(function(i){return inSel(BANK[i][0],par);});}
+function wrongIds(){return Object.keys(S.qwrong).map(Number).filter(function(i){return BANK[i];});}
+function pickQuiz(){
+if(quizMode==="fouten"){var w=shuffle(wrongIds());return w.slice(0,10);}
+var pool=poolFor(quizPar),unseen=pool.filter(function(i){return !S.qseen[i];});
+if(unseen.length<10){pool.forEach(function(i){delete S.qseen[i];});unseen=pool.slice();}
+var pick=shuffle(pool.filter(function(i){return S.qwrong[i];})).slice(0,2);
+var rest=shuffle(unseen.filter(function(i){return pick.indexOf(i)<0;}));
+if(quizPar==="alle"||quizPar==="H2"){
+var per={};PARS.forEach(function(p){per[p.id]=rest.filter(function(i){return BANK[i][0]===p.id;});});
+var order=shuffle(PARS.map(function(p){return p.id;})),k=0;
+while(pick.length<10&&k<400){var arr=per[order[k%order.length]];if(arr.length)pick.push(arr.shift());k++;}
+}
+rest.forEach(function(i){if(pick.length<10&&pick.indexOf(i)<0)pick.push(i);});
+return shuffle(pick);
+}
+function quizHome(){
+var seen=Object.keys(S.qseen).length,wr=wrongIds().length;
+document.getElementById("qScore").innerHTML="Vraagbank: <b>"+BANK.length+"</b> vragen &nbsp;·&nbsp; Al gezien: <b>"+Math.min(seen,BANK.length)+"</b> &nbsp;·&nbsp; Nog te oefenen: <b>"+wr+"</b>";
+qCard.innerHTML='<div class="qhome"><div class="qbig">⚡</div><h3>Snelle quiz</h3><p class="muted">Elke ronde krijg je 10 nieuwe vragen uit de vraagbank. Vragen die je fout had, komen later terug.</p>'+
+'<div class="filters" style="justify-content:center">'+["alle"].concat(PARS.map(function(p){return p.id;})).map(function(f){return '<button data-qpar="'+f+'" class="'+(f===quizPar?"on":"")+'"'+(P(f)?' title="'+P(f).t+'"':'')+'>'+selLabel(f)+'</button>';}).join("")+'</div>'+
+'<div class="row" style="justify-content:center;margin-top:8px"><button class="btn" id="qStart">Start 10 vragen</button>'+(wr?'<button class="btn ghost" id="qWrong">Oefen mijn fouten ('+wr+')</button>':'')+'</div></div>';
+}
+function startQuiz(mode){quizMode=mode||"mix";qs=pickQuiz();qi=0;qGood=0;qWrongList=[];if(!qs.length){quizHome();return;}nextQ();}
+function qScore(){document.getElementById("qScore").innerHTML="Vraag <b>"+Math.min(qi+1,qs.length)+"</b> van "+qs.length+" &nbsp;·&nbsp; Goed: <b>"+qGood+"</b>"+(quizMode==="fouten"?" &nbsp;·&nbsp; <span style=\"color:var(--berry)\">foutenronde</span>":"");}
+function nextQ(){var q=BANK[qs[qi]],opts=shuffle(q[2].map(function(t,i){return{t:t,ok:i===0};}));
+qCard.innerHTML='<div class="qtop">'+tag(q[0])+'<div class="qprog"><i style="width:'+(qi/qs.length*100)+'%"></i></div></div><p class="qq" style="margin-top:10px">'+q[1]+'</p><div class="opts">'+opts.map(function(o,n){return '<button class="opt" data-ok="'+(o.ok?1:0)+'"><span class="ol">'+"ABCD"[n]+'</span>'+o.t+'</button>';}).join("")+'</div><div id="qFb"></div>';qScore();}
+qCard.addEventListener("click",function(e){
+var pb=e.target.closest("[data-qpar]");if(pb){quizPar=pb.dataset.qpar;quizHome();return;}
+if(e.target.closest("#qStart")){startQuiz("mix");return;}
+if(e.target.closest("#qWrong")){startQuiz("fouten");return;}
+if(e.target.closest("#qHome")){quizHome();return;}
+var b=e.target.closest(".opt");
+if(b&&!b.disabled){var ok=b.dataset.ok==="1",id=qs[qi];S.qseen[id]=1;
+if(ok){qGood++;delete S.qwrong[id];}else{S.qwrong[id]=1;qWrongList.push(id);}save();
+qCard.querySelectorAll(".opt").forEach(function(x){x.disabled=true;if(x.dataset.ok==="1")x.classList.add("right");else if(x===b)x.classList.add("wrong");});
+document.getElementById("qFb").innerHTML='<div class="fb '+(ok?"ok":"no")+'">'+(ok?"✓ Goed! ":"✗ Helaas. ")+BANK[id][3]+'</div><div class="row" style="margin-top:12px"><button class="btn" id="qNext">'+(qi<qs.length-1?"Volgende vraag →":"Bekijk je score")+'</button></div>';qScore();return;}
+if(e.target.closest("#qNext")){qi++;if(qi<qs.length)nextQ();else endQuiz();}
+});
+function endQuiz(){
+var n=qs.length,msg=qGood>=n*0.9?"Top! Jij bent klaar voor de toets. 🏆":qGood>=n*0.7?"Goed bezig! Kijk nog even naar je fouten.":qGood>=n*0.5?"Op de goede weg. Oefen je fouten nog eens.":"Nog even oefenen! Begin bij de begrippenkaarten.";
+if(qGood>=n*0.9)confetti();
+document.getElementById("qScore").innerHTML="Klaar!";
+var rev=qWrongList.length?'<div class="review"><h3>Dit ging nog mis</h3>'+qWrongList.map(function(i){return '<div class="rv">'+tag(BANK[i][0])+' <b>'+BANK[i][1]+'</b><br><span class="muted">Goed antwoord:</span> '+BANK[i][2][0]+'</div>';}).join("")+'</div>':'';
+var wr=wrongIds().length;
+qCard.innerHTML='<div class="done-card"><div class="big">'+qGood+' / '+n+'</div><p>'+msg+'</p><div class="row" style="justify-content:center"><button class="btn" id="qStart">Nieuwe 10 vragen</button>'+(wr?'<button class="btn ghost" id="qWrong">Oefen mijn fouten ('+wr+')</button>':'')+'<button class="btn ghost" id="qHome">Kies paragraaf</button></div></div>'+rev;
+}
+quizHome();
+
+function confetti(){var cols=["#a01a58","#f2b134","#2f6fb0","#23866a","#e2457f","#ffd6e8"],box=document.createElement("div");box.className="confetti";
+for(var i=0;i<90;i++){var p=document.createElement("i");p.style.left=Math.random()*100+"%";p.style.background=cols[i%cols.length];p.style.animationDelay=(Math.random()*0.6)+"s";p.style.animationDuration=(1.6+Math.random()*1.2)+"s";p.style.transform="rotate("+(Math.random()*360)+"deg)";box.appendChild(p);}
+document.body.appendChild(box);setTimeout(function(){box.remove();},3400);}
+
+var SORT=[{"a": "Werkgever", "b": "Werknemer", "A": [["👔", "Heeft personeel in dienst"], ["💶", "Betaalt het loon"], ["📢", "Schrijft een vacature uit"], ["🧭", "Geeft leiding"]], "B": [["🧑‍🔧", "Werkt in loondienst"], ["✉️", "Solliciteert"], ["📄", "Tekent de arbeidsovereenkomst"], ["🛠️", "Doet uitvoerend werk"]]}, {"a": "Agrarisch", "b": "Industrieel", "A": [["🐄", "Melkveehouderij"], ["🌾", "Akkerbouw"], ["🌷", "Tuinbouw"], ["🌲", "Bosbouw"]], "B": [["🚲", "Fietsenfabriek"], ["🍞", "Bakkerij"], ["🪑", "Meubelmakerij"], ["🏭", "Staalfabriek"]]}, {"a": "Industrieel", "b": "Dienstverlenend", "A": [["👕", "Kledingfabriek"], ["🔨", "Timmerbedrijf"], ["🚗", "Autofabriek"]], "B": [["💇", "Kapperszaak"], ["🍝", "Restaurant"], ["🏋️", "Sportschool"], ["🏫", "School"], ["🚚", "Transportbedrijf"]]}, {"a": "Vaste baan", "b": "Tijdelijke baan", "A": [["♾️", "Geen einddatum"], ["🏦", "Makkelijker een hypotheek"], ["🛡️", "Meer zekerheid"]], "B": [["📅", "Afgesproken einddatum"], ["☀️", "Vakantiewerk"], ["📃", "Jaarcontract"]]}, {"a": "Voltijd", "b": "Deeltijd", "A": [["🕘", "40 uur per week"], ["📆", "Vijf volle dagen"], ["💼", "Fulltime"]], "B": [["🕒", "20 uur per week"], ["🎒", "Bijbaan naast school"], ["⏳", "Parttime"]]}, {"a": "Arbowet", "b": "Arbeidstijdenwet", "A": [["⛑️", "Helm op de bouwplaats"], ["🦺", "Reflecterende kleding"], ["🪑", "Goede bureaustoel"], ["💡", "Goede verlichting"]], "B": [["⏰", "Maximale werktijden"], ["☕", "Pauzes"], ["🌙", "Rusttijd tussen diensten"], ["🧒", "Extra regels voor jongeren"]]}, {"a": "Geschoold werk", "b": "Ongeschoold werk", "A": [["📱", "App-bouwer"], ["🔧", "Loodgieter"], ["👩‍🏫", "Docent"], ["✂️", "Kapper"]], "B": [["🛒", "Vakkenvuller"], ["📰", "Folderbezorger"], ["🍽️", "Afwasser"]]}, {"a": "Wel recht op WW", "b": "Geen recht op WW", "A": [["📄", "Contract is afgelopen"], ["🏢", "Ontslagen door bedrijfssluiting"], ["🗓️", "30 weken gewerkt"]], "B": [["🚪", "Zelf ontslag genomen"], ["🗓️", "Pas 10 weken gewerkt"], ["⌛", "Na een maand ingeschreven bij het UWV"]]}];
+var G={mode:null};
+function hs(k){try{return +(localStorage.getItem("h3v2-"+k)||0);}catch(e){return 0;}}
+function setHs(k,v){try{localStorage.setItem("h3v2-"+k,v);}catch(e){}}
+var gWrap=document.getElementById("gWrap");
+function gamesHome(){
+stopSwipe();MEM=null;
+gWrap.innerHTML='<div class="gpick">'+
+'<button class="gtile" data-game="swipe"><span class="gico">👆</span><b>Swipe &amp; Scoor</b><span>Veeg elk kaartje naar de juiste kant. Hoe meer goed op rij, hoe meer punten!</span><em>Highscore: '+hs("swipe")+'</em></button>'+
+'<button class="gtile" data-game="memory"><span class="gico">🧠</span><b>Begrippen-memory</b><span>Zoek bij elk begrip de juiste uitleg. Lukt het in zo weinig mogelijk beurten?</span><em>Beste: '+(hs("memory")?hs("memory")+' beurten':'nog geen')+'</em></button>'+
+'</div>';
+}
+gWrap.addEventListener("click",function(e){var t=e.target.closest("[data-game]");if(t){if(t.dataset.game==="swipe")startSwipe();else startMemory();}
+if(e.target.closest("#gBack"))gamesHome();
+if(e.target.closest("#gAgain")){if(G.mode==="swipe")startSwipe();else startMemory();}
+});
+
+var SW=null;
+function stopSwipe(){if(SW&&SW.timer)clearInterval(SW.timer);SW=null;}
+function startSwipe(){
+stopSwipe();G.mode="swipe";
+var rounds=shuffle(SORT);
+SW={time:60,score:0,combo:0,mult:1,right:0,wrong:0,round:0,rounds:rounds,queue:[],cur:null,miss:[]};
+gWrap.innerHTML='<div class="arena" id="arena"><div class="hud"><span>⏱ <b id="swT">60</b></span><span class="lvl" id="swL">Level 1</span><span>Score <b id="swS">0</b></span><span class="mult" id="swM">x1</span><button class="gstop" id="gBack" aria-label="Stoppen">✕</button></div>'+
+'<div class="tbar"><i id="swBar"></i></div>'+
+'<div class="zones"><button class="zone left" id="zL"><span>◀</span><b id="zLt"></b></button><div class="deck" id="deck"></div><button class="zone right" id="zR"><b id="zRt"></b><span>▶</span></button></div>'+
+'<div class="ghint">Veeg het kaartje naar links of rechts, of tik op een kant</div></div>';
+nextRound();
+SW.timer=setInterval(function(){SW.time--;drawHud();if(SW.time<=0)endSwipe();},1000);
+document.getElementById("zL").addEventListener("click",function(){answer("A");});
+document.getElementById("zR").addEventListener("click",function(){answer("B");});
+}
+function nextRound(){
+var r=SW.rounds[SW.round%SW.rounds.length];SW.cat=r;
+var items=shuffle(r.A.map(function(x){return [x,"A"];})).slice(0,4).concat(shuffle(r.B.map(function(x){return [x,"B"];})).slice(0,4));
+SW.queue=shuffle(items);
+document.getElementById("zLt").textContent=r.a;document.getElementById("zRt").textContent=r.b;
+document.getElementById("swL").textContent="Level "+(SW.round+1);
+var a=document.getElementById("arena");a.classList.remove("lvlup");void a.offsetWidth;a.classList.add("lvlup");
+dealCard();
+}
+function dealCard(){
+if(!SW)return;
+if(!SW.queue.length){SW.round++;SW.time=Math.min(SW.time+5,99);nextRound();return;}
+SW.cur=SW.queue.shift();
+var d=document.getElementById("deck");
+d.innerHTML='<div class="scard enter" id="scard"><span class="emo">'+SW.cur[0][0]+'</span><b>'+SW.cur[0][1]+'</b></div>';
+bindDrag(document.getElementById("scard"));drawHud();
+}
+function drawHud(){if(!SW)return;document.getElementById("swT").textContent=Math.max(0,SW.time);document.getElementById("swS").textContent=SW.score;
+document.getElementById("swM").textContent="x"+SW.mult;document.getElementById("swM").classList.toggle("hot",SW.mult>1);
+document.getElementById("swBar").style.width=Math.min(100,SW.time/60*100)+"%";}
+function answer(side,fromDrag){
+if(!SW||!SW.cur||SW.lock)return;SW.lock=true;
+var card=document.getElementById("scard"),ok=side===SW.cur[1];
+if(ok){SW.right++;SW.combo++;SW.mult=Math.min(4,1+Math.floor(SW.combo/3));SW.score+=10*SW.mult;}
+else{SW.wrong++;SW.combo=0;SW.mult=1;SW.time=Math.max(0,SW.time-5);SW.miss.push([SW.cur[0][1],SW.cur[1]==="A"?SW.cat.a:SW.cat.b]);}
+var z=document.getElementById(side==="A"?"zL":"zR");z.classList.add(ok?"good":"bad");setTimeout(function(){z.classList.remove("good","bad");},350);
+card.classList.add(ok?"ok":"no");card.style.transition="transform .28s ease, opacity .28s";
+card.style.transform="translateX("+(side==="A"?-420:420)+"px) rotate("+(side==="A"?-18:18)+"deg)";card.style.opacity="0";
+if(!ok){var t=document.createElement("div");t.className="toast";t.textContent="Hoort bij: "+(SW.cur[1]==="A"?SW.cat.a:SW.cat.b);document.getElementById("arena").appendChild(t);setTimeout(function(){t.remove();},900);}
+drawHud();
+setTimeout(function(){SW&&(SW.lock=false);dealCard();},ok?260:520);
+}
+function bindDrag(el){
+var x0=0,dx=0,down=false;
+el.addEventListener("pointerdown",function(e){down=true;x0=e.clientX;dx=0;el.setPointerCapture(e.pointerId);el.style.transition="none";});
+el.addEventListener("pointermove",function(e){if(!down)return;dx=e.clientX-x0;el.style.transform="translateX("+dx+"px) rotate("+(dx/18)+"deg)";
+document.getElementById("zL").classList.toggle("near",dx<-50);document.getElementById("zR").classList.toggle("near",dx>50);});
+function up(){if(!down)return;down=false;document.getElementById("zL").classList.remove("near");document.getElementById("zR").classList.remove("near");
+if(Math.abs(dx)>80)answer(dx<0?"A":"B",true);else{el.style.transition="transform .2s";el.style.transform="";}}
+el.addEventListener("pointerup",up);el.addEventListener("pointercancel",up);
+}
+document.addEventListener("keydown",function(e){if(!SW)return;if(e.key==="ArrowLeft")answer("A");if(e.key==="ArrowRight")answer("B");});
+function endSwipe(){
+if(!SW)return;clearInterval(SW.timer);var s=SW,best=hs("swipe"),rec=s.score>best;if(rec)setHs("swipe",s.score);
+var acc=s.right+s.wrong?Math.round(s.right/(s.right+s.wrong)*100):0;
+if(rec&&s.score>0)confetti();
+gWrap.innerHTML='<div class="gend"><div class="qbig">'+(rec?"🏆":"⏱")+'</div><h3>'+(rec?"Nieuwe highscore!":"Tijd is op!")+'</h3><div class="big">'+s.score+'</div><p class="muted">'+s.right+' goed · '+s.wrong+' fout · '+acc+'% raak · level '+(s.round+1)+(rec?'':' · highscore: '+best)+'</p>'+
+'<div class="row" style="justify-content:center;margin-top:12px"><button class="btn" id="gAgain">Nog een keer</button><button class="btn ghost" id="gBack">Andere game</button></div>'+
+(s.miss.length?'<div class="review"><h3>Even onthouden</h3>'+s.miss.slice(0,6).map(function(m){return '<div class="rv"><b>'+m[0]+'</b> → '+m[1]+'</div>';}).join("")+'</div>':'')+'</div>';
+SW=null;
+}
+
+var MEM=null;
+function startMemory(){
+stopSwipe();G.mode="memory";
+var pool=shuffle(CARDS.filter(function(c){return c[2].length<=92;})).slice(0,6),tiles=[];
+pool.forEach(function(c,i){tiles.push({k:i,t:c[1],kind:"term",par:c[0]});tiles.push({k:i,t:c[2],kind:"def",par:c[0]});});
+MEM={tiles:shuffle(tiles),open:[],moves:0,found:0,lock:false,t0:Date.now()};
+gWrap.innerHTML='<div class="mhud"><span>Beurten: <b id="mMoves">0</b></span><span>Gevonden: <b id="mFound">0</b> / 6</span><button class="btn ghost" id="gBack" style="padding:6px 12px">Stoppen</button></div><div class="mgrid" id="mgrid">'+
+MEM.tiles.map(function(t,i){return '<button class="mtile '+t.kind+'" data-i="'+i+'"><span class="back">?</span><span class="front">'+(t.kind==="term"?'<b>'+t.t+'</b>':t.t)+'</span></button>';}).join("")+'</div>';
+}
+gWrap.addEventListener("click",function(e){
+var b=e.target.closest(".mtile");if(!b||!MEM||MEM.lock||b.classList.contains("open")||b.classList.contains("done"))return;
+b.classList.add("open");MEM.open.push(b);
+if(MEM.open.length===2){MEM.moves++;document.getElementById("mMoves").textContent=MEM.moves;
+var a=MEM.tiles[MEM.open[0].dataset.i],c=MEM.tiles[MEM.open[1].dataset.i];
+if(a.k===c.k&&a.kind!==c.kind){MEM.open.forEach(function(x){x.classList.add("done");});MEM.open=[];MEM.found++;document.getElementById("mFound").textContent=MEM.found;
+if(MEM.found===6)setTimeout(endMemory,500);}
+else{MEM.lock=true;MEM.open.forEach(function(x){x.classList.add("miss");});setTimeout(function(){MEM.open.forEach(function(x){x.classList.remove("open","miss");});MEM.open=[];MEM.lock=false;},950);}
+}
+});
+function endMemory(){
+var m=MEM.moves,best=hs("memory"),rec=!best||m<best;if(rec)setHs("memory",m);
+var stars=m<=9?3:m<=13?2:1;confetti();
+gWrap.innerHTML='<div class="gend"><div class="qbig">'+"⭐".repeat(stars)+'</div><h3>Alle 6 paren gevonden!</h3><div class="big">'+m+' beurten</div><p class="muted">'+(rec?"Nieuw record!":"Jouw record: "+best+" beurten")+'</p><div class="row" style="justify-content:center;margin-top:12px"><button class="btn" id="gAgain">Nog een keer</button><button class="btn ghost" id="gBack">Andere game</button></div></div>';
+MEM=null;
+}
+gamesHome();
+
+/* ---------- leg uit (AI-nakijker) ---------- */
+var AI_URL="",LU_VAK="economie";
+function luInSel(p,f){return typeof inSel==="function"?inSel(p,f):(f==="alle"||p===f);}
+function luLab(f){return typeof selLabel==="function"?selLabel(f):(f==="alle"?"Alles":f);}
+var luPar="alle",luIdx=-1,luBusy=false,luS={goed:0,totaal:0},luCard=document.getElementById("luCard");
+var LU_STOP=" de het een en van in op te dat die is zijn met voor aan als om bij of door uit naar ook maar dan wat wie hoe je jij jouw je u ze zij hij wij we er niet geen meer minder kan kun moet wordt worden heeft hebben veel weinig alle alles iets deze dit dat waar wanneer welke zoals bijvoorbeeld per tot over onder tussen zonder wel nog al ";
+function luWords(t){return (t.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"").match(/[a-z0-9]+/g)||[]);}
+function luLocal(c,ans){
+  var key=[],seen={};luWords(c[2]).forEach(function(w){if(w.length>=4&&LU_STOP.indexOf(" "+w+" ")<0&&!seen[w]){seen[w]=1;key.push(w);}});
+  var aw=luWords(ans),hit=[],miss=[];
+  key.forEach(function(k){var stam=k.slice(0,Math.max(4,k.length-2));(aw.some(function(w){return w.indexOf(stam)===0;})?hit:miss).push(k);});
+  var f=key.length?hit.length/key.length:0;
+  return {oordeel:f>=0.6?"goed":f>=0.3?"bijna":"nognietgoed",goed:hit.length?"Je noemt: "+hit.slice(0,5).join(", ")+".":"",
+    mist:miss.length?"Kijk nog naar: "+miss.slice(0,4).join(", ")+".":"",fout:"",tip:"Vergelijk je antwoord met de uitleg hieronder.",lokaal:true};
+}
+function luScore(){document.getElementById("luScore").innerHTML="Helemaal goed: <b>"+luS.goed+"</b> van "+luS.totaal;}
+function luNew(){
+  document.getElementById("luFilters").innerHTML=["alle"].concat(PARS.map(function(p){return p.id;})).map(function(f){return '<button data-lu="'+f+'" class="'+(f===luPar?"on":"")+'"'+(P(f)?' title="'+P(f).t+'"':'')+'>'+luLab(f)+'</button>';}).join("");
+  var pool=CARDS.map(function(_,i){return i;}).filter(function(i){return luInSel(CARDS[i][0],luPar)&&CARDS[i][1].indexOf("→")<0;}),i;
+  do{i=pick(pool);}while(pool.length>1&&i===luIdx);luIdx=i;var c=CARDS[i];
+  luCard.innerHTML='<div class="qtop">'+tag(c[0])+'</div><p class="qq" style="margin-top:10px">Leg uit: <b>'+c[1]+'</b></p>'+
+    '<textarea id="luIn" maxlength="600" placeholder="Typ in je eigen woorden wat '+c[1].toLowerCase()+' betekent. Geef ook een voorbeeld."></textarea>'+
+    '<div class="row" style="margin-top:10px"><button class="btn" id="luCheck">Laat nakijken</button><button class="btn ghost" id="luSkip">Ander begrip</button></div><div id="luFb"></div>';
+  luScore();
+}
+function luShow(c,f,msg){
+  var lab={goed:"✓ Goed",bijna:"Bijna",nognietgoed:"Nog niet goed"}[f.oordeel]||"Bijna";
+  luS.totaal++;if(f.oordeel==="goed"){luS.goed++;S.known[luIdx]=1;save();}
+  document.getElementById("luFb").innerHTML='<div class="lubox '+f.oordeel+'"><span class="badge2 '+f.oordeel+'">'+lab+'</span>'+
+    (msg?'<p class="note">'+msg+'</p>':'')+
+    (f.goed?'<p><b>Goed:</b> '+esc(f.goed)+'</p>':'')+(f.mist?'<p><b>Mist nog:</b> '+esc(f.mist)+'</p>':'')+(f.fout?'<p><b>Klopt niet:</b> '+esc(f.fout)+'</p>':'')+(f.tip?'<p><b>Tip:</b> '+esc(f.tip)+'</p>':'')+
+    '<div class="model"><b>Uitleg uit de les:</b> '+c[2]+'<br><i>Voorbeeld: '+c[3]+'</i></div>'+
+    (f.lokaal?'<p class="note">Snelle controle op kernwoorden (zonder AI).</p>':'<p class="note">Nagekeken door AI. Twijfel je? Vraag het je docent.</p>')+
+    (f.oordeel==="goed"?'<p class="note">✓ Dit begrip staat nu op "gekend" bij Begrippen.</p>':'')+
+    '</div><div class="row" style="margin-top:12px"><button class="btn" id="luNext">Volgend begrip →</button>'+(f.oordeel!=="goed"?'<button class="btn ghost" id="luAgain">Verbeter je antwoord</button>':'')+'</div>';
+  luScore();
+}
+function esc(t){return String(t).replace(/[&<>"]/g,function(ch){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[ch];});}
+function luCheck(){
+  if(luBusy)return;var c=CARDS[luIdx],inp=document.getElementById("luIn"),ans=inp.value.trim();
+  if(ans.length<3){document.getElementById("luFb").innerHTML='<div class="fb mid">Typ eerst je uitleg.</div>';return;}
+  var btn=document.getElementById("luCheck");
+  if(!AI_URL){luShow(c,luLocal(c,ans));return;}
+  luBusy=true;btn.disabled=true;btn.textContent="Bezig met nakijken… (even geduld)";
+  var ctl=window.AbortController?new AbortController():null,t=setTimeout(function(){if(ctl)ctl.abort();},45000);
+  fetch(AI_URL,{method:"POST",body:JSON.stringify({vak:LU_VAK,begrip:c[1],uitleg:c[2],voorbeeld:c[3],antwoord:ans,paragraaf:c[0]+" "+(P(c[0])?P(c[0]).t:""),samenvatting:P(c[0])&&P(c[0]).sum||"",begrippen:CARDS.filter(function(x){return x[0]===c[0];}).map(function(x){return "- "+x[1]+": "+x[2];}).join("\n")}),signal:ctl?ctl.signal:undefined})
+   .then(function(r){return r.json();})
+   .then(function(f){if(f&&f.status==="ok")luShow(c,f);else luShow(c,luLocal(c,ans),(f&&f.melding)||"De AI kon nu niet nakijken.");})
+   .catch(function(){luShow(c,luLocal(c,ans),"De AI is nu niet bereikbaar.");})
+   .then(function(){clearTimeout(t);luBusy=false;btn.disabled=false;btn.textContent="Laat nakijken";});
+}
+document.getElementById("lab-leguit").addEventListener("click",function(e){
+  var f=e.target.closest("[data-lu]");if(f){luPar=f.dataset.lu;luNew();return;}
+  if(e.target.closest("#luCheck")){luCheck();return;}
+  if(e.target.closest("#luSkip")||e.target.closest("#luNext")){luNew();return;}
+  if(e.target.closest("#luAgain")){document.getElementById("luFb").innerHTML="";document.getElementById("luIn").focus();}
+});
+luNew();
+
+renderFlash();renderProgress();renderCheck();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,1042 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hoofdstuk 1 Verdien je genoeg</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+--plum:#3b1534;--plum-2:#5a1f4f;--berry:#a01a58;--berry-soft:#fbe8f0;
+--bg:#f7f3f1;--card:#ffffff;--ink:#251b25;--muted:#6d6270;--line:#ece3e7;
+--ok:#1d8a5a;--ok-soft:#e1f4ea;--bad:#c0392b;--bad-soft:#fbe9e7;--warn-soft:#fff3d6;
+--p1:#a01a58;--p2:#2f6fb0;--p3:#23866a;--p4:#d0731c;
+--shadow:0 1px 2px rgba(59,21,52,.06),0 8px 24px rgba(59,21,52,.07);
+--r:18px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font-family:"Plus Jakarta Sans",system-ui,-apple-system,sans-serif;font-size:15.5px;line-height:1.5}
+button{font:inherit;cursor:pointer;color:inherit}
+a{color:inherit}
+svg.i{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.app{height:100vh;min-height:620px;display:flex;flex-direction:column;max-width:1180px;margin:0 auto;padding:14px 14px 0}
+
+.top{background:linear-gradient(120deg,var(--plum) 0%,var(--plum-2) 55%,var(--berry) 100%);color:#fff;border-radius:22px;padding:16px 18px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.top:after{content:"";position:absolute;right:-60px;top:-80px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.18),rgba(255,255,255,0) 70%);pointer-events:none}
+.badge{width:52px;height:52px;border-radius:16px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);display:grid;place-items:center;font-weight:800;font-size:20px;letter-spacing:-.02em}
+.ttl{flex:1 1 220px;min-width:0}
+.ttl small{display:block;opacity:.75;font-size:12.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+.ttl b{display:block;font-size:22px;font-weight:800;letter-spacing:-.02em;line-height:1.2}
+.ring{--v:0;width:46px;height:46px;border-radius:50%;background:conic-gradient(#ffd6e8 calc(var(--v)*1%),rgba(255,255,255,.18) 0);display:grid;place-items:center;flex:none}
+.ring span{width:36px;height:36px;border-radius:50%;background:var(--plum-2);display:grid;place-items:center;font-size:11.5px;font-weight:800}
+.prog{display:flex;align-items:center;gap:10px;font-size:13px;opacity:.95}
+nav.tabs{display:flex;gap:6px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);padding:5px;border-radius:14px;flex:1 1 100%;flex-wrap:wrap}
+nav.tabs button{flex:1 1 auto;display:flex;align-items:center;justify-content:center;gap:8px;border:0;background:transparent;color:rgba(255,255,255,.85);padding:10px 12px;border-radius:10px;font-weight:700;font-size:14.5px;white-space:nowrap;transition:background .15s}
+nav.tabs button:hover{background:rgba(255,255,255,.12);color:#fff}
+nav.tabs button[aria-selected=true]{background:#fff;color:var(--plum);box-shadow:0 2px 8px rgba(0,0,0,.15)}
+
+main{flex:1;overflow:auto;padding:16px 2px 20px;scroll-behavior:smooth}
+.panel[hidden]{display:none}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow)}
+.pad{padding:20px}
+h2{font-size:22px;letter-spacing:-.02em;margin:0 0 4px;color:var(--plum)}
+h3{font-size:16.5px;margin:0 0 6px;color:var(--plum);letter-spacing:-.01em}
+.muted{color:var(--muted)}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--berry)}
+.btn{display:inline-flex;align-items:center;gap:8px;border:0;border-radius:12px;padding:10px 16px;font-weight:700;background:var(--berry);color:#fff;text-decoration:none;font-size:14.5px}
+.btn:hover{filter:brightness(1.07)}
+.btn.ghost{background:#fff;color:var(--plum);border:1.5px solid var(--line)}
+.btn.ghost:hover{border-color:var(--berry)}
+.btn.soft{background:var(--berry-soft);color:var(--berry)}
+.btn:disabled{opacity:.45;cursor:default;filter:none}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:800;color:#fff;border-radius:8px;padding:3px 8px}
+
+.hero{display:grid;grid-template-columns:1.4fr 1fr;gap:16px;margin-bottom:16px}
+.hero .intro{padding:24px;position:relative;overflow:hidden}
+.hero .intro h2{font-size:28px;line-height:1.15;margin:6px 0 10px}
+.hero .intro p{margin:0 0 16px;color:var(--muted);max-width:520px}
+.blob{position:absolute;right:-30px;bottom:-40px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#ffd6e8,#fbe8f0 60%,transparent 61%);opacity:.9}
+.coins{position:absolute;right:30px;bottom:26px;display:flex;gap:6px;align-items:flex-end}
+.coins i{display:block;width:30px;border-radius:7px;background:linear-gradient(180deg,#f2b134,#d99412);box-shadow:inset 0 -3px 0 rgba(0,0,0,.12)}
+.route{padding:20px;display:flex;flex-direction:column;gap:10px}
+.step{display:flex;gap:12px;align-items:center;border:1.5px solid var(--line);border-radius:14px;padding:12px 14px;background:#fff;text-align:left;width:100%}
+.step:hover{border-color:var(--berry);transform:translateY(-1px)}
+.step .n{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;font-weight:800;color:#fff;flex:none}
+.step b{display:block}
+.step span{font-size:13px;color:var(--muted)}
+.step svg{margin-left:auto;color:var(--muted)}
+.pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.pcard{padding:0;overflow:hidden;display:flex;flex-direction:column;text-align:left;border:1px solid var(--line);background:#fff;border-radius:var(--r);box-shadow:var(--shadow);transition:transform .15s}
+.pcard:hover{transform:translateY(-3px)}
+.pcard .band{height:84px;position:relative;display:flex;align-items:flex-end;padding:12px 14px;color:#fff}
+.pcard .band b{font-size:34px;font-weight:800;letter-spacing:-.03em;line-height:1}
+.pcard .band:after{content:"";position:absolute;right:-20px;top:-20px;width:90px;height:90px;border-radius:50%;background:rgba(255,255,255,.16)}
+.pcard .body{padding:14px;display:flex;flex-direction:column;gap:8px;flex:1}
+.pcard .body h3{margin:0}
+.pcard .body p{margin:0;font-size:13.5px;color:var(--muted);flex:1}
+.bar{height:7px;background:#f1e8ec;border-radius:9px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;border-radius:9px;transition:width .3s}
+.pcard .meta{display:flex;justify-content:space-between;font-size:12.5px;color:var(--muted)}
+.tip{margin-top:14px;font-size:13px;color:var(--muted);display:flex;gap:8px;align-items:center}
+
+.les{display:grid;grid-template-columns:220px 1fr;gap:16px;align-items:start}
+.rail{padding:10px;display:flex;flex-direction:column;gap:6px;position:sticky;top:0}
+.rail button{display:flex;gap:10px;align-items:center;border:0;background:transparent;border-radius:12px;padding:10px;text-align:left;font-weight:700;font-size:14px;color:var(--ink)}
+.rail button .dot{width:30px;height:30px;border-radius:9px;color:#fff;display:grid;place-items:center;font-size:12px;font-weight:800;flex:none}
+.rail button[aria-current=true]{background:var(--berry-soft)}
+.rail button:hover{background:#f6eef2}
+.rail .mini{font-size:11.5px;color:var(--muted);font-weight:600;display:block}
+.viewer{position:relative;width:100%;aspect-ratio:16/9;background:#1d1220;border-radius:14px;overflow:hidden}
+.viewer iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.viewer .ph{position:absolute;inset:0;display:grid;place-items:center;color:#fff;opacity:.7;font-weight:700}
+.lhead{display:flex;justify-content:space-between;align-items:flex-end;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.two{display:grid;grid-template-columns:1.3fr 1fr;gap:14px;margin-top:14px}
+.qlist{display:flex;flex-direction:column;gap:8px}
+.q{display:flex;gap:10px;align-items:flex-start;border:1.5px solid var(--line);border-radius:12px;padding:10px 12px;background:#fff;text-align:left;font-size:14px}
+.q .tick{width:22px;height:22px;border-radius:7px;border:2px solid #d9c9d1;display:grid;place-items:center;flex:none;margin-top:1px;color:#fff}
+.q.on{border-color:var(--ok);background:var(--ok-soft)}
+.q.on .tick{background:var(--ok);border-color:var(--ok)}
+.q .tick svg{width:14px;height:14px;opacity:0}
+.q.on .tick svg{opacity:1}
+.goals label{display:flex;gap:9px;align-items:flex-start;padding:7px 0;border-top:1px dashed var(--line);font-size:13.5px;cursor:pointer}
+.goals input{accent-color:var(--berry);width:16px;height:16px;margin-top:3px;flex:none}
+.goals label.done span{color:var(--muted);text-decoration:line-through}
+
+.sub{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+.sub button,.filters button{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:7px 14px;font-weight:700;font-size:13.5px;color:var(--muted)}
+.sub button[aria-selected=true],.filters button.on{background:var(--plum);border-color:var(--plum);color:#fff}
+.lab[hidden]{display:none}
+.filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.cgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}
+.flip{perspective:900px;height:168px;cursor:pointer}
+.flip .in{position:relative;width:100%;height:100%;transition:transform .45s;transform-style:preserve-3d}
+.flip.open .in{transform:rotateY(180deg)}
+.flip .f,.flip .b{position:absolute;inset:0;backface-visibility:hidden;border-radius:16px;padding:14px 16px;display:flex;flex-direction:column;border:1px solid var(--line);background:#fff;box-shadow:var(--shadow)}
+.flip .f{justify-content:center}
+.flip .f strong{font-size:18px;color:var(--plum);margin-top:6px;letter-spacing:-.01em}
+.flip .f small{color:var(--muted);margin-top:auto;font-size:12px}
+.flip .b{transform:rotateY(180deg);background:#fff9fc;font-size:14px;overflow:auto}
+.flip .b em{display:block;margin-top:6px;color:var(--muted);font-style:normal;font-size:13px}
+.flip.known .f{border-color:var(--ok);box-shadow:inset 0 0 0 1.5px var(--ok)}
+.flip .chk{position:absolute;top:10px;right:12px;font-size:12px;font-weight:800;color:var(--ok)}
+.ex{max-width:780px}
+.qq{font-size:18px;font-weight:700;margin:2px 0 14px;letter-spacing:-.01em}
+.opts{display:grid;gap:8px}
+.opt{border:2px solid var(--line);background:#fff;border-radius:12px;padding:12px 14px;text-align:left;font-weight:700}
+.opt:hover:not(:disabled){border-color:var(--berry)}
+.opt.f{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:14.5px}
+.opt.right{border-color:var(--ok);background:var(--ok-soft)}
+.opt.wrong{border-color:var(--bad);background:var(--bad-soft)}
+.opt:disabled{cursor:default}
+.fb{margin-top:12px;border-radius:12px;padding:12px 14px;font-size:14.5px}
+.fb.ok{background:var(--ok-soft);color:#135c3c}.fb.no{background:var(--bad-soft);color:#7d2219}.fb.mid{background:var(--warn-soft);color:#6b4500}
+code,.calc{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:14px}
+.calc{display:block;margin-top:6px;white-space:pre-wrap}
+.inp{display:flex;align-items:center;border:2px solid var(--line);border-radius:12px;background:#fff;padding:0 12px}
+.inp:focus-within{border-color:var(--berry)}
+.inp b{color:var(--muted)}
+.inp input{border:0;outline:0;font:inherit;font-size:18px;padding:9px 6px;width:140px;background:transparent}
+.score{display:flex;gap:14px;color:var(--muted);font-size:13.5px;margin-bottom:10px;flex-wrap:wrap}
+.score b{color:var(--ink)}
+.steps{background:#f8f1f5;border-radius:14px;padding:12px 16px;font-size:14px;margin-bottom:14px}
+.steps ol{margin:6px 0 0;padding-left:20px}
+.statement{border-collapse:collapse;margin:4px 0 6px;font-size:15px;min-width:280px}
+.statement td{padding:7px 12px;border-bottom:1px solid var(--line)}
+.statement td:last-child{text-align:right;font-family:ui-monospace,Menlo,Consolas,monospace}
+.statement tr.ask td{font-weight:800;color:var(--berry)}
+.done-card{text-align:center;padding:26px}
+.done-card .big{font-size:44px;font-weight:800;color:var(--plum)}
+
+
+.qhome{text-align:center;padding:18px 10px}
+.qbig{font-size:46px;line-height:1}
+.qhome h3{font-size:22px;margin:8px 0 4px}
+.qhome p{max-width:460px;margin:0 auto 14px}
+.qtop{display:flex;align-items:center;gap:12px}
+.qprog{flex:1;height:8px;background:#f1e8ec;border-radius:9px;overflow:hidden}
+.qprog i{display:block;height:100%;background:linear-gradient(90deg,var(--berry),#e2457f);border-radius:9px}
+.opt{display:flex;gap:12px;align-items:center;min-height:52px;touch-action:manipulation}
+.ol{width:30px;height:30px;border-radius:9px;background:#f4ecf0;color:var(--plum);display:grid;place-items:center;font-weight:800;font-size:13px;flex:none}
+.opt.right .ol{background:var(--ok);color:#fff}.opt.wrong .ol{background:var(--bad);color:#fff}
+.review{margin-top:16px;text-align:left}
+.review h3{margin-bottom:8px}
+.rv{border:1.5px solid var(--line);border-radius:12px;padding:10px 12px;margin-bottom:8px;font-size:14px;background:#fff}
+.confetti{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:50}
+.confetti i{position:absolute;top:-20px;width:10px;height:16px;border-radius:3px;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(1300px) rotate(720deg);opacity:.6}}
+.gpick{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.gtile{border:0;border-radius:22px;padding:26px;text-align:left;color:#fff;display:flex;flex-direction:column;gap:8px;min-height:230px;box-shadow:var(--shadow);touch-action:manipulation;transition:transform .15s}
+.gtile:hover{transform:translateY(-3px)}
+.gtile[data-game=swipe]{background:linear-gradient(135deg,#3b1534,#a01a58)}
+.gtile[data-game=memory]{background:linear-gradient(135deg,#1f4f86,#23866a)}
+.gtile .gico{font-size:44px}
+.gtile b{font-size:24px;letter-spacing:-.02em}
+.gtile span{opacity:.9}
+.gtile em{margin-top:auto;font-style:normal;font-weight:800;background:rgba(255,255,255,.16);align-self:flex-start;border-radius:999px;padding:5px 12px;font-size:13px}
+.arena{position:relative;border-radius:22px;background:radial-gradient(circle at 50% 20%,#6a2559,#2a0f26 70%);color:#fff;padding:16px;min-height:600px;display:flex;flex-direction:column;overflow:hidden;user-select:none;-webkit-user-select:none}
+.arena.lvlup:before{content:"";position:absolute;inset:0;background:rgba(255,255,255,.12);animation:flash .5s ease-out forwards;pointer-events:none}
+@keyframes flash{to{opacity:0}}
+.hud{display:flex;gap:14px;align-items:center;justify-content:space-between;font-size:15px;flex-wrap:wrap}
+.hud b{font-size:22px;font-variant-numeric:tabular-nums}
+.lvl{background:rgba(255,255,255,.14);padding:4px 12px;border-radius:999px;font-weight:800;font-size:13px}
+.mult{background:rgba(255,255,255,.14);padding:4px 12px;border-radius:999px;font-weight:800}
+.gstop{border:0;background:rgba(255,255,255,.14);color:#fff;width:38px;height:38px;border-radius:12px;font-size:16px;touch-action:manipulation}
+.mult.hot{background:#f2b134;color:#3b1534;animation:pulse .6s ease-in-out infinite alternate}
+@keyframes pulse{to{transform:scale(1.12)}}
+.tbar{height:8px;background:rgba(255,255,255,.15);border-radius:9px;margin:12px 0 10px;overflow:hidden}
+.tbar i{display:block;height:100%;background:linear-gradient(90deg,#f2b134,#e2457f);transition:width 1s linear}
+.zones{flex:1;display:grid;grid-template-columns:1fr 1.4fr 1fr;gap:14px;align-items:stretch}
+.zone{border:2px dashed rgba(255,255,255,.35);background:rgba(255,255,255,.06);color:#fff;border-radius:20px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;font-size:15px;padding:10px;touch-action:manipulation;transition:background .15s,transform .15s}
+.zone b{font-size:20px;text-align:center;line-height:1.2}
+.zone span{font-size:28px;opacity:.7}
+.zone.near{background:rgba(255,255,255,.18);transform:scale(1.03)}
+.zone.good{background:rgba(29,138,90,.55);border-color:#7be0b0}
+.zone.bad{background:rgba(192,57,43,.55);border-color:#ff9a8f;animation:shake .3s}
+@keyframes shake{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.deck{display:grid;place-items:center;position:relative}
+.scard{width:100%;max-width:320px;aspect-ratio:4/3.2;background:#fff;color:var(--ink);border-radius:24px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;box-shadow:0 18px 40px rgba(0,0,0,.35);cursor:grab;touch-action:none;padding:16px;text-align:center}
+.scard.enter{animation:pop .22s ease-out}
+@keyframes pop{from{transform:scale(.85);opacity:0}}
+.scard .emo{font-size:64px;line-height:1}
+.scard b{font-size:22px;letter-spacing:-.01em}
+.scard.ok{box-shadow:0 0 0 6px #7be0b0}.scard.no{box-shadow:0 0 0 6px #ff9a8f}
+.ghint{text-align:center;opacity:.7;font-size:13px;margin-top:12px}
+.toast{position:absolute;left:50%;bottom:58px;transform:translateX(-50%);background:#fff;color:var(--bad);font-weight:800;padding:8px 16px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.3);animation:pop .2s}
+.gend{text-align:center;padding:20px}
+.gend .big{font-size:52px;font-weight:800;color:var(--plum)}
+.mhud{display:flex;gap:16px;align-items:center;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap}
+.mgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.mtile{position:relative;height:138px;border:0;border-radius:16px;padding:0;background:transparent;perspective:800px;touch-action:manipulation}
+.mtile .back,.mtile .front{position:absolute;inset:0;border-radius:16px;display:grid;place-items:center;padding:10px;backface-visibility:hidden;transition:transform .35s}
+.mtile .back{background:linear-gradient(135deg,#1f4f86,#23866a);color:#fff;font-size:34px;font-weight:800}
+.mtile .front{background:#fff;border:2px solid var(--line);transform:rotateY(180deg);font-size:13px;line-height:1.35;color:var(--ink)}
+.mtile.term .front b{font-size:17px;color:var(--plum)}
+.mtile.open .back,.mtile.done .back{transform:rotateY(180deg)}
+.mtile.open .front,.mtile.done .front{transform:rotateY(360deg)}
+.mtile.done .front{border-color:var(--ok);background:var(--ok-soft)}
+.mtile.miss .front{border-color:var(--bad);background:var(--bad-soft)}
+@media (max-width:700px){
+.gpick{grid-template-columns:1fr}
+.zones{grid-template-columns:1fr 1fr;grid-template-areas:"deck deck" "l r"}
+.deck{grid-area:deck;min-height:260px}.zone.left{grid-area:l}.zone.right{grid-area:r}
+.zone{min-height:96px}
+.mgrid{grid-template-columns:repeat(3,1fr)}
+}
+
+.tgrid{display:grid;grid-template-columns:1.25fr 1fr;gap:16px;align-items:start}
+.timer{display:flex;align-items:center;gap:16px}
+.clock{--v:100;width:110px;height:110px;border-radius:50%;background:conic-gradient(var(--berry) calc(var(--v)*1%),#f1e8ec 0);display:grid;place-items:center;flex:none}
+.clock span{width:90px;height:90px;border-radius:50%;background:#fff;display:grid;place-items:center;font-weight:800;font-size:22px;color:var(--plum);font-variant-numeric:tabular-nums}
+.doc{position:relative;width:100%;height:560px;border-radius:14px;overflow:hidden;background:#eee;border:1px solid var(--line)}
+.doc iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.locked{height:220px;border-radius:14px;border:2px dashed #e1cfd8;display:grid;place-items:center;text-align:center;padding:20px;color:var(--muted);background:repeating-linear-gradient(45deg,#fff,#fff 10px,#fcf6f9 10px,#fcf6f9 20px)}
+.locked svg{width:28px;height:28px;color:var(--berry)}
+.grade{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.grade .out{font-size:34px;font-weight:800;color:var(--plum);min-width:70px}
+details{border:1px solid var(--line);border-radius:14px;padding:12px 16px;background:#fff}
+summary{cursor:pointer;font-weight:700;color:var(--plum)}
+.links{display:flex;flex-direction:column;gap:8px;margin-top:10px}
+.links a{display:flex;align-items:center;gap:10px;padding:10px 12px;border:1.5px solid var(--line);border-radius:12px;text-decoration:none;font-weight:600}
+.links a:hover{border-color:var(--berry)}
+
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.film .viewer{border-radius:14px 14px 0 0}
+.film .txt{padding:16px 18px}
+.poster{position:absolute;inset:0;border:0;padding:0;background:linear-gradient(135deg,#3b1534,#a01a58);display:grid;place-items:center;cursor:pointer}
+.poster img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.poster .play{position:relative;width:76px;height:76px;border-radius:50%;background:rgba(255,255,255,.92);display:grid;place-items:center;box-shadow:0 8px 30px rgba(0,0,0,.35);transition:transform .15s}
+.poster:hover .play{transform:scale(1.08)}
+.poster .play svg{width:32px;height:32px;fill:var(--berry);margin-left:4px}
+.alt{display:inline-block;margin-top:10px;font-size:13px;color:var(--muted)}
+
+@media (max-width:900px){
+.hero,.tgrid,.two,.fgrid{grid-template-columns:1fr}
+.pgrid{grid-template-columns:1fr 1fr}
+.les{grid-template-columns:1fr}
+.rail{flex-direction:row;overflow:auto;position:static}
+.rail button{flex:none}
+}
+@media (max-width:560px){
+.pgrid{grid-template-columns:1fr}
+nav.tabs button span{display:none}
+.ttl b{font-size:19px}
+.blob,.coins{display:none}
+.hero .intro h2{font-size:24px}
+}
+@media (max-width:900px){.hero .intro p{max-width:none}.coins{opacity:.35}}
+
+:root{--p1:#a01a58;--p2:#d0731c;--p3:#7b3fa6;--p4:#c43d3d;--p5:#2f6fb0;--p6:#23866a;--p7:#0f7c8c;--p8:#4a4fb0}
+.chh{display:flex;align-items:center;gap:10px;margin:20px 2px 10px;font-size:17px;color:var(--plum)}
+.chh:first-of-type{margin-top:4px}
+.chh .cn{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;color:#fff;font-size:13px;font-weight:800;flex:none}
+.chh small{font-weight:600;color:var(--muted);font-size:13px;margin-left:auto}
+.checkcard{margin-top:18px}
+.checkhead{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap;margin-bottom:10px}
+.checkhead .bar{width:220px;max-width:100%}
+.clist{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.citem{display:flex;gap:10px;align-items:center;border:1.5px solid var(--line);border-radius:12px;padding:9px 10px 9px 12px;background:#fff;font-size:14px}
+.citem.on{border-color:var(--ok);background:var(--ok-soft)}
+.citem .tick{width:24px;height:24px;border-radius:7px;border:2px solid #d9c9d1;display:grid;place-items:center;flex:none;color:#fff;background:#fff;padding:0}
+.citem.on .tick{background:var(--ok);border-color:var(--ok)}
+.citem .tick svg{width:14px;height:14px;opacity:0}
+.citem.on .tick svg{opacity:1}
+.citem .ctxt{flex:1;min-width:0}
+.citem .go{border:0;background:var(--berry-soft);color:var(--berry);font-weight:800;font-size:12.5px;border-radius:999px;padding:5px 10px;white-space:nowrap;flex:none}
+.citem .go:hover{filter:brightness(.97)}
+.rail .rh{font-size:11.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:8px 10px 2px}
+.xtra{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.xtra .xi{display:flex;align-items:center;gap:8px;border:1.5px solid var(--line);border-radius:12px;padding:8px 10px;background:#fff;font-size:13.5px;font-weight:700}
+.xtra .xi a{font-size:12.5px;font-weight:800;text-decoration:none;color:var(--berry);background:var(--berry-soft);border-radius:999px;padding:4px 10px}
+.vpick{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px}
+.vbtn{border:2px solid var(--line);border-radius:16px;padding:14px;background:#fff;text-align:left;display:flex;flex-direction:column;gap:4px;touch-action:manipulation;transition:border-color .15s,transform .15s}
+.vbtn:hover{transform:translateY(-2px);border-color:#e3c3d3}
+.vbtn[aria-pressed=true]{border-color:var(--berry);background:var(--berry-soft)}
+.vbtn b{font-size:18px;color:var(--plum);letter-spacing:-.01em}
+.vbtn span{font-size:13px;font-weight:700}
+.vbtn small{font-size:12.5px;color:var(--muted)}
+.lvls{display:flex;gap:6px;flex-wrap:wrap;margin-top:4px}
+.lvls i{font-style:normal;font-size:11.5px;font-weight:800;border-radius:7px;padding:2px 7px;background:#f1e8ec;color:var(--plum)}
+.lvls i.v{background:var(--plum);color:#fff}
+.mats{display:flex;flex-direction:column;gap:8px;margin-top:10px}
+.mat{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:10px 12px;border:1.5px solid var(--line);border-radius:12px;font-weight:700;font-size:14px}
+.mat .row{margin-left:auto;gap:6px}
+.mat a{font-size:12.5px;font-weight:800;text-decoration:none;color:var(--berry);background:var(--berry-soft);border-radius:999px;padding:5px 11px}
+.statement.cpi td{text-align:right;font-family:ui-monospace,Menlo,Consolas,monospace}
+.statement.cpi td:first-child{text-align:left;font-family:inherit}
+.statement.cpi tr:first-child td{font-family:inherit;color:var(--muted);font-size:13px}
+@media (max-width:900px){
+.clist{grid-template-columns:1fr}
+.vpick{grid-template-columns:1fr 1fr}
+.rail .rh{display:none}
+}
+
+.vpick{grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
+.xtra .xi{flex-wrap:wrap}
+
+/* ---------- leg uit ---------- */
+.lu textarea{width:100%;min-height:110px;border:2px solid var(--line);border-radius:12px;padding:12px 14px;font:inherit;font-size:15.5px;resize:vertical;background:#fff;color:var(--ink)}
+.lu textarea:focus{outline:0;border-color:var(--berry)}
+.lu .lubox{border-radius:14px;padding:14px 16px;margin-top:12px;font-size:14.5px}
+.lu .lubox p{margin:6px 0 0}
+.lu .lubox.goed{background:var(--ok-soft)}.lu .lubox.bijna{background:var(--warn-soft)}.lu .lubox.nognietgoed{background:var(--bad-soft)}
+.lu .badge2{display:inline-flex;align-items:center;gap:6px;font-weight:800;border-radius:999px;padding:4px 12px;font-size:13.5px;color:#fff}
+.lu .badge2.goed{background:var(--ok)}.lu .badge2.bijna{background:#c98a0b}.lu .badge2.nognietgoed{background:var(--bad)}
+.lu .model{margin-top:10px;border-left:4px solid var(--line);padding:6px 12px;color:var(--muted);font-size:14px}
+.lu .note{font-size:12.5px;color:var(--muted);margin-top:8px}
+</style>
+</head>
+<body>
+<div class="app">
+<div class="top">
+<div class="badge">H1</div>
+<div class="ttl"><small>Economie · jaar 4 · mavo · hoofdstuk 1</small><b>Verdien je genoeg?</b></div>
+<div class="prog"><div class="ring" id="ring"><span id="ringTxt">0%</span></div><div>jouw voortgang<br><b id="progTxt" style="font-weight:800">0 leerdoelen</b></div></div>
+<nav class="tabs" role="tablist">
+<button role="tab" data-tab="start" aria-selected="true"><svg class="i" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg><span>Start</span></button>
+<button role="tab" data-tab="les" aria-selected="false"><svg class="i" viewBox="0 0 24 24"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2z"/><path d="M22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg><span>Lesstof</span></button>
+<button role="tab" data-tab="lab" aria-selected="false"><svg class="i" viewBox="0 0 24 24"><path d="M9 3h6"/><path d="M10 3v6L4.5 19a1.5 1.5 0 0 0 1.3 2h12.4a1.5 1.5 0 0 0 1.3-2L14 9V3"/><path d="M7 15h10"/></svg><span>Oefenlab</span></button>
+<button role="tab" data-tab="toets" aria-selected="false"><svg class="i" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg><span>Oefentoetsen</span></button>
+<button role="tab" data-tab="films" aria-selected="false"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m10 8 6 4-6 4z"/></svg><span>Filmpjes</span></button>
+</nav>
+</div>
+
+<main id="main">
+<!-- START -->
+<section class="panel" id="start">
+<div class="hero">
+<div class="card intro">
+<div class="eyebrow">Hoofdstuk 1 · Inkomen en welvaart</div>
+<h2>Verdien je genoeg?<br>Begin hier.</h2>
+<p>Alles voor hoofdstuk 1 op één plek: de PowerPoint per paragraaf, leerdoelen om af te vinken, begrippen en rekensommen oefenen, een vraagbank met meer dan 100 vragen, games en toetsen met nakijkblad.</p>
+<div class="row"><button class="btn" data-go="les" data-par="1.1"><svg class="i" viewBox="0 0 24 24"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2z"/><path d="M22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg>Begin met 1.1</button><button class="btn ghost" data-go="toets">Naar de oefentoetsen</button></div>
+<div class="blob"></div>
+<div class="coins"><i style="height:22px"></i><i style="height:36px"></i><i style="height:52px"></i><i style="height:70px;background:linear-gradient(180deg,#e2457f,#a01a58)"></i></div>
+</div>
+<div class="card route">
+<div class="eyebrow">Jouw route door hoofdstuk 1</div>
+<button class="step" data-go="les"><span class="n" style="background:var(--p5)">1</span><div><b>Leer</b><span>De PowerPoint en je leerdoelen per paragraaf</span></div><svg class="i" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button>
+<button class="step" data-go="lab"><span class="n" style="background:var(--p6)">2</span><div><b>Oefen</b><span>Begrippen, formules, rekentrainer, quiz en games</span></div><svg class="i" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button>
+<button class="step" data-go="toets"><span class="n" style="background:var(--berry)">3</span><div><b>Test jezelf</b><span>Oefentoets B en meer, met nakijkblad</span></div><svg class="i" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button>
+</div>
+</div>
+<h3 class="chh"><span class="cn" style="background:var(--p1)">H1</span>Inkomen en welvaart<small id="ch1txt"></small></h3>
+<div class="pgrid" id="pgrid1"></div>
+<div class="card pad checkcard">
+<div class="checkhead"><div><div class="eyebrow">Checklist</div><h2>Dit moet je kunnen na hoofdstuk 1</h2><div class="muted" style="font-size:13.5px">Vink af wat je beheerst. Twijfel je? Klik op <b>Oefen</b>.</div></div>
+<div><div class="bar"><i id="cBar" style="background:var(--ok)"></i></div><div class="muted" style="font-size:12.5px;margin-top:4px" id="cTxt"></div></div></div>
+<div class="clist" id="clist"></div>
+</div>
+<div class="tip"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01"/><path d="M11 12h1v4h1"/></svg>Je voortgang wordt bewaard op dit apparaat, in deze browser.</div>
+</section>
+
+<!-- LESSTOF -->
+<section class="panel" id="les" hidden>
+<div class="les">
+<div class="card rail" id="rail"></div>
+<div>
+<div class="card pad">
+<div class="lhead">
+<div><div class="eyebrow" id="lEyebrow">Paragraaf 1.1</div><h2 id="lTitle"></h2></div>
+<div class="row"><a class="btn ghost" id="lOpen" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>Open PowerPoint</a><button class="btn soft" id="lPractice">Oefen begrippen</button></div>
+</div>
+<div class="viewer" id="lViewer"><div class="ph">PowerPoint laden…</div></div>
+<div class="xtra" id="lExtra"></div>
+</div>
+<div class="two">
+<div class="card pad"><h3>Kun jij dit beantwoorden?</h3><p class="muted" style="margin:0 0 10px;font-size:13.5px">Klik op een vraag als je het antwoord weet.</p><div class="qlist" id="lQs"></div></div>
+<div class="card pad goals"><h3>Leerdoelen</h3><div class="bar" style="margin:8px 0 6px"><i id="lBar"></i></div><div class="muted" style="font-size:12.5px;margin-bottom:4px" id="lBarTxt"></div><div id="lGoals"></div></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- OEFENLAB -->
+<section class="panel" id="lab" hidden>
+<div class="card pad">
+<div class="row" style="justify-content:space-between;margin-bottom:12px"><div><div class="eyebrow">Oefenlab</div><h2>Oefen zo vaak als je wilt</h2></div></div>
+<div class="sub" role="tablist" id="labNav">
+<button data-lab="begrippen" aria-selected="true">Begrippen</button>
+<button data-lab="leguit" aria-selected="false">🤖 Leg uit</button>
+<button data-lab="formule" aria-selected="false">Welke formule?</button>
+<button data-lab="reken" aria-selected="false">Rekentrainer</button>
+<button data-lab="quiz" aria-selected="false">⚡ Quiz</button>
+<button data-lab="games" aria-selected="false">🎮 Games</button>
+</div>
+<div class="lab" id="lab-begrippen">
+<div class="filters" id="cardFilters"></div>
+<div class="cgrid" id="cardGrid"></div>
+<div class="row" style="justify-content:space-between;margin-top:12px"><span class="muted" id="cardCount"></span><button class="btn ghost" id="cardReset">Alle kaarten omdraaien</button></div>
+</div>
+<div class="lab ex lu" id="lab-leguit" hidden>
+<div class="steps"><b>Leg het begrip uit in je eigen woorden</b><ol><li>Typ wat het begrip betekent en geef een voorbeeld.</li><li>Tik op <b>Laat nakijken</b>: je krijgt te horen wat goed is, wat er nog mist en wat niet klopt.</li><li>Gebruik geen namen of andere persoonlijke informatie in je antwoord.</li></ol></div>
+<div class="filters" id="luFilters"></div><div class="score" id="luScore"></div><div id="luCard"></div>
+</div>
+<div class="lab ex" id="lab-formule" hidden>
+<div class="steps"><b>Stappenplan bij elke rekenvraag</b><ol>
+<li>Wat wordt er gevraagd: een <b>%</b>, een bedrag in <b>€</b> of een <b>indexcijfer</b>?</li>
+<li>Welke gegevens heb je: oud en nieuw, een basisjaar, een rente, termijnen?</li>
+<li>Kies de juiste formule en schrijf je berekening op.</li>
+<li>Rond goed af: euro's op <b>2</b> decimalen, procenten en indexcijfers op <b>1</b> decimaal.</li></ol></div>
+<div class="score" id="fScore"></div><div id="fCard"></div>
+</div>
+<div class="lab ex" id="lab-reken" hidden>
+<div class="filters" id="rModes"></div><div class="score" id="rScore"></div><div id="rCard"></div>
+<p class="muted" style="font-size:13px">Tip: typ bedragen met een komma, zoals 12,50. Op je rekenmachine is de komma een punt.</p>
+</div>
+<div class="lab ex" id="lab-quiz" hidden><div class="score" id="qScore"></div><div id="qCard"></div></div>
+<div class="lab" id="lab-games" hidden><div id="gWrap"></div></div>
+</div>
+</section>
+
+<!-- TOETS -->
+<section class="panel" id="toets" hidden>
+<div class="card pad" style="margin-bottom:16px">
+<div class="eyebrow">Kies je oefening</div><h2>Oefentoetsen en opdrachten</h2>
+<p class="muted" style="margin:2px 0 0;font-size:14px;max-width:760px">Maak eerst de opdracht zonder boek en zonder hulp. Kijk daarna je werk na met het nakijkblad en reken je cijfer uit.</p>
+<div class="vpick" id="vPick"></div>
+</div>
+<div class="tgrid">
+<div class="card pad">
+<div class="lhead"><div><div class="eyebrow">Stap 1</div><h2 id="tTitle">Oefentoets</h2><div class="muted" style="font-size:13.5px" id="tMeta"></div></div>
+<a class="btn ghost" target="_blank" rel="noopener" id="tOpen"><svg class="i" viewBox="0 0 24 24"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>Openen / printen</a></div>
+<div class="doc" id="tDoc"></div>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px">
+<div class="card pad" id="timerCard">
+<div class="eyebrow">Stap 2</div><h3>Zet de klok aan</h3>
+<div class="timer"><div class="clock" id="clock"><span id="clockTxt">50:00</span></div>
+<div><p class="muted" style="margin:0 0 10px;font-size:13.5px" id="clockMsg"></p>
+<div class="row"><button class="btn" id="tStart">Start</button><button class="btn ghost" id="tReset">Opnieuw</button></div></div></div>
+</div>
+<div class="card pad">
+<div class="eyebrow">Stap 3</div><h3>Kijk je werk na</h3>
+<div id="nakijk"></div>
+</div>
+<div class="card pad">
+<div class="eyebrow">Stap 4</div><h3>Wat is je cijfer?</h3>
+<div class="grade"><div class="inp"><input id="pts" inputmode="decimal" placeholder="behaald" style="width:90px"><b>van</b><input id="ptsMax" inputmode="decimal" placeholder="max" style="width:80px"></div><div class="out" id="grade">-</div></div>
+<div class="muted" style="font-size:13px;margin-top:6px" id="gradeMsg"></div>
+</div>
+<details open><summary>Meer oefenmateriaal</summary>
+<div class="mats" id="mats"></div></details>
+</div>
+</div>
+</section>
+
+<!-- FILMPJES -->
+<section class="panel" id="films" hidden>
+<div class="fgrid" id="fgrid"></div>
+</section>
+</main>
+</div>
+
+<script>
+(function(){
+"use strict";
+var DRIVE=function(id){return "https://drive.google.com/file/d/"+id+"/preview";};
+var VIEW=function(id){return "https://drive.google.com/file/d/"+id+"/view";};
+var CHECK='<svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>';
+var EXT='<svg class="i" viewBox="0 0 24 24" style="width:14px;height:14px"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>';
+var MAT={"hv": ["Oefenvragen 1.1 en 1.2", [["Opdracht", "1Exae3S1-24MT-5Y2WOy4lyCfuUkB1Mbj"], ["Nakijkblad", "11Dj4qhld3rv9Z9cRcNUrQmovStHETb1S"]]], "ot": ["Oefentoets B", [["Opdracht", "1L1uqbX4ik42HwbdglHsDb2wnTsbYaWuz"], ["Nakijkblad", "1v9oIf6m0MNTL6S8g_0rjWoV367r9-Evr"]]], "hh": ["Herhalingsvragen hoofdstuk 1", [["Opdracht", "13et1yOsdKqMvK7AdvH2Sbq-etX9YyOdm"]]], "lz": ["Lorenzcurve-opdracht", [["Opdracht", "1XiPAewFY0URlAR3_qY7zGNhZTX6MVpIS"], ["Nakijkblad", "1sBaSAPhyHUjekYFHjkT0qgZZ6coXlc89"]]], "rk": ["Rekenen: herhaling van vorig jaar (puzzelronde)", [["Rekenoefening", "14di8Tgr1klaOrgfCmb7Z2o6_ZWue9aFL"], ["Informatieblad", "1_wDUqaCOzWzoFb4pn7SeomxqUBiRvx2y"], ["Nakijkblad", "1uQZimze8hpGi_2rXMcp8HRyfZ7lQmyOx"]]], "rr": ["Opdracht reëel inkomen (1.4)", [["Opdracht", "1Kq1y-FK0CEsQ7NFpv79XIyOamsn-Z3f4"]]], "rb": ["Oefenen met rekenen aan het einde van het hoofdstuk", [["PowerPoint", "1q5i1GhgkAfi00Z0gUOn1I75u1Mmv2AyB"], ["Nakijkblad rekenen", "1zhgpfbkk2pqf3TNmjD138mFPdvocnHSB"]]], "ex": ["Examentraining", [["Opdracht", "1SqYCtjDwDudTOktzkIY1FgZlLRYOmctd"]]], "ix": ["Uitleg en oefeningen indexcijfers", [["Document", "1aGJAn6ZIC1GQ1KkPZZs50RrvcUCll6OP"]]], "oo": ["Oefentoets einde van het hoofdstuk (oud)", [["Opdracht", "1OTpuvKjUbxYYJCEZKmUa79hDSDRlhNxU"], ["Met antwoorden", "1UPObDCLlZG2O5LolAGZFKHEAZ_GIT6AX"]]]};
+var PARS=[{"id": "1.1", "ch": 1, "t": "Wat heb je te besteden?", "c": "var(--p1)", "file": "1SRdiwqkJL0-nnV26YnwxncE37KQ4UP8j", "x": ["hv"], "sum": "Inkomen uit arbeid, bezit en overdrachten, bestedingen, doelgroepen, de 6 P's en maatschappelijke kosten.", "q": ["Noem de drie bronnen van inkomen en geef van elk een voorbeeld.", "Wat is het verschil tussen primair inkomen en een overdrachtsinkomen?", "Waarom gaan mensen hun geld anders besteden? Noem drie oorzaken.", "Noem de 6 P's van de marketingmix en leg er twee uit.", "Wat is een doelgroep? Waarom zijn jongeren voor bedrijven een interessante doelgroep?", "Wat is het verschil tussen merkreclame en ideële reclame?", "Wat betekent duurzaam consumeren?", "Wat zijn maatschappelijke kosten? Geef een voorbeeld.", "Leg uit wat het verschil is tussen inkomen uit arbeid en inkomen uit bezit. Geef van beide één voorbeeld.", "Leg uit hoe reclame kan bijdragen aan niet-duurzaam consumentengedrag.", "Geef een product waarvan de productie maatschappelijke kosten veroorzaakt en leg uit waarom."]}, {"id": "1.2", "ch": 1, "t": "Niet ieder inkomen is hetzelfde", "c": "var(--p2)", "file": "1yjwzFM1XWqt1tYMhp4qfN-3IbcW_SiOK", "x": ["hv", "lz"], "sum": "Bruto, netto en besteedbaar inkomen, loonstijging met een groeifactor, modaal inkomen en de Lorenzcurve.", "q": ["Wat is het verschil tussen brutoloon, nettoloon en besteedbaar inkomen?", "Hoe bereken je een nieuw loon met een groeifactor? Geef een voorbeeld met 3% loonstijging.", "Noem drie redenen waarom inkomens van mensen verschillen.", "Wat is een modaal inkomen? En wat is het sociaal minimum?", "Wat is het nationaal inkomen?", "Wat laat de Lorenzcurve zien? Hoe ziet de lijn eruit als iedereen evenveel verdient?", "Wat gebeurt er met de Lorenzcurve als de btw op levensmiddelen omhoog gaat?", "Wat is het verschil tussen nominaal en reëel inkomen?", "Beschrijf de stappen van brutoloon naar besteedbaar inkomen.", "Leg uit waarom twee mensen met hetzelfde brutoloon een verschillend besteedbaar inkomen kunnen hebben.", "Wat is het verschil tussen het modaal inkomen en het sociaal minimum?", "Leg uit hoe vraag en aanbod inkomensverschillen veroorzaken, met een voorbeeld."]}, {"id": "1.3", "ch": 1, "t": "Wil je welvaart of welzijn?", "c": "var(--p3)", "file": "1EP5wPOFl2ZHj2Z4FC2mZioNuHwrLmgKv", "x": ["ix", "rb"], "sum": "Welvaart en welzijn, schaarse en vrije goederen, prioriteiten stellen, het BBP en rekenen met indexcijfers.", "q": ["Wat is het verschil tussen welvaart en welzijn? Geef van beide een voorbeeld.", "Wanneer noem je een goed schaars? En wat is een vrij goed?", "Waarom moet je prioriteiten stellen?", "Wat zijn middelen? Noem er twee die schaars zijn.", "Wat is het BBP? Hoe bereken je het BBP per inwoner?", "Wat betekent een indexcijfer van 100? En een indexcijfer van 112?", "Hoe bereken je een indexcijfer? Schrijf de formule op.", "Benzine kost nu €1,69 bij een indexcijfer van 176,6. Hoe reken je terug naar de prijs in het basisjaar?", "Hoe kan een stijging van de welvaart ook leiden tot een stijging van het welzijn?", "Waarom kun je zeggen dat tijd ook een economisch middel is?", "Geef twee voorbeelden van middelen en leg uit hoe hun beperkte beschikbaarheid met schaarste te maken heeft."]}, {"id": "1.4", "ch": 1, "t": "Help, de prijzen stijgen!", "c": "var(--p4)", "file": "1-k33_2gX46KvYifJ_Z4f5KrxltsDoOAs", "x": ["rr"], "sum": "Inflatie en deflatie, koopkracht, prijscompensatie, de loon-prijsspiraal en het gewogen CPI.", "q": ["Wat is inflatie? En wat is deflatie?", "Noem twee oorzaken van inflatie.", "Wat is koopkracht? Wanneer daalt je koopkracht?", "Je loon stijgt met 4% en de inflatie is 2,5%. Wat gebeurt er met je koopkracht?", "Wat is prijscompensatie en waarom willen vakbonden dat?", "Leg uit hoe een loon-prijsspiraal ontstaat.", "Wat is het CPI en wie berekent het?", "Waarom tellen sommige producten zwaarder mee in een gewogen indexcijfer?", "Beschrijf in stappen hoe je met het cpi berekent hoeveel de prijzen gemiddeld zijn gestegen.", "Wat wordt bedoeld met geldontwaarding en hoe hangt dat samen met inflatie?", "Leg uit wat er met de export van Nederland gebeurt als de inflatie hier hoger is dan in het buitenland."]}];
+var GOALS={"1.1": ["Ik weet wat inkomen is en ik kan drie manieren uitleggen waarop mensen geld verdienen.", "Ik weet wat het verschil is tussen primair en secundair inkomen.", "Ik weet wat bestedingen zijn en kan uitleggen waarom mensen hun geld anders gaan uitgeven.", "Ik kan uitleggen wat de 6 P's van marketing zijn en hoe bedrijven mij proberen te beïnvloeden.", "Ik weet wat een doelgroep is en waarom bedrijven zich op bepaalde groepen richten.", "Ik kan uitleggen wat duurzaam consumeren is.", "Ik weet wat maatschappelijke kosten zijn en kan een voorbeeld geven.", "Ik kan drie voorbeelden geven van inkomen uit arbeid en drie voorbeelden van inkomen uit bezit.", "Ik kan uitleggen wat een overdrachtsinkomen is en er twee voorbeelden van noemen.", "Ik kan vier redenen noemen waarom mensen verschillende bestedingen hebben.", "Ik kan de zes P's van de marketingmix noemen.", "Ik kan bij een voorbeeld herkennen om welke P van de marketingmix het gaat.", "Ik kan uitleggen waarom jongeren een aantrekkelijke doelgroep zijn voor bedrijven.", "Ik kan het verschil uitleggen tussen merkreclame en ideële reclame.", "Ik kan uitleggen hoe technische ontwikkelingen consumenten en bedrijven beïnvloeden.", "Ik kan uitleggen hoe bedrijven mij via sociale netwerken en influencers proberen te beïnvloeden.", "Ik kan een voorbeeld geven van duurzaam consumeren en uitleggen waarom iemand daarvoor kiest.", "Ik kan bij een product uitleggen wat de maatschappelijke kosten zijn en wie die kosten betaalt.", "Ik kan een doelgroep koppelen aan een medium waarmee een producent die doelgroep bereikt.", "Ik kan uit een tabel of grafiek met bestedingen aflezen welke groep het meeste te besteden heeft.", "Ik kan twee redenen geven waarom ouderen een aantrekkelijke doelgroep zijn."], "1.2": ["Ik weet wat bruto-, netto- en besteedbaar inkomen betekenen.", "Ik kan een loonstijging of -daling berekenen met een percentage of groeifactor.", "Ik kan vier redenen noemen waarom inkomens van mensen verschillen.", "Ik weet wat modaal inkomen en sociaal minimum betekenen.", "Ik weet wat het nationaal inkomen is.", "Ik kan een Lorenzcurve lezen en uitleggen wat deze zegt over inkomensverschillen.", "Ik kan uitleggen wat het verschil is tussen nominaal en reëel inkomen.", "Ik kan uitleggen wat prijscompensatie is en wat een loon-prijsspiraal betekent.", "Ik kan een nettoloon berekenen.", "Ik kan een procentuele verandering berekenen.", "Ik kan berekenen met hoeveel procent een aantal is gestegen of gedaald.", "Ik kan uitleggen waarom het modaal inkomen handig is om inkomens te vergelijken.", "Ik kan uitleggen wat het BBP is.", "Ik kan het nationaal inkomen per inwoner berekenen.", "Ik kan uitleggen wat de gelijkheidslijn in een Lorenzcurve betekent.", "Ik kan uit een tabel met de inkomensverdeling de punten van een Lorenzcurve uitrekenen.", "Ik kan uitleggen wat de ligging van een Lorenzcurve zegt over de inkomensverdeling.", "Ik kan uitleggen wat er met de Lorenzcurve gebeurt als de btw op levensmiddelen omhoog gaat.", "Ik kan uitleggen wat het besteedbaar inkomen is.", "Ik kan berekenen hoeveel procent van het inkomen een groep verdient.", "Ik kan berekenen met hoeveel procent iemands inkomen hoger is dan het minimumloon.", "Ik kan uitleggen hoe belastingen en uitkeringen de inkomensverschillen kleiner maken."], "1.3": ["Ik weet wat welvaart is.", "Ik weet wat welzijn is.", "Ik kan het verschil uitleggen tussen vrije goederen en schaarse goederen.", "Ik kan uitleggen waarom je moet kiezen tussen behoeften.", "Ik weet wat middelen zijn en wat prioriteiten stellen betekent.", "Ik weet wat indexcijfers zijn en dat ze prijsveranderingen in de tijd laten zien.", "Ik kan drie manieren noemen waarop welvaart toeneemt.", "Ik kan drie voorbeelden geven van welzijn dat je niet met geld kunt kopen.", "Ik kan uitleggen waarom het BBP per inwoner niet alles zegt over het welzijn in een land.", "Ik kan het BBP per inwoner berekenen.", "Ik kan uitleggen wat collectieve voorzieningen zijn en er voorbeelden van geven.", "Ik kan van een goed zeggen of het schaars of vrij is en mijn keuze uitleggen.", "Ik kan uitleggen wat het verschil is tussen schaars en duur.", "Ik kan de drie productiemiddelen noemen.", "Ik kan een indexcijfer berekenen.", "Ik kan uit een indexcijfer aflezen met hoeveel procent iets is gestegen of gedaald.", "Ik kan met een indexcijfer terugrekenen naar de prijs in het basisjaar.", "Ik kan met een indexcijfer berekenen wat een product nu kost.", "Ik kan uit een tabel met indexcijfers aflezen hoeveel duurder iets is geworden.", "Ik kan een procentuele verandering berekenen en uitleggen wat een relatieve verandering is.", "Ik kan in een tabel met prijzen de verandering in procenten invullen, ten opzichte van het vorige jaar en ten opzichte van het basisjaar."], "1.4": ["Ik kan uitleggen wat inflatie en deflatie zijn.", "Ik weet wat koopkracht is en hoe die verandert bij prijsstijgingen.", "Ik weet wat prijscompensatie betekent en waarom vakbonden dat willen.", "Ik kan uitleggen hoe een loon-prijsspiraal ontstaat.", "Ik weet waarvoor het CPI wordt gebruikt.", "Ik kan twee oorzaken van inflatie noemen.", "Ik kan uitleggen waarom deflatie slecht is voor de economie.", "Ik kan uitleggen wat nominaal inkomen en reëel inkomen is.", "Ik kan de reële verandering van een inkomen berekenen.", "Ik kan bepalen of mijn koopkracht stijgt of daalt als ik de loonstijging en de inflatie weet.", "Ik kan de koopkracht aflezen uit een grafiek met loonstijging en inflatie.", "Ik kan uitleggen waarom 1% inflatie niet hoeft te betekenen dat mijn koopkracht ook 1% daalt.", "Ik kan de loon-prijsspiraal als een cirkel tekenen en uitleggen.", "Ik kan uitleggen wat het CBS doet.", "Ik kan uitleggen wat een wegingsfactor is en waarom het CPI een gewogen indexcijfer is.", "Ik kan een gewogen CPI uitrekenen.", "Ik kan uit indexcijfers van twee jaren de inflatie in procenten berekenen.", "Ik kan uitleggen waarom hoge looneisen een bedrijf in moeilijkheden kunnen brengen.", "Ik kan uitleggen wat de ECB kan doen om de inflatie te beperken.", "Ik kan uitleggen hoe een hogere inflatie in Nederland dan in het buitenland de export van Nederlandse producten kan laten dalen.", "Ik kan uitleggen wat geldontwaarding is.", "Ik kan uitleggen hoe de overheid een loon-prijsspiraal kan doorbreken.", "Ik kan berekenen hoeveel prijscompensatie nodig is om de koopkracht gelijk te houden."]};
+var NORIG={"1.1":21,"1.2":22,"1.3":21,"1.4":23};
+/*SEL*/var SEL=null;/*ENDSEL*/
+PARS.forEach(function(p){var all=GOALS[p.id],ix=(SEL&&SEL[p.id])||all.map(function(_,i){return i;}).slice(0,NORIG[p.id]);p.gi=ix;p.g=ix.map(function(i){return all[i];});});
+function P(id){for(var i=0;i<PARS.length;i++)if(PARS[i].id===id)return PARS[i];}
+function tag(id){return '<span class="chip" style="background:'+P(id).c+'">'+id+'</span>';}
+var CHK=[["Verschillende soorten inkomens beschrijven", "1.1", "quiz"], ["Uitleggen waardoor je koopgedrag kan veranderen", "1.1", "quiz"], ["Uitleggen waarom bepaalde doelgroepen belangrijk zijn", "1.1", "quiz"], ["Uitleggen dat jouw aankopen gevolgen hebben voor anderen en voor het milieu", "1.1", "quiz"], ["Het verschil uitleggen tussen bruto-, netto- en besteedbaar inkomen", "1.2", "quiz"], ["Met een groeifactor een stijging of daling berekenen", "1.2", "reken", "groei"], ["Oorzaken van inkomensverschillen noemen", "1.2", "quiz"], ["Uit een Lorenzcurve aflezen hoe de inkomens in een land verdeeld zijn", "1.2", "reken", "lorenz"], ["Het BBP per inwoner berekenen", "1.2", "reken", "bbp"], ["Uitleggen waarom het nodig is om prioriteiten te stellen", "1.3", "quiz"], ["Uitleggen wat het betekent dat de meeste goederen schaars zijn", "1.3", "quiz"], ["Het verschil tussen welvaart en welzijn uitleggen", "1.3", "quiz"], ["Rekenen met procenten (deel, percentage, verandering)", "1.3", "reken", "perc"], ["Indexcijfers berekenen en terugrekenen naar het basisjaar", "1.3", "reken", "index"], ["Oorzaken van inflatie noemen", "1.4", "quiz"], ["Uitleggen wat de gevolgen van inflatie zijn", "1.4", "quiz"], ["Het cpi en de inflatie berekenen", "1.4", "reken", "cpi"], ["Het reële inkomen uitrekenen (koopkracht)", "1.4", "reken", "koop"], ["Uitleggen hoe lonen en prijzen elkaar beïnvloeden (loon-prijsspiraal)", "1.4", "quiz"]];
+
+var KEY="h1v4-app-v1",S={goals:{},qs:{},known:{},unlock:{},check:{},ver:1};
+try{var s=JSON.parse(localStorage.getItem(KEY));if(s&&s.goals)S=Object.assign(S,s);}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}
+
+var tabs=document.querySelectorAll("nav.tabs button"),main=document.getElementById("main");
+function show(name){
+tabs.forEach(function(b){b.setAttribute("aria-selected",b.dataset.tab===name?"true":"false");});
+document.querySelectorAll(".panel").forEach(function(p){p.hidden=p.id!==name;});
+main.scrollTop=0;
+if(name!=="lab"&&SW)gamesHome();
+if(name==="les")loadLes();
+if(name==="toets")loadToets();
+if(name==="films")loadFilms();
+}
+tabs.forEach(function(b){b.addEventListener("click",function(){show(b.dataset.tab);});});
+document.addEventListener("click",function(e){
+var g=e.target.closest("[data-go]");if(g){if(g.dataset.par)cur=g.dataset.par;show(g.dataset.go);}
+var l=e.target.closest("[data-golab]");if(l){show("lab");showLab(l.dataset.golab);
+if(l.dataset.mode){mode=l.dataset.mode;newR();}
+if(l.dataset.qpar){quizPar=l.dataset.qpar;quizHome();}}
+});
+
+function goalCount(id){var p=P(id),d=0;p.gi.forEach(function(gi){if(S.goals[id+"-"+gi])d++;});return d;}
+function totals(ch){var t=0,d=0;PARS.forEach(function(p){if(ch&&p.ch!==ch)return;t+=p.g.length;d+=goalCount(p.id);});return [d,t];}
+function renderProgress(){
+var x=totals(),pct=x[1]?Math.round(x[0]/x[1]*100):0;
+document.getElementById("ring").style.setProperty("--v",pct);
+document.getElementById("ringTxt").textContent=pct+"%";
+document.getElementById("progTxt").textContent=x[0]+" van "+x[1]+" leerdoelen";
+renderCards();
+}
+
+function renderCards(){
+[1].forEach(function(ch){
+document.getElementById("pgrid"+ch).innerHTML=PARS.filter(function(p){return p.ch===ch;}).map(function(p){
+var d=goalCount(p.id),n=p.g.length||1;
+return '<button class="pcard" data-go="les" data-par="'+p.id+'"><div class="band" style="background:linear-gradient(135deg,'+p.c+',color-mix(in srgb,'+p.c+' 70%,#000))"><b>'+p.id+'</b></div>'+
+'<div class="body"><h3>'+p.t+'</h3><p>'+p.sum+'</p><div class="bar"><i style="width:'+(d/n*100)+'%;background:'+p.c+'"></i></div><div class="meta"><span>'+d+' van '+n+' leerdoelen</span><span style="font-weight:700;color:var(--plum)">Open les →</span></div></div></button>';
+}).join("");
+var t=totals(ch);document.getElementById("ch"+ch+"txt").textContent=t[0]+" van "+t[1]+" leerdoelen";
+});
+}
+function renderCheck(){
+var n=0;
+document.getElementById("clist").innerHTML=CHK.map(function(c,i){var on=!!S.check[i];if(on)n++;
+var go=c[2]==="reken"?' data-golab="reken" data-mode="'+c[3]+'"':' data-golab="quiz" data-qpar="'+c[1]+'"';
+return '<div class="citem'+(on?" on":"")+'"><button class="tick" data-c="'+i+'" aria-label="Afvinken">'+CHECK+'</button><span class="ctxt">'+c[0]+'</span>'+tag(c[1])+'<button class="go"'+go+'>Oefen →</button></div>';}).join("");
+document.getElementById("cBar").style.width=(n/CHK.length*100)+"%";
+document.getElementById("cTxt").textContent=n+" van "+CHK.length+" onderdelen beheerst";
+}
+document.getElementById("clist").addEventListener("click",function(e){var b=e.target.closest("[data-c]");if(!b)return;var i=b.dataset.c;if(S.check[i])delete S.check[i];else S.check[i]=1;save();renderCheck();});
+
+var cur="1.1";
+function loadLes(){
+var p=P(cur),last=0;
+document.getElementById("rail").innerHTML=PARS.map(function(x){var d=goalCount(x.id),h="";
+if(x.ch!==last){last=x.ch;h='<div class="rh">Hoofdstuk '+x.ch+'</div>';}
+return h+'<button data-par="'+x.id+'" aria-current="'+(x.id===cur)+'"><span class="dot" style="background:'+x.c+'">'+x.id+'</span><span>'+x.t+'<span class="mini">'+d+'/'+x.g.length+' leerdoelen</span></span></button>';}).join("");
+document.getElementById("lEyebrow").textContent="Hoofdstuk "+p.ch+" · paragraaf "+p.id;
+document.getElementById("lEyebrow").style.color=p.c;
+document.getElementById("lTitle").textContent=p.t;
+document.getElementById("lOpen").href=VIEW(p.file);
+var v=document.getElementById("lViewer");
+if(v.dataset.file!==p.file){v.dataset.file=p.file;v.innerHTML='<div class="ph">PowerPoint laden…</div><iframe src="'+DRIVE(p.file)+'" allow="autoplay" loading="lazy" title="PowerPoint '+p.id+'"></iframe>';}
+document.getElementById("lExtra").innerHTML=p.x.map(function(k){var m=MAT[k];return '<div class="xi">📝 '+m[0]+m[1].map(function(l){return '<a target="_blank" rel="noopener" href="'+VIEW(l[1])+'">'+l[0]+' ↗</a>';}).join("")+'</div>';}).join("");
+document.getElementById("lQs").innerHTML=p.q.map(function(q,i){var k=p.id+"-"+i,on=!!S.qs[k];
+return '<button class="q'+(on?" on":"")+'" data-q="'+k+'"><span class="tick">'+CHECK+'</span><span>'+q+'</span></button>';}).join("");
+var d=goalCount(p.id);
+document.getElementById("lBar").style.width=(d/(p.g.length||1)*100)+"%";
+document.getElementById("lBar").style.background=p.c;
+document.getElementById("lBarTxt").textContent=d+" van "+p.g.length+" behaald";
+document.getElementById("lGoals").innerHTML=p.g.map(function(g,j){var k=p.id+"-"+p.gi[j],on=!!S.goals[k];
+return '<label class="'+(on?"done":"")+'"><input type="checkbox" data-k="'+k+'"'+(on?" checked":"")+'><span>'+g+'</span></label>';}).join("");
+}
+document.getElementById("rail").addEventListener("click",function(e){var b=e.target.closest("[data-par]");if(b){cur=b.dataset.par;loadLes();}});
+document.getElementById("lQs").addEventListener("click",function(e){var b=e.target.closest("[data-q]");if(!b)return;var k=b.dataset.q;if(S.qs[k])delete S.qs[k];else S.qs[k]=1;save();b.classList.toggle("on");});
+document.getElementById("lGoals").addEventListener("change",function(e){var k=e.target.dataset.k;if(!k)return;if(e.target.checked)S.goals[k]=1;else delete S.goals[k];save();loadLes();renderProgress();});
+document.getElementById("lPractice").addEventListener("click",function(){cardFilter=cur;show("lab");showLab("begrippen");renderFlash();});
+
+
+var VERS=[{"n": 1, "t": "Oefentoets B", "tags": ["1.1 t/m 1.4"], "min": 50, "toets": "1L1uqbX4ik42HwbdglHsDb2wnTsbYaWuz", "nk": "1v9oIf6m0MNTL6S8g_0rjWoV367r9-Evr", "meta": "Meerkeuze- en open vragen over alle vier de paragrafen"}, {"n": 2, "t": "Oefenvragen 1.1 en 1.2", "tags": ["1.1", "1.2"], "min": 0, "toets": "1Exae3S1-24MT-5Y2WOy4lyCfuUkB1Mbj", "nk": "11Dj4qhld3rv9Z9cRcNUrQmovStHETb1S", "meta": "11 open vragen met uitgebreid antwoordmodel"}, {"n": 3, "t": "Herhalingsvragen hoofdstuk 1", "tags": ["1.1 t/m 1.4"], "min": 0, "toets": "13et1yOsdKqMvK7AdvH2Sbq-etX9YyOdm", "nk": null, "meta": "Open herhalingsvragen per paragraaf"}, {"n": 4, "t": "Lorenzcurve-opdracht", "tags": ["1.2"], "min": 0, "toets": "1XiPAewFY0URlAR3_qY7zGNhZTX6MVpIS", "nk": "1sBaSAPhyHUjekYFHjkT0qgZZ6coXlc89", "meta": "Grafiek aflezen, BBP per hoofd en inkomensverdeling"}, {"n": 5, "t": "Oefentoets einde hoofdstuk (oud)", "tags": ["1.1 t/m 1.4"], "min": 0, "toets": "1OTpuvKjUbxYYJCEZKmUa79hDSDRlhNxU", "nk": "1UPObDCLlZG2O5LolAGZFKHEAZ_GIT6AX", "meta": "Oudere toets met uitgewerkte antwoorden"}];
+function V(){return VERS[(S.ver||1)-1]||VERS[0];}
+var T=50*60,left=T,tick=null;
+function renderVPick(){
+document.getElementById("vPick").innerHTML=VERS.map(function(v){
+return '<button class="vbtn" data-v="'+v.n+'" aria-pressed="'+(v.n===S.ver)+'"><b>'+v.t+'</b><div class="lvls">'+v.tags.map(function(t){return '<i>'+t+'</i>';}).join("")+'</div><small>'+(v.min?v.min+' minuten · ':'')+(v.nk?'met nakijkblad':'zonder nakijkblad')+'</small></button>';}).join("");
+}
+function loadToets(){
+var v=V();renderVPick();
+document.getElementById("tTitle").textContent=v.t;
+document.getElementById("tMeta").textContent=v.meta+(v.min?" · "+v.min+" minuten":"");
+document.getElementById("tOpen").href=VIEW(v.toets);
+var d=document.getElementById("tDoc");
+if(d.dataset.id!==v.toets){d.dataset.id=v.toets;d.innerHTML='<iframe src="'+DRIVE(v.toets)+'" loading="lazy" title="'+v.t+'"></iframe>';}
+renderNakijk();
+document.getElementById("timerCard").style.display=v.min?"":"none";
+if(v.min&&T!==v.min*60&&!tick){T=v.min*60;left=T;drawClock();}
+document.getElementById("clockMsg").textContent="Je hebt "+(v.min||50)+" minuten. Maak de toets zonder boek en zonder hulp, met je rekenmachine.";
+gradeIt();
+}
+document.getElementById("vPick").addEventListener("click",function(e){var b=e.target.closest("[data-v]");if(!b)return;S.ver=+b.dataset.v;save();
+clearInterval(tick);tick=null;var st=document.getElementById("tStart");st.disabled=false;st.textContent="Start";T=(V().min||50)*60;left=T;drawClock();loadToets();});
+function renderNakijk(){
+var v=V(),box=document.getElementById("nakijk");
+if(!v.nk){box.innerHTML='<p class="muted" style="margin:0">Bij deze oefening is (nog) geen nakijkblad. Bespreek je antwoorden met je docent of met een klasgenoot.</p>';return;}
+if(!S.unlock[v.n]){box.innerHTML='<div class="locked"><div><svg class="i" viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><p style="margin:8px 0 12px">Het nakijkblad gaat open als je klaar bent met de oefening.</p><button class="btn" id="unlock">Ik ben klaar, laat het nakijkblad zien</button></div></div>';return;}
+box.innerHTML='<div class="doc" style="height:420px"><iframe src="'+DRIVE(v.nk)+'" loading="lazy" title="Nakijkblad"></iframe></div><div class="row" style="margin-top:10px"><a class="btn ghost" target="_blank" rel="noopener" href="'+VIEW(v.nk)+'">Nakijkblad openen</a><button class="btn ghost" id="relock">Weer verbergen</button></div>';
+}
+document.getElementById("nakijk").addEventListener("click",function(e){
+if(e.target.closest("#unlock")){S.unlock[V().n]=1;save();renderNakijk();}
+if(e.target.closest("#relock")){delete S.unlock[V().n];save();renderNakijk();}
+});
+function drawClock(){var m=Math.floor(left/60),s=left%60;document.getElementById("clockTxt").textContent=(m<10?"0":"")+m+":"+(s<10?"0":"")+s;document.getElementById("clock").style.setProperty("--v",left/T*100);}
+document.getElementById("tStart").addEventListener("click",function(){
+var b=this;
+if(tick){clearInterval(tick);tick=null;b.textContent="Verder";return;}
+b.textContent="Pauze";
+tick=setInterval(function(){left--;drawClock();if(left<=0){clearInterval(tick);tick=null;b.textContent="Klaar!";b.disabled=true;document.getElementById("clockTxt").textContent="Tijd!";}},1000);
+});
+document.getElementById("tReset").addEventListener("click",function(){clearInterval(tick);tick=null;left=T;drawClock();var b=document.getElementById("tStart");b.disabled=false;b.textContent="Start";});
+function gradeIt(){
+var a=document.getElementById("pts"),b=document.getElementById("ptsMax"),v=parseFloat(a.value.replace(",",".")),max=parseFloat(b.value.replace(",",".")),g=document.getElementById("grade"),m=document.getElementById("gradeMsg");
+g.style.color="";
+if(a.value===""||b.value===""){g.textContent="-";m.textContent="Cijfer = behaalde punten : maximum × 9 + 1. Het maximum staat in het nakijkblad.";return;}
+if(isNaN(v)||isNaN(max)||max<=0||v<0||v>max){g.textContent="-";m.textContent="Controleer je punten: ze moeten tussen 0 en het maximum liggen.";return;}
+var c=Math.round((v/max*9+1)*10)/10;g.textContent=c.toFixed(1).replace(".",",");
+g.style.color=c>=5.5?"var(--ok)":"var(--bad)";
+m.textContent=c>=8?"Top! Jij bent er klaar voor.":c>=6.5?"Goed bezig. Kijk nog even naar je fouten.":c>=5.5?"Voldoende, maar oefen je zwakke punten nog.":"Nog even oefenen: begin bij het Oefenlab.";
+}
+document.getElementById("pts").addEventListener("input",gradeIt);
+document.getElementById("ptsMax").addEventListener("input",gradeIt);
+document.getElementById("mats").innerHTML=["ot","hv","hh","lz","oo","rk","rr","rb","ix","ex"].map(function(k){var m=MAT[k];
+return '<div class="mat">📝 '+m[0]+'<div class="row">'+m[1].map(function(l){return '<a target="_blank" rel="noopener" href="'+VIEW(l[1])+'">'+l[0]+' ↗</a>';}).join("")+'</div></div>';}).join("");
+
+var FILMS=[
+{doc:"1_1UlBrRLF7RsCyYUeTBrKTyOuL0d10TO",k:"Uitleg · PowerPoint",t:"Belangrijkste formules van economie",d:"Procenten, procentuele verandering en indexcijfers: kies met het stappenplan de juiste formule.",lab:"formule",mode:"",btn:"Oefen: welke formule?"},
+{film:"16N5D3Uk7W3dtGwI9u8KE6zPuN2LAx5CF",k:"Instructiefilm · herhaling",t:"Van week naar maand",d:"Keer 52 en gedeeld door 12. Niet keer 4!",lab:"reken",mode:"maand",btn:"Oefen: week ↔ maand"}];
+document.getElementById("fgrid").innerHTML=FILMS.map(function(f){
+return '<div class="card film"><div class="viewer"'+(f.doc?' data-doc="'+f.doc+'"':' data-film="'+f.film+'"')+'></div><div class="txt"><div class="eyebrow">'+f.k+'</div><h3>'+f.t+'</h3><p class="muted" style="margin:0">'+f.d+'</p><div class="row" style="margin-top:12px"><button class="btn soft" data-golab="'+f.lab+'"'+(f.mode?' data-mode="'+f.mode+'"':'')+'>'+f.btn+'</button><a class="btn ghost" target="_blank" rel="noopener" href="'+VIEW(f.doc||f.film)+'">Open in nieuw tabblad ↗</a></div></div></div>';}).join("");
+function loadFilms(){
+document.querySelectorAll("[data-doc]").forEach(function(v){if(v.firstChild)return;v.innerHTML='<div class="ph">Laden…</div><iframe src="'+DRIVE(v.dataset.doc)+'" loading="lazy" title="Uitleg"></iframe>';});
+document.querySelectorAll("[data-film]").forEach(function(v){if(v.firstChild)return;var id=v.dataset.film;
+v.innerHTML='<button class="poster" aria-label="Speel filmpje af"><img src="https://drive.google.com/thumbnail?id='+id+'&sz=w1200" alt="" onerror="this.remove()"><span class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></button>';});
+}
+document.getElementById("films").addEventListener("click",function(e){var b=e.target.closest(".poster");if(!b)return;var v=b.parentNode;v.innerHTML='<div class="ph">Laden…</div><iframe src="'+DRIVE(v.dataset.film)+'" allow="autoplay; fullscreen" allowfullscreen title="Instructiefilm"></iframe>';});
+
+function showLab(name){
+document.querySelectorAll("#labNav button").forEach(function(b){b.setAttribute("aria-selected",b.dataset.lab===name?"true":"false");});
+document.querySelectorAll(".lab").forEach(function(l){l.hidden=l.id!=="lab-"+name;});
+if(name!=="games"&&SW)gamesHome();
+}
+document.getElementById("labNav").addEventListener("click",function(e){var b=e.target.closest("[data-lab]");if(b)showLab(b.dataset.lab);});
+
+var CARDS=[["1.1", "Inkomen uit arbeid", "Geld dat je verdient met werken: loon, of een deel van de winst.", "Het loon van je bijbaan."], ["1.1", "Inkomen uit bezit", "Geld dat je krijgt omdat je iets bezit en verhuurt of uitleent.", "Huur, rente, dividend, pacht."], ["1.1", "Overdrachtsinkomen", "Inkomen zonder directe tegenprestatie.", "Zakgeld, kinderbijslag, een uitkering."], ["1.1", "Primair inkomen", "Inkomen dat je verdient door mee te doen aan de productie: met arbeid of bezit.", "Loon, winst, huur, rente."], ["1.1", "Secundair inkomen", "Inkomen uit overdrachten, zoals uitkeringen, plus alle netto inkomens.", "Nettoloon, WW-uitkering, kinderbijslag, zorgtoeslag."], ["1.1", "Bestedingen", "Het geld dat je uitgeeft aan goederen en diensten.", "Kleding, eten, een abonnement."], ["1.1", "Doelgroep", "De groep consumenten waar een bedrijf zich op richt, bijvoorbeeld op leeftijd, budget of interesses.", "Een energiedrankje voor jongeren."], ["1.1", "Marketinginstrumenten", "Prijs, product, plaats, promotie, personeel en presentatie (de 6 P's). Ook wel de marketingmix.", "Hoe een bedrijf klanten probeert te verleiden."], ["1.1", "Promotie", "De P van reclame en sponsoring: via welke media bereik je je doelgroep?", "Reclame op TikTok, sponsoring van een voetbalclub."], ["1.1", "Presentatie", "Hoe een winkel zijn producten laat zien: een luxe uitstraling of juist massa.", "A-merken in een chique etalage."], ["1.1", "Merkreclame", "Reclame om een merk bekend en aantrekkelijk te maken.", "Een tv-spot vol logo's van een frisdrankmerk."], ["1.1", "Ideële reclame", "Reclame voor een goed doel of een idee, zonder winstdoel.", "Een campagne om geld te geven tegen kanker."], ["1.1", "Duurzaam consumeren", "Kopen met oog voor mens, dier en milieu, ook voor later.", "Tweedehands kleding, fairtrade koffie."], ["1.1", "Maatschappelijke kosten", "Kosten voor de samenleving die niet in de prijs van een product zitten.", "Luchtvervuiling door vliegen, kinderarbeid."], ["1.2", "Brutoloon", "Je loon vóór aftrek van belastingen en premies.", "€2.500 bruto per maand."], ["1.2", "Nettoloon", "Je loon na aftrek van belastingen en premies: wat er op je rekening komt.", "€2.500 − €450 = €2.050."], ["1.2", "Besteedbaar inkomen", "Het deel van je inkomen dat je vrij kunt uitgeven, na verplichte uitgaven zoals de zorgverzekering.", "€2.000 netto − €150 zorgverzekering − €50 heffing = €1.800."], ["1.2", "Groeifactor", "1 + percentage : 100. Hiermee reken je een stijging of daling snel uit.", "3% erbij → × 1,03 · 4% eraf → × 0,96."], ["1.2", "Modaal inkomen", "Het inkomen dat in Nederland het meest voorkomt.", "Handig om inkomens mee te vergelijken."], ["1.2", "Sociaal minimum", "Het minimale inkomen dat je volgens de overheid nodig hebt om rond te komen.", "De bijstandsuitkering."], ["1.2", "Nationaal inkomen", "Alle inkomens die in een jaar in een land samen verdiend worden.", "Gedeeld door het aantal inwoners = inkomen per inwoner."], ["1.2", "Lorenzcurve", "Grafiek die laat zien hoe de inkomens over de bevolking verdeeld zijn.", "Hoe verder van de diagonaal, hoe ongelijker."], ["1.2", "Gelijkheidslijn", "De rechte diagonaal in de Lorenzcurve: iedereen verdient precies evenveel.", "20% van de mensen heeft 20% van het inkomen."], ["1.2", "Nominaal inkomen", "Je inkomen in euro's, zonder rekening te houden met de inflatie.", "Je loon gaat van €2.000 naar €2.060."], ["1.2", "Reëel inkomen", "Je inkomen gecorrigeerd voor inflatie: wat je er echt van kunt kopen.", "+3% loon en 2% inflatie → reëel +1%."], ["1.2", "Inkomensverschillen", "Ontstaan door opleiding, soort werk, verantwoordelijkheid en vraag en aanbod.", "Een chirurg verdient meer dan een vakkenvuller."], ["1.3", "Welvaart", "Hoe goed je met je middelen in je behoeften kunt voorzien.", "Een goed inkomen, een fijn huis."], ["1.3", "Welzijn", "De brede kwaliteit van je leven: gezondheid, geluk, vrijheid, vrienden.", "Je gezond en veilig voelen."], ["1.3", "Schaars goed", "Er zijn productiemiddelen nodig om het te maken (arbeid, kapitaal, natuur).", "Brood, een fiets, een gratis krant."], ["1.3", "Vrij goed", "Is er vanzelf en in overvloed, zonder dat er iets voor gedaan hoeft te worden.", "Lucht om in te ademen, zonlicht."], ["1.3", "Middelen", "Wat je nodig hebt om in je behoeften te voorzien, zoals geld en tijd. Ze zijn schaars.", "Je zakgeld en je vrije middag."], ["1.3", "Prioriteiten stellen", "Bepalen wat het belangrijkst is, omdat je niet alles kunt hebben.", "Eerst je telefoonrekening, dan pas een concert."], ["1.3", "BBP", "Bruto Binnenlands Product: de totale waarde van alle goederen en diensten die een land in een jaar maakt.", "BBP per inwoner = BBP : aantal inwoners."], ["1.3", "Collectieve voorzieningen", "Voorzieningen die de overheid regelt voor iedereen.", "Wegen, dijken, politie."], ["1.3", "Indexcijfer", "Laat een verandering zien ten opzichte van een basisjaar (= 100).", "112 = 12% hoger dan in het basisjaar."], ["1.3", "Basisjaar", "Het jaar waarmee je vergelijkt. Het indexcijfer is dan 100.", "2015 = 100."], ["1.4", "Inflatie", "Een stijging van het algemeen prijspeil.", "Je boodschappen worden steeds duurder."], ["1.4", "Deflatie", "Een daling van het algemeen prijspeil. Mensen stellen aankopen dan uit.", "Slecht voor de economie."], ["1.4", "Koopkracht", "De hoeveelheid goederen en diensten die je met je inkomen kunt kopen.", "Loon +2%, prijzen +3% → koopkracht daalt."], ["1.4", "Prijscompensatie", "Een loonsverhoging om de prijsstijging te compenseren.", "Inflatie 3% → lonen ook +3%."], ["1.4", "Vakbond", "Komt op voor werknemers en onderhandelt over loon in de cao.", "De FNV."], ["1.4", "Loon-prijsspiraal", "Hogere lonen → hogere kosten → hogere prijzen → nieuwe looneisen → …", "Een vicieuze cirkel van inflatie."], ["1.4", "CBS", "Centraal Bureau voor de Statistiek: verzamelt cijfers over Nederland.", "Het CBS berekent het CPI."], ["1.4", "CPI", "Consumentenprijsindexcijfer: meet hoeveel de prijzen gemiddeld stijgen.", "CPI 104 = prijzen 4% hoger dan in het basisjaar."], ["1.4", "Wegingsfactor", "Hoe zwaar een productgroep meetelt in een gewogen indexcijfer.", "Huur telt zwaarder mee dan kauwgom."], ["1.4", "Reële loonstijging", "De nominale loonstijging min de inflatie.", "4% − 2,5% = 1,5%."], ["1.2", "Loonbelasting en premies", "Het deel van je brutoloon dat je afdraagt aan de overheid en voor de sociale verzekeringen. Wat overblijft is je nettoloon.", "€2.500 bruto − €450 = €2.050 netto."], ["1.2", "Netto inkomen", "Je brutoloon min loonbelasting en premies. Dit staat op je rekening.", "€2.050 netto."], ["1.3", "Relatieve verandering", "Een verandering uitgedrukt in procenten, bijvoorbeeld +3% of −5%.", "Van €6 naar €8,50 is +41,7%."], ["1.3", "Absolute verandering", "Een verandering in euro's of aantallen.", "Van €6 naar €8,50 is +€2,50."], ["1.3", "Zelfvoorziening", "Zelf in je behoeften voorzien zonder te betalen, maar je hebt er wel tijd voor nodig.", "Zelf koken in plaats van uit eten gaan."], ["1.4", "Nominale verandering", "Verandering van bijvoorbeeld de lonen, waarbij je geen rekening houdt met de inflatie.", "Loon +3%."], ["1.4", "Reële verandering", "Verandering waarbij je wel rekening houdt met de inflatie.", "3% − 2% = +1%."], ["1.4", "Geldontwaarding", "Het geld zelf wordt minder waard door inflatie: je kunt er minder voor kopen.", "Met €1 koop je na een jaar minder dan nu."]];
+var cardFilter="alle",cf=document.getElementById("cardFilters"),cg=document.getElementById("cardGrid");
+function inSel(par,f){return f==="alle"||par===f||(f==="H1"&&par.charAt(0)==="1")||(f==="H2"&&par.charAt(0)==="2");}
+function selLabel(f){return f==="alle"?"Alles":f==="H1"?"Hoofdstuk 1":f==="H2"?"Hoofdstuk 2":f;}
+function renderFlash(){
+cf.innerHTML=["alle"].concat(PARS.map(function(p){return p.id;})).concat(["oefenen"]).map(function(f){
+var label=f==="oefenen"?"Nog niet gekend":selLabel(f);
+return '<button data-f="'+f+'" class="'+(f===cardFilter?"on":"")+'"'+(P(f)?' title="'+P(f).t+'"':'')+'>'+label+'</button>';}).join("");
+var html="",k=0;
+CARDS.forEach(function(c,i){
+var known=!!S.known[i];if(known)k++;
+if(cardFilter==="oefenen"){if(known)return;}
+else if(!inSel(c[0],cardFilter))return;
+html+='<div class="flip'+(known?" known":"")+'" data-i="'+i+'" tabindex="0" role="button" aria-label="Begrip: '+c[1]+'"><div class="in">'+
+'<div class="f">'+(known?'<span class="chk">✓ gekend</span>':'')+'<div>'+tag(c[0])+'</div><strong>'+c[1]+'</strong><small>klik om om te draaien</small></div>'+
+'<div class="b"><div>'+c[2]+'</div><em>Voorbeeld: '+c[3]+'</em><div class="row" style="margin-top:auto;padding-top:8px"><button class="btn" style="padding:6px 12px;font-size:13px;background:'+(known?'#8a7f88':'var(--ok)')+'" data-know="'+i+'">'+(known?"Toch nog oefenen":"✓ Ik wist het")+'</button></div></div></div></div>';
+});
+cg.innerHTML=html||'<div class="card pad">Alles gekend in deze selectie. Knap werk!</div>';
+document.getElementById("cardCount").textContent=k+" van "+CARDS.length+" begrippen gekend";
+}
+cf.addEventListener("click",function(e){var f=e.target.dataset.f;if(f){cardFilter=f;renderFlash();}});
+cg.addEventListener("click",function(e){
+var kn=e.target.dataset.know;
+if(kn!==undefined){e.stopPropagation();if(S.known[kn])delete S.known[kn];else S.known[kn]=1;save();renderFlash();return;}
+var c=e.target.closest(".flip");if(c)c.classList.toggle("open");
+});
+cg.addEventListener("keydown",function(e){if((e.key==="Enter"||e.key===" ")&&e.target.classList.contains("flip")){e.preventDefault();e.target.classList.toggle("open");}});
+document.getElementById("cardReset").addEventListener("click",function(){cg.querySelectorAll(".flip.open").forEach(function(c){c.classList.remove("open");});});
+
+function rnd(a,b){return Math.floor(Math.random()*(b-a+1))+a;}
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+function r(x,d){var m=Math.pow(10,d);return Math.round((x+(x>=0?1:-1)*1e-9)*m)/m;}
+var nf2=new Intl.NumberFormat("nl-NL",{minimumFractionDigits:2,maximumFractionDigits:2});
+var nf1=new Intl.NumberFormat("nl-NL",{minimumFractionDigits:1,maximumFractionDigits:1});
+function eur(x){return (x<0?"−€":"€")+nf2.format(Math.abs(x));}
+function pc(x){return (x<0?"−":"")+nf1.format(Math.abs(x))+"%";}
+function num(x){return new Intl.NumberFormat("nl-NL",{maximumFractionDigits:4}).format(x);}
+function i1(x){return nf1.format(x);}
+var SUP={2:"²",3:"³",4:"⁴",5:"⁵",6:"⁶",7:"⁷",8:"⁸"};
+function parse(s,d){s=String(s).trim().replace(/[€%\s]/g,"").replace(/[−–]/g,"-");if(!s)return NaN;
+if(s.indexOf(",")>-1){s=s.replace(/\./g,"").replace(",",".");}
+else if((s.match(/\./g)||[]).length>1||(d===0&&/^-?\d{1,3}(\.\d{3})+$/.test(s))){s=s.replace(/\./g,"");}
+return parseFloat(s);}
+function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+function verdict(v,a,dec,abs){if(isNaN(v))return null;if(abs){v=Math.abs(v);a=Math.abs(a);}
+var tol=dec===3?0.00051:dec===2?0.0051:dec===1?0.051:0.51;if(Math.abs(v-a)<=tol)return "ok";
+if(!abs&&a!==0&&Math.abs(Math.abs(v)-Math.abs(a))<=tol)return "sign";
+if(Math.abs(v-a)<=Math.max(Math.abs(a)*0.01,dec===2?0.02:0.2))return "mid";return "no";}
+function vmsg(res){return res==="ok"?"✓ Helemaal goed!":res==="sign"?"Bijna! Let op het teken: is het een stijging (+) of een daling (−)?":res==="mid"?"Bijna! Controleer je afronding.":"✗ Helaas, dat klopt niet.";}
+function answerRow(id,u){return '<div class="row" style="margin-top:12px"><div class="inp">'+(u==="€"?"<b>€</b>":"")+'<input id="'+id+'In" inputmode="decimal" autocomplete="off" placeholder="je antwoord">'+(u==="%"?"<b>%</b>":"")+'</div><button class="btn" id="'+id+'Check">Controleer</button></div><div id="'+id+'Fb"></div>';}
+function money(a,b){return rnd(a*100,b*100)/100;}
+function stmt(rows,cls){return '<table class="statement'+(cls?" "+cls:"")+'">'+rows.map(function(x){return '<tr'+(x[x.length-1]===1?' class="ask"':'')+'>'+x.filter(function(c){return c!==1;}).map(function(c){return '<td>'+c+'</td>';}).join("")+'</tr>';}).join("")+'</table>';}
+function qp(t){return '<p class="qq">'+t+'</p>';}
+
+var FORM={
+groei:"oud bedrag × groeifactor",
+procentvan:"percentage : 100 × totaal",
+deel:"deel : geheel × 100",
+pct:"(nieuw − oud) : oud × 100",
+index:"nieuw getal : getal basisjaar × 100",
+terug:"prijs : indexcijfer × 100",
+vooruit:"prijs basisjaar × indexcijfer : 100",
+reeel:"nominale verandering % − inflatie %",
+reserve:"benodigd bedrag : aantal maanden",
+maand:"weekbedrag × 52 : 12",
+week:"maandbedrag × 12 : 52",
+bbp:"BBP : aantal inwoners",
+lorenz:"cumulatief % − vorig cumulatief %"
+};
+
+var MODES=[["groei","Groeifactor"],["perc","Procenten"],["pct","Procent verandering"],["index","Indexcijfer"],["terug","Rekenen met index"],["koop","Koopkracht"],["cpi","CPI (gewogen)"],["bbp","BBP per inwoner"],["lorenz","Lorenzcurve"],["maand","Week ↔ maand"],["reserve","Reserveren"]];
+var RGEN={
+groei:function(){var up=Math.random()<0.6,p=pick(up?[2,2.5,3,4,4.5,6,6.5,8,12]:[3,4,5,8.5,10,12.5,23.6]),g=r(up?1+p/100:1-p/100,4),o=pick([950,1250,1850,2250,3940,15000,23000,89,123,2436]);
+if(Math.random()<0.35)return{f:"groei",h:"Wat is de groeifactor? (3 decimalen)",body:qp("Een bedrag "+(up?"stijgt":"daalt")+" met "+pc(p)+"."),a:g,d:3,u:"",calc:"Groeifactor = 1 "+(up?"+":"−")+" "+num(p)+" : 100 = "+num(g)};
+var a=r(o*g,2);
+return{f:"groei",h:"Wat is het nieuwe bedrag? (2 decimalen)",body:qp("Een bedrag van "+eur(o)+" "+(up?"stijgt":"daalt")+" met "+pc(p)+"."),a:a,d:2,u:"€",calc:"Groeifactor = 1 "+(up?"+":"−")+" "+num(p)+" : 100 = "+num(g)+"\nNieuw bedrag = "+num(o)+" × "+num(g)+" = "+eur(a)};},
+perc:function(){
+if(Math.random()<0.5){var p=pick([21,4.1,16.5,76.2,12,6,35,15,40]),t=pick([160,250,310,65,220,89,180,30]),a=r(p/100*t,2);
+return{f:"procentvan",h:"Bereken het bedrag (2 decimalen).",body:qp("Hoeveel is "+num(p)+"% van "+eur(t)+"?"),a:a,d:2,u:"€",calc:"Getal = percentage : 100 × totaal\n"+num(p)+" : 100 × "+num(t)+" = "+eur(a)};}
+var t2=pick([215,2190,250,180,160,1820]),dd=r(t2*pick([0.15,0.085,0.12,0.2,0.35,0.4]),2),b=r(dd/t2*100,1);
+return{f:"deel",h:"Hoeveel procent? (1 decimaal)",body:qp(eur(dd)+" is hoeveel procent van "+eur(t2)+"?"),a:b,d:1,u:"%",calc:"Percentage = deel : geheel × 100\n"+num(dd)+" : "+num(t2)+" × 100 = "+pc(b)};},
+lorenz:function(){var c=[],x=0;for(var i=0;i<4;i++){x+=rnd(i===0?3:5,i===0?9:14);c.push(x);}
+var names=["de armste 20%","de volgende 20% (20% t/m 40%)","de middelste 20% (40% t/m 60%)","de volgende 20% (60% t/m 80%)","de rijkste 20%"],cum=[0].concat(c).concat([100]),k=rnd(1,5),a=cum[k]-cum[k-1];
+return{f:"lorenz",h:"Hoeveel procent van het inkomen verdient "+names[k-1]+"?",body:qp("In land X is de inkomensverdeling zo (cumulatief, van arm naar rijk):")+stmt([["Bevolking","Cumulatief % van het inkomen"],["armste 20%",c[0]+"%"],["armste 40%",c[1]+"%"],["armste 60%",c[2]+"%"],["armste 80%",c[3]+"%"],["alle 100%","100%"]],"cpi"),a:a,d:0,u:"%",calc:"Groep = cumulatief % − vorig cumulatief %\n"+cum[k]+"% − "+cum[k-1]+"% = "+a+"%"};},
+pct:function(){var v=pick([
+function(){var o=pick([5,6,7.5,8,10,12.5]),n=r(o+pick([0.5,1,1.5,2,2.5]),2);return ["Vorig jaar kreeg je "+eur(o)+" zakgeld per week. Nu krijg je "+eur(n)+".",o,n,"Met hoeveel procent is je zakgeld gestegen?"];},
+function(){var o=rnd(780,960),n=o+rnd(15,70);return ["Vorig schooljaar zaten er "+o+" leerlingen op school. Dit schooljaar zijn het er "+n+".",o,n,"Met hoeveel procent is het aantal leerlingen gestegen?"];},
+function(){var o=rnd(145,175)/100,n=r(o+rnd(6,25)/100,2);return ["Een liter benzine kostte vorig jaar "+eur(o)+". Nu kost een liter "+eur(n)+".",o,n,"Met hoeveel procent is de prijs gestegen?"];},
+function(){var o=rnd(65,98)*10,n=o-rnd(3,14)*10;return ["Een tweedehands scooter was vorig jaar "+eur(o)+" waard. Nu is hij "+eur(n)+" waard.",o,n,"Met hoeveel procent is de waarde gedaald?"];},
+function(){var o=rnd(72,89)*10,n=o+rnd(2,6)*5;return ["De huur van een studio ging van "+eur(o)+" naar "+eur(n)+" per maand.",o,n,"Met hoeveel procent is de huur gestegen?"];},
+function(){var o=rnd(2100,2600),n=o+rnd(40,140);return ["Het brutoloon van Fatima ging van "+eur(o)+" naar "+eur(n)+" per maand.",o,n,"Met hoeveel procent is haar loon gestegen?"];}
+])();var a=r((v[2]-v[1])/v[1]*100,1);
+return{f:"pct",h:v[3]+" (1 decimaal)",body:qp(v[0]),a:a,d:1,u:"%",abs:a<0,calc:"Procentuele verandering = (nieuw − oud) : oud × 100\n("+num(v[2])+" − "+num(v[1])+") : "+num(v[1])+" × 100 = "+pc(a)+(a<0?"\nDus een daling van "+pc(-a):" gestegen")};},
+index:function(){var v=pick([
+function(){var b=rnd(180,260)/100,n=r(b*(1+rnd(5,40)/100),2);return ["Een brood kostte in 2015 (basisjaar) "+eur(b)+". Nu kost het "+eur(n)+".",b,n];},
+function(){var b=rnd(38,52)*10,n=b-rnd(4,12)*10;return ["Een telefoon kostte in het basisjaar "+eur(b)+". Nu kost hij "+eur(n)+".",b,n];},
+function(){var b=rnd(2100,2400),n=b+rnd(80,220);return ["Je inkomen was in het basisjaar "+eur(b)+" per maand. Nu is het "+eur(n)+".",b,n];},
+function(){var b=rnd(800,880),n=b+rnd(20,90);return ["In 2015 (basisjaar) zaten er "+b+" leerlingen op school. Nu zijn het er "+n+".",b,n];}
+])();var a=r(v[2]/v[1]*100,1);
+return{f:"index",h:"Bereken het indexcijfer (1 decimaal).",body:qp(v[0]),a:a,d:1,u:"",calc:"Indexcijfer = nieuw getal : getal in het basisjaar × 100\n"+num(v[2])+" : "+num(v[1])+" × 100 = "+i1(a)+"\n"+(a>=100?"Boven de 100: een stijging van "+pc(r(a-100,1)):"Onder de 100: een daling van "+pc(r(100-a,1)))};},
+terug:function(){
+if(Math.random()<0.6){var v=pick([["Een liter benzine",1.69,176.6],["Een liter benzine",rnd(160,199)/100,rnd(1500,1850)/10],["Een kilo kaas",rnd(1100,1600)/100,rnd(1250,1600)/10],["Een kop koffie",rnd(300,420)/100,rnd(1180,1450)/10],["Een bioscoopkaartje",rnd(1250,1650)/100,rnd(1150,1400)/10]]),a=r(v[1]/v[2]*100,2);
+return{f:"terug",h:"Wat kostte het in 2015? (2 decimalen)",body:qp(v[0]+" kost nu "+eur(v[1])+". Het indexcijfer is "+i1(v[2])+" (2015 = 100)."),a:a,d:2,u:"€",calc:"Terugrekenen: prijs nu : indexcijfer × 100\n"+num(v[1])+" : "+i1(v[2])+" × 100 = "+eur(a)};}
+var w=pick([["Een brood",rnd(190,260)/100],["Een treinkaartje",rnd(400,900)/100],["Een pizza",rnd(800,1300)/100],["Een spijkerbroek",rnd(4000,8000)/100]]),i=rnd(1030,1250)/10,b=r(w[1]*i/100,2);
+return{f:"vooruit",h:"Wat is de prijs nu? (2 decimalen)",body:qp(w[0]+" kostte in het basisjaar "+eur(w[1])+". Het indexcijfer is nu "+i1(i)+"."),a:b,d:2,u:"€",calc:"Prijs nu = prijs in het basisjaar × indexcijfer : 100\n"+num(w[1])+" × "+i1(i)+" : 100 = "+eur(b)};},
+koop:function(){var v=pick([
+function(){var l=rnd(10,50)/10,i=rnd(5,45)/10;return ["Je loon stijgt met "+pc(l)+". De inflatie is "+pc(i)+".",l,i];},
+function(){var l=rnd(10,40)/10,i=rnd(10,40)/10;return ["De cao geeft "+pc(l)+" loonsverhoging. De prijzen stijgen dit jaar met "+pc(i)+".",l,i];},
+function(){var bi=rnd(1030,1090)/10,pi=rnd(1020,1095)/10;return ["Het indexcijfer van je inkomen is "+i1(bi)+". Het prijsindexcijfer is "+i1(pi)+" (zelfde basisjaar).",r(bi-100,1),r(pi-100,1),bi,pi];},
+function(){var l=rnd(15,40)/10,i=rnd(10,45)/10;return ["In de grafiek lees je af: de lonen stegen met "+pc(l)+" en de consumentenprijzen met "+pc(i)+".",l,i];}
+])();if(v[1]===v[2]){v[2]=r(v[2]+0.3,1);if(v[4])v[4]=r(v[4]+0.3,1);}var a=r(v[1]-v[2],1);
+return{f:"reeel",h:"Met hoeveel procent verandert de koopkracht? (1 decimaal, typ een min-teken bij een daling)",body:qp(v[0]),a:a,d:1,u:"%",calc:"Reële verandering = nominale verandering − prijsverandering\n"+(v[3]?"Inkomen: "+i1(v[3])+" − 100 = "+pc(v[1])+" · prijzen: "+i1(v[4])+" − 100 = "+pc(v[2])+"\n":"")+pc(v[1])+" − "+pc(v[2])+" = "+pc(a)+"\n"+(a>0?"De koopkracht stijgt.":"De koopkracht daalt.")};},
+cpi:function(){var g=shuffle([["🍞","Voeding"],["🏠","Wonen"],["🚗","Vervoer"],["👕","Kleding"],["🎉","Vrije tijd"],["⚡","Energie"]]).slice(0,4),w=pick([[40,30,20,10],[35,25,25,15],[30,30,25,15],[45,25,20,10],[25,35,25,15]]);
+var rows=g.map(function(x,i){return [x,w[i],rnd(980,1180)/10];}),tot=0;rows.forEach(function(x){tot+=x[1]*x[2];});var a=r(tot/100,1);
+return{f:"cpi",h:"Bereken het CPI: het gewogen indexcijfer (1 decimaal).",body:qp("Het CBS meet de prijzen in IJmuiden. De weging laat zien hoe zwaar een groep meetelt (samen 100).")+stmt([["Groep","Weging","Indexcijfer"]].concat(rows.map(function(x){return [x[0][0]+" "+x[0][1],x[1],i1(x[2])];})),"cpi"),a:a,d:1,u:"",
+calc:"Gewogen indexcijfer = (weging × indexcijfer) opgeteld : totale weging\n"+rows.map(function(x){return x[1]+" × "+i1(x[2])+" = "+num(r(x[1]*x[2],1));}).join("\n")+"\nSamen: "+num(r(tot,1))+" : 100 = "+i1(a)+"\nDe prijzen zijn gemiddeld "+pc(Math.abs(r(a-100,1)))+(a>=100?" gestegen.":" gedaald.")};},
+bbp:function(){var v=pick([["Nederland",rnd(1000,1200),rnd(175,182)/10],["België",rnd(560,640),rnd(115,120)/10],["Duitsland",rnd(4100,4500),rnd(830,845)/10],["Denemarken",rnd(380,420),rnd(58,60)/10]]),bb=v[1]*1e9,inw=r(v[2]*1e6,0),a=r(bb/inw,0);
+return{f:"bbp",h:"Bereken het BBP per inwoner (afronden op hele euro's).",body:qp("Het BBP van "+v[0]+" is €"+num(v[1])+" miljard. Er wonen "+i1(v[2])+" miljoen mensen."),a:a,d:0,u:"€",calc:"BBP per inwoner = BBP : aantal inwoners\n€"+num(v[1])+" miljard = €"+num(bb)+"\n"+i1(v[2])+" miljoen = "+num(inw)+"\n€"+num(bb)+" : "+num(inw)+" = €"+num(a)};},
+maand:function(){
+if(Math.random()<0.55){var w=pick([["Je verdient met je bijbaan ",35,140],["Je krijgt aan zakgeld ",8,25],["Je gezin geeft aan boodschappen ",120,240]]),x=money(w[1],w[2]),j=r(x*52,2),a=r(x*52/12,2);
+return{f:"maand",h:"Hoeveel is dat per maand? (2 decimalen)",body:qp(w[0]+eur(x)+" per week."),a:a,d:2,u:"€",calc:"Week → maand: × 52 : 12\n"+eur(x)+" × 52 = "+eur(j)+" per jaar\n"+eur(j)+" : 12 = "+eur(a)+" per maand\n(Niet × 4: een maand is langer dan 4 weken!)"};}
+var m=pick([["Je huur is ",450,950],["Je telefoonabonnement kost ",12,45],["Je sportcontributie is ",15,40],["Je verdient met je bijbaan ",180,520]]),y=money(m[1],m[2]),j2=r(y*12,2),b=r(y*12/52,2);
+return{f:"week",h:"Hoeveel is dat per week? (2 decimalen)",body:qp(m[0]+eur(y)+" per maand."),a:b,d:2,u:"€",calc:"Maand → week: × 12 : 52\n"+eur(y)+" × 12 = "+eur(j2)+" per jaar\n"+eur(j2)+" : 52 = "+eur(b)+" per week"};},
+reserve:function(){var v=pick([["rijlessen",rnd(18,32)*50],["een vakantie",rnd(10,24)*50],["een nieuwe laptop",rnd(12,24)*50],["een scooter",rnd(30,50)*50],["de jaarlijkse autoverzekering",rnd(40,90)*10]]),m=pick([4,5,6,8,9,10,12]),a=r(v[1]/m,2);
+return{f:"reserve",h:"Hoeveel moet je per maand reserveren? (2 decimalen)",body:qp("Over "+m+" maanden heb je "+eur(v[1])+" nodig voor "+v[0]+"."),a:a,d:2,u:"€",calc:"Reservering per maand = benodigd bedrag : aantal maanden\n"+eur(v[1])+" : "+m+" = "+eur(a)};},
+};
+
+var fs={good:0,total:0,streak:0},fq=null,fCard=document.getElementById("fCard");
+var FMODES=["groei","perc","pct","index","terug","koop","bbp","lorenz","maand","reserve"],lastF="";
+function fScore(){document.getElementById("fScore").innerHTML="Goed: <b>"+fs.good+"</b> van "+fs.total+" &nbsp;·&nbsp; Reeks: <b>"+fs.streak+"</b>";}
+function newF(){var m;do{m=pick(FMODES);}while(m===lastF);lastF=m;fq=RGEN[m]();fq.phase=1;
+var others=shuffle(Object.keys(FORM).filter(function(k){return k!==fq.f;})).slice(0,3),opts=shuffle([fq.f].concat(others));
+fCard.innerHTML='<div class="muted" style="font-size:13px">Stap 1 van 2 · kies de juiste formule</div>'+fq.body+'<p style="font-weight:700;margin:4px 0 12px">'+fq.h+'</p><div class="opts">'+opts.map(function(k){return '<button class="opt f" data-k="'+k+'">'+FORM[k]+'</button>';}).join("")+'</div><div id="fFb0"></div>';fScore();}
+fCard.addEventListener("click",function(e){
+var b=e.target.closest("[data-k]");
+if(b&&fq.phase===1){fq.phase=2;var ok=b.dataset.k===fq.f;fq.formulaOk=ok;
+fCard.querySelectorAll(".opt").forEach(function(x){x.disabled=true;if(x.dataset.k===fq.f)x.classList.add("right");else if(x===b)x.classList.add("wrong");});
+document.getElementById("fFb0").innerHTML='<div class="fb '+(ok?"ok":"no")+'">'+(ok?"✓ Goede formule!":"✗ Niet deze. De juiste formule is: <code>"+FORM[fq.f]+"</code>")+'</div><div class="muted" style="font-size:13px;margin-top:14px">Stap 2 van 2 · reken het uit</div>'+answerRow("f",fq.u);
+var inp=document.getElementById("fIn");inp.addEventListener("keydown",function(ev){if(ev.key==="Enter")checkF();});
+document.getElementById("fCheck").addEventListener("click",checkF);}
+if(e.target.id==="fNext")newF();
+});
+function checkF(){var v=parse(document.getElementById("fIn").value,fq.d),res=verdict(v,fq.a,fq.d,fq.abs);if(!res)return;
+fs.total++;if(res==="ok"&&fq.formulaOk){fs.good++;fs.streak++;}else fs.streak=0;
+document.getElementById("fCheck").disabled=true;document.getElementById("fIn").disabled=true;
+document.getElementById("fFb").innerHTML='<div class="fb '+(res==="sign"?"mid":res)+'">'+vmsg(res)+'<span class="calc">'+fq.calc+'</span></div><div class="row" style="margin-top:12px"><button class="btn" id="fNext">Volgende som →</button></div>';fScore();}
+newF();
+
+var mode="groei",rs={good:0,total:0,streak:0},rq=null,rCard=document.getElementById("rCard"),rModes=document.getElementById("rModes");
+function rScore(){document.getElementById("rScore").innerHTML="Goed: <b>"+rs.good+"</b> van "+rs.total+" &nbsp;·&nbsp; Reeks: <b>"+rs.streak+"</b>";}
+function newR(){
+rModes.innerHTML=MODES.map(function(m){return '<button data-m="'+m[0]+'" class="'+(m[0]===mode?"on":"")+'">'+m[1]+'</button>';}).join("");
+rq=RGEN[mode]();
+rCard.innerHTML=rq.body+'<p style="font-weight:700;margin:8px 0 0">'+rq.h+'</p>'+(rq.f!=="cpi"?'<div class="muted" style="font-size:13px;margin-top:4px">Formule: <code>'+FORM[rq.f]+'</code></div>':'')+answerRow("r",rq.u);
+var inp=document.getElementById("rIn");inp.addEventListener("keydown",function(ev){if(ev.key==="Enter")checkR();});
+document.getElementById("rCheck").addEventListener("click",checkR);rScore();
+}
+function checkR(){
+var v=parse(document.getElementById("rIn").value,rq.d),res=verdict(v,rq.a,rq.d,rq.abs);if(!res)return;
+rs.total++;if(res==="ok"){rs.good++;rs.streak++;}else rs.streak=0;
+document.getElementById("rCheck").disabled=true;document.getElementById("rIn").disabled=true;
+document.getElementById("rFb").innerHTML='<div class="fb '+(res==="sign"?"mid":res)+'">'+vmsg(res)+'<span class="calc">'+rq.calc+'</span></div><div class="row" style="margin-top:12px"><button class="btn" id="rNext">Volgende som →</button></div>';
+document.getElementById("rNext").addEventListener("click",newR);rScore();
+}
+rModes.addEventListener("click",function(e){var m=e.target.dataset.m;if(m){mode=m;newR();}});
+newR();
+var BANK=[["1.1", "Uit welke drie bronnen kun je inkomen krijgen?", ["Arbeid, bezit en overdrachten", "Arbeid, sparen en lenen", "Loon, belasting en rente", "Werk, school en vakantie"], "Inkomen krijg je uit arbeid (loon), uit bezit (huur, rente, dividend) of als overdracht (zakgeld, uitkering)."], ["1.1", "Sanne verhuurt een kamer in haar huis. Wat voor inkomen is de huur die ze ontvangt?", ["Inkomen uit bezit", "Inkomen uit arbeid", "Overdrachtsinkomen", "Winst uit onderneming"], "Je krijgt huur omdat je iets bezit dat je verhuurt."], ["1.1", "Wat is een overdrachtsinkomen?", ["Inkomen zonder directe tegenprestatie", "Loon voor overwerk", "Rente over je spaargeld", "Winst van een bedrijf"], "Bijvoorbeeld zakgeld, kinderbijslag of een uitkering: je hoeft er niet direct iets voor te doen."], ["1.1", "Welk inkomen is een overdrachtsinkomen?", ["Een WW-uitkering", "Het loon van een kok", "Dividend van aandelen", "Huur van een garagebox"], "Een uitkering krijg je zonder dat je er direct voor werkt."], ["1.1", "Wat is een primair inkomen?", ["Inkomen dat je verdient met arbeid of bezit", "Inkomen dat je van de overheid krijgt", "Zakgeld van je ouders", "Geld dat je leent bij de bank"], "Primair inkomen verdien je door mee te doen aan de productie: met werk of met bezit."], ["1.1", "Wat zijn bestedingen?", ["Het geld dat je uitgeeft aan goederen en diensten", "Het geld dat je spaart", "Het geld dat je leent", "De belasting die je betaalt"], "Besteden is uitgeven aan producten die je gebruikt (consumptie)."], ["1.1", "Wat is een doelgroep?", ["De groep consumenten waar een bedrijf zich op richt", "Alle mensen die in een winkel werken", "De klanten die al iets gekocht hebben", "Een groep bedrijven die samenwerken"], "Een bedrijf kiest een doelgroep op basis van bijvoorbeeld leeftijd, budget of interesses."], ["1.1", "Waarom zijn jongeren voor veel bedrijven een interessante doelgroep?", ["Ze zijn makkelijk te beïnvloeden en blijven een merk vaak trouw", "Ze hebben nooit geld", "Ze kopen alleen tweedehands", "Ze kijken nooit naar reclame"], "Jongeren hebben vaak geld te besteden, willen steeds iets nieuws en bouwen een band op met merken."], ["1.1", "Uit hoeveel P's bestaat de marketingmix in deze methode?", ["6", "4", "3", "8"], "Product, prijs, plaats, promotie, personeel en presentatie."], ["1.1", "Een kledingmerk verkoopt alleen in winkels in dure winkelstraten. Welke P is dit?", ["Plaats", "Prijs", "Promotie", "Product"], "Plaats gaat over wáár je het product verkoopt."], ["1.1", "Een energiedrankmerk sponsort een gametoernooi. Welke P is dit?", ["Promotie", "Presentatie", "Personeel", "Plaats"], "Promotie gaat over reclame en sponsoring."], ["1.1", "Een winkel kiest bewust voor deskundig, goed opgeleid personeel. Welke P is dit?", ["Personeel", "Presentatie", "Product", "Prijs"], "Personeel: hoog of laag opgeleid, deskundig of niet."], ["1.1", "Een frisdrankmerk maakt een reclame met vooral het logo en de slogan. Wat voor reclame is dit?", ["Merkreclame", "Ideële reclame", "Informatieve reclame", "Sociale reclame"], "Bij merkreclame wil het bedrijf vooral dat je het merk onthoudt."], ["1.1", "Een goed doel vraagt in een campagne om geld te geven tegen kanker. Wat voor reclame is dit?", ["Ideële reclame", "Merkreclame", "Prijsreclame", "Vergelijkende reclame"], "Ideële reclame maakt reclame voor een idee of goed doel, zonder winstdoel."], ["1.1", "Wat is duurzaam consumeren?", ["Kopen met oog voor mens en milieu, ook op lange termijn", "Zo goedkoop mogelijk kopen", "Alleen dure merken kopen", "Zo veel mogelijk kopen"], "Bijvoorbeeld tweedehands kopen of fairtrade producten kiezen."], ["1.1", "Wat zijn maatschappelijke kosten?", ["Kosten voor de samenleving die niet in de prijs zitten", "De btw die je betaalt", "De kosten van een abonnement", "Het loon van een winkelmedewerker"], "Denk aan luchtvervuiling of kinderarbeid: iemand anders betaalt de prijs."], ["1.1", "Bij welk product zijn de maatschappelijke kosten waarschijnlijk het hoogst?", ["Een goedkope vliegreis", "Een fiets", "Een tweedehands boek", "Een appel uit je eigen tuin"], "Vliegen geeft veel CO₂-uitstoot en geluidsoverlast. Die kosten zitten niet in de ticketprijs."], ["1.2", "Wat is het brutoloon?", ["Je loon vóór aftrek van belastingen en premies", "Je loon na aftrek van belastingen", "Het loon dat op je rekening komt", "Je loon plus vakantiegeld"], "Bruto = alles erin. Netto = wat je overhoudt."], ["1.2", "Het brutoloon van Daan is €2.500. Hij betaalt €450 aan belastingen en premies. Wat is zijn nettoloon?", ["€2.050", "€2.950", "€2.500", "€450"], "€2.500 − €450 = €2.050."], ["1.2", "Wat is de groeifactor bij een loonstijging van 3%?", ["1,03", "0,03", "1,3", "0,97"], "1 + 3 : 100 = 1,03."], ["1.2", "Wat is de groeifactor bij een daling van 4%?", ["0,96", "1,04", "0,04", "0,6"], "1 − 4 : 100 = 0,96."], ["1.2", "Lisa verdient €2.000 en krijgt 2,5% loonsverhoging. Wat is haar nieuwe loon?", ["€2.050", "€2.025", "€2.500", "€2.250"], "€2.000 × 1,025 = €2.050."], ["1.2", "Wat is GEEN reden voor inkomensverschillen?", ["De kleur van je fiets", "Je opleiding", "Je verantwoordelijkheid in je werk", "Vraag en aanbod op de arbeidsmarkt"], "Inkomens verschillen door opleiding, soort werk, verantwoordelijkheid en vraag en aanbod."], ["1.2", "Wat is een modaal inkomen?", ["Het inkomen dat in Nederland het meest voorkomt", "Het hoogste inkomen in Nederland", "Het minimumloon", "Het gemiddelde inkomen van jongeren"], "Modaal is het inkomen dat de meeste mensen ongeveer verdienen."], ["1.2", "Wat is het sociaal minimum?", ["Het minimale inkomen dat je volgens de overheid nodig hebt om rond te komen", "Het laagste loon van een topsporter", "Het inkomen van een modale werknemer", "Het bedrag dat je minimaal moet sparen"], "Bijvoorbeeld de bijstandsuitkering is op het sociaal minimum gebaseerd."], ["1.2", "Wat is het nationaal inkomen?", ["Alle inkomens die in een jaar in een land samen verdiend worden", "Het inkomen van de regering", "Het salaris van de minister-president", "Het geld dat de overheid uitgeeft"], "Deel je het door het aantal inwoners, dan krijg je het inkomen per inwoner."], ["1.2", "Wat laat de Lorenzcurve zien?", ["Hoe de inkomens over de bevolking verdeeld zijn", "Hoe hoog de inflatie is", "Hoeveel mensen werkloos zijn", "Hoeveel een land exporteert"], "Hoe verder de curve van de diagonaal ligt, hoe ongelijker de verdeling."], ["1.2", "De Lorenzcurve ligt heel dicht bij de diagonaal. Wat betekent dat?", ["De inkomens zijn vrij gelijk verdeeld", "De inkomens zijn heel ongelijk verdeeld", "Iedereen is werkloos", "De inflatie is hoog"], "De diagonaal is de gelijkheidslijn: iedereen verdient evenveel."], ["1.2", "De Lorenzcurve buigt verder af van de diagonaal dan vorig jaar. Wat is er gebeurd?", ["De inkomensverschillen zijn groter geworden", "De inkomensverschillen zijn kleiner geworden", "De prijzen zijn gedaald", "Iedereen verdient evenveel"], "Meer bolling = meer ongelijkheid."], ["1.2", "De btw op levensmiddelen gaat omhoog. Wat gebeurt er met de Lorenzcurve?", ["Hij buigt verder af van de diagonaal: de verschillen worden groter", "Hij komt dichter bij de diagonaal", "Hij verandert niet", "Hij wordt precies de diagonaal"], "Lage inkomens geven een groter deel van hun geld uit aan eten. Zij gaan er relatief het meest op achteruit."], ["1.2", "De armste 50% van de bevolking verdient samen 20% van het totale inkomen. Wat zegt dit?", ["De inkomens zijn ongelijk verdeeld", "De inkomens zijn precies gelijk verdeeld", "De armste helft verdient meer dan de rijkste helft", "Iedereen verdient 20%"], "Bij een gelijke verdeling zou 50% van de mensen ook 50% van het inkomen hebben."], ["1.2", "Wat is het verschil tussen nominaal en reëel inkomen?", ["Bij reëel inkomen houd je rekening met de prijsstijgingen", "Nominaal inkomen is altijd lager", "Reëel inkomen is je brutoloon", "Er is geen verschil"], "Reëel inkomen laat zien wat je er écht van kunt kopen."], ["1.2", "Wat is prijscompensatie?", ["Een loonsverhoging om de inflatie te compenseren", "Korting op producten in de uitverkoop", "Geld terug als een product kapot is", "Een belasting op prijzen"], "Zo houden werknemers hun koopkracht."], ["1.3", "Wat is welvaart?", ["Hoe goed je met je middelen in je behoeften kunt voorzien", "Hoe gelukkig je bent", "Hoeveel vrienden je hebt", "Hoe gezond je bent"], "Welvaart gaat over je middelen: wat kun je kopen en gebruiken?"], ["1.3", "Wat is welzijn?", ["De brede kwaliteit van je leven, zoals gezondheid en geluk", "Hoeveel geld je verdient", "Hoeveel spullen je hebt", "Het BBP van een land"], "Welzijn is breder dan geld: gezondheid, vrijheid, vrienden, veiligheid."], ["1.3", "Wat hoort vooral bij welzijn?", ["Je gelukkig en veilig voelen", "Een hoger loon", "Een grotere auto", "Meer spullen kopen"], "Geluk en veiligheid zijn niet te koop, maar wel belangrijk voor je levenskwaliteit."], ["1.3", "Wanneer noem je een goed in de economie schaars?", ["Als er productiemiddelen nodig zijn om het te maken", "Als het duur is", "Als bijna niemand het wil", "Als het alleen in het buitenland te koop is"], "Ook goedkope dingen zijn schaars: er is arbeid, kapitaal of natuur voor nodig."], ["1.3", "Welk goed is een vrij goed?", ["Lucht om in te ademen", "Kraanwater", "Een appel", "Een busrit"], "Lucht is er vanzelf en in overvloed. Voor kraanwater zijn wel productiemiddelen nodig."], ["1.3", "Is een gratis krant een schaars goed?", ["Ja, want er zijn productiemiddelen nodig om hem te maken", "Nee, want hij is gratis", "Nee, want er zijn er genoeg", "Alleen als hij uitverkocht is"], "Schaars gaat niet over de prijs, maar over de moeite die het kost om iets te maken."], ["1.3", "Waarom moet je prioriteiten stellen?", ["Omdat je middelen, zoals geld en tijd, beperkt zijn", "Omdat de overheid dat verplicht", "Omdat alles gratis is", "Omdat je weinig behoeften hebt"], "Je kunt niet in al je behoeften voorzien, dus je kiest wat het belangrijkst is."], ["1.3", "Wat is het BBP?", ["De totale waarde van alle goederen en diensten die een land in een jaar maakt", "Het totale bedrag aan belastingen", "Het geld dat de overheid leent", "De waarde van alle huizen in een land"], "BBP = Bruto Binnenlands Product."], ["1.3", "Een land heeft een BBP van €900 miljard en 18 miljoen inwoners. Wat is het BBP per inwoner?", ["€50.000", "€5.000", "€500.000", "€16.200"], "€900.000.000.000 : 18.000.000 = €50.000."], ["1.3", "Waarom zegt het BBP per inwoner niet alles over hoe goed mensen leven?", ["Het zegt niets over welzijn, zoals gezondheid en vrijheid", "Het is altijd te laag berekend", "Het telt alleen de prijzen", "Het telt alleen de uitkeringen"], "Een rijk land kan toch ongezond, onveilig of ongelijk zijn."], ["1.3", "Welke voorziening is een collectieve voorziening?", ["Een dijk", "Een eigen auto", "Een spelcomputer", "Een streamingabonnement"], "Collectieve voorzieningen regelt de overheid voor iedereen."], ["1.3", "Wat is het indexcijfer van het basisjaar?", ["100", "0", "1", "10"], "Het basisjaar is het vergelijkingspunt en krijgt altijd 100."], ["1.3", "Het indexcijfer van een product is 112 (basisjaar = 100). Wat betekent dit?", ["De prijs is 12% hoger dan in het basisjaar", "De prijs is €112", "De prijs is 112% gestegen", "De prijs is 12% gedaald"], "112 − 100 = 12, dus 12% hoger."], ["1.3", "Een telefoon kostte in het basisjaar €460 en nu €370. Wat is het indexcijfer?", ["80,4", "124,3", "19,6", "90,0"], "370 : 460 × 100 = 80,4. Onder de 100, dus een daling van 19,6%."], ["1.3", "Het indexcijfer van de huur gaat van 100 naar 104,5. Met hoeveel procent is de huur gestegen?", ["4,5%", "104,5%", "0,45%", "45%"], "104,5 − 100 = 4,5%."], ["1.3", "Benzine kost nu €1,69. Het indexcijfer is 176,6 (2015 = 100). Hoe bereken je de prijs in 2015?", ["1,69 : 176,6 × 100", "1,69 × 176,6 : 100", "176,6 − 1,69", "1,69 × 1,766 × 100"], "Terugrekenen: prijs : indexcijfer × 100 = €0,96."], ["1.3", "Waarom gebruiken economen indexcijfers?", ["Je kunt veranderingen ten opzichte van een basisjaar makkelijk vergelijken", "Ze zijn altijd gelijk aan de prijs", "Ze laten alleen dalingen zien", "Ze vervangen de euro"], "Met indexcijfers zie je in één oogopslag hoeveel procent iets is veranderd."], ["1.4", "Wat is inflatie?", ["Een stijging van het algemeen prijspeil", "Een daling van alle lonen", "Een stijging van de rente", "Een daling van het algemeen prijspeil"], "Bij inflatie wordt alles gemiddeld duurder."], ["1.4", "Wat is deflatie?", ["Een daling van het algemeen prijspeil", "Een stijging van het algemeen prijspeil", "Een stijging van de lonen", "Een daling van de werkloosheid"], "Bij deflatie dalen de prijzen gemiddeld."], ["1.4", "Waarom is deflatie slecht voor de economie?", ["Mensen stellen aankopen uit, omdat het later goedkoper is", "Alles wordt duurder", "Mensen gaan meer uitgeven", "Banken verdienen te veel"], "Als iedereen wacht met kopen, verkopen bedrijven minder en gaan er banen verloren."], ["1.4", "Wat is een mogelijke oorzaak van inflatie?", ["Hogere grondstofprijzen, zoals olie", "Een daling van de lonen", "Minder vraag van consumenten", "Een lagere btw"], "Duurdere grondstoffen maken producten duurder."], ["1.4", "Hoe kan een hogere btw voor inflatie zorgen?", ["Producten worden direct duurder in de winkel", "De lonen dalen", "De rente daalt", "Er komt minder geld in omloop"], "De btw zit in de prijs, dus een hogere btw maakt alles meteen duurder."], ["1.4", "Wat is koopkracht?", ["De hoeveelheid goederen en diensten die je met je inkomen kunt kopen", "Het bedrag op je spaarrekening", "Je brutoloon", "De prijs van een product"], "Je koopkracht hangt af van je inkomen én van de prijzen."], ["1.4", "Je loon stijgt met 2% en de inflatie is 3%. Wat gebeurt er met je koopkracht?", ["Die daalt met ongeveer 1%", "Die stijgt met 1%", "Die stijgt met 5%", "Die blijft gelijk"], "2% − 3% = −1%."], ["1.4", "Je loon stijgt met 4,2% en de prijzen stijgen met 2,7%. Wat is je reële loonstijging?", ["1,5%", "6,9%", "−1,5%", "2,7%"], "Reëel = nominaal − inflatie: 4,2% − 2,7% = 1,5%."], ["1.4", "Werknemers krijgen 3% prijscompensatie en de inflatie is ook 3%. Wat gebeurt er met hun koopkracht?", ["Die blijft ongeveer gelijk", "Die stijgt met 3%", "Die daalt met 3%", "Die stijgt met 6%"], "De loonstijging is precies even groot als de prijsstijging."], ["1.4", "Waarom willen vakbonden prijscompensatie?", ["Zodat de koopkracht van werknemers niet daalt", "Zodat bedrijven meer winst maken", "Zodat de prijzen dalen", "Zodat de rente stijgt"], "Zonder prijscompensatie kunnen werknemers minder kopen van hun loon."], ["1.4", "Wat is het gevaar van prijscompensatie voor de economie?", ["Er kan een loon-prijsspiraal ontstaan", "De prijzen gaan dalen", "De werkloosheid verdwijnt", "De rente wordt nul"], "Hogere lonen maken producten duurder, waardoor er weer hogere lonen worden geëist."], ["1.4", "Hoe ontstaat een loon-prijsspiraal?", ["Prijzen stijgen → hogere looneisen → hogere kosten → prijzen stijgen weer", "Lonen dalen → prijzen dalen → lonen dalen", "Rente stijgt → sparen stijgt → prijzen dalen", "Belasting daalt → lonen dalen → prijzen stijgen"], "Een vicieuze cirkel: lonen en prijzen jagen elkaar op."], ["1.4", "Wat is het CPI?", ["Een indexcijfer dat meet hoeveel de prijzen gemiddeld stijgen", "De rente van de ECB", "Het gemiddelde inkomen in Nederland", "De belasting op producten"], "CPI = consumentenprijsindexcijfer, de graadmeter voor inflatie."], ["1.4", "Wie berekent het CPI in Nederland?", ["Het CBS", "De ECB", "Het Nibud", "De Belastingdienst"], "Het Centraal Bureau voor de Statistiek koopt al jaren dezelfde spullen om de prijzen te vergelijken."], ["1.4", "Waarom werkt het CBS met wegingsfactoren?", ["Omdat je aan sommige producten meer uitgeeft dan aan andere", "Omdat alle producten even belangrijk zijn", "Omdat zware producten duurder zijn", "Omdat de ECB dat verplicht"], "Huur weegt zwaarder mee dan kauwgom, omdat je er veel meer aan uitgeeft."], ["1.4", "Wat is een ongewogen indexcijfer?", ["Een indexcijfer waarbij alle producten even zwaar meetellen", "Een indexcijfer zonder basisjaar", "Een indexcijfer van 0", "Een indexcijfer van alleen voedsel"], "Bij een ongewogen indexcijfer zijn alle producten even belangrijk."], ["1.4", "Waarom zegt een loonstijging van 5% niet alles over je koopkracht?", ["Je moet ook naar de inflatie kijken", "Belastingen tellen niet mee", "Het is altijd een daling", "Lonen stijgen nooit echt"], "Stijgen de prijzen met 6%, dan daalt je koopkracht ondanks de loonstijging."], ["1.1", "Hoe noem je de 6 P's samen?", ["Marketinginstrumenten (de marketingmix)", "Productiefactoren", "Primaire inkomens", "Prijsindexcijfers"], "Prijs, product, plaats, promotie, personeel en presentatie zijn de marketinginstrumenten."], ["1.1", "Loon en rente zijn allebei primaire inkomens. Wat is zakgeld?", ["Een overdrachtsinkomen", "Ook een primair inkomen", "Inkomen uit arbeid", "Inkomen uit bezit"], "Voor zakgeld lever je geen directe tegenprestatie. Het is een overdrachtsinkomen."], ["1.1", "Waarom horen loon en rente allebei bij de primaire inkomens?", ["Je levert er een tegenprestatie voor: arbeid of bezit", "Omdat de overheid ze betaalt", "Omdat je er geen belasting over betaalt", "Omdat je ze van je ouders krijgt"], "Primair inkomen verdien je met een productiefactor: arbeid (loon) of kapitaal (rente)."], ["1.1", "Kinderbijslag hoort bij...", ["de overdrachtsinkomens", "de primaire inkomens", "het inkomen uit arbeid", "het inkomen uit bezit"], "Je krijgt kinderbijslag van de overheid zonder directe tegenprestatie."], ["1.1", "Een ondernemer werkt zelf in zijn eigen bedrijf en maakt winst. Van welk inkomen is dit een voorbeeld?", ["Inkomen uit arbeid", "Een overdrachtsinkomen", "Inkomen uit rente", "Een secundair inkomen"], "Werk je zelf in je eigen zaak, dan is de winst inkomen uit arbeid."], ["1.1", "Een investeerder stopt geld in het bedrijf van een ander en krijgt een deel van de winst. Welk inkomen is dit?", ["Inkomen uit bezit", "Inkomen uit arbeid", "Een overdrachtsinkomen", "Loon in natura"], "Winst uit een bedrijf waarin je geld hebt geïnvesteerd is inkomen uit bezit."], ["1.1", "Waarom veranderen je bestedingen als je ouder wordt?", ["Je behoeften en interesses veranderen", "Producten worden altijd goedkoper", "Je gaat nooit meer sparen", "Je hebt dan geen inkomen meer"], "Als kind besteed je aan snoep en speelgoed, als volwassene bijvoorbeeld aan huur en een verzekering."], ["1.1", "Waarom heeft de groep van 25 tot 45 jaar relatief weinig vrij te besteden?", ["Ze hebben veel vaste uitgaven, zoals een hypotheek of kinderen", "Ze verdienen niets", "Ze krijgen alleen zakgeld", "Ze hoeven geen belasting te betalen"], "Hoe meer vaste uitgaven, hoe minder je vrij te besteden hebt."], ["1.1", "Waarom zijn ouderen een aantrekkelijke doelgroep?", ["Ze zijn met velen en hebben vaak veel geld en vrije tijd", "Ze zijn oud", "Ze hebben nooit vrije tijd", "Ze kopen nooit producten"], "Het groeiende aantal ouderen vormt een grote groep consumenten met tijd en geld."], ["1.1", "Je koopt alleen nog tweedehands kleding om het milieu te sparen. Wat doe je?", ["Duurzaam consumeren", "Zelfvoorziening", "Reserveren", "Marketing bedrijven"], "Je houdt rekening met de gevolgen van je aankopen voor mens en milieu."], ["1.1", "Waar houd je rekening mee bij duurzaam consumeren?", ["Met de gevolgen voor andere mensen en het milieu", "Alleen met de prijs", "Alleen met het merk", "Alleen met de kwaliteit"], "Duurzaam consumeren betekent kopen met oog voor mens en milieu."], ["1.1", "Rundersteak veroorzaakt per kilo veel meer CO₂-uitstoot dan noten. Wat kun je hieruit leren over duurzaam consumeren?", ["Je kunt je CO₂-uitstoot verlagen door andere producten te kiezen", "Het maakt niet uit wat je eet", "Vlees is altijd goedkoper", "Noten zijn schaars"], "Met je keuze voor producten verklein je de maatschappelijke kosten, zoals CO₂-uitstoot."], ["1.1", "Een goedkoop T-shirt van €10 is gemaakt onder slechte arbeidsomstandigheden. Wat zijn hier de maatschappelijke kosten?", ["De nadelen voor de samenleving, zoals kinderarbeid en vervuiling", "De prijs van €10", "De winst van de winkel", "De btw op het shirt"], "Maatschappelijke kosten zitten niet in de prijs, maar de samenleving betaalt ze wel."], ["1.1", "Een producent bereikt jongeren via bepaalde media. Welk medium past het beste bij de doelgroep 'jongeren'?", ["TikTok of Instagram", "LinkedIn", "Motoplus.nl", "De krant van de gemeente"], "Je kiest het medium dat past bij je doelgroep."], ["1.2", "Wat is besteedbaar inkomen?", ["Het deel van je inkomen dat je vrij kunt uitgeven", "Je brutoloon", "Je loon plus vakantiegeld", "Je loon vóór belasting"], "Besteedbaar inkomen is wat overblijft na verplichte betalingen, zoals de zorgverzekering."], ["1.2", "Je netto inkomen is €2.000. Je betaalt €150 zorgverzekering en €50 gemeentelijke heffing. Wat is je besteedbaar inkomen?", ["€1.800", "€2.200", "€2.000", "€1.850"], "€2.000 − €150 − €50 = €1.800."], ["1.2", "Je loon van €950 stijgt met 2,5%. Wat is je nieuwe loon?", ["€973,75", "€952,50", "€975,00", "€1.187,50"], "950 × 1,025 = €973,75."], ["1.2", "Wat is de groeifactor bij een stijging van 8%?", ["1,08", "0,08", "1,8", "0,92"], "1 + 8 : 100 = 1,08."], ["1.2", "Wat is de groeifactor bij een daling van 23,6%?", ["0,764", "1,236", "0,236", "0,64"], "1 − 23,6 : 100 = 0,764."], ["1.2", "Wat is de groeifactor bij een stijging van 4,6%?", ["1,046", "1,46", "0,954", "1,0046"], "1 + 4,6 : 100 = 1,046."], ["1.2", "Een bedrag van €23.000 stijgt met 4%. Wat is het nieuwe bedrag?", ["€23.920", "€23.040", "€27.600", "€22.080"], "23.000 × 1,04 = €23.920."], ["1.2", "Een bedrag van €3.940 daalt met 3%. Wat is het nieuwe bedrag?", ["€3.821,80", "€3.940,00", "€4.058,20", "€3.822,00"], "3.940 × 0,97 = €3.821,80."], ["1.2", "Een jas van €89 gaat 35% in de uitverkoop. Wat is de nieuwe prijs?", ["€57,85", "€31,15", "€124,15", "€54,00"], "89 × 0,65 = €57,85."], ["1.2", "De salarissen van voetballers dalen met 12,5%. Wat is de groeifactor?", ["0,875", "1,125", "0,125", "0,75"], "1 − 12,5 : 100 = 0,875."], ["1.2", "Je brutoloon stijgt met €90 per maand. Wat gebeurt er meestal met je netto inkomen?", ["Het stijgt, maar met minder dan €90", "Het stijgt met precies €90", "Het daalt", "Het blijft gelijk"], "Over extra loon betaal je ook loonbelasting en premies."], ["1.2", "De premie voor je zorgverzekering stijgt. Je netto inkomen blijft gelijk. Wat gebeurt er met je besteedbaar inkomen?", ["Het daalt", "Het stijgt", "Het blijft gelijk", "Het wordt gelijk aan je brutoloon"], "Je moet meer verplicht betalen, dus houd je minder over."], ["1.2", "Waarom verdient een chirurg meer dan een loodgieter?", ["Langere opleiding, een schaars beroep en veel verantwoordelijkheid", "Een chirurg werkt altijd meer uren", "Een chirurg betaalt minder belasting", "De overheid bepaalt alle salarissen"], "Opleiding, vraag en aanbod en verantwoordelijkheid verklaren inkomensverschillen."], ["1.2", "Waarom is het modaal inkomen een betere maatstaf dan het gemiddelde inkomen?", ["Extreem hoge inkomens trekken het gemiddelde omhoog", "Het modaal inkomen is altijd hoger", "Het gemiddelde bestaat niet", "Het modaal inkomen is het sociaal minimum"], "Het modaal inkomen laat zien wat de meeste mensen verdienen."], ["1.2", "Hoe zorgen belastingen en uitkeringen voor kleinere inkomensverschillen?", ["Hoge inkomens betalen veel belasting, lage inkomens krijgen uitkeringen en toeslagen", "Iedereen betaalt evenveel belasting", "Alleen lage inkomens betalen belasting", "Uitkeringen gaan naar hoge inkomens"], "Zo verschuift inkomen van rijk naar arm."], ["1.2", "De armste 80% verdient samen 60% van het totale inkomen. Hoeveel procent verdient de rijkste 20%?", ["40%", "60%", "20%", "80%"], "100% − 60% = 40%."], ["1.2", "De armste 20% verdient 4% van het inkomen, de armste 40% samen 12%. Hoeveel procent verdient de tweede groep van 20%?", ["8%", "12%", "4%", "16%"], "12% − 4% = 8%."], ["1.2", "Leila verdient €1.887 per maand. Het minimumloon is €1.700. Hoeveel procent verdient zij meer dan het minimumloon?", ["11,0%", "9,9%", "10,0%", "1,1%"], "(1.887 − 1.700) : 1.700 × 100 = 11,0%."], ["1.2", "Het nationaal inkomen is €400 miljard en er wonen 21 miljoen mensen. Wat is het inkomen per hoofd (afgerond op hele euro's)?", ["€19.048", "€1.905", "€190.476", "€8.400.000"], "400.000.000.000 : 21.000.000 = 19.047,62 ≈ €19.048."], ["1.2", "Een Lorenzcurve ligt ver van de diagonaal, bijna langs de onderkant van de grafiek. Wat zegt dat?", ["De inkomens zijn zeer ongelijk verdeeld", "Iedereen verdient evenveel", "Er is geen nationaal inkomen", "Het land is zeer welvarend"], "Hoe verder van de diagonaal, hoe ongelijker de verdeling."], ["1.3", "Welke middelen zijn bij het vervullen van behoeften het belangrijkst en altijd beperkt?", ["Geld en tijd", "Lucht", "Zonlicht", "Regenwater"], "Van geld en tijd heb je maar een beperkte hoeveelheid."], ["1.3", "Welke goederen zijn vrije goederen?", ["Zonlicht, regenwater en wind", "Brood en melk", "Kleding en schoenen", "Een telefoon"], "Vrije goederen komen vanzelf voor en kosten niets."], ["1.3", "Waarom moet een boer kiezen waar hij zijn grond voor gebruikt?", ["Productiemiddelen kun je maar voor één ding tegelijk gebruiken", "Omdat grond gratis is", "Omdat de overheid dat bepaalt", "Omdat grond een vrij goed is"], "Dat is schaarste: je kunt niet alles doen met dezelfde middelen."], ["1.3", "Waarom is een middagje relaxen op het strand een voorbeeld van een schaars goed?", ["Er is tijd voor nodig, en tijd is schaars", "Omdat het strand duur is", "Omdat zonlicht schaars is", "Omdat het niets kost"], "Je moet tijd en moeite besteden, dus je moet er middelen voor inzetten."], ["1.3", "Welke bewering over welvaart en welzijn klopt?", ["Door meer productie neemt de welvaart toe", "Welzijn is voor iedereen hetzelfde", "Welvaart kun je niet in geld uitdrukken", "Welvaart en welzijn zijn precies hetzelfde"], "Welvaart wordt meestal afgemeten aan inkomens, welzijn is de kwaliteit van je leven."], ["1.3", "De prijs van een reep chocola was in 2015 €1,80 (basisjaar) en in 2016 €1,84. Wat is het prijsindexcijfer van 2016?", ["102,2", "97,8", "2,2", "101,8"], "1,84 : 1,80 × 100 = 102,2."], ["1.3", "De prijs van een reep chocola was in 2015 €1,80 (basisjaar) en in 2019 €1,86. Wat is het prijsindexcijfer van 2019?", ["103,3", "96,8", "3,3", "106,0"], "1,86 : 1,80 × 100 = 103,3."], ["1.3", "Het wettelijk minimumloon was in 2000 €1.092 en in 2021 €1.684. Met hoeveel procent is het gestegen?", ["54,2%", "35,2%", "59,2%", "154,2%"], "(1.684 − 1.092) : 1.092 × 100 = 54,2%."], ["1.3", "De prijs in 2010 was €16,40 (index 100). In 2016 is het indexcijfer 115. Wat was de prijs in 2016?", ["€18,86", "€19,50", "€14,26", "€16,55"], "16,40 × 1,15 = €18,86."], ["1.3", "De prijs in 2010 was €16,40 (index 100). In 2022 is het indexcijfer 132. Wat is de prijs in 2022?", ["€21,65", "€21,80", "€12,42", "€17,72"], "16,40 × 1,32 = 21,648 ≈ €21,65."], ["1.3", "Een bedrijf heeft 160 werknemers. Drie jaar later zijn dat er 184. Met hoeveel procent is het aantal gestegen?", ["15%", "24%", "13%", "87%"], "(184 − 160) : 160 × 100 = 15%."], ["1.3", "Een scooter kost €2.190. De bijkomende kosten zijn €186,15. Hoeveel procent zijn de kosten van de prijs?", ["8,5%", "85%", "1,2%", "11,8%"], "186,15 : 2.190 × 100 = 8,5%."], ["1.3", "Elon Musk is zeer rijk, maar ook hij moet keuzes maken. Waarom?", ["Ook zijn middelen, zoals tijd, zijn beperkt", "Omdat hij geen geld heeft", "Omdat alles gratis is", "Omdat hij geen behoeften heeft"], "Schaarste geldt voor iedereen: ook de rijkste mensen hebben maar 24 uur per dag."], ["1.4", "Welke gebeurtenis kan inflatie veroorzaken?", ["De belasting op energie stijgt", "De wereldmarktprijs van olie daalt", "Consumenten vragen minder producten", "Het aanbod van producten stijgt sterk"], "Hogere belastingen en kosten worden doorberekend in de prijzen."], ["1.4", "Je loon stijgt met 2,5% en de prijzen stijgen met 3,1%. Met hoeveel procent verandert je koopkracht?", ["−0,6%", "+0,6%", "+5,6%", "−5,6%"], "2,5% − 3,1% = −0,6%."], ["1.4", "Je loon stijgt met 3,7% en de prijzen dalen met 0,5% (deflatie). Met hoeveel procent verandert je koopkracht?", ["+4,2%", "+3,2%", "−4,2%", "+3,7%"], "3,7% − (−0,5%) = +4,2%."], ["1.4", "Je loon stijgt van €2.150 naar €2.248,90. De inflatie is 3,1%. Hoeveel procent is je reële loonstijging?", ["1,5%", "4,6%", "3,1%", "7,7%"], "Nominaal: 98,90 : 2.150 × 100 = 4,6%. Reëel: 4,6% − 3,1% = 1,5%."], ["1.4", "Je loon stijgt van €2.120 naar €2.194,20. De inflatie is 1,6%. Hoeveel procent is je reële loonstijging?", ["1,9%", "3,5%", "1,6%", "5,1%"], "Nominaal: 74,20 : 2.120 × 100 = 3,5%. Reëel: 3,5% − 1,6% = 1,9%."], ["1.4", "Je uurloon stijgt van €8 naar €8,36. De inflatie is 4,5%. Hoeveel procent is je reële loonstijging?", ["0%", "4,5%", "−4,5%", "9%"], "Nominaal: 0,36 : 8 × 100 = 4,5%. Reëel: 4,5% − 4,5% = 0%."], ["1.4", "De inflatie is 4,6%. Hoeveel prijscompensatie moeten de vakbonden minstens eisen om de koopkracht gelijk te houden?", ["4,6%", "0%", "2,3%", "9,2%"], "De lonen moeten minstens even hard stijgen als de prijzen."], ["1.4", "Wat is geldontwaarding?", ["Het geld zelf wordt minder waard door inflatie", "Het geld wordt meer waard", "Het geld verdwijnt van je rekening", "De rente op je spaargeld daalt"], "Met één euro koop je na een jaar met inflatie minder dan nu."], ["1.4", "Je nominale inkomen blijft gelijk terwijl er inflatie is. Wat gebeurt er met je reële inkomen?", ["Het daalt", "Het stijgt", "Het blijft gelijk", "Het wordt nul"], "Je kunt er minder van kopen."], ["1.4", "Wat is de eerste stap van het stappenplan voor het cpi?", ["Het prijsindexcijfer van elke productgroep vermenigvuldigen met de wegingsfactor", "De prijzen van alle producten optellen", "Alle wegingsfactoren delen door 100", "Het basisjaar met 2 vermenigvuldigen"], "Daarna tel je de uitkomsten op en deel je door het totaal van de wegingsfactoren."], ["1.4", "Waarom heeft huisvesting een hoge wegingsfactor in het cpi?", ["Huishoudens geven een groot deel van hun inkomen aan huisvesting uit", "Huisvesting is altijd duur", "Huisvesting heeft geen prijs", "Het CBS vindt wonen belangrijk"], "Hoe groter het aandeel in de uitgaven, hoe zwaarder de groep meetelt."], ["1.4", "Een cpi van 102 betekent...", ["dat de prijzen gemiddeld 2% hoger zijn dan in het basisjaar", "dat de prijzen 102% hoger zijn", "dat de prijzen 2% lager zijn", "dat de inflatie 102% is"], "Het basisjaar is 100."], ["1.4", "Een mandje heeft twee groepen: voeding (weging 30, index 100) en wonen (weging 70, index 104). Wat is het cpi?", ["102,8", "102,0", "104,0", "204,0"], "(30 × 100 + 70 × 104) : 100 = (3.000 + 7.280) : 100 = 102,8."], ["1.4", "De prijzen in Nederland stijgen sneller dan in het buitenland. Wat is een mogelijk gevolg?", ["Nederlandse producten worden relatief duurder, dus de buitenlandse vraag daalt", "De export stijgt sterk", "Er verandert niets", "De buitenlandse vraag stijgt"], "Daarom is een hoge inflatie slecht voor de concurrentiepositie."], ["1.4", "Hoe kan de overheid helpen een loon-prijsspiraal te doorbreken?", ["Door de loonbelasting te verlagen, zodat werknemers netto meer overhouden", "Door de btw te verhogen", "Door de prijzen te laten verdubbelen", "Door de lonen te verhogen"], "Dan is er minder loonsverhoging nodig om de koopkracht op peil te houden."], ["1.4", "Waarom is een hoge inflatie vooral nadelig voor mensen met een vast inkomen?", ["Hun inkomen stijgt niet mee, dus hun koopkracht daalt", "Ze betalen meer belasting", "Ze krijgen minder rente", "Ze hebben geen uitgaven"], "Hun inkomen blijft gelijk terwijl de prijzen stijgen."]];
+
+S.qseen=S.qseen||{};S.qwrong=S.qwrong||{};
+var quizPar="alle",quizMode="mix",qs=[],qi=0,qGood=0,qWrongList=[],qCard=document.getElementById("qCard");
+function poolFor(par){return BANK.map(function(_,i){return i;}).filter(function(i){return inSel(BANK[i][0],par);});}
+function wrongIds(){return Object.keys(S.qwrong).map(Number).filter(function(i){return BANK[i];});}
+function pickQuiz(){
+if(quizMode==="fouten"){var w=shuffle(wrongIds());return w.slice(0,10);}
+var pool=poolFor(quizPar),unseen=pool.filter(function(i){return !S.qseen[i];});
+if(unseen.length<10){pool.forEach(function(i){delete S.qseen[i];});unseen=pool.slice();}
+var pick=shuffle(pool.filter(function(i){return S.qwrong[i];})).slice(0,2);
+var rest=shuffle(unseen.filter(function(i){return pick.indexOf(i)<0;}));
+if(quizPar==="alle"||quizPar==="H1"){
+var per={};PARS.forEach(function(p){per[p.id]=rest.filter(function(i){return BANK[i][0]===p.id;});});
+var order=shuffle(PARS.map(function(p){return p.id;})),k=0;
+while(pick.length<10&&k<400){var arr=per[order[k%order.length]];if(arr.length)pick.push(arr.shift());k++;}
+}
+rest.forEach(function(i){if(pick.length<10&&pick.indexOf(i)<0)pick.push(i);});
+return shuffle(pick);
+}
+function quizHome(){
+var seen=Object.keys(S.qseen).length,wr=wrongIds().length;
+document.getElementById("qScore").innerHTML="Vraagbank: <b>"+BANK.length+"</b> vragen &nbsp;·&nbsp; Al gezien: <b>"+Math.min(seen,BANK.length)+"</b> &nbsp;·&nbsp; Nog te oefenen: <b>"+wr+"</b>";
+qCard.innerHTML='<div class="qhome"><div class="qbig">⚡</div><h3>Snelle quiz</h3><p class="muted">Elke ronde krijg je 10 nieuwe vragen uit de vraagbank. Vragen die je fout had, komen later terug.</p>'+
+'<div class="filters" style="justify-content:center">'+["alle"].concat(PARS.map(function(p){return p.id;})).map(function(f){return '<button data-qpar="'+f+'" class="'+(f===quizPar?"on":"")+'"'+(P(f)?' title="'+P(f).t+'"':'')+'>'+selLabel(f)+'</button>';}).join("")+'</div>'+
+'<div class="row" style="justify-content:center;margin-top:8px"><button class="btn" id="qStart">Start 10 vragen</button>'+(wr?'<button class="btn ghost" id="qWrong">Oefen mijn fouten ('+wr+')</button>':'')+'</div></div>';
+}
+function startQuiz(mode){quizMode=mode||"mix";qs=pickQuiz();qi=0;qGood=0;qWrongList=[];if(!qs.length){quizHome();return;}nextQ();}
+function qScore(){document.getElementById("qScore").innerHTML="Vraag <b>"+Math.min(qi+1,qs.length)+"</b> van "+qs.length+" &nbsp;·&nbsp; Goed: <b>"+qGood+"</b>"+(quizMode==="fouten"?" &nbsp;·&nbsp; <span style=\"color:var(--berry)\">foutenronde</span>":"");}
+function nextQ(){var q=BANK[qs[qi]],opts=shuffle(q[2].map(function(t,i){return{t:t,ok:i===0};}));
+qCard.innerHTML='<div class="qtop">'+tag(q[0])+'<div class="qprog"><i style="width:'+(qi/qs.length*100)+'%"></i></div></div><p class="qq" style="margin-top:10px">'+q[1]+'</p><div class="opts">'+opts.map(function(o,n){return '<button class="opt" data-ok="'+(o.ok?1:0)+'"><span class="ol">'+"ABCD"[n]+'</span>'+o.t+'</button>';}).join("")+'</div><div id="qFb"></div>';qScore();}
+qCard.addEventListener("click",function(e){
+var pb=e.target.closest("[data-qpar]");if(pb){quizPar=pb.dataset.qpar;quizHome();return;}
+if(e.target.closest("#qStart")){startQuiz("mix");return;}
+if(e.target.closest("#qWrong")){startQuiz("fouten");return;}
+if(e.target.closest("#qHome")){quizHome();return;}
+var b=e.target.closest(".opt");
+if(b&&!b.disabled){var ok=b.dataset.ok==="1",id=qs[qi];S.qseen[id]=1;
+if(ok){qGood++;delete S.qwrong[id];}else{S.qwrong[id]=1;qWrongList.push(id);}save();
+qCard.querySelectorAll(".opt").forEach(function(x){x.disabled=true;if(x.dataset.ok==="1")x.classList.add("right");else if(x===b)x.classList.add("wrong");});
+document.getElementById("qFb").innerHTML='<div class="fb '+(ok?"ok":"no")+'">'+(ok?"✓ Goed! ":"✗ Helaas. ")+BANK[id][3]+'</div><div class="row" style="margin-top:12px"><button class="btn" id="qNext">'+(qi<qs.length-1?"Volgende vraag →":"Bekijk je score")+'</button></div>';qScore();return;}
+if(e.target.closest("#qNext")){qi++;if(qi<qs.length)nextQ();else endQuiz();}
+});
+function endQuiz(){
+var n=qs.length,msg=qGood>=n*0.9?"Top! Jij bent klaar voor de toets. 🏆":qGood>=n*0.7?"Goed bezig! Kijk nog even naar je fouten.":qGood>=n*0.5?"Op de goede weg. Oefen je fouten nog eens.":"Nog even oefenen! Begin bij de begrippenkaarten.";
+if(qGood>=n*0.9)confetti();
+document.getElementById("qScore").innerHTML="Klaar!";
+var rev=qWrongList.length?'<div class="review"><h3>Dit ging nog mis</h3>'+qWrongList.map(function(i){return '<div class="rv">'+tag(BANK[i][0])+' <b>'+BANK[i][1]+'</b><br><span class="muted">Goed antwoord:</span> '+BANK[i][2][0]+'</div>';}).join("")+'</div>':'';
+var wr=wrongIds().length;
+qCard.innerHTML='<div class="done-card"><div class="big">'+qGood+' / '+n+'</div><p>'+msg+'</p><div class="row" style="justify-content:center"><button class="btn" id="qStart">Nieuwe 10 vragen</button>'+(wr?'<button class="btn ghost" id="qWrong">Oefen mijn fouten ('+wr+')</button>':'')+'<button class="btn ghost" id="qHome">Kies paragraaf</button></div></div>'+rev;
+}
+quizHome();
+
+function confetti(){var cols=["#a01a58","#f2b134","#2f6fb0","#23866a","#e2457f","#ffd6e8"],box=document.createElement("div");box.className="confetti";
+for(var i=0;i<90;i++){var p=document.createElement("i");p.style.left=Math.random()*100+"%";p.style.background=cols[i%cols.length];p.style.animationDelay=(Math.random()*0.6)+"s";p.style.animationDuration=(1.6+Math.random()*1.2)+"s";p.style.transform="rotate("+(Math.random()*360)+"deg)";box.appendChild(p);}
+document.body.appendChild(box);setTimeout(function(){box.remove();},3400);}
+
+var SORT=[{"a": "Inkomen uit arbeid", "b": "Inkomen uit bezit", "A": [["👷", "Loon van een bouwvakker"], ["🧑‍🍳", "Salaris van een kok"], ["🛒", "Loon van je bijbaan"], ["⏰", "Geld voor overwerk"], ["💼", "Winstdeel voor werknemers"]], "B": [["🏠", "Huur van een appartement"], ["📈", "Dividend op aandelen"], ["🌾", "Pacht van landbouwgrond"], ["🏦", "Rente op spaargeld"], ["🅿️", "Verhuur van een garagebox"]]}, {"a": "Primair inkomen", "b": "Overdrachtsinkomen", "A": [["💶", "Loon"], ["🏪", "Winst van je eigen winkel"], ["🏠", "Huur van een kamer"], ["🏦", "Rente"], ["📈", "Dividend"]], "B": [["👛", "Zakgeld"], ["👶", "Kinderbijslag"], ["📄", "WW-uitkering"], ["👵", "AOW"], ["🩺", "Zorgtoeslag"]]}, {"a": "Welvaart", "b": "Welzijn", "A": [["💶", "Een hoger loon"], ["🚗", "Een nieuwe auto"], ["🏡", "Een groter huis"], ["📱", "Een nieuwe telefoon"], ["🛍️", "Meer kunnen kopen"]], "B": [["💪", "Een goede gezondheid"], ["🤝", "Vriendschap"], ["🛡️", "Je veilig voelen"], ["😊", "Gelukkig zijn"], ["🗣️", "Vrijheid van meningsuiting"]]}, {"a": "Schaars goed", "b": "Vrij goed", "A": [["🚰", "Kraanwater"], ["🍞", "Brood"], ["🚲", "Een fiets"], ["💇", "Een knipbeurt"], ["📰", "Een gratis krant"], ["💡", "Elektriciteit"]], "B": [["🌬️", "Lucht om in te ademen"], ["☀️", "Zonlicht"], ["💨", "Wind"], ["🌊", "Zeewater in de oceaan"]]}, {"a": "Koopkracht stijgt", "b": "Koopkracht daalt", "A": [["📈", "Loon +4%, inflatie 2%"], ["📈", "Loon +3%, prijzen +1,5%"], ["🏷️", "Prijzen dalen, loon gelijk"], ["📈", "Loon +2,5%, inflatie 0,5%"]], "B": [["📉", "Loon +1%, inflatie 3%"], ["📉", "Loon gelijk, prijzen +2%"], ["📉", "Loon +2,3%, inflatie 4,1%"], ["📉", "Loon −1%, prijzen gelijk"]]}, {"a": "Inflatie", "b": "Deflatie", "A": [["⬆️", "Prijzen stijgen"], ["🌀", "Loon-prijsspiraal"], ["🛢️", "Duurdere grondstoffen"], ["🏦", "ECB verhoogt de rente"]], "B": [["⬇️", "Prijzen dalen"], ["⏳", "Mensen stellen aankopen uit"], ["🏦", "ECB verlaagt de rente"], ["🏷️", "Alles wordt goedkoper"]]}, {"a": "Plaats", "b": "Promotie", "A": [["🛍️", "Winkel op de Kalverstraat"], ["🌐", "Webwinkel"], ["🏭", "Industrieterrein"], ["🛒", "Supermarkt in de wijk"]], "B": [["📱", "Reclame op TikTok"], ["⚽", "Sponsoring van een club"], ["📺", "Tv-spot"], ["📰", "Folder in de brievenbus"]]}, {"a": "Nominaal", "b": "Reëel", "A": [["💶", "Je loon stijgt met 3%"], ["🧾", "Je krijgt €50 meer per maand"], ["📈", "Loonsverhoging in euro's"], ["💼", "Brutoloon van €2.500"]], "B": [["🛒", "Loon +3%, inflatie 2% = +1%"], ["🏷️", "Wat je er echt van kunt kopen"], ["📉", "Loon +2%, inflatie 3% = −1%"], ["⚖️", "Loonstijging min inflatie"]]}, {"a": "Absolute verandering", "b": "Relatieve verandering", "A": [["💶", "Van €6 naar €8,50: +€2,50"], ["👥", "Van 160 naar 184 werknemers: +24"], ["🧴", "Prijs +€0,40"], ["🏠", "Huur +€30"]], "B": [["📊", "Van €6 naar €8,50: +41,7%"], ["👥", "Van 160 naar 184: +15%"], ["🧴", "Prijs +3%"], ["🏠", "Huur +4,2%"]]}];
+var G={mode:null};
+function hs(k){try{return +(localStorage.getItem("h1v4-"+k)||0);}catch(e){return 0;}}
+function setHs(k,v){try{localStorage.setItem("h1v4-"+k,v);}catch(e){}}
+var gWrap=document.getElementById("gWrap");
+function gamesHome(){
+stopSwipe();MEM=null;
+gWrap.innerHTML='<div class="gpick">'+
+'<button class="gtile" data-game="swipe"><span class="gico">👆</span><b>Swipe &amp; Scoor</b><span>Veeg elk kaartje naar de juiste kant. Hoe meer goed op rij, hoe meer punten!</span><em>Highscore: '+hs("swipe")+'</em></button>'+
+'<button class="gtile" data-game="memory"><span class="gico">🧠</span><b>Begrippen-memory</b><span>Zoek bij elk begrip de juiste uitleg. Lukt het in zo weinig mogelijk beurten?</span><em>Beste: '+(hs("memory")?hs("memory")+' beurten':'nog geen')+'</em></button>'+
+'</div>';
+}
+gWrap.addEventListener("click",function(e){var t=e.target.closest("[data-game]");if(t){if(t.dataset.game==="swipe")startSwipe();else startMemory();}
+if(e.target.closest("#gBack"))gamesHome();
+if(e.target.closest("#gAgain")){if(G.mode==="swipe")startSwipe();else startMemory();}
+});
+
+var SW=null;
+function stopSwipe(){if(SW&&SW.timer)clearInterval(SW.timer);SW=null;}
+function startSwipe(){
+stopSwipe();G.mode="swipe";
+var rounds=shuffle(SORT);
+SW={time:60,score:0,combo:0,mult:1,right:0,wrong:0,round:0,rounds:rounds,queue:[],cur:null,miss:[]};
+gWrap.innerHTML='<div class="arena" id="arena"><div class="hud"><span>⏱ <b id="swT">60</b></span><span class="lvl" id="swL">Level 1</span><span>Score <b id="swS">0</b></span><span class="mult" id="swM">x1</span><button class="gstop" id="gBack" aria-label="Stoppen">✕</button></div>'+
+'<div class="tbar"><i id="swBar"></i></div>'+
+'<div class="zones"><button class="zone left" id="zL"><span>◀</span><b id="zLt"></b></button><div class="deck" id="deck"></div><button class="zone right" id="zR"><b id="zRt"></b><span>▶</span></button></div>'+
+'<div class="ghint">Veeg het kaartje naar links of rechts, of tik op een kant</div></div>';
+nextRound();
+SW.timer=setInterval(function(){SW.time--;drawHud();if(SW.time<=0)endSwipe();},1000);
+document.getElementById("zL").addEventListener("click",function(){answer("A");});
+document.getElementById("zR").addEventListener("click",function(){answer("B");});
+}
+function nextRound(){
+var r=SW.rounds[SW.round%SW.rounds.length];SW.cat=r;
+var items=shuffle(r.A.map(function(x){return [x,"A"];})).slice(0,4).concat(shuffle(r.B.map(function(x){return [x,"B"];})).slice(0,4));
+SW.queue=shuffle(items);
+document.getElementById("zLt").textContent=r.a;document.getElementById("zRt").textContent=r.b;
+document.getElementById("swL").textContent="Level "+(SW.round+1);
+var a=document.getElementById("arena");a.classList.remove("lvlup");void a.offsetWidth;a.classList.add("lvlup");
+dealCard();
+}
+function dealCard(){
+if(!SW)return;
+if(!SW.queue.length){SW.round++;SW.time=Math.min(SW.time+5,99);nextRound();return;}
+SW.cur=SW.queue.shift();
+var d=document.getElementById("deck");
+d.innerHTML='<div class="scard enter" id="scard"><span class="emo">'+SW.cur[0][0]+'</span><b>'+SW.cur[0][1]+'</b></div>';
+bindDrag(document.getElementById("scard"));drawHud();
+}
+function drawHud(){if(!SW)return;document.getElementById("swT").textContent=Math.max(0,SW.time);document.getElementById("swS").textContent=SW.score;
+document.getElementById("swM").textContent="x"+SW.mult;document.getElementById("swM").classList.toggle("hot",SW.mult>1);
+document.getElementById("swBar").style.width=Math.min(100,SW.time/60*100)+"%";}
+function answer(side,fromDrag){
+if(!SW||!SW.cur||SW.lock)return;SW.lock=true;
+var card=document.getElementById("scard"),ok=side===SW.cur[1];
+if(ok){SW.right++;SW.combo++;SW.mult=Math.min(4,1+Math.floor(SW.combo/3));SW.score+=10*SW.mult;}
+else{SW.wrong++;SW.combo=0;SW.mult=1;SW.time=Math.max(0,SW.time-5);SW.miss.push([SW.cur[0][1],SW.cur[1]==="A"?SW.cat.a:SW.cat.b]);}
+var z=document.getElementById(side==="A"?"zL":"zR");z.classList.add(ok?"good":"bad");setTimeout(function(){z.classList.remove("good","bad");},350);
+card.classList.add(ok?"ok":"no");card.style.transition="transform .28s ease, opacity .28s";
+card.style.transform="translateX("+(side==="A"?-420:420)+"px) rotate("+(side==="A"?-18:18)+"deg)";card.style.opacity="0";
+if(!ok){var t=document.createElement("div");t.className="toast";t.textContent="Hoort bij: "+(SW.cur[1]==="A"?SW.cat.a:SW.cat.b);document.getElementById("arena").appendChild(t);setTimeout(function(){t.remove();},900);}
+drawHud();
+setTimeout(function(){SW&&(SW.lock=false);dealCard();},ok?260:520);
+}
+function bindDrag(el){
+var x0=0,dx=0,down=false;
+el.addEventListener("pointerdown",function(e){down=true;x0=e.clientX;dx=0;el.setPointerCapture(e.pointerId);el.style.transition="none";});
+el.addEventListener("pointermove",function(e){if(!down)return;dx=e.clientX-x0;el.style.transform="translateX("+dx+"px) rotate("+(dx/18)+"deg)";
+document.getElementById("zL").classList.toggle("near",dx<-50);document.getElementById("zR").classList.toggle("near",dx>50);});
+function up(){if(!down)return;down=false;document.getElementById("zL").classList.remove("near");document.getElementById("zR").classList.remove("near");
+if(Math.abs(dx)>80)answer(dx<0?"A":"B",true);else{el.style.transition="transform .2s";el.style.transform="";}}
+el.addEventListener("pointerup",up);el.addEventListener("pointercancel",up);
+}
+document.addEventListener("keydown",function(e){if(!SW)return;if(e.key==="ArrowLeft")answer("A");if(e.key==="ArrowRight")answer("B");});
+function endSwipe(){
+if(!SW)return;clearInterval(SW.timer);var s=SW,best=hs("swipe"),rec=s.score>best;if(rec)setHs("swipe",s.score);
+var acc=s.right+s.wrong?Math.round(s.right/(s.right+s.wrong)*100):0;
+if(rec&&s.score>0)confetti();
+gWrap.innerHTML='<div class="gend"><div class="qbig">'+(rec?"🏆":"⏱")+'</div><h3>'+(rec?"Nieuwe highscore!":"Tijd is op!")+'</h3><div class="big">'+s.score+'</div><p class="muted">'+s.right+' goed · '+s.wrong+' fout · '+acc+'% raak · level '+(s.round+1)+(rec?'':' · highscore: '+best)+'</p>'+
+'<div class="row" style="justify-content:center;margin-top:12px"><button class="btn" id="gAgain">Nog een keer</button><button class="btn ghost" id="gBack">Andere game</button></div>'+
+(s.miss.length?'<div class="review"><h3>Even onthouden</h3>'+s.miss.slice(0,6).map(function(m){return '<div class="rv"><b>'+m[0]+'</b> → '+m[1]+'</div>';}).join("")+'</div>':'')+'</div>';
+SW=null;
+}
+
+var MEM=null;
+function startMemory(){
+stopSwipe();G.mode="memory";
+var pool=shuffle(CARDS.filter(function(c){return c[2].length<=92;})).slice(0,6),tiles=[];
+pool.forEach(function(c,i){tiles.push({k:i,t:c[1],kind:"term",par:c[0]});tiles.push({k:i,t:c[2],kind:"def",par:c[0]});});
+MEM={tiles:shuffle(tiles),open:[],moves:0,found:0,lock:false,t0:Date.now()};
+gWrap.innerHTML='<div class="mhud"><span>Beurten: <b id="mMoves">0</b></span><span>Gevonden: <b id="mFound">0</b> / 6</span><button class="btn ghost" id="gBack" style="padding:6px 12px">Stoppen</button></div><div class="mgrid" id="mgrid">'+
+MEM.tiles.map(function(t,i){return '<button class="mtile '+t.kind+'" data-i="'+i+'"><span class="back">?</span><span class="front">'+(t.kind==="term"?'<b>'+t.t+'</b>':t.t)+'</span></button>';}).join("")+'</div>';
+}
+gWrap.addEventListener("click",function(e){
+var b=e.target.closest(".mtile");if(!b||!MEM||MEM.lock||b.classList.contains("open")||b.classList.contains("done"))return;
+b.classList.add("open");MEM.open.push(b);
+if(MEM.open.length===2){MEM.moves++;document.getElementById("mMoves").textContent=MEM.moves;
+var a=MEM.tiles[MEM.open[0].dataset.i],c=MEM.tiles[MEM.open[1].dataset.i];
+if(a.k===c.k&&a.kind!==c.kind){MEM.open.forEach(function(x){x.classList.add("done");});MEM.open=[];MEM.found++;document.getElementById("mFound").textContent=MEM.found;
+if(MEM.found===6)setTimeout(endMemory,500);}
+else{MEM.lock=true;MEM.open.forEach(function(x){x.classList.add("miss");});setTimeout(function(){MEM.open.forEach(function(x){x.classList.remove("open","miss");});MEM.open=[];MEM.lock=false;},950);}
+}
+});
+function endMemory(){
+var m=MEM.moves,best=hs("memory"),rec=!best||m<best;if(rec)setHs("memory",m);
+var stars=m<=9?3:m<=13?2:1;confetti();
+gWrap.innerHTML='<div class="gend"><div class="qbig">'+"⭐".repeat(stars)+'</div><h3>Alle 6 paren gevonden!</h3><div class="big">'+m+' beurten</div><p class="muted">'+(rec?"Nieuw record!":"Jouw record: "+best+" beurten")+'</p><div class="row" style="justify-content:center;margin-top:12px"><button class="btn" id="gAgain">Nog een keer</button><button class="btn ghost" id="gBack">Andere game</button></div></div>';
+MEM=null;
+}
+gamesHome();
+
+/* ---------- leg uit (AI-nakijker) ---------- */
+var AI_URL="",LU_VAK="economie";
+function luInSel(p,f){return typeof inSel==="function"?inSel(p,f):(f==="alle"||p===f);}
+function luLab(f){return typeof selLabel==="function"?selLabel(f):(f==="alle"?"Alles":f);}
+var luPar="alle",luIdx=-1,luBusy=false,luS={goed:0,totaal:0},luCard=document.getElementById("luCard");
+var LU_STOP=" de het een en van in op te dat die is zijn met voor aan als om bij of door uit naar ook maar dan wat wie hoe je jij jouw je u ze zij hij wij we er niet geen meer minder kan kun moet wordt worden heeft hebben veel weinig alle alles iets deze dit dat waar wanneer welke zoals bijvoorbeeld per tot over onder tussen zonder wel nog al ";
+function luWords(t){return (t.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"").match(/[a-z0-9]+/g)||[]);}
+function luLocal(c,ans){
+  var key=[],seen={};luWords(c[2]).forEach(function(w){if(w.length>=4&&LU_STOP.indexOf(" "+w+" ")<0&&!seen[w]){seen[w]=1;key.push(w);}});
+  var aw=luWords(ans),hit=[],miss=[];
+  key.forEach(function(k){var stam=k.slice(0,Math.max(4,k.length-2));(aw.some(function(w){return w.indexOf(stam)===0;})?hit:miss).push(k);});
+  var f=key.length?hit.length/key.length:0;
+  return {oordeel:f>=0.6?"goed":f>=0.3?"bijna":"nognietgoed",goed:hit.length?"Je noemt: "+hit.slice(0,5).join(", ")+".":"",
+    mist:miss.length?"Kijk nog naar: "+miss.slice(0,4).join(", ")+".":"",fout:"",tip:"Vergelijk je antwoord met de uitleg hieronder.",lokaal:true};
+}
+function luScore(){document.getElementById("luScore").innerHTML="Helemaal goed: <b>"+luS.goed+"</b> van "+luS.totaal;}
+function luNew(){
+  document.getElementById("luFilters").innerHTML=["alle"].concat(PARS.map(function(p){return p.id;})).map(function(f){return '<button data-lu="'+f+'" class="'+(f===luPar?"on":"")+'"'+(P(f)?' title="'+P(f).t+'"':'')+'>'+luLab(f)+'</button>';}).join("");
+  var pool=CARDS.map(function(_,i){return i;}).filter(function(i){return luInSel(CARDS[i][0],luPar)&&CARDS[i][1].indexOf("→")<0;}),i;
+  do{i=pick(pool);}while(pool.length>1&&i===luIdx);luIdx=i;var c=CARDS[i];
+  luCard.innerHTML='<div class="qtop">'+tag(c[0])+'</div><p class="qq" style="margin-top:10px">Leg uit: <b>'+c[1]+'</b></p>'+
+    '<textarea id="luIn" maxlength="600" placeholder="Typ in je eigen woorden wat '+c[1].toLowerCase()+' betekent. Geef ook een voorbeeld."></textarea>'+
+    '<div class="row" style="margin-top:10px"><button class="btn" id="luCheck">Laat nakijken</button><button class="btn ghost" id="luSkip">Ander begrip</button></div><div id="luFb"></div>';
+  luScore();
+}
+function luShow(c,f,msg){
+  var lab={goed:"✓ Goed",bijna:"Bijna",nognietgoed:"Nog niet goed"}[f.oordeel]||"Bijna";
+  luS.totaal++;if(f.oordeel==="goed"){luS.goed++;S.known[luIdx]=1;save();}
+  document.getElementById("luFb").innerHTML='<div class="lubox '+f.oordeel+'"><span class="badge2 '+f.oordeel+'">'+lab+'</span>'+
+    (msg?'<p class="note">'+msg+'</p>':'')+
+    (f.goed?'<p><b>Goed:</b> '+esc(f.goed)+'</p>':'')+(f.mist?'<p><b>Mist nog:</b> '+esc(f.mist)+'</p>':'')+(f.fout?'<p><b>Klopt niet:</b> '+esc(f.fout)+'</p>':'')+(f.tip?'<p><b>Tip:</b> '+esc(f.tip)+'</p>':'')+
+    '<div class="model"><b>Uitleg uit de les:</b> '+c[2]+'<br><i>Voorbeeld: '+c[3]+'</i></div>'+
+    (f.lokaal?'<p class="note">Snelle controle op kernwoorden (zonder AI).</p>':'<p class="note">Nagekeken door AI. Twijfel je? Vraag het je docent.</p>')+
+    (f.oordeel==="goed"?'<p class="note">✓ Dit begrip staat nu op "gekend" bij Begrippen.</p>':'')+
+    '</div><div class="row" style="margin-top:12px"><button class="btn" id="luNext">Volgend begrip →</button>'+(f.oordeel!=="goed"?'<button class="btn ghost" id="luAgain">Verbeter je antwoord</button>':'')+'</div>';
+  luScore();
+}
+function esc(t){return String(t).replace(/[&<>"]/g,function(ch){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[ch];});}
+function luCheck(){
+  if(luBusy)return;var c=CARDS[luIdx],inp=document.getElementById("luIn"),ans=inp.value.trim();
+  if(ans.length<3){document.getElementById("luFb").innerHTML='<div class="fb mid">Typ eerst je uitleg.</div>';return;}
+  var btn=document.getElementById("luCheck");
+  if(!AI_URL){luShow(c,luLocal(c,ans));return;}
+  luBusy=true;btn.disabled=true;btn.textContent="Bezig met nakijken… (even geduld)";
+  var ctl=window.AbortController?new AbortController():null,t=setTimeout(function(){if(ctl)ctl.abort();},45000);
+  fetch(AI_URL,{method:"POST",body:JSON.stringify({vak:LU_VAK,begrip:c[1],uitleg:c[2],voorbeeld:c[3],antwoord:ans,paragraaf:c[0]+" "+(P(c[0])?P(c[0]).t:""),samenvatting:P(c[0])&&P(c[0]).sum||"",begrippen:CARDS.filter(function(x){return x[0]===c[0];}).map(function(x){return "- "+x[1]+": "+x[2];}).join("\n")}),signal:ctl?ctl.signal:undefined})
+   .then(function(r){return r.json();})
+   .then(function(f){if(f&&f.status==="ok")luShow(c,f);else luShow(c,luLocal(c,ans),(f&&f.melding)||"De AI kon nu niet nakijken.");})
+   .catch(function(){luShow(c,luLocal(c,ans),"De AI is nu niet bereikbaar.");})
+   .then(function(){clearTimeout(t);luBusy=false;btn.disabled=false;btn.textContent="Laat nakijken";});
+}
+document.getElementById("lab-leguit").addEventListener("click",function(e){
+  var f=e.target.closest("[data-lu]");if(f){luPar=f.dataset.lu;luNew();return;}
+  if(e.target.closest("#luCheck")){luCheck();return;}
+  if(e.target.closest("#luSkip")||e.target.closest("#luNext")){luNew();return;}
+  if(e.target.closest("#luAgain")){document.getElementById("luFb").innerHTML="";document.getElementById("luIn").focus();}
+});
+luNew();
+
+renderFlash();renderProgress();renderCheck();
+})();
+</script>
+</body>
+</html>

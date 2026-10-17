@@ -120,7 +120,19 @@ footer{border-top:1px solid var(--line);color:var(--muted);font-size:13px;paddin
       <div class="body"><h3>Boekje 4</h3><span class="lock">Volgt in het tweede deel van het jaar</span></div>
     </div>
   </div>
+  <a class="eco rv" style="--i:7" href="economie/index.html">
+    <img src="economie/img/markt.jpg" alt="" loading="lazy">
+    <span class="eco-tx"><span class="eyebrow" style="color:#ffd0d1">Ook bij meneer Boersen</span><b>Economie jaar 2, 3 en 4</b><span>PowerPoints, uitleg, oefenstof, films en lesapps per hoofdstuk →</span></span>
+  </a>
 </main>
+<style>
+.eco{position:relative;isolation:isolate;display:flex;align-items:flex-end;min-height:220px;margin:34px 0 10px;border-radius:24px;overflow:hidden;color:#fff;text-decoration:none;transition:transform .2s var(--ease-out)}
+.eco img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .5s var(--ease-out)}
+.eco::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(12,28,23,.88),rgba(12,28,23,.35) 70%,rgba(12,28,23,.1))}
+.eco-tx{display:grid;gap:4px;padding:24px 26px;max-width:560px}.eco-tx b{font:700 clamp(24px,3.4vw,34px)/1.1 Fraunces,serif}
+.eco:active{transform:scale(.99)}
+@media (hover:hover) and (pointer:fine){.eco:hover img{transform:scale(1.04)}}
+</style>
 <footer><div class="wrap">Meneer Boersen · Vellesan College · Geschiedenis jaar 3 mavo · lesmateriaal: J. Boersen</div></footer>
 </body>
 </html>
