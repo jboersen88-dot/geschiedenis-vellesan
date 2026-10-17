@@ -163,3 +163,4 @@ Aanleiding: de eerste versie was "een standaard website". Je bestaande Google Si
 - **Responsief**: 12 pagina's gecontroleerd op 390 px, geen horizontaal scrollen; geen consolefouten in de Racer. Alle interne links bestaan.
 - Niet gedaan: echte iPad-test, donkere modus per pagina, handmatige speeltest van de games. Oefentoets 3 vraag 3 (oorzaak-gevolgketen) heeft het juiste antwoord marginaal als langste (4 tekens); bewust zo gelaten.
 - `YT_ID` voor H1 en H2 staat nog leeg: vul die in zodra de YouTube-ID's bekend zijn.
+- 23:40: **alles naar Claude.** ai.js (Leg uit, nakijken.html, kaart.html, doeboek.html) en Leg uit in app.html en boekje-2/app.html gebruiken nu de Claude-Worker in plaats van Gemini; geen Google-adres meer in de repo. ai.js zet de oude aanroep om naar het nakijkverzoek (begrip = uitleg met 2 punten, hoofdstuk uit de paragraaf, boekje 2 vast op SZ). Getest op alle vijf de pagina's.

@@ -407,6 +407,7 @@ nav.tabs button:active{transform:scale(.97)}
 #lViewer{aspect-ratio:auto;background:transparent;overflow:hidden;min-width:0;max-width:100%}
 .les>*{min-width:0}.sdeck{min-width:0;max-width:100%}
 </style>
+<script src="ai.js"></script>
 </head>
 <body>
 <div class="app">
@@ -1053,7 +1054,7 @@ function endMemory(){
 gamesHome();
 
 /* ---------- leg uit (AI-nakijker) ---------- */
-var AI_URL="https://script.google.com/macros/s/AKfycbxkH4alzrbV7uJXjRbXAIHILrzQvlegxpeWD1yw9TCC_huhqs2wPEkBmEiXqf5YWuMiAA/exec" /* AI-nakijker (Gemini). Uitzetten: maak de URL leeg, dan valt Leg uit terug op luLocal. Staat ook publiek in de Google Site. */,LU_VAK="geschiedenis";
+/* Leg uit: AI-nakijker = Claude via ai.js (GV_AI). Uitzetten: GV_AI_URL leeg maken in ai.js, dan valt Leg uit terug op luLocal. */
 function luInSel(p,f){return typeof inSel==="function"?inSel(p,f):(f==="alle"||p===f);}
 function luLab(f){return typeof selLabel==="function"?selLabel(f):(f==="alle"?"Alles":f);}
 var luPar="alle",luIdx=-1,luBusy=false,luS={goed:0,totaal:0},luCard=document.getElementById("luCard");
@@ -1094,14 +1095,11 @@ function luCheck(){
   if(luBusy)return;var c=CARDS[luIdx],inp=document.getElementById("luIn"),ans=inp.value.trim();
   if(ans.length<3){document.getElementById("luFb").innerHTML='<div class="fb mid">Typ eerst je uitleg.</div>';return;}
   var btn=document.getElementById("luCheck");
-  if(!AI_URL){luShow(c,luLocal(c,ans));return;}
+  if(!window.GV_AI||!GV_AI.enabled){luShow(c,luLocal(c,ans));return;}
   luBusy=true;btn.disabled=true;btn.textContent="Bezig met nakijken… (even geduld)";
-  var ctl=window.AbortController?new AbortController():null,t=setTimeout(function(){if(ctl)ctl.abort();},45000);
-  fetch(AI_URL,{method:"POST",body:JSON.stringify({vak:LU_VAK,begrip:c[1],uitleg:c[2],voorbeeld:c[3],antwoord:ans,paragraaf:c[0]+" "+(P(c[0])?P(c[0]).t:""),samenvatting:P(c[0])&&P(c[0]).sum||"",begrippen:CARDS.filter(function(x){return x[0]===c[0];}).map(function(x){return "- "+x[1]+": "+x[2];}).join("\n")}),signal:ctl?ctl.signal:undefined})
-   .then(function(r){return r.json();})
-   .then(function(f){if(f&&f.status==="ok")luShow(c,f);else luShow(c,luLocal(c,ans),(f&&f.melding)||"De AI kon nu niet nakijken.");})
-   .catch(function(){luShow(c,luLocal(c,ans),"De AI is nu niet bereikbaar.");})
-   .then(function(){clearTimeout(t);luBusy=false;btn.disabled=false;btn.textContent="Laat nakijken";});
+  GV_AI.check({begrip:c[1],uitleg:c[2],voorbeeld:c[3],antwoord:ans,paragraaf:c[0]}).then(function(f){
+    if(f.status==="ok")luShow(c,f);else luShow(c,luLocal(c,ans),f.melding||"De AI kon nu niet nakijken.");
+    luBusy=false;btn.disabled=false;btn.textContent="Laat nakijken";});
 }
 document.getElementById("lab-leguit").addEventListener("click",function(e){
   var f=e.target.closest("[data-lu]");if(f){luPar=f.dataset.lu;luNew();return;}

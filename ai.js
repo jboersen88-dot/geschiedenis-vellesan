@@ -1,8 +1,8 @@
-/* Gedeelde AI-nakijkmodule. Zelfde Apps Script-endpoint (Gemini) als de Economie-apps.
+/* Gedeelde AI-nakijkmodule (Leg uit, nakijken.html, kaart.html, doeboek.html): Claude Haiku 5.5 via de Cloudflare Worker.
    UITZETTEN: zet GV_AI_URL hieronder op "" -> overal valt het terug op de lokale nakijker.
-   NB: dit endpoint staat ook publiek in de broncode van de Google Site (quotum/misbruikrisico). */
+   Hier staat nooit een sleutel of lesstof; geen naam, klas of leerlingnummer meesturen. */
 (function(){
-var GV_AI_URL="https://script.google.com/macros/s/AKfycbxkH4alzrbV7uJXjRbXAIHILrzQvlegxpeWD1yw9TCC_huhqs2wPEkBmEiXqf5YWuMiAA/exec";
+var GV_AI_URL="https://geschiedenis-nakijker.nakijker-worker.workers.dev";
 var STOP=" de het een en van in op te dat die is zijn met voor aan als om bij of door uit naar ook maar dan wat wie hoe je jij jouw u ze zij hij wij we er niet geen meer minder kan kun moet wordt worden heeft hebben veel weinig alle alles iets deze dit waar wanneer welke zoals bijvoorbeeld per tot over onder tussen zonder wel nog al nu ";
 function words(t){return (String(t).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"").match(/[a-z0-9]+/g)||[]);}
 function keys(t){var seen={},k=[];words(t).forEach(function(w){if((w.length>=4||/^\d+$/.test(w))&&STOP.indexOf(" "+w+" ")<0&&!seen[w]){seen[w]=1;k.push(w);}});return k;}
@@ -17,14 +17,33 @@ function local(punten,ans){
     mist:mist.length?"Kijk nog naar nakijkpunt "+mist.join(", ")+".":"",fout:"",
     tip:"Vergelijk je antwoord met het modelantwoord hieronder.",lokaal:true};
 }
-/* o: {begrip, uitleg, voorbeeld, antwoord, paragraaf, punten[]} */
+/* Oude aanroepvorm {begrip, uitleg, voorbeeld, antwoord, paragraaf, samenvatting, punten[]} -> nakijkverzoek voor de Worker */
+function verzoek(o){
+  var b=String(o.begrip||""),term=b.length<60&&b.indexOf("?")<0,
+      m=/H[1-4]/.exec(o.paragraaf||""),
+      pt=(o.punten||[]).filter(Boolean).slice(0,8).map(function(t){return {t:String(t).slice(0,500),p:1};});
+  if(!pt.length)pt=o.uitleg&&!/^Beoordeel/.test(o.uitleg)
+    ?[{t:("De betekenis: "+o.uitleg+(o.voorbeeld?" (voorbeeld: "+o.voorbeeld+")":"")).slice(0,500),p:2}]
+    :[{t:"Het antwoord klopt met de lesstof en beantwoordt de vraag volledig genoeg.",p:2}];
+  if(pt.length===1)pt[0].p=2; // één punt: 2 punten, zodat 'bijna' mogelijk is
+  return {actie:"nakijken",hoofdstukken:o.h||(m?[m[0]]:["H1","H2","H3","H4"]),
+    vraag:(term?"Leg in je eigen woorden uit wat het begrip '"+b+"' betekent.":b).slice(0,1500),
+    nakijkpunten:pt,bron:String(o.samenvatting||"").slice(0,4000),antwoord:String(o.antwoord||"").slice(0,2000)};
+}
+/* Uitslag van de Worker -> velden die de pagina's al tonen (oordeel, goed, mist, fout, tip) */
+function vorm(f){
+  var w=function(x){return x.waarom;},vol=f.per_punt.filter(function(x){return x.punten>=x.max;}),deel=f.per_punt.filter(function(x){return x.punten<x.max;});
+  return {status:"ok",oordeel:f.oordeel,goed:vol.map(w).join(" "),mist:deel.map(w).join(" "),
+    fout:f.buiten_lesstof?"Dit staat niet in de lesstof: "+f.buiten_lesstof:"",tip:f.tip,feedback:f.feedback,punten:f.punten,max:f.max};
+}
 function check(o){
   var fb=function(msg){var f=local(o.punten&&o.punten.length?o.punten:[o.uitleg||""],o.antwoord);f.melding=msg;return f;};
   if(!GV_AI_URL)return Promise.resolve(fb(""));
   var ctl=window.AbortController?new AbortController():null,t=setTimeout(function(){if(ctl)ctl.abort();},45000);
-  return fetch(GV_AI_URL,{method:"POST",body:JSON.stringify({vak:"geschiedenis",begrip:o.begrip,uitleg:o.uitleg||"",voorbeeld:o.voorbeeld||"",antwoord:o.antwoord,paragraaf:o.paragraaf||"",samenvatting:o.samenvatting||"",begrippen:(o.punten||[]).map(function(p,i){return (i+1)+". "+p;}).join("\n")}),signal:ctl?ctl.signal:undefined})
+  // geen Content-Type -> geen CORS-preflight
+  return fetch(GV_AI_URL,{method:"POST",body:JSON.stringify(verzoek(o)),signal:ctl?ctl.signal:undefined})
     .then(function(r){return r.json();})
-    .then(function(f){return f&&f.status==="ok"?f:fb((f&&f.melding)||"De AI kon nu niet nakijken.");})
+    .then(function(f){return f&&f.status==="ok"?vorm(f):fb((f&&f.melding)||"De AI kon nu niet nakijken.");})
     .catch(function(){return fb("De AI is nu niet bereikbaar.");})
     .then(function(f){clearTimeout(t);return f;});
 }
@@ -41,5 +60,5 @@ function render(f){
 var css=document.createElement("style");
 css.textContent=".aifb{margin-top:12px;border-radius:16px;padding:14px 16px;border:1.5px solid var(--line);background:var(--card);animation:aiin .32s cubic-bezier(.23,1,.32,1)}.aifb p{margin:6px 0}.aifb.goed{border-color:#2e9b6b;background:var(--ok-soft)}.aifb.bijna{border-color:#d69a2a}.aifb.nognietgoed{border-color:var(--berry)}.aibadge{display:inline-block;font-weight:800;font-size:13px;padding:3px 11px;border-radius:99px;background:var(--green);color:#fff}.aifb.bijna .aibadge{background:#b97a1f}.aifb.nognietgoed .aibadge{background:var(--berry)}.ainote{font-size:13px;color:var(--muted)}@keyframes aiin{from{opacity:0;transform:translateY(8px) scale(.98)}}@media(prefers-reduced-motion:reduce){.aifb{animation:none}}";
 document.head.appendChild(css);
-window.GV_AI={check:check,render:render,local:local,esc:esc,enabled:!!GV_AI_URL};
+window.GV_AI={verzoek:verzoek,check:check,render:render,local:local,esc:esc,enabled:!!GV_AI_URL};
 })();
