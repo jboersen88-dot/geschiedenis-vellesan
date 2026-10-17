@@ -1,5 +1,22 @@
 # Changelog
 
+## 2026-10-18 · 02:00 nachtaudit
+
+### Afgevinkt (bestond al, gecontroleerd)
+- Interactieve basis uit de oude app (flipkaarten, 3-stappenpad, quizzen), 4 dia-presentaties in de eigen viewer, AI-nakijker (`ai.js`, `nakijken.html`, Leg uit; lokale fallback en time-out), voortgang in localStorage, games (Racer, swipe, memory, doe-boek, beeldquiz), Flow-beelden in kaart/quiz/boekje 2. Geen JS-fouten bij het laden van 10 hoofdpagina's.
+- Meerkeuze-audit met script over `BANK` (130 vragen boekje 1, 49 boekje 2) en alle oefentoetsen: overal exact 4 opties; boekje 1 geen enkele vraag met lengteverhouding > 1,5 en het juiste nergens duidelijk het langste.
+
+### Aangepast
+- Oefentoets H3+H4, vraag 1: juiste antwoord was het langste (57 tekens vs 36-43); ingekort tot "Artsen, priesters, schrijvers en journalisten". Oefentoets 1 t/m 4, vraag 3 (volgorde Spinning Jenny): juiste ketting ingekort ("… waterrad"). Beide ook in `racer.html`. Betekenis gelijk.
+
+### ONTWERP.md
+- Onder "Klaar voor de website" staat alleen de meerkeuzeweergave (4 blokken A-D, witruimte, geschud, console-controle). Dat was al gebouwd en is nu gecontroleerd. Al het andere (inhoudsmodel, bronvragen, stapjesmodus, adaptieve oefening, "dit vind ik moeilijk"-knop, nieuwe nakijker) is nog in ontwerp en is niet gebouwd.
+
+### Nog open
+- Boekje 2: 2 vragen met een kort antwoord als uitschieter (namen, toegestaan); dia's en films volgen van de docent.
+- Doe-boek H4: meerkeuze van de docent zelf is niet herschreven. Recherchebord nog geen widget.
+- Niet getest op een echte iPad. In deze nachtrun geen nieuwe visuele laag; huidige polish blijft staan.
+
 ## 2026-10-17 · structuur: Geschiedenis jaar 3 met vier boekjes
 
 - **`index.html` is nu het jaaroverzicht "Geschiedenis jaar 3"** met vier boekjes: boekje 1 "De industriële samenleving in Nederland" en boekje 2 "Sociale zekerheid en verzorgingsstaat in Nederland" zijn klikbaar, met hun vier hoofdstukken op de kaart. Boekje 3 en 4 staan als "Volgt in het tweede deel van het jaar".
