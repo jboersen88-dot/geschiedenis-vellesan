@@ -1,5 +1,22 @@
 # Changelog
 
+## 2026-10-17 · 21:00 AI-nakijker Haiku 5.5 in de oefentoetsen
+
+**Docent: INSTALLATIE.md (ai-oefentoetsen/nakijker) nog doorlopen.** `nakijker/WEBAPP_URL.txt` bestaat nog niet, dus `GV_NK_URL` in `nakijker.js` is leeg en de oefentoetsen werken precies als eerst. Na installatie: URL tussen de aanhalingstekens zetten, pushen.
+
+### Gebouwd
+- **`nakijker.js`** (nieuw, laadt na `ai.js`): `GV_NK.check({h,vraag,punten,bron,antwoord})` met POST zonder Content-Type, 45 s time-out, lokale terugval via `GV_AI.local`; `GV_NK.render` toont badge met punten, per nakijkpunt ✓/✗ met uitleg, feedback, tip en "Dit staat niet in de lesstof". Geen naam/klas/leerlingnummer in het verzoek. Gemini in `ai.js` ("Leg uit", `nakijken.html`) is niet aangeraakt.
+- **`toets.html`**: na inleveren worden de open vragen (max. 3 tegelijk, laadstatus per vraag) nagekeken. t1 = H1+H2, t2 = H3+H4, t3 = H1-H4. AI-punten staan voorgevuld in de vinkjes/puntenknoppen (aan te passen), de uitslag staat in de bestaande localStorage-status (`ai` per toets), dus herladen kost niets. Bij een fout: melding + knop "Probeer AI-nakijken opnieuw", nakijkblad blijft werken. Vragen met één nakijkpunt en meer punten (t1 16, 17; t3 24) gaan als één nakijkpunt met alle modelantwoord-regels naar de AI. Een afgeronde vinkvraag krijgt alleen een vinkje als het volledige nakijkpunt is gehaald.
+- Meerkeuze blijft lokaal.
+
+### Niet gedaan
+- **Spotprent-analyse (C) overgeslagen**: de enige spotprent-widget staat in `boekje-2/onderzoek.html` (Kijkwijzer, boekje 2). Boekje 2 is niet de lesstof van de nakijker (H1-H4 = boekje 1), dus koppelen zou tegen de verkeerde lesstof nakijken.
+
+### Test
+- Lege URL, desktop: t1 inleveren: 11 vinkjes en 2 puntenknoppen als voorheen, geen AI-blokken, geen consolefouten.
+- Met een **lokale nepserver** (geen echte AI): 7 open vragen nagekeken, vinkjes voorgevuld, laadstatus zichtbaar, uitslag bewaard; na herladen geen nieuwe aanroepen. Bekeken op desktop licht en iPad-breedte (820 px) donker, geen horizontaal scrollen.
+- **Echte test met Haiku (goed en fout antwoord op t1 vraag 14): niet uitgevoerd, er is nog geen URL.** Dit moet nog gebeuren na installatie.
+
 ## 2026-10-18 · 02:00 nachtaudit
 
 ### Afgevinkt (bestond al, gecontroleerd)

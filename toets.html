@@ -69,6 +69,7 @@ textarea:focus{border-color:var(--teal);outline:none}
 .chk small{color:var(--muted);white-space:nowrap}
 .mine{white-space:pre-wrap;background:var(--bg);border-radius:12px;padding:10px 12px;margin-top:8px;font-size:15px}
 .mine:empty:before{content:"Niet beantwoord";color:var(--muted)}
+.aibox:empty{display:none}.aibox{margin-top:4px}.aiwait{margin-top:12px;font-size:14px;color:var(--muted)}.aiwait:before{content:"";display:inline-block;width:12px;height:12px;margin-right:8px;border:2px solid var(--teal);border-right-color:transparent;border-radius:50%;vertical-align:-2px;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}@media(prefers-reduced-motion:reduce){.aiwait:before{animation:none}}
 .stepper{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;align-items:center}
 .stepper button{min-width:44px;min-height:44px;border-radius:12px;border:1.5px solid var(--line);background:var(--card);font:700 16px Inter;cursor:pointer;color:inherit}
 .stepper button[aria-pressed=true]{background:var(--teal);border-color:var(--teal);color:#fff}
@@ -82,6 +83,8 @@ textarea:focus{border-color:var(--teal);outline:none}
 <body>
 <div class="wrap" id="app"></div>
 <script src="data/toetsen.js"></script>
+<script src="ai.js"></script>
+<script src="nakijker.js"></script>
 <script>
 (function(){
 "use strict";
@@ -113,6 +116,7 @@ app.addEventListener("click",function(e){
   if(e.target.closest("#home")){home();return;}
   if(e.target.closest("#hand")){var miss=missing();if(!miss||confirm("Je hebt "+miss+" vraag"+(miss>1?"en":"")+" nog niet beantwoord. Toch inleveren?"))finish();return;}
   if(e.target.closest("#again")){if(confirm("Opnieuw beginnen? Je antwoorden en cijfer van deze toets worden gewist."))start(cur,true);return;}
+  var rt=e.target.closest("[data-retry]");if(rt){delete st[cur].ai[rt.dataset.retry];save();result();return;}
   var s=e.target.closest("[data-pt]");if(s){var nr=s.dataset.nr;st[cur].self[nr]=+s.dataset.pt;save();result();return;}
 });
 app.addEventListener("change",function(e){var c=e.target.closest("[data-g]");if(c){var a=st[cur].self[c.dataset.nr];a=Array.isArray(a)?a:[];a[+c.dataset.g]=c.checked?1:0;st[cur].self[c.dataset.nr]=a;save();score();}});
@@ -144,27 +148,51 @@ function finish(){clearInterval(timer);st[cur].done=true;save();result();window.
 
 /* ---------- nakijken ---------- */
 function mcScore(){var a=st[cur],n=0;D[cur].mc.forEach(function(q,i){if(a.mc[i]===q.j)n++;});return n;}
-function openScore(){var a=st[cur],s=0;D[cur].open.forEach(function(o){var v=a.self[o.nr];if(o.g.length>1||(o.g.length===1&&o.p===1)){if(Array.isArray(v))o.g.forEach(function(g,i){if(v[i])s+=g.p;});}else if(typeof v==="number")s+=v;});return s;}
+function openScore(){var a=st[cur],s=0;D[cur].open.forEach(function(o){var v=a.self[o.nr];if(boxed(o)){if(Array.isArray(v))o.g.forEach(function(g,i){if(v[i])s+=g.p;});}else if(typeof v==="number")s+=v;});return s;}
 function gradeOf(p,m){return Math.round((p/m*9+1)*10)/10;}
 function score(){var m=maxPts(cur),p=mcScore()+openScore(),g=gradeOf(p,m),el=document.getElementById("gr");if(!el)return;
   el.textContent=g.toFixed(1).replace(".",",");el.classList.toggle("bad",g<5.5);document.getElementById("pp").textContent=p%1?p.toFixed(1).replace(".",","):p;
   var n=document.getElementById("gm");n.textContent=g>=8?"Top! Jij bent er klaar voor.":g>=6.5?"Goed bezig. Kijk nog even naar je fouten.":g>=5.5?"Voldoende, maar oefen je zwakke punten nog.":"Nog even oefenen: begin bij het Oefenlab.";}
+function boxed(o){return o.g.length>1||(o.g.length===1&&o.p===1);}
+function nkHtml(o){var a=st[cur],v=a.self[o.nr],h="";
+    if(boxed(o)){h+='<div class="nk">'+o.g.map(function(g,i){return '<label class="chk"><input type="checkbox" data-nr="'+o.nr+'" data-g="'+i+'"'+(Array.isArray(v)&&v[i]?" checked":"")+'><span>'+esc(g.t)+'</span><small>'+g.p+' p</small></label>';}).join("")+"</div>";}
+    else{h+='<div class="nk">'+o.m.map(function(x){return '<div class="chk" style="cursor:default"><span>'+esc(x)+'</span></div>';}).join("")+'</div><div class="stepper"><span class="muted">Mijn punten:</span>';
+      for(var p=0;p<=o.p;p++)h+='<button data-nr="'+o.nr+'" data-pt="'+p+'" aria-pressed="'+(v===p)+'">'+p+'</button>';h+="</div>";}
+  return h+'<div class="aibox" id="ai-'+o.nr+'">'+aiHtml(o)+'</div>';}
+
+/* ---------- AI-nakijker (Haiku 5.5) ---------- */
+var HF={t1:["H1","H2"],t2:["H3","H4"],t3:["H1","H2","H3","H4"]},busy={},queue=[],running=0;
+function aiHtml(o){var r=(st[cur].ai||{})[o.nr];if(r)return GV_NK.render(r)+(r.status!=="ok"&&GV_NK.enabled?'<button class="btn ghost" data-retry="'+o.nr+'" style="margin-top:8px">Probeer AI-nakijken opnieuw</button>':"");
+  return busy[cur+o.nr]?'<div class="aiwait">AI kijkt je antwoord na…</div>':"";}
+function aiPunten(o){return o.g.length?o.g.map(function(g){return {t:g.t,p:Math.round(g.p)};}):[{t:o.m.join("\n"),p:o.p}];}
+function runAI(){if(!GV_NK.enabled)return;var k=cur,a=st[k];a.ai=a.ai||{};
+  D[k].open.forEach(function(o){var ans=(a.open[o.nr]||"").trim();if(!ans||a.ai[o.nr]||busy[k+o.nr])return;busy[k+o.nr]=1;queue.push([k,o,ans.slice(0,2000)]);});
+  pump();}
+function pump(){while(running<3&&queue.length){running++;(function(j){var k=j[0],o=j[1];
+    GV_NK.check({h:HF[k],vraag:o.v.slice(0,1500),punten:aiPunten(o),bron:(o.b||"").slice(0,4000),antwoord:j[2]}).then(function(f){
+      delete busy[k+o.nr];running--;
+      if(f.status==="ok"){var a=st[k];a.ai[o.nr]=f;
+        if(boxed(o))a.self[o.nr]=o.g.map(function(g,i){return f.per_punt[i]&&f.per_punt[i].punten>=f.per_punt[i].max?1:0;});else a.self[o.nr]=f.punten;}
+      else if(!f.lokaal||f.melding)st[k].ai[o.nr]={status:"fout",melding:f.melding||""};
+      save();
+      if(cur===k&&document.getElementById("nk-"+o.nr)){document.getElementById("nk-"+o.nr).innerHTML=nkHtml(o);score();}
+      pump();});})(queue.shift());}
+  if(cur)D[cur].open.forEach(function(o){var b=document.getElementById("ai-"+o.nr);if(b&&busy[cur+o.nr])b.innerHTML=aiHtml(o);});}
+
 function result(){
   var d=D[cur],a=st[cur],m=maxPts(cur);
-  var h='<a class="muted" href="#" id="home">← Andere toets kiezen</a><div class="card res fade" style="margin-top:16px"><div class="eyebrow">Je cijfer (voorlopig, tot je de open vragen hebt nagekeken)</div><div class="grade" id="gr">-</div><p><b id="pp">0</b> van <b>'+m+'</b> punten · meerkeuze '+mcScore()+'/'+d.mc.length+'</p><p class="muted" id="gm" style="margin:0"></p><p class="muted" style="font-size:14px;margin:10px 0 0">Cijfer = punten : '+m+' × 9 + 1. Vink bij de open vragen aan wat jij goed had.</p></div><h2>Meerkeuze nagekeken</h2>';
+  var h='<a class="muted" href="#" id="home">← Andere toets kiezen</a><div class="card res fade" style="margin-top:16px"><div class="eyebrow">Je cijfer (voorlopig, tot je de open vragen hebt nagekeken)</div><div class="grade" id="gr">-</div><p><b id="pp">0</b> van <b>'+m+'</b> punten · meerkeuze '+mcScore()+'/'+d.mc.length+'</p><p class="muted" id="gm" style="margin:0"></p><p class="muted" style="font-size:14px;margin:10px 0 0">Cijfer = punten : '+m+' × 9 + 1. Bij de open vragen kijkt de AI mee; jij kunt de vinkjes nog aanpassen.</p></div><h2>Meerkeuze nagekeken</h2>';
   d.mc.forEach(function(q,i){var ok=a.mc[i]===q.j;h+='<div class="card q"><div class="n">Vraag '+(i+1)+(ok?" · goed":(a.mc[i]==null?" · niet beantwoord":" · fout"))+'</div><p>'+esc(q.v)+'</p><div class="opts">';
     a.perm[i].forEach(function(oi,pos){var c=oi===q.j?" right":(a.mc[i]===oi?" wrong":"");h+='<div class="opt'+c+'" style="cursor:default"><span class="l">'+"ABCD"[pos]+'</span><span>'+esc(q.o[oi])+'</span></div>';});
     h+='</div>'+(q.u?'<div class="fb">'+esc(q.u)+'</div>':"")+'</div>';});
   h+='<h2>Open vragen nakijken</h2>';
   d.open.forEach(function(o){var v=a.self[o.nr];
     h+='<div class="card q"><div class="n">Vraag '+o.nr+' · '+o.p+' punt'+(o.p>1?"en":"")+'</div>'+(o.b?bronHtml(o.b):"")+'<p>'+qtext(o.v)+'</p><div class="muted" style="font-size:13px">Jouw antwoord</div><div class="mine">'+esc(a.open[o.nr]||"")+'</div><div class="muted" style="font-size:13px;margin-top:12px">Zo kijk je het na</div>';
-    if(o.g.length>1||(o.g.length===1&&o.p===1)){h+='<div class="nk">'+o.g.map(function(g,i){return '<label class="chk"><input type="checkbox" data-nr="'+o.nr+'" data-g="'+i+'"'+(Array.isArray(v)&&v[i]?" checked":"")+'><span>'+esc(g.t)+'</span><small>'+g.p+' p</small></label>';}).join("")+"</div>";}
-    else{h+='<div class="nk">'+o.m.map(function(x){return '<div class="chk" style="cursor:default"><span>'+esc(x)+'</span></div>';}).join("")+'</div><div class="stepper"><span class="muted">Mijn punten:</span>';
-      for(var p=0;p<=o.p;p++)h+='<button data-nr="'+o.nr+'" data-pt="'+p+'" aria-pressed="'+(v===p)+'">'+p+'</button>';h+="</div>";}
+    h+='<div id="nk-'+o.nr+'">'+nkHtml(o)+'</div>';
     h+="</div>";});
   if(d.ver&&d.ver.length){h+='<h2>Deel C · Verdieping (telt niet mee)</h2>';d.ver.forEach(function(x){h+='<div class="card q"><div class="n">'+esc(x.titel)+'</div><p>'+esc(x.vraag)+'</p></div>';});}
   h+='<div style="margin-top:26px;display:flex;gap:10px;flex-wrap:wrap"><button class="btn ghost" id="again">Deze toets opnieuw maken</button><a class="btn" href="app.html#lab">Oefen verder in het Oefenlab</a></div>';
-  app.innerHTML=h;score();
+  app.innerHTML=h;score();runAI();
 }
 load();
 var m=/[?&]t=(t[123])/.exec(location.search);
