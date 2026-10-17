@@ -65,6 +65,40 @@ Mogelijkheden (jij kiest):
 
 ---
 
+## E. Spotprenten uit de centrale examens (vmbo-GL/TL geschiedenis, 2018–2025)
+
+Gezocht in de bronnenboekjes (`GT-0125-a-JJ-T-b`) en correctievoorschriften (`-c`) op examenblad.nl: 16 examens, 46 prenten of tekeningen. Examens van vóór 2018 staan onder een andere bestandsnaam en zijn nog niet doorzocht.
+**Afspraak:** de afbeelding komt van het IISG (publiek domein), niet uit de examen-pdf. De examenvraag en het correctievoorschrift zijn van het CvTE en mogen ongewijzigd en met bronvermelding gebruikt worden.
+
+### E1. Vrij te gebruiken en passend bij de boekjes (zelf vergeleken met de afbeelding in het examen)
+
+| Examen | Prent | Maker (sterfjaar) | Jaar | Vrije bron | Past bij |
+|---|---|---|---|---|---|
+| 2025-1 bron 2 | "Kleine luyden, zult gij nog langer uw eigen heerschers kiezen? Arbeiders, kameraden: Stemt rood!" | Albert Hahn sr. (†1918) | 1905 | IISG `N30051002346408` (originele tekening) | kiesrecht, socialisten |
+| 2023-2 bron 2 | "In de jute-industrie": de patroon en het arbeidersgezin (jutevezels in de longen) | Albert Hahn sr. (†1918) | 1906 | IISG `N30051002461348` (originele tekening) | sociale kwestie, arbeidsomstandigheden |
+| 2023-1 bron 2 | "Hier met het kiesrecht!" (Het kiesrecht aan banden, vastgeklonken aan den geldzak), Het Volk | Albert Hahn sr. (†1918) | 16 sep 1906 | IISG `N30051000964178` | kiesrecht (census) |
+| 2018-2 bron 6 | "De Tijd en de Ongevallenwet": "Kijk, daar gaat weer zoo'n oplichter van den Staat" (Notenkraker) | Albert Hahn sr. (†1918) | 2 feb 1908 | IISG `N30051000764800` | sociale wetten (Ongevallenwet) |
+| 2022-2 bron 3 | "Dilemma": oude vrouw ("Hij zou misschien nog leven, als hij niet zoo hard had moeten werken…") | Albert Hahn sr. (†1918) | 1910 | IISG `N30051000763984` | armoede, geen pensioen |
+| 2024-2 bron 2 | "Zaken gaan vóór" (Notenkraker): de patroon en de arbeider die naar een begrafenis wil | Albert Hahn sr. (†1918) | 4 jan 1913 | IISG `N30051000840204` | sociale kwestie, macht van de patroon |
+| 2024-2 bron 5 | "Op den landdag van den Bond voor Vrouwenkiesrecht" (De Nieuwe Amsterdammer) | Willy Sluiter (†1949) | 1916 | IISG `N30051000987138` (**maar 298×450 px**) | vrouwenkiesrecht |
+| 2022-1 bron 3 | "Gelijkstelling van bijzonder en openbaar onderwijs" (huwelijk, De Amsterdammer) | Johan Braakensiek (†1940) | 21 juni 1919 | IISG `N30051000989340` | Pacificatie van 1917 |
+
+### E2. Vrij, maar buiten de boekjes (wereldgeschiedenis)
+
+| Examen | Prent | Maker (sterfjaar) | Jaar | Opmerking |
+|---|---|---|---|---|
+| 2022-2 bron 5 | De strijd om Afrika en Azië (Duitsland, Groot-Brittannië, Rusland met zakken) | Thomas Nast (†1902), gesigneerd "Th. Nast" | ca. 1885 | vrije bron nog zoeken |
+| 2024-1 bron 12 | "Adolf Hitler voor de spiegel" (Punch) | Bernard Partridge (†1945) | 1934 | vrije bron nog zoeken |
+| 2023-2 bron 9 | "Te zwaar" / "Overweighted" (Punch: Wilson en de vredesduif) | volgens Commons onbekend | 26 mrt 1919 | [Commons](https://commons.wikimedia.org/wiki/File:Punch_dove_and_branch.png), PD; maker nog controleren |
+| 2021-1 bron 1 | Rellen in Amsterdam, 1848 | 19e eeuw | 1848 | vrije bron nog zoeken |
+| 2021-2 bron 17 | "Meld je niet! … duik onder!!" | anoniem (verzet) | 1945 | anoniem en > 70 jaar geleden gepubliceerd; bron NIOD |
+
+### E3. Beschermd of maker onbekend: alleen linken naar de examen-pdf
+
+David Low (†1963): 2025-1 b5, waarschijnlijk 2024-2 b10. Werner Hahmann (†1977): 2025-2 b6. George van Raemdonck (†1966): 2025-2 b11. Leo Jordaan (†1980): 2021-2 b16, 2023-2 b17 en b18. Fritz Behrendt (†2008): 2019-2 b25, 2021-2 b26. Pittsburgh Post-Gazette 1938 (2023-2 b12). Na 1950: 2018-2 b20, 2019-1 b20, b22 en b23, 2019-2 b21, 2021-2 b23 en b24, 2022-1 b22. Maker niet vastgesteld: 2018-1 b5, 2019-1 b7 en b16, 2019-2 b5 (gesigneerd, mogelijk Fred Spurgin †1966), 2021-1 b9 en b10, 2022-1 b9, 2022-2 b22, 2024-1 b3, b6 en b7, 2024-2 b4 en b12, 2025-2 b10.
+
+---
+
 ## Rechten onduidelijk / beschermd: niet gebruiken
 
 | Prent | Maker (sterfjaar) | Waarom niet |
