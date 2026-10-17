@@ -1,5 +1,28 @@
 # Changelog
 
+## 2026-10-17 · avond: toetsen, spel, scroll-verhaal en meerkeuze volgens de regels
+
+### Gebouwd
+- **Online getimede oefentoetsen** (`toets.html`, data in `data/toetsen.js`): de drie oefentoetsen van de docent (H1+H2, H3+H4, H1 t/m H4) met klok die een refresh overleeft, meerkeuze die zichzelf nakijkt, open vragen die je met het nakijkblad zelf nakijkt (vinkjes per nakijkpunt), cijfer = punten : max × 9 + 1, en de verdiepingsopdrachten. Antwoorden blijven in localStorage. Link vanuit het tabblad Oefentoetsen.
+- **Geschiedenis-Racer** (`racer.html`): de EDU-Racer-race met 158 geschiedenisvragen (alle 130 uit de quizbank + 28 begrippenvragen met korte versies), 10 sorteersets voor het swipespel (Agrarisch/Demografisch, waterkracht/stoom, Engeland/Nederland, Kinderwetje/leerplicht enzovoort) en groen thema. Vragen toevoegen kan zoals bij EDU-Racer, bovenaan het bestand.
+- **Filmvragen** (`filmvragen.html?h=H1` en `?h=H2`): film naast de vragen van de docent, antwoordvakken met autosave, "Toon antwoord" met modelantwoord uit de lesstof, en "Kopieer mijn antwoorden".
+- **Scroll-verhaal** (`verhaal.html`): vijf vastgezette scènes van de crisis naar de welvaart (handel 1929/1935 als staafdiagram met legenda en tabel, 640.000 werklozen oplopend, 265.000 trekpaarden aflopend naar 0, de tv van twee maandsalarissen).
+- Links vanuit de startpagina en het tabblad Games.
+
+### Meerkeuze volgens de besloten regels
+- In de oude quizbank was het juiste antwoord in 74 % van de vragen het langste en bij 104 van de 130 vragen was het langste antwoord meer dan 1,5 × het kortste. Alle 130 vragen en de 24 meerkeuzevragen van oefentoets 1 en 2 zijn herschreven: antwoorden zijn ongeveer even lang en het juiste is niet meer vaker het langste (alleen de opmaak van de foute antwoorden is aangepast; de inhoud van de vraag en het juiste antwoord zijn gelijk gebleven, behalve dat ze soms iets korter zijn).
+- Altijd 4 antwoorden, elk als eigen blok met `gap: .9rem`, A t/m D, volgorde geschud bij elke vraag. Ontwikkelaarscontrole in de console (`[meerkeuze] …`) als een vraag geen 4 opties heeft of de lengteverhouding boven 1,5 komt.
+- Autonome keuze: antwoorden van 20 tekens of korter (namen, jaartallen) vallen buiten de lengteverhouding, want daar valt lengte niet op. "Het langste is juist" telt pas als het juiste antwoord minstens 8 % en 5 tekens langer is dan het volgende.
+
+### Film
+- `YT_ID` in `app.html` en `filmvragen.html`: vul het YouTube-ID in (H1 en H2) en de film speelt via YouTube; leeg = Google Drive. Geen mp4 in de repo.
+
+### Beslissingen en kanttekeningen
+- Niet gebouwd (wacht op besluit in `ONTWERP.md`, ai-oefentoetsen): bronvragen in stapjesmodus, adaptieve oefening, "dit vind ik moeilijk"-knop, nieuwe AI-nakijker. `AI_URL` blijft leeg in de repo.
+- Racer en toetsen zijn getest in headless Chrome (laden zonder fouten, toets maken en nakijken, cijfer rekent). Op een echte iPad is het nog niet bekeken.
+- Doe-boek H4 en het Recherchebord zijn nog niet als widget gebouwd.
+- Drive-films en -toetsdocumenten werken alleen als ze op "iedereen met de link" staan.
+
 ## 2026-10-17 · middag: van kale showcase naar echte leeromgeving
 
 Aanleiding: de eerste versie was "een standaard website". Je bestaande Google Site draait al een rijke, zelfgebouwde lesapp (`industriele-samenleving-app.html`). Die is het fundament geworden, in plaats van hem opnieuw te bouwen.

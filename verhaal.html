@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<title>Van crisis naar welvaart · scroll-verhaal</title>
+<meta name="description" content="Scroll door de jaren dertig tot de jaren zestig: handel, werkloosheid, trekpaarden en de eerste tv in vijf scènes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--green:#1f5f4e;--green-2:#173a31;--coral:#ff8d90;--berry:#c2484d;--blue:#1f78b4;--bg:#f6f0e6;--card:#fffdf9;--ink:#201a14;--muted:#6f6556;--line:#e6dac4;--ease:cubic-bezier(.23,1,.32,1)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 Inter,system-ui,sans-serif}
+a{color:inherit}.muted{color:var(--muted)}
+.hero{background:var(--green-2);color:#f6f0e6;padding:56px 20px 70px;position:relative;overflow:hidden}
+.hero .in{max-width:900px;margin:0 auto}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--coral)}
+h1{font:700 clamp(34px,7vw,64px)/1.05 Fraunces,serif;letter-spacing:-.03em;margin:10px 0 14px;text-wrap:balance}
+.hero p{max-width:560px;opacity:.85;margin:0}
+.hero svg{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:46px}
+.back{display:inline-block;margin-bottom:26px;opacity:.8;font-size:14px}
+.story{max-width:1040px;margin:0 auto;padding:0 16px;display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+.vis{position:sticky;top:0;height:100dvh;display:flex;align-items:center}
+.stage{width:100%;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;min-height:340px;box-shadow:0 1px 2px rgba(31,95,78,.06),0 10px 28px rgba(31,95,78,.08);position:relative}
+.scene{position:absolute;inset:22px;opacity:0;transform:translateY(10px);transition:opacity .35s var(--ease),transform .35s var(--ease);pointer-events:none;display:flex;flex-direction:column;justify-content:center}
+.scene.on{opacity:1;transform:none;pointer-events:auto}
+.step{min-height:90dvh;display:flex;flex-direction:column;justify-content:center}
+.step:last-child{min-height:70dvh}
+.step .k{font:700 14px Inter;color:var(--berry);letter-spacing:.08em}
+.step h2{font:700 clamp(26px,4vw,36px)/1.15 Fraunces,serif;letter-spacing:-.02em;color:var(--green);margin:6px 0 10px}
+.step p{margin:0 0 10px;max-width:46ch}
+.big{font:700 clamp(54px,9vw,96px)/1 Fraunces,serif;letter-spacing:-.03em;color:var(--green);font-variant-numeric:tabular-nums}
+.big small{display:block;font:500 15px Inter;color:var(--muted);letter-spacing:0;margin-top:8px}
+.bars{display:flex;gap:26px;align-items:flex-end;height:230px;border-bottom:2px solid var(--line);padding:0 8px}
+.grp{flex:1;display:flex;gap:4px;align-items:flex-end;height:100%;justify-content:center}
+.b{width:42%;max-width:70px;position:relative;height:100%;display:flex;align-items:flex-end}
+.b i{display:block;width:100%;border-radius:4px 4px 0 0;transform-origin:bottom;transform:scaleY(0);transition:transform .7s var(--ease);height:var(--h)}
+.on .b i{transform:scaleY(1)}
+.b em{position:absolute;left:0;right:0;font:600 13px Inter;font-style:normal;text-align:center;bottom:calc(var(--h) + 4px);color:var(--ink);white-space:nowrap}
+.cap{display:flex;gap:26px;padding:6px 8px 0}.cap span{flex:1;text-align:center;font-weight:600;font-size:14px}
+.leg{display:flex;gap:16px;margin-top:14px;font-size:14px;flex-wrap:wrap}.leg b{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.spacer{height:40px}
+table{border-collapse:collapse;font-size:14px;margin-top:10px}td,th{padding:4px 12px 4px 0;text-align:left;border-bottom:1px solid var(--line)}
+.src{font-size:13px;color:var(--muted);max-width:1040px;margin:0 auto;padding:10px 16px 60px}
+.btn{display:inline-flex;align-items:center;min-height:44px;padding:10px 16px;border-radius:12px;background:var(--berry);color:#fff;text-decoration:none;font-weight:600;transition:transform .16s var(--ease)}
+.btn:active{transform:scale(.97)}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+@media(max-width:760px){
+  .story{grid-template-columns:1fr;gap:0}
+  .vis{position:sticky;top:0;height:46dvh;z-index:2;padding:8px 0;background:linear-gradient(var(--bg) 88%,transparent)}
+  .stage{min-height:0;height:100%;padding:14px}.scene{inset:14px}
+  .bars{height:140px}.step{min-height:70dvh}.step:last-child{min-height:50dvh}
+}
+@media(prefers-reduced-motion:reduce){.scene,.b i{transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="hero"><div class="in"><a class="back" href="index.html">← Startpagina</a><div class="eyebrow">Scroll-verhaal · H3 en H4</div><h1>Van crisis naar welvaart</h1><p>Vijf scènes, dertig jaar. Scroll en zie wat er met de handel, het werk en de woonkamer gebeurde.</p></div>
+<svg viewBox="0 0 1200 46" preserveAspectRatio="none" aria-hidden="true"><path d="M0 46V24C150 4 300 4 450 22s300 24 450 6 210-22 300-8v26z" fill="#f6f0e6"/></svg></header>
+
+<main class="story">
+  <div class="vis" aria-hidden="false"><div class="stage" id="stage">
+    <div class="scene on" data-s="0"><div class="big" id="n0">24 okt<small>1929 · Zwarte Donderdag</small></div></div>
+    <div class="scene" data-s="1" role="img" aria-label="Staafdiagram: invoer daalde van 2,75 naar 0,94 miljard gulden, uitvoer van 1,99 naar 0,67 miljard gulden tussen 1929 en 1935">
+      <div class="bars" id="bars">
+        <div class="grp"><div class="b"><i style="--h:100%;background:var(--blue)"></i><em>2,75</em></div><div class="b"><i style="--h:72%;background:var(--berry)"></i><em>1,99</em></div></div>
+        <div class="grp"><div class="b"><i style="--h:34%;background:var(--blue)"></i><em>0,94</em></div><div class="b"><i style="--h:24%;background:var(--berry)"></i><em>0,67</em></div></div>
+      </div>
+      <div class="cap"><span>1929</span><span>1935</span></div>
+      <div class="leg"><span><b style="background:var(--blue)"></b>Invoer</span><span><b style="background:var(--berry)"></b>Uitvoer</span><span class="muted">in miljarden gulden</span></div>
+    </div>
+    <div class="scene" data-s="2"><div class="big" id="n2">0<small>werklozen in 1935, een kwart van de mannen die konden werken</small></div></div>
+    <div class="scene" data-s="3"><div class="big" id="n3">265.000<small>trekpaarden aan het werk in 1950; twintig jaar later: allemaal vervangen door tractoren</small></div></div>
+    <div class="scene" data-s="4"><div class="big">2<small>volle maandsalarissen van een vakman kostte een gewone tv in 1963</small></div></div>
+  </div></div>
+  <div class="steps">
+    <section class="step" data-s="0"><div class="k">1929</div><h2>De beurs stort in</h2><p>Op 24 oktober 1929, Zwarte Donderdag, dalen de koersen van alle aandelen. Veel bedrijven en banken gaan failliet. Amerikanen kopen geen Europese producten meer.</p></section>
+    <section class="step" data-s="1"><div class="k">1929 → 1935</div><h2>De handel valt weg</h2><p>Nederland leeft van handel. Invoer en uitvoer dalen tot ongeveer een derde. Bedrijven en fabrieken sluiten.</p>
+      <table><caption class="muted" style="text-align:left;font-size:13px">Tabel: miljarden gulden</caption><tr><th></th><th>1929</th><th>1935</th></tr><tr><td>Invoer</td><td>2,75</td><td>0,94</td></tr><tr><td>Uitvoer</td><td>1,99</td><td>0,67</td></tr></table></section>
+    <section class="step" data-s="2"><div class="k">1935</div><h2>Zonder werk</h2><p>Er zijn 640.000 werklozen. Colijn wil niet dat de overheid schulden maakt en bezuinigt: de aanpassingspolitiek. De lonen gaan omlaag, maar de export neemt niet toe.</p></section>
+    <section class="step" data-s="3"><div class="k">1945 → 1970</div><h2>Machines nemen het land over</h2><p>Na de Hongerwinter moet Nederland nooit meer honger hebben. Boeren mechaniseren en worden groter. Tussen 1947 en 1960 verdwijnt bijna de helft van de banen in de landbouw. Het werk verhuist naar de industrie.</p></section>
+    <section class="step" data-s="4"><div class="k">1963</div><h2>Eerst sparen, dan kopen</h2><p>De lonen stijgen snel, de geleide loonpolitiek stopt en Nederland wordt een consumptiemaatschappij. Een tv blijft nog duur, maar steeds meer gezinnen kunnen luxe kopen.</p><p><a class="btn" href="app.html#H4">Lees hoofdstuk 4</a></p></section>
+  </div>
+</main>
+<p class="src">Cijfers: les over hoofdstuk 3 en 4 (oefentoets H1 t/m H4, bron 1) en het lesboek <i>De industriële samenleving</i>. Grafiekkleuren gecontroleerd op kleurenblindheid.</p>
+<script>
+(function(){
+var red=matchMedia("(prefers-reduced-motion: reduce)").matches,scenes=document.querySelectorAll(".scene"),cur=-1;
+function fmt(n){return Math.round(n).toLocaleString("nl-NL");}
+function count(el,from,to,txt){var small=el.querySelector("small");var node=el.firstChild;
+  if(red){node.nodeValue=fmt(to);return;}
+  var t0=null;function f(t){if(t0===null)t0=t;var p=Math.min(1,(t-t0)/900),e=1-Math.pow(1-p,4);node.nodeValue=fmt(from+(to-from)*e);if(p<1)requestAnimationFrame(f);}requestAnimationFrame(f);}
+function show(i){if(i===cur)return;cur=i;scenes.forEach(function(s){s.classList.toggle("on",+s.dataset.s===i);});
+  if(i===2)count(document.getElementById("n2"),0,640000);
+  if(i===3)count(document.getElementById("n3"),265000,0);}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)show(+e.target.dataset.s);});},{rootMargin:"-45% 0px -45% 0px"});
+document.querySelectorAll(".step").forEach(function(s){io.observe(s);});
+})();
+</script>
+</body>
+</html>

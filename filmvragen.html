@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Filmvragen · Geschiedenis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--green:#1f5f4e;--coral:#ff8d90;--berry:#c2484d;--teal:#2f8f86;--bg:#f6f0e6;--card:#fffdf9;--ink:#201a14;--muted:#6f6556;--line:#e6dac4;--ok-soft:#e1f4ea;--ease:cubic-bezier(.23,1,.32,1)}
+@media(prefers-color-scheme:dark){:root{--bg:#17201d;--card:#1f2b27;--ink:#f2ece0;--muted:#a79f90;--line:#34433d;--ok-soft:#183a2b;--green:#8fd3bd}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,system-ui,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:16px 16px 70px}
+h1{font:700 clamp(28px,5vw,38px)/1.15 Fraunces,serif;color:var(--green);margin:8px 0 4px;letter-spacing:-.02em}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--berry)}
+.muted{color:var(--muted)}a{color:inherit}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:18px;margin-top:14px;box-shadow:0 1px 2px rgba(31,95,78,.06),0 10px 28px rgba(31,95,78,.08)}
+.vid{position:relative;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:#173a31;margin-top:14px}
+.vid iframe,.vid button{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vid button{background:transparent;color:#fff;font:600 16px Inter;cursor:pointer}
+.kop{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);margin:0 0 2px}
+.q p{margin:2px 0 10px;font-weight:600}
+textarea{width:100%;min-height:96px;border:2px solid var(--line);border-radius:14px;padding:12px;font:16px/1.5 Inter;background:var(--card);color:var(--ink);resize:vertical;transition:border-color .16s}
+textarea:focus{border-color:var(--teal);outline:none}
+.btn{display:inline-flex;align-items:center;gap:8px;border:0;border-radius:12px;padding:10px 16px;min-height:44px;font:600 15px Inter;background:var(--berry);color:#fff;cursor:pointer;text-decoration:none;transition:transform .16s var(--ease),filter .16s}
+.btn:active{transform:scale(.97)}.btn.ghost{background:transparent;color:var(--green);border:1.5px solid var(--line)}
+@media(hover:hover) and (pointer:fine){.btn:hover{filter:brightness(1.07)}}
+.ans{margin-top:10px;background:var(--ok-soft);border-radius:12px;padding:10px 12px;font-size:15px}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){*{transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+<script src="data/filmvragen.js"></script>
+<script>
+(function(){
+var YT_ID={H1:"",H2:""}; /* vul hier een YouTube-ID in; leeg = Google Drive */
+var h=(/[?&]h=(H[12])/.exec(location.search)||[])[1]||"H1",D=window.FILMVRAGEN[h],KEY="gv-film-"+h,A={};
+try{A=JSON.parse(localStorage.getItem(KEY))||{};}catch(e){}
+function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;");}
+var src=YT_ID[h]?"https://www.youtube.com/embed/"+YT_ID[h]+"?rel=0":"https://drive.google.com/file/d/"+D.film+"/preview";
+var x='<a class="muted" href="app.html#films">← Terug naar de leeromgeving</a><div class="eyebrow" style="margin-top:16px">Filmvragen '+h+'</div><h1>'+esc(D.titel)+'</h1><p class="muted">Kijk de film en beantwoord de vragen. Klik daarna op “Toon antwoord” om je antwoord te vergelijken met de lesstof. Je antwoorden blijven op dit apparaat bewaard.</p><div class="vid"><iframe src="'+src+'" allow="autoplay; fullscreen" allowfullscreen title="Film '+h+'"></iframe></div>',last="";
+D.vragen.forEach(function(q,i){x+='<div class="card q">'+(q[0]&&q[0]!==last?'<div class="kop">'+esc(q[0])+'</div>':"")+'<p>'+(i+1)+'. '+esc(q[1])+'</p><textarea data-i="'+i+'" aria-label="Antwoord vraag '+(i+1)+'" placeholder="Typ hier je antwoord">'+esc(A[i]||"")+'</textarea><div class="row"><button class="btn ghost" data-a="'+i+'">Toon antwoord</button></div><div class="ans" id="a'+i+'" hidden>'+esc(q[2])+'</div></div>';last=q[0];});
+x+='<div class="row" style="margin-top:20px"><button class="btn" id="copy">Kopieer mijn antwoorden</button><a class="btn ghost" href="app.html#lab">Oefen verder in het Oefenlab</a></div>';
+document.getElementById("app").innerHTML=x;
+document.addEventListener("input",function(e){var t=e.target.closest("textarea");if(t){A[t.dataset.i]=t.value;try{localStorage.setItem(KEY,JSON.stringify(A));}catch(e){}}});
+document.addEventListener("click",function(e){var b=e.target.closest("[data-a]");if(b){var a=document.getElementById("a"+b.dataset.a);a.hidden=!a.hidden;b.textContent=a.hidden?"Toon antwoord":"Verberg antwoord";return;}
+ if(e.target.closest("#copy")){var tx=D.vragen.map(function(q,i){return (i+1)+". "+q[1]+"\n"+(A[i]||"")+"\n";}).join("\n");(navigator.clipboard?navigator.clipboard.writeText(tx):Promise.reject()).then(function(){e.target.textContent="Gekopieerd";}).catch(function(){e.target.textContent="Kopiëren lukt niet";});}});
+})();
+</script>
+</body>
+</html>
