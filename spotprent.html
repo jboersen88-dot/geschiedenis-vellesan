@@ -43,6 +43,24 @@ textarea:focus{border-color:var(--teal);outline:none}
 dialog{border:0;padding:0;background:transparent;max-width:96vw;max-height:96vh}dialog::backdrop{background:rgba(10,14,12,.82)}
 dialog img{display:block;max-width:96vw;max-height:92vh;width:auto;height:auto;border-radius:10px}
 dialog button{position:fixed;top:12px;right:12px}
+.plaat{position:relative;margin:0 auto}
+@media(min-width:900px){.plaat{width:min(100%,calc((100vh - 170px)*var(--r)))}}
+.plaat img{max-height:none!important}
+.hs{position:absolute;transform:translate(-50%,-50%);width:34px;height:34px;border-radius:50%;border:3px solid #fff;background:var(--berry);color:#fff;font:700 15px Inter;cursor:pointer;padding:0;box-shadow:0 2px 8px rgba(0,0,0,.35);transition:transform .16s var(--ease),background .16s}
+.hs::after{content:"";position:absolute;inset:-8px;border-radius:50%}
+.hs.gedaan{background:var(--teal)}
+.hs[aria-pressed="true"]{transform:translate(-50%,-50%) scale(1.25);background:var(--green);outline:3px solid var(--coral)}
+.hs:active{transform:translate(-50%,-50%) scale(.92)}
+@media(hover:hover) and (pointer:fine){.hs:hover{transform:translate(-50%,-50%) scale(1.12)}}
+.steps .ontdek{grid-column:1/-1}
+.tag{display:inline-block;font-size:12px;font-weight:600;color:var(--teal);border:1.5px solid color-mix(in srgb,var(--teal) 40%,transparent);border-radius:999px;padding:1px 9px;margin-bottom:6px}
+.hint{margin-top:10px;border-left:4px solid var(--coral);background:color-mix(in srgb,var(--coral) 12%,transparent);border-radius:0 12px 12px 0;padding:8px 12px;font-size:15px}
+.hint b{color:var(--berry)}
+.hslist{display:grid;gap:6px;margin:10px 0 0;padding:0;list-style:none}
+.hslist button{width:100%;text-align:left;min-height:44px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:12px;padding:8px 12px;font:500 15px Inter;cursor:pointer}
+.hslist button .nr{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--berry);color:#fff;font-weight:700;font-size:13px;margin-right:8px}
+.hslist button.gedaan .nr{background:var(--teal)}
+textarea.klein{min-height:70px}
 :focus-visible{outline:3px solid var(--teal);outline-offset:2px}
 @media(prefers-reduced-motion:reduce){*{transition-duration:.01ms!important;animation:none!important}}
 </style>
@@ -58,25 +76,53 @@ dialog button{position:fixed;top:12px;right:12px}
 var L=window.SPOTPRENTEN,id=(/[?&]p=([\w-]+)/.exec(location.search)||[])[1],P=L.filter(function(x){return x.id===id;})[0]||L[0];
 var KEY="gv-spot-"+P.id,MAXPOGING=3,app=document.getElementById("app"),S;
 try{S=JSON.parse(localStorage.getItem(KEY))||{};}catch(e){S={};}
-S.antw=S.antw||{};S.ai=S.ai||{};S.n=S.n||{};S.model=S.model||{};S.cur=S.cur||1;
+var HS=P.hotspots||[];
+S.antw=S.antw||{};S.ai=S.ai||{};S.n=S.n||{};S.model=S.model||{};S.hint=S.hint||{};S.hs=S.hs||{};
+if(S.cur==null)S.cur=HS.length?0:1;if(!HS.length&&!S.cur)S.cur=1;
 function save(){try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}
 var esc=GV_AI.esc,bezig={};
 function stap(n){return P.stappen.filter(function(s){return s.stap===n;})[0];}
 
 function page(){
-  var h='<a class="muted" href="app.html">← Terug naar de leeromgeving</a><div class="eyebrow" style="margin-top:20px">Spotprent analyseren · Kijkwijzer</div><h1>'+esc(P.titel)+'</h1><p class="muted" style="max-width:640px;margin:0">'+esc(P.intro)+'</p>';
-  h+='<div class="grid"><div class="prent card"><figure><img id="img" src="'+P.img+'" alt="Spotprent: '+esc(P.titel)+'. '+esc(P.beschrijving)+'"><figcaption>'+esc(P.bronvermelding)+' Tik op de prent om te vergroten.</figcaption></figure></div>';
-  h+='<div><nav class="steps" aria-label="Stappen van de Kijkwijzer">'+P.stappen.map(function(s){var f=S.ai[s.stap];
+  var terug=/boekje-2\//.test(document.referrer)?"boekje-2/onderzoek.html":"app.html";
+  var h='<a class="muted" href="'+terug+'">← Terug naar de leeromgeving</a><div class="eyebrow" style="margin-top:20px">Spotprent analyseren · Kijkwijzer</div><h1>'+esc(P.titel)+'</h1><p class="muted" style="max-width:640px;margin:0">'+esc(P.intro)+'</p>';
+  var r=P.formaat?P.formaat[0]/P.formaat[1]:.75;
+  h+='<div class="grid"><div class="prent card"><figure><div class="plaat" style="--r:'+r+'"><img id="img" src="'+P.img+'" alt="Spotprent: '+esc(P.titel)+'. '+esc(P.beschrijving)+'"'+(P.formaat?' width="'+P.formaat[0]+'" height="'+P.formaat[1]+'"':'')+'>'+
+    HS.map(function(p,i){return '<button class="hs'+(hsKlaar(i)?' gedaan':'')+'" data-hs="'+i+'" style="left:'+p.x+'%;top:'+p.y+'%" aria-pressed="'+(S.cur===0&&S.sel===i)+'" aria-label="Onderdeel '+(i+1)+': '+esc(p.naam)+'">'+(hsKlaar(i)?'✓':i+1)+'</button>';}).join("")+
+    '</div><figcaption>'+esc(P.bronvermelding)+(HS.length?' Tik op een rond punt om dat onderdeel te onderzoeken. Tik op de prent zelf om te vergroten.':' Tik op de prent om te vergroten.')+'</figcaption></figure></div>';
+  h+='<div><nav class="steps" aria-label="Stappen van de Kijkwijzer">'+(HS.length?'<button class="ontdek'+(nKlaar()===HS.length?' klaar':'')+'" data-stap="0"'+(S.cur===0?' aria-current="step"':'')+'>Ontdek de prent<small>'+nKlaar()+' van '+HS.length+' onderdelen bekeken</small></button>':'')+P.stappen.map(function(s){var f=S.ai[s.stap];
     return '<button data-stap="'+s.stap+'"'+(S.cur===s.stap?' aria-current="step"':'')+(f&&f.status==="ok"?' class="klaar"':'')+'>Stap '+s.stap+' · '+esc(s.label)+'<small>'+(f&&f.status==="ok"?f.punten+'/'+f.max+' punten':'nog doen')+'</small></button>';}).join("")+'</nav>';
   h+='<div id="stap">'+stapHtml()+'</div><div id="totaal">'+totaalHtml()+'</div></div></div>';
   app.innerHTML=h;
 }
-function stapHtml(){var s=stap(S.cur),f=S.ai[s.stap],n=S.n[s.stap]||0,last=s.stap===P.stappen.length;
+function hsKlaar(i){return !!(S.hs[i]&&S.hs[i].lvl>=3);}
+function nKlaar(){return HS.filter(function(p,i){return hsKlaar(i);}).length;}
+var HINTNAAM=["Denkvraag","Tip"];
+function hintHtml(lijst,lvl){return lijst.slice(0,Math.min(lvl,lijst.length)).map(function(t,i){return '<div class="hint fade"><b>'+HINTNAAM[i]+':</b> '+esc(t)+'</div>';}).join("");}
+function ontdekHtml(){
+  var i=S.sel;
+  if(i==null||!HS[i])return '<div class="card fade"><h2>Ontdek de prent</h2><p>Een spotprent bestaat uit onderdelen: personen, voorwerpen en teksten. Tik op een rond punt op de prent, of kies hieronder een onderdeel. Bedenk eerst zelf wat het betekent. Lukt dat niet, vraag dan een hint.</p><ul class="hslist">'+
+    HS.map(function(p,j){return '<li><button class="'+(hsKlaar(j)?'gedaan':'')+'" data-hs="'+j+'"><span class="nr">'+(hsKlaar(j)?'✓':j+1)+'</span>'+esc(p.naam)+'</button></li>';}).join("")+'</ul>'+
+    (nKlaar()===HS.length?'<div class="row"><button class="btn" data-stap="1">Alles bekeken: naar stap 1 →</button></div>':'')+'</div>';
+  var p=HS[i],z=S.hs[i]||{a:"",lvl:0};
+  var h='<div class="card fade"><span class="tag">Onderdeel '+(i+1)+' van '+HS.length+' · hoort bij stap '+p.stap+'</span><h2>'+esc(p.naam)+'</h2><p class="vraag">'+esc(p.vraag)+'</p>';
+  h+='<textarea class="klein" id="hsta" aria-label="Wat denk jij?" placeholder="Wat denk jij? Schrijf het kort op.">'+esc(z.a||"")+'</textarea>';
+  h+=hintHtml(p.hints,z.lvl);
+  h+='<div class="row">'+(z.lvl<2?'<button class="btn ghost" id="hshint">Hint '+(z.lvl+1)+' van 2</button>':'')+(z.lvl<3?'<button class="btn" id="hsuitleg">Bekijk de uitleg</button>':'')+'</div>';
+  if(z.lvl>=3)h+='<div class="model fade"><b>Uitleg:</b> '+esc(p.uitleg)+'</div>';
+  h+='<div class="row"><button class="btn ghost" id="hslijst">← Alle onderdelen</button>'+(i<HS.length-1?'<button class="btn ghost" data-hs="'+(i+1)+'">Volgend onderdeel →</button>':'<button class="btn ghost" data-stap="1">Naar stap 1 →</button>')+'</div>';
+  return h+'</div>';}
+function stapHtml(){if(S.cur===0)return ontdekHtml();
+  var s=stap(S.cur),f=S.ai[s.stap],n=S.n[s.stap]||0,last=s.stap===P.stappen.length,hl=S.hint[s.stap]||0,hn=(s.hints||[]).length;
   var h='<div class="card fade"><h2>Stap '+s.stap+' · '+esc(s.label)+'</h2><ul class="hulp">'+s.hulp.map(function(x){return '<li>'+esc(x)+'</li>';}).join("")+'</ul>';
+  var bij=HS.map(function(p,i){return p.stap===s.stap?i:-1;}).filter(function(i){return i>=0;});
+  if(bij.length)h+='<p class="muted" style="font-size:14px;margin:0 0 6px">Kijk nog eens naar onderdeel '+bij.map(function(i){return '<a href="#" data-hs="'+i+'">'+(i+1)+' ('+esc(HS[i].naam.toLowerCase())+')</a>';}).join(", ")+'.</p>';
   h+='<p class="vraag">'+esc(s.vraag)+'</p><textarea id="ta" aria-label="Jouw antwoord bij stap '+s.stap+'" placeholder="Schrijf in hele zinnen. Begin bijvoorbeeld met: Ik zie dat …">'+esc(S.antw[s.stap]||"")+'</textarea>';
+  h+=hintHtml(s.hints||[],hl);
   h+='<div class="row">';
+  if(hl<hn)h+='<button class="btn ghost" id="hint">Hint '+(hl+1)+' van '+hn+'</button>';
   if(GV_NK.enabled&&!(f&&f.status==="ok"&&f.punten===f.max))h+='<button class="btn" id="check"'+(bezig[s.stap]||n>=MAXPOGING?" disabled":"")+'>'+(f?"Laat opnieuw nakijken":"Laat nakijken")+'</button>';
-  if(f||S.model[s.stap]||!GV_NK.enabled)h+='<button class="btn ghost" id="model">'+(S.model[s.stap]?"Verberg":"Bekijk")+' het modelantwoord</button>';
+  if(f||S.model[s.stap]||!GV_NK.enabled||hl>=hn)h+='<button class="btn ghost" id="model">'+(S.model[s.stap]?"Verberg":"Bekijk")+' het modelantwoord</button>';
   if(!last)h+='<button class="btn ghost" id="next">Volgende stap →</button>';
   h+='</div>';
   if(n>=MAXPOGING&&f&&f.status==="ok"&&f.punten<f.max)h+='<p class="muted" style="font-size:14px">Je hebt '+MAXPOGING+' keer laten nakijken. Vergelijk je antwoord nu met het modelantwoord.</p>';
@@ -98,15 +144,20 @@ function nakijken(){var s=stap(S.cur),k=s.stap,ans=document.getElementById("ta")
 function vernieuw(){page();var t=document.getElementById("ta");if(t&&!t.value)t.focus();}
 
 app.addEventListener("click",function(e){
+  var hb=e.target.closest("[data-hs]");if(hb){e.preventDefault();bewaar();S.cur=0;S.sel=+hb.dataset.hs;save();page();document.getElementById("stap").scrollIntoView({block:"nearest",behavior:matchMedia("(prefers-reduced-motion:reduce)").matches?"auto":"smooth"});return;}
+  if(e.target.closest("#hslijst")){bewaar();S.sel=null;save();page();return;}
+  if(e.target.closest("#hshint")){bewaar();var z=S.hs[S.sel]=S.hs[S.sel]||{a:"",lvl:0};z.lvl++;save();page();return;}
+  if(e.target.closest("#hsuitleg")){bewaar();var z2=S.hs[S.sel]=S.hs[S.sel]||{a:"",lvl:0};z2.lvl=3;save();page();return;}
+  if(e.target.closest("#hint")){bewaar();S.hint[S.cur]=(S.hint[S.cur]||0)+1;save();page();return;}
   var b=e.target.closest("[data-stap]");if(b){bewaar();S.cur=+b.dataset.stap;save();page();document.getElementById("stap").scrollIntoView({block:"nearest"});return;}
   if(e.target.closest("#check")){nakijken();return;}
   if(e.target.closest("#model")){bewaar();S.model[S.cur]=!S.model[S.cur];save();page();return;}
   if(e.target.closest("#next")){bewaar();S.cur++;save();page();document.getElementById("stap").scrollIntoView({block:"nearest"});return;}
-  if(e.target.closest("#reset")){if(confirm("Opnieuw beginnen? Je antwoorden bij deze prent worden gewist.")){S={antw:{},ai:{},n:{},model:{},cur:1};save();page();}return;}
+  if(e.target.closest("#reset")){if(confirm("Opnieuw beginnen? Je antwoorden bij deze prent worden gewist.")){S={antw:{},ai:{},n:{},model:{},hint:{},hs:{},cur:HS.length?0:1};save();page();}return;}
   if(e.target.closest("#img")){var d=document.getElementById("zoom");document.getElementById("zoomimg").src=P.img;document.getElementById("zoomimg").alt=P.titel;d.showModal();}
 });
-app.addEventListener("input",function(e){if(e.target.id==="ta"){S.antw[S.cur]=e.target.value;save();}});
-function bewaar(){var t=document.getElementById("ta");if(t){S.antw[S.cur]=t.value;}}
+app.addEventListener("input",function(e){if(e.target.id==="ta"){S.antw[S.cur]=e.target.value;save();}if(e.target.id==="hsta"){(S.hs[S.sel]=S.hs[S.sel]||{a:"",lvl:0}).a=e.target.value;save();}});
+function bewaar(){var t=document.getElementById("ta");if(t){S.antw[S.cur]=t.value;}var u=document.getElementById("hsta");if(u&&S.sel!=null){(S.hs[S.sel]=S.hs[S.sel]||{a:"",lvl:0}).a=u.value;}}
 var dz=document.getElementById("zoom");dz.addEventListener("click",function(e){if(e.target===dz||e.target.id==="dicht")dz.close();});
 page();
 })();
