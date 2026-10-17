@@ -9,6 +9,26 @@
 4. **Statisch → HTML**: de losse docx/pdf's (Doe-boek H4, Recherchebord) bekijken en zo mogelijk als widget bouwen.
 5. Lokaal testen (desktop + iPad, licht + donker), dan pushen.
 
+### Gebouwd (21:00-ronde)
+- **AI-nakijker**: `ai.js` (gedeeld) + `nakijken.html`. Het endpoint is getest met echte POST's vanuit de browser: het antwoordt `{oordeel, goed, mist, fout, tip, status:"ok"}`, CORS is open (`access-control-allow-origin: *`), en een bewust fout antwoord (Kinderwetje bij een vraag over de agrarische revolutie) wordt terecht "Nog niet goed" genoemd. Er is geen apart veld voor open vragen: de Economie-apps sturen alleen begrip/uitleg/voorbeeld/antwoord. Voor open vragen stuur ik daarom de vraag als `begrip`, het modelantwoord als `uitleg` en de nakijkpunten als `begrippen`. Dit werkt goed in de praktijk, maar het is hergebruik van een veld, geen officiële open-vraag-API.
+  - Modes: 24 open vragen uit de oefentoetsen (vragen "Gebruik bron…" zijn weggelaten, die staan in `toets.html`) en 49 begrippen. Voortgang per vraag in localStorage.
+  - Lokale fallback bij fout/time-out (45 s): kernwoorden per nakijkpunt (`GV_AI.local`).
+  - Ook in `app.html` staat `AI_URL` weer ingevuld (Oefenlab → Leg uit).
+- **Interactieve kaart** (`kaart.html`): schematische Atlantische kaart (handgetekend, niet op schaal) met New York, Rotterdam en Nederland. Schakelaar 1929 ↔ 1935 laat invoer/uitvoer (2,75 → 0,94 en 1,99 → 0,67 miljard gulden) en werklozen (640.000) animeren en de scheepvaart uitdunnen. Per plek: Flow-beelden (met wisselknopjes), feiten uit de PowerPoint en een open vraag die de AI nakijkt.
+- **Beeldquiz** (`beeldquiz.html`): 9 beelden, meerkeuze volgens de regels (4 antwoorden, elk op een eigen regel met `gap: .9rem`, ongeveer gelijke lengte, juiste antwoord nooit duidelijk het langste, volgorde geschud) en een uitleg uit de lesstof na elk antwoord.
+- **Doe-boek H4 online** (`doeboek.html`): alle 48 vragen van het Word-doe-boek als widget in vijf blokken + afsluiting: meerkeuze, juist/onjuist, combineren, volgorde, ketting, sorteren, zelfcheck en open vragen met autosave. Controle op gesloten vragen alleen waar het juiste antwoord zeker uit de lesstof volgt (bij o.a. vraag 11, 31 en twee stellingen in 5 is bewust geen controle). Open vragen: "Vraag de AI om feedback" met de PowerPoint-tekst van het blok als context (`data/doeboek-ctx.js`). "Kopieer mijn antwoorden" en printen werken.
+- Links vanuit de startpagina en het tabblad Games in de app.
+
+### Flow-beelden
+- 20 van de 22 nieuwe beelden uit Downloads (alleen die van 17 oktober 2026, niet de sprookjesboek-beelden) staan geoptimaliseerd in `img/flow/` (1200 px breed, JPEG kwaliteit 76, samen 3,8 MB). Beeldtekst "AI-illustratie" staat overal bij.
+- Gebruikt in kaart en quiz: Wall Street, beurskrach-auto, haven, arbeidsbeurs, voedseluitdeling, SDAP-affiche, demonstratie, Kinderwetje, kinderen-naar-school, stemlokaal 1917, fabrieksinspecteur. Nog niet gebruikt: Jordaan-oproer, Afsluitdijk (2), polderwerk, loket, vrouwenstemrecht, wandplaat, tweede SDAP-affiche. Reden: de PowerPoints noemen die gebeurtenissen niet, en ik verzin geen feiten. Zeg het als je ze wilt koppelen aan een les.
+
+### Aandachtspunten
+- **Het AI-endpoint staat publiek in de code** (`ai.js` en `app.html`), net als nu al in de broncode van je Google Site. Iedereen kan het aanroepen: kans op verbruik van het Gemini-quotum. **Uitzetten met één regel**: zet `GV_AI_URL` bovenin `ai.js` op `""` en `AI_URL` in `app.html` (zoek `var AI_URL=`) op `""`; alles valt dan terug op de lokale controle.
+- De meerkeuzevragen in het doe-boek (meerkeuze van de docent) is niet herschreven: ze zijn van jou en hebben vaste letters bij de dia's. Het juiste antwoord is daar vaak het langste (bijv. vraag 6 en 19). Zeg het als ik die ook moet aanpassen.
+- Niet gebouwd: Recherchebord (PDF) en dia-gebonden interactieve versie van het doe-boek; AI-endpoint werkt alleen met internet.
+- Getest in de browser van de app (desktop, iPad-breedte 820 px, donker). Niet op een echte iPad.
+
 ## 2026-10-17 · avond: toetsen, spel, scroll-verhaal en meerkeuze volgens de regels
 
 ### Gebouwd

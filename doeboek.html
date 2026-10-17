@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Doe-boek H4 · Welvaart voor iedereen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--green:#1f5f4e;--coral:#ff8d90;--berry:#c2484d;--teal:#2f8f86;--bg:#f6f0e6;--card:#fffdf9;--ink:#201a14;--muted:#6f6556;--line:#e6dac4;--ok-soft:#e1f4ea;--bad-soft:#fbe6e4;--ease:cubic-bezier(.23,1,.32,1)}
+@media(prefers-color-scheme:dark){:root{--bg:#17201d;--card:#1f2b27;--ink:#f2ece0;--muted:#a79f90;--line:#34433d;--ok-soft:#183a2b;--bad-soft:#40201f;--green:#8fd3bd}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,system-ui,sans-serif}
+.wrap{max-width:820px;margin:0 auto;padding:16px 16px 90px}
+a.back{color:var(--green);font-weight:700;text-decoration:none;font-size:14px}
+.top{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--berry);margin-top:10px}
+h1{font:700 clamp(28px,5vw,40px)/1.1 Fraunces,serif;color:var(--green);margin:4px 0;letter-spacing:-.02em}
+.muted{color:var(--muted)}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 10px;margin-top:10px;scrollbar-width:none}
+.tabs button{flex:none;border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:14px;padding:8px 14px;min-height:48px;font:700 14px/1.2 Inter;cursor:pointer;text-align:left;transition:transform .16s var(--ease),background-color .2s,border-color .2s}
+.tabs button small{display:block;font-weight:500;color:var(--muted);font-size:12px}
+.tabs button:active{transform:scale(.97)}
+.tabs button[aria-pressed=true]{background:var(--green);border-color:var(--green);color:#fff}.tabs button[aria-pressed=true] small{color:#d6efe6}
+.tabs button.done:not([aria-pressed=true]){border-color:#2e9b6b}
+.tabs button.done:after{content:" ✓"}
+.bhead{margin:6px 0 4px}.bhead h2{font:700 26px/1.2 Fraunces,serif;color:var(--green);margin:0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:18px;margin-top:14px;box-shadow:0 1px 2px rgba(31,95,78,.06),0 10px 26px rgba(31,95,78,.07);animation:cin .35s var(--ease) backwards}
+@keyframes cin{from{opacity:0;transform:translateY(10px)}}
+.tag{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--teal)}
+.tag i{font-style:normal;color:var(--muted);letter-spacing:0;font-weight:600;text-transform:none}
+.v{font-weight:600;margin:4px 0 10px;white-space:pre-line}
+.bron{border-left:4px solid var(--coral);padding:2px 0 2px 12px;margin:0 0 10px;font-style:italic}
+.opts{display:flex;flex-direction:column;gap:.9rem}
+.opt{display:flex;gap:12px;align-items:center;text-align:left;width:100%;border:2px solid var(--line);background:var(--bg);color:var(--ink);border-radius:14px;padding:11px 14px;min-height:52px;font:600 15.5px/1.35 Inter;cursor:pointer;transition:transform .16s var(--ease),border-color .16s,background-color .2s}
+.opt b{flex:none;width:28px;height:28px;border-radius:50%;background:var(--card);border:2px solid var(--line);display:grid;place-items:center;font-size:13px}
+.opt:active{transform:scale(.98)}.opt.sel{border-color:var(--teal)}.opt.ok{background:var(--ok-soft);border-color:#2e9b6b}.opt.no{background:var(--bad-soft);border-color:var(--berry)}
+@media(hover:hover) and (pointer:fine){.opt:hover{border-color:var(--teal)}}
+.row2{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;padding:8px 0;border-top:1px dashed var(--line)}
+.row2:first-of-type{border-top:0}
+.row2.ok{color:#1f7a54}.row2.no{color:var(--berry)}
+select,input[type=text]{border:2px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);font:700 15px Inter;padding:8px 10px;min-height:44px}
+select:focus,input:focus,textarea:focus{border-color:var(--teal);outline:none}
+.bank{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 10px}.bank span{background:var(--ok-soft);border-radius:99px;padding:4px 12px;font-size:14px;font-weight:600}
+.chain{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.chain .st{background:var(--bg);border:1.5px solid var(--line);border-radius:12px;padding:8px 12px;font-size:14.5px}.chain .ar{color:var(--muted)}
+textarea{width:100%;min-height:90px;border:2px solid var(--line);border-radius:14px;padding:12px;font:16px/1.5 Inter;background:var(--bg);color:var(--ink);resize:vertical}
+.sub{margin-top:10px}.sub label{font-weight:600;display:block;margin-bottom:4px}
+.btn{display:inline-flex;align-items:center;gap:8px;border:0;border-radius:12px;padding:9px 16px;min-height:44px;font:700 14.5px Inter;background:var(--berry);color:#fff;cursor:pointer;margin-top:10px;transition:transform .16s var(--ease)}
+.btn:active{transform:scale(.97)}.btn.ghost{background:transparent;color:var(--green);border:1.5px solid var(--line)}.btn:disabled{opacity:.6}
+.res{margin-top:8px;font-weight:700}.res.ok{color:#1f7a54}.res.no{color:var(--berry)}
+.nav{display:flex;justify-content:space-between;gap:10px;margin-top:20px;flex-wrap:wrap}
+.zelf{display:flex;gap:6px}.zelf button{width:44px;height:44px;border-radius:50%;border:2px solid var(--line);background:var(--bg);color:var(--ink);font:700 15px Inter;cursor:pointer}.zelf button.on{background:var(--green);border-color:var(--green);color:#fff}
+:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+@media print{.tabs,.nav,.btn,.top{display:none}.card{break-inside:avoid;box-shadow:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><a class="back" href="index.html">← Startpagina</a><a class="back" href="app.html#H4">Lesstof H4 →</a></div>
+  <div class="eyebrow">Doe-boek · hoofdstuk 4</div>
+  <h1>Welvaart voor iedereen</h1>
+  <p class="muted" style="margin:0">Hoofdvraag: <b>Hoe ontwikkelde de Nederlandse economie zich na de jaren dertig?</b> Werk de vijf blokken door, bij de dia's van de PowerPoint. Alles wordt automatisch bewaard op dit apparaat.</p>
+  <div class="tabs" id="tabs" role="group" aria-label="Blokken"></div>
+  <div id="blok"></div>
+  <div class="nav"><button class="btn ghost" id="prev">← Vorig blok</button><button class="btn ghost" id="copy">Kopieer mijn antwoorden</button><button class="btn" id="next">Volgend blok →</button></div>
+</div>
+<script src="data/doeboek-ctx.js"></script>
+<script src="ai.js"></script>
+<script>
+(function(){
+var BL=[["Oorlog","1940 – 1945","Eerst gaat het goed, daarna is er gebrek aan alles."],["Wederopbouw","1945 – 1960","Alles moet weer opgebouwd worden."],["Welvaart","jaren 60","Bijna iedereen kan meer luxe kopen."],["Crisis","jaren 70","Minder werk in de industrie en de oliecrisis."],["Nu","handel & diensten","Waar verdient Nederland nu zijn geld mee?"],["Afsluiting","check jezelf",""]];
+/* b=blok, d=dia, t=type: mc|jo|co|vo|ke|op|ze. k = juiste antwoord, alleen waar het uit de les zeker is (anders weggelaten = geen controle) */
+var Q=[
+{n:1,b:0,d:"2",l:"Voorspel",t:"mc",v:"In 1963 was een tv heel duur. Hoeveel moest een vakman ervoor betalen, denk je?",o:["Een halve week loon","Eén week loon","Twee maandlonen","Een half jaar loon"],k:2},
+{n:2,b:0,d:"2",l:"Rekenen",t:"op",v:"Hoe duur was die tv eigenlijk? Reken het uit. Stel: een vakman verdient nu € 2.500 per maand.",s:["a. Wat zou een tv nu kosten als hij net zo duur was als in 1963?","b. Stel dat een goede tv nu € 500 kost. Wat zegt dat over onze welvaart van nu?"]},
+{n:3,b:0,d:"5 – 9",l:"Combinatie",t:"co",v:"Welk gevolg hoort bij welke oorzaak?",items:[["Duitsland plaatst veel bestellingen bij Nederlandse bedrijven.","C"],["Alles moet naar het Duitse leger.","D"],["Steeds meer Duitse mannen moeten het leger in.","A"],["Er is geen brandstof, geen voedsel en geen vervoer.","B"]],o:["Honderdduizenden Nederlandse mannen moeten in Duitsland werken.","De Hongerwinter in het westen van Nederland.","1940 – 1941: volop werk in Nederland.","Er zijn minder gewone producten te koop."]},
+{n:4,b:0,d:"7",l:"Meerkeuze",t:"mc",v:"Wat was de Arbeitseinsatz?",o:["Vrijwillig werken in Duitsland voor een hoog loon","Nederlandse mannen moesten verplicht in Duitsland werken","Duitse soldaten werkten in Nederlandse fabrieken","Nederlanders bouwden verplicht bunkers aan de kust"],k:1},
+{n:5,b:0,d:"5 – 8",l:"Juist of onjuist",t:"jo",v:"Klopt het of klopt het niet?",items:[["In 1940 en 1941 was er juist veel werk in Nederland.","J"],["De Duitsers betaalden altijd met geld dat veel waard was.","O"],["In Rotterdam vernielden de Duitsers een derde van de kranen.",null],["Tijdens de oorlog ging de handel met het buitenland gewoon door.",null]]},
+{n:6,b:0,d:"6",l:"Meerkeuze",t:"mc",v:"Later betalen de Duitsers soms met geld dat hier niets waard is. Wat betekent dat voor een Nederlandse fabriek?",o:["De fabriek wordt er rijker van.","De fabriek kan meer grondstoffen kopen.","De lonen van de arbeiders stijgen.","De fabriek werkt hard, maar verdient er eigenlijk niets aan."],k:3},
+{n:7,b:0,d:"9",l:"Meerkeuze",t:"mc",v:"Wanneer en waar was de Hongerwinter?",o:["In 1944 – 1945, in het westen van Nederland","In 1940 – 1941, in heel Nederland","In 1945 – 1946, in het zuiden van Nederland","In 1952, toen de laatste bonnen verdwenen"],k:0},
+{n:8,b:0,d:"10 · bron 44",l:"Bronvraag",t:"op",v:"Bekijk de foto van een winkel in 1952 (bron 44 in de PowerPoint).",s:["a. Wat viert deze winkel? Tip: zoom in op de borden.","b. Leg in je eigen woorden uit wat distributie is."]},
+{n:9,b:0,d:"10",l:"Denkvraag",t:"op",v:"Distributie gebruik je als er van iets te weinig is. Waarom is een bon dan eerlijker dan gewoon verkopen aan wie het meeste betaalt?"},
+{n:10,b:0,d:"9",l:"Creatief",t:"op",v:"Je bent 15 jaar en woont in Amsterdam in de Hongerwinter. Schrijf een kort stukje in je dagboek (3 zinnen). Gebruik minstens twee woorden uit de woordbank: honger, bonnen, kou, geen vervoer, westen."},
+{n:11,b:1,d:"12",l:"Combinatie",t:"co",v:"De schade na de oorlog in getallen. Welk getal hoort bij welke zin?",items:[["250.000",null],["500.000+",null],["800.000",null]],o:["mensen hebben geen huis meer","mensen hebben alleen de kleren die ze aanhebben","mensen overleefden de oorlog niet"]},
+{n:12,b:1,d:"13 – 31",l:"Volgorde",t:"vo",v:"De wederopbouw had vier fases. Zet ze in de goede volgorde: 1 = eerst, 4 = laatst.",items:[["De consumptiemaatschappij komt op",4],["De sobere start: veel is kapot",1],["Industrie, landbouw en export groeien",3],["Marshallhulp en harmoniemodel",2]]},
+{n:13,b:1,d:"16 – 18",l:"Meerkeuze",t:"mc",v:"Wat was de Marshallhulp?",o:["Geld van Duitsland om de oorlogsschade te betalen","Een lening van Nederland aan Amerika","Hulp van Amerika aan Europa met geld en goederen","Een plan van de Nederlandse regering tegen de Hongerwinter"],k:2},
+{n:14,b:1,d:"18",l:"Meerkeuze",t:"mc",v:"Hoeveel Marshallhulp kreeg Nederland tussen 1948 en 1954?",o:["Ruim 1 miljard dollar","1 miljoen gulden","100 miljoen dollar","10 miljard gulden"],k:0},
+{n:15,b:1,d:"21",l:"Ketting",t:"ke",v:"Maak de ketting van oorzaak en gevolg af. Één woord uit de woordbank hoort er niet bij.",steps:["Oorlogsschade",1,"Machines en grondstoffen",2,"Welvaart"],bank:["Meer productie","Distributie","Marshallhulp"],k:["Marshallhulp","Meer productie"]},
+{n:16,b:1,d:"19",l:"Open vraag",t:"op",v:"Waarom is 1950 een belangrijk jaar voor de Nederlandse economie?"},
+{n:17,b:1,d:"22 · bron 45",l:"Bronvraag",t:"op",v:"Bekijk de foto uit 1954 (bron 45): overheid, werkgevers en vakbond aan één tafel.",s:["a. Welke drie groepen zitten er in het harmoniemodel samen aan tafel?","b. Waarom is samenwerken slimmer dan staken als je een land moet opbouwen?"]},
+{n:18,b:1,d:"23",l:"Combinatie",t:"co",v:"De afspraak van het harmoniemodel: wie doet wat?",items:[["Vakbonden","C"],["Werkgevers","A"],["Overheid","B"]],o:["helpen zoveel mogelijk mensen aan werk","geeft geld aan bedrijven én maakt nieuwe sociale wetten","vragen geen hoger loon"]},
+{n:19,b:1,d:"23",l:"Meerkeuze",t:"mc",v:"Wat is geleide loonpolitiek?",o:["De lonen stijgen elk jaar flink.","Iedereen verdient precies hetzelfde.","Werkgevers bepalen zelf hoeveel ze betalen.","De lonen blijven een paar jaar laag, omdat het geld nodig is voor herstel."],k:3},
+{n:20,b:1,d:"24",l:"Jij beslist",t:"op",v:"Het is 1950 en je werkt in een fabriek. Je vakbond zegt: \"We vragen geen hoger loon.\" Ben je het daarmee eens? Geef één reden en noem wat je ervoor terugkrijgt."},
+{n:21,b:1,d:"27",l:"Combinatie",t:"co",v:"Veranderingen in de landbouw. Welke uitleg hoort bij welk begrip?",items:[["Mechanisatie","B"],["Schaalvergroting","C"],["Ruilverkaveling","A"]],o:["Het land wordt op veel plaatsen opnieuw verdeeld.","Werk laten doen door machines, zoals tractoren.","Bedrijven en akkers worden groter. Kleine boerderijen verdwijnen."]},
+{n:22,b:1,d:"28",l:"Rekenen",t:"op",v:"In 1950 werkten er nog 265.000 trekpaarden op de boerderijen. Twintig jaar later waren het er 0.",s:["a. In welk jaar waren alle trekpaarden ongeveer vervangen door tractoren? (typ het jaartal)","b. Tussen 1947 en 1960 verdwijnt bijna de helft van de banen in de landbouw. Leg uit hoe dat komt."],k:{0:"1970"}},
+{n:23,b:1,d:"29",l:"Ketting",t:"ke",v:"Het vliegwiel van de industrie. Kies wat er ontbreekt. Na het laatste vak begint alles weer opnieuw.",steps:["Lage lonen","Goedkope producten",1,"Meer geld verdiend",2],bank:["Hongerwinter","Nieuwe fabrieken en banen","Veel export"],k:["Veel export","Nieuwe fabrieken en banen"]},
+{n:24,b:1,d:"29",l:"Bronvraag",t:"op",v:"Bekijk de poster uit 1950: \"Nederland industrialiseert\". Wat wil de regering met deze poster laten zien?"},
+{n:25,b:1,d:"30",l:"Meerkeuze",t:"mc",v:"Waarom zochten werkgevers en overheid in de jaren 60 gastarbeiders?",o:["Nederlandse arbeiders wilden niet meer werken.","Er waren in de jaren 60 te weinig arbeiders.","De fabrieken gingen naar het buitenland.","De overheid wilde de lonen verhogen."],k:1},
+{n:26,b:1,d:"30",l:"Open vraag",t:"op",v:"Uit welke landen kwamen de gastarbeiders? Noem eerst twee landen en later twee landen."},
+{n:27,b:2,d:"33",l:"Juist of onjuist",t:"jo",v:"Klopt het of klopt het niet?",items:[["Vanaf 1963 stijgen de lonen snel.","J"],["De geleide loonpolitiek gaat in de jaren 60 gewoon door.","O"],["In een consumptiemaatschappij kopen mensen veel (luxe) spullen.","J"],["In de jaren 60 kan bijna niemand luxe kopen.","O"]]},
+{n:28,b:2,d:"34",l:"Zoekopdracht",t:"op",v:"Zoek in de woonkamer-illustratie van dia 34 vier luxeproducten en typ ze hieronder."},
+{n:29,b:2,d:"35",l:"Volgorde",t:"vo",v:"Van fiets naar auto. In welke volgorde kregen steeds meer gezinnen deze vervoermiddelen? 1 = eerst, 3 = laatst.",items:[["auto",3],["fiets",1],["bromfiets",2]]},
+{n:30,b:2,d:"35",l:"Bronvraag",t:"op",v:"Bekijk de supermarkt uit de jaren 60 (dia 35). Wat is hier nieuw?"},
+{n:31,b:2,d:"35",l:"Meerkeuze",t:"mc",v:"Philips groeit mee. Hoeveel mensen werkten er rond 1970 in Nederland bij Philips?",o:["Ongeveer 1.000","Ongeveer 10.000","Bijna 100.000","Ruim 1 miljoen"]},
+{n:32,b:2,d:"33 – 35",l:"Creatief",t:"op",v:"Het is 1965. Je ouders kopen hun eerste wasmachine of tv. Stel dat er toen al WhatsApp was: stuur een bericht aan je vriend(in). Wat verandert er bij jullie thuis?"},
+{n:33,b:2,d:"34",l:"Tekenen",t:"op",v:"Teken jouw woonkamer in 1965 op papier of in een tekenapp. Welke nieuwe luxeproducten staan er? Noteer ze hieronder."},
+{n:34,b:3,d:"37",l:"Sorteren",t:"so",v:"Na 1970 werken steeds minder mensen in de industrie. Hoort de zin bij oorzaak C (concurrentie) of M (mechanisatie)?",items:[["In andere landen zijn de lonen lager.","C"],["Robots werken 24 uur per dag, 7 dagen per week.","M"],["Scheepsbouw en textiel verdwijnen uit Nederland.","C"],["Computers nemen werk van mensen over.","M"]]},
+{n:35,b:3,d:"38",l:"Meerkeuze",t:"mc",v:"Wat gebeurde er in 1973?",o:["Enkele Arabische landen leverden tijdelijk geen olie aan Nederland.","Nederland stopte zelf met het gebruik van olie.","Olie werd ineens heel goedkoop.","De haven van Rotterdam ging dicht door een staking."],k:0},
+{n:36,b:3,d:"38",l:"Open vraag",t:"op",v:"De regering neemt maatregelen tegen de oliecrisis.",s:["a. Noem twee maatregelen.","b. Welk begrip uit blok 1 (de oorlog) komt hier terug?"]},
+{n:37,b:3,d:"38",l:"Meerkeuze",t:"mc",v:"In 1979 komt er een tweede oliecrisis. Wat is het gevolg?",o:["De lonen stijgen heel snel.","Er komen veel meer gastarbeiders.","Benzine wordt gratis.","Veel bedrijven gaan failliet en honderdduizenden mensen worden werkloos."],k:3},
+{n:38,b:3,d:"39",l:"Bronvraag",t:"op",bron:"“De wereld van vóór de oliecrisis keert niet terug. Wij zullen moeten leren omgaan met een zuiniger gebruik van energie.” — Joop den Uyl (1919 – 1987), premier tijdens de eerste oliecrisis, 1973",v:"Lees wat premier Joop den Uyl in 1973 zei in een tv-toespraak.",s:["a. Wat bedoelt Den Uyl? Leg het uit in je eigen woorden.","b. Geef een voorbeeld van hoe we nu zuinig met energie omgaan."]},
+{n:39,b:3,d:"37 + 39",l:"Denkvraag",t:"op",v:"Den Uyl gaf als minister miljarden aan de scheepsbouw. Toch gingen die bedrijven failliet. Welke oorzaak uit de sorteervraag past hierbij? Leg uit."},
+{n:40,b:3,d:"38",l:"Creatief",t:"op",v:"Het is maandag, de dag na de eerste autoloze zondag. Bedenk een krantenkop van maximaal 8 woorden."},
+{n:41,b:4,d:"41",l:"Meerkeuze",t:"mc",v:"Waar richt Nederland zich nu vooral op?",o:["Landbouw met veel trekpaarden","Handel en transport","Scheepsbouw en textiel","Mijnbouw"],k:1},
+{n:42,b:4,d:"41",l:"Juist of onjuist",t:"jo",v:"Klopt het of klopt het niet?",items:[["Producten maken is in andere landen vaak goedkoper.","J"],["Ook in de Gouden Eeuw verdiende Nederland veel aan handel.","J"],["Schiphol en de Rotterdamse haven zijn niet belangrijk voor onze economie.","O"],["Bij banken en verzekeraars werken nu minder mensen dan in 1970.","O"]]},
+{n:43,b:4,d:"42",l:"Ketting",t:"ke",v:"Het nadeel: Nederland is kwetsbaar. Maak de ketting af.",steps:["Crisis in het buitenland",1,"Haven, Schiphol en banken merken het direct",2],bank:["Er wordt minder gehandeld","Er komen meer gastarbeiders","Nederland krijgt ook problemen"],k:["Er wordt minder gehandeld","Nederland krijgt ook problemen"]},
+{n:44,b:4,d:"42",l:"Open vraag",t:"op",v:"Waarom is een land dat vooral handelt kwetsbaar?"},
+{n:45,b:4,d:"42",l:"Actueel",t:"op",v:"In 2008 kreeg Nederland problemen door een crisis in het buitenland. Bedenk een ander voorbeeld uit de laatste jaren waarbij een probleem in het buitenland ook Nederland raakte."},
+{n:46,b:5,d:"43",l:"Combinatie",t:"pe",v:"Bij welke periode hoort elk begrip? 1 = 1940–1945 · 2 = 1945–1960 · 3 = jaren 60 · 4 = jaren 70 · 5 = nu",items:[["Marshallhulp",2],["Oliecrisis",4],["Arbeitseinsatz",1],["Consumptiemaatschappij",3],["Haven & Schiphol",5],["Harmoniemodel",2],["Robots",4],["Hongerwinter",1],["Gastarbeiders",3]]},
+{n:47,b:5,d:"44",l:"Exit-ticket",t:"op",v:"Beantwoord de hoofdvraag in 3 zinnen: Hoe ontwikkelde de Nederlandse economie zich na de jaren dertig? Gebruik minstens 3 woorden uit: oorlog, Marshallhulp, lage lonen, export, consumptiemaatschappij, oliecrisis, handel."},
+{n:48,b:5,d:"na de les",l:"Zelfcheck",t:"ze",v:"Hoe goed snap jij elk blok? Geef jezelf een cijfer van 1 (nog lastig) tot 5 (snap ik helemaal).",items:["Oorlog","Wederopbouw","Welvaart","Crisis","Nu"],s:["Wat vond jij het interessantst uit dit hoofdstuk, en waarom?"]}
+];
+var KEY="gv-doeboek-h4",A={};try{A=JSON.parse(localStorage.getItem(KEY)||"{}");}catch(e){}
+var esc=GV_AI.esc,cur=+(A._b||0),$=function(i){return document.getElementById(i);};
+function save(){try{localStorage.setItem(KEY,JSON.stringify(A));}catch(e){}}
+function L(i){return "ABCD"[i];}
+function answered(q){var a=A[q.n];if(a==null||a==="")return false;if(typeof a==="object")return Object.keys(a).some(function(k){return a[k]!==""&&a[k]!=null;});return true;}
+function tabs(){$("tabs").innerHTML=BL.map(function(b,i){var qs=Q.filter(function(q){return q.b===i;}),d=qs.filter(answered).length;return '<button data-b="'+i+'" aria-pressed="'+(i===cur)+'" class="'+(d===qs.length?"done":"")+'">'+(i+1<6?(i+1)+" · ":"")+b[0]+'<small>'+d+' / '+qs.length+'</small></button>';}).join("");}
+function widget(q){
+  var a=A[q.n],h="";
+  if(q.t==="mc"){h='<div class="opts">'+q.o.map(function(t,i){var c=a===i?(q.k==null?"sel":i===q.k?"ok":"no"):(a!=null&&q.k===i?"ok":"");return '<button class="opt '+c+'" data-n="'+q.n+'" data-i="'+i+'"><b>'+L(i)+'</b><span>'+esc(t)+'</span></button>';}).join("")+'</div>';
+    if(a!=null&&q.k!=null)h+='<p class="res '+(a===q.k?"ok":"no")+'">'+(a===q.k?"✓ Goed":"✗ Het juiste antwoord is "+L(q.k)+".")+'</p>';}
+  else if(q.t==="jo"||q.t==="co"||q.t==="so"||q.t==="vo"||q.t==="pe"){
+    var opts=q.t==="jo"?["J","O"]:q.t==="so"?["C","M"]:q.t==="co"?q.o.map(function(_,i){return L(i);}):q.t==="vo"?q.items.map(function(_,i){return i+1;}):[1,2,3,4,5];
+    if(q.t==="co")h+='<div class="opts" style="gap:.5rem;margin-bottom:10px">'+q.o.map(function(t,i){return '<div><b>'+L(i)+'</b>  '+esc(t)+'</div>';}).join("")+'</div>';
+    a=a||{};
+    h+=q.items.map(function(it,i){var txt=it[0],key=it[1],v=a[i],st="";if(a._c&&key!=null&&v!=null&&v!=="")st=String(v)===String(key)?"ok":"no";
+      return '<div class="row2 '+st+'"><span>'+(q.t==="co"?(i+1)+". ":"")+esc(txt)+(st==="no"?"  ✗":st==="ok"?"  ✓":"")+'</span><select data-n="'+q.n+'" data-i="'+i+'" aria-label="Antwoord '+(i+1)+'"><option value="">–</option>'+opts.map(function(o){return '<option'+(String(v)===String(o)?" selected":"")+'>'+o+'</option>';}).join("")+'</select></div>';}).join("");
+    if(q.items.some(function(it){return it[1]!=null;}))h+='<button class="btn" data-chk="'+q.n+'">Controleer</button>'+(a._c?scoreLine(q,a):"");}
+  else if(q.t==="ke"){
+    a=a||{};var bi=0;
+    h+='<div class="bank">'+q.bank.map(function(w){return '<span>'+esc(w)+'</span>';}).join("")+'</div><div class="chain">'+q.steps.map(function(s,i){var arrow=i?'<span class="ar">➜</span>':'';
+      if(typeof s==="string")return arrow+'<span class="st">'+esc(s)+'</span>';
+      var bi=s-1,v=a[bi],st=a._c&&v?(v===q.k[bi]?"ok":"no"):"";
+      return arrow+'<select data-n="'+q.n+'" data-i="'+bi+'" class="'+st+'" aria-label="Ontbrekend woord '+s+'"><option value="">?</option>'+q.bank.map(function(w){return '<option'+(v===w?" selected":"")+'>'+esc(w)+'</option>';}).join("")+'</select>'+(st==="ok"?" ✓":st==="no"?" ✗":"");}).join("")+'</div>'+
+      '<button class="btn" data-chk="'+q.n+'">Controleer</button>'+(a._c?scoreLine(q,a):"");}
+  else if(q.t==="ze"){a=a||{};h='<div>'+q.items.map(function(n,i){return '<div class="row2"><span>'+esc(n)+'</span><span class="zelf">'+[1,2,3,4,5].map(function(x){return '<button data-z="'+q.n+'" data-i="'+i+'" data-v="'+x+'" class="'+(a[i]===x?"on":"")+'" aria-label="'+esc(n)+' '+x+'">'+x+'</button>';}).join("")+'</span></div>';}).join("")+'</div>'+subs(q,a);}
+  else h=subs(q,a||{});
+  return h;
+}
+function scoreLine(q,a){var tot=0,ok=0;(q.items||q.k).forEach(function(it,i){var key=q.t==="ke"?q.k[i]:it[1];if(key==null)return;tot++;var v=a[i];if(String(v)===String(key))ok++;});return '<p class="res '+(ok===tot?"ok":"no")+'">'+ok+' van '+tot+' goed'+(ok===tot?" ✓":", probeer de rode nog eens.")+'</p>';}
+function subs(q,a){
+  var S=q.s||[q.t==="ze"?null:""].filter(function(x){return x!==null;});
+  return S.map(function(lab,i){var short=q.k&&q.k[i]!=null;
+    return '<div class="sub">'+(lab?'<label for="t'+q.n+'_'+i+'">'+esc(lab)+'</label>':'')+(short?'<input type="text" id="t'+q.n+'_'+i+'" data-t="'+q.n+'" data-i="'+i+'" value="'+esc(a[i]||"")+'" inputmode="numeric" style="width:120px">'+(a[i]?(a[i].trim()===q.k[i]?' ✓':' ✗'):''):
+    '<textarea id="t'+q.n+'_'+i+'" data-t="'+q.n+'" data-i="'+i+'" maxlength="900" placeholder="Typ hier je antwoord…">'+esc(a[i]||"")+'</textarea><button class="btn ghost" data-ai="'+q.n+'" data-i="'+i+'">Vraag de AI om feedback</button><div id="fb'+q.n+'_'+i+'"></div>')+'</div>';}).join("");
+}
+function draw(){
+  A._b=cur;save();tabs();var b=BL[cur];
+  $("blok").innerHTML='<div class="bhead"><h2>'+(cur<5?(cur+1)+" · ":"")+b[0]+' <span class="muted" style="font:500 16px Inter">'+b[1]+'</span></h2><p class="muted" style="margin:2px 0 0">'+b[2]+'</p></div>'+
+   Q.filter(function(q){return q.b===cur;}).map(function(q,i){return '<div class="card" id="q'+q.n+'" style="animation-delay:'+Math.min(i,6)*45+'ms"><div class="tag">'+q.l+' <i>· vraag '+q.n+' · dia '+q.d+'</i></div>'+(q.bron?'<p class="bron">'+esc(q.bron)+'</p>':'')+'<p class="v">'+q.n+'. '+esc(q.v)+'</p>'+widget(q)+'</div>';}).join("");
+  $("prev").style.visibility=cur?"visible":"hidden";$("next").style.visibility=cur<5?"visible":"hidden";
+}
+function redraw(n){var q=Q.filter(function(x){return x.n===n;})[0],c=$("q"+n),sc=document.scrollingElement.scrollTop;
+  var focus=document.activeElement&&document.activeElement.id,st=c.style.animationDelay;
+  c.style.animation="none";c.innerHTML='<div class="tag">'+q.l+' <i>· vraag '+q.n+' · dia '+q.d+'</i></div>'+(q.bron?'<p class="bron">'+esc(q.bron)+'</p>':'')+'<p class="v">'+q.n+'. '+esc(q.v)+'</p>'+widget(q);tabs();}
+document.addEventListener("click",function(e){
+  var t;
+  if((t=e.target.closest("[data-b]"))){cur=+t.dataset.b;draw();window.scrollTo({top:0});return;}
+  if((t=e.target.closest(".opt"))){var n=+t.dataset.n;A[n]=+t.dataset.i;save();redraw(n);return;}
+  if((t=e.target.closest("[data-chk]"))){var n=+t.dataset.chk;A[n]=A[n]||{};A[n]._c=1;save();redraw(n);return;}
+  if((t=e.target.closest("[data-z]"))){var n=+t.dataset.z;A[n]=A[n]||{};A[n][t.dataset.i]=+t.dataset.v;save();redraw(n);return;}
+  if((t=e.target.closest("[data-ai]"))){ask(t);return;}
+});
+document.addEventListener("change",function(e){var t=e.target;if(t.tagName==="SELECT"&&t.dataset.n){var n=+t.dataset.n;A[n]=A[n]||{};A[n][t.dataset.i]=t.value;A[n]._c=0;save();redraw(n);}});
+document.addEventListener("input",function(e){var t=e.target;if(t.dataset&&t.dataset.t){var n=+t.dataset.t;A[n]=A[n]||{};A[n][t.dataset.i]=t.value;save();tabs();}});
+function ask(btn){
+  var n=+btn.dataset.ai,i=+btn.dataset.i,q=Q.filter(function(x){return x.n===n;})[0],a=((A[n]||{})[i]||"").trim(),fb=$("fb"+n+"_"+i);
+  if(a.length<5){fb.innerHTML='<div class="aifb bijna"><p>Typ eerst je antwoord.</p></div>';return;}
+  btn.disabled=true;btn.textContent="Bezig met nakijken…";
+  var vraag=(q.s?q.v+" "+q.s[i]:q.v);
+  GV_AI.check({begrip:vraag,uitleg:"Beoordeel het antwoord van de leerling aan de hand van de lesstof (samenvatting). Er is geen vast modelantwoord: kijk of het antwoord klopt met de les en volledig genoeg is.",antwoord:a,paragraaf:"H4 Welvaart voor iedereen · blok "+(q.b+1),samenvatting:(window.DOEBOEK_CTX[q.b+1]||window.DOEBOEK_CTX[5]||""),punten:[]}).then(function(f){
+    btn.disabled=false;btn.textContent="Vraag de AI om feedback";f.melding=f.lokaal?"De AI is nu niet bereikbaar: bespreek dit antwoord met je docent.":f.melding;
+    if(f.lokaal){fb.innerHTML='<div class="aifb bijna"><p>De AI is nu niet bereikbaar. Vergelijk je antwoord met de PowerPoint of vraag het je docent.</p></div>';return;}
+    fb.innerHTML=GV_AI.render(f);});
+}
+$("prev").onclick=function(){cur=Math.max(0,cur-1);draw();window.scrollTo({top:0});};
+$("next").onclick=function(){cur=Math.min(5,cur+1);draw();window.scrollTo({top:0});};
+$("copy").onclick=function(){
+  var s="Doe-boek H4 · Welvaart voor iedereen\n\n";
+  Q.forEach(function(q){var a=A[q.n];if(a==null)return;var v;
+    if(q.t==="mc")v=L(a);else if(typeof a==="object")v=Object.keys(a).filter(function(k){return k[0]!=="_"&&a[k]!=="";}).map(function(k){return (q.s&&q.s[k]?q.s[k].slice(0,2)+" ":"")+(q.items&&q.items[k]?(Array.isArray(q.items[k])?q.items[k][0].slice(0,30):q.items[k])+" = ":"")+a[k];}).join("\n   ");else v=a;
+    s+=q.n+". "+v+"\n";});
+  (navigator.clipboard?navigator.clipboard.writeText(s):Promise.reject()).then(function(){$("copy").textContent="Gekopieerd ✓";},function(){prompt("Kopieer je antwoorden:",s);});
+  setTimeout(function(){$("copy").textContent="Kopieer mijn antwoorden";},2200);};
+draw();
+})();
+</script>
+</body>
+</html>
