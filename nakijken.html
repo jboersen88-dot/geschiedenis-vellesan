@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>AI-nakijker · Geschiedenis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--green:#1f5f4e;--coral:#ff8d90;--berry:#c2484d;--teal:#2f8f86;--bg:#f6f0e6;--card:#fffdf9;--ink:#201a14;--muted:#6f6556;--line:#e6dac4;--ok-soft:#e1f4ea;--ease:cubic-bezier(.23,1,.32,1)}
+@media(prefers-color-scheme:dark){:root{--bg:#17201d;--card:#1f2b27;--ink:#f2ece0;--muted:#a79f90;--line:#34433d;--ok-soft:#183a2b;--green:#8fd3bd}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,system-ui,sans-serif}
+.wrap{max-width:860px;margin:0 auto;padding:16px 16px 80px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+a.back{color:var(--green);font-weight:700;text-decoration:none;font-size:14px}
+h1{font:700 clamp(28px,5vw,40px)/1.12 Fraunces,serif;color:var(--green);margin:10px 0 4px;letter-spacing:-.02em}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--berry)}
+.muted{color:var(--muted)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 0}
+.chips button{border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:99px;padding:8px 14px;min-height:40px;font:600 14px Inter;cursor:pointer;transition:transform .16s var(--ease),background-color .16s,border-color .16s}
+.chips button:active{transform:scale(.97)}
+.chips button[aria-pressed=true]{background:var(--green);border-color:var(--green);color:#fff}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:20px;margin-top:16px;box-shadow:0 1px 2px rgba(31,95,78,.06),0 14px 34px rgba(31,95,78,.09)}
+.card.in{animation:cin .38s var(--ease)}@keyframes cin{from{opacity:0;transform:translateY(10px)}}
+.qtag{display:flex;gap:8px;align-items:center;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--teal)}
+.qtag i{font-style:normal;background:var(--ok-soft);color:var(--green);border-radius:99px;padding:2px 9px;letter-spacing:0}
+.q{font:600 clamp(19px,3vw,23px)/1.35 Fraunces,serif;margin:8px 0 12px;white-space:pre-line}
+textarea{width:100%;min-height:130px;border:2px solid var(--line);border-radius:14px;padding:12px;font:16px/1.5 Inter;background:var(--bg);color:var(--ink);resize:vertical;transition:border-color .16s}
+textarea:focus{border-color:var(--teal);outline:none}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:8px;border:0;border-radius:12px;padding:10px 18px;min-height:46px;font:700 15px Inter;background:var(--berry);color:#fff;cursor:pointer;transition:transform .16s var(--ease),filter .16s}
+.btn:active{transform:scale(.97)}.btn.ghost{background:transparent;color:var(--green);border:1.5px solid var(--line)}.btn:disabled{opacity:.6;cursor:wait}
+@media(hover:hover) and (pointer:fine){.btn:hover{filter:brightness(1.08)}.chips button:hover{border-color:var(--teal)}}
+.model{margin-top:12px;border-left:4px solid var(--teal);padding:4px 0 4px 14px}
+.model h3{margin:0 0 4px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--teal)}
+.model ol{margin:4px 0;padding-left:20px}.model li{margin:4px 0}
+.score{margin-left:auto;font-size:14px;color:var(--muted)}.score b{color:var(--green);font-size:18px}
+.dots{display:flex;gap:5px;flex-wrap:wrap;margin-top:14px}.dots i{width:12px;height:12px;border-radius:50%;background:var(--line);transition:background-color .3s,transform .3s var(--ease)}.dots i.g{background:#2e9b6b;transform:scale(1.15)}.dots i.h{background:#d69a2a}
+.spin{width:16px;height:16px;border:3px solid rgba(255,255,255,.4);border-top-color:#fff;border-radius:50%;animation:sp .7s linear infinite}@keyframes sp{to{transform:rotate(360deg)}}
+:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><a class="back" href="index.html">← Startpagina</a><a class="back" href="app.html">Naar de leeromgeving →</a></div>
+  <div class="eyebrow">AI-oefenmodule</div>
+  <h1>Typ je antwoord. De AI kijkt het na.</h1>
+  <p class="muted" style="margin:0">Open vragen uit de oefentoetsen en begrippen in je eigen woorden. Je krijgt direct te horen wat goed is, wat er mist en wat niet klopt. Gebruik geen namen of persoonlijke gegevens.</p>
+  <div class="chips" id="modes" role="group" aria-label="Soort oefening"></div>
+  <div class="chips" id="filters" role="group" aria-label="Filter"></div>
+  <div id="card"></div>
+</div>
+<script src="data/toetsen.js"></script>
+<script src="data/begrippen.js"></script>
+<script src="ai.js"></script>
+<script>
+(function(){
+var KEY="gv-nakijk",ST={};try{ST=JSON.parse(localStorage.getItem(KEY)||"{}");}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(ST));}catch(e){}}
+var esc=GV_AI.esc;
+/* open vragen met een bron (afbeelding/tekst) vallen af: die staan in toets.html */
+var OPEN=[];
+Object.keys(window.TOETSEN).forEach(function(k){window.TOETSEN[k].open.forEach(function(o){
+  if(/bron \d/i.test(o.v)||!o.g||!o.g.length||!o.g[0].t)return;
+  OPEN.push({id:k+"-"+o.nr,toets:k,t:window.TOETSEN[k].t,p:o.p,v:o.v,punten:o.g.map(function(g){return g.t;}),m:o.m||[]});});});
+var BEG=window.BEGRIPPEN.map(function(c,i){return {id:"b"+i,hs:c[0],v:"Leg uit: "+c[1],begrip:c[1],uitleg:c[2],voorbeeld:c[3]};});
+var mode=ST.mode||"open",flt=ST.flt||"alle",cur=null,busy=false,session={goed:0,n:0};
+var modesEl=document.getElementById("modes"),fEl=document.getElementById("filters"),card=document.getElementById("card");
+function pool(){
+  if(mode==="open")return OPEN.filter(function(q){return flt==="alle"||q.toets===flt;});
+  return BEG.filter(function(q){return flt==="alle"||q.hs===flt;});
+}
+function chips(){
+  modesEl.innerHTML=[["open","Open vragen"],["beg","Begrippen uitleggen"]].map(function(m){return '<button data-m="'+m[0]+'" aria-pressed="'+(mode===m[0])+'">'+m[1]+'</button>';}).join("");
+  var fl=mode==="open"?[["alle","Alle toetsen"],["t1","Oefentoets H1+H2"],["t2","Oefentoets H3+H4"],["t3","Oefentoets H1–H4"]]:[["alle","Alle"],["H1","H1"],["H2","H2"],["H3","H3"],["H4","H4"]];
+  fEl.innerHTML=fl.map(function(f){return '<button data-f="'+f[0]+'" aria-pressed="'+(flt===f[0])+'">'+f[1]+'</button>';}).join("");
+}
+function next(){
+  var p=pool(),q;if(!p.length)return;
+  var open=p.filter(function(x){return !(ST.done&&ST.done[x.id]==="g");});if(open.length)p=open;
+  do{q=p[Math.floor(Math.random()*p.length)];}while(p.length>1&&cur&&q.id===cur.id);
+  cur=q;draw();
+}
+function dots(){var p=pool();return '<div class="dots" aria-label="Voortgang">'+p.map(function(x){var s=ST.done&&ST.done[x.id];return '<i class="'+(s||"")+'"'+(x.id===cur.id?' style="outline:2px solid var(--teal);outline-offset:2px"':'')+'></i>';}).join("")+'</div>';
+}
+function draw(){
+  var q=cur,tag=mode==="open"?esc(q.t)+' <i>'+q.p+' punt'+(q.p>1?'en':'')+'</i>':'Begrip · '+q.hs;
+  card.innerHTML='<div class="card in"><div class="qtag">'+tag+'<span class="score">Helemaal goed: <b>'+(Object.keys(ST.done||{}).filter(function(k){return ST.done[k]==="g";}).length)+'</b></span></div>'+
+   '<p class="q">'+esc(q.v)+'</p><textarea id="ans" maxlength="800" placeholder="Typ hier je antwoord in je eigen woorden…" aria-label="Je antwoord"></textarea>'+
+   '<div class="row"><button class="btn" id="go">Laat nakijken</button><button class="btn ghost" id="skip">Andere vraag</button></div><div id="fb"></div>'+dots()+'</div>';
+}
+card.addEventListener("click",function(e){
+  if(e.target.closest("#skip")||e.target.closest("#nxt")){next();return;}
+  if(e.target.closest("#again")){document.getElementById("fb").innerHTML="";document.getElementById("ans").focus();return;}
+  if(!e.target.closest("#go")||busy)return;
+  var inp=document.getElementById("ans"),a=inp.value.trim(),fb=document.getElementById("fb");
+  if(a.length<5){fb.innerHTML='<div class="aifb bijna"><p>Typ eerst je antwoord (minstens een zinnetje).</p></div>';return;}
+  var btn=document.getElementById("go");busy=true;btn.disabled=true;btn.innerHTML='<span class="spin"></span> Bezig met nakijken…';
+  var q=cur,o=mode==="open"?{begrip:q.v,uitleg:q.m.join(" "),antwoord:a,paragraaf:q.t,punten:q.punten}:{begrip:q.begrip,uitleg:q.uitleg,voorbeeld:q.voorbeeld,antwoord:a,paragraaf:q.hs,punten:[q.uitleg]};
+  GV_AI.check(o).then(function(f){
+    busy=false;btn.disabled=false;btn.textContent="Laat nakijken";if(q!==cur)return;
+    var res=f.oordeel==="goed"?"g":"h";ST.done=ST.done||{};if(ST.done[q.id]!=="g")ST.done[q.id]=res;save();
+    var model=mode==="open"?'<div class="model"><h3>Nakijkpunten</h3><ol>'+q.punten.map(function(p){return '<li>'+esc(p)+'</li>';}).join("")+'</ol></div>':'<div class="model"><h3>Uitleg uit de les</h3><p style="margin:0">'+esc(q.uitleg)+'</p><p class="muted" style="margin:4px 0 0"><i>Voorbeeld: '+esc(q.voorbeeld)+'</i></p></div>';
+    fb.innerHTML=GV_AI.render(f)+model+'<div class="row"><button class="btn" id="nxt">Volgende vraag →</button>'+(f.oordeel!=="goed"?'<button class="btn ghost" id="again">Verbeter je antwoord</button>':'')+'</div>';
+    var d=card.querySelectorAll(".dots i"),ix=pool().indexOf(q);if(d[ix])d[ix].className=ST.done[q.id];
+  });
+});
+document.getElementById("modes").addEventListener("click",function(e){var b=e.target.closest("[data-m]");if(!b)return;mode=b.dataset.m;flt="alle";ST.mode=mode;ST.flt=flt;save();chips();next();});
+fEl.addEventListener("click",function(e){var b=e.target.closest("[data-f]");if(!b)return;flt=b.dataset.f;ST.flt=flt;save();chips();next();});
+chips();next();
+})();
+</script>
+</body>
+</html>

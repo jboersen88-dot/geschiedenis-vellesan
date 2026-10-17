@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Beeldquiz · Geschiedenis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--green:#1f5f4e;--coral:#ff8d90;--berry:#c2484d;--teal:#2f8f86;--bg:#f6f0e6;--card:#fffdf9;--ink:#201a14;--muted:#6f6556;--line:#e6dac4;--ok-soft:#e1f4ea;--bad-soft:#fbe6e4;--ease:cubic-bezier(.23,1,.32,1);--ease-io:cubic-bezier(.77,0,.175,1)}
+@media(prefers-color-scheme:dark){:root{--bg:#17201d;--card:#1f2b27;--ink:#f2ece0;--muted:#a79f90;--line:#34433d;--ok-soft:#183a2b;--bad-soft:#40201f;--green:#8fd3bd}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,system-ui,sans-serif}
+.wrap{max-width:820px;margin:0 auto;padding:16px 16px 80px}
+a.back{color:var(--green);font-weight:700;text-decoration:none;font-size:14px}
+.top{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--berry);margin-top:10px}
+h1{font:700 clamp(28px,5vw,40px)/1.1 Fraunces,serif;color:var(--green);margin:4px 0;letter-spacing:-.02em}
+.muted{color:var(--muted)}
+.prog{height:8px;background:var(--line);border-radius:6px;margin:14px 0;overflow:hidden}.prog i{display:block;height:100%;width:100%;background:var(--teal);transform-origin:left;transform:scaleX(0);transition:transform .5s var(--ease)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:0 14px 34px rgba(31,95,78,.1)}
+.card.in{animation:cin .4s var(--ease)}@keyframes cin{from{opacity:0;transform:translateY(12px)}}
+.pic{position:relative;aspect-ratio:3/2;overflow:hidden;background:#173a31}
+.pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;animation:kb 16s var(--ease-io) infinite alternate}
+@keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.08) translate(-1%,-1%)}}
+.pic span{position:absolute;right:10px;bottom:10px;background:rgba(0,0,0,.6);color:#fff;font-size:12px;border-radius:99px;padding:3px 10px}
+.body{padding:18px 20px 22px}
+.q{font:600 clamp(19px,3vw,23px)/1.35 Fraunces,serif;margin:0 0 14px}
+.opts{display:flex;flex-direction:column;gap:.9rem}
+.opt{display:flex;gap:12px;align-items:center;text-align:left;width:100%;border:2px solid var(--line);background:var(--bg);color:var(--ink);border-radius:16px;padding:13px 16px;min-height:56px;font:600 16px/1.35 Inter;cursor:pointer;transition:transform .16s var(--ease),border-color .16s,background-color .2s}
+.opt b{flex:none;width:30px;height:30px;border-radius:50%;background:var(--card);border:2px solid var(--line);display:grid;place-items:center;font-size:13px}
+.opt:active:not(:disabled){transform:scale(.98)}
+@media(hover:hover) and (pointer:fine){.opt:hover:not(:disabled){border-color:var(--teal)}}
+.opt.ok{background:var(--ok-soft);border-color:#2e9b6b}.opt.ok b{background:#2e9b6b;border-color:#2e9b6b;color:#fff}
+.opt.no{background:var(--bad-soft);border-color:var(--berry);animation:shake .3s var(--ease)}
+@keyframes shake{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.opt:disabled{cursor:default}.opt:disabled:not(.ok):not(.no){opacity:.55}
+.uitleg{margin-top:14px;border-left:4px solid var(--teal);padding:2px 0 2px 14px;animation:cin .3s var(--ease)}
+.btn{display:inline-flex;border:0;border-radius:12px;padding:10px 20px;min-height:46px;font:700 15px Inter;background:var(--berry);color:#fff;cursor:pointer;margin-top:14px;transition:transform .16s var(--ease)}
+.btn:active{transform:scale(.97)}.btn.ghost{background:transparent;color:var(--green);border:1.5px solid var(--line);margin-left:8px}
+.end{text-align:center;padding:36px 20px}.end .big{font:700 56px/1 Fraunces,serif;color:var(--green)}
+:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><a class="back" href="index.html">← Startpagina</a><a class="back" href="kaart.html">Naar de kaart →</a></div>
+  <div class="eyebrow">Beeldquiz · hoofdstuk 3</div>
+  <h1>Wat zie je op het beeld?</h1>
+  <p class="muted" style="margin:0">Elk beeld is een AI-illustratie van een gebeurtenis uit de les. Kies bij elk beeld het juiste antwoord.</p>
+  <div class="prog" aria-hidden="true"><i id="prog"></i></div>
+  <div id="stage"></div>
+</div>
+<script>
+(function(){
+/* Meerkeuze volgens de regels: 4 antwoorden, elk op een eigen regel, ongeveer even lang, het juiste is niet het langste. a[0] is het juiste antwoord. */
+var Q=[
+{i:"kinderwetje",c:"Een inspecteur controleert een fabriek waar een kind werkt.",q:"Welke wet hoort bij dit beeld?",a:["Het Kinderwetje van Van Houten uit 1874","De leerplichtwet die in 1901 werd ingevoerd","De Arbeidswet met de achturige werkdag","Het algemeen kiesrecht voor mannen in 1917"],u:"Het Kinderwetje (1874) van Samuel van Houten was de eerste sociale wet van Nederland: geen fabrieksarbeid voor kinderen onder de twaalf."},
+{i:"kinderen-school",c:"Kinderen lopen naar school, langs de fabriekspijpen.",q:"Welke wet bepaalde dat alle kinderen naar school moesten?",a:["De leerplichtwet uit 1901","Het Kinderwetje uit het jaar 1874","De Arbeidswet uit het jaar 1919","De wet voor het algemeen kiesrecht"],u:"In 1901 werd de leerplicht ingevoerd. Er werd ook gecontroleerd, en doordat de lonen waren gestegen konden ouders hun kinderen missen."},
+{i:"stemlokaal-1917",c:"Mannen stemmen in een stemlokaal.",q:"Welke verandering uit 1917 hoort bij dit beeld?",a:["Alle mannen kregen stemrecht","Alleen rijke mannen mochten stemmen","Fabrikanten stemden twee keer","Stemmen werd verplicht voor kinderen"],u:"In 1917 kwam het algemeen kiesrecht (voor mannen). Daarvoor gold het censuskiesrecht: alleen rijke mannen mochten stemmen. Zo kregen arbeiders invloed in de politiek."},
+{i:"sdap-affiche-1",c:"Een affiche van de SDAP.",q:"Wat wilde de SDAP van Troelstra?",a:["Verbeteringen via wetten, geen revolutie","Een gewelddadige revolutie zoals in Rusland","Terug naar het censuskiesrecht voor rijken","Alle fabrieken sluiten en machines slopen"],u:"De SDAP (Sociaal-Democratische Arbeiderspartij) wilde de situatie van arbeiders verbeteren via wetten, niet via een revolutie."},
+{i:"inspecteur-fabriek",c:"Een inspecteur bij een woning en een fabriek.",q:"Over welk probleem gaat dit beeld, dat de sociale kwestie heet?",a:["De slechte situatie van de arbeiders","Het tekort aan machines in Nederland","De rijkdom van de fabrikanten","De groei van de handel na 1945"],u:"De sociale kwestie is de slechte situatie van de arbeider: een groot overschot aan werknemers (dus lage lonen), geen zekerheid, lange werkdagen, korte pauzes en geen veiligheid in de fabrieken."},
+{i:"wallstreet-krant",c:"Een menigte bij de beurs van New York in 1929.",q:"Wat gebeurde er in 1929?",a:["De beurskrach, de aandelenbeurs stortte in","De Eerste Wereldoorlog brak uit in Europa","De leerplicht werd ingevoerd voor kinderen","De Marshallhulp kwam binnen in Nederland"],u:"De beurskrach van 1929: de hele aandelenbeurs stort in elkaar. Dit was het begin van de grootste economische crisis."},
+{i:"beurskrach-auto",c:"Een man verkoopt zijn auto, omdat hij alles op de beurs kwijt is.",q:"Wat gebeurde er daarna met de handel en de bedrijven?",a:["Bedrijven gingen failliet, handel stortte in","Bedrijven groeiden en de handel nam sterk toe","De regering nam alle grote bedrijven over","De lonen stegen en er kwam veel meer werk"],u:"Na de beurskrach gaan bedrijven failliet en stopt de handel. Zo ontstaat een vicieuze cirkel: meer werkloosheid, minder vraag, nog meer faillissementen."},
+{i:"arbeidsbeurs",c:"Mannen wachten bij de arbeidsbeurs.",q:"Hoeveel mensen waren er in 1935 werkloos?",a:["Ongeveer 640.000 mensen","Ongeveer 265.000 mensen","Ongeveer 2,75 miljoen mensen","Ongeveer 18 miljoen mensen"],u:"In 1935, het dieptepunt van de crisis, waren ongeveer 640.000 mensen werkloos."},
+{i:"haven",c:"Schepen in een haven.",q:"Welke stad wordt in de les genoemd voor de vele handel na de Eerste Wereldoorlog?",a:["Rotterdam","Eindhoven","Enschede","Groningen"],u:"Na de Eerste Wereldoorlog ging het geweldig in Nederland: geen oorlogsschade en heel veel handel (Rotterdam)."}
+];
+var esc=function(t){return String(t).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});};
+function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+/* ontwikkelaarscontrole: 4 opties, lengteverhouding en "juiste = langste" */
+Q.forEach(function(q,n){var L=q.a.map(function(x){return x.length;}),max=Math.max.apply(0,L),min=Math.min.apply(0,L);
+  if(q.a.length!==4)console.warn("[meerkeuze] vraag",n+1,"heeft geen 4 opties");
+  if(min>20&&max/min>1.5)console.warn("[meerkeuze] vraag",n+1,"lengteverhouding",(max/min).toFixed(2));
+  if(L[0]===max&&max>L.slice().sort(function(a,b){return b-a;})[1]*1.08+0)console.warn("[meerkeuze] vraag",n+1,"juiste antwoord is het langste");});
+var order=shuffle(Q.map(function(_,i){return i;})),pos=0,score=0,stage=document.getElementById("stage"),prog=document.getElementById("prog");
+function show(){
+  prog.style.transform="scaleX("+pos/order.length+")";
+  if(pos>=order.length){stage.innerHTML='<div class="card in end"><div class="big">'+score+' / '+order.length+'</div><p>'+(score===order.length?"Alles goed! Je kent je beelden.":score>=order.length*.7?"Sterk! Nog even de gemiste beelden herhalen.":"Blijf oefenen, de volgende ronde gaat beter.")+'</p><button class="btn" id="again">Nog een keer</button><a class="btn ghost" href="nakijken.html" style="text-decoration:none;align-items:center">Oefen met de AI-nakijker</a></div>';return;}
+  var q=Q[order[pos]],o=shuffle(q.a.map(function(t,i){return {t:t,ok:i===0};}));
+  stage.innerHTML='<div class="card in"><div class="pic"><img src="img/flow/'+q.i+'.jpg" alt="'+esc(q.c)+' (AI-illustratie)"><span>AI-illustratie</span></div><div class="body"><p class="muted" style="margin:0 0 4px;font-size:14px">Beeld '+(pos+1)+' van '+order.length+' · '+esc(q.c)+'</p><p class="q">'+esc(q.q)+'</p><div class="opts">'+
+    o.map(function(x,i){return '<button class="opt" data-ok="'+(x.ok?1:0)+'"><b>'+"ABCD"[i]+'</b><span>'+esc(x.t)+'</span></button>';}).join("")+'</div><div id="ex"></div></div></div>';
+}
+stage.addEventListener("click",function(e){
+  if(e.target.closest("#again")){order=shuffle(order);pos=0;score=0;show();return;}
+  if(e.target.closest("#nx")){pos++;show();return;}
+  var b=e.target.closest(".opt");if(!b||b.disabled)return;
+  var ok=b.dataset.ok==="1";if(ok)score++;
+  [].forEach.call(stage.querySelectorAll(".opt"),function(x){x.disabled=true;if(x.dataset.ok==="1")x.classList.add("ok");});
+  if(!ok)b.classList.add("no");
+  var q=Q[order[pos]];
+  document.getElementById("ex").innerHTML='<div class="uitleg"><b>'+(ok?"Goed!":"Niet helemaal.")+'</b> '+esc(q.u)+'</div><button class="btn" id="nx">'+(pos+1<order.length?"Volgend beeld →":"Bekijk je score")+'</button>';
+  document.getElementById("nx").focus({preventScroll:true});
+});
+show();
+})();
+</script>
+</body>
+</html>

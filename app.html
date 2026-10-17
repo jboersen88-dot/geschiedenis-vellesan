@@ -948,7 +948,7 @@ function gamesHome(){
   gWrap.innerHTML='<div class="gpick">'+
    '<button class="gtile" data-game="swipe"><span class="gico">👆</span><b>Swipe &amp; Scoor</b><span>Veeg elk kaartje naar de juiste kant. Hoe meer goed op rij, hoe meer punten!</span><em>Highscore: '+hs("swipe")+'</em></button>'+
    '<button class="gtile" data-game="memory"><span class="gico">🧠</span><b>Begrippen-memory</b><span>Zoek bij elk begrip de juiste uitleg. Lukt het in zo weinig mogelijk beurten?</span><em>Beste: '+(hs("memory")?hs("memory")+' beurten':'nog geen')+'</em></button>'+
-  '<a class="gtile" href="racer.html" style="text-decoration:none;color:inherit"><span class="gico">🏎️</span><b>Geschiedenis-Racer</b><span>Race langs de eeuwen. Tank bij elk station bij met vragen, sorteer kaartjes en koppel begrippen.</span><em>Nieuw · speel in een eigen scherm</em></a>'+
+  '<a class="gtile" href="kaart.html" style="text-decoration:none;color:inherit"><span class="gico">🗺️</span><b>De crisis op de kaart</b><span>Klik op New York, Rotterdam en Nederland, schuif van 1929 naar 1935 en beantwoord vragen die de AI nakijkt.</span></a><a class="gtile" href="beeldquiz.html" style="text-decoration:none;color:inherit"><span class="gico">🖼️</span><b>Beeldquiz</b><span>Welk moment uit de les zie je? Raad het bij elk beeld.</span></a><a class="gtile" href="nakijken.html" style="text-decoration:none;color:inherit"><span class="gico">🤖</span><b>AI-nakijker</b><span>Typ je antwoord op open vragen uit de oefentoetsen en krijg direct feedback.</span></a><a class="gtile" href="racer.html" style="text-decoration:none;color:inherit"><span class="gico">🏎️</span><b>Geschiedenis-Racer</b><span>Race langs de eeuwen. Tank bij elk station bij met vragen, sorteer kaartjes en koppel begrippen.</span><em>Nieuw · speel in een eigen scherm</em></a>'+
   '</div>';
 }
 gWrap.addEventListener("click",function(e){var t=e.target.closest("[data-game]");if(t){if(t.dataset.game==="swipe")startSwipe();else startMemory();}
@@ -1053,7 +1053,7 @@ function endMemory(){
 gamesHome();
 
 /* ---------- leg uit (AI-nakijker) ---------- */
-var AI_URL="" /* vul hier eventueel je eigen Apps Script-URL in (niet in een publieke repo) */,LU_VAK="geschiedenis";
+var AI_URL="https://script.google.com/macros/s/AKfycbxkH4alzrbV7uJXjRbXAIHILrzQvlegxpeWD1yw9TCC_huhqs2wPEkBmEiXqf5YWuMiAA/exec" /* AI-nakijker (Gemini). Uitzetten: maak de URL leeg, dan valt Leg uit terug op luLocal. Staat ook publiek in de Google Site. */,LU_VAK="geschiedenis";
 function luInSel(p,f){return typeof inSel==="function"?inSel(p,f):(f==="alle"||p===f);}
 function luLab(f){return typeof selLabel==="function"?selLabel(f):(f==="alle"?"Alles":f);}
 var luPar="alle",luIdx=-1,luBusy=false,luS={goed:0,totaal:0},luCard=document.getElementById("luCard");

@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>De crisis op de kaart · Geschiedenis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--green:#1f5f4e;--coral:#ff8d90;--berry:#c2484d;--teal:#2f8f86;--bg:#f6f0e6;--card:#fffdf9;--ink:#201a14;--muted:#6f6556;--line:#e6dac4;--ok-soft:#e1f4ea;--sea:#cfe3df;--land:#e9dcc0;--landline:#c9b98f;--ease:cubic-bezier(.23,1,.32,1);--ease-io:cubic-bezier(.77,0,.175,1)}
+@media(prefers-color-scheme:dark){:root{--bg:#17201d;--card:#1f2b27;--ink:#f2ece0;--muted:#a79f90;--line:#34433d;--ok-soft:#183a2b;--green:#8fd3bd;--sea:#16302c;--land:#2d3a30;--landline:#46584a}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,system-ui,sans-serif}
+.wrap{max-width:1040px;margin:0 auto;padding:16px 16px 80px}
+a.back{color:var(--green);font-weight:700;text-decoration:none;font-size:14px}
+.top{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--berry);margin-top:10px}
+h1{font:700 clamp(28px,5vw,42px)/1.1 Fraunces,serif;color:var(--green);margin:4px 0;letter-spacing:-.02em}
+.muted{color:var(--muted)}
+.toggle{display:inline-flex;background:var(--card);border:1.5px solid var(--line);border-radius:99px;padding:4px;margin:14px 0 12px;position:relative}
+.toggle button{position:relative;z-index:1;border:0;background:transparent;color:var(--ink);font:700 14px Inter;padding:9px 18px;min-height:42px;border-radius:99px;cursor:pointer;transition:color .2s}
+.toggle button[aria-pressed=true]{color:#fff}
+.toggle .pill{position:absolute;top:4px;bottom:4px;left:4px;width:calc(50% - 4px);background:var(--green);border-radius:99px;transition:transform .32s var(--ease-io)}
+.toggle[data-y="1935"] .pill{transform:translateX(100%)}
+.mapbox{position:relative;aspect-ratio:1000/600;border-radius:24px;overflow:hidden;background:var(--sea);border:1px solid var(--line);box-shadow:0 14px 34px rgba(31,95,78,.12)}
+.mapbox>svg{position:absolute;inset:0;width:100%;height:100%}
+.land{fill:var(--land);stroke:var(--landline);stroke-width:2;stroke-linejoin:round}
+.grat{stroke:var(--landline);stroke-width:1;opacity:.35;stroke-dasharray:3 7;fill:none}
+.route{fill:none;stroke:var(--berry);stroke-width:3;stroke-dasharray:2 9;stroke-linecap:round;opacity:.65;transition:opacity .5s}
+.ship{position:absolute;left:0;top:0;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(31,95,78,.18);offset-rotate:0deg;transition:opacity .6s}
+.ship.off{opacity:0}
+.hs{position:absolute;transform:translate(-50%,-50%);border:0;background:var(--berry);color:#fff;border-radius:99px;min-width:44px;min-height:44px;padding:0 14px;font:800 13px Inter;cursor:pointer;display:flex;align-items:center;gap:8px;box-shadow:0 6px 18px rgba(194,72,77,.45);transition:transform .2s var(--ease),background-color .2s}
+.hs:active{transform:translate(-50%,-50%) scale(.95)}
+.hs[aria-pressed=true]{background:var(--green);box-shadow:0 6px 18px rgba(31,95,78,.45)}
+.hs:before{content:"";position:absolute;inset:-6px;border-radius:99px;border:2px solid var(--berry);opacity:0;animation:ping 2.4s var(--ease) infinite}
+.hs[aria-pressed=true]:before{display:none}
+@keyframes ping{0%{opacity:.7;transform:scale(.9)}100%{opacity:0;transform:scale(1.35)}}
+@media(hover:hover) and (pointer:fine){.hs:hover{transform:translate(-50%,-50%) scale(1.06)}}
+.hs span.n{display:none}@media(min-width:640px){.hs span.n{display:inline}}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px 16px}
+.stat small{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.stat b{display:block;font:700 clamp(22px,4vw,32px)/1.1 Fraunces,serif;color:var(--green);font-variant-numeric:tabular-nums;margin-top:2px}
+.stat .bar{height:8px;background:var(--line);border-radius:6px;margin-top:8px;overflow:hidden}
+.stat .bar i{display:block;height:100%;width:100%;background:var(--berry);border-radius:6px;transform-origin:left;transition:transform .9s var(--ease)}
+@media(max-width:560px){.stats{grid-template-columns:1fr}}
+.panel{margin-top:16px;background:var(--card);border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:0 14px 34px rgba(31,95,78,.1)}
+.panel.in{animation:pin .4s var(--ease)}@keyframes pin{from{opacity:0;transform:translateY(12px)}}
+.pgrid{display:grid;grid-template-columns:1.1fr 1fr}
+@media(max-width:760px){.pgrid{grid-template-columns:1fr}}
+.pimg{position:relative;min-height:260px;background:#173a31;overflow:hidden}
+.pimg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;animation:kb 14s var(--ease-io) infinite alternate}
+@keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.09) translate(-1.5%,-1%)}}
+.pimg .cap{position:absolute;left:0;right:0;bottom:0;padding:26px 14px 10px;background:linear-gradient(transparent,rgba(0,0,0,.7));color:#fff;font-size:13px}
+.thumbs{position:absolute;top:10px;right:10px;display:flex;gap:6px}
+.thumbs button{width:44px;height:44px;border-radius:12px;border:2px solid rgba(255,255,255,.6);background-size:cover;background-position:center;cursor:pointer;padding:0;transition:transform .16s var(--ease)}
+.thumbs button:active{transform:scale(.93)}.thumbs button[aria-pressed=true]{border-color:var(--coral)}
+.ptxt{padding:20px}
+.ptxt h2{font:700 24px/1.2 Fraunces,serif;color:var(--green);margin:0 0 8px}
+.ptxt ul{padding-left:20px;margin:8px 0}.ptxt li{margin:5px 0}
+.q{margin-top:14px;border-top:1px dashed var(--line);padding-top:14px}.q b{display:block;margin-bottom:8px;white-space:pre-line}
+textarea{width:100%;min-height:96px;border:2px solid var(--line);border-radius:14px;padding:12px;font:16px/1.5 Inter;background:var(--bg);color:var(--ink);resize:vertical}
+textarea:focus{border-color:var(--teal);outline:none}
+.btn{display:inline-flex;align-items:center;gap:8px;border:0;border-radius:12px;padding:10px 18px;min-height:46px;font:700 15px Inter;background:var(--berry);color:#fff;cursor:pointer;margin-top:10px;transition:transform .16s var(--ease)}
+.btn:active{transform:scale(.97)}.btn:disabled{opacity:.6}
+.model{margin-top:10px;border-left:4px solid var(--teal);padding-left:12px;font-size:15px}.model ol{margin:4px 0;padding-left:20px}
+.hint{font-size:13px;color:var(--muted);margin:10px 0 0}
+:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><a class="back" href="index.html">← Startpagina</a><a class="back" href="app.html#H3">Naar H3 in de leeromgeving →</a></div>
+  <div class="eyebrow">Interactieve kaart · hoofdstuk 3</div>
+  <h1>De crisis op de kaart</h1>
+  <p class="muted" style="margin:0;max-width:680px">Tik op een plek. Schuif tussen 1929 en 1935 en zie wat er met de handel gebeurt. Bij elke plek beantwoord je een vraag die de AI nakijkt.</p>
+  <div class="toggle" id="yr" data-y="1929" role="group" aria-label="Jaar"><span class="pill"></span><button data-y="1929" aria-pressed="true">1929 · vóór de krach</button><button data-y="1935" aria-pressed="false">1935 · dieptepunt</button></div>
+
+  <div class="mapbox" id="map">
+    <svg viewBox="0 0 1000 600" preserveAspectRatio="none" role="img" aria-label="Schematische kaart van de Atlantische Oceaan met New York en Rotterdam"><g id="g"></g><path id="route" class="route"/></svg>
+  </div>
+  <p class="hint">Schematische kaart, niet op schaal. Beelden zijn AI-illustraties (gemaakt met Flow), geen echte foto's uit die tijd.</p>
+
+  <div class="stats">
+    <div class="stat"><small>Invoer</small><b id="vIn">2,75</b><span class="muted" style="font-size:13px">miljard gulden</span><div class="bar"><i id="bIn"></i></div></div>
+    <div class="stat"><small>Uitvoer</small><b id="vUit">1,99</b><span class="muted" style="font-size:13px">miljard gulden</span><div class="bar"><i id="bUit"></i></div></div>
+    <div class="stat"><small>Werklozen</small><b id="vWl">–</b><span class="muted" style="font-size:13px" id="wlN">nog geen crisis</span></div>
+  </div>
+
+  <div id="panel"></div>
+</div>
+<script src="data/toetsen.js"></script>
+<script src="ai.js"></script>
+<script>
+(function(){
+var esc=GV_AI.esc,RM=matchMedia("(prefers-reduced-motion:reduce)").matches;
+/* ---- kaart: lengte/breedte -> viewBox (lon -85..15, lat 28..62) ---- */
+function P(a){return [(a[0]+85)/100*1000,(62-a[1])/34*600];}
+function poly(pts){return pts.map(function(a){return P(a).map(function(n){return n.toFixed(1);}).join(",");}).join(" ");}
+var LAND=[
+[[-85,28],[-81,28],[-81,30],[-76,35],[-75,38.5],[-74,40.5],[-72,41],[-70,41.7],[-70.5,43.5],[-67,44.8],[-65,44],[-60,46],[-64,48],[-66,49],[-60,50.3],[-56,52],[-56,55],[-61,58],[-65,60],[-65,62],[-85,62]],
+[[-10,28],[-10,30],[-9.6,33],[-6,36],[-9,37],[-9.5,39],[-9,43],[-2,43.5],[-1.5,46],[-4.5,48.5],[-1.5,48.7],[0,49.5],[2,51],[4,52],[5,53.3],[8,54],[8.5,57],[10.5,57.7],[12,56],[13,55.4],[15,56],[15,62],[15,28]],
+[[-5.5,50],[1.5,51],[1.7,52.7],[0,53.5],[-1.5,55],[-2,57.5],[-3,58.5],[-5,58.5],[-6,56.5],[-4.8,55],[-3,54.5],[-3.2,53.3],[-4.5,53],[-5,51.8]],
+[[-10,51.7],[-6,52],[-6,54.5],[-8,55.3],[-10,54]]];
+var g=document.getElementById("g"),h="";
+for(var lo=-80;lo<=10;lo+=20)h+='<path class="grat" d="M'+P([lo,28]).join(",")+" L"+P([lo,62]).join(",")+'"/>';
+for(var la=30;la<=60;la+=10)h+='<path class="grat" d="M'+P([-85,la]).join(",")+" L"+P([15,la]).join(",")+'"/>';
+LAND.forEach(function(l){h+='<polygon class="land" points="'+poly(l)+'"/>';});
+g.innerHTML=h;
+var NY=P([-74,40.7]),RT=P([4.5,51.9]),CT=[(NY[0]+RT[0])/2,Math.min(NY[1],RT[1])-130];
+var d="M"+NY.join(",")+" Q"+CT.join(",")+" "+RT.join(",");
+document.getElementById("route").setAttribute("d",d);
+/* ---- schepen: veel in 1929, weinig in 1935 ---- */
+var map=document.getElementById("map"),ships=[];
+for(var i=0;i<8;i++){var s=document.createElement("i");s.className="ship";map.appendChild(s);ships.push(s);}
+function placeShips(){
+  var k=map.clientWidth/1000,dd=d.replace(/(-?\d+\.?\d*),(-?\d+\.?\d*)/g,function(m,a,b){return (a*k).toFixed(1)+","+(b*k).toFixed(1);});
+  ships.forEach(function(s,i){
+    s.style.offsetPath="path('"+dd+"')";
+    if(s._a)s._a.cancel();
+    if(RM){s.style.offsetDistance=(8+i*12)+"%";return;}
+    s._a=s.animate([{offsetDistance:"0%"},{offsetDistance:"100%"}],{duration:15000,delay:-i*1900,iterations:Infinity,easing:"linear"});
+  });
+}
+placeShips();addEventListener("resize",function(){clearTimeout(placeShips.t);placeShips.t=setTimeout(placeShips,150);});
+/* ---- jaarschakelaar ---- */
+var DATA={1929:{inv:2.75,uit:1.99,wl:0,ships:8},1935:{inv:.94,uit:.67,wl:640000,ships:2}},yr=1929,cur={inv:2.75,uit:1.99,wl:0};
+function fmt(n){return n.toFixed(2).replace(".",",");}
+function tween(to){
+  var from={inv:cur.inv,uit:cur.uit,wl:cur.wl},t0=performance.now(),dur=RM?1:900;
+  (function f(t){var p=Math.min(1,(t-t0)/dur),e=1-Math.pow(1-p,4);
+    cur.inv=from.inv+(to.inv-from.inv)*e;cur.uit=from.uit+(to.uit-from.uit)*e;cur.wl=from.wl+(to.wl-from.wl)*e;
+    vIn.textContent=fmt(cur.inv);vUit.textContent=fmt(cur.uit);
+    vWl.textContent=cur.wl>1?Math.round(cur.wl).toLocaleString("nl-NL"):"–";
+    if(p<1)requestAnimationFrame(f);})(t0);
+}
+var vIn=document.getElementById("vIn"),vUit=document.getElementById("vUit"),vWl=document.getElementById("vWl");
+function setYear(y){
+  yr=y;var D=DATA[y];tween(D);
+  bIn.style.transform="scaleX("+D.inv/2.75+")";bUit.style.transform="scaleX("+D.uit/2.75+")";
+  document.getElementById("wlN").textContent=y===1935?"ongeveer, in 1935":"nog geen crisis";
+  ships.forEach(function(s,i){s.classList.toggle("off",i>=D.ships);});
+  var t=document.getElementById("yr");t.dataset.y=y;[].forEach.call(t.querySelectorAll("button"),function(b){b.setAttribute("aria-pressed",b.dataset.y==y);});
+}
+var bIn=document.getElementById("bIn"),bUit=document.getElementById("bUit");
+document.getElementById("yr").addEventListener("click",function(e){var b=e.target.closest("[data-y]");if(b)setYear(+b.dataset.y);});
+setYear(1929);
+/* ---- plekken ---- */
+var o26=window.TOETSEN.t3.open.filter(function(x){return x.nr===26;})[0];
+var PL={
+ny:{pos:NY,naam:"New York",t:"Wall Street, New York",imgs:[["wallstreet-krant","Mensen verzamelen zich bij de beurs."],["beurskrach-auto","Een man probeert zijn auto te verkopen."],["wallstreet-1","De menigte voor de beurs."]],
+  feiten:["Beurskrach van 1929: de hele aandelenbeurs stort in elkaar.","Het is de grootste economische crisis.","Bedrijven in de VS gaan failliet en de handel stopt compleet."],
+  q:"Leg uit hoe het instorten van de handel leidde tot steeds méér werkloosheid. Beschrijf de vicieuze cirkel.",punten:o26.g.slice(1).map(function(x){return x.t;}),par:"H3 · De crisis"},
+rt:{pos:RT,naam:"Rotterdam",t:"Rotterdam: de handel stort in",imgs:[["haven","Schepen in de haven."]],
+  feiten:["Na de Eerste Wereldoorlog ging het geweldig: geen oorlogsschade en heel veel handel (Rotterdam).","1929 (voor de krach): invoer 2,75 en uitvoer 1,99 miljard gulden.","1935 (dieptepunt): invoer 0,94 en uitvoer 0,67 miljard gulden.","Zet de schakelaar boven de kaart op 1935 en kijk naar de scheepvaart."],
+  q:"Beschrijf wat er tussen 1929 en 1935 gebeurt met de invoer en de uitvoer van Nederland.",punten:[o26.g[0].t],par:"H3 · De crisis"},
+nl:{pos:[RT[0]-70,RT[1]-78],naam:"Nederland",t:"Nederland in de crisisjaren",imgs:[["arbeidsbeurs","Mannen wachten bij een arbeidsbeurs."],["voedseluitdeling","Voedsel wordt uitgedeeld."],["sdap-affiche-1","Een affiche van de SDAP."],["demonstratie","Een demonstratie."]],
+  feiten:["Werkloosheid: ongeveer 640.000 mensen in 1935.","Premier Colijn voerde de aanpassingspolitiek: minder inkomsten (belasting) betekent minder uitgaven, dus bezuinigen, en loonmatiging.","De SDAP (Troelstra) wilde verandering via wetten, niet via een revolutie."],
+  q:"Wat was de aanpassingspolitiek van Colijn in de crisis van de jaren dertig?",punten:["Geen schulden: minder inkomsten (belasting) betekent minder uitgaven, dus bezuinigen.","Lagere lonen (loonmatiging).","Dit beleid van Colijn heette aanpassingspolitiek."],par:"H3 · De crisis"}};
+Object.keys(PL).forEach(function(k){var p=PL[k],b=document.createElement("button");b.className="hs";b.dataset.k=k;b.setAttribute("aria-pressed","false");
+  b.style.left=(p.pos[0]/10)+"%";b.style.top=(p.pos[1]/6)+"%";b.innerHTML='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span class="n">'+p.naam+'</span><span class="sr" style="position:absolute;width:1px;height:1px;overflow:hidden">'+p.naam+'</span>';
+  map.appendChild(b);});
+var panel=document.getElementById("panel"),sel=null,img=0;
+function show(k,i){
+  sel=k;img=i||0;var p=PL[k];
+  [].forEach.call(map.querySelectorAll(".hs"),function(b){b.setAttribute("aria-pressed",b.dataset.k===k);});
+  var im=p.imgs[img];
+  panel.innerHTML='<div class="panel in"><div class="pgrid"><div class="pimg"><img src="img/flow/'+im[0]+'.jpg" alt="'+esc(im[1])+' (AI-illustratie)"><div class="cap">'+esc(im[1])+' · AI-illustratie</div>'+
+   (p.imgs.length>1?'<div class="thumbs">'+p.imgs.map(function(x,j){return '<button data-i="'+j+'" aria-pressed="'+(j===img)+'" aria-label="Beeld '+(j+1)+'" style="background-image:url(img/flow/'+x[0]+'.jpg)"></button>';}).join("")+'</div>':'')+'</div>'+
+   '<div class="ptxt"><h2>'+esc(p.t)+'</h2><ul>'+p.feiten.map(function(f){return '<li>'+esc(f)+'</li>';}).join("")+'</ul>'+
+   '<div class="q"><b>'+esc(p.q)+'</b><textarea id="ans" maxlength="800" placeholder="Typ je antwoord…" aria-label="Je antwoord"></textarea><button class="btn" id="go">Laat nakijken</button><div id="fb"></div></div></div></div></div>';
+}
+map.addEventListener("click",function(e){var b=e.target.closest(".hs");if(b){show(b.dataset.k);if(!RM)panel.scrollIntoView({behavior:"smooth",block:"nearest"});}});
+panel.addEventListener("click",function(e){
+  var t=e.target.closest("[data-i]");if(t){var im=PL[sel].imgs[+t.dataset.i],pi=panel.querySelector(".pimg img");img=+t.dataset.i;pi.src="img/flow/"+im[0]+".jpg";pi.alt=im[1]+" (AI-illustratie)";panel.querySelector(".cap").textContent=im[1]+" · AI-illustratie";[].forEach.call(panel.querySelectorAll("[data-i]"),function(x){x.setAttribute("aria-pressed",x===t);});return;}
+  var go=e.target.closest("#go");if(!go||go.disabled)return;
+  var a=document.getElementById("ans").value.trim(),fb=document.getElementById("fb"),p=PL[sel];
+  if(a.length<5){fb.innerHTML='<div class="aifb bijna"><p>Typ eerst je antwoord.</p></div>';return;}
+  go.disabled=true;go.textContent="Bezig met nakijken…";
+  GV_AI.check({begrip:p.q,uitleg:p.punten.join(" "),antwoord:a,paragraaf:p.par,punten:p.punten}).then(function(f){
+    go.disabled=false;go.textContent="Laat nakijken";
+    fb.innerHTML=GV_AI.render(f)+'<div class="model"><b>Nakijkpunten</b><ol>'+p.punten.map(function(x){return '<li>'+esc(x)+'</li>';}).join("")+'</ol></div>';});
+});
+show("ny");
+})();
+</script>
+</body>
+</html>

@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-10-17 · 21:00-ronde: AI-nakijker, kaart en beeldquiz
+
+### Actieplan (vooraf geschreven)
+1. **AI-nakijker**: het Apps Script-endpoint van de Economie-apps/originele Geschiedenis-app (Gemini erachter) eerst met één echte POST getest. Daarna een gedeelde module `ai.js` (endpoint, 45 s time-out, lokale fallback op nakijkpunten) en daarop een nieuwe oefenmodule `nakijken.html`: open vragen uit de oefentoetsen (24 vragen met modelantwoord en nakijkpunten) en begrippen uitleggen. Ook `AI_URL` in `app.html` (Leg uit) weer ingevuld.
+2. **Interactieve kaart** (`kaart.html`): schematische kaart New York ↔ Rotterdam ↔ Nederland van de crisis van 1929–1935 met de nieuwe Flow-beelden, klikbare plekken, een 1929/1935-schakelaar met de cijfers uit de PowerPoint, en per plek een open vraag die de AI nakijkt. Alleen feiten uit de PowerPoint/toetsen.
+3. **Beeldquiz** (`beeldquiz.html`): Flow-beeld → bij welk lesonderwerp hoort het? Meerkeuze volgens de regels (4 antwoorden, elk op een eigen regel, gelijke lengte, het juiste niet het langste).
+4. **Statisch → HTML**: de losse docx/pdf's (Doe-boek H4, Recherchebord) bekijken en zo mogelijk als widget bouwen.
+5. Lokaal testen (desktop + iPad, licht + donker), dan pushen.
+
 ## 2026-10-17 · avond: toetsen, spel, scroll-verhaal en meerkeuze volgens de regels
 
 ### Gebouwd
