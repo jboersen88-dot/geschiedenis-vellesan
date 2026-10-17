@@ -68,6 +68,8 @@ textarea:focus{border-color:var(--teal);outline:none}
 .chk span{flex:1}
 .chk small{color:var(--muted);white-space:nowrap}
 .mine{white-space:pre-wrap;background:var(--bg);border-radius:12px;padding:10px 12px;margin-top:8px;font-size:15px}
+.mine mark.hit{background:color-mix(in srgb,#2e9b6b 22%,transparent);color:inherit;border-radius:4px;padding:0 2px}.mine mark.hit sup{font-size:10px;font-weight:800;color:#2e9b6b;margin-left:2px}
+.beter{margin-top:12px}.beter textarea{margin-top:6px}.beter>.n{margin-top:4px}
 .mine:empty:before{content:"Niet beantwoord";color:var(--muted)}
 .aibox:empty{display:none}.aibox{margin-top:4px}.aiwait{margin-top:12px;font-size:14px;color:var(--muted)}.aiwait:before{content:"";display:inline-block;width:12px;height:12px;margin-right:8px;border:2px solid var(--teal);border-right-color:transparent;border-radius:50%;vertical-align:-2px;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}@media(prefers-reduced-motion:reduce){.aiwait:before{animation:none}}
 .stepper{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;align-items:center}
@@ -117,6 +119,11 @@ app.addEventListener("click",function(e){
   if(e.target.closest("#hand")){var miss=missing();if(!miss||confirm("Je hebt "+miss+" vraag"+(miss>1?"en":"")+" nog niet beantwoord. Toch inleveren?"))finish();return;}
   if(e.target.closest("#again")){if(confirm("Opnieuw beginnen? Je antwoorden en cijfer van deze toets worden gewist."))start(cur,true);return;}
   var rt=e.target.closest("[data-retry]");if(rt){delete st[cur].ai[rt.dataset.retry];save();result();return;}
+  var bt=e.target.closest("[data-beter]");if(bt){var nr=bt.dataset.beter,b=(st[cur].beter||{})[nr],box=document.getElementById("be-"+nr);
+    box.innerHTML='<label class="muted" style="font-size:13px" for="bt-'+nr+'">Verbeter je antwoord. Gebruik de feedback hierboven.</label><textarea id="bt-'+nr+'">'+esc(b?b.antwoord:(st[cur].open[nr]||""))+'</textarea><button class="btn" data-bego="'+nr+'" style="margin-top:8px">Laat opnieuw nakijken</button>';
+    document.getElementById("bt-"+nr).focus();return;}
+  var bg=e.target.closest("[data-bego]");if(bg){var o2=D[cur].open.filter(function(x){return String(x.nr)===bg.dataset.bego;})[0],t2=document.getElementById("bt-"+o2.nr).value.trim();
+    if(t2.length<3)return;beterGo(o2,t2);return;}
   var s=e.target.closest("[data-pt]");if(s){var nr=s.dataset.nr;st[cur].self[nr]=+s.dataset.pt;save();result();return;}
 });
 app.addEventListener("change",function(e){var c=e.target.closest("[data-g]");if(c){var a=st[cur].self[c.dataset.nr];a=Array.isArray(a)?a:[];a[+c.dataset.g]=c.checked?1:0;st[cur].self[c.dataset.nr]=a;save();score();}});
@@ -162,8 +169,26 @@ function nkHtml(o){var a=st[cur],v=a.self[o.nr],h="";
 
 /* ---------- AI-nakijker (Haiku 5.5) ---------- */
 var HF={t1:["H1","H2"],t2:["H3","H4"],t3:["H1","H2","H3","H4"]},busy={},queue=[],running=0;
-function aiHtml(o){var r=(st[cur].ai||{})[o.nr];if(r)return GV_NK.render(r)+(r.status!=="ok"&&GV_NK.enabled?'<button class="btn ghost" data-retry="'+o.nr+'" style="margin-top:8px">Probeer AI-nakijken opnieuw</button>':"");
+function aiHtml(o){var r=(st[cur].ai||{})[o.nr];if(r)return GV_NK.render(r)+(r.status!=="ok"&&GV_NK.enabled?'<button class="btn ghost" data-retry="'+o.nr+'" style="margin-top:8px">Probeer AI-nakijken opnieuw</button>':"")+(r.status==="ok"&&r.punten<r.max?beterHtml(o):"");
   return busy[cur+o.nr]?'<div class="aiwait">AI kijkt je antwoord na…</div>':"";}
+/* Jouw antwoord, met de stukjes gemarkeerd die de AI als bewijs voor een punt citeerde */
+function mineHtml(o){var t=st[cur].open[o.nr]||"",r=(st[cur].ai||{})[o.nr],rs=[];
+  if(r&&r.status==="ok")(r.per_punt||[]).forEach(function(x){var c=(x.citaat||"").trim(),i=c&&x.punten>0?t.indexOf(c):-1;if(i>-1)rs.push([i,i+c.length,x.nr]);});
+  rs.sort(function(a,b){return a[0]-b[0];});var h="",p=0;
+  rs.forEach(function(x){if(x[0]<p)return;h+=esc(t.slice(p,x[0]))+'<mark class="hit" title="Punt voor nakijkpunt '+x[2]+'">'+esc(t.slice(x[0],x[1]))+'<sup>'+x[2]+'</sup></mark>';p=x[1];});
+  return h+esc(t.slice(p));}
+/* Verbeterronde: leren van de feedback, telt niet mee voor het cijfer, max 2 keer per vraag (kosten) */
+var MAXBETER=2;
+function beterHtml(o){var b=(st[cur].beter||{})[o.nr],h="";
+  if(b&&b.f)h+='<div class="beter"><div class="n">Verbeterd antwoord'+(b.n>1?" (poging "+b.n+")":"")+' · telt niet mee voor je cijfer</div><div class="mine">'+esc(b.antwoord)+'</div>'+GV_NK.render(b.f)+'</div>';
+  if(b&&b.bezig)return h+'<div class="aiwait">AI kijkt je verbeterde antwoord na…</div>';
+  if(!b||(b.n<MAXBETER&&b.f&&b.f.status==="ok"&&b.f.punten<b.f.max)||(b.f&&b.f.status!=="ok"&&b.n<MAXBETER))
+    h+='<div class="beter" id="be-'+o.nr+'"><button class="btn ghost" data-beter="'+o.nr+'">'+(b?"Nog een keer verbeteren":"Verbeter je antwoord met deze feedback")+'</button></div>';
+  return h;}
+function beterGo(o,ans){var a=st[cur],k=cur;a.beter=a.beter||{};var b=a.beter[o.nr]||{n:0};b.n++;b.antwoord=ans;b.bezig=1;b.f=null;a.beter[o.nr]=b;save();vernieuw(o);
+  GV_NK.check({h:HF[k],vraag:o.v.slice(0,1500),punten:aiPunten(o),bron:(o.b||"").slice(0,4000),antwoord:ans.slice(0,2000)}).then(function(f){
+    delete b.bezig;b.f=f.status==="ok"?f:{status:"fout",melding:f.melding||"De AI kon nu niet nakijken."};save();if(cur===k)vernieuw(o);});}
+function vernieuw(o){var n=document.getElementById("nk-"+o.nr),m=document.getElementById("mine-"+o.nr);if(n)n.innerHTML=nkHtml(o);if(m)m.innerHTML=mineHtml(o);}
 function aiPunten(o){return o.g.length?o.g.map(function(g){return {t:g.t,p:Math.round(g.p)};}):[{t:o.m.join("\n"),p:o.p}];}
 function runAI(){if(!GV_NK.enabled)return;var k=cur,a=st[k];a.ai=a.ai||{};
   D[k].open.forEach(function(o){var ans=(a.open[o.nr]||"").trim();if(!ans||a.ai[o.nr]||busy[k+o.nr])return;busy[k+o.nr]=1;queue.push([k,o,ans.slice(0,2000)]);});
@@ -175,7 +200,7 @@ function pump(){while(running<3&&queue.length){running++;(function(j){var k=j[0]
         if(boxed(o))a.self[o.nr]=o.g.map(function(g,i){return f.per_punt[i]&&f.per_punt[i].punten>=f.per_punt[i].max?1:0;});else a.self[o.nr]=f.punten;}
       else if(!f.lokaal||f.melding)st[k].ai[o.nr]={status:"fout",melding:f.melding||""};
       save();
-      if(cur===k&&document.getElementById("nk-"+o.nr)){document.getElementById("nk-"+o.nr).innerHTML=nkHtml(o);score();}
+      if(cur===k&&document.getElementById("nk-"+o.nr)){vernieuw(o);score();}
       pump();});})(queue.shift());}
   if(cur)D[cur].open.forEach(function(o){var b=document.getElementById("ai-"+o.nr);if(b&&busy[cur+o.nr])b.innerHTML=aiHtml(o);});}
 
@@ -187,7 +212,7 @@ function result(){
     h+='</div>'+(q.u?'<div class="fb">'+esc(q.u)+'</div>':"")+'</div>';});
   h+='<h2>Open vragen nakijken</h2>';
   d.open.forEach(function(o){var v=a.self[o.nr];
-    h+='<div class="card q"><div class="n">Vraag '+o.nr+' · '+o.p+' punt'+(o.p>1?"en":"")+'</div>'+(o.b?bronHtml(o.b):"")+'<p>'+qtext(o.v)+'</p><div class="muted" style="font-size:13px">Jouw antwoord</div><div class="mine">'+esc(a.open[o.nr]||"")+'</div><div class="muted" style="font-size:13px;margin-top:12px">Zo kijk je het na</div>';
+    h+='<div class="card q"><div class="n">Vraag '+o.nr+' · '+o.p+' punt'+(o.p>1?"en":"")+'</div>'+(o.b?bronHtml(o.b):"")+'<p>'+qtext(o.v)+'</p><div class="muted" style="font-size:13px">Jouw antwoord</div><div class="mine" id="mine-'+o.nr+'">'+mineHtml(o)+'</div><div class="muted" style="font-size:13px;margin-top:12px">Zo kijk je het na</div>';
     h+='<div id="nk-'+o.nr+'">'+nkHtml(o)+'</div>';
     h+="</div>";});
   if(d.ver&&d.ver.length){h+='<h2>Deel C · Verdieping (telt niet mee)</h2>';d.ver.forEach(function(x){h+='<div class="card q"><div class="n">'+esc(x.titel)+'</div><p>'+esc(x.vraag)+'</p></div>';});}

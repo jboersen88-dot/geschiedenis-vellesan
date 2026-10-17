@@ -154,3 +154,4 @@ Aanleiding: de eerste versie was "een standaard website". Je bestaande Google Si
 ## 17 okt, 22:15 — AI-nakijker live (Cloudflare Worker)
 - `nakijker.js`: `GV_NK_URL` = https://geschiedenis-nakijker.nakijker-worker.workers.dev (Claude Haiku 5.5). Sleutel en lesstof staan in de Worker, niet in deze repo. Alleen jboersen88-dot.github.io en localhost mogen hem aanroepen.
 - Getest: t1 vraag 14, goed antwoord 2/2, fout antwoord 0/2, 3–4 s per antwoord. Uitzetten: `GV_NK_URL` leeg maken.
+- 22:45: nakijker nauwkeuriger (citeer eerst, dan punten; effort medium): testset van 12 antwoorden 12/12 en 11/12 (grensgeval v15 punt 2), was 11/12 met een echte leesfout. In toets.html: gemarkeerd welk stuk van het antwoord welk punt opleverde, en een verbeterronde per open vraag (max 2, telt niet mee voor het cijfer, blijft bewaard).

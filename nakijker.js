@@ -28,7 +28,7 @@ function render(f){
     '<p class="ainote">Nagekeken door AI. Twijfel je? Vraag het je docent.</p></div>';
 }
 var css=document.createElement("style");
-css.textContent=".aipp{list-style:none;margin:8px 0;padding:0;display:grid;gap:8px}.aipp li{padding:8px 10px;border-radius:10px;background:color-mix(in srgb,var(--line) 35%,transparent)}";
+css.textContent=".aifb p{font-weight:400}.aipp{list-style:none;margin:8px 0;padding:0;display:grid;gap:8px}.aipp li{padding:8px 10px;border-radius:10px;background:color-mix(in srgb,var(--line) 35%,transparent)}";
 document.head.appendChild(css);
 window.GV_NK={check:check,render:render,enabled:!!GV_NK_URL};
 })();
