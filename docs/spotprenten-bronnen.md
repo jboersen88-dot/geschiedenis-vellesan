@@ -67,10 +67,10 @@ Mogelijkheden (jij kiest):
 
 ## E. Spotprenten uit de centrale examens (vmbo-GL/TL geschiedenis, 2018–2025)
 
-Gezocht in de bronnenboekjes (`GT-0125-a-JJ-T-b`) en correctievoorschriften (`-c`) op examenblad.nl: 16 examens, 46 prenten of tekeningen. Examens van vóór 2018 staan onder een andere bestandsnaam en zijn nog niet doorzocht.
+Examens van vóór 2018 staan niet meer openbaar op examenblad.nl; sinds 2018 geldt bovendien een herzien examenprogramma. Gezocht in de bronnenboekjes (`GT-0125-a-JJ-T-b`) en correctievoorschriften (`-c`) op examenblad.nl: 16 examens, 46 prenten of tekeningen. Examens van vóór 2018 staan onder een andere bestandsnaam en zijn nog niet doorzocht.
 **Afspraak:** de afbeelding komt van het IISG (publiek domein), niet uit de examen-pdf. De examenvraag en het correctievoorschrift zijn van het CvTE en mogen ongewijzigd en met bronvermelding gebruikt worden.
 
-### E1. Vrij te gebruiken en passend bij de boekjes (zelf vergeleken met de afbeelding in het examen)
+### E1. Vrij te gebruiken en passend bij de boekjes (zelf vergeleken met de afbeelding in het examen). Alle acht staan in de module (spotprent.html).
 
 | Examen | Prent | Maker (sterfjaar) | Jaar | Vrije bron | Past bij |
 |---|---|---|---|---|---|
