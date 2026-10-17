@@ -102,7 +102,8 @@ h1{font-family:"Fraunces",Georgia,serif; font-weight:900; font-size:clamp(30px,5
 
 .film-block{background:var(--brand); color:var(--brand-fg); border-radius:20px; padding:26px clamp(20px,4vw,32px)}
 .film-block h2{font-family:"Fraunces",Georgia,serif; font-weight:700; font-size:21px; margin:0 0 14px; color:var(--brand-fg)}
-.film-block video{display:block; width:100%; border-radius:14px; background:#000}
+.film-block .soon{display:flex; align-items:center; gap:10px; background:color-mix(in srgb, var(--brand-fg) 8%, transparent); border:1px dashed var(--brand-line); border-radius:14px; padding:18px 20px; font-size:14px; color:var(--brand-muted)}
+.film-block .soon .dot{width:7px; height:7px; border-radius:50%; background:var(--coral); flex-shrink:0}
 footer{padding-block:28px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; font-size:13px; color:var(--muted); max-width:1080px; margin:0 auto}
 </style>
 <noscript><style>[data-reveal]{opacity:1!important; transform:none!important} .reveal{opacity:1!important; animation:none!important}</style></noscript>
@@ -200,7 +201,7 @@ footer{padding-block:28px; display:flex; justify-content:space-between; flex-wra
 
     <div class="blok film-block" data-reveal>
       <h2>Film: De Industriële Revolutie in Engeland</h2>
-      <video controls preload="metadata" src="films/h1-industriele-revolutie-engeland.mp4"></video>
+      <p class="soon"><span class="dot"></span> Film binnenkort beschikbaar</p>
     </div>
 
   </div>
