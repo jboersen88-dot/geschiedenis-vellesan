@@ -99,6 +99,10 @@ h1{font-family:"Fraunces",Georgia,serif; font-weight:900; font-size:clamp(30px,5
 .tag{font-size:12px; font-weight:700; border-radius:999px; padding:5px 11px; background:color-mix(in srgb, var(--stripe) 16%, transparent); color:color-mix(in srgb, var(--stripe) 65%, var(--fg))}
 .video{margin-top:16px; font-size:13px; color:var(--muted); display:flex; align-items:center; gap:8px}
 .video .dot{width:7px; height:7px; border-radius:50%; background:var(--stripe); flex-shrink:0}
+
+.film-block{background:var(--brand); color:var(--brand-fg); border-radius:20px; padding:26px clamp(20px,4vw,32px)}
+.film-block h2{font-family:"Fraunces",Georgia,serif; font-weight:700; font-size:21px; margin:0 0 14px; color:var(--brand-fg)}
+.film-block video{display:block; width:100%; border-radius:14px; background:#000}
 footer{padding-block:28px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; font-size:13px; color:var(--muted); max-width:1080px; margin:0 auto}
 </style>
 <noscript><style>[data-reveal]{opacity:1!important; transform:none!important} .reveal{opacity:1!important; animation:none!important}</style></noscript>
@@ -164,6 +168,11 @@ footer{padding-block:28px; display:flex; justify-content:space-between; flex-wra
         <div class="blok-img"><img src="img/geschiedenis/philips-nederland.webp" alt="Arbeiders maken beeldbuizen in een Philips-fabriek"></div>
       </div>
     </article>
+
+    <div class="blok film-block" data-reveal>
+      <h2>Film: De late inhaalslag</h2>
+      <video controls preload="metadata" src="films/h2-de-late-inhaalslag.mp4"></video>
+    </div>
 
   </div>
 </main>
