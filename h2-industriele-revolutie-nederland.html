@@ -55,12 +55,17 @@ h1{font-family:"Fraunces",Georgia,serif; font-weight:900; font-size:clamp(30px,5
 .hoofdvraag{background:color-mix(in srgb, var(--brand-fg) 8%, transparent); border:1px solid var(--brand-line); border-radius:14px; padding:16px 20px; font-size:15px; color:var(--brand-fg)}
 .hoofdvraag b{color:var(--coral); font-family:"Fraunces",Georgia,serif}
 
+.ppt-link{display:inline-flex; align-items:center; gap:8px; margin-top:18px; font-size:13.5px; font-weight:700; color:var(--brand-fg); text-decoration:none; border:1px solid var(--brand-line); border-radius:999px; padding:9px 16px; transition:border-color 150ms var(--ease), background 150ms var(--ease)}
+.ppt-link:hover{border-color:var(--coral); background:color-mix(in srgb, var(--brand-fg) 6%, transparent)}
+.ppt-link svg{flex-shrink:0}
+
 @keyframes rise{from{opacity:0; transform:translateY(16px)} to{opacity:1; transform:translateY(0)}}
 .reveal{opacity:0; animation:rise .55s var(--ease-out) forwards}
 .hero .eyebrow.reveal{animation-delay:.05s}
 .hero h1.reveal{animation-delay:.14s}
 .hero .hero-sub.reveal{animation-delay:.23s}
 .hero .hoofdvraag.reveal{animation-delay:.32s}
+.hero .ppt-link.reveal{animation-delay:.4s}
 @media (prefers-reduced-motion: reduce){
   .reveal{animation:none; opacity:1}
 }
@@ -110,6 +115,7 @@ footer{padding-block:28px; display:flex; justify-content:space-between; flex-wra
     <h1 class="reveal">De Industriële Revolutie in Nederland</h1>
     <p class="hero-sub reveal">Engeland industrialiseerde al vroeg — Nederland juist niet. Totdat een paar sectoren wél de omslag maken.</p>
     <div class="hoofdvraag reveal"><b>Doel —</b> Je kan uitleggen waarom de industrialisatie in Nederland later op gang kwam, en in welke sectoren het uiteindelijk wel gebeurde.</div>
+    <a class="ppt-link reveal" href="materiaal/h2-industriele-revolutie-nederland.pptx" download><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 19h16"/></svg>Download de PowerPoint</a>
   </div>
   <svg class="wave" viewBox="0 0 1080 56" preserveAspectRatio="none" aria-hidden="true">
     <path d="M0,28 C180,58 360,0 540,20 C720,40 900,8 1080,30 L1080,56 L0,56 Z"/>
