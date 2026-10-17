@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Geschiedenis — Meneer Boersen</title>
-<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340..340,600..600,700..700,900..900;1,9..144,500..500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -44,9 +44,11 @@ body{
 
 header{position:sticky; top:env(safe-area-inset-top,0px); z-index:10; background:var(--brand); border-bottom:1px solid var(--brand-line)}
 nav{max-width:1080px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; padding-block:16px}
+@media (max-width:460px){ nav{flex-wrap:wrap; gap:8px 0; padding-block:12px} }
 .brandname{font-family:"Fraunces",Georgia,serif; font-weight:700; font-size:19px; letter-spacing:-.01em; color:var(--brand-fg)}
 .brandname span{color:var(--coral)}
-.navlinks{display:flex; gap:28px; font-size:14px; font-weight:500; color:var(--brand-muted)}
+.navlinks{display:flex; gap:18px; font-size:14px; font-weight:500; color:var(--brand-muted); flex-wrap:wrap}
+.navlinks a{white-space:nowrap}
 .navlinks a{color:inherit; text-decoration:none; transition:color 150ms var(--ease)}
 .navlinks a:hover, .navlinks a.active{color:var(--brand-fg)}
 
