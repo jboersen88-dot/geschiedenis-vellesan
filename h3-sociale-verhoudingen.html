@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<title>De sociale verhoudingen in Nederland</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340..340,600..600,700..700,900..900;1,9..144,500..500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* layout: hoofdstuk-detailpagina met 7 paragraaf-blokken, van de sociale kwestie tot de beurskrach van 1929 — gebouwd op de echte PowerPoint-inhoud van H3. zelfde tokens/componenten als de rest van de site. */
+:root{
+  --bg:#f6f0e6; --surface:#fffdf9; --fg:#201a14; --muted:#746a59; --line:#e6dac4;
+  --brand:#1f5f4e; --brand-fg:#f3efe0; --brand-muted:#b9d6cb; --brand-line:#2f7360;
+  --coral:#ff8d90; --coral-ink:#3a1412;
+  --teal:#2f8f86; --teal-ink:#eefbf8;
+  --ease-out:cubic-bezier(0.23,1,0.32,1); --ease:ease;
+}
+@view-transition{ navigation: auto; }
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#15120d; --surface:#1f1a13; --fg:#f3ecdd; --muted:#b2a68d; --line:#352c20;
+    --brand:#173f34; --brand-fg:#f3efe0; --brand-muted:#aecec0; --brand-line:#2a5e4e;
+    --coral:#ff9a9d; --coral-ink:#2a1212;
+    --teal:#4db3a8; --teal-ink:#102320;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#15120d; --surface:#1f1a13; --fg:#f3ecdd; --muted:#b2a68d; --line:#352c20;
+  --brand:#173f34; --brand-fg:#f3efe0; --brand-muted:#aecec0; --brand-line:#2a5e4e;
+  --coral:#ff9a9d; --coral-ink:#2a1212;
+  --teal:#4db3a8; --teal-ink:#102320;
+  color-scheme: dark;
+}
+*{box-sizing:border-box}
+body{margin:0; background:var(--bg); color:var(--fg); font-family:"Inter",system-ui,sans-serif;
+  padding-left:max(0px, env(safe-area-inset-left,0px)); padding-right:max(0px, env(safe-area-inset-right,0px));}
+.gutter{padding-left:max(20px, env(safe-area-inset-left,0px)); padding-right:max(20px, env(safe-area-inset-right,0px))}
+.wrap{max-width:860px; margin:0 auto}
+header{position:sticky; top:env(safe-area-inset-top,0px); z-index:10; background:var(--brand); border-bottom:1px solid var(--brand-line)}
+nav{max-width:1080px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; padding-block:16px}
+.brandname{font-family:"Fraunces",Georgia,serif; font-weight:700; font-size:19px; color:var(--brand-fg)}
+.brandname span{color:var(--coral)}
+.navlinks{display:flex; gap:28px; font-size:14px; font-weight:500; color:var(--brand-muted)}
+.navlinks a{color:inherit; text-decoration:none; transition:color 150ms var(--ease)}
+.navlinks a:hover, .navlinks a.active{color:var(--brand-fg)}
+.hero{background:var(--brand); color:var(--brand-fg)}
+.hero-inner{max-width:860px; margin:0 auto; padding-block:16px 60px}
+.eyebrow{font-size:13px; font-weight:700; letter-spacing:.09em; text-transform:uppercase; color:var(--coral); margin:0 0 14px}
+h1{font-family:"Fraunces",Georgia,serif; font-weight:900; font-size:clamp(30px,5.5vw,48px); line-height:1.04; margin:0 0 14px; text-wrap:balance}
+.hero-sub{font-size:16.5px; line-height:1.6; color:var(--brand-muted); max-width:58ch; margin:0 0 20px}
+.hoofdvraag{background:color-mix(in srgb, var(--brand-fg) 8%, transparent); border:1px solid var(--brand-line); border-radius:14px; padding:16px 20px; font-size:15px; color:var(--brand-fg)}
+.hoofdvraag b{color:var(--coral); font-family:"Fraunces",Georgia,serif}
+
+@keyframes rise{from{opacity:0; transform:translateY(16px)} to{opacity:1; transform:translateY(0)}}
+.reveal{opacity:0; animation:rise .55s var(--ease-out) forwards}
+.hero .eyebrow.reveal{animation-delay:.05s}
+.hero h1.reveal{animation-delay:.14s}
+.hero .hero-sub.reveal{animation-delay:.23s}
+.hero .hoofdvraag.reveal{animation-delay:.32s}
+@media (prefers-reduced-motion: reduce){
+  .reveal{animation:none; opacity:1}
+}
+.wave{display:block; width:100%; height:56px; margin-top:-1px}
+.wave path{fill:var(--bg)}
+.timeline{padding-block:40px 72px; display:flex; flex-direction:column; gap:28px}
+.blok{background:var(--surface); border:1px solid var(--line); border-radius:20px; padding:30px clamp(20px,4vw,34px); position:relative; overflow:hidden}
+.blok::before{content:""; position:absolute; left:0; top:0; bottom:0; width:6px; background:var(--stripe)}
+.blok.c{--stripe:var(--coral)} .blok.t{--stripe:var(--teal)}
+.blok-head{display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; margin-bottom:6px}
+.blok-num{font-family:"Fraunces",Georgia,serif; font-weight:700; font-size:14px; color:var(--stripe)}
+.blok h2{font-family:"Fraunces",Georgia,serif; font-weight:700; font-size:23px; margin:4px 0 14px}
+.kernpunten{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:10px}
+.kernpunten li{display:flex; gap:10px; font-size:14.5px; line-height:1.55; color:var(--fg)}
+.kernpunten li::before{content:"—"; color:var(--stripe); flex-shrink:0; font-weight:700}
+
+[data-reveal]{opacity:0; transform:translateY(18px); transition:opacity .5s var(--ease-out), transform .5s var(--ease-out)}
+[data-reveal].is-visible{opacity:1; transform:translateY(0)}
+@media (prefers-reduced-motion: reduce){
+  [data-reveal]{opacity:1; transform:none; transition:none}
+}
+.tags{display:flex; gap:8px; flex-wrap:wrap; margin-top:16px}
+.tag{font-size:12px; font-weight:700; border-radius:999px; padding:5px 11px; background:color-mix(in srgb, var(--stripe) 16%, transparent); color:color-mix(in srgb, var(--stripe) 65%, var(--fg))}
+.video{margin-top:16px; font-size:13px; color:var(--muted); display:flex; align-items:center; gap:8px}
+.video .dot{width:7px; height:7px; border-radius:50%; background:var(--stripe); flex-shrink:0}
+.quote{border-left:3px solid var(--stripe); padding-left:16px; margin:14px 0; font-family:"Fraunces",Georgia,serif; font-style:italic; font-size:16px; line-height:1.5; color:var(--fg)}
+.quote cite{display:block; font-family:"Inter"; font-style:normal; font-size:12.5px; color:var(--muted); margin-top:6px}
+footer{padding-block:28px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; font-size:13px; color:var(--muted); max-width:1080px; margin:0 auto}
+</style>
+<noscript><style>[data-reveal]{opacity:1!important; transform:none!important} .reveal{opacity:1!important; animation:none!important}</style></noscript>
+</head>
+<body>
+<header class="gutter"><nav>
+  <div class="brandname">Meneer <span>Boersen</span></div>
+  <div class="navlinks"><a href="#">Economie</a><a href="index.html" class="active">Geschiedenis</a><a href="#">Over deze site</a></div>
+</nav></header>
+
+<section class="hero gutter">
+  <div class="hero-inner">
+    <p class="eyebrow reveal">Geschiedenis · Hoofdstuk 3</p>
+    <h1 class="reveal">De sociale verhoudingen in Nederland</h1>
+    <p class="hero-sub reveal">Van kinderarbeid tot kiesrecht, van vakbonden tot de beurskrach van 1929 — hoe Nederland reageerde op de sociale kwestie.</p>
+    <div class="hoofdvraag reveal"><b>Hoofdvraag —</b> Hoe veranderden de sociale verhoudingen in Nederland door de industriële revolutie?</div>
+  </div>
+  <svg class="wave" viewBox="0 0 1080 56" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,28 C180,58 360,0 540,20 C720,40 900,8 1080,30 L1080,56 L0,56 Z"/>
+  </svg>
+</section>
+
+<main class="wrap gutter">
+  <div class="timeline">
+
+    <article class="blok c" data-reveal>
+      <div class="blok-head"><span class="blok-num">PARAGRAAF 1</span></div>
+      <h2>De sociale kwestie</h2>
+      <ul class="kernpunten">
+        <li>Een groot overschot aan werknemers zorgt voor lage lonen, onzekerheid, lange werkdagen, korte pauzes en onveilige fabrieken.</li>
+        <li>Journalisten, schrijvers, artsen en pastoors beginnen hierover te schrijven — de sociale kwestie krijgt aandacht.</li>
+      </ul>
+      <div class="tags"><span class="tag">Sociale kwestie</span></div>
+      <div class="video"><span class="dot"></span> Video schooltv.nl toevoegen</div>
+    </article>
+
+    <article class="blok t" data-reveal>
+      <div class="blok-head"><span class="blok-num">PARAGRAAF 2</span></div>
+      <h2>Het Kinderwetje van Van Houten</h2>
+      <ul class="kernpunten">
+        <li>Samuel van Houten voert in 1874 het Kinderwetje in — de eerste sociale wet van Nederland.</li>
+        <li>De wet verbiedt kinderarbeid onder de twaalf jaar, maar alleen in fabrieken.</li>
+        <li>Op het platteland en in winkels blijft kinderarbeid heel gewoon: er is geen controle en geen straf, en ouders kunnen het geld niet missen.</li>
+      </ul>
+      <div class="tags"><span class="tag">Van Houten</span><span class="tag">Kinderwetje 1874</span></div>
+      <div class="video"><span class="dot"></span> Video schooltv.nl toevoegen</div>
+    </article>
+
+    <article class="blok c" data-reveal>
+      <div class="blok-head"><span class="blok-num">PARAGRAAF 3</span></div>
+      <h2>Leerplicht en vakbonden</h2>
+      <ul class="kernpunten">
+        <li>In 1901 komt de leerplicht; tussen 1880 en 1900 stijgen de lonen al, waardoor ouders hun kinderen naar school kunnen sturen in plaats van laten werken.</li>
+        <li>Arbeiders sluiten zich aan bij vakbonden, vaak per bedrijfstak (metaalindustrie, vervoer, onderwijs).</li>
+        <li>Vakbonden sparen geld om samen langer te kunnen staken.</li>
+      </ul>
+      <div class="tags"><span class="tag">Leerplicht</span><span class="tag">Vakbonden</span></div>
+      <div class="video"><span class="dot"></span> Video schooltv.nl toevoegen</div>
+    </article>
+
+    <article class="blok t" data-reveal>
+      <div class="blok-head"><span class="blok-num">PARAGRAAF 4</span></div>
+      <h2>Troelstra en de SDAP</h2>
+      <ul class="kernpunten">
+        <li>Pieter Jelles Troelstra richt de SDAP op, de eerste socialistische partij van Nederland.</li>
+        <li>Doel: eerst algemeen kiesrecht invoeren, daarna sociale wetten doorvoeren.</li>
+        <li>Latere sociale wetten regelen onder meer woningbouw, een 8-urige werkdag, een 40-urige werkweek, vakantiedagen en verzekeringen tegen ziekte en ouderdom (AOW).</li>
+      </ul>
+      <div class="tags"><span class="tag">SDAP</span><span class="tag">Algemeen kiesrecht</span></div>
+      <div class="video"><span class="dot"></span> Video schooltv.nl toevoegen</div>
+    </article>
+
+    <article class="blok c" data-reveal>
+      <div class="blok-head"><span class="blok-num">PARAGRAAF 5</span></div>
+      <h2>De Eerste Wereldoorlog</h2>
+      <ul class="kernpunten">
+        <li>Nederland blijft neutraal en doet niet mee aan de oorlog.</li>
+        <li>Positief: Nederland kan vrij handelen met alle partijen — ook Philips groeit hard, omdat niemand nog Duitse lampen wil.</li>
+        <li>Negatief: na enkele jaren kan er door Duitse duikboten niet meer gevaren worden, waardoor handel en productie instorten.</li>
+        <li>Oplossing: het distributiestelsel verdeelt schaarse producten eerlijk met bonnen.</li>
+      </ul>
+      <div class="tags"><span class="tag">Neutraliteit</span><span class="tag">Distributiestelsel</span></div>
+      <div class="video"><span class="dot"></span> Video schooltv.nl toevoegen</div>
+    </article>
+
+    <article class="blok t" data-reveal>
+      <div class="blok-head"><span class="blok-num">PARAGRAAF 6</span></div>
+      <h2>Angst voor het communisme</h2>
+      <ul class="kernpunten">
+        <li>Na de Russische Revolutie grijpen arbeiders daar de macht: rijken raken al hun bezit kwijt en alles wordt van de staat.</li>
+        <li>Uit angst voor eenzelfde revolutie in Nederland krijgt het socialisme hier juist meer steun: tevreden arbeiders komen niet in opstand.</li>
+        <li>1917: algemeen kiesrecht voor mannen. In 1918 haalt de SDAP 22 zetels en kan echt iets veranderen.</li>
+        <li>Er komen CAO's: aparte afspraken per bedrijfstak, bijvoorbeeld over kleding- en wasvergoeding in de metaalindustrie.</li>
+      </ul>
+      <div class="tags"><span class="tag">Kiesrecht 1917</span><span class="tag">CAO's</span></div>
+      <div class="video"><span class="dot"></span> Video schooltv.nl toevoegen</div>
+    </article>
+
+    <article class="blok c" data-reveal>
+      <div class="blok-head"><span class="blok-num">PARAGRAAF 7</span></div>
+      <h2>Van bloei naar beurskrach</h2>
+      <ul class="kernpunten">
+        <li>Na de Eerste Wereldoorlog gaat het goed met Nederland: geen oorlogsschade, en veel handel via Rotterdam om elders te helpen herbouwen.</li>
+        <li>1929: de beurskrach laat de hele aandelenbeurs instorten — de grootste economische crisis tot dan toe.</li>
+        <li>Tussen 1929 en 1935 halveert de in- en uitvoer, en loopt de werkloosheid op tot 640.000 mensen, zo'n 25% van de bevolking.</li>
+        <li>Premier Colijn voert een aanpassingspolitiek: minder belastinginkomsten betekenen bezuinigen en loonmatiging.</li>
+      </ul>
+      <div class="tags"><span class="tag">Beurskrach 1929</span><span class="tag">Werkloosheid</span></div>
+      <div class="video"><span class="dot"></span> Video schooltv.nl toevoegen</div>
+    </article>
+
+  </div>
+</main>
+
+<footer class="gutter">
+  <span>Meneer Boersen · Vellesan College</span>
+  <span>Economie · Geschiedenis</span>
+</footer>
+<script>
+(function(){
+  var els = document.querySelectorAll('[data-reveal]');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !('IntersectionObserver' in window)) { els.forEach(function(el){el.classList.add('is-visible')}); return; }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting){ entry.target.classList.add('is-visible'); io.unobserve(entry.target); }
+    });
+  }, {threshold:0.15, rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<title>Geschiedenis — Meneer Boersen</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340..340,600..600,700..700,900..900;1,9..144,500..500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* layout: forest-green hero, then a photo-backed hoofdstuk grid (Romeinen / Industriele Revolutie / Oorlogseconomie / Wederopbouw) — each card is a real reconstruction/archive image with a scrim and hover zoom, mirroring the homepage's token system. */
+:root{
+  --bg:#f6f0e6; --surface:#fffdf9; --fg:#201a14; --muted:#746a59; --line:#e6dac4;
+  --brand:#1f5f4e; --brand-fg:#f3efe0; --brand-muted:#b9d6cb; --brand-line:#2f7360;
+  --coral:#ff8d90; --coral-ink:#3a1412;
+  --teal:#2f8f86; --teal-ink:#eefbf8;
+  --ease-out:cubic-bezier(0.23,1,0.32,1); --ease:ease;
+}
+@view-transition{ navigation: auto; }
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#15120d; --surface:#1f1a13; --fg:#f3ecdd; --muted:#b2a68d; --line:#352c20;
+    --brand:#173f34; --brand-fg:#f3efe0; --brand-muted:#aecec0; --brand-line:#2a5e4e;
+    --coral:#ff9a9d; --coral-ink:#2a1212;
+    --teal:#4db3a8; --teal-ink:#102320;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#15120d; --surface:#1f1a13; --fg:#f3ecdd; --muted:#b2a68d; --line:#352c20;
+  --brand:#173f34; --brand-fg:#f3efe0; --brand-muted:#aecec0; --brand-line:#2a5e4e;
+  --coral:#ff9a9d; --coral-ink:#2a1212;
+  --teal:#4db3a8; --teal-ink:#102320;
+  color-scheme: dark;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--bg); color:var(--fg); font-family:"Inter",system-ui,sans-serif;
+  padding-left:max(0px, env(safe-area-inset-left,0px));
+  padding-right:max(0px, env(safe-area-inset-right,0px));
+}
+.gutter{padding-left:max(20px, env(safe-area-inset-left,0px)); padding-right:max(20px, env(safe-area-inset-right,0px))}
+.wrap{max-width:1080px; margin:0 auto}
+
+header{position:sticky; top:env(safe-area-inset-top,0px); z-index:10; background:var(--brand); border-bottom:1px solid var(--brand-line)}
+nav{max-width:1080px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; padding-block:16px}
+.brandname{font-family:"Fraunces",Georgia,serif; font-weight:700; font-size:19px; letter-spacing:-.01em; color:var(--brand-fg)}
+.brandname span{color:var(--coral)}
+.navlinks{display:flex; gap:28px; font-size:14px; font-weight:500; color:var(--brand-muted)}
+.navlinks a{color:inherit; text-decoration:none; transition:color 150ms var(--ease)}
+.navlinks a:hover, .navlinks a.active{color:var(--brand-fg)}
+
+.hero{background:var(--brand); color:var(--brand-fg); position:relative; overflow:hidden}
+.hero-inner{position:relative; padding-block:52px 72px; max-width:1080px; margin:0 auto}
+.eyebrow{font-size:13px; font-weight:700; letter-spacing:.09em; text-transform:uppercase; color:var(--coral); margin:0 0 16px}
+h1{font-family:"Fraunces",Georgia,serif; font-weight:900; font-size:clamp(36px,6vw,58px); line-height:1; margin:0 0 16px; text-wrap:balance}
+.hero-sub{font-size:17px; line-height:1.6; color:var(--brand-muted); max-width:52ch; margin:0}
+
+@keyframes rise{from{opacity:0; transform:translateY(16px)} to{opacity:1; transform:translateY(0)}}
+.reveal{opacity:0; animation:rise .55s var(--ease-out) forwards}
+.hero .eyebrow.reveal{animation-delay:.05s}
+.hero h1.reveal{animation-delay:.14s}
+.hero .hero-sub.reveal{animation-delay:.23s}
+@media (prefers-reduced-motion: reduce){
+  .reveal{animation:none; opacity:1}
+}
+
+.wave{display:block; width:100%; height:56px; position:relative; z-index:1; margin-top:-1px}
+.wave path{fill:var(--bg)}
+
+.chapters{padding-block:48px 72px}
+.section-head{margin-bottom:26px}
+.section-head h2{font-family:"Fraunces",Georgia,serif; font-weight:700; font-size:clamp(24px,3.4vw,30px); margin:0 0 6px}
+.section-head p{color:var(--muted); font-size:14px; margin:0; font-weight:600}
+
+.chapgrid{display:grid; grid-template-columns:repeat(2,1fr); gap:22px}
+@media (max-width:640px){.chapgrid{grid-template-columns:1fr}}
+
+.chap{
+  position:relative; border-radius:20px; overflow:hidden; aspect-ratio:4/3; display:block;
+  text-decoration:none; color:var(--brand-fg); isolation:isolate;
+}
+.chap img{
+  position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
+  transition:transform .5s var(--ease-out); z-index:-2;
+}
+.chap::after{
+  content:""; position:absolute; inset:0; z-index:-1;
+  background:linear-gradient(to top, color-mix(in srgb, var(--fg) 88%, black) 0%, color-mix(in srgb, var(--fg) 30%, transparent) 55%, transparent 85%);
+}
+.chap{transition:transform .25s var(--ease-out), box-shadow .25s var(--ease-out)}
+.chap-body{position:absolute; left:0; right:0; bottom:0; padding:22px}
+.chap-era{font-family:"Fraunces",Georgia,serif; font-weight:600; font-size:13px; color:var(--stripe); letter-spacing:.03em; margin:0 0 8px; display:inline-block; background:color-mix(in srgb, var(--fg) 55%, black); padding:4px 10px; border-radius:999px}
+.chap h3{font-family:"Fraunces",Georgia,serif; font-weight:700; font-size:clamp(20px,2.6vw,26px); margin:0 0 6px; color:#fff}
+.chap p{font-size:13.5px; line-height:1.5; margin:0; color:rgba(255,255,255,.82); max-width:40ch}
+.chap .go{
+  position:absolute; right:18px; bottom:18px; width:36px; height:36px; border-radius:50%;
+  background:var(--stripe); color:var(--coral-ink); display:flex; align-items:center; justify-content:center;
+  font-size:16px; transition:transform .25s var(--ease-out);
+}
+.chap.c-coral{--stripe:var(--coral)}
+.chap.c-teal{--stripe:var(--teal); color:var(--teal-ink)}
+.chap.c-teal .go{color:var(--teal-ink)}
+.chap.no-img{background:var(--brand); border:1px solid var(--brand-line)}
+.chap.no-img::after{background:none}
+.chap.no-img .chap-era{background:color-mix(in srgb, var(--brand-fg) 14%, transparent)}
+.chap.no-img p{color:var(--brand-muted)}
+@media (hover:hover) and (pointer:fine){
+  .chap:hover img{transform:scale(1.06)}
+  .chap:hover .go{transform:translate(4px,-4px)}
+  .chap:hover{transform:translateY(-4px); box-shadow:0 20px 34px -18px rgba(0,0,0,.32)}
+}
+@media (prefers-reduced-motion: reduce){
+  .chap, .chap img, .chap .go{transition:none}
+  .chap:hover{transform:none; box-shadow:none}
+  .chap:hover img{transform:none}
+}
+
+[data-reveal]{opacity:0}
+[data-reveal].is-visible{animation:rise .5s var(--ease-out) forwards}
+.chapgrid .chap:nth-child(1).is-visible{animation-delay:0ms}
+.chapgrid .chap:nth-child(2).is-visible{animation-delay:60ms}
+.chapgrid .chap:nth-child(3).is-visible{animation-delay:120ms}
+.chapgrid .chap:nth-child(4).is-visible{animation-delay:180ms}
+@media (prefers-reduced-motion: reduce){
+  [data-reveal]{opacity:1}
+  [data-reveal].is-visible{animation:none}
+}
+
+footer{padding-block:28px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; font-size:13px; color:var(--muted); max-width:1080px; margin:0 auto}
+</style>
+<noscript><style>[data-reveal]{opacity:1!important} .reveal{opacity:1!important; animation:none!important}</style></noscript>
+</head>
+<body>
+<header class="gutter"><nav>
+  <div class="brandname">Meneer <span>Boersen</span></div>
+  <div class="navlinks"><a href="#">Economie</a><a href="#" class="active">Geschiedenis</a><a href="#">Over deze site</a></div>
+</nav></header>
+
+<section class="hero gutter">
+  <div class="hero-inner">
+    <p class="eyebrow reveal">Vellesan College · Geschiedenis · 3 mavo</p>
+    <h1 class="reveal">Vier hoofdstukken, één verhaal.</h1>
+    <p class="hero-sub reveal">Van de industriële revolutie tot de economie van nu — elk hoofdstuk met de belangrijkste gebeurtenissen, kernbegrippen en de bijbehorende video's.</p>
+  </div>
+  <svg class="wave" viewBox="0 0 1080 56" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,28 C180,58 360,0 540,20 C720,40 900,8 1080,30 L1080,56 L0,56 Z"/>
+  </svg>
+</section>
+
+<main class="wrap gutter">
+  <section class="chapters">
+    <div class="section-head">
+      <h2>Kies een hoofdstuk</h2>
+      <p>Werkt ook prima op je iPad</p>
+    </div>
+    <div class="chapgrid">
+      <a class="chap c-coral" href="h1-industriele-revolutie-engeland.html" data-reveal>
+        <img src="img/geschiedenis/industriele-revolutie.jpg" alt="Arbeider aan een weefgetouw tijdens de Industriële Revolutie">
+        <div class="chap-body">
+          <span class="chap-era">Hoofdstuk 1</span>
+          <h3>De Industriële Revolutie in Engeland</h3>
+          <p>Van spinnewiel tot stoommachine: hoe fabrieken Engeland veranderden.</p>
+        </div>
+        <span class="go" aria-hidden="true">→</span>
+      </a>
+      <a class="chap c-teal" href="h2-industriele-revolutie-nederland.html" data-reveal>
+        <img src="img/geschiedenis/philips-nederland.webp" alt="Arbeiders maken beeldbuizen in een Philips-fabriek">
+        <div class="chap-body">
+          <span class="chap-era">Hoofdstuk 2</span>
+          <h3>De Industriële Revolutie in Nederland</h3>
+          <p>Waarom Nederland achterbleef — en hoe Unilever, Shell en Philips alsnog groot werden.</p>
+        </div>
+        <span class="go" aria-hidden="true">→</span>
+      </a>
+      <a class="chap c-coral no-img" href="h3-sociale-verhoudingen.html" data-reveal>
+        <div class="chap-body">
+          <span class="chap-era">Hoofdstuk 3</span>
+          <h3>De sociale verhoudingen in Nederland</h3>
+          <p>Kinderarbeid, vakbonden, kiesrecht en de beurskrach van 1929.</p>
+        </div>
+        <span class="go" aria-hidden="true">→</span>
+      </a>
+      <a class="chap c-teal" href="h4-welvaart-voor-iedereen.html" data-reveal>
+        <img src="img/geschiedenis/wederopbouw.jpg" alt="Nederlands gezin in een jarenvijftig woonkamer">
+        <div class="chap-body">
+          <span class="chap-era">Hoofdstuk 4</span>
+          <h3>Welvaart voor iedereen</h3>
+          <p>Van de Hongerwinter en Marshallhulp tot de handelseconomie van nu — 5 tijdvakken.</p>
+        </div>
+        <span class="go" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer class="gutter">
+  <span>Meneer Boersen · Vellesan College</span>
+  <span>Economie · Geschiedenis</span>
+</footer>
+<script>
+(function(){
+  var els = document.querySelectorAll('[data-reveal]');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !('IntersectionObserver' in window)) { els.forEach(function(el){el.classList.add('is-visible')}); return; }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting){ entry.target.classList.add('is-visible'); io.unobserve(entry.target); }
+    });
+  }, {threshold:0.15, rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>

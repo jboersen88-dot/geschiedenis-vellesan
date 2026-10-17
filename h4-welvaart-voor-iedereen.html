@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<title>Welvaart voor iedereen</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340..340,600..600,700..700,900..900;1,9..144,500..500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* layout: hoofdstuk-detailpagina als tijdlijn van 5 blokken (Oorlog/Wederopbouw/Welvaart/Crisis/Nu), gebouwd op de echte doe-boek-inhoud van H4. forest green/coral/teal, zelfde systeem als de rest van de site. */
+:root{
+  --bg:#f6f0e6; --surface:#fffdf9; --fg:#201a14; --muted:#746a59; --line:#e6dac4;
+  --brand:#1f5f4e; --brand-fg:#f3efe0; --brand-muted:#b9d6cb; --brand-line:#2f7360;
+  --coral:#ff8d90; --coral-ink:#3a1412;
+  --teal:#2f8f86; --teal-ink:#eefbf8;
+  --ease-out:cubic-bezier(0.23,1,0.32,1); --ease:ease;
+}
+@view-transition{ navigation: auto; }
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#15120d; --surface:#1f1a13; --fg:#f3ecdd; --muted:#b2a68d; --line:#352c20;
+    --brand:#173f34; --brand-fg:#f3efe0; --brand-muted:#aecec0; --brand-line:#2a5e4e;
+    --coral:#ff9a9d; --coral-ink:#2a1212;
+    --teal:#4db3a8; --teal-ink:#102320;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#15120d; --surface:#1f1a13; --fg:#f3ecdd; --muted:#b2a68d; --line:#352c20;
+  --brand:#173f34; --brand-fg:#f3efe0; --brand-muted:#aecec0; --brand-line:#2a5e4e;
+  --coral:#ff9a9d; --coral-ink:#2a1212;
+  --teal:#4db3a8; --teal-ink:#102320;
+  color-scheme: dark;
+}
+*{box-sizing:border-box}
+body{margin:0; background:var(--bg); color:var(--fg); font-family:"Inter",system-ui,sans-serif;
+  padding-left:max(0px, env(safe-area-inset-left,0px)); padding-right:max(0px, env(safe-area-inset-right,0px));}
+.gutter{padding-left:max(20px, env(safe-area-inset-left,0px)); padding-right:max(20px, env(safe-area-inset-right,0px))}
+.wrap{max-width:860px; margin:0 auto}
+
+header{position:sticky; top:env(safe-area-inset-top,0px); z-index:10; background:var(--brand); border-bottom:1px solid var(--brand-line)}
+nav{max-width:1080px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; padding-block:16px}
+.brandname{font-family:"Fraunces",Georgia,serif; font-weight:700; font-size:19px; color:var(--brand-fg)}
+.brandname span{color:var(--coral)}
+.navlinks{display:flex; gap:28px; font-size:14px; font-weight:500; color:var(--brand-muted)}
+.navlinks a{color:inherit; text-decoration:none; transition:color 150ms var(--ease)}
+.navlinks a:hover, .navlinks a.active{color:var(--brand-fg)}
+.back{font-size:13px; font-weight:600; color:var(--brand-muted); text-decoration:none; transition:color 150ms var(--ease)}
+.back:hover{color:var(--brand-fg)}
+
+.hero{background:var(--brand); color:var(--brand-fg)}
+.hero-inner{max-width:860px; margin:0 auto; padding-block:16px 60px}
+.eyebrow{font-size:13px; font-weight:700; letter-spacing:.09em; text-transform:uppercase; color:var(--coral); margin:0 0 14px}
+h1{font-family:"Fraunces",Georgia,serif; font-weight:900; font-size:clamp(32px,6vw,52px); line-height:1.02; margin:0 0 14px; text-wrap:balance}
+.hero-sub{font-size:16.5px; line-height:1.6; color:var(--brand-muted); max-width:58ch; margin:0 0 20px}
+.hoofdvraag{background:color-mix(in srgb, var(--brand-fg) 8%, transparent); border:1px solid var(--brand-line); border-radius:14px; padding:16px 20px; font-size:15px; color:var(--brand-fg)}
+.hoofdvraag b{color:var(--coral); font-family:"Fraunces",Georgia,serif}
+
+@keyframes rise{from{opacity:0; transform:translateY(16px)} to{opacity:1; transform:translateY(0)}}
+.reveal{opacity:0; animation:rise .55s var(--ease-out) forwards}
+.hero .eyebrow.reveal{animation-delay:.05s}
+.hero h1.reveal{animation-delay:.14s}
+.hero .hero-sub.reveal{animation-delay:.23s}
+.hero .hoofdvraag.reveal{animation-delay:.32s}
+@media (prefers-reduced-motion: reduce){
+  .reveal{animation:none; opacity:1}
+}
+
+.wave{display:block; width:100%; height:56px; margin-top:-1px}
+.wave path{fill:var(--bg)}
+
+.timeline{padding-block:40px 72px; display:flex; flex-direction:column; gap:28px}
+.blok{background:var(--surface); border:1px solid var(--line); border-radius:20px; padding:30px clamp(20px,4vw,34px); position:relative; overflow:hidden}
+.blok::before{content:""; position:absolute; left:0; top:0; bottom:0; width:6px; background:var(--stripe)}
+.blok.b1{--stripe:var(--coral)}
+.blok.b2{--stripe:var(--coral)}
+.blok.b3{--stripe:var(--teal)}
+.blok.b4{--stripe:var(--teal)}
+.blok.b5{--stripe:var(--teal)}
+.blok-head{display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; margin-bottom:6px}
+.blok-num{font-family:"Fraunces",Georgia,serif; font-weight:700; font-size:14px; color:var(--stripe)}
+.blok-era{font-size:13px; font-weight:700; color:var(--muted)}
+.blok h2{font-family:"Fraunces",Georgia,serif; font-weight:700; font-size:24px; margin:4px 0 14px}
+.blok-grid{display:grid; grid-template-columns:1.3fr 1fr; gap:24px; align-items:start}
+@media (max-width:620px){.blok-grid{grid-template-columns:1fr}}
+.blok-img{border-radius:14px; overflow:hidden; border:1px solid var(--line)}
+.blok-img img{display:block; width:100%; height:100%; object-fit:cover; transition:transform 350ms var(--ease-out)}
+@media (hover:hover) and (pointer:fine){
+  .blok-img:hover img{transform:scale(1.045)}
+}
+
+[data-reveal]{opacity:0; transform:translateY(18px); transition:opacity .5s var(--ease-out), transform .5s var(--ease-out)}
+[data-reveal].is-visible{opacity:1; transform:translateY(0)}
+@media (prefers-reduced-motion: reduce){
+  [data-reveal]{opacity:1; transform:none; transition:none}
+  .blok-img img, .blok-img:hover img{transition:none; transform:none}
+}
+.kernpunten{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:10px}
+.kernpunten li{display:flex; gap:10px; font-size:14.5px; line-height:1.55; color:var(--fg)}
+.kernpunten li::before{content:"—"; color:var(--stripe); flex-shrink:0; font-weight:700}
+.tags{display:flex; gap:8px; flex-wrap:wrap; margin-top:16px}
+.tag{font-size:12px; font-weight:700; border-radius:999px; padding:5px 11px; background:color-mix(in srgb, var(--stripe) 16%, transparent); color:color-mix(in srgb, var(--stripe) 65%, var(--fg))}
+.video{margin-top:16px; font-size:13px; color:var(--muted); display:flex; align-items:center; gap:8px}
+.video .dot{width:7px; height:7px; border-radius:50%; background:var(--stripe); flex-shrink:0}
+
+footer{padding-block:28px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; font-size:13px; color:var(--muted); max-width:1080px; margin:0 auto}
+</style>
+<noscript><style>[data-reveal]{opacity:1!important; transform:none!important} .reveal{opacity:1!important; animation:none!important}</style></noscript>
+</head>
+<body>
+<header class="gutter"><nav>
+  <div class="brandname">Meneer <span>Boersen</span></div>
+  <div class="navlinks"><a href="#">Economie</a><a href="#" class="active">Geschiedenis</a><a href="#">Over deze site</a></div>
+</nav></header>
+
+<section class="hero gutter">
+  <div class="hero-inner">
+    <p class="eyebrow reveal">Geschiedenis · Hoofdstuk 4 · Economie 3 mavo</p>
+    <h1 class="reveal">Welvaart voor iedereen</h1>
+    <p class="hero-sub reveal">Van de Tweede Wereldoorlog tot nu: vijf tijdvakken die samen laten zien hoe de Nederlandse economie zich ontwikkelde.</p>
+    <div class="hoofdvraag reveal"><b>Hoofdvraag —</b> Hoe ontwikkelde de Nederlandse economie zich na de jaren dertig?</div>
+  </div>
+  <svg class="wave" viewBox="0 0 1080 56" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,28 C180,58 360,0 540,20 C720,40 900,8 1080,30 L1080,56 L0,56 Z"/>
+  </svg>
+</section>
+
+<main class="wrap gutter">
+  <div class="timeline">
+
+    <article class="blok b1" data-reveal>
+      <div class="blok-head"><span class="blok-num">BLOK 1</span><span class="blok-era">1940 – 1945</span></div>
+      <h2>Oorlog</h2>
+      <div class="blok-grid">
+        <div>
+          <ul class="kernpunten">
+            <li>1940–1941: eerst volop werk, omdat Duitsland grote orders plaatst bij Nederlandse bedrijven.</li>
+            <li>Daarna roofeconomie: er wordt betaald met waardeloos geld, productie wordt leeggeroofd.</li>
+            <li>De Arbeitseinsatz dwingt honderdduizenden Nederlandse mannen in Duitsland te werken.</li>
+            <li>In Rotterdam wordt een derde van alle hijskranen vernield en naar Duitsland versleept.</li>
+            <li>1944–1945: de Hongerwinter treft het westen van Nederland door gebrek aan brandstof, voedsel en vervoer.</li>
+            <li>Door de schaarste blijven distributiebonnen voor producten als koffie nodig tot 1952.</li>
+          </ul>
+          <div class="tags"><span class="tag">Arbeitseinsatz</span><span class="tag">Roofeconomie</span><span class="tag">Hongerwinter</span></div>
+          <div class="video"><span class="dot"></span> Video schooltv.nl toevoegen</div>
+        </div>
+        <div class="blok-img"><img src="img/geschiedenis/oorlogseconomie.jpg" alt="Inwoners lopen door verwoest Rotterdam na het bombardement"></div>
+      </div>
+    </article>
+
+    <article class="blok b2" data-reveal>
+      <div class="blok-head"><span class="blok-num">BLOK 2</span><span class="blok-era">1945 – 1960</span></div>
+      <h2>Wederopbouw</h2>
+      <div class="blok-grid">
+        <div>
+          <ul class="kernpunten">
+            <li>De schade in getallen: 250.000 oorlogsslachtoffers, ruim 500.000 mensen zonder huis, 800.000 mensen met alleen de kleren die ze droegen.</li>
+            <li>Marshallhulp: Amerika geeft Europa tussen 1948–1954 ruim 1 miljard dollar aan geld en goederen voor machines en grondstoffen.</li>
+            <li>Het harmoniemodel: overheid, werkgevers en vakbonden werken samen in plaats van te staken.</li>
+            <li>Geleide loonpolitiek houdt de lonen enkele jaren bewust laag, zodat het geld naar herstel kan.</li>
+            <li>De landbouw verandert door mechanisatie, schaalvergroting en ruilverkaveling — het aantal trekpaarden daalt van 265.000 in 1950 naar vrijwel nul twintig jaar later.</li>
+            <li>Vanaf de jaren 60 is er te weinig personeel: de eerste gastarbeiders komen naar Nederland.</li>
+          </ul>
+          <div class="tags"><span class="tag">Marshallhulp</span><span class="tag">Harmoniemodel</span><span class="tag">Gastarbeiders</span></div>
+          <div class="video"><span class="dot"></span> Video schooltv.nl toevoegen</div>
+        </div>
+        <div class="blok-img"><img src="img/geschiedenis/wederopbouw.jpg" alt="Nederlands gezin in een jarenvijftig woonkamer"></div>
+      </div>
+    </article>
+
+    <article class="blok b3" data-reveal>
+      <div class="blok-head"><span class="blok-num">BLOK 3</span><span class="blok-era">Jaren 60</span></div>
+      <h2>Welvaart</h2>
+      <ul class="kernpunten">
+        <li>Vanaf 1963 stijgen de lonen snel en komt er een einde aan de geleide loonpolitiek.</li>
+        <li>Nederland wordt een consumptiemaatschappij: bijna iedereen kan luxeproducten kopen zoals een tv, wasmachine of auto.</li>
+        <li>De supermarkt doet zijn intrede als nieuwe manier van boodschappen doen.</li>
+        <li>Philips groeit uit tot een reus met rond 1970 bijna 100.000 werknemers in Nederland.</li>
+      </ul>
+      <div class="tags"><span class="tag">Consumptiemaatschappij</span><span class="tag">Luxeproducten</span></div>
+      <div class="video"><span class="dot"></span> Video schooltv.nl toevoegen</div>
+    </article>
+
+    <article class="blok b4" data-reveal>
+      <div class="blok-head"><span class="blok-num">BLOK 4</span><span class="blok-era">Jaren 70</span></div>
+      <h2>Crisis</h2>
+      <ul class="kernpunten">
+        <li>Twee oorzaken zorgen voor banenverlies in de industrie: concurrentie (lagere lonen in het buitenland) en mechanisatie (machines en computers nemen werk over).</li>
+        <li>Scheepsbouw en textielindustrie verdwijnen grotendeels uit Nederland.</li>
+        <li>1973: de eerste oliecrisis, als Arabische landen tijdelijk geen olie meer leveren — bekend van de autoloze zondagen.</li>
+        <li>Premier Joop den Uyl roept op tot zuiniger energiegebruik: "de wereld van vóór de oliecrisis keert niet terug".</li>
+        <li>1979: een tweede oliecrisis leidt tot faillissementen en hoge werkloosheid.</li>
+      </ul>
+      <div class="tags"><span class="tag">Oliecrisis</span><span class="tag">Werkloosheid</span></div>
+      <div class="video"><span class="dot"></span> Video schooltv.nl toevoegen</div>
+    </article>
+
+    <article class="blok b5" data-reveal>
+      <div class="blok-head"><span class="blok-num">BLOK 5</span><span class="blok-era">Nu</span></div>
+      <h2>Handel &amp; diensten</h2>
+      <ul class="kernpunten">
+        <li>Nederland verdient zijn geld tegenwoordig vooral met handel, transport en diensten — net als in de Gouden Eeuw.</li>
+        <li>Schiphol, de Rotterdamse haven, banken en verzekeraars zijn de motor van de huidige economie.</li>
+        <li>Producten maken is in andere landen vaak goedkoper, dus die productie verdwijnt uit Nederland.</li>
+        <li>Een handelsland is kwetsbaar: een crisis in het buitenland (zoals in 2008) raakt Nederland direct.</li>
+      </ul>
+      <div class="tags"><span class="tag">Handel</span><span class="tag">Kwetsbaarheid</span></div>
+      <div class="video"><span class="dot"></span> Video schooltv.nl toevoegen</div>
+    </article>
+
+  </div>
+</main>
+
+<footer class="gutter">
+  <span>Meneer Boersen · Vellesan College</span>
+  <span>Economie · Geschiedenis</span>
+</footer>
+<script>
+(function(){
+  var els = document.querySelectorAll('[data-reveal]');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !('IntersectionObserver' in window)) { els.forEach(function(el){el.classList.add('is-visible')}); return; }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting){ entry.target.classList.add('is-visible'); io.unobserve(entry.target); }
+    });
+  }, {threshold:0.15, rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>
