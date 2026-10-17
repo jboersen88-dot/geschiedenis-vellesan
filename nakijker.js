@@ -2,7 +2,7 @@
    UITZETTEN: zet GV_NK_URL op "" -> alles werkt met het nakijkblad / de lokale controle. Hier staat nooit een sleutel of lesstof.
    Geen naam, klas of leerlingnummer meesturen: alleen vraag, nakijkpunten, bron en antwoord. */
 (function(){
-var GV_NK_URL=""; // webapp-URL uit ai-oefentoetsen/nakijker/WEBAPP_URL.txt (nog niet geïnstalleerd)
+var GV_NK_URL="https://geschiedenis-nakijker.nakijker-worker.workers.dev"; // Cloudflare Worker (sleutel en lesstof staan daar, niet hier)
 var esc=window.GV_AI?GV_AI.esc:function(t){return String(t).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});};
 /* o: {h:["H1","H2"], vraag, punten:[{t,p}], bron?, antwoord}
    -> belofte met {status:"ok",...} van het script, of {status:"fout", melding, lokaal?, ...local} */

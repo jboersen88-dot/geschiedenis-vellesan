@@ -150,3 +150,7 @@ Aanleiding: de eerste versie was "een standaard website". Je bestaande Google Si
 - Scroll-verhalen per hoofdstuk binnen de app, en meer HTML-widgets in plaats van downloads (filmvragen, recherchebord, doe-boek)
 - Een Geschiedenis-variant van EDU-Racer
 - De oude losse pagina's `h1-…h4-*.html` zijn vervangen door de app. Ze staan er nog, maar zijn niet meer gelinkt.
+
+## 17 okt, 22:15 — AI-nakijker live (Cloudflare Worker)
+- `nakijker.js`: `GV_NK_URL` = https://geschiedenis-nakijker.nakijker-worker.workers.dev (Claude Haiku 5.5). Sleutel en lesstof staan in de Worker, niet in deze repo. Alleen jboersen88-dot.github.io en localhost mogen hem aanroepen.
+- Getest: t1 vraag 14, goed antwoord 2/2, fout antwoord 0/2, 3–4 s per antwoord. Uitzetten: `GV_NK_URL` leeg maken.
