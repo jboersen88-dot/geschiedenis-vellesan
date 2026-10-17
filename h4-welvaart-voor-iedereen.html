@@ -104,6 +104,20 @@ h1{font-family:"Fraunces",Georgia,serif; font-weight:900; font-size:clamp(32px,6
 .video{margin-top:16px; font-size:13px; color:var(--muted); display:flex; align-items:center; gap:8px}
 .video .dot{width:7px; height:7px; border-radius:50%; background:var(--stripe); flex-shrink:0}
 
+.quiz-cta{
+  display:flex; align-items:center; justify-content:space-between; gap:16px;
+  background:var(--brand); color:var(--brand-fg); border-radius:20px; padding:26px 28px;
+  text-decoration:none; position:relative; overflow:hidden;
+}
+.quiz-cta-label{font-size:12px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--coral); margin:0 0 6px}
+.quiz-cta-title{font-family:"Fraunces",Georgia,serif; font-weight:700; font-size:21px; margin:0; color:var(--brand-fg)}
+.quiz-cta .go{
+  flex-shrink:0; width:40px; height:40px; border-radius:50%; background:var(--coral); color:var(--coral-ink);
+  display:flex; align-items:center; justify-content:center; font-size:17px; transition:transform .25s var(--ease-out);
+}
+@media (hover:hover) and (pointer:fine){ .quiz-cta:hover .go{transform:translate(4px,-4px)} }
+@media (prefers-reduced-motion: reduce){ .quiz-cta .go{transition:none} .quiz-cta:hover .go{transform:none} }
+
 footer{padding-block:28px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; font-size:13px; color:var(--muted); max-width:1080px; margin:0 auto}
 </style>
 <noscript><style>[data-reveal]{opacity:1!important; transform:none!important} .reveal{opacity:1!important; animation:none!important}</style></noscript>
@@ -116,7 +130,7 @@ footer{padding-block:28px; display:flex; justify-content:space-between; flex-wra
 
 <section class="hero gutter">
   <div class="hero-inner">
-    <p class="eyebrow reveal">Geschiedenis · Hoofdstuk 4 · Economie 3 mavo</p>
+    <p class="eyebrow reveal">Economische geschiedenis · Hoofdstuk 4</p>
     <h1 class="reveal">Welvaart voor iedereen</h1>
     <p class="hero-sub reveal">Van de Tweede Wereldoorlog tot nu: vijf tijdvakken die samen laten zien hoe de Nederlandse economie zich ontwikkelde.</p>
     <div class="hoofdvraag reveal"><b>Hoofdvraag —</b> Hoe ontwikkelde de Nederlandse economie zich na de jaren dertig?</div>
@@ -208,6 +222,14 @@ footer{padding-block:28px; display:flex; justify-content:space-between; flex-wra
       <div class="tags"><span class="tag">Handel</span><span class="tag">Kwetsbaarheid</span></div>
       <div class="video"><span class="dot"></span> Video schooltv.nl toevoegen</div>
     </article>
+
+    <a class="quiz-cta" href="h4-oefentoets.html" data-reveal>
+      <div>
+        <p class="quiz-cta-label">Zelftoets</p>
+        <p class="quiz-cta-title">Test jezelf met 9 vragen</p>
+      </div>
+      <span class="go" aria-hidden="true">→</span>
+    </a>
 
   </div>
 </main>
