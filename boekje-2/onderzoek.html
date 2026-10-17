@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Kijkwijzer en onderzoek · Boekje 2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="stijl.css">
+<style>
+.pick{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 18px}
+.pick button{border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:12px;padding:9px 13px;font:inherit;font-size:14px;font-weight:600;cursor:pointer;text-align:left;transition:border-color .18s var(--ease-out),background .18s var(--ease-out)}
+.pick button[aria-pressed=true]{border-color:var(--green);background:color-mix(in srgb,var(--green) 10%,var(--card))}
+.pick button small{display:block;color:var(--muted);font-weight:500;font-size:12.5px}
+.steps{display:flex;gap:6px;margin-bottom:16px}
+.steps button{flex:1;border:0;border-radius:10px;padding:10px 6px;font:inherit;font-size:13px;font-weight:700;cursor:pointer;background:color-mix(in srgb,var(--green) 8%,var(--card));color:var(--muted);transition:background .2s var(--ease-out),color .2s var(--ease-out)}
+.steps button[aria-current=true]{background:var(--green);color:#fff}
+.steps button.done:not([aria-current=true]){color:var(--green)}
+.step-panel h3{font-size:22px;margin-bottom:8px}
+.step-panel ul{margin:0 0 14px;padding-left:20px}
+.step-panel li{margin-bottom:6px}
+.fade{animation:fade .28s var(--ease-out)}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+table.cmp{width:100%;border-collapse:separate;border-spacing:0 8px}
+table.cmp th{font-size:12.5px;text-align:left;color:var(--muted);font-weight:800;letter-spacing:.04em;text-transform:uppercase;padding:0 6px}
+table.cmp td{vertical-align:top;padding:0 6px}
+table.cmp td:first-child{font-weight:700;width:22%;padding-top:10px}
+table.cmp textarea{min-height:70px}
+.tbl-wrap{overflow-x:auto}
+@media (max-width:640px){table.cmp,table.cmp tbody,table.cmp tr,table.cmp td{display:block;width:100%}table.cmp thead{display:none}table.cmp td:first-child{width:100%}table.cmp td[data-l]:before{content:attr(data-l);display:block;font-size:12px;font-weight:800;color:var(--muted);margin:6px 0 4px}}
+.filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+.filters button{border:1.5px solid var(--line);background:transparent;color:var(--ink);border-radius:999px;padding:6px 12px;font:inherit;font-size:13px;font-weight:700;cursor:pointer}
+.filters button[aria-pressed=true]{background:var(--green);border-color:var(--green);color:#fff}
+.bron[hidden]{display:none}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="index.html">Meneer <span>Boersen</span></a>
+  <nav><a class="hide-s" href="index.html">Boekje 2</a><a href="app.html">Leeromgeving</a><a href="examentraining.html">Examentraining</a></nav>
+</div></header>
+<section class="hero"><div class="wrap">
+  <div class="eyebrow">Boekje 2 · vaardigheden</div>
+  <h1>Kijkwijzer en onderzoek</h1>
+  <p>Leer een spotprent lezen zoals op het examen, vergelijk toen en nu, en werk met echte bronnen. Alles wat je typt, wordt op dit apparaat bewaard.</p>
+</div></section>
+<svg class="wave" viewBox="0 0 1200 46" preserveAspectRatio="none" aria-hidden="true" style="background:var(--green)"><path d="M0,24 C200,46 400,2 600,20 C800,38 1000,8 1200,26 L1200,46 L0,46 Z"/></svg>
+
+<main class="wrap stack">
+  <section class="card" id="kijkwijzer">
+    <div class="eyebrow">Kijkwijzer spotprenten</div>
+    <h2 style="font-size:28px;margin:6px 0 4px">Een spotprent lezen in vier stappen</h2>
+    <p class="muted" style="margin:0">Op het examen staan elk jaar spotprenten. Kies een spotprent uit je boekje en loop de stappen door. Bekijk de spotprent in je boekje terwijl je werkt.</p>
+    <div class="pick" id="prentPick"></div>
+    <div class="steps" id="steps" role="tablist"></div>
+    <div id="stepPanel" class="step-panel"></div>
+  </section>
+
+  <section class="card" id="onderzoek">
+    <div class="eyebrow">Onderzoeksopdrachten</div>
+    <h2 style="font-size:28px;margin:6px 0 4px">Toen en nu vergelijken</h2>
+    <p class="muted" style="margin:0 0 14px">Kies een opdracht. Vul per onderdeel in wat er toen was, wat er nu is, en of dat een verschil of een overeenkomst is.</p>
+    <div class="pick" id="opPick"></div>
+    <div id="opPanel"></div>
+  </section>
+
+  <section class="card" id="bronnen">
+    <div class="eyebrow">Bronnenkast</div>
+    <h2 style="font-size:28px;margin:6px 0 4px">Werken met historische bronnen</h2>
+    <p class="muted" style="margin:0 0 14px">Korte bronnen uit de tijd zelf. Lees de bron, kijk naar maker en jaartal, en beantwoord de vraag.</p>
+    <div class="filters" id="bronFilter"></div>
+    <div class="stack" id="bronList"></div>
+  </section>
+</main>
+<footer><div class="wrap">Meneer Boersen · Vellesan College · De spotprenten en de overige bronnen staan in je boekje.</div></footer>
+
+<script>
+(function(){
+var LS="b2-onderzoek-";
+function get(k){try{return localStorage.getItem(LS+k)||"";}catch(e){return "";}}
+function put(k,v){try{localStorage.setItem(LS+k,v);}catch(e){}}
+function esc(t){return String(t).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+function autosave(root){
+  root.querySelectorAll("textarea[data-k]").forEach(function(t){
+    t.value=get(t.dataset.k);
+    var s=t.parentElement.querySelector(".saved"),tm;
+    t.addEventListener("input",function(){put(t.dataset.k,t.value);clearTimeout(tm);if(s){s.textContent="Bewaard";tm=setTimeout(function(){s.textContent="";},1400);}});
+  });
+}
+
+/* ---------- Kijkwijzer ---------- */
+var PRENTEN=[
+ {id:"spoor",t:"De spoorwegstaking",m:"Albert Hahn, 1903",h:"H1"},
+ {id:"parlement",t:"De rijke heren worden uit het parlement geschopt",m:"Albert Hahn, 1904",h:"H1"},
+ {id:"colijn",t:"Schipper Colijn",m:"Leo Jordaan, 1933",h:"H2"},
+ {id:"aanpassing",t:"De aanpassingspolitiek",m:"Albert Hahn jr., De Notenkraker, 1936",h:"H2"}
+];
+var STAPPEN=[
+ {t:"1 · Algemeen",h:"Stap 1: Algemeen",q:["Over welk historisch onderwerp gaat de spotprent? Hoe weet je dat?","Heeft de spotprent een titel of een bijschrift? Vaak vat dat de spotprent samen.","Wat weet je over de tekenaar? Bijvoorbeeld bij welke groep hij hoorde."]},
+ {t:"2 · Personen",h:"Stap 2: De personen",q:["Wie stellen de personen voor? Een persoon kan ook een land of een groep voorstellen.","Zijn de personen positief of negatief getekend? Hoe zie je dat?","Wat doen de personen?"]},
+ {t:"3 · Andere delen",h:"Stap 3: De andere delen",q:["Welke dingen zie je nog meer? Let ook op details.","Wat stellen die dingen voor? Een donkere lucht kan bijvoorbeeld voor dreiging staan."]},
+ {t:"4 · Conclusie",h:"Stap 4: Conclusie",q:["Wat is de boodschap van de maker? Hoe weet je dat?"]}
+];
+var prent=get("prent")||PRENTEN[0].id, stap=0;
+function renderPick(){
+  document.getElementById("prentPick").innerHTML=PRENTEN.map(function(p){return '<button data-p="'+p.id+'" aria-pressed="'+(p.id===prent)+'">'+esc(p.t)+'<small>'+esc(p.m)+' · '+p.h+'</small></button>';}).join("");
+}
+function renderSteps(){
+  document.getElementById("steps").innerHTML=STAPPEN.map(function(s,i){var done=get("kw-"+prent+"-"+i).trim().length>0;return '<button role="tab" data-s="'+i+'" aria-current="'+(i===stap)+'" class="'+(done?"done":"")+'">'+(done?"✓ ":"")+s.t+'</button>';}).join("");
+  var s=STAPPEN[stap],p=PRENTEN.filter(function(x){return x.id===prent;})[0];
+  var el=document.getElementById("stepPanel");
+  el.className="step-panel fade";void el.offsetWidth;
+  el.innerHTML='<h3>'+s.h+'</h3><p class="muted" style="margin:0 0 10px">Spotprent: <b>'+esc(p.t)+'</b> ('+esc(p.m)+')</p><ul>'+s.q.map(function(q){return '<li>'+esc(q)+'</li>';}).join("")+'</ul>'+
+    '<div><textarea data-k="kw-'+prent+'-'+stap+'" aria-label="Jouw antwoorden bij '+esc(s.h)+'" placeholder="Schrijf hier je antwoorden…"></textarea><div class="saved"></div></div>'+
+    '<div class="row" style="margin-top:10px">'+(stap>0?'<button class="btn ghost" data-nav="-1">← Vorige stap</button>':'')+(stap<STAPPEN.length-1?'<button class="btn" data-nav="1">Volgende stap →</button>':'<button class="btn coral" data-nav="sum">Toon mijn analyse</button>')+'</div><div id="sum"></div>';
+  autosave(el);
+}
+document.getElementById("prentPick").addEventListener("click",function(e){var b=e.target.closest("[data-p]");if(!b)return;prent=b.dataset.p;put("prent",prent);stap=0;renderPick();renderSteps();});
+document.getElementById("steps").addEventListener("click",function(e){var b=e.target.closest("[data-s]");if(!b)return;stap=+b.dataset.s;renderSteps();});
+document.getElementById("stepPanel").addEventListener("click",function(e){var b=e.target.closest("[data-nav]");if(!b)return;
+  if(b.dataset.nav==="sum"){var p=PRENTEN.filter(function(x){return x.id===prent;})[0];
+    document.getElementById("sum").innerHTML='<div class="card" style="margin-top:14px;background:var(--bg)"><h3 style="font-size:20px;margin-bottom:8px">Mijn analyse: '+esc(p.t)+'</h3>'+STAPPEN.map(function(s,i){var v=get("kw-"+prent+"-"+i).trim();return '<p style="margin:0 0 10px"><b>'+esc(s.h)+'</b><br>'+(v?esc(v).replace(/\n/g,"<br>"):'<span class="muted">Nog niet ingevuld.</span>')+'</p>';}).join("")+'</div>';
+    return;}
+  stap=Math.min(STAPPEN.length-1,Math.max(0,stap+(+b.dataset.nav)));renderSteps();});
+renderPick();renderSteps();
+
+/* ---------- Onderzoeksopdrachten ---------- */
+var OPS=[
+ {id:"demo",t:"Demonstreren tegen de overheid",d:"Kies een demonstratie tegen de overheid van vóór 1945 (bijvoorbeeld voor het algemeen kiesrecht of de Jordaanrellen) en vergelijk die met een demonstratie in de eenentwintigste eeuw, zoals de Klimaatmars.",rows:["Waarvoor of waartegen?","Wie deden er mee?","Hoe protesteerden ze?","Hoe reageerde de overheid?","Wat was het resultaat?"]},
+ {id:"epi",t:"Bestrijden van epidemieën",d:"Hoe probeerde de overheid in de negentiende eeuw de verspreiding van cholera tegen te gaan? En hoe verschilt dat van hoe de overheid nu ziektes probeert te voorkomen, zoals bij het coronavirus?",rows:["De ziekte","Oorzaak van de verspreiding","Wat deed de overheid?","Rol van hygiëne en riolering","Wat moesten burgers zelf doen?"]},
+ {id:"werk",t:"Werkverschaffing in de eenentwintigste eeuw?",d:"Een gemeente kan mensen in de bijstand vragen om een tegenprestatie: maatschappelijk nuttig werk zonder loon. Vergelijk dat met de werkverschaffing in de jaren dertig.",rows:["Werktijden","Beloning","Werkomstandigheden","Doel volgens de overheid","Wat vonden de mensen zelf?"]}
+];
+var op=get("op")||OPS[0].id;
+function renderOp(){
+  document.getElementById("opPick").innerHTML=OPS.map(function(o){return '<button data-o="'+o.id+'" aria-pressed="'+(o.id===op)+'">'+esc(o.t)+'</button>';}).join("");
+  var o=OPS.filter(function(x){return x.id===op;})[0],el=document.getElementById("opPanel");
+  el.className="fade";void el.offsetWidth;
+  el.innerHTML='<p style="margin:0 0 12px">'+esc(o.d)+'</p><div class="tbl-wrap"><table class="cmp"><thead><tr><th>Onderdeel</th><th>Toen</th><th>Nu</th><th>Verschil of overeenkomst?</th></tr></thead><tbody>'+
+    o.rows.map(function(r,i){return '<tr><td>'+esc(r)+'</td>'+["toen","nu","vo"].map(function(c,j){return '<td data-l="'+["Toen","Nu","Verschil of overeenkomst?"][j]+'"><textarea data-k="op-'+o.id+'-'+i+'-'+c+'" aria-label="'+esc(r)+', '+["toen","nu","verschil of overeenkomst"][j]+'"></textarea></td>';}).join("")+'</tr>';}).join("")+
+    '</tbody></table></div><div style="margin-top:10px"><textarea data-k="op-'+o.id+'-concl" placeholder="Mijn conclusie: wat zijn de belangrijkste verschillen en overeenkomsten?" aria-label="Conclusie"></textarea><div class="saved"></div></div>'+
+    '<div class="row" style="margin-top:10px"><button class="btn ghost" id="opCopy">Kopieer mijn onderzoek</button><span class="saved" id="opCopyMsg"></span></div>';
+  autosave(el);
+  document.getElementById("opCopy").onclick=function(){
+    var txt=o.t+"\n\n"+o.rows.map(function(r,i){return r+"\n  Toen: "+get("op-"+o.id+"-"+i+"-toen")+"\n  Nu: "+get("op-"+o.id+"-"+i+"-nu")+"\n  Verschil/overeenkomst: "+get("op-"+o.id+"-"+i+"-vo");}).join("\n")+"\n\nConclusie: "+get("op-"+o.id+"-concl");
+    var m=document.getElementById("opCopyMsg");
+    if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(txt).then(function(){m.textContent="Gekopieerd. Plak het in je verslag.";},function(){m.textContent="Kopiëren lukte niet. Selecteer de tekst zelf.";});
+    else m.textContent="Kopiëren lukte niet. Selecteer de tekst zelf.";
+  };
+}
+document.getElementById("opPick").addEventListener("click",function(e){var b=e.target.closest("[data-o]");if(!b)return;op=b.dataset.o;put("op",op);renderOp();});
+renderOp();
+
+/* ---------- Bronnenkast ---------- */
+var BRONNEN=[
+ {h:"H1",n:"Bron 7",t:"Ik was tien jaar toen ik voor het eerst naar de fabriek ging. Ik ging er 's nachts om half twaalf heen en dan kwam ik 's morgens om half twaalf naar huis, helemaal zwart, terwijl ik bijna niet kon staan van vermoeidheid.",c:"Naar: Parlementaire enquête naar de arbeidsomstandigheden in fabrieken, verhoor van een voormalige arbeider uit een glasblazerij in Maastricht, 1887.",q:"Wat laat deze bron zien over kinderarbeid in de negentiende eeuw? Waarom is een parlementaire enquête een bruikbare bron?"},
+ {h:"H1",n:"Bron 12",t:"Art. 1. Het is verboden kinderen beneden twaalf jaar in dienst te nemen of in dienst te hebben. Art. 2. Het verbod van art. 1 is niet toepasselijk op huishoudelijke en persoonlijke diensten en op veldarbeid.",c:"Naar: het Kinderwetje van Van Houten, 1874.",q:"Voor welke kinderen gold het verbod níet? Wat zegt dat over hoe goed deze wet kinderen beschermde?"},
+ {h:"H1",n:"Bron 13",t:"De armenzorg zou moeten bestaan uit kleine giften, maar het versterkt alleen maar de luiheid van de armen en de armoede wordt vergroot.",c:"Minister Thorbecke over de armenzorg, rond 1850.",q:"Bij welke politieke stroming past dit standpunt? Gebruik het begrip nachtwakersstaat."},
+ {h:"H1",n:"Bron 14",t:"Het is gebruikelijk om de openbare wateren te gebruiken als drinkwater, als badwater en als spoelwater voor groenten en vruchten.",c:"Naar: een gezondheidsrapport uit 1902.",q:"Leg uit waarom deze situatie de verspreiding van ziektes als cholera hielp."},
+ {h:"H3",n:"Bron 27",t:"Twee dingen in het leven van mensen hebben mij altijd zeer getroffen. De ene is de werkloosheid onder de loonarbeider en de onzekerheid van het bestaan die hierdoor ontstaat. De andere is de vrees voor de oude dag.",c:"Naar: toespraak van Willem Drees in de Tweede Kamer over de Noodwet Ouderdomsvoorziening, 1947.",q:"Welke wet stelt Drees hier voor? Welke twee problemen wil hij oplossen?"}
+];
+var bf=get("bf")||"alle";
+function renderBronnen(){
+  var hs=["alle","H1","H3"];
+  document.getElementById("bronFilter").innerHTML=hs.map(function(h){return '<button data-f="'+h+'" aria-pressed="'+(h===bf)+'">'+(h==="alle"?"Alle bronnen":"Hoofdstuk "+h.slice(1))+'</button>';}).join("");
+  var el=document.getElementById("bronList");
+  el.innerHTML=BRONNEN.map(function(b,i){var c=b.h==="H1"?"var(--coral-d)":"var(--teal)";return '<div class="bron" '+(bf!=="alle"&&bf!==b.h?"hidden":"")+'><span class="tag" style="--c:'+c+'">'+b.n+' · hoofdstuk '+b.h.slice(1)+'</span><blockquote class="src" style="--c:'+c+';margin:10px 0 10px">'+esc(b.t)+'<cite>'+esc(b.c)+'</cite></blockquote><p style="margin:0 0 8px"><b>Vraag:</b> '+esc(b.q)+'</p><div><textarea data-k="bron-'+i+'" aria-label="Antwoord bij '+b.n+'"></textarea><div class="saved"></div></div></div>';}).join("");
+  autosave(el);
+}
+document.getElementById("bronFilter").addEventListener("click",function(e){var b=e.target.closest("[data-f]");if(!b)return;bf=b.dataset.f;put("bf",bf);renderBronnen();});
+renderBronnen();
+})();
+</script>
+</body>
+</html>

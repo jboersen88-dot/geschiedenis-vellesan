@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Examentraining · Boekje 2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="stijl.css">
+<style>
+.q{scroll-margin-top:20px}
+.q .num{font-family:"Fraunces",serif;font-weight:900;font-size:15px;color:var(--coral-d)}
+.q h3{font-size:20px;margin:4px 0 10px;line-height:1.25}
+.bronref{font-size:14px;background:var(--bg);border:1px dashed var(--line);border-radius:12px;padding:10px 12px;margin-bottom:12px}
+.opts{display:flex;flex-direction:column;gap:.9rem;margin:6px 0 4px}
+.opt{display:flex;gap:12px;align-items:flex-start;border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;cursor:pointer;background:var(--card);transition:border-color .18s var(--ease-out),background .18s var(--ease-out)}
+.opt input{margin-top:3px;width:18px;height:18px;flex:none;accent-color:var(--green)}
+.opt.ok{border-color:var(--ok);background:var(--ok-soft)}
+.opt.bad{border-color:var(--bad);background:var(--bad-soft)}
+.choice{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.choice button{border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:8px 16px;font:inherit;font-weight:700;cursor:pointer;transition:background .18s var(--ease-out),border-color .18s var(--ease-out)}
+.choice button[aria-pressed=true]{background:var(--green);border-color:var(--green);color:#fff}
+.choice button.ok{background:var(--ok);border-color:var(--ok);color:#fff}
+.choice button.bad{background:var(--bad);border-color:var(--bad);color:#fff}
+.nk{margin-top:12px;border-radius:14px;background:color-mix(in srgb,var(--teal) 9%,var(--card));border:1px solid color-mix(in srgb,var(--teal) 30%,var(--line));padding:12px 14px}
+.nk[hidden]{display:none}
+.nk label{display:flex;gap:10px;align-items:flex-start;margin:8px 0;cursor:pointer}
+.nk input{margin-top:3px;width:18px;height:18px;flex:none;accent-color:var(--teal)}
+.fb{margin-top:10px;font-weight:700}
+.fb.ok{color:var(--ok)}.fb.bad{color:var(--bad)}
+.score{position:sticky;bottom:max(12px,env(safe-area-inset-bottom,0px));z-index:5;background:var(--green-d);color:var(--green-fg);border-radius:16px;padding:12px 16px;display:flex;align-items:center;gap:14px;box-shadow:0 14px 30px -18px rgba(0,0,0,.5)}
+.score .bar{flex:1;height:6px;border-radius:6px;background:rgba(255,255,255,.16);overflow:hidden}
+.score .bar i{display:block;height:100%;width:0;background:var(--coral);transition:width .4s var(--ease-out)}
+.score b{font-variant-numeric:tabular-nums}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="index.html">Meneer <span>Boersen</span></a>
+  <nav><a class="hide-s" href="index.html">Boekje 2</a><a href="app.html">Leeromgeving</a><a href="onderzoek.html">Kijkwijzer</a></nav>
+</div></header>
+<section class="hero"><div class="wrap">
+  <div class="eyebrow">Boekje 2 · examentraining</div>
+  <h1>Oefen met examenvragen</h1>
+  <p>Elf vragen over het hele boekje. Bij de keuzevragen zie je meteen of je goed zit. Bij de open vragen kijk je jezelf na met de nakijkpunten. Je antwoorden worden bewaard.</p>
+</div></section>
+<svg class="wave" viewBox="0 0 1200 46" preserveAspectRatio="none" aria-hidden="true" style="background:var(--green)"><path d="M0,24 C200,46 400,2 600,20 C800,38 1000,8 1200,26 L1200,46 L0,46 Z"/></svg>
+<main class="wrap stack" id="qs"></main>
+<div class="wrap" style="padding-bottom:24px">
+  <div class="score" role="status"><span>Score</span><div class="bar"><i id="sBar"></i></div><b id="sTxt">0 / 0</b><button class="btn ghost" id="reset" style="color:var(--green-fg);border-color:rgba(255,255,255,.25)">Opnieuw</button></div>
+</div>
+<footer><div class="wrap">Bronnen 1, 4 en 6 zijn afbeeldingen: die vind je in je boekje bij de examentraining.</div></footer>
+
+<script>
+(function(){
+var LS="b2-examen-";
+function get(k){try{return localStorage.getItem(LS+k);}catch(e){return null;}}
+function put(k,v){try{localStorage.setItem(LS+k,v);}catch(e){}}
+function esc(t){return String(t).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+
+var BR={
+ 1:{t:null,c:"Bron 1 · Een leegstaand bankgebouw in Iowa, Verenigde Staten (foto in je boekje)."},
+ 2:{t:"We krijgen zo langzamerhand een volk waarin er geen enkele man meer is die niet op krukken loopt. En ik vraag mij af: is dat nou waarlijk de weg om een krachtig volk te behouden? Dat wordt met geld alleen, met het strooien van geld uit de gemeenschap, niet verkregen.",c:"Bron 2 · Minister-president Colijn in de jaren dertig."},
+ 3:{t:"Hooggeachte vader Drees, als ik u zo maar noemen mag! Eindelijk heb ik dan ook voor de eerste keer de […] ontvangen. Ik zou daar toch graag een keer iemand voor danken. En dat doe ik dan bij deze U! Want u hebt daar toch maar voor gezorgd.",c:"Bron 3 · Een brief van mevrouw R. van Eekelen aan minister-president Drees."},
+ 4:{t:null,c:"Bron 4 · Een foto van een protestbord (in je boekje)."},
+ 5:{t:"Gelukkig bewijzen Nederlanders iedere dag dat zij de overheid voor veel dingen helemaal niet nodig hebben. Zij zorgen voor zichzelf en geven om een ander. Niet omdat het moet, maar omdat ze het zelf willen.",c:"Bron 5 · Standpunt van een politieke partij (bron: VVD.nl)."},
+ 6:{t:null,c:"Bron 6 · In je boekje."}
+};
+
+/* type: multi (meerdere juist), keuze (keuze + uitleg), open */
+var Q=[
+ {type:"multi",q:"Welke uitspraken over de armenzorg passen bij de negentiende eeuw? Kies alle juiste.",opts:[
+   ["Armen kunnen terecht bij de kerk voor een warme maaltijd.",true],
+   ["We gaan op huisbezoek bij arme gezinnen om te kijken of ze zich netjes gedragen.",true],
+   ["Arme gezinnen krijgen elke maand hulp van de gemeente.",false],
+   ["Het oplossen van de armoede in de stad is geen taak van de gemeente.",true],
+   ["Een arbeider die een ongeluk heeft gehad op het werk, krijgt een uitkering.",false]],
+  uitleg:"Hulp kwam van de kerk en van rijke burgers (liefdadigheid). Volgens de Armenwet van 1854 hielp de gemeente alleen in uiterste nood. De Ongevallenwet kwam pas aan het begin van de twintigste eeuw."},
+ {type:"open",bron:1,q:"Wat is er met deze bank gebeurd? Welke gebeurtenis was daar de oorzaak van?",nk:["De bank is failliet gegaan (staat leeg).","De oorzaak was de beurskrach van 1929 (Zwarte Donderdag)."]},
+ {type:"open",q:"Welk gevolg had de gebeurtenis van vraag 2 voor Nederland?",nk:["Amerikanen hadden geen geld meer voor Europese producten, dus ook in Nederland sloten bedrijven en fabrieken.","Daardoor steeg de werkloosheid (tussen 1929 en 1935 tot bijna een half miljoen)."]},
+ {type:"keuze",bron:2,q:"In de crisis van de jaren dertig kregen werklozen een steunuitkering. Is minister-president Colijn positief of negatief over deze steun?",keuzes:["positief","negatief"],goed:"negatief",zin:"Minister-president Colijn is … over de steun, omdat …",nk:["Uitleg: Colijn vindt dat geld geven mensen afhankelijk/zwak maakt ('op krukken'); met geld strooien krijg je geen krachtig volk."]},
+ {type:"keuze",q:"Nam de rol van de overheid op het gebied van sociale zekerheid na de Tweede Wereldoorlog toe of af? Leg je antwoord uit.",keuzes:["groter","kleiner"],goed:"groter",zin:"De rol van de overheid werd …, omdat …",nk:["Uitleg: de overheid ging zorgen voor een minimuminkomen voor wie oud, ziek of werkloos was, met wetten als de Noodwet Ouderdomsvoorziening, de WW, de AOW, de ABW of de WAO (de verzorgingsstaat)."]},
+ {type:"open",bron:3,q:"Wat heeft mevrouw Van Eekelen ontvangen?",nk:["Een ouderdomsuitkering van de overheid (van de Noodwet Ouderdomsvoorziening, de latere AOW)."]},
+ {type:"open",bron:3,q:"Waarom noemt mevrouw Van Eekelen Drees een 'vader'? Gebruik in je antwoord het begrip 'verzorgingsstaat'.",nk:["Drees zorgde ervoor dat de overheid voor haar ging zorgen: hij kwam met de Noodwet Ouderdomsvoorziening.","Je gebruikt het begrip verzorgingsstaat goed: Drees wordt de vader van de verzorgingsstaat genoemd."]},
+ {type:"open",q:"Noem drie oorzaken waardoor de verzorgingsstaat in de problemen kwam.",nk:["Eerste goede oorzaak, bijvoorbeeld: meer werklozen door een slechte economie / steeds meer mensen in de WAO / vergrijzing.","Tweede goede oorzaak, bijvoorbeeld: minder kinderen, dus minder werkenden / meer scheidingen en bijstand / uitkeringen stegen mee met de lonen.","Derde goede oorzaak, bijvoorbeeld: minder schaamte en meer misbruik door slechte controle / werken werd minder aantrekkelijk dan een uitkering."]},
+ {type:"open",bron:4,q:"Over welke oplossing voor een van de problemen van de verzorgingsstaat gaat het protestbord op de foto?",nk:["Je noemt een oplossing die past bij het bord, zoals het verlagen van uitkeringen, de herkeuring voor de WAO/WIA of het verhogen van de AOW-leeftijd. Controleer met de foto in je boekje."]},
+ {type:"keuze",bron:5,q:"Welk begrip past bij het standpunt van deze politieke partij over de sociale zekerheid?",keuzes:["verzorgingsstaat","participatiesamenleving"],goed:"participatiesamenleving",zin:"Het begrip … past bij deze politieke partij, omdat …",nk:["Uitleg: volgens de partij zorgen mensen zelf voor zichzelf en voor elkaar, zonder hulp van de overheid."]},
+ {type:"open",bron:6,q:"'De overheid doet meer dan alleen zorgen voor een minimuminkomen voor mensen in Nederland.' Leg uit dat de bron laat zien dat deze uitspraak klopt.",nk:["Je noemt iets uit de bron waaruit blijkt dat de overheid meer doet dan uitkeringen geven, zoals regels voor werk (minimumloon, veiligheid), wonen (huurhuizen, huursubsidie) of voorlichting (zoals NIX18). Controleer met bron 6 in je boekje."]}
+];
+
+var main=document.getElementById("qs");
+main.innerHTML=Q.map(function(q,i){
+  var b=q.bron?BR[q.bron]:null;
+  var bron=b?'<div class="bronref">'+(b.t?'<blockquote class="src" style="margin:0">'+esc(b.t)+'<cite>'+esc(b.c)+'</cite></blockquote>':'📷 '+esc(b.c))+'</div>':"";
+  var body="";
+  if(q.type==="multi") body='<div class="opts">'+q.opts.map(function(o,j){return '<label class="opt" data-j="'+j+'"><input type="checkbox" data-m="'+i+'-'+j+'"><span>'+esc(o[0])+'</span></label>';}).join("")+'</div><div class="row" style="margin-top:12px"><button class="btn" data-check="'+i+'">Kijk na</button></div><div class="fb" id="fb'+i+'"></div>';
+  if(q.type==="keuze") body='<div class="choice">'+q.keuzes.map(function(k){return '<button data-k="'+i+'" data-v="'+k+'" aria-pressed="false">'+k+'</button>';}).join("")+'</div><p class="muted" style="margin:0 0 8px;font-size:14px">'+esc(q.zin)+'</p>';
+  if(q.type!=="multi") body+='<textarea data-t="'+i+'" aria-label="Antwoord vraag '+(i+1)+'" placeholder="Jouw antwoord…"></textarea><div class="row" style="margin-top:10px"><button class="btn ghost" data-show="'+i+'">Toon nakijkpunten</button></div><div class="nk" id="nk'+i+'" hidden><b>Nakijkpunten</b> <span class="muted" style="font-size:13px">Vink aan wat je goed had.</span>'+q.nk.map(function(p,j){return '<label><input type="checkbox" data-p="'+i+'-'+j+'"><span>'+esc(p)+'</span></label>';}).join("")+'</div>';
+  return '<section class="card q" id="v'+(i+1)+'"><div class="num">Vraag '+(i+1)+'</div><h3>'+esc(q.q)+'</h3>'+bron+body+'</section>';
+}).join("");
+
+function maxPts(){return Q.reduce(function(s,q){return s+(q.type==="multi"?1:q.nk.length+(q.type==="keuze"?1:0));},0);}
+function score(){
+  var p=0;
+  Q.forEach(function(q,i){
+    if(q.type==="multi"&&get("multi-"+i)==="ok")p++;
+    if(q.type==="keuze"&&get("keuze-"+i)===q.goed&&get("keuzechk-"+i))p++;
+    if(q.nk)q.nk.forEach(function(_,j){if(get("p-"+i+"-"+j)==="1")p++;});
+  });
+  var m=maxPts();document.getElementById("sTxt").textContent=p+" / "+m;document.getElementById("sBar").style.width=(p/m*100)+"%";
+}
+function restore(){
+  main.querySelectorAll("textarea[data-t]").forEach(function(t){t.value=get("t-"+t.dataset.t)||"";t.addEventListener("input",function(){put("t-"+t.dataset.t,t.value);});});
+  main.querySelectorAll("[data-p]").forEach(function(c){c.checked=get("p-"+c.dataset.p)==="1";c.addEventListener("change",function(){put("p-"+c.dataset.p,c.checked?"1":"0");score();});});
+  main.querySelectorAll("[data-m]").forEach(function(c){c.checked=get("m-"+c.dataset.m)==="1";c.addEventListener("change",function(){put("m-"+c.dataset.m,c.checked?"1":"0");});});
+  Q.forEach(function(q,i){if(q.type==="keuze"){var v=get("keuze-"+i);if(v)pickKeuze(i,v,!!get("keuzechk-"+i));}if(q.type==="multi"&&get("multi-"+i))checkMulti(i);if(q.nk&&get("show-"+i))document.getElementById("nk"+i).hidden=false;});
+}
+function pickKeuze(i,v,checked){
+  main.querySelectorAll('[data-k="'+i+'"]').forEach(function(b){b.setAttribute("aria-pressed",String(b.dataset.v===v));b.className=checked&&b.dataset.v===v?(v===Q[i].goed?"ok":"bad"):"";});
+}
+function checkMulti(i){
+  var q=Q[i],allOk=true;
+  main.querySelectorAll('#v'+(i+1)+' .opt').forEach(function(l){var j=+l.dataset.j,on=l.querySelector("input").checked,good=q.opts[j][1];l.className="opt "+(good?"ok":(on?"bad":""));if(on!==good)allOk=false;});
+  var fb=document.getElementById("fb"+i);fb.className="fb "+(allOk?"ok":"bad");fb.textContent=(allOk?"Helemaal goed! ":"Nog niet helemaal. De groene antwoorden zijn juist. ")+q.uitleg;
+  put("multi-"+i,allOk?"ok":"bad");score();
+}
+main.addEventListener("click",function(e){
+  var k=e.target.closest("[data-k]");if(k){var i=+k.dataset.k;put("keuze-"+i,k.dataset.v);put("keuzechk-"+i,"");pickKeuze(i,k.dataset.v,false);score();return;}
+  var c=e.target.closest("[data-check]");if(c){checkMulti(+c.dataset.check);return;}
+  var s=e.target.closest("[data-show]");if(s){var i2=+s.dataset.show;document.getElementById("nk"+i2).hidden=false;put("show-"+i2,"1");
+    if(Q[i2].type==="keuze"){var v=get("keuze-"+i2);if(v){put("keuzechk-"+i2,"1");pickKeuze(i2,v,true);}}
+    score();}
+});
+document.getElementById("reset").onclick=function(){try{Object.keys(localStorage).forEach(function(k){if(k.indexOf(LS)===0)localStorage.removeItem(k);});}catch(e){}location.reload();};
+restore();score();
+})();
+</script>
+</body>
+</html>

@@ -1,5 +1,28 @@
 # Changelog
 
+## 2026-10-17 · boekje 2: Sociale zekerheid en verzorgingsstaat (eerste opzet)
+
+Bron: "Geschiedenis jaar 3 sociale zekerheid en verzorgingstaat - alle stukken tekst.docx" (OneDrive) en de Flow-beelden in Downloads. PowerPoints maakt de docent zelf; die zijn niet gemaakt.
+
+### Gebouwd (alles in `boekje-2/`)
+- **`index.html`**: startpagina van boekje 2 met de 4 hoofdstukken, links naar Kijkwijzer, onderzoek en examentraining, en de 4 officiële leerdoelen. Link vanuit de hoofdnavigatie ("Boekje 2").
+- **`app.html`**: dezelfde leeromgeving als boekje 1 (Leer → Oefen → Test, Oefenlab, games), gevuld met de inhoud van boekje 2:
+  - 52 leerdoelen (H1 16, H2 13, H3 12, H4 11); de 4 officiële leerdoelen staan bovenaan hun hoofdstuk
+  - 41 begrippen, 49 meerkeuzevragen, 27 tijdlijngebeurtenissen, 19 oorzaak-gevolgparen, 4 sorteersets en "Kun jij dit beantwoorden?"-vragen
+  - beelden uit `img/flow/`, en de crisiskaart en de beeldquiz (passen bij H2)
+  - eigen voortgang (`gs3-szv-app-v1`), los van boekje 1
+  - Lesstof toont "De PowerPoint van dit hoofdstuk volgt" tot er dia's zijn. Racer, AI-nakijker en oefentoetsen van boekje 1 zijn weggelaten.
+- **`onderzoek.html`**: Kijkwijzer spotprenten als stappenwidget (4 stappen, voor 4 spotprenten uit het boekje), de 3 onderzoeksopdrachten als vergelijkingstabel (toen / nu / verschil of overeenkomst, met kopieerknop) en een bronnenkast met 5 korte historische bronnen. Alles wordt bewaard.
+- **`examentraining.html`**: de 11 examentrainingsvragen. Vraag 1 kijkt zichzelf na, de 3 keuzevragen controleren de keuze, de open vragen krijgen nakijkpunten uit de lesstof, met een totaalscore.
+- **`bouw.py` + `data-bron.py`**: de app wordt gebouwd uit de nieuwste `app.html` met de inhoud uit `data-bron.py`. Na een update van `app.html`: `python3 -I boekje-2/bouw.py`.
+
+### Beslissingen en kanttekeningen
+- De tekst van **hoofdstuk 1 in het docx bevat veel transcriptiefouten** (bijv. "plevedadigheid", "Deliberaliserenzat", "Biechtgetuigen"). De site gebruikt de juiste termen; het docx zelf is niet aangepast. De titel van H1 ("Armenzorg en de sociale kwestie") is zelf gekozen, omdat de titel in het docx onleesbaar is.
+- Lesstof van de uitgever staat niet letterlijk in de openbare repo: uitleg en vragen zijn in eigen woorden. Letterlijk staan alleen korte historische bronnen (Kinderwetje 1874, enquête 1887, Thorbecke, gezondheidsrapport 1902, Drees 1947) en de korte examentrainingsbronnen 2, 3 en 5.
+- Bronnen 1, 4 en 6 van de examentraining zijn afbeeldingen die niet in het docx staan; de leerling bekijkt ze in het boekje.
+- Meerkeuze: precies 4 opties, elk op een eigen regel, ongeveer even lang. Het juiste antwoord is in 0 van de 49 vragen duidelijk het langste (zelfde drempels als boekje 1).
+- Getest in Chrome op desktop en op 375 px (geen horizontaal scrollen, geen fouten in de console). Nog niet op een echte iPad bekeken.
+
 ## 2026-10-17 · 21:00-ronde: AI-nakijker, kaart en beeldquiz
 
 ### Actieplan (vooraf geschreven)

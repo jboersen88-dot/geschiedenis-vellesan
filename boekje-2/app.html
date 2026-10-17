@@ -1,0 +1,1126 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Leeromgeving · Sociale zekerheid en verzorgingsstaat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --plum:#1f5f4e;--plum-2:#174a3d;--berry:#c2484d;--berry-soft:#ffe6e4;
+  --bg:#f6f0e6;--card:#fffdf9;--ink:#201a14;--muted:#6f6556;--line:#e6dac4;
+  --ok:#1d8a5a;--ok-soft:#e1f4ea;--bad:#c0392b;--bad-soft:#fbe9e7;--warn-soft:#fff3d6;
+  --p1:#c2484d;--p2:#2f8f86;--p3:#1f5f4e;--p4:#b97a1f;
+  --coral:#ff8d90;--teal:#2f8f86;
+  --shadow:0 1px 2px rgba(31,95,78,.06),0 10px 28px rgba(31,95,78,.08);
+  --r:20px;
+  --ease-out:cubic-bezier(.23,1,.32,1);--ease-in-out:cubic-bezier(.77,0,.175,1);
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font-family:"Inter",system-ui,-apple-system,sans-serif;font-size:15.5px;line-height:1.5}
+button{font:inherit;cursor:pointer;color:inherit}
+a{color:inherit}
+svg.i{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.app{height:100vh;min-height:620px;display:flex;flex-direction:column;max-width:1180px;margin:0 auto;padding:14px 14px 0}
+
+/* ---------- topbar ---------- */
+.top{background:linear-gradient(120deg,var(--plum) 0%,var(--plum-2) 55%,var(--berry) 100%);color:#fff;border-radius:22px;padding:16px 18px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.top:after{content:"";position:absolute;right:-60px;top:-80px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.18),rgba(255,255,255,0) 70%);pointer-events:none}
+.badge{width:52px;height:52px;border-radius:16px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);display:grid;place-items:center;font-weight:800;font-size:20px;letter-spacing:-.02em}
+.ttl{flex:1 1 220px;min-width:0}
+.ttl small{display:block;opacity:.75;font-size:12.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+.ttl b{display:block;font-size:22px;font-weight:800;letter-spacing:-.02em;line-height:1.2}
+.ring{--v:0;width:46px;height:46px;border-radius:50%;background:conic-gradient(#ffc9c8 calc(var(--v)*1%),rgba(255,255,255,.18) 0);display:grid;place-items:center;flex:none}
+.ring span{width:36px;height:36px;border-radius:50%;background:var(--plum-2);display:grid;place-items:center;font-size:11.5px;font-weight:800}
+.prog{display:flex;align-items:center;gap:10px;font-size:13px;opacity:.95}
+nav.tabs{display:flex;gap:6px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);padding:5px;border-radius:14px;flex:1 1 100%;flex-wrap:wrap}
+nav.tabs button{flex:1 1 auto;display:flex;align-items:center;justify-content:center;gap:8px;border:0;background:transparent;color:rgba(255,255,255,.85);padding:10px 12px;border-radius:10px;font-weight:700;font-size:14.5px;white-space:nowrap;transition:background .15s}
+nav.tabs button:hover{background:rgba(255,255,255,.12);color:#fff}
+nav.tabs button[aria-selected=true]{background:#fff;color:var(--plum);box-shadow:0 2px 8px rgba(0,0,0,.15)}
+
+/* ---------- main ---------- */
+main{flex:1;overflow:auto;padding:16px 2px 20px;scroll-behavior:smooth}
+.panel[hidden]{display:none}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow)}
+.pad{padding:20px}
+h2{font-size:22px;letter-spacing:-.02em;margin:0 0 4px;color:var(--plum)}
+h3{font-size:16.5px;margin:0 0 6px;color:var(--plum);letter-spacing:-.01em}
+.muted{color:var(--muted)}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--berry)}
+.btn{display:inline-flex;align-items:center;gap:8px;border:0;border-radius:12px;padding:10px 16px;font-weight:700;background:var(--berry);color:#fff;text-decoration:none;font-size:14.5px}
+.btn:hover{filter:brightness(1.07)}
+.btn.ghost{background:#fff;color:var(--plum);border:1.5px solid var(--line)}
+.btn.ghost:hover{border-color:var(--berry)}
+.btn.soft{background:var(--berry-soft);color:var(--berry)}
+.btn:disabled{opacity:.45;cursor:default;filter:none}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:800;color:#fff;border-radius:8px;padding:3px 8px}
+
+/* ---------- start ---------- */
+.hero{display:grid;grid-template-columns:1.4fr 1fr;gap:16px;margin-bottom:16px}
+.hero .intro{padding:24px;position:relative;overflow:hidden}
+.hero .intro h2{font-size:28px;line-height:1.15;margin:6px 0 10px}
+.hero .intro p{margin:0 0 16px;color:var(--muted);max-width:520px}
+.blob{position:absolute;right:-30px;bottom:-40px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#ffc9c8,#ffe6e4 60%,transparent 61%);opacity:.9}
+.coins{position:absolute;right:30px;bottom:26px;display:flex;gap:6px;align-items:flex-end}
+.coins i{display:block;width:30px;border-radius:7px;background:linear-gradient(180deg,#f2b134,#d99412);box-shadow:inset 0 -3px 0 rgba(0,0,0,.12)}
+.route{padding:20px;display:flex;flex-direction:column;gap:10px}
+.step{display:flex;gap:12px;align-items:center;border:1.5px solid var(--line);border-radius:14px;padding:12px 14px;background:#fff;text-align:left;width:100%}
+.step:hover{border-color:var(--berry);transform:translateY(-1px)}
+.step .n{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;font-weight:800;color:#fff;flex:none}
+.step b{display:block}
+.step span{font-size:13px;color:var(--muted)}
+.step svg{margin-left:auto;color:var(--muted)}
+.pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.pcard{padding:0;overflow:hidden;display:flex;flex-direction:column;text-align:left;border:1px solid var(--line);background:#fff;border-radius:var(--r);box-shadow:var(--shadow);transition:transform .15s}
+.pcard:hover{transform:translateY(-3px)}
+.pcard .band{height:84px;position:relative;display:flex;align-items:flex-end;padding:12px 14px;color:#fff}
+.pcard .band b{font-size:34px;font-weight:800;letter-spacing:-.03em;line-height:1}
+.pcard .band:after{content:"";position:absolute;right:-20px;top:-20px;width:90px;height:90px;border-radius:50%;background:rgba(255,255,255,.16)}
+.pcard .body{padding:14px;display:flex;flex-direction:column;gap:8px;flex:1}
+.pcard .body h3{margin:0}
+.pcard .body p{margin:0;font-size:13.5px;color:var(--muted);flex:1}
+.bar{height:7px;background:#efe6db;border-radius:9px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;border-radius:9px;transition:width .3s}
+.pcard .meta{display:flex;justify-content:space-between;font-size:12.5px;color:var(--muted)}
+.tip{margin-top:14px;font-size:13px;color:var(--muted);display:flex;gap:8px;align-items:center}
+
+/* ---------- lesstof ---------- */
+.les{display:grid;grid-template-columns:220px 1fr;gap:16px;align-items:start}
+.rail{padding:10px;display:flex;flex-direction:column;gap:6px;position:sticky;top:0}
+.rail button{display:flex;gap:10px;align-items:center;border:0;background:transparent;border-radius:12px;padding:10px;text-align:left;font-weight:700;font-size:14px;color:var(--ink)}
+.rail button .dot{width:30px;height:30px;border-radius:9px;color:#fff;display:grid;place-items:center;font-size:12px;font-weight:800;flex:none}
+.rail button[aria-current=true]{background:var(--berry-soft)}
+.rail button:hover{background:#f3ebe1}
+.rail .mini{font-size:11.5px;color:var(--muted);font-weight:600;display:block}
+.viewer{position:relative;width:100%;aspect-ratio:16/9;background:#1d1220;border-radius:14px;overflow:hidden}
+.viewer iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.viewer .ph{position:absolute;inset:0;display:grid;place-items:center;color:#fff;opacity:.7;font-weight:700}
+.lhead{display:flex;justify-content:space-between;align-items:flex-end;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.two{display:grid;grid-template-columns:1.3fr 1fr;gap:14px;margin-top:14px}
+.qlist{display:flex;flex-direction:column;gap:8px}
+.q{display:flex;gap:10px;align-items:flex-start;border:1.5px solid var(--line);border-radius:12px;padding:10px 12px;background:#fff;text-align:left;font-size:14px}
+.q .tick{width:22px;height:22px;border-radius:7px;border:2px solid #d6c8b8;display:grid;place-items:center;flex:none;margin-top:1px;color:#fff}
+.q.on{border-color:var(--ok);background:var(--ok-soft)}
+.q.on .tick{background:var(--ok);border-color:var(--ok)}
+.q .tick svg{width:14px;height:14px;opacity:0}
+.q.on .tick svg{opacity:1}
+.goals label{display:flex;gap:9px;align-items:flex-start;padding:7px 0;border-top:1px dashed var(--line);font-size:13.5px;cursor:pointer}
+.goals input{accent-color:var(--berry);width:16px;height:16px;margin-top:3px;flex:none}
+.goals label.done span{color:var(--muted);text-decoration:line-through}
+
+/* ---------- oefenlab ---------- */
+.sub{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+.sub button,.filters button{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:7px 14px;font-weight:700;font-size:13.5px;color:var(--muted)}
+.sub button[aria-selected=true],.filters button.on{background:var(--plum);border-color:var(--plum);color:#fff}
+.lab[hidden]{display:none}
+.filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.cgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}
+.flip{perspective:900px;height:168px;cursor:pointer}
+.flip .in{position:relative;width:100%;height:100%;transition:transform .45s;transform-style:preserve-3d}
+.flip.open .in{transform:rotateY(180deg)}
+.flip .f,.flip .b{position:absolute;inset:0;backface-visibility:hidden;border-radius:16px;padding:14px 16px;display:flex;flex-direction:column;border:1px solid var(--line);background:#fff;box-shadow:var(--shadow)}
+.flip .f{justify-content:center}
+.flip .f strong{font-size:18px;color:var(--plum);margin-top:6px;letter-spacing:-.01em}
+.flip .f small{color:var(--muted);margin-top:auto;font-size:12px}
+.flip .b{transform:rotateY(180deg);background:#fffaf4;font-size:14px;overflow:auto}
+.flip .b em{display:block;margin-top:6px;color:var(--muted);font-style:normal;font-size:13px}
+.flip.known .f{border-color:var(--ok);box-shadow:inset 0 0 0 1.5px var(--ok)}
+.flip .chk{position:absolute;top:10px;right:12px;font-size:12px;font-weight:800;color:var(--ok)}
+.ex{max-width:780px}
+.qq{font-size:18px;font-weight:700;margin:2px 0 14px;letter-spacing:-.01em}
+.opts{display:grid;gap:.9rem}
+.opt{border:2px solid var(--line);background:#fff;border-radius:12px;padding:12px 14px;text-align:left;font-weight:700}
+.opt:hover:not(:disabled){border-color:var(--berry)}
+.opt.f{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:14.5px}
+.opt.right{border-color:var(--ok);background:var(--ok-soft)}
+.opt.wrong{border-color:var(--bad);background:var(--bad-soft)}
+.opt:disabled{cursor:default}
+.fb{margin-top:12px;border-radius:12px;padding:12px 14px;font-size:14.5px}
+.fb.ok{background:var(--ok-soft);color:#135c3c}.fb.no{background:var(--bad-soft);color:#7d2219}.fb.mid{background:var(--warn-soft);color:#6b4500}
+code,.calc{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:14px}
+.calc{display:block;margin-top:6px;white-space:pre-wrap}
+.ordl{display:block;margin-top:6px;white-space:pre-wrap;font-weight:600;line-height:1.6}
+.inp{display:flex;align-items:center;border:2px solid var(--line);border-radius:12px;background:#fff;padding:0 12px}
+.inp:focus-within{border-color:var(--berry)}
+.inp b{color:var(--muted)}
+.inp input{border:0;outline:0;font:inherit;font-size:18px;padding:9px 6px;width:140px;background:transparent}
+.score{display:flex;gap:14px;color:var(--muted);font-size:13.5px;margin-bottom:10px;flex-wrap:wrap}
+.score b{color:var(--ink)}
+.steps{background:#f6efe6;border-radius:14px;padding:12px 16px;font-size:14px;margin-bottom:14px}
+.steps ol{margin:6px 0 0;padding-left:20px}
+.statement{border-collapse:collapse;margin:4px 0 6px;font-size:15px;min-width:280px}
+.statement td{padding:7px 12px;border-bottom:1px solid var(--line)}
+.statement td:last-child{text-align:right;font-family:ui-monospace,Menlo,Consolas,monospace}
+.statement tr.ask td{font-weight:800;color:var(--berry)}
+.done-card{text-align:center;padding:26px}
+.done-card .big{font-size:44px;font-weight:800;color:var(--plum)}
+
+
+/* ---------- quiz extra ---------- */
+.qhome{text-align:center;padding:18px 10px}
+.qbig{font-size:46px;line-height:1}
+.qhome h3{font-size:22px;margin:8px 0 4px}
+.qhome p{max-width:460px;margin:0 auto 14px}
+.qtop{display:flex;align-items:center;gap:12px}
+.qprog{flex:1;height:8px;background:#efe6db;border-radius:9px;overflow:hidden}
+.qprog i{display:block;height:100%;background:linear-gradient(90deg,var(--berry),#ff8d90);border-radius:9px}
+.opt{display:flex;gap:12px;align-items:center;min-height:52px;touch-action:manipulation}
+.ol{width:30px;height:30px;border-radius:9px;background:#f4ecf0;color:var(--plum);display:grid;place-items:center;font-weight:800;font-size:13px;flex:none}
+.opt.right .ol{background:var(--ok);color:#fff}.opt.wrong .ol{background:var(--bad);color:#fff}
+.review{margin-top:16px;text-align:left}
+.review h3{margin-bottom:8px}
+.rv{border:1.5px solid var(--line);border-radius:12px;padding:10px 12px;margin-bottom:8px;font-size:14px;background:#fff}
+.confetti{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:50}
+.confetti i{position:absolute;top:-20px;width:10px;height:16px;border-radius:3px;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(1300px) rotate(720deg);opacity:.6}}
+/* ---------- games ---------- */
+.gpick{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.gtile{border:0;border-radius:22px;padding:26px;text-align:left;color:#fff;display:flex;flex-direction:column;gap:8px;min-height:230px;box-shadow:var(--shadow);touch-action:manipulation;transition:transform .15s}
+.gtile:hover{transform:translateY(-3px)}
+.gtile[data-game=swipe]{background:linear-gradient(135deg,#3b1534,#c2484d)}
+.gtile[data-game=memory]{background:linear-gradient(135deg,#1f4f86,#1f5f4e)}
+.gtile .gico{font-size:44px}
+.gtile b{font-size:24px;letter-spacing:-.02em}
+.gtile span{opacity:.9}
+.gtile em{margin-top:auto;font-style:normal;font-weight:800;background:rgba(255,255,255,.16);align-self:flex-start;border-radius:999px;padding:5px 12px;font-size:13px}
+.arena{position:relative;border-radius:22px;background:radial-gradient(circle at 50% 20%,#2f7360,#123a30 70%);color:#fff;padding:16px;min-height:600px;display:flex;flex-direction:column;overflow:hidden;user-select:none;-webkit-user-select:none}
+.arena.lvlup:before{content:"";position:absolute;inset:0;background:rgba(255,255,255,.12);animation:flash .5s ease-out forwards;pointer-events:none}
+@keyframes flash{to{opacity:0}}
+.hud{display:flex;gap:14px;align-items:center;justify-content:space-between;font-size:15px;flex-wrap:wrap}
+.hud b{font-size:22px;font-variant-numeric:tabular-nums}
+.lvl{background:rgba(255,255,255,.14);padding:4px 12px;border-radius:999px;font-weight:800;font-size:13px}
+.mult{background:rgba(255,255,255,.14);padding:4px 12px;border-radius:999px;font-weight:800}
+.gstop{border:0;background:rgba(255,255,255,.14);color:#fff;width:38px;height:38px;border-radius:12px;font-size:16px;touch-action:manipulation}
+.mult.hot{background:#f2b134;color:#3b1534;animation:pulse .6s ease-in-out infinite alternate}
+@keyframes pulse{to{transform:scale(1.12)}}
+.tbar{height:8px;background:rgba(255,255,255,.15);border-radius:9px;margin:12px 0 10px;overflow:hidden}
+.tbar i{display:block;height:100%;background:linear-gradient(90deg,#f2b134,#ff8d90);transition:width 1s linear}
+.zones{flex:1;display:grid;grid-template-columns:1fr 1.4fr 1fr;gap:14px;align-items:stretch}
+.zone{border:2px dashed rgba(255,255,255,.35);background:rgba(255,255,255,.06);color:#fff;border-radius:20px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;font-size:15px;padding:10px;touch-action:manipulation;transition:background .15s,transform .15s}
+.zone b{font-size:20px;text-align:center;line-height:1.2}
+.zone span{font-size:28px;opacity:.7}
+.zone.near{background:rgba(255,255,255,.18);transform:scale(1.03)}
+.zone.good{background:rgba(29,138,90,.55);border-color:#7be0b0}
+.zone.bad{background:rgba(192,57,43,.55);border-color:#ff9a8f;animation:shake .3s}
+@keyframes shake{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.deck{display:grid;place-items:center;position:relative}
+.scard{width:100%;max-width:320px;aspect-ratio:4/3.2;background:#fff;color:var(--ink);border-radius:24px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;box-shadow:0 18px 40px rgba(0,0,0,.35);cursor:grab;touch-action:none;padding:16px;text-align:center}
+.scard.enter{animation:pop .22s ease-out}
+@keyframes pop{from{transform:scale(.85);opacity:0}}
+.scard .emo{font-size:64px;line-height:1}
+.scard b{font-size:22px;letter-spacing:-.01em}
+.scard.ok{box-shadow:0 0 0 6px #7be0b0}.scard.no{box-shadow:0 0 0 6px #ff9a8f}
+.ghint{text-align:center;opacity:.7;font-size:13px;margin-top:12px}
+.toast{position:absolute;left:50%;bottom:58px;transform:translateX(-50%);background:#fff;color:var(--bad);font-weight:800;padding:8px 16px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.3);animation:pop .2s}
+.gend{text-align:center;padding:20px}
+.gend .big{font-size:52px;font-weight:800;color:var(--plum)}
+.mhud{display:flex;gap:16px;align-items:center;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap}
+.mgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.mtile{position:relative;height:138px;border:0;border-radius:16px;padding:0;background:transparent;perspective:800px;touch-action:manipulation}
+.mtile .back,.mtile .front{position:absolute;inset:0;border-radius:16px;display:grid;place-items:center;padding:10px;backface-visibility:hidden;transition:transform .35s}
+.mtile .back{background:linear-gradient(135deg,#a33a3f,#1a4d40);color:#fff;font-size:34px;font-weight:800}
+.mtile .front{background:#fff;border:2px solid var(--line);transform:rotateY(180deg);font-size:13px;line-height:1.35;color:var(--ink)}
+.mtile.term .front b{font-size:17px;color:var(--plum)}
+.mtile.open .back,.mtile.done .back{transform:rotateY(180deg)}
+.mtile.open .front,.mtile.done .front{transform:rotateY(360deg)}
+.mtile.done .front{border-color:var(--ok);background:var(--ok-soft)}
+.mtile.miss .front{border-color:var(--bad);background:var(--bad-soft)}
+@media (max-width:700px){
+  .gpick{grid-template-columns:1fr}
+  .zones{grid-template-columns:1fr 1fr;grid-template-areas:"deck deck" "l r"}
+  .deck{grid-area:deck;min-height:260px}.zone.left{grid-area:l}.zone.right{grid-area:r}
+  .zone{min-height:96px}
+  .mgrid{grid-template-columns:repeat(3,1fr)}
+}
+
+/* ---------- toets ---------- */
+.tgrid{display:grid;grid-template-columns:1.25fr 1fr;gap:16px;align-items:start}
+.timer{display:flex;align-items:center;gap:16px}
+.clock{--v:100;width:110px;height:110px;border-radius:50%;background:conic-gradient(var(--berry) calc(var(--v)*1%),#efe6db 0);display:grid;place-items:center;flex:none}
+.clock span{width:90px;height:90px;border-radius:50%;background:#fff;display:grid;place-items:center;font-weight:800;font-size:22px;color:var(--plum);font-variant-numeric:tabular-nums}
+.doc{position:relative;width:100%;height:560px;border-radius:14px;overflow:hidden;background:#eee;border:1px solid var(--line)}
+.doc iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.locked{height:220px;border-radius:14px;border:2px dashed #e1cfd8;display:grid;place-items:center;text-align:center;padding:20px;color:var(--muted);background:repeating-linear-gradient(45deg,#fff,#fff 10px,#fcf6f9 10px,#fcf6f9 20px)}
+.locked svg{width:28px;height:28px;color:var(--berry)}
+.grade{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.grade .out{font-size:34px;font-weight:800;color:var(--plum);min-width:70px}
+details{border:1px solid var(--line);border-radius:14px;padding:12px 16px;background:#fff}
+summary{cursor:pointer;font-weight:700;color:var(--plum)}
+.links{display:flex;flex-direction:column;gap:8px;margin-top:10px}
+.links a{display:flex;align-items:center;gap:10px;padding:10px 12px;border:1.5px solid var(--line);border-radius:12px;text-decoration:none;font-weight:600}
+.links a:hover{border-color:var(--berry)}
+
+/* ---------- films ---------- */
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.film .viewer{border-radius:14px 14px 0 0}
+.film .txt{padding:16px 18px}
+.poster{position:absolute;inset:0;border:0;padding:0;background:linear-gradient(135deg,#3b1534,#c2484d);display:grid;place-items:center;cursor:pointer}
+.poster img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.poster .play{position:relative;width:76px;height:76px;border-radius:50%;background:rgba(255,255,255,.92);display:grid;place-items:center;box-shadow:0 8px 30px rgba(0,0,0,.35);transition:transform .15s}
+.poster:hover .play{transform:scale(1.08)}
+.poster .play svg{width:32px;height:32px;fill:var(--berry);margin-left:4px}
+.alt{display:inline-block;margin-top:10px;font-size:13px;color:var(--muted)}
+
+@media (max-width:900px){
+  .hero,.tgrid,.two,.fgrid{grid-template-columns:1fr}
+  .pgrid{grid-template-columns:1fr 1fr}
+  .les{grid-template-columns:1fr}
+  .rail{flex-direction:row;overflow:auto;position:static}
+  .rail button{flex:none}
+}
+@media (max-width:560px){
+  .pgrid{grid-template-columns:1fr}
+  nav.tabs button span{display:none}
+  .ttl b{font-size:19px}
+  .blob,.coins{display:none}
+  .hero .intro h2{font-size:24px}
+}
+@media (max-width:900px){.hero .intro p{max-width:none}.coins{opacity:.35}}
+
+/* ---------- SE3 extra ---------- */
+:root{--p1:#c2484d;--p2:#2f6a8a;--p3:#7a4b8c;--p4:#2e7d5b;--p5:#8a6a2f;--p6:#3d5a4a;--p7:#0f7c8c;--p8:#4a4fb0}
+.chh{display:flex;align-items:center;gap:10px;margin:20px 2px 10px;font-size:17px;color:var(--plum)}
+.chh:first-of-type{margin-top:4px}
+.chh .cn{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;color:#fff;font-size:13px;font-weight:800;flex:none}
+.chh small{font-weight:600;color:var(--muted);font-size:13px;margin-left:auto}
+.checkcard{margin-top:18px}
+.checkhead{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap;margin-bottom:10px}
+.checkhead .bar{width:220px;max-width:100%}
+.clist{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.citem{display:flex;gap:10px;align-items:center;border:1.5px solid var(--line);border-radius:12px;padding:9px 10px 9px 12px;background:#fff;font-size:14px}
+.citem.on{border-color:var(--ok);background:var(--ok-soft)}
+.citem .tick{width:24px;height:24px;border-radius:7px;border:2px solid #d6c8b8;display:grid;place-items:center;flex:none;color:#fff;background:#fff;padding:0}
+.citem.on .tick{background:var(--ok);border-color:var(--ok)}
+.citem .tick svg{width:14px;height:14px;opacity:0}
+.citem.on .tick svg{opacity:1}
+.citem .ctxt{flex:1;min-width:0}
+.citem .go{border:0;background:var(--berry-soft);color:var(--berry);font-weight:800;font-size:12.5px;border-radius:999px;padding:5px 10px;white-space:nowrap;flex:none}
+.citem .go:hover{filter:brightness(.97)}
+.rail .rh{font-size:11.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:8px 10px 2px}
+.xtra{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.xtra .xi{display:flex;align-items:center;gap:8px;border:1.5px solid var(--line);border-radius:12px;padding:8px 10px;background:#fff;font-size:13.5px;font-weight:700}
+.xtra .xi a{font-size:12.5px;font-weight:800;text-decoration:none;color:var(--berry);background:var(--berry-soft);border-radius:999px;padding:4px 10px}
+.vpick{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px}
+.vbtn{border:2px solid var(--line);border-radius:16px;padding:14px;background:#fff;text-align:left;display:flex;flex-direction:column;gap:4px;touch-action:manipulation;transition:border-color .15s,transform .15s}
+.vbtn:hover{transform:translateY(-2px);border-color:#dfc5b0}
+.vbtn[aria-pressed=true]{border-color:var(--berry);background:var(--berry-soft)}
+.vbtn b{font-size:18px;color:var(--plum);letter-spacing:-.01em}
+.vbtn span{font-size:13px;font-weight:700}
+.vbtn small{font-size:12.5px;color:var(--muted)}
+.lvls{display:flex;gap:6px;flex-wrap:wrap;margin-top:4px}
+.lvls i{font-style:normal;font-size:11.5px;font-weight:800;border-radius:7px;padding:2px 7px;background:#efe6db;color:var(--plum)}
+.lvls i.v{background:var(--plum);color:#fff}
+.mats{display:flex;flex-direction:column;gap:8px;margin-top:10px}
+.mat{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:10px 12px;border:1.5px solid var(--line);border-radius:12px;font-weight:700;font-size:14px}
+.mat .row{margin-left:auto;gap:6px}
+.mat a{font-size:12.5px;font-weight:800;text-decoration:none;color:var(--berry);background:var(--berry-soft);border-radius:999px;padding:5px 11px}
+.statement.cpi td{text-align:right;font-family:ui-monospace,Menlo,Consolas,monospace}
+.statement.cpi td:first-child{text-align:left;font-family:inherit}
+.statement.cpi tr:first-child td{font-family:inherit;color:var(--muted);font-size:13px}
+@media (max-width:900px){
+  .clist{grid-template-columns:1fr}
+  .vpick{grid-template-columns:1fr 1fr}
+  .rail .rh{display:none}
+}
+
+.vpick{grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
+.xtra .xi{flex-wrap:wrap}
+#fFilters{margin-bottom:14px}
+.banner{position:relative;height:200px;border-radius:var(--r);background:#1f5f4e center/cover no-repeat;margin-bottom:16px;box-shadow:var(--shadow);overflow:hidden}
+.banner:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(25,18,14,.78),rgba(25,18,14,.15) 70%)}
+.banner .cap{position:absolute;left:22px;bottom:18px;right:22px;color:#fff;z-index:1}
+.banner .cap b{display:block;font-size:24px;letter-spacing:-.02em;line-height:1.15}
+.banner .cap span{opacity:.85;font-size:13.5px}
+.pcard .band{height:110px;background-size:cover!important;background-position:center!important}
+.pcard .band b{text-shadow:0 2px 8px rgba(0,0,0,.45)}
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-top:12px;width:100%}
+.gal a{display:block;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:#fff;text-decoration:none;color:var(--ink)}
+.gal img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;background:#e9dfd2}
+.gal span{display:block;font-size:12px;font-weight:700;padding:6px 8px}
+.tl{display:grid;gap:8px}
+.tlitem{display:flex;gap:10px;align-items:center;border:2px solid var(--line);border-radius:12px;padding:12px 14px;background:#fff;text-align:left;font-weight:700;touch-action:manipulation}
+.tlitem:hover:not(:disabled){border-color:var(--berry)}
+.tlitem .nr{width:28px;height:28px;border-radius:50%;border:2px dashed #cdbfae;display:grid;place-items:center;font-weight:800;flex:none;color:#fff}
+.tlitem.on .nr{background:var(--berry);border:0}
+.tlitem.right{border-color:var(--ok);background:var(--ok-soft)}.tlitem.wrong{border-color:var(--bad);background:var(--bad-soft)}
+.tlitem .yr{margin-left:auto;font-size:13px;color:var(--muted);font-weight:800}
+.cause{border-left:5px solid var(--berry);background:#fffaf4;border-radius:12px;padding:12px 14px;margin:8px 0 6px;font-weight:700;font-size:16px}
+.cause small{display:block;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--berry);font-weight:800;margin-bottom:2px}
+.arrow{font-size:22px;color:var(--berry);text-align:center;margin:2px 0 6px}
+@media (max-width:600px){.banner{height:150px}.banner .cap b{font-size:19px}}
+
+/* ---------- leg uit ---------- */
+.lu textarea{width:100%;min-height:110px;border:2px solid var(--line);border-radius:12px;padding:12px 14px;font:inherit;font-size:15.5px;resize:vertical;background:#fff;color:var(--ink)}
+.lu textarea:focus{outline:0;border-color:var(--berry)}
+.lu .lubox{border-radius:14px;padding:14px 16px;margin-top:12px;font-size:14.5px}
+.lu .lubox p{margin:6px 0 0}
+.lu .lubox.goed{background:var(--ok-soft)}.lu .lubox.bijna{background:var(--warn-soft)}.lu .lubox.nognietgoed{background:var(--bad-soft)}
+.lu .badge2{display:inline-flex;align-items:center;gap:6px;font-weight:800;border-radius:999px;padding:4px 12px;font-size:13.5px;color:#fff}
+.lu .badge2.goed{background:var(--ok)}.lu .badge2.bijna{background:#c98a0b}.lu .badge2.nognietgoed{background:var(--bad)}
+.lu .model{margin-top:10px;border-left:4px solid var(--line);padding:6px 12px;color:var(--muted);font-size:14px}
+.lu .note{font-size:12.5px;color:var(--muted);margin-top:8px}
+
+h2,h3,.ttl b,.banner .cap b,.intro h2{font-family:"Fraunces",Georgia,serif;letter-spacing:-.01em}
+h2{font-weight:700}h3{font-weight:700}.ttl b{font-weight:700}
+.app{height:100dvh}
+.top{background:linear-gradient(120deg,#123a30 0%,var(--plum) 50%,#2f7360 100%)}
+nav.tabs button{transition:background .2s var(--ease-out),color .2s var(--ease-out),transform .16s var(--ease-out)}
+nav.tabs button:active{transform:scale(.97)}
+.btn{transition:transform .16s var(--ease-out),box-shadow .2s var(--ease-out),background .2s var(--ease-out)}
+.btn:active{transform:scale(.97)}
+@media (hover:hover) and (pointer:fine){.card{transition:transform .25s var(--ease-out),box-shadow .25s var(--ease-out)}}
+.home-link{color:rgba(255,255,255,.85);text-decoration:none;font-size:13px;font-weight:700;display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:10px;border:1px solid rgba(255,255,255,.22)}
+.home-link:hover{background:rgba(255,255,255,.12);color:#fff}
+@media (prefers-reduced-motion:reduce){*,*:before,*:after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
+
+/* ---------- HTML-presentatie (dia-viewer) ---------- */
+.sdeck{position:relative;border-radius:16px;overflow:hidden;background:#0f2c25;outline:none;user-select:none;-webkit-user-select:none}
+.sdeck:focus-visible{box-shadow:0 0 0 3px var(--coral)}
+.deck-stage{position:relative;aspect-ratio:16/9;background:#0f2c25;touch-action:pan-y}
+.deck-stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;transform:scale(1.015);transition:opacity .28s var(--ease-out),transform .45s var(--ease-out)}
+.deck-stage img.on{opacity:1;transform:none}
+.deck-stage img.prev-out{opacity:0;transform:translateX(-1.5%) scale(.99)}
+.deck-nav{position:absolute;top:0;bottom:0;width:22%;border:0;background:transparent;display:flex;align-items:center;color:#fff;opacity:0;transition:opacity .2s var(--ease-out)}
+.deck-nav.l{left:0;justify-content:flex-start;padding-left:12px}.deck-nav.r{right:0;justify-content:flex-end;padding-right:12px}
+.deck-nav span{width:44px;height:44px;border-radius:50%;background:rgba(15,44,37,.62);display:grid;place-items:center;font-size:20px;backdrop-filter:blur(4px);transition:transform .16s var(--ease-out)}
+.deck-nav:active span{transform:scale(.92)}
+@media (hover:hover) and (pointer:fine){.sdeck:hover .deck-nav{opacity:1}}
+@media (hover:none){.deck-nav{opacity:.9}}
+.deck-bar{display:flex;align-items:center;gap:10px;padding:10px 12px;background:#123a30;color:#e9f3ef;font-size:13px;font-weight:700}
+.deck-bar .cnt{font-variant-numeric:tabular-nums;min-width:62px}
+.deck-prog{flex:1;height:4px;border-radius:4px;background:rgba(255,255,255,.16);overflow:hidden}
+.deck-prog i{display:block;height:100%;background:var(--coral);width:0;transition:width .3s var(--ease-out)}
+.deck-bar button,.deck-bar a{border:1px solid rgba(255,255,255,.22);background:transparent;color:#fff;border-radius:9px;padding:6px 10px;font-weight:700;font-size:12.5px;text-decoration:none;transition:background .15s var(--ease-out),transform .16s var(--ease-out)}
+.deck-bar button:hover,.deck-bar a:hover{background:rgba(255,255,255,.12)}
+.deck-bar button:active{transform:scale(.96)}
+.deck-thumbs{display:flex;gap:6px;overflow-x:auto;padding:8px 10px 10px;background:#123a30;scrollbar-width:thin}
+.deck-thumbs button{flex:none;width:96px;aspect-ratio:16/9;border-radius:6px;border:2px solid transparent;padding:0;overflow:hidden;opacity:.6;background:#0f2c25;transition:opacity .2s var(--ease-out),border-color .2s var(--ease-out)}
+.deck-thumbs button img{width:100%;height:100%;object-fit:cover;display:block}
+.deck-thumbs button[aria-current=true]{opacity:1;border-color:var(--coral)}
+.deck-thumbs button:hover{opacity:1}
+.sdeck:fullscreen{display:flex;flex-direction:column;justify-content:center;background:#0b231d}
+.sdeck:fullscreen .deck-stage{aspect-ratio:auto;flex:1}
+.sdeck:fullscreen .deck-thumbs{display:none}
+@media (prefers-reduced-motion:reduce){.deck-stage img{transition:opacity .01ms}}
+#lViewer{aspect-ratio:auto;background:transparent;overflow:hidden;min-width:0;max-width:100%}
+.les>*{min-width:0}.sdeck{min-width:0;max-width:100%}
+#toets .tgrid[hidden]{display:none}
+#lOpen[hidden]{display:none}#lViewer .ph{position:static;display:block;padding:34px 18px;text-align:center;border-radius:16px;background:color-mix(in srgb,var(--plum) 8%,var(--card));color:var(--muted);opacity:1;border:1.5px dashed var(--line)}
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="top">
+    <div class="badge">GS</div>
+    <div class="ttl"><small>Geschiedenis · jaar 3 · mavo · boekje 2</small><b>Sociale zekerheid en verzorgingsstaat</b></div>
+    <a class="home-link" href="index.html">← Overzicht</a><div class="prog"><div class="ring" id="ring"><span id="ringTxt">0%</span></div><div>jouw voortgang<br><b id="progTxt" style="font-weight:800">0 leerdoelen</b></div></div>
+    <nav class="tabs" role="tablist">
+      <button role="tab" data-tab="start" aria-selected="true"><svg class="i" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg><span>Start</span></button>
+      <button role="tab" data-tab="les" aria-selected="false"><svg class="i" viewBox="0 0 24 24"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2z"/><path d="M22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg><span>Lesstof</span></button>
+      <button role="tab" data-tab="lab" aria-selected="false"><svg class="i" viewBox="0 0 24 24"><path d="M9 3h6"/><path d="M10 3v6L4.5 19a1.5 1.5 0 0 0 1.3 2h12.4a1.5 1.5 0 0 0 1.3-2L14 9V3"/><path d="M7 15h10"/></svg><span>Oefenlab</span></button>
+      <button role="tab" data-tab="toets" aria-selected="false"><svg class="i" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg><span>Oefentoetsen</span></button>
+      <button role="tab" data-tab="films" aria-selected="false"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m10 8 6 4-6 4z"/></svg><span>Filmpjes</span></button>
+    </nav>
+  </div>
+
+  <main id="main">
+    <!-- START -->
+    <section class="panel" id="start">
+      <div class="banner" style="background-image:url(../img/flow/arbeidsbeurs.jpg)"><div class="cap"><b>Sociale zekerheid en verzorgingsstaat</b><span>Armenzorg · crisis · verzorgingsstaat · toekomst</span></div></div>
+      <div class="hero">
+        <div class="card intro">
+          <div class="eyebrow">Boekje 2</div>
+          <h2>Van liefdadigheid tot verzorgingsstaat.<br>Begin hier.</h2>
+          <p>Alles voor het boekje Sociale zekerheid en verzorgingsstaat op één plek: leerdoelen om af te vinken, begrippen, een tijdlijn, oorzaak en gevolg, een vraagbank, games, de Kijkwijzer spotprenten, onderzoeksopdrachten en de examentraining. De PowerPoints volgen.</p>
+          <div class="row"><button class="btn" data-go="les" data-par="H1"><svg class="i" viewBox="0 0 24 24"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2z"/><path d="M22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg>Begin met H1</button><button class="btn ghost" data-go="toets">Naar de oefentoetsen</button></div>
+          <div class="blob"></div>
+                  </div>
+        <div class="card route">
+          <div class="eyebrow">Jouw route door het boekje</div>
+          <button class="step" data-go="les"><span class="n" style="background:var(--p5)">1</span><div><b>Leer</b><span>De PowerPoint, beelden en leerdoelen per hoofdstuk</span></div><svg class="i" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button>
+          <button class="step" data-go="lab"><span class="n" style="background:var(--p6)">2</span><div><b>Oefen</b><span>Begrippen, tijdlijn, oorzaak en gevolg, quiz en games</span></div><svg class="i" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button>
+          <button class="step" data-go="toets"><span class="n" style="background:var(--berry)">3</span><div><b>Test jezelf</b><span>Oefentoetsen en oefenvragen met nakijkblad</span></div><svg class="i" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button>
+        </div>
+      </div>
+      <h3 class="chh"><span class="cn" style="background:var(--berry)">GS</span>Sociale zekerheid en verzorgingsstaat<small id="ch1txt"></small></h3>
+      <div class="pgrid" id="pgrid1"></div>
+      <div class="card pad checkcard">
+        <div class="checkhead"><div><div class="eyebrow">Checklist</div><h2>Dit moet je kunnen voor de toets</h2><div class="muted" style="font-size:13.5px">Vink af wat je beheerst. Twijfel je? Klik op <b>Oefen</b>.</div></div>
+          <div><div class="bar"><i id="cBar" style="background:var(--ok)"></i></div><div class="muted" style="font-size:12.5px;margin-top:4px" id="cTxt"></div></div></div>
+        <div class="clist" id="clist"></div>
+      </div>
+      <div class="tip"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01"/><path d="M11 12h1v4h1"/></svg>Je voortgang wordt bewaard op dit apparaat, in deze browser.</div>
+    </section>
+
+    <!-- LESSTOF -->
+    <section class="panel" id="les" hidden>
+      <div class="les">
+        <div class="card rail" id="rail"></div>
+        <div>
+          <div class="card pad">
+            <div class="lhead">
+              <div><div class="eyebrow" id="lEyebrow">Paragraaf 1.1</div><h2 id="lTitle"></h2></div>
+              <div class="row"><a class="btn ghost" id="lOpen" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>Download PowerPoint</a><button class="btn soft" id="lPractice">Oefen begrippen</button></div>
+            </div>
+            <div class="viewer" id="lViewer"><div class="ph">PowerPoint laden…</div></div>
+            <div class="xtra" id="lExtra"></div>
+          </div>
+          <div class="two">
+            <div class="card pad"><h3>Kun jij dit beantwoorden?</h3><p class="muted" style="margin:0 0 10px;font-size:13.5px">Klik op een vraag als je het antwoord weet.</p><div class="qlist" id="lQs"></div></div>
+            <div class="card pad goals"><h3>Leerdoelen</h3><div class="bar" style="margin:8px 0 6px"><i id="lBar"></i></div><div class="muted" style="font-size:12.5px;margin-bottom:4px" id="lBarTxt"></div><div id="lGoals"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OEFENLAB -->
+    <section class="panel" id="lab" hidden>
+      <div class="card pad">
+        <div class="row" style="justify-content:space-between;margin-bottom:12px"><div><div class="eyebrow">Oefenlab</div><h2>Oefen zo vaak als je wilt</h2></div></div>
+        <div class="sub" role="tablist" id="labNav">
+          <button data-lab="begrippen" aria-selected="true">Begrippen</button>
+<button data-lab="leguit" aria-selected="false">🤖 Leg uit</button>
+          <button data-lab="tijd" aria-selected="false">🕰️ Tijdlijn</button>
+          <button data-lab="oorzaak" aria-selected="false">🔗 Oorzaak &amp; gevolg</button>
+          <button data-lab="quiz" aria-selected="false">⚡ Quiz</button>
+          <button data-lab="games" aria-selected="false">🎮 Games</button>
+        </div>
+        <div class="lab" id="lab-begrippen">
+          <div class="filters" id="cardFilters"></div>
+          <div class="cgrid" id="cardGrid"></div>
+          <div class="row" style="justify-content:space-between;margin-top:12px"><span class="muted" id="cardCount"></span><button class="btn ghost" id="cardReset">Alle kaarten omdraaien</button></div>
+        </div>
+        <div class="lab ex lu" id="lab-leguit" hidden>
+<div class="steps"><b>Leg het begrip uit in je eigen woorden</b><ol><li>Typ wat het begrip betekent en geef een voorbeeld.</li><li>Tik op <b>Laat nakijken</b>: je krijgt te horen wat goed is, wat er nog mist en wat niet klopt.</li><li>Gebruik geen namen of andere persoonlijke informatie in je antwoord.</li></ol></div>
+<div class="filters" id="luFilters"></div><div class="score" id="luScore"></div><div id="luCard"></div>
+</div>
+<div class="lab ex" id="lab-tijd" hidden>
+          <div class="steps"><b>Zet in de goede volgorde</b><ol><li>Tik de gebeurtenissen aan van <b>vroeg</b> naar <b>laat</b>.</li><li>Verkeerd getikt? Tik nog een keer om het nummer weg te halen.</li></ol></div>
+          <div class="filters" id="tlFilters"></div><div class="score" id="tlScore"></div><div id="tlCard"></div>
+        </div>
+        <div class="lab ex" id="lab-oorzaak" hidden>
+          <div class="filters" id="cgFilters"></div><div class="score" id="cgScore"></div><div id="cgCard"></div>
+        </div>
+        <div class="lab ex" id="lab-quiz" hidden><div class="score" id="qScore"></div><div id="qCard"></div></div>
+        <div class="lab" id="lab-games" hidden><div id="gWrap"></div></div>
+      </div>
+    </section>
+
+    <!-- TOETS -->
+    <section class="panel" id="toets" hidden>
+      <div class="card pad" style="margin-bottom:16px">
+        <div class="eyebrow">Kies je oefening</div><h2>Oefentoetsen en oefenvragen</h2>
+        <p class="muted" style="margin:2px 0 0;font-size:14px;max-width:760px">Maak eerst de opdracht zonder boek en zonder hulp. Kijk daarna je werk na met het nakijkblad en reken je cijfer uit.</p>
+        <div class="vpick" id="vPick"></div>
+      </div>
+      <div class="card pad" style="margin-bottom:16px;background:linear-gradient(135deg,var(--card),#e7f3ef)">
+        <div class="eyebrow">Nieuw · direct online</div><h2>Examentraining: 11 vragen met bronnen</h2>
+        <p class="muted" style="margin:2px 0 12px;font-size:14px;max-width:700px">Oefen met examenvragen over alle vier de hoofdstukken. Je antwoorden worden bewaard en je kunt ze vergelijken met de nakijkpunten.</p>
+        <div class="row"><a class="btn" href="examentraining.html">Start de examentraining</a><a class="btn ghost" href="onderzoek.html">Kijkwijzer en onderzoek</a></div>
+      </div>
+      <div class="tgrid">
+        <div class="card pad">
+          <div class="lhead"><div><div class="eyebrow">Stap 1</div><h2 id="tTitle">Oefentoets</h2><div class="muted" style="font-size:13.5px" id="tMeta"></div></div>
+          <a class="btn ghost" target="_blank" rel="noopener" id="tOpen"><svg class="i" viewBox="0 0 24 24"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>Openen / printen</a></div>
+          <div class="doc" id="tDoc"></div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:16px">
+          <div class="card pad" id="timerCard">
+            <div class="eyebrow">Stap 2</div><h3>Zet de klok aan</h3>
+            <div class="timer"><div class="clock" id="clock"><span id="clockTxt">50:00</span></div>
+              <div><p class="muted" style="margin:0 0 10px;font-size:13.5px" id="clockMsg"></p>
+              <div class="row"><button class="btn" id="tStart">Start</button><button class="btn ghost" id="tReset">Opnieuw</button></div></div></div>
+          </div>
+          <div class="card pad">
+            <div class="eyebrow">Stap 3</div><h3>Kijk je werk na</h3>
+            <div id="nakijk"></div>
+          </div>
+          <div class="card pad">
+            <div class="eyebrow">Stap 4</div><h3>Wat is je cijfer?</h3>
+            <div class="grade"><div class="inp"><input id="pts" inputmode="decimal" placeholder="behaald" style="width:90px"><b>van</b><input id="ptsMax" inputmode="decimal" placeholder="max" style="width:80px"></div><div class="out" id="grade">-</div></div>
+            <div class="muted" style="font-size:13px;margin-top:6px" id="gradeMsg"></div>
+          </div>
+          <details open><summary>Meer oefenmateriaal</summary>
+            <div class="mats" id="mats"></div></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- FILMPJES -->
+    <section class="panel" id="films" hidden>
+      <div class="filters" id="fFilters"></div>
+      <div class="fgrid" id="fgrid"></div>
+    </section>
+  </main>
+</div>
+
+<script>
+(function(){
+"use strict";
+var THUMB=function(id,w){if(/[\/.]/.test(id))return id;return "https://drive.google.com/thumbnail?id="+id+"&sz=w"+(w||800);};
+var DRIVE=function(id){return "https://drive.google.com/file/d/"+id+"/preview";};
+var VIEW=function(id){if(/[\/.]/.test(id))return id;return "https://drive.google.com/file/d/"+id+"/view";};
+var CHECK='<svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>';
+var EXT='<svg class="i" viewBox="0 0 24 24" style="width:14px;height:14px"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>';
+var LNK=function(x){if(/\.html/.test(x))return x;return x.indexOf('http')===0?x:VIEW(x);};
+var MAT={"kw": ["Kijkwijzer spotprenten en onderzoeksopdrachten", [["Openen", "onderzoek.html"]]]};
+var PARS=[{"id": "H1", "ch": 1, "t": "Armenzorg en de sociale kwestie", "c": "var(--p1)", "file": "", "x": ["kw"], "sum": "Liefdadigheid en de Armenwet, zwaar fabriekswerk, krotwoningen, protest, de sociale kwestie, de politieke stromingen en de eerste sociale wetten.", "img": "../img/flow/voedseluitdeling.jpg", "q": ["Wie hielp arme, zieke en oude mensen in de negentiende eeuw?", "Wat stond er in de Armenwet van 1854?", "Hoe zag het werk in de fabrieken eruit?", "Waarom werden arbeiders in de steden zo vaak ziek?", "Wat is de sociale kwestie?", "Wat is een nachtwakersstaat?", "Waarom wilden de sociaaldemocraten algemeen kiesrecht?", "Welke drie sociale wetten kwamen er aan het begin van de twintigste eeuw?"], "imgs": [["../img/flow/voedseluitdeling.jpg", "Liefdadigheid: voedsel uitdelen aan armen"], ["../img/flow/inspecteur-fabriek.jpg", "Controle in de fabriek"], ["../img/flow/kinderwetje.jpg", "Het Kinderwetje van Van Houten"], ["../img/flow/kinderen-school.jpg", "De Leerplichtwet: kinderen naar school"], ["../img/flow/demonstratie.jpg", "Arbeiders komen in verzet"], ["../img/flow/stemlokaal-1917.jpg", "Algemeen kiesrecht voor mannen, 1917"], ["../img/flow/stemlokaal-vrouwen.jpg", "Vrouwen mogen stemmen, 1919"]]}, {"id": "H2", "ch": 1, "t": "Crisis, ellende en schaamte", "c": "var(--p2)", "file": "", "x": ["kw"], "sum": "Zwarte Donderdag, massale werkloosheid, steun en stempelen, werkverschaffing, vernedering, de aanpassingspolitiek van Colijn, de Jordaanrellen en het Plan van de Arbeid.", "img": "../img/flow/wallstreet-1.jpg", "q": ["Wat gebeurde er op Zwarte Donderdag?", "Waarom kreeg ook Nederland last van de crisis in Amerika?", "Welke werklozen kregen steun van de overheid?", "Waarom moesten werklozen elke dag stempelen?", "Wat is werkverschaffing?", "Waarom vonden werklozen de hulp vaak vernederend?", "Wat was de aanpassingspolitiek?", "Wat stond er in het Plan van de Arbeid?"], "imgs": [["../img/flow/wallstreet-1.jpg", "Paniek bij de beurs van New York, 1929"], ["../img/flow/beurskrach-auto.jpg", "Alles kwijt op de beurs"], ["../img/flow/arbeidsbeurs.jpg", "Werklozen wachten op steun"], ["../img/flow/loket.jpg", "Aan het loket van de gemeente"], ["../img/flow/polder-werk.jpg", "Werkverschaffing in de polder"], ["../img/flow/dijk-1.jpg", "De aanleg van de Afsluitdijk"], ["../img/flow/jordaan.jpg", "De Jordaanrellen, 1934"], ["../img/flow/sdap-affiche-1.jpg", "Affiche: het Plan van de Arbeid (AI-beeld)"]]}, {"id": "H3", "ch": 1, "t": "Nooit meer armoede!", "c": "var(--p3)", "file": "", "x": ["kw"], "sum": "De Noodwet Ouderdomsvoorziening van Drees, de wederopbouw, het harmoniemodel, de verzorgingsstaat met WW, AOW, ABW en WAO, de loongolf en een overheid die steeds meer doet.", "img": "../img/geschiedenis/wederopbouw.jpg", "q": ["Wat was de Noodwet Ouderdomsvoorziening?", "Waarom veranderde na de oorlog de mening over de taak van de overheid?", "Welke drie dingen hielpen bij de snelle wederopbouw?", "Wat is een verzorgingsstaat?", "Voor wie waren de WW, de AOW, de ABW en de WAO?", "Waarom heet Willem Drees de vader van de verzorgingsstaat?", "Wat was de loongolf?"], "imgs": [["../img/geschiedenis/wederopbouw.jpg", "Meer welvaart: luxe in de woonkamer"]]}, {"id": "H4", "ch": 1, "t": "De toekomst van de verzorgingsstaat", "c": "var(--p4)", "file": "", "x": ["kw"], "sum": "Waarom de verzorgingsstaat te duur werd, de bezuinigingen van Lubbers, Kok en Balkenende, de participatiesamenleving, flexwerk en de standpunten van de politieke partijen.", "img": "../img/flow/demonstratie.jpg", "q": ["Noem drie oorzaken waardoor de verzorgingsstaat in de problemen kwam.", "Wat is vergrijzing?", "Hoe probeerden Lubbers en Kok de verzorgingsstaat betaalbaar te houden?", "Wat veranderde er met de WIA in 2006?", "Wat is een participatiesamenleving?", "Wat is een flexwerker?", "Waarover zijn alle partijen het eens?"], "imgs": [["../img/flow/demonstratie.jpg", "Protest tegen de plannen van de overheid"], ["../img/flow/loket.jpg", "Controle bij het loket"]]}];
+var GOALS={"H1": ["Ik kan beschrijven hoe de armenzorg tot 1930 geregeld was. Ik gebruik de woorden liefdadigheid en nachtwakersstaat. (leerdoel boekje)", "Ik kan uitleggen wat liefdadigheid is en wie die hulp gaf.", "Ik kan vertellen wat er in de Armenwet van 1854 stond.", "Ik kan uitleggen waarom de liefdadigheidsinstellingen niet meer alle armen konden helpen.", "Ik kan beschrijven hoe het werk in de fabrieken na 1870 eruitzag.", "Ik kan beschrijven hoe arbeiders in de steden woonden.", "Ik kan uitleggen waarom arbeiders in de steden vaak ziek werden.", "Ik kan uitleggen waarom de meeste arbeiders eerst niet protesteerden.", "Ik kan uitleggen hoe arbeiders met vakbonden, demonstraties en stakingen in verzet kwamen.", "Ik kan uitleggen wat de sociale kwestie is.", "Ik kan uitleggen wat een nachtwakersstaat is.", "Ik kan de standpunten van de conservatief-liberalen, jong-liberalen, confessionelen en sociaaldemocraten over de sociale kwestie vergelijken.", "Ik kan drie sociale wetten van het begin van de twintigste eeuw noemen.", "Ik kan uitleggen waarom de sociaaldemocraten algemeen kiesrecht wilden.", "Ik weet wanneer mannen (1917) en vrouwen (1919) algemeen kiesrecht kregen.", "Ik kan uitleggen wat het Kinderwetje van Van Houten (1874) regelde."], "H2": ["Ik kan minimaal twee gevolgen van de crisis in de jaren dertig noemen voor de armenzorg in Nederland. (leerdoel boekje)", "Ik kan uitleggen wat er op Zwarte Donderdag, 24 oktober 1929, gebeurde.", "Ik kan uitleggen waarom de crisis in Amerika ook gevolgen had voor Nederland.", "Ik kan noemen hoe sterk de werkloosheid in Nederland steeg tussen 1929 en 1935.", "Ik kan uitleggen welke werklozen steun kregen en hoe de overheid hen controleerde.", "Ik kan uitleggen wat werkverschaffing is en de Afsluitdijk als voorbeeld noemen.", "Ik kan uitleggen waarom werklozen de hulp vaak vernederend vonden.", "Ik kan vertellen wat het Nationaal Crisis Comité deed.", "Ik kan uitleggen wat de aanpassingspolitiek van Colijn was en wat de regering ermee wilde bereiken.", "Ik kan uitleggen waarom de export in de jaren dertig toch niet groeide.", "Ik kan vertellen wat de Jordaanrellen waren.", "Ik kan uitleggen wat er in het Plan van de Arbeid stond.", "Ik kan uitleggen hoe de NSDAP en de NSB de crisis wilden oplossen."], "H3": ["Ik kan uitleggen hoe de verzorgingsstaat zich na 1945 ontwikkelde, met de namen van de wetten uit de jaren vijftig en zestig. (leerdoel boekje)", "Ik kan uitleggen wat de Noodwet Ouderdomsvoorziening van 1947 was.", "Ik kan uitleggen waarom de mening over de taak van de overheid na de crisis en de oorlog veranderde.", "Ik kan drie redenen noemen waardoor Nederland na de oorlog snel werd opgebouwd.", "Ik kan uitleggen wat het harmoniemodel en de geleide loonpolitiek zijn.", "Ik kan uitleggen wat een verzorgingsstaat en sociale zekerheid zijn.", "Ik kan de WW, de AOW, de ABW en de WAO noemen en uitleggen voor wie ze waren.", "Ik kan uitleggen wie Willem Drees was en waarom hij de vader van de verzorgingsstaat heet.", "Ik kan uitleggen wat de loongolf was en hoe Nederland een consumptiemaatschappij werd.", "Ik kan uitleggen waarom de ontdekking van aardgas in 1959 belangrijk was voor de overheid.", "Ik kan voorbeelden noemen van zaken die de overheid na de oorlog ging regelen.", "Ik kan uitleggen wat er in 1983 in de Grondwet werd opgenomen."], "H4": ["Ik kan minimaal drie problemen noemen van de verzorgingsstaat na 1970, en minimaal drie oplossingen. (leerdoel boekje)", "Ik kan uitleggen wat vergrijzing is en waarom de AOW daardoor duurder wordt.", "Ik kan uitleggen waarom steeds meer mensen in de WAO terechtkwamen.", "Ik kan uitleggen hoe mensen in de jaren vijftig en in de jaren zeventig over een uitkering dachten.", "Ik kan vertellen hoe de regeringen-Lubbers en -Kok de verzorgingsstaat betaalbaar wilden houden.", "Ik kan uitleggen wat er in het Akkoord van Wassenaar werd afgesproken.", "Ik kan uitleggen wat er veranderde met het UWV, de WIA en de AOW-leeftijd.", "Ik kan uitleggen wat een participatiesamenleving is.", "Ik kan uitleggen wat een flexwerker is en waarom de vakbonden daar niet blij mee zijn.", "Ik kan uitleggen waarom bedrijven hun fabrieken naar het buitenland verplaatsten.", "Ik kan de standpunten van de politieke partijen over de verzorgingsstaat vergelijken."]};
+var NORIG={"H1": 16, "H2": 13, "H3": 12, "H4": 11};
+/*SEL*/var SEL={};/*ENDSEL*/
+PARS.forEach(function(p){var all=GOALS[p.id],ix=(SEL&&SEL[p.id])||all.map(function(_,i){return i;}).slice(0,NORIG[p.id]);p.gi=ix;p.g=ix.map(function(i){return all[i];});});
+function P(id){for(var i=0;i<PARS.length;i++)if(PARS[i].id===id)return PARS[i];}
+function tag(id){return '<span class="chip" style="background:'+P(id).c+'">'+id+'</span>';}
+var CHK=[["Uitleggen hoe de armenzorg tot 1930 geregeld was (liefdadigheid, nachtwakersstaat)", "H1", "quiz"], ["Het leven van arbeiders in de fabriek en in de krotwoning beschrijven", "H1", "oorzaak"], ["De sociale kwestie en de vier politieke stromingen uitleggen", "H1", "quiz"], ["De eerste sociale wetten en het algemeen kiesrecht op volgorde zetten", "H1", "tijd"], ["Twee gevolgen van de crisis van de jaren dertig voor de armenzorg noemen", "H2", "oorzaak"], ["Steun, stempelen en werkverschaffing uitleggen", "H2", "quiz"], ["De aanpassingspolitiek van Colijn en het Plan van de Arbeid vergelijken", "H2", "quiz"], ["Uitleggen hoe de verzorgingsstaat na 1945 ontstond", "H3", "oorzaak"], ["De wetten WW, AOW, ABW en WAO noemen en op volgorde zetten", "H3", "tijd"], ["Uitleggen wie Willem Drees was", "H3", "quiz"], ["Drie problemen van de verzorgingsstaat na 1970 noemen", "H4", "oorzaak"], ["Drie oplossingen voor die problemen noemen", "H4", "quiz"], ["De participatiesamenleving en flexwerk uitleggen", "H4", "quiz"]];
+
+/* ---------- opslag ---------- */
+var KEY="gs3-szv-app-v1",S={goals:{},qs:{},known:{},unlock:{},check:{},ver:1};
+try{var s=JSON.parse(localStorage.getItem(KEY));if(s&&s.goals)S=Object.assign(S,s);}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}
+
+/* ---------- tabs ---------- */
+var tabs=document.querySelectorAll("nav.tabs button"),main=document.getElementById("main");
+function show(name){
+  tabs.forEach(function(b){b.setAttribute("aria-selected",b.dataset.tab===name?"true":"false");});
+  document.querySelectorAll(".panel").forEach(function(p){p.hidden=p.id!==name;});
+  main.scrollTop=0;
+  if(name!=="lab"&&SW)gamesHome();
+  if(name==="les")loadLes();
+  if(name==="toets")loadToets();
+  if(name==="films")renderFilms();
+}
+tabs.forEach(function(b){b.addEventListener("click",function(){show(b.dataset.tab);});});
+document.addEventListener("click",function(e){
+  var g=e.target.closest("[data-go]");if(g){if(g.dataset.par)cur=g.dataset.par;show(g.dataset.go);}
+  var l=e.target.closest("[data-golab]");if(l){show("lab");showLab(l.dataset.golab);
+    if(l.dataset.xpar){if(l.dataset.golab==="tijd"){tlPar=l.dataset.xpar;newT();}else{cgPar=l.dataset.xpar;newC();}}
+    if(l.dataset.qpar){quizPar=l.dataset.qpar;quizHome();}}
+});
+
+/* ---------- voortgang ---------- */
+function goalCount(id){var p=P(id),d=0;p.gi.forEach(function(gi){if(S.goals[id+"-"+gi])d++;});return d;}
+function totals(ch){var t=0,d=0;PARS.forEach(function(p){if(ch&&p.ch!==ch)return;t+=p.g.length;d+=goalCount(p.id);});return [d,t];}
+function renderProgress(){
+  var x=totals(),pct=x[1]?Math.round(x[0]/x[1]*100):0;
+  document.getElementById("ring").style.setProperty("--v",pct);
+  document.getElementById("ringTxt").textContent=pct+"%";
+  document.getElementById("progTxt").textContent=x[0]+" van "+x[1]+" leerdoelen";
+  renderCards();
+}
+
+/* ---------- start: kaarten + checklist ---------- */
+function renderCards(){
+  [1].forEach(function(ch){
+    document.getElementById("pgrid"+ch).innerHTML=PARS.filter(function(p){return p.ch===ch;}).map(function(p){
+      var d=goalCount(p.id),n=p.g.length||1;
+      return '<button class="pcard" data-go="les" data-par="'+p.id+'"><div class="band" style="background:linear-gradient(180deg,rgba(0,0,0,0) 30%,color-mix(in srgb,'+p.c+' 85%,#000)),url('+THUMB(p.img,600)+'),'+p.c+'"><b>'+p.id+'</b></div>'+
+        '<div class="body"><h3>'+p.t+'</h3><p>'+p.sum+'</p><div class="bar"><i style="width:'+(d/n*100)+'%;background:'+p.c+'"></i></div><div class="meta"><span>'+d+' van '+n+' leerdoelen</span><span style="font-weight:700;color:var(--plum)">Open les →</span></div></div></button>';
+    }).join("");
+    var t=totals(ch);document.getElementById("ch"+ch+"txt").textContent=t[0]+" van "+t[1]+" leerdoelen";
+  });
+}
+function renderCheck(){
+  var n=0;
+  document.getElementById("clist").innerHTML=CHK.map(function(c,i){var on=!!S.check[i];if(on)n++;
+    var go=c[2]==="quiz"?' data-golab="quiz" data-qpar="'+c[1]+'"':' data-golab="'+c[2]+'" data-xpar="'+c[1]+'"';
+    return '<div class="citem'+(on?" on":"")+'"><button class="tick" data-c="'+i+'" aria-label="Afvinken">'+CHECK+'</button><span class="ctxt">'+c[0]+'</span>'+tag(c[1])+'<button class="go"'+go+'>Oefen →</button></div>';}).join("");
+  document.getElementById("cBar").style.width=(n/CHK.length*100)+"%";
+  document.getElementById("cTxt").textContent=n+" van "+CHK.length+" onderdelen beheerst";
+}
+document.getElementById("clist").addEventListener("click",function(e){var b=e.target.closest("[data-c]");if(!b)return;var i=b.dataset.c;if(S.check[i])delete S.check[i];else S.check[i]=1;save();renderCheck();});
+
+/* ---------- lesstof ---------- */
+var cur="H1";
+
+/* ---------- HTML-presentatie (dia-viewer) ---------- */
+var DECK={};
+function slideSrc(h,n){return "slides/"+h+"/"+(n<10?"0":"")+n+".jpg";}
+function mountDeck(el,h,startAt){
+  var N=DECK[h]||0,i=Math.min(Math.max(1,startAt||1),N);
+  if(!N){el.innerHTML='<div class="ph">📽️ De PowerPoint van dit hoofdstuk volgt.</div>';return;}
+  el.innerHTML='<div class="sdeck" tabindex="0" aria-roledescription="presentatie" aria-label="Presentatie '+h+'">'+
+   '<div class="deck-stage"><img alt=""><img alt=""><button class="deck-nav l" aria-label="Vorige dia"><span>‹</span></button><button class="deck-nav r" aria-label="Volgende dia"><span>›</span></button></div>'+
+   '<div class="deck-bar"><span class="cnt"></span><div class="deck-prog"><i></i></div><button data-act="fs">⛶ Schermvullend</button><a href="presenteer.html?h='+h+'" target="_blank" rel="noopener">Presenteer ↗</a></div>'+
+   '<div class="deck-thumbs">'+Array.from({length:N},function(_,k){return '<button data-n="'+(k+1)+'" aria-label="Dia '+(k+1)+'"><img loading="lazy" alt="" src="'+slideSrc(h,k+1)+'"></button>';}).join("")+'</div></div>';
+  var d=el.querySelector(".sdeck"),imgs=d.querySelectorAll(".deck-stage img"),front=0,cnt=d.querySelector(".cnt"),bar=d.querySelector(".deck-prog i"),th=d.querySelectorAll(".deck-thumbs button");
+  function go(n,dir){
+    n=Math.min(Math.max(1,n),N);
+    var nextImg=imgs[1-front],curImg=imgs[front];
+    nextImg.onload=function(){nextImg.className="on";curImg.className=dir<0?"":"prev-out";front=1-front;};
+    nextImg.src=slideSrc(h,n);nextImg.alt="Dia "+n+" van "+N;
+    i=n;cnt.textContent=n+" / "+N;bar.style.width=(n/N*100)+"%";
+    th.forEach(function(b){b.setAttribute("aria-current",String(+b.dataset.n===n));});
+    var t=th[n-1];if(t)t.scrollIntoView({block:"nearest",inline:"nearest",behavior:"smooth"});
+    if(n<N){var pre=new Image();pre.src=slideSrc(h,n+1);}
+    try{localStorage.setItem("deck-"+h,n);}catch(e){}
+  }
+  d.querySelector(".deck-nav.l").onclick=function(){go(i-1,-1);};
+  d.querySelector(".deck-nav.r").onclick=function(){go(i+1,1);};
+  d.querySelector(".deck-thumbs").onclick=function(e){var b=e.target.closest("[data-n]");if(b)go(+b.dataset.n,+b.dataset.n>i?1:-1);};
+  d.querySelector('[data-act="fs"]').onclick=function(){if(document.fullscreenElement)document.exitFullscreen();else if(d.requestFullscreen)d.requestFullscreen().catch(function(){});};
+  d.addEventListener("keydown",function(e){if(e.key==="ArrowRight"||e.key===" "||e.key==="PageDown"){e.preventDefault();go(i+1,1);}else if(e.key==="ArrowLeft"||e.key==="PageUp"){e.preventDefault();go(i-1,-1);}else if(e.key==="Home")go(1,-1);else if(e.key==="End")go(N,1);});
+  var sx=null,stg=d.querySelector(".deck-stage");
+  stg.addEventListener("pointerdown",function(e){sx=e.clientX;});
+  stg.addEventListener("pointerup",function(e){if(sx===null)return;var dx=e.clientX-sx;sx=null;if(Math.abs(dx)>40)go(i+(dx<0?1:-1),dx<0?1:-1);});
+  go(i,1);
+}
+
+function loadLes(){
+  var p=P(cur),last=0;
+  document.getElementById("rail").innerHTML=PARS.map(function(x){var d=goalCount(x.id),h="";
+    if(x.ch!==last){last=x.ch;h='<div class="rh">Sociale zekerheid en verzorgingsstaat</div>';}
+    return h+'<button data-par="'+x.id+'" aria-current="'+(x.id===cur)+'"><span class="dot" style="background:'+x.c+'">'+x.id+'</span><span>'+x.t+'<span class="mini">'+d+'/'+x.g.length+' leerdoelen</span></span></button>';}).join("");
+  document.getElementById("lEyebrow").textContent="Sociale zekerheid en verzorgingsstaat · hoofdstuk "+p.id.slice(1);
+  document.getElementById("lEyebrow").style.color=p.c;
+  document.getElementById("lTitle").textContent=p.t;
+  document.getElementById("lOpen").href=VIEW(p.file);document.getElementById("lOpen").hidden=!p.file;
+  var v=document.getElementById("lViewer");
+  if(v.dataset.file!==p.id){v.dataset.file=p.id;var st=1;try{st=+localStorage.getItem("deck-"+p.id)||1;}catch(e){}mountDeck(v,p.id,st);}
+  document.getElementById("lExtra").innerHTML=p.x.map(function(k){var m=MAT[k];return '<div class="xi">📝 '+m[0]+m[1].map(function(l){return '<a target="_blank" rel="noopener" href="'+LNK(l[1])+'">'+l[0]+' ↗</a>';}).join("")+'</div>';}).join("")+
+    (p.imgs&&p.imgs.length?'<div class="gal">'+p.imgs.map(function(im){return '<a target="_blank" rel="noopener" href="'+VIEW(im[0])+'"><img loading="lazy" alt="'+im[1]+'" src="'+THUMB(im[0],500)+'"><span>'+im[1]+'</span></a>';}).join("")+'</div>':'');
+  document.getElementById("lQs").innerHTML=p.q.map(function(q,i){var k=p.id+"-"+i,on=!!S.qs[k];
+    return '<button class="q'+(on?" on":"")+'" data-q="'+k+'"><span class="tick">'+CHECK+'</span><span>'+q+'</span></button>';}).join("");
+  var d=goalCount(p.id);
+  document.getElementById("lBar").style.width=(d/(p.g.length||1)*100)+"%";
+  document.getElementById("lBar").style.background=p.c;
+  document.getElementById("lBarTxt").textContent=d+" van "+p.g.length+" behaald";
+  document.getElementById("lGoals").innerHTML=p.g.map(function(g,j){var k=p.id+"-"+p.gi[j],on=!!S.goals[k];
+    return '<label class="'+(on?"done":"")+'"><input type="checkbox" data-k="'+k+'"'+(on?" checked":"")+'><span>'+g+'</span></label>';}).join("");
+}
+document.getElementById("rail").addEventListener("click",function(e){var b=e.target.closest("[data-par]");if(b){cur=b.dataset.par;loadLes();}});
+document.getElementById("lQs").addEventListener("click",function(e){var b=e.target.closest("[data-q]");if(!b)return;var k=b.dataset.q;if(S.qs[k])delete S.qs[k];else S.qs[k]=1;save();b.classList.toggle("on");});
+document.getElementById("lGoals").addEventListener("change",function(e){var k=e.target.dataset.k;if(!k)return;if(e.target.checked)S.goals[k]=1;else delete S.goals[k];save();loadLes();renderProgress();});
+document.getElementById("lPractice").addEventListener("click",function(){cardFilter=cur;show("lab");showLab("begrippen");renderFlash();});
+
+
+/* ---------- oefentoetsen ---------- */
+var VERS=[];
+function V(){return VERS[(S.ver||1)-1]||VERS[0];}
+var T=50*60,left=T,tick=null;
+function renderVPick(){
+  document.getElementById("vPick").innerHTML=VERS.map(function(v){
+    return '<button class="vbtn" data-v="'+v.n+'" aria-pressed="'+(v.n===S.ver)+'"><b>'+v.t+'</b><div class="lvls">'+v.tags.map(function(t){return '<i>'+t+'</i>';}).join("")+'</div><small>'+(v.min?v.min+' minuten · ':'')+(v.nk?'met nakijkblad':'zonder nakijkblad')+'</small></button>';}).join("");
+}
+function loadToets(){
+  if(!VERS.length){var tg=document.querySelector('#toets .tgrid');if(tg)tg.hidden=true;return;}
+  var v=V();renderVPick();
+  document.getElementById("tTitle").textContent=v.t;
+  document.getElementById("tMeta").textContent=v.meta+(v.min?" · "+v.min+" minuten":"");
+  document.getElementById("tOpen").href=VIEW(v.toets);
+  var d=document.getElementById("tDoc");
+  if(d.dataset.id!==v.toets){d.dataset.id=v.toets;d.innerHTML='<iframe src="'+DRIVE(v.toets)+'" loading="lazy" title="'+v.t+'"></iframe>';}
+  renderNakijk();
+  document.getElementById("timerCard").style.display=v.min?"":"none";
+  if(v.min&&T!==v.min*60&&!tick){T=v.min*60;left=T;drawClock();}
+  if(v.pts)document.getElementById("ptsMax").value=v.pts;
+  document.getElementById("clockMsg").textContent="Je hebt "+(v.min||50)+" minuten. Maak de toets zonder boek en zonder hulp.";
+  gradeIt();
+}
+document.getElementById("vPick").addEventListener("click",function(e){var b=e.target.closest("[data-v]");if(!b)return;S.ver=+b.dataset.v;save();
+  clearInterval(tick);tick=null;var st=document.getElementById("tStart");st.disabled=false;st.textContent="Start";T=(V().min||50)*60;left=T;drawClock();loadToets();});
+function renderNakijk(){
+  var v=V(),box=document.getElementById("nakijk");
+  if(!v.nk){box.innerHTML='<p class="muted" style="margin:0">Bij deze oefening is (nog) geen nakijkblad. Bespreek je antwoorden met je docent of met een klasgenoot.</p>';return;}
+  if(!S.unlock[v.n]){box.innerHTML='<div class="locked"><div><svg class="i" viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><p style="margin:8px 0 12px">Het nakijkblad gaat open als je klaar bent met de oefening.</p><button class="btn" id="unlock">Ik ben klaar, laat het nakijkblad zien</button></div></div>';return;}
+  box.innerHTML='<div class="doc" style="height:420px"><iframe src="'+DRIVE(v.nk)+'" loading="lazy" title="Nakijkblad"></iframe></div><div class="row" style="margin-top:10px"><a class="btn ghost" target="_blank" rel="noopener" href="'+VIEW(v.nk)+'">Nakijkblad openen</a><button class="btn ghost" id="relock">Weer verbergen</button></div>';
+}
+document.getElementById("nakijk").addEventListener("click",function(e){
+  if(e.target.closest("#unlock")){S.unlock[V().n]=1;save();renderNakijk();}
+  if(e.target.closest("#relock")){delete S.unlock[V().n];save();renderNakijk();}
+});
+function drawClock(){var m=Math.floor(left/60),s=left%60;document.getElementById("clockTxt").textContent=(m<10?"0":"")+m+":"+(s<10?"0":"")+s;document.getElementById("clock").style.setProperty("--v",left/T*100);}
+document.getElementById("tStart").addEventListener("click",function(){
+  var b=this;
+  if(tick){clearInterval(tick);tick=null;b.textContent="Verder";return;}
+  b.textContent="Pauze";
+  tick=setInterval(function(){left--;drawClock();if(left<=0){clearInterval(tick);tick=null;b.textContent="Klaar!";b.disabled=true;document.getElementById("clockTxt").textContent="Tijd!";}},1000);
+});
+document.getElementById("tReset").addEventListener("click",function(){clearInterval(tick);tick=null;left=T;drawClock();var b=document.getElementById("tStart");b.disabled=false;b.textContent="Start";});
+function gradeIt(){
+  var a=document.getElementById("pts"),b=document.getElementById("ptsMax"),v=parseFloat(a.value.replace(",",".")),max=parseFloat(b.value.replace(",",".")),g=document.getElementById("grade"),m=document.getElementById("gradeMsg");
+  g.style.color="";
+  if(a.value===""||b.value===""){g.textContent="-";m.textContent="Cijfer = behaalde punten : maximum × 9 + 1. Het maximum staat in het nakijkblad.";return;}
+  if(isNaN(v)||isNaN(max)||max<=0||v<0||v>max){g.textContent="-";m.textContent="Controleer je punten: ze moeten tussen 0 en het maximum liggen.";return;}
+  var c=Math.round((v/max*9+1)*10)/10;g.textContent=c.toFixed(1).replace(".",",");
+  g.style.color=c>=5.5?"var(--ok)":"var(--bad)";
+  m.textContent=c>=8?"Top! Jij bent er klaar voor.":c>=6.5?"Goed bezig. Kijk nog even naar je fouten.":c>=5.5?"Voldoende, maar oefen je zwakke punten nog.":"Nog even oefenen: begin bij het Oefenlab.";
+}
+document.getElementById("pts").addEventListener("input",gradeIt);
+document.getElementById("ptsMax").addEventListener("input",gradeIt);
+document.getElementById("mats").innerHTML=Object.keys(MAT).map(function(k){var m=MAT[k];
+  return '<div class="mat">📝 '+m[0]+'<div class="row">'+m[1].map(function(l){return '<a target="_blank" rel="noopener" href="'+LNK(l[1])+'">'+l[0]+' ↗</a>';}).join("")+'</div></div>';}).join("");
+
+/* ---------- filmpjes ---------- */
+var FILMS=[];
+/* Vul hier het YouTube-ID in (het stukje na v= in de link). Is het veld leeg, dan wordt de Google Drive-film gebruikt. */
+var YT_ID={H1:"",H2:""};
+FILMS.forEach(function(f){if(YT_ID[f.par])f.yt=YT_ID[f.par];});
+var ff="alle";
+function renderFilms(){
+  document.getElementById("fFilters").innerHTML=["alle"].concat(PARS.map(function(p){return p.id;}).filter(function(id){return FILMS.some(function(f){return f.par===id;});})).map(function(f){return '<button data-ff="'+f+'" class="'+(f===ff?"on":"")+'">'+(f==="alle"?"Alle filmpjes":f+" "+P(f).t)+'</button>';}).join("");
+  document.getElementById("fgrid").innerHTML=FILMS.filter(function(f){return ff==="alle"||f.par===ff||f.par==="alle";}).map(function(f){var id=f.yt||f.film,url=f.yt?"https://www.youtube.com/watch?v="+f.yt:VIEW(f.film);
+    return '<div class="card film"><div class="viewer" '+(f.yt?'data-yt="'+f.yt+'"':'data-film="'+f.film+'"')+'></div><div class="txt"><div class="eyebrow">'+f.k+(f.par!=="alle"?' · '+f.par:'')+'</div><h3>'+f.t+'</h3><p class="muted" style="margin:0">'+f.d+'</p><div class="row" style="margin-top:12px"><button class="btn soft" data-golab="'+f.lab+'"'+(f.mode?' data-mode="'+f.mode+'"':'')+(f.qpar?' data-qpar="'+f.qpar+'"':'')+'>'+f.btn+'</button>'+(f.par==="H1"||f.par==="H2"?'<a class="btn" href="filmvragen.html?h='+f.par+'">Filmvragen</a>':'')+'<a class="btn ghost" target="_blank" rel="noopener" href="'+url+'">Open in nieuw tabblad ↗</a></div></div></div>';}).join("");
+  loadFilms();
+}
+function loadFilms(){
+  document.querySelectorAll("[data-yt]").forEach(function(v){if(v.firstChild)return;var id=v.dataset.yt;
+    v.innerHTML='<button class="poster" aria-label="Speel filmpje af"><img src="https://img.youtube.com/vi/'+id+'/hqdefault.jpg" alt="" onerror="this.remove()"><span class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></button>';});
+  document.querySelectorAll("[data-film]").forEach(function(v){if(v.firstChild)return;var id=v.dataset.film;
+    v.innerHTML='<button class="poster" aria-label="Speel filmpje af"><img src="https://drive.google.com/thumbnail?id='+id+'&sz=w1200" alt="" onerror="this.remove()"><span class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></button>';});
+}
+document.getElementById("fFilters").addEventListener("click",function(e){var b=e.target.closest("[data-ff]");if(b){ff=b.dataset.ff;renderFilms();}});
+document.getElementById("films").addEventListener("click",function(e){var b=e.target.closest(".poster");if(!b)return;var v=b.parentNode;
+  if(v.dataset.yt)v.innerHTML='<div class="ph">Laden…</div><iframe src="https://www.youtube.com/embed/'+v.dataset.yt+'?autoplay=1&rel=0" allow="autoplay; fullscreen; encrypted-media" allowfullscreen title="Introfilm"></iframe>';
+  else v.innerHTML='<div class="ph">Laden…</div><iframe src="'+DRIVE(v.dataset.film)+'" allow="autoplay; fullscreen" allowfullscreen title="Instructiefilm"></iframe>';});
+renderFilms();
+
+/* ---------- oefenlab navigatie ---------- */
+function showLab(name){
+  document.querySelectorAll("#labNav button").forEach(function(b){b.setAttribute("aria-selected",b.dataset.lab===name?"true":"false");});
+  document.querySelectorAll(".lab").forEach(function(l){l.hidden=l.id!=="lab-"+name;});
+  if(name!=="games"&&SW)gamesHome();
+}
+document.getElementById("labNav").addEventListener("click",function(e){var b=e.target.closest("[data-lab]");if(b)showLab(b.dataset.lab);});
+
+/* ---------- begrippen ---------- */
+var CARDS=[["H1", "Liefdadigheid", "Hulp aan armen uit vrijwillige giften, vaak van de kerk of van rijke burgers.", "Een liefdadigheidsfonds dat op huisbezoek gaat bij arme gezinnen."], ["H1", "Armenwet", "Wet uit 1854: de liefdadigheidsinstellingen helpen de armen, de gemeente alleen in uiterste nood.", "De gemeente springt pas bij als de kerk niet meer kan helpen."], ["H1", "Industrialisatie", "De opkomst van fabrieken, in Nederland vooral na 1870.", "Mensen trekken van het platteland naar de stad om in een fabriek te werken."], ["H1", "Krotwoning", "Een kleine, donkere en ongezonde woning zonder riolering of waterleiding.", "Een kelderwoning in Amsterdam waar acht mensen in één kamer wonen."], ["H1", "Vakbond", "Een vereniging van arbeiders die samen opkomen voor hogere lonen en betere werkomstandigheden.", "Spoorwegpersoneel dat in 1903 samen het werk neerlegt."], ["H1", "Sociale kwestie", "De vraag wat er gedaan moest worden aan de slechte leef- en werkomstandigheden van arbeiders.", "Politici discussiëren over wetten tegen uitbuiting."], ["H1", "Nachtwakersstaat", "Een staat waarin de overheid alleen zorgt voor orde en veiligheid en zich niet met de economie bemoeit.", "De conservatief-liberalen willen geen uitkeringen betalen."], ["H1", "Liberalen", "Politieke stroming die vrijheid voor ondernemers belangrijk vindt. De jong-liberalen wilden wel arbeiders beschermen.", "De conservatief-liberalen zijn voor een nachtwakersstaat."], ["H1", "Confessionelen", "Mensen die het geloof als uitgangspunt nemen voor hun politieke ideeën, zoals protestanten en katholieken.", "Werkgevers en werknemers moeten samen de problemen oplossen."], ["H1", "Sociaaldemocraten", "Politieke stroming die opkomt voor de belangen van de arbeiders.", "Zij willen een achturige werkdag, een uitkering bij ziekte en pensioenen."], ["H1", "Algemeen kiesrecht", "Iedere volwassene mag stemmen, niet alleen de rijken.", "In 1917 voor mannen, in 1919 ook voor vrouwen."], ["H1", "Sociale wetten", "Wetten die de positie van arbeiders verbeteren.", "De Ongevallenwet, de Woningwet en de Leerplichtwet."], ["H2", "Beurskrach", "Het plotselinge instorten van de koersen van aandelen op de beurs.", "Zwarte Donderdag, 24 oktober 1929 in New York."], ["H2", "Aandeel", "Een stukje eigendom van een bedrijf dat je kunt kopen en verkopen op de beurs.", "Joe koopt aandelen met geleend geld van de bank."], ["H2", "Steunuitkering", "Een lage uitkering van de overheid voor werklozen tussen 21 en 60 jaar die buiten hun schuld werkloos waren.", "Slechts de helft van alle werklozen kon er gebruik van maken."], ["H2", "Stempelen", "Elke dag in de rij staan voor een stempel, zodat werklozen niet stiekem konden bijverdienen.", "Soms moesten werklozen twee keer per dag stempelen."], ["H2", "Werkverschaffing", "Werk dat de overheid voor werklozen organiseerde, zoals het aanleggen van dijken en kanalen.", "De aanleg van de Afsluitdijk (1932)."], ["H2", "Nationaal Crisis Comité", "Comité uit 1931 dat werklozen kleding en schoenen gaf, betaald door rijke burgers.", "Ook hier werd elke aanvraag gecontroleerd."], ["H2", "Aanpassingspolitiek", "De uitgaven van de overheid aanpassen aan de lagere inkomsten, door te bezuinigen.", "Premier Colijn verlaagt in 1934 de lonen en de steunuitkering."], ["H2", "Jordaanrellen", "Opstand in 1934 in de Amsterdamse Jordaan tegen de verlaging van de steunuitkering.", "Het leger beëindigde de rellen; er vielen vijf doden."], ["H2", "Plan van de Arbeid", "Plan van de SDAP uit 1935: de overheid moet juist geld uitgeven om de crisis op te lossen.", "Meer werkverschaffing en hogere lonen."], ["H3", "Noodwet Ouderdomsvoorziening", "Wet uit 1947 waardoor alle mensen van 65 jaar en ouder een uitkering van de overheid kregen.", "De 'wet Drees', voorloper van de AOW."], ["H3", "Harmoniemodel", "Samenwerking tussen regering, werkgevers en werknemers bij afspraken over lonen, prijzen en sociale wetten.", "Afspraken na de oorlog om samen het land op te bouwen."], ["H3", "Geleide loonpolitiek", "De afspraak om de lonen laag te houden, zodat Nederlandse producten goedkoop bleven voor het buitenland.", "De export steeg en de economie groeide."], ["H3", "Marshallplan", "Financiële steun van Amerika aan Europese landen na de Tweede Wereldoorlog.", "Met het geld werden wegen en bruggen hersteld."], ["H3", "Verzorgingsstaat", "Een staat waarin de overheid zorgt voor een minimuminkomen voor iedereen die niet voor zichzelf kan zorgen.", "Nederland werd een verzorgingsstaat vanaf de jaren vijftig."], ["H3", "Sociale zekerheid", "Een minimuminkomen van de overheid voor mensen die oud, ziek of werkloos zijn.", "Uitkeringen zoals de WW en de AOW."], ["H3", "WW", "De Werkloosheidswet (1949): een hogere uitkering voor werklozen, rechtstreeks aan de mensen betaald.", "Je hoeft geen lid meer te zijn van een vakbond."], ["H3", "AOW", "De Algemene Ouderdomswet (1957): een uitkering voor alle mensen vanaf 65 jaar, nu 67 jaar.", "De AOW verving de Noodwet Ouderdomsvoorziening."], ["H3", "ABW", "De Algemene Bijstandswet (1965): bijstand voor iedereen die niet binnen een andere regeling valt.", "De ABW verving de Armenwet van 1854."], ["H3", "WAO", "De Wet Arbeidsongeschiktheidsverzekering (1967): een uitkering voor wie door ziekte of een ongeval langer dan een jaar niet kan werken.", "Jos de lasser kan na zijn ongeluk niet meer werken."], ["H3", "Loongolf", "Een sterke stijging van de lonen halverwege de jaren zestig, soms wel tien procent.", "Ook de uitkeringen groeiden mee met de lonen."], ["H3", "Consumptiemaatschappij", "Een samenleving waarin mensen meer geld hebben dan ze nodig hebben en veel luxe kopen.", "Auto's, televisies en vakanties."], ["H3", "Sociale grondrechten", "Rechten die in 1983 in de Grondwet kwamen, zoals voldoende banen en goede woningen.", "De overheid moet zich inzetten voor werk en woningen."], ["H4", "Vergrijzing", "Het aantal ouderen in de bevolking neemt toe.", "Door betere zorg en meer welvaart worden mensen ouder."], ["H4", "Akkoord van Wassenaar", "Afspraak tussen de regering-Lubbers, vakbonden en werkgevers: de lonen groeien niet meer mee met de prijzen, in ruil voor een kortere arbeidstijd.", "Een compromis uit de jaren tachtig."], ["H4", "UWV", "Het Uitvoeringsinstituut Werknemersverzekeringen, dat vanaf 2002 alle aanvragen voor een uitkering controleert.", "Wie een uitkering wil, wordt gecontroleerd."], ["H4", "WIA", "De Wet Werk en Inkomen naar Arbeidsvermogen (2006), die de WAO verving en kijkt naar wat iemand nog wél kan.", "Wie weer kan werken, wordt beloond."], ["H4", "Participatiesamenleving", "Een samenleving waarin mensen zelf verantwoordelijk zijn voor hun leven en hun omgeving, zonder hulp van de overheid.", "Ouderen wonen zo lang mogelijk thuis met hulp van familie of buren."], ["H4", "Mantelzorg", "De onbetaalde zorg voor zieke familieleden en vrienden.", "Een ouder die een gehandicapt kind verzorgt."], ["H4", "Flexwerker", "Iemand die tijdelijk werk doet voor een organisatie zonder vast contract.", "Een uitzendkracht of een pakketbezorger."]];
+var cardFilter="alle",cf=document.getElementById("cardFilters"),cg=document.getElementById("cardGrid");
+function inSel(par,f){return f==="alle"||par===f||(f==="H1"&&par.charAt(0)==="1")||(f==="H2"&&par.charAt(0)==="2");}
+function selLabel(f){return f==="alle"?"Alles":/^H\d$/.test(f)?"Hoofdstuk "+f.slice(1):f;}
+function renderFlash(){
+  cf.innerHTML=["alle"].concat(PARS.map(function(p){return p.id;})).concat(["oefenen"]).map(function(f){
+    var label=f==="oefenen"?"Nog niet gekend":selLabel(f);
+    return '<button data-f="'+f+'" class="'+(f===cardFilter?"on":"")+'"'+(P(f)?' title="'+P(f).t+'"':'')+'>'+label+'</button>';}).join("");
+  var html="",k=0;
+  CARDS.forEach(function(c,i){
+    var known=!!S.known[i];if(known)k++;
+    if(cardFilter==="oefenen"){if(known)return;}
+    else if(!inSel(c[0],cardFilter))return;
+    html+='<div class="flip'+(known?" known":"")+'" data-i="'+i+'" tabindex="0" role="button" aria-label="Begrip: '+c[1]+'"><div class="in">'+
+      '<div class="f">'+(known?'<span class="chk">✓ gekend</span>':'')+'<div>'+tag(c[0])+'</div><strong>'+c[1]+'</strong><small>klik om om te draaien</small></div>'+
+      '<div class="b"><div>'+c[2]+'</div><em>Voorbeeld: '+c[3]+'</em><div class="row" style="margin-top:auto;padding-top:8px"><button class="btn" style="padding:6px 12px;font-size:13px;background:'+(known?'#8a7f88':'var(--ok)')+'" data-know="'+i+'">'+(known?"Toch nog oefenen":"✓ Ik wist het")+'</button></div></div></div></div>';
+  });
+  cg.innerHTML=html||'<div class="card pad">Alles gekend in deze selectie. Knap werk!</div>';
+  document.getElementById("cardCount").textContent=k+" van "+CARDS.length+" begrippen gekend";
+}
+cf.addEventListener("click",function(e){var f=e.target.dataset.f;if(f){cardFilter=f;renderFlash();}});
+cg.addEventListener("click",function(e){
+  var kn=e.target.dataset.know;
+  if(kn!==undefined){e.stopPropagation();if(S.known[kn])delete S.known[kn];else S.known[kn]=1;save();renderFlash();return;}
+  var c=e.target.closest(".flip");if(c)c.classList.toggle("open");
+});
+cg.addEventListener("keydown",function(e){if((e.key==="Enter"||e.key===" ")&&e.target.classList.contains("flip")){e.preventDefault();e.target.classList.toggle("open");}});
+document.getElementById("cardReset").addEventListener("click",function(){cg.querySelectorAll(".flip.open").forEach(function(c){c.classList.remove("open");});});
+
+var BANK=[["H1", "Waarvan waren arme, zieke en oude mensen in de negentiende eeuw vooral afhankelijk?", ["Van liefdadigheid", "Van uitkeringen van de overheid", "Van een verzekering via hun werk", "Van een pensioen van de staat"], "Hulp kwam vooral van liefdadigheidsinstellingen van de kerk en van rijke burgers."], ["H1", "Wat stond er in de Armenwet van 1854?", ["De gemeente helpt alleen in uiterste nood", "De gemeente geeft alle armen een uitkering", "De kerk mag de armen niet meer helpen", "Iedere arme krijgt gratis een woning"], "De liefdadigheidsinstellingen moesten de armen helpen; de gemeente pas als het echt niet anders kon."], ["H1", "Waarom konden de liefdadigheidsinstellingen later niet meer alle armen helpen?", ["Omdat de armoede in Nederland toenam", "Omdat de kerk geen giften meer kreeg", "Omdat de regering het had verboden", "Omdat de armen geen hulp meer wilden"], "De armoede groeide zo sterk dat de instellingen het niet meer aankonden."], ["H1", "Hoe lang duurde een werkdag in een fabriek soms?", ["Wel veertien uur", "Hooguit zes uur", "Precies acht uur", "Ongeveer tien uur"], "Er waren geen regels over arbeidstijden; werkdagen van veertien uur kwamen voor."], ["H1", "Waarom werkten vrouwen en kinderen ook in de fabriek?", ["Het loon van de man was niet genoeg", "Kinderen hoefden niet naar school", "De fabrieken wilden geen mannen", "Vrouwen verdienden meer dan mannen"], "Met alleen het loon van de vader kon het gezin de huur en het eten niet betalen."], ["H1", "Waardoor kwamen ziektes als cholera veel voor in de arbeiderswijken?", ["Door de onhygiënische omstandigheden", "Door het zware werk op het platteland", "Door te veel dokters in de stad", "Door het drinken van melk uit de winkel"], "De woningen hadden vaak geen riolering en geen waterleiding."], ["H1", "Waarom protesteerden de meeste arbeiders eerst niet?", ["Omdat je ontslagen kon worden", "Omdat ze tevreden waren met hun loon", "Omdat protesteren door de kerk werd betaald", "Omdat er al genoeg sociale wetten waren"], "Wie protesteerde, kon worden ontslagen en had dan helemaal geen inkomen meer."], ["H1", "Wat noem je de vraag wat er moet gebeuren aan de slechte leef- en werkomstandigheden van arbeiders?", ["De sociale kwestie", "De nachtwakersstaat", "De aanpassingspolitiek", "De participatiesamenleving"], "Dat heet de sociale kwestie."], ["H1", "Wat is een nachtwakersstaat?", ["De overheid zorgt alleen voor orde en veiligheid", "De overheid zorgt voor werk voor iedereen in het land", "De overheid betaalt iedereen een uitkering", "De overheid bepaalt alle lonen en prijzen"], "De overheid bemoeit zich verder niet met de economie."], ["H1", "Welke groep was voorstander van een nachtwakersstaat?", ["De conservatief-liberalen", "De sociaaldemocraten", "De jong-liberalen", "De vakbonden van arbeiders"], "Zij vonden dat vrijheid voor ondernemers goed was voor iedereen."], ["H1", "Wat vonden de confessionelen van de oplossing voor de sociale kwestie?", ["Werkgevers en werknemers moeten het samen oplossen", "De overheid moet alle armen een uitkering geven", "De arbeiders moeten zelf een revolutie beginnen", "Ondernemers moeten volledig vrij gelaten worden"], "Alleen in geval van nood moest de overheid ingrijpen."], ["H1", "Waarom wilden de sociaaldemocraten algemeen kiesrecht?", ["Zodat arbeiders mee konden beslissen over wetten", "Zodat de kerk meer macht in het parlement kreeg", "Zodat alleen rijke mannen konden blijven stemmen", "Zodat de koning de regering kon blijven kiezen"], "Alleen met algemeen kiesrecht konden de arbeiders invloed krijgen."], ["H1", "Wat regelde de Woningwet?", ["Aan welke eisen een woning minimaal moest voldoen", "Dat elke arbeider een eigen huis moest kopen", "Dat de huur van woningen gratis werd", "Dat fabrieken geen woningen meer mochten bouwen"], "De wet stelde minimale eisen aan woningen."], ["H1", "Wanneer kregen vrouwen in Nederland algemeen kiesrecht?", ["In 1919", "In 1917", "In 1874", "In 1901"], "Mannen kregen het in 1917, vrouwen twee jaar later."], ["H2", "Wat gebeurde er op Zwarte Donderdag, 24 oktober 1929?", ["De aandelenkoersen in New York stortten in", "De Nederlandse banken gingen allemaal dicht", "De Tweede Wereldoorlog brak uit in Europa", "Amerika stopte met de handel met Nederland"], "De beurskrach in New York was het begin van de crisis."], ["H2", "Waarom kreeg ook Nederland last van de crisis in Amerika?", ["Amerikanen kochten geen Europese producten meer", "Nederland had alle aandelen in Amerika gekocht", "Amerika verbood Nederlanders om te werken", "De Nederlandse munt werd waardeloos"], "Daardoor moesten ook in Nederland bedrijven en fabrieken sluiten."], ["H2", "Hoe sterk steeg het aantal werklozen in Nederland tussen 1929 en 1935?", ["Van 22.000 tot bijna een half miljoen", "Van 100.000 tot ongeveer 200.000", "Van 1.000 tot ongeveer 50.000", "Van 50.000 tot ruim een miljoen mensen"], "Bijna een half miljoen mensen zat in 1935 zonder werk."], ["H2", "Welke werklozen kregen een steunuitkering?", ["Werklozen van 21 tot 60 jaar, buiten hun schuld werkloos", "Alle werklozen, ook als ze zelf ontslag hadden genomen", "Alleen werklozen die lid waren van een vakbond", "Alleen werklozen ouder dan 65 jaar met jonge kinderen"], "Slechts de helft van alle werklozen kon gebruikmaken van de steun."], ["H2", "Waarom moesten werklozen elke dag stempelen?", ["Om te voorkomen dat ze stiekem bijverdienden", "Om hun uitkering op te halen bij de bank", "Om te laten zien dat ze naar school gingen", "Om zich aan te melden voor de verkiezingen"], "Ook controleerde de gemeente of ze geen luxe spullen hadden."], ["H2", "Wat is werkverschaffing?", ["Werk dat de overheid voor werklozen regelt", "Een uitkering voor werklozen in de crisis", "Werk dat bedrijven naar het buitenland halen", "Een cursus om een nieuw beroep te leren"], "Bijvoorbeeld het aanleggen van kanalen en dijken, zoals de Afsluitdijk."], ["H2", "Waarom werden er bij werkverschaffing vaak bewust geen graafmachines gebruikt?", ["Zo konden zo veel mogelijk werklozen werken", "Graafmachines bestonden toen nog niet", "De overheid had geen geld voor brandstof", "De grond was te zacht voor zware machines"], "Hoe meer handwerk, hoe meer werklozen aan de slag konden."], ["H2", "Waarom gebruikten veel mensen de extra hulp voor kleding en schoenen liever niet?", ["Iedereen zag aan de stempel dat ze werkloos waren", "De kleding was veel te duur om zomaar aan te vragen", "De schoenen pasten bijna nooit goed", "De hulp was alleen voor mensen boven de 65"], "Ze vonden het vernederend."], ["H2", "Wat was de aanpassingspolitiek van premier Colijn?", ["De uitgaven aanpassen aan de lagere inkomsten", "De lonen en uitkeringen juist flink verhogen", "De Nederlandse munt minder waard maken", "Alle fabrieken in handen van de staat brengen"], "De regering bezuinigde op salarissen en steunuitkeringen."], ["H2", "Waarom nam de export in de jaren dertig toch niet toe?", ["Andere landen verlaagden de waarde van hun munt", "Nederland verbood de verkoop aan het buitenland", "Andere landen kochten alleen Nederlandse kaas", "De haven van Rotterdam was in die tijd gesloten"], "Daardoor waren Nederlandse producten duurder dan buitenlandse."], ["H2", "Waartegen kwamen de mensen in de Jordaan in 1934 in opstand?", ["Tegen de verlaging van de steunuitkering", "Tegen de komst van de Afsluitdijk", "Tegen het algemeen kiesrecht voor vrouwen", "Tegen de bouw van nieuwe woningen"], "Het leger beëindigde de rellen; vijf mensen kwamen om."], ["H2", "Wat stond er in het Plan van de Arbeid van de SDAP?", ["De overheid moet geld uitgeven om de crisis op te lossen", "De overheid moet nog veel meer gaan bezuinigen op alles", "De overheid moet de democratie helemaal afschaffen", "De overheid moet zich niet met de economie bemoeien"], "Meer werkverschaffing en hogere lonen zouden de arbeiders meer te besteden geven."], ["H3", "Wat regelde de Noodwet Ouderdomsvoorziening van 1947?", ["Een uitkering voor alle mensen van 65 jaar en ouder", "Een uitkering voor alle werklozen tussen 21 en 60", "Een minimumloon voor alle werkende jongeren", "Een woning voor iedere familie na de oorlog"], "Veel ouderen hadden door de crisis en de oorlog geen spaargeld meer."], ["H3", "Wat is het harmoniemodel?", ["Regering, werkgevers en werknemers werken samen", "De vakbonden bepalen alleen de hoogte van de lonen", "Werkgevers en de kerk verdelen samen de uitkeringen", "Het parlement beslist alleen over de prijzen"], "Ze maakten samen afspraken over lonen, prijzen en sociale wetten."], ["H3", "Waarom werden de lonen na de oorlog laag gehouden?", ["Zodat producten goedkoop waren voor het buitenland", "Zodat werknemers meer belasting zouden betalen", "Zodat er minder mensen in fabrieken wilden werken", "Zodat de uitkeringen hoger konden worden"], "Dat heet de geleide loonpolitiek; de export steeg."], ["H3", "Wat is een verzorgingsstaat?", ["De overheid geeft een minimuminkomen aan wie dat nodig heeft", "De overheid zorgt alleen voor de orde en de veiligheid", "De familie zorgt voor iedereen die zelf niet meer kan werken", "De kerk zorgt voor alle armen, zieken en ouderen in het land"], "Dat minimuminkomen heet sociale zekerheid."], ["H3", "Voor wie was de AOW uit 1957 bedoeld?", ["Voor iedereen vanaf 65 jaar", "Voor iedereen die werkloos werd", "Voor wie door ziekte niet kon werken", "Voor gezinnen met een laag inkomen"], "Inmiddels is de AOW-leeftijd 67 jaar."], ["H3", "Welke wet verving in 1965 de Armenwet van 1854?", ["De Algemene Bijstandswet (ABW)", "De Algemene Ouderdomswet (AOW)", "De Werkloosheidswet (WW)", "De Woningwet"], "De ABW gold voor iedereen die niet binnen een andere regeling viel."], ["H3", "Voor wie was de WAO uit 1967?", ["Voor wie langer dan een jaar niet kon werken door ziekte", "Voor iedereen die ouder was dan 65 jaar en niet werkte", "Voor jongeren die nog geen werk hadden gevonden", "Voor vrouwen die na een scheiding alleen woonden"], "Bijvoorbeeld door ziekte of een ongeval."], ["H3", "Waarom wordt Willem Drees de vader van de verzorgingsstaat genoemd?", ["Hij kwam in 1947 met de Noodwet Ouderdomsvoorziening", "Hij bedacht in zijn eentje alle sociale wetten", "Hij betaalde de uitkeringen uit eigen zak", "Hij schreef in 1935 zelf het hele Plan van de Arbeid"], "Hij heeft niet alle wetten bedacht, maar speelde een grote rol."], ["H3", "Wat was de loongolf halverwege de jaren zestig?", ["Een sterke stijging van de lonen", "Een sterke daling van de lonen", "Een staking om de lonen te verlagen", "Een verbod op hogere lonen"], "De lonen stegen soms wel met tien procent."], ["H3", "Waarom was de ontdekking van aardgas in 1959 een meevaller voor de overheid?", ["De overheid verdiende veel geld met de verkoop", "Er waren daardoor geen uitkeringen meer nodig", "De lonen konden daardoor laag blijven", "Iedereen kreeg daardoor gratis energie"], "Dat geld hielp om de verzorgingsstaat te betalen."], ["H3", "Wat kwam er in 1983 in de Grondwet?", ["De sociale grondrechten", "Het algemeen kiesrecht", "Het verbod op kinderarbeid", "De AOW-leeftijd van 67 jaar"], "De overheid moet zich inzetten voor voldoende banen en goede woningen."], ["H4", "Wat is vergrijzing?", ["Het aantal ouderen in de bevolking neemt toe", "Het aantal kinderen in de bevolking neemt toe", "Het aantal werklozen in de bevolking neemt af", "Het aantal uitkeringen in Nederland neemt af"], "Daardoor moeten er meer AOW-uitkeringen betaald worden."], ["H4", "Waarom kwamen er steeds meer mensen in de WAO?", ["Werkgevers lieten overtollig personeel afkeuren", "De WAO-uitkering werd steeds verder verlaagd", "Er kwamen steeds strengere keuringen door artsen", "Mensen werden door de WAO sneller weer gezond"], "Er was weinig toezicht of iemand echt niet meer kon werken."], ["H4", "Hoe veranderde de mening over een uitkering tussen de jaren vijftig en zeventig?", ["Eerst een schande, later een recht", "Eerst een recht, later een schande", "Altijd al een schande voor iedereen", "Altijd al heel normaal voor iedereen"], "In de jaren zeventig vonden mensen dat ze er recht op hadden."], ["H4", "Wat deed de regering-Lubbers in de jaren tachtig met de uitkeringen?", ["Ze verlaagde de uitkeringen", "Ze verhoogde de uitkeringen", "Ze schafte alle uitkeringen af", "Ze koppelde ze weer aan de lonen"], "Dit leidde regelmatig tot demonstraties."], ["H4", "Wat werd er afgesproken in het Akkoord van Wassenaar?", ["De lonen groeien niet mee, in ruil voor kortere werktijd", "De lonen stijgen elk jaar met precies tien procent", "De vakbonden krijgen het recht om de wetten te maken", "De AOW-leeftijd gaat in één keer omhoog naar 67"], "Een afspraak tussen regering, vakbonden en werkgevers."], ["H4", "Wat doet het UWV sinds 2002?", ["Het controleert alle aanvragen voor een uitkering", "Het betaalt de lonen van alle ambtenaren", "Het bouwt woningen voor mensen met een uitkering", "Het bepaalt hoeveel de huren mogen stijgen"], "Mensen met een uitkering moeten ook vaker solliciteren."], ["H4", "Waarnaar kijkt de WIA uit 2006?", ["Naar wat iemand bij ziekte nog wél kan", "Naar hoe oud iemand is bij zijn ziekte", "Naar hoeveel spaargeld iemand nog heeft", "Naar welke partij iemand heeft gestemd"], "Wie weer kan werken, wordt daarvoor beloond."], ["H4", "Wat is een participatiesamenleving?", ["Mensen nemen zelf verantwoordelijkheid voor hun leven", "De overheid regelt alles voor iedereen die hulp nodig heeft", "De kerk zorgt weer voor alle armen in de stad", "Werkgevers betalen alle uitkeringen van hun personeel"], "Ouderen moeten bijvoorbeeld zo lang mogelijk thuis wonen."], ["H4", "Waarom zijn de vakbonden niet blij met flexwerk?", ["Flexwerkers missen de zekerheid van een vast contract", "Flexwerkers verdienen veel meer dan vaste werknemers", "Flexwerkers mogen geen lid worden van de vakbond", "Flexwerkers werken altijd langer dan acht uur"], "Ze zijn vaker werkloos en hebben een lager inkomen."], ["H4", "Waarom verplaatsten bedrijven hun fabrieken naar het buitenland?", ["Daar waren de lonen lager", "Daar waren de regels strenger", "Daar was meer aardgas te vinden", "Daar woonden meer flexwerkers"], "In Nederland stegen de loonkosten vanaf de jaren zestig snel."], ["H4", "Welke partijen willen de verzorgingsstaat zo veel mogelijk in stand houden?", ["De SP en de PVV", "De VVD en het CDA", "D66 en GroenLinks", "De PvdA en de VVD"], "Zij willen besparen op regels en papierwerk, de bureaucratie."], ["H4", "Waarover zijn alle politieke partijen het eens?", ["Wie door ziekte, werkloosheid of ouderdom niet kan werken, krijgt steun", "De uitkeringen moeten allemaal zo snel mogelijk verdwijnen", "De AOW-leeftijd moet weer terug naar 65 jaar, voor iedereen in Nederland", "De overheid moet zich helemaal niet met uitkeringen bemoeien"], "Niemand wil terug naar de negentiende eeuw."]];
+/* ---------- hulpjes ---------- */
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+
+/* ontwikkelaarscontrole meerkeuze: exact 4 opties, lengteverhouding <= 1,5 (alleen console, nooit zichtbaar voor leerlingen) */
+function mcCheck(list,label){list.forEach(function(q,n){var o=q[2];if(!o||o.length!==4){console.warn("[meerkeuze] "+label+" #"+n+": "+(o&&o.length)+" opties, moet 4 zijn");return;}
+  var ln=o.map(function(x){return x.length;}),mx=Math.max.apply(null,ln),mn=Math.min.apply(null,ln);
+  if(mx>20&&mx/mn>1.5)console.warn("[meerkeuze] "+label+" #"+n+": langste antwoord is "+(mx/mn).toFixed(2)+"x het kortste");});}
+mcCheck(BANK,"quizbank");
+function parFilters(cur,attr){return ["alle"].concat(PARS.map(function(p){return p.id;})).map(function(f){return '<button '+attr+'="'+f+'" class="'+(f===cur?"on":"")+'"'+(P(f)?' title="'+P(f).t+'"':'')+'>'+selLabel(f)+'</button>';}).join("");}
+
+/* ---------- tijdlijn ---------- */
+var TL=[["H1", 1848, "1848", "De liberalen zitten in de regering"], ["H1", 1854, "1854", "De Armenwet"], ["H1", 1870, "na 1870", "In veel steden komen fabrieken"], ["H1", 1874, "1874", "Het Kinderwetje van Van Houten"], ["H1", 1887, "1887", "Parlementaire enquête naar de omstandigheden in fabrieken"], ["H1", 1903, "1903", "De grote spoorwegstaking"], ["H1", 1917, "1917", "Algemeen kiesrecht voor mannen"], ["H1", 1919, "1919", "Algemeen kiesrecht voor vrouwen"], ["H2", 1929, "24 oktober 1929", "Zwarte Donderdag: de beurskrach in New York"], ["H2", 1931, "1931", "Het Nationaal Crisis Comité wordt opgericht"], ["H2", 1932, "1932", "De Afsluitdijk: het bekendste werkverschaffingsproject"], ["H2", 1934, "1934", "Colijn kiest voor de aanpassingspolitiek; de Jordaanrellen"], ["H2", 1935, "1935", "De SDAP komt met het Plan van de Arbeid"], ["H2", 1940, "mei 1940", "Nederland wordt bezet door nazi-Duitsland"], ["H3", 1947, "1947", "De Noodwet Ouderdomsvoorziening"], ["H3", 1948, "1948", "Willem Drees wordt minister-president"], ["H3", 1949, "1949", "De Werkloosheidswet (WW)"], ["H3", 1957, "1957", "De Algemene Ouderdomswet (AOW)"], ["H3", 1959, "1959", "Er wordt aardgas ontdekt"], ["H3", 1965, "1965", "De Algemene Bijstandswet (ABW)"], ["H3", 1967, "1967", "De WAO"], ["H3", 1983, "1983", "Sociale grondrechten in de Grondwet"], ["H4", 1982, "1982", "Ruud Lubbers wordt minister-president"], ["H4", 2002, "2002", "Het UWV controleert alle aanvragen voor een uitkering"], ["H4", 2006, "2006", "De WAO wordt de WIA"], ["H4", 2012, "2012", "De AOW-leeftijd wordt verhoogd naar 67"], ["H4", 2015, "2015", "De Wet werk en zekerheid"]];
+var tlPar="alle",ts={good:0,total:0,streak:0},tset=[],tpick=[],tdone=false,tlCard=document.getElementById("tlCard");
+function tlScore(){document.getElementById("tlScore").innerHTML="Goed: <b>"+ts.good+"</b> van "+ts.total+" &nbsp;·&nbsp; Reeks: <b>"+ts.streak+"</b>";}
+function newT(){
+  document.getElementById("tlFilters").innerHTML=parFilters(tlPar,"data-tl");
+  var pool=shuffle(TL.filter(function(e){return inSel(e[0],tlPar);})),seen={},n=tlPar==="alle"?5:4;tset=[];
+  pool.forEach(function(e){if(tset.length<n&&!seen[e[1]]){seen[e[1]]=1;tset.push(e);}});
+  tpick=[];tdone=false;drawT();tlScore();
+}
+function drawT(){
+  tlCard.innerHTML='<p class="qq">Wat gebeurde eerst? Tik ze aan in de goede volgorde.</p><div class="tl">'+tset.map(function(e,i){var k=tpick.indexOf(i);
+    return '<button class="tlitem'+(k>=0?" on":"")+'" data-ti="'+i+'"'+(tdone?" disabled":"")+'><span class="nr">'+(k>=0?k+1:"")+'</span>'+tag(e[0])+'<span>'+e[3]+'</span>'+(tdone?'<span class="yr">'+e[2]+'</span>':'')+'</button>';}).join("")+'</div><div id="tlFb"></div>';
+}
+function checkT(){
+  var ok=true;tpick.forEach(function(ti,k){if(k>0&&tset[ti][1]<tset[tpick[k-1]][1])ok=false;});
+  ts.total++;if(ok){ts.good++;ts.streak++;}else ts.streak=0;tdone=true;drawT();
+  var sorted=tset.map(function(e,i){return i;}).sort(function(a,b){return tset[a][1]-tset[b][1];});
+  tlCard.querySelectorAll(".tlitem").forEach(function(b){var i=+b.dataset.ti;b.classList.add(tpick.indexOf(i)===sorted.indexOf(i)?"right":"wrong");});
+  document.getElementById("tlFb").innerHTML='<div class="fb '+(ok?"ok":"no")+'">'+(ok?"✓ Helemaal goed! ":"✗ Niet helemaal. ")+'De goede volgorde:<span class="ordl">'+sorted.map(function(i,k){return (k+1)+". "+tset[i][2]+" · "+tset[i][3];}).join("\n")+'</span></div><div class="row" style="margin-top:12px"><button class="btn" id="tlNext">Nieuwe tijdlijn →</button></div>';
+  if(ok&&ts.streak&&ts.streak%5===0)confetti();tlScore();
+}
+tlCard.addEventListener("click",function(e){
+  if(e.target.closest("#tlNext")){newT();return;}
+  var b=e.target.closest("[data-ti]");if(!b||tdone)return;var i=+b.dataset.ti,k=tpick.indexOf(i);
+  if(k>=0)tpick.splice(k,1);else tpick.push(i);drawT();
+  if(tpick.length===tset.length)setTimeout(checkT,250);
+});
+document.getElementById("tlFilters").addEventListener("click",function(e){var f=e.target.dataset.tl;if(f){tlPar=f;newT();}});
+newT();
+
+/* ---------- oorzaak en gevolg ---------- */
+var CG=[["H1", "De armoede in Nederland neemt toe", "De liefdadigheidsinstellingen kunnen niet meer alle armen helpen"], ["H1", "Veel mensen trekken naar de stad om in de fabriek te werken", "Er worden snel slechte en goedkope arbeiderswoningen gebouwd"], ["H1", "Woningen hebben geen riolering en geen waterleiding", "Besmettelijke ziekten zoals cholera komen veel voor"], ["H1", "Een zieke arbeider krijgt geen loon", "Er is minder eten en geen geld voor een dokter"], ["H1", "Protesteren is gevaarlijk, want je kunt ontslagen worden", "De meeste arbeiders protesteren eerst niet"], ["H1", "Ook de rijken lopen gevaar door de ziekten in de arbeiderswijken", "Steeds meer mensen vinden dat er iets moet gebeuren"], ["H2", "De aandelenkoersen storten in op Zwarte Donderdag", "Veel Amerikaanse bedrijven en banken gaan failliet"], ["H2", "Amerikanen hebben geen geld meer voor Europese producten", "Ook in Nederland moeten bedrijven en fabrieken sluiten"], ["H2", "De overheid krijgt minder belasting binnen", "Colijn bezuinigt op lonen en steunuitkeringen"], ["H2", "Andere landen verlagen de waarde van hun munt", "Nederlandse producten zijn duurder en de export groeit niet"], ["H2", "De steunuitkering wordt verlaagd", "In 1934 breken de Jordaanrellen uit"], ["H3", "Ouderen hebben door de crisis en de oorlog geen spaargeld meer", "Er komt in 1947 de Noodwet Ouderdomsvoorziening"], ["H3", "De lonen worden laag gehouden", "Nederlandse producten zijn goedkoop en de export stijgt"], ["H3", "De geleide loonpolitiek wordt afgeschaft", "De lonen stijgen sterk: de loongolf"], ["H3", "De lonen stijgen sterk", "Nederland wordt een consumptiemaatschappij"], ["H4", "Mensen worden ouder en krijgen minder kinderen", "Er moeten meer AOW-uitkeringen betaald worden door minder werkenden"], ["H4", "Werkgevers laten overtollig personeel afkeuren", "Steeds meer mensen komen in de WAO"], ["H4", "De verzorgingsstaat wordt te duur", "De regeringen-Lubbers en -Kok verlagen de uitkeringen"], ["H4", "De loonkosten in Nederland stijgen snel", "Bedrijven verplaatsen fabrieken naar lagelonenlanden"]];
+var cgPar="alle",cs={good:0,total:0,streak:0},cq=null,cgCard=document.getElementById("cgCard"),lastC=-1;
+function cgScore(){document.getElementById("cgScore").innerHTML="Goed: <b>"+cs.good+"</b> van "+cs.total+" &nbsp;·&nbsp; Reeks: <b>"+cs.streak+"</b>";}
+function newC(){
+  document.getElementById("cgFilters").innerHTML=parFilters(cgPar,"data-cg");
+  var pool=CG.map(function(_,i){return i;}).filter(function(i){return inSel(CG[i][0],cgPar);}),i;
+  do{i=pick(pool);}while(pool.length>1&&i===lastC);lastC=i;
+  var rev=Math.random()<0.35,ask=rev?1:2,show=rev?2:1;
+  var same=CG.map(function(_,j){return j;}).filter(function(j){return j!==i&&CG[j][0]===CG[i][0];}),other=CG.map(function(_,j){return j;}).filter(function(j){return j!==i&&CG[j][0]!==CG[i][0];});
+  var wrong=shuffle(same).slice(0,2).concat(shuffle(other).slice(0,1));
+  cq={i:i,ask:ask,opts:shuffle([i].concat(wrong))};
+  cgCard.innerHTML='<div class="qtop">'+tag(CG[i][0])+'</div><div class="cause"><small>'+(rev?"Gevolg":"Oorzaak")+'</small>'+CG[i][show]+'</div><div class="arrow">'+(rev?"↑":"↓")+'</div><p class="qq">'+(rev?"Wat was de oorzaak?":"Wat is het gevolg?")+'</p><div class="opts">'+cq.opts.map(function(j,n){return '<button class="opt" data-cj="'+j+'"><span class="ol">'+"ABCD"[n]+'</span>'+CG[j][ask]+'</button>';}).join("")+'</div><div id="cgFb"></div>';
+  cgScore();
+}
+cgCard.addEventListener("click",function(e){
+  if(e.target.closest("#cgNext")){newC();return;}
+  var b=e.target.closest("[data-cj]");if(!b||b.disabled)return;var ok=+b.dataset.cj===cq.i;
+  cs.total++;if(ok){cs.good++;cs.streak++;}else cs.streak=0;
+  cgCard.querySelectorAll(".opt").forEach(function(x){x.disabled=true;if(+x.dataset.cj===cq.i)x.classList.add("right");else if(x===b)x.classList.add("wrong");});
+  var c=CG[cq.i];
+  document.getElementById("cgFb").innerHTML='<div class="fb '+(ok?"ok":"no")+'">'+(ok?"✓ Goed! ":"✗ Helaas. ")+'<b>'+c[1]+'</b> → <b>'+c[2]+'</b></div><div class="row" style="margin-top:12px"><button class="btn" id="cgNext">Volgende →</button></div>';
+  if(ok&&cs.streak&&cs.streak%5===0)confetti();cgScore();
+});
+document.getElementById("cgFilters").addEventListener("click",function(e){var f=e.target.dataset.cg;if(f){cgPar=f;newC();}});
+newC();
+
+S.qseen=S.qseen||{};S.qwrong=S.qwrong||{};
+var quizPar="alle",quizMode="mix",qs=[],qi=0,qGood=0,qWrongList=[],qCard=document.getElementById("qCard");
+function poolFor(par){return BANK.map(function(_,i){return i;}).filter(function(i){return inSel(BANK[i][0],par);});}
+function wrongIds(){return Object.keys(S.qwrong).map(Number).filter(function(i){return BANK[i];});}
+function pickQuiz(){
+  if(quizMode==="fouten"){var w=shuffle(wrongIds());return w.slice(0,10);}
+  var pool=poolFor(quizPar),unseen=pool.filter(function(i){return !S.qseen[i];});
+  if(unseen.length<10){pool.forEach(function(i){delete S.qseen[i];});unseen=pool.slice();}
+  var pick=shuffle(pool.filter(function(i){return S.qwrong[i];})).slice(0,2);
+  var rest=shuffle(unseen.filter(function(i){return pick.indexOf(i)<0;}));
+  if(quizPar==="alle"||quizPar==="H2"){
+    var per={};PARS.forEach(function(p){per[p.id]=rest.filter(function(i){return BANK[i][0]===p.id;});});
+    var order=shuffle(PARS.map(function(p){return p.id;})),k=0;
+    while(pick.length<10&&k<400){var arr=per[order[k%order.length]];if(arr.length)pick.push(arr.shift());k++;}
+  }
+  rest.forEach(function(i){if(pick.length<10&&pick.indexOf(i)<0)pick.push(i);});
+  return shuffle(pick);
+}
+function quizHome(){
+  var seen=Object.keys(S.qseen).length,wr=wrongIds().length;
+  document.getElementById("qScore").innerHTML="Vraagbank: <b>"+BANK.length+"</b> vragen &nbsp;·&nbsp; Al gezien: <b>"+Math.min(seen,BANK.length)+"</b> &nbsp;·&nbsp; Nog te oefenen: <b>"+wr+"</b>";
+  qCard.innerHTML='<div class="qhome"><div class="qbig">⚡</div><h3>Snelle quiz</h3><p class="muted">Elke ronde krijg je 10 nieuwe vragen uit de vraagbank. Vragen die je fout had, komen later terug.</p>'+
+   '<div class="filters" style="justify-content:center">'+["alle"].concat(PARS.map(function(p){return p.id;})).map(function(f){return '<button data-qpar="'+f+'" class="'+(f===quizPar?"on":"")+'"'+(P(f)?' title="'+P(f).t+'"':'')+'>'+selLabel(f)+'</button>';}).join("")+'</div>'+
+   '<div class="row" style="justify-content:center;margin-top:8px"><button class="btn" id="qStart">Start 10 vragen</button>'+(wr?'<button class="btn ghost" id="qWrong">Oefen mijn fouten ('+wr+')</button>':'')+'</div></div>';
+}
+function startQuiz(mode){quizMode=mode||"mix";qs=pickQuiz();qi=0;qGood=0;qWrongList=[];if(!qs.length){quizHome();return;}nextQ();}
+function qScore(){document.getElementById("qScore").innerHTML="Vraag <b>"+Math.min(qi+1,qs.length)+"</b> van "+qs.length+" &nbsp;·&nbsp; Goed: <b>"+qGood+"</b>"+(quizMode==="fouten"?" &nbsp;·&nbsp; <span style=\"color:var(--berry)\">foutenronde</span>":"");}
+function nextQ(){var q=BANK[qs[qi]],opts=shuffle(q[2].map(function(t,i){return{t:t,ok:i===0};}));
+  qCard.innerHTML='<div class="qtop">'+tag(q[0])+'<div class="qprog"><i style="width:'+(qi/qs.length*100)+'%"></i></div></div><p class="qq" style="margin-top:10px">'+q[1]+'</p><div class="opts">'+opts.map(function(o,n){return '<button class="opt" data-ok="'+(o.ok?1:0)+'"><span class="ol">'+"ABCD"[n]+'</span>'+o.t+'</button>';}).join("")+'</div><div id="qFb"></div>';qScore();}
+qCard.addEventListener("click",function(e){
+  var pb=e.target.closest("[data-qpar]");if(pb){quizPar=pb.dataset.qpar;quizHome();return;}
+  if(e.target.closest("#qStart")){startQuiz("mix");return;}
+  if(e.target.closest("#qWrong")){startQuiz("fouten");return;}
+  if(e.target.closest("#qHome")){quizHome();return;}
+  var b=e.target.closest(".opt");
+  if(b&&!b.disabled){var ok=b.dataset.ok==="1",id=qs[qi];S.qseen[id]=1;
+    if(ok){qGood++;delete S.qwrong[id];}else{S.qwrong[id]=1;qWrongList.push(id);}save();
+    qCard.querySelectorAll(".opt").forEach(function(x){x.disabled=true;if(x.dataset.ok==="1")x.classList.add("right");else if(x===b)x.classList.add("wrong");});
+    document.getElementById("qFb").innerHTML='<div class="fb '+(ok?"ok":"no")+'">'+(ok?"✓ Goed! ":"✗ Helaas. ")+BANK[id][3]+'</div><div class="row" style="margin-top:12px"><button class="btn" id="qNext">'+(qi<qs.length-1?"Volgende vraag →":"Bekijk je score")+'</button></div>';qScore();return;}
+  if(e.target.closest("#qNext")){qi++;if(qi<qs.length)nextQ();else endQuiz();}
+});
+function endQuiz(){
+  var n=qs.length,msg=qGood>=n*0.9?"Top! Jij bent klaar voor de toets. 🏆":qGood>=n*0.7?"Goed bezig! Kijk nog even naar je fouten.":qGood>=n*0.5?"Op de goede weg. Oefen je fouten nog eens.":"Nog even oefenen! Begin bij de begrippenkaarten.";
+  if(qGood>=n*0.9)confetti();
+  document.getElementById("qScore").innerHTML="Klaar!";
+  var rev=qWrongList.length?'<div class="review"><h3>Dit ging nog mis</h3>'+qWrongList.map(function(i){return '<div class="rv">'+tag(BANK[i][0])+' <b>'+BANK[i][1]+'</b><br><span class="muted">Goed antwoord:</span> '+BANK[i][2][0]+'</div>';}).join("")+'</div>':'';
+  var wr=wrongIds().length;
+  qCard.innerHTML='<div class="done-card"><div class="big">'+qGood+' / '+n+'</div><p>'+msg+'</p><div class="row" style="justify-content:center"><button class="btn" id="qStart">Nieuwe 10 vragen</button>'+(wr?'<button class="btn ghost" id="qWrong">Oefen mijn fouten ('+wr+')</button>':'')+'<button class="btn ghost" id="qHome">Kies paragraaf</button></div></div>'+rev;
+}
+quizHome();
+
+/* ---------- confetti ---------- */
+function confetti(){var cols=["#c2484d","#f2b134","#2f8f86","#1f5f4e","#ff8d90","#ffc9c8"],box=document.createElement("div");box.className="confetti";
+  for(var i=0;i<90;i++){var p=document.createElement("i");p.style.left=Math.random()*100+"%";p.style.background=cols[i%cols.length];p.style.animationDelay=(Math.random()*0.6)+"s";p.style.animationDuration=(1.6+Math.random()*1.2)+"s";p.style.transform="rotate("+(Math.random()*360)+"deg)";box.appendChild(p);}
+  document.body.appendChild(box);setTimeout(function(){box.remove();},3400);}
+
+/* ---------- games ---------- */
+var SORT=[{"a": "Negentiende eeuw", "b": "Verzorgingsstaat", "A": [["⛪", "Hulp van de kerk"], ["🚪", "Huisbezoek door rijke burgers"], ["🏚️", "Gemeente helpt alleen in uiterste nood"], ["🛡️", "Nachtwakersstaat"]], "B": [["👵", "AOW voor iedereen vanaf 65"], ["💶", "Bijstand via de ABW"], ["🩹", "WAO bij langdurige ziekte"], ["📜", "Sociale grondrechten in de Grondwet"]]}, {"a": "Aanpassingspolitiek (Colijn)", "b": "Plan van de Arbeid (SDAP)", "A": [["✂️", "Bezuinigen op uitkeringen"], ["📉", "Lonen omlaag"], ["⚖️", "Uitgaven aanpassen aan inkomsten"]], "B": [["🏗️", "Meer werkverschaffing"], ["📈", "Hogere lonen"], ["💸", "Overheid geeft juist geld uit"]]}, {"a": "Probleem van de verzorgingsstaat", "b": "Oplossing", "A": [["👴", "Vergrijzing"], ["📈", "Meer mensen in de WAO"], ["🤷", "Uitkering zonder schaamte aanvragen"], ["🔗", "Uitkeringen gekoppeld aan de lonen"]], "B": [["✂️", "Uitkeringen verlagen"], ["🔍", "Strengere controles door het UWV"], ["🩺", "Herkeuring en de WIA"], ["6️⃣7️⃣", "AOW-leeftijd naar 67"]]}, {"a": "Crisis jaren dertig", "b": "Na 1945", "A": [["🏦", "Zwarte Donderdag"], ["🖋️", "Stempelen voor steun"], ["🧱", "Afsluitdijk als werkverschaffing"]], "B": [["🤝", "Harmoniemodel"], ["🇺🇸", "Marshallplan"], ["👴", "Noodwet Ouderdomsvoorziening"]]}];
+var G={mode:null};
+function hs(k){try{return +(localStorage.getItem("gs3-"+k)||0);}catch(e){return 0;}}
+function setHs(k,v){try{localStorage.setItem("gs3-"+k,v);}catch(e){}}
+var gWrap=document.getElementById("gWrap");
+function gamesHome(){
+  stopSwipe();MEM=null;
+  gWrap.innerHTML='<div class="gpick">'+
+   '<button class="gtile" data-game="swipe"><span class="gico">👆</span><b>Swipe &amp; Scoor</b><span>Veeg elk kaartje naar de juiste kant. Hoe meer goed op rij, hoe meer punten!</span><em>Highscore: '+hs("swipe")+'</em></button>'+
+   '<button class="gtile" data-game="memory"><span class="gico">🧠</span><b>Begrippen-memory</b><span>Zoek bij elk begrip de juiste uitleg. Lukt het in zo weinig mogelijk beurten?</span><em>Beste: '+(hs("memory")?hs("memory")+' beurten':'nog geen')+'</em></button>'+
+  '<a class="gtile" href="doeboek.html" style="text-decoration:none;color:inherit"><span class="gico">📘</span><b>Doe-boek H4</b><span>Het hele doe-boek online: 48 vragen in 5 blokken, met controle en AI-feedback. Zonder downloaden.</span></a><a class="gtile" href="../kaart.html" style="text-decoration:none;color:inherit"><span class="gico">🗺️</span><b>De crisis op de kaart</b><span>Klik op New York, Rotterdam en Nederland, schuif van 1929 naar 1935 en beantwoord vragen die de AI nakijkt.</span></a><a class="gtile" href="../beeldquiz.html" style="text-decoration:none;color:inherit"><span class="gico">🖼️</span><b>Beeldquiz</b><span>Welk moment uit de les zie je? Raad het bij elk beeld.</span></a>'+
+  '</div>';
+}
+gWrap.addEventListener("click",function(e){var t=e.target.closest("[data-game]");if(t){if(t.dataset.game==="swipe")startSwipe();else startMemory();}
+  if(e.target.closest("#gBack"))gamesHome();
+  if(e.target.closest("#gAgain")){if(G.mode==="swipe")startSwipe();else startMemory();}
+});
+
+/* --- Swipe & Scoor --- */
+var SW=null;
+function stopSwipe(){if(SW&&SW.timer)clearInterval(SW.timer);SW=null;}
+function startSwipe(){
+  stopSwipe();G.mode="swipe";
+  var rounds=shuffle(SORT);
+  SW={time:60,score:0,combo:0,mult:1,right:0,wrong:0,round:0,rounds:rounds,queue:[],cur:null,miss:[]};
+  gWrap.innerHTML='<div class="arena" id="arena"><div class="hud"><span>⏱ <b id="swT">60</b></span><span class="lvl" id="swL">Level 1</span><span>Score <b id="swS">0</b></span><span class="mult" id="swM">x1</span><button class="gstop" id="gBack" aria-label="Stoppen">✕</button></div>'+
+   '<div class="tbar"><i id="swBar"></i></div>'+
+   '<div class="zones"><button class="zone left" id="zL"><span>◀</span><b id="zLt"></b></button><div class="deck" id="deck"></div><button class="zone right" id="zR"><b id="zRt"></b><span>▶</span></button></div>'+
+   '<div class="ghint">Veeg het kaartje naar links of rechts, of tik op een kant</div></div>';
+  nextRound();
+  SW.timer=setInterval(function(){SW.time--;drawHud();if(SW.time<=0)endSwipe();},1000);
+  document.getElementById("zL").addEventListener("click",function(){answer("A");});
+  document.getElementById("zR").addEventListener("click",function(){answer("B");});
+}
+function nextRound(){
+  var r=SW.rounds[SW.round%SW.rounds.length];SW.cat=r;
+  var items=shuffle(r.A.map(function(x){return [x,"A"];})).slice(0,4).concat(shuffle(r.B.map(function(x){return [x,"B"];})).slice(0,4));
+  SW.queue=shuffle(items);
+  document.getElementById("zLt").textContent=r.a;document.getElementById("zRt").textContent=r.b;
+  document.getElementById("swL").textContent="Level "+(SW.round+1);
+  var a=document.getElementById("arena");a.classList.remove("lvlup");void a.offsetWidth;a.classList.add("lvlup");
+  dealCard();
+}
+function dealCard(){
+  if(!SW)return;
+  if(!SW.queue.length){SW.round++;SW.time=Math.min(SW.time+5,99);nextRound();return;}
+  SW.cur=SW.queue.shift();
+  var d=document.getElementById("deck");
+  d.innerHTML='<div class="scard enter" id="scard"><span class="emo">'+SW.cur[0][0]+'</span><b>'+SW.cur[0][1]+'</b></div>';
+  bindDrag(document.getElementById("scard"));drawHud();
+}
+function drawHud(){if(!SW)return;document.getElementById("swT").textContent=Math.max(0,SW.time);document.getElementById("swS").textContent=SW.score;
+  document.getElementById("swM").textContent="x"+SW.mult;document.getElementById("swM").classList.toggle("hot",SW.mult>1);
+  document.getElementById("swBar").style.width=Math.min(100,SW.time/60*100)+"%";}
+function answer(side,fromDrag){
+  if(!SW||!SW.cur||SW.lock)return;SW.lock=true;
+  var card=document.getElementById("scard"),ok=side===SW.cur[1];
+  if(ok){SW.right++;SW.combo++;SW.mult=Math.min(4,1+Math.floor(SW.combo/3));SW.score+=10*SW.mult;}
+  else{SW.wrong++;SW.combo=0;SW.mult=1;SW.time=Math.max(0,SW.time-5);SW.miss.push([SW.cur[0][1],SW.cur[1]==="A"?SW.cat.a:SW.cat.b]);}
+  var z=document.getElementById(side==="A"?"zL":"zR");z.classList.add(ok?"good":"bad");setTimeout(function(){z.classList.remove("good","bad");},350);
+  card.classList.add(ok?"ok":"no");card.style.transition="transform .28s ease, opacity .28s";
+  card.style.transform="translateX("+(side==="A"?-420:420)+"px) rotate("+(side==="A"?-18:18)+"deg)";card.style.opacity="0";
+  if(!ok){var t=document.createElement("div");t.className="toast";t.textContent="Hoort bij: "+(SW.cur[1]==="A"?SW.cat.a:SW.cat.b);document.getElementById("arena").appendChild(t);setTimeout(function(){t.remove();},900);}
+  drawHud();
+  setTimeout(function(){SW&&(SW.lock=false);dealCard();},ok?260:520);
+}
+function bindDrag(el){
+  var x0=0,dx=0,down=false;
+  el.addEventListener("pointerdown",function(e){down=true;x0=e.clientX;dx=0;el.setPointerCapture(e.pointerId);el.style.transition="none";});
+  el.addEventListener("pointermove",function(e){if(!down)return;dx=e.clientX-x0;el.style.transform="translateX("+dx+"px) rotate("+(dx/18)+"deg)";
+    document.getElementById("zL").classList.toggle("near",dx<-50);document.getElementById("zR").classList.toggle("near",dx>50);});
+  function up(){if(!down)return;down=false;document.getElementById("zL").classList.remove("near");document.getElementById("zR").classList.remove("near");
+    if(Math.abs(dx)>80)answer(dx<0?"A":"B",true);else{el.style.transition="transform .2s";el.style.transform="";}}
+  el.addEventListener("pointerup",up);el.addEventListener("pointercancel",up);
+}
+document.addEventListener("keydown",function(e){if(!SW)return;if(e.key==="ArrowLeft")answer("A");if(e.key==="ArrowRight")answer("B");});
+function endSwipe(){
+  if(!SW)return;clearInterval(SW.timer);var s=SW,best=hs("swipe"),rec=s.score>best;if(rec)setHs("swipe",s.score);
+  var acc=s.right+s.wrong?Math.round(s.right/(s.right+s.wrong)*100):0;
+  if(rec&&s.score>0)confetti();
+  gWrap.innerHTML='<div class="gend"><div class="qbig">'+(rec?"🏆":"⏱")+'</div><h3>'+(rec?"Nieuwe highscore!":"Tijd is op!")+'</h3><div class="big">'+s.score+'</div><p class="muted">'+s.right+' goed · '+s.wrong+' fout · '+acc+'% raak · level '+(s.round+1)+(rec?'':' · highscore: '+best)+'</p>'+
+   '<div class="row" style="justify-content:center;margin-top:12px"><button class="btn" id="gAgain">Nog een keer</button><button class="btn ghost" id="gBack">Andere game</button></div>'+
+   (s.miss.length?'<div class="review"><h3>Even onthouden</h3>'+s.miss.slice(0,6).map(function(m){return '<div class="rv"><b>'+m[0]+'</b> → '+m[1]+'</div>';}).join("")+'</div>':'')+'</div>';
+  SW=null;
+}
+
+/* --- Begrippen-memory --- */
+var MEM=null;
+function startMemory(){
+  stopSwipe();G.mode="memory";
+  var pool=shuffle(CARDS.filter(function(c){return c[2].length<=92;})).slice(0,6),tiles=[];
+  pool.forEach(function(c,i){tiles.push({k:i,t:c[1],kind:"term",par:c[0]});tiles.push({k:i,t:c[2],kind:"def",par:c[0]});});
+  MEM={tiles:shuffle(tiles),open:[],moves:0,found:0,lock:false,t0:Date.now()};
+  gWrap.innerHTML='<div class="mhud"><span>Beurten: <b id="mMoves">0</b></span><span>Gevonden: <b id="mFound">0</b> / 6</span><button class="btn ghost" id="gBack" style="padding:6px 12px">Stoppen</button></div><div class="mgrid" id="mgrid">'+
+   MEM.tiles.map(function(t,i){return '<button class="mtile '+t.kind+'" data-i="'+i+'"><span class="back">?</span><span class="front">'+(t.kind==="term"?'<b>'+t.t+'</b>':t.t)+'</span></button>';}).join("")+'</div>';
+}
+gWrap.addEventListener("click",function(e){
+  var b=e.target.closest(".mtile");if(!b||!MEM||MEM.lock||b.classList.contains("open")||b.classList.contains("done"))return;
+  b.classList.add("open");MEM.open.push(b);
+  if(MEM.open.length===2){MEM.moves++;document.getElementById("mMoves").textContent=MEM.moves;
+    var a=MEM.tiles[MEM.open[0].dataset.i],c=MEM.tiles[MEM.open[1].dataset.i];
+    if(a.k===c.k&&a.kind!==c.kind){MEM.open.forEach(function(x){x.classList.add("done");});MEM.open=[];MEM.found++;document.getElementById("mFound").textContent=MEM.found;
+      if(MEM.found===6)setTimeout(endMemory,500);}
+    else{MEM.lock=true;MEM.open.forEach(function(x){x.classList.add("miss");});setTimeout(function(){MEM.open.forEach(function(x){x.classList.remove("open","miss");});MEM.open=[];MEM.lock=false;},950);}
+  }
+});
+function endMemory(){
+  var m=MEM.moves,best=hs("memory"),rec=!best||m<best;if(rec)setHs("memory",m);
+  var stars=m<=9?3:m<=13?2:1;confetti();
+  gWrap.innerHTML='<div class="gend"><div class="qbig">'+"⭐".repeat(stars)+'</div><h3>Alle 6 paren gevonden!</h3><div class="big">'+m+' beurten</div><p class="muted">'+(rec?"Nieuw record!":"Jouw record: "+best+" beurten")+'</p><div class="row" style="justify-content:center;margin-top:12px"><button class="btn" id="gAgain">Nog een keer</button><button class="btn ghost" id="gBack">Andere game</button></div></div>';
+  MEM=null;
+}
+gamesHome();
+
+/* ---------- leg uit (AI-nakijker) ---------- */
+var AI_URL="https://script.google.com/macros/s/AKfycbxkH4alzrbV7uJXjRbXAIHILrzQvlegxpeWD1yw9TCC_huhqs2wPEkBmEiXqf5YWuMiAA/exec" /* AI-nakijker (Gemini). Uitzetten: maak de URL leeg, dan valt Leg uit terug op luLocal. Staat ook publiek in de Google Site. */,LU_VAK="geschiedenis";
+function luInSel(p,f){return typeof inSel==="function"?inSel(p,f):(f==="alle"||p===f);}
+function luLab(f){return typeof selLabel==="function"?selLabel(f):(f==="alle"?"Alles":f);}
+var luPar="alle",luIdx=-1,luBusy=false,luS={goed:0,totaal:0},luCard=document.getElementById("luCard");
+var LU_STOP=" de het een en van in op te dat die is zijn met voor aan als om bij of door uit naar ook maar dan wat wie hoe je jij jouw je u ze zij hij wij we er niet geen meer minder kan kun moet wordt worden heeft hebben veel weinig alle alles iets deze dit dat waar wanneer welke zoals bijvoorbeeld per tot over onder tussen zonder wel nog al ";
+function luWords(t){return (t.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"").match(/[a-z0-9]+/g)||[]);}
+function luLocal(c,ans){
+  var key=[],seen={};luWords(c[2]).forEach(function(w){if(w.length>=4&&LU_STOP.indexOf(" "+w+" ")<0&&!seen[w]){seen[w]=1;key.push(w);}});
+  var aw=luWords(ans),hit=[],miss=[];
+  key.forEach(function(k){var stam=k.slice(0,Math.max(4,k.length-2));(aw.some(function(w){return w.indexOf(stam)===0;})?hit:miss).push(k);});
+  var f=key.length?hit.length/key.length:0;
+  return {oordeel:f>=0.6?"goed":f>=0.3?"bijna":"nognietgoed",goed:hit.length?"Je noemt: "+hit.slice(0,5).join(", ")+".":"",
+    mist:miss.length?"Kijk nog naar: "+miss.slice(0,4).join(", ")+".":"",fout:"",tip:"Vergelijk je antwoord met de uitleg hieronder.",lokaal:true};
+}
+function luScore(){document.getElementById("luScore").innerHTML="Helemaal goed: <b>"+luS.goed+"</b> van "+luS.totaal;}
+function luNew(){
+  document.getElementById("luFilters").innerHTML=["alle"].concat(PARS.map(function(p){return p.id;})).map(function(f){return '<button data-lu="'+f+'" class="'+(f===luPar?"on":"")+'"'+(P(f)?' title="'+P(f).t+'"':'')+'>'+luLab(f)+'</button>';}).join("");
+  var pool=CARDS.map(function(_,i){return i;}).filter(function(i){return luInSel(CARDS[i][0],luPar)&&CARDS[i][1].indexOf("→")<0;}),i;
+  do{i=pick(pool);}while(pool.length>1&&i===luIdx);luIdx=i;var c=CARDS[i];
+  luCard.innerHTML='<div class="qtop">'+tag(c[0])+'</div><p class="qq" style="margin-top:10px">Leg uit: <b>'+c[1]+'</b></p>'+
+    '<textarea id="luIn" maxlength="600" placeholder="Typ in je eigen woorden wat '+c[1].toLowerCase()+' betekent. Geef ook een voorbeeld."></textarea>'+
+    '<div class="row" style="margin-top:10px"><button class="btn" id="luCheck">Laat nakijken</button><button class="btn ghost" id="luSkip">Ander begrip</button></div><div id="luFb"></div>';
+  luScore();
+}
+function luShow(c,f,msg){
+  var lab={goed:"✓ Goed",bijna:"Bijna",nognietgoed:"Nog niet goed"}[f.oordeel]||"Bijna";
+  luS.totaal++;if(f.oordeel==="goed"){luS.goed++;S.known[luIdx]=1;save();}
+  document.getElementById("luFb").innerHTML='<div class="lubox '+f.oordeel+'"><span class="badge2 '+f.oordeel+'">'+lab+'</span>'+
+    (msg?'<p class="note">'+msg+'</p>':'')+
+    (f.goed?'<p><b>Goed:</b> '+esc(f.goed)+'</p>':'')+(f.mist?'<p><b>Mist nog:</b> '+esc(f.mist)+'</p>':'')+(f.fout?'<p><b>Klopt niet:</b> '+esc(f.fout)+'</p>':'')+(f.tip?'<p><b>Tip:</b> '+esc(f.tip)+'</p>':'')+
+    '<div class="model"><b>Uitleg uit de les:</b> '+c[2]+'<br><i>Voorbeeld: '+c[3]+'</i></div>'+
+    (f.lokaal?'<p class="note">Snelle controle op kernwoorden (zonder AI).</p>':'<p class="note">Nagekeken door AI. Twijfel je? Vraag het je docent.</p>')+
+    (f.oordeel==="goed"?'<p class="note">✓ Dit begrip staat nu op "gekend" bij Begrippen.</p>':'')+
+    '</div><div class="row" style="margin-top:12px"><button class="btn" id="luNext">Volgend begrip →</button>'+(f.oordeel!=="goed"?'<button class="btn ghost" id="luAgain">Verbeter je antwoord</button>':'')+'</div>';
+  luScore();
+}
+function esc(t){return String(t).replace(/[&<>"]/g,function(ch){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[ch];});}
+function luCheck(){
+  if(luBusy)return;var c=CARDS[luIdx],inp=document.getElementById("luIn"),ans=inp.value.trim();
+  if(ans.length<3){document.getElementById("luFb").innerHTML='<div class="fb mid">Typ eerst je uitleg.</div>';return;}
+  var btn=document.getElementById("luCheck");
+  if(!AI_URL){luShow(c,luLocal(c,ans));return;}
+  luBusy=true;btn.disabled=true;btn.textContent="Bezig met nakijken… (even geduld)";
+  var ctl=window.AbortController?new AbortController():null,t=setTimeout(function(){if(ctl)ctl.abort();},45000);
+  fetch(AI_URL,{method:"POST",body:JSON.stringify({vak:LU_VAK,begrip:c[1],uitleg:c[2],voorbeeld:c[3],antwoord:ans,paragraaf:c[0]+" "+(P(c[0])?P(c[0]).t:""),samenvatting:P(c[0])&&P(c[0]).sum||"",begrippen:CARDS.filter(function(x){return x[0]===c[0];}).map(function(x){return "- "+x[1]+": "+x[2];}).join("\n")}),signal:ctl?ctl.signal:undefined})
+   .then(function(r){return r.json();})
+   .then(function(f){if(f&&f.status==="ok")luShow(c,f);else luShow(c,luLocal(c,ans),(f&&f.melding)||"De AI kon nu niet nakijken.");})
+   .catch(function(){luShow(c,luLocal(c,ans),"De AI is nu niet bereikbaar.");})
+   .then(function(){clearTimeout(t);luBusy=false;btn.disabled=false;btn.textContent="Laat nakijken";});
+}
+document.getElementById("lab-leguit").addEventListener("click",function(e){
+  var f=e.target.closest("[data-lu]");if(f){luPar=f.dataset.lu;luNew();return;}
+  if(e.target.closest("#luCheck")){luCheck();return;}
+  if(e.target.closest("#luSkip")||e.target.closest("#luNext")){luNew();return;}
+  if(e.target.closest("#luAgain")){document.getElementById("luFb").innerHTML="";document.getElementById("luIn").focus();}
+});
+luNew();
+
+/* ---------- init ---------- */
+renderFlash();renderProgress();renderCheck();
+/* ---------- deep links: app.html#H2, #H3-lab, #toets, #films ---------- */
+function route(){var m=/^#(?:(H[1-4])-?)?(les|lab|toets|films|start)?$/.exec(location.hash);if(!m||(!m[1]&&!m[2]))return;if(m[1])cur=m[1];show(m[2]||"les");}
+window.addEventListener("hashchange",route);route();
+
+})();
+</script>
+</body>
+</html>
