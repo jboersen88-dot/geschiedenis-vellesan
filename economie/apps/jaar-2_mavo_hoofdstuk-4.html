@@ -966,7 +966,7 @@ MEM=null;
 gamesHome();
 
 /* ---------- leg uit (AI-nakijker) ---------- */
-var AI_URL="",LU_VAK="economie";
+var AI_URL="https://geschiedenis-nakijker.nakijker-worker.workers.dev",LU_VAK="economie",LU_JAAR=2;
 function luInSel(p,f){return typeof inSel==="function"?inSel(p,f):(f==="alle"||p===f);}
 function luLab(f){return typeof selLabel==="function"?selLabel(f):(f==="alle"?"Alles":f);}
 var luPar="alle",luIdx=-1,luBusy=false,luS={goed:0,totaal:0},luCard=document.getElementById("luCard");
@@ -1010,7 +1010,7 @@ function luCheck(){
   if(!AI_URL){luShow(c,luLocal(c,ans));return;}
   luBusy=true;btn.disabled=true;btn.textContent="Bezig met nakijken… (even geduld)";
   var ctl=window.AbortController?new AbortController():null,t=setTimeout(function(){if(ctl)ctl.abort();},45000);
-  fetch(AI_URL,{method:"POST",body:JSON.stringify({vak:LU_VAK,begrip:c[1],uitleg:c[2],voorbeeld:c[3],antwoord:ans,paragraaf:c[0]+" "+(P(c[0])?P(c[0]).t:""),samenvatting:P(c[0])&&P(c[0]).sum||"",begrippen:CARDS.filter(function(x){return x[0]===c[0];}).map(function(x){return "- "+x[1]+": "+x[2];}).join("\n")}),signal:ctl?ctl.signal:undefined})
+  fetch(AI_URL,{method:"POST",body:JSON.stringify({vak:LU_VAK,jaar:LU_JAAR,begrip:c[1],uitleg:c[2],voorbeeld:c[3],antwoord:ans,paragraaf:c[0]+" "+(P(c[0])?P(c[0]).t:""),samenvatting:P(c[0])&&P(c[0]).sum||"",begrippen:CARDS.filter(function(x){return x[0]===c[0];}).map(function(x){return "- "+x[1]+": "+x[2];}).join("\n")}),signal:ctl?ctl.signal:undefined})
    .then(function(r){return r.json();})
    .then(function(f){if(f&&f.status==="ok")luShow(c,f);else luShow(c,luLocal(c,ans),(f&&f.melding)||"De AI kon nu niet nakijken.");})
    .catch(function(){luShow(c,luLocal(c,ans),"De AI is nu niet bereikbaar.");})

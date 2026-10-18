@@ -1,5 +1,23 @@
 # Changelog
 
+## 2026-10-18 · 02:00 Economie-lesapps aan Claude gekoppeld (stuk 2)
+
+### Verbeterronde (vorige ronde)
+- Live gecontroleerd (200 en geen consolefouten): Economie index/jaar/h, `toets.html`, `spotprent.html`, `nakijken.html`, `ai.js`, `nakijker.js`. Geen fouten gevonden, niets aangepast.
+
+### Gebouwd
+- **Worker** (`ai-oefentoetsen/nakijker-worker`, gedeployd): accepteert naast het nakijkformaat ook het oude formaat van de Economie-apps (`{vak:"economie", jaar, begrip, uitleg, voorbeeld, antwoord, paragraaf, samenvatting, begrippen}`). Het wordt omgezet naar een gewoon nakijkverzoek (begrip uitleggen, nakijkpunt = uitleg + voorbeeld, 2 punten, samenvatting + begrippen als bron) en het antwoord komt terug als `status/oordeel/goed/mist/fout/tip`. Zelfde grenzen als eerst (2000 tekens antwoord, 20 000 verzoek, 300/min totaal, alleen toegestane afzenders).
+- **Lesstof Economie jaar 2** (alleen in de Worker, `src/lesstof-eco.txt`, niet in de repo): uit "AAA. Alle stukken tekst jaar 2 mavo.docx", sleutels E2H1, E2H2, E2H4. Hoofdstuk 3 staat in het document in het blok van hoofdstuk 2 en wordt daarheen verwezen. Hoofdstuk 5 en herhalingsvragen zijn niet meegenomen. Jaar 4 heeft geen eigen lesstofdocument: daar is de meegestuurde samenvatting + begrippen de lesstof.
+- **8 apps** in `economie/apps/`: AI-URL ingevuld en `jaar` toegevoegd aan het verzoek. `jaar-4_se-h1-h2-h8_1.html` (Edu-Racer) heeft geen Leg-uit-onderdeel en is niet aangeraakt.
+
+### Test
+- `node test.mjs` groen (uitgebreid met oud formaat, begrenzing, verkeerd vak), `node eval.mjs` **12/12**.
+- Per app één echte nakijkactie via de browser (bewust een verkeerd antwoord): alle 8 gaven een AI-oordeel "Nog niet goed" met passende uitleg en tip, geen terugval op de lokale controle.
+- Drive-previews: alle 28 bestands-ID's in de apps laden zonder inloggen (echte titels). Er is niets dat de docent nog moet delen.
+
+### Open
+- Niet getest op een echte iPad. De antwoorden in de test waren bewust fout; een goed antwoord is niet apart gecontroleerd.
+
 ## 2026-10-17 · 21:00 AI-nakijker Haiku 5.5 in de oefentoetsen
 
 **Docent: INSTALLATIE.md (ai-oefentoetsen/nakijker) nog doorlopen.** `nakijker/WEBAPP_URL.txt` bestaat nog niet, dus `GV_NK_URL` in `nakijker.js` is leeg en de oefentoetsen werken precies als eerst. Na installatie: URL tussen de aanhalingstekens zetten, pushen.
