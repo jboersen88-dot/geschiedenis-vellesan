@@ -325,6 +325,7 @@ nav.tabs button span{display:none}
 .lu .badge2.goed{background:var(--ok)}.lu .badge2.bijna{background:#c98a0b}.lu .badge2.nognietgoed{background:var(--bad)}
 .lu .model{margin-top:10px;border-left:4px solid var(--line);padding:6px 12px;color:var(--muted);font-size:14px}
 .lu .note{font-size:12.5px;color:var(--muted);margin-top:8px}
+@media (prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
@@ -456,7 +457,7 @@ nav.tabs button span{display:none}
 </div>
 <div class="card pad">
 <div class="eyebrow">Stap 4</div><h3>Wat is je cijfer?</h3>
-<div class="grade"><div class="inp"><input id="pts" inputmode="decimal" placeholder="behaald" style="width:90px"><b>van</b><input id="ptsMax" inputmode="decimal" placeholder="max" style="width:80px"></div><div class="out" id="grade">-</div></div>
+<div class="grade"><div class="inp"><input id="pts" aria-label="Behaalde punten" inputmode="decimal" placeholder="behaald" style="width:90px"><b>van</b><input id="ptsMax" aria-label="Maximaal aantal punten" inputmode="decimal" placeholder="max" style="width:80px"></div><div class="out" id="grade">-</div></div>
 <div class="muted" style="font-size:13px;margin-top:6px" id="gradeMsg"></div>
 </div>
 <details open><summary>Meer oefenmateriaal</summary>

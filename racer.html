@@ -592,6 +592,7 @@ input.code{font:inherit;font-size:clamp(20px,3.6vmin,30px);letter-spacing:2px;te
   .hud-punten small{display:none;}
 }
 .gepauzeerd *{animation-play-state:paused !important;}
+@media (prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>

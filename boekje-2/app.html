@@ -540,7 +540,7 @@ nav.tabs button:active{transform:scale(.97)}
           </div>
           <div class="card pad">
             <div class="eyebrow">Stap 4</div><h3>Wat is je cijfer?</h3>
-            <div class="grade"><div class="inp"><input id="pts" inputmode="decimal" placeholder="behaald" style="width:90px"><b>van</b><input id="ptsMax" inputmode="decimal" placeholder="max" style="width:80px"></div><div class="out" id="grade">-</div></div>
+            <div class="grade"><div class="inp"><input id="pts" aria-label="Behaalde punten" inputmode="decimal" placeholder="behaald" style="width:90px"><b>van</b><input id="ptsMax" aria-label="Maximaal aantal punten" inputmode="decimal" placeholder="max" style="width:80px"></div><div class="out" id="grade">-</div></div>
             <div class="muted" style="font-size:13px;margin-top:6px" id="gradeMsg"></div>
           </div>
           <details open><summary>Meer oefenmateriaal</summary>
@@ -643,7 +643,7 @@ function mountDeck(el,h,startAt){
   if(!N){el.innerHTML='<div class="ph">📽️ De PowerPoint van dit hoofdstuk volgt.</div>';return;}
   el.innerHTML='<div class="sdeck" tabindex="0" aria-roledescription="presentatie" aria-label="Presentatie '+h+'">'+
    '<div class="deck-stage"><img alt=""><img alt=""><button class="deck-nav l" aria-label="Vorige dia"><span>‹</span></button><button class="deck-nav r" aria-label="Volgende dia"><span>›</span></button></div>'+
-   '<div class="deck-bar"><span class="cnt"></span><div class="deck-prog"><i></i></div><button data-act="fs">⛶ Schermvullend</button><a href="presenteer.html?h='+h+'" target="_blank" rel="noopener">Presenteer ↗</a></div>'+
+   '<div class="deck-bar"><span class="cnt"></span><div class="deck-prog"><i></i></div><button data-act="fs">⛶ Schermvullend</button><a href="../presenteer.html?h='+h+'" target="_blank" rel="noopener">Presenteer ↗</a></div>'+
    '<div class="deck-thumbs">'+Array.from({length:N},function(_,k){return '<button data-n="'+(k+1)+'" aria-label="Dia '+(k+1)+'"><img loading="lazy" alt="" src="'+slideSrc(h,k+1)+'"></button>';}).join("")+'</div></div>';
   var d=el.querySelector(".sdeck"),imgs=d.querySelectorAll(".deck-stage img"),front=0,cnt=d.querySelector(".cnt"),bar=d.querySelector(".deck-prog i"),th=d.querySelectorAll(".deck-thumbs button");
   function go(n,dir){
@@ -762,7 +762,7 @@ var ff="alle";
 function renderFilms(){
   document.getElementById("fFilters").innerHTML=["alle"].concat(PARS.map(function(p){return p.id;}).filter(function(id){return FILMS.some(function(f){return f.par===id;});})).map(function(f){return '<button data-ff="'+f+'" class="'+(f===ff?"on":"")+'">'+(f==="alle"?"Alle filmpjes":f+" "+P(f).t)+'</button>';}).join("");
   document.getElementById("fgrid").innerHTML=FILMS.filter(function(f){return ff==="alle"||f.par===ff||f.par==="alle";}).map(function(f){var id=f.yt||f.film,url=f.yt?"https://www.youtube.com/watch?v="+f.yt:VIEW(f.film);
-    return '<div class="card film"><div class="viewer" '+(f.yt?'data-yt="'+f.yt+'"':'data-film="'+f.film+'"')+'></div><div class="txt"><div class="eyebrow">'+f.k+(f.par!=="alle"?' · '+f.par:'')+'</div><h3>'+f.t+'</h3><p class="muted" style="margin:0">'+f.d+'</p><div class="row" style="margin-top:12px"><button class="btn soft" data-golab="'+f.lab+'"'+(f.mode?' data-mode="'+f.mode+'"':'')+(f.qpar?' data-qpar="'+f.qpar+'"':'')+'>'+f.btn+'</button>'+(f.par==="H1"||f.par==="H2"?'<a class="btn" href="filmvragen.html?h='+f.par+'">Filmvragen</a>':'')+'<a class="btn ghost" target="_blank" rel="noopener" href="'+url+'">Open in nieuw tabblad ↗</a></div></div></div>';}).join("");
+    return '<div class="card film"><div class="viewer" '+(f.yt?'data-yt="'+f.yt+'"':'data-film="'+f.film+'"')+'></div><div class="txt"><div class="eyebrow">'+f.k+(f.par!=="alle"?' · '+f.par:'')+'</div><h3>'+f.t+'</h3><p class="muted" style="margin:0">'+f.d+'</p><div class="row" style="margin-top:12px"><button class="btn soft" data-golab="'+f.lab+'"'+(f.mode?' data-mode="'+f.mode+'"':'')+(f.qpar?' data-qpar="'+f.qpar+'"':'')+'>'+f.btn+'</button>'+(f.par==="H1"||f.par==="H2"?'<a class="btn" href="../filmvragen.html?h='+f.par+'">Filmvragen</a>':'')+'<a class="btn ghost" target="_blank" rel="noopener" href="'+url+'">Open in nieuw tabblad ↗</a></div></div></div>';}).join("");
   loadFilms();
 }
 function loadFilms(){
@@ -952,7 +952,7 @@ function gamesHome(){
   gWrap.innerHTML='<div class="gpick">'+
    '<button class="gtile" data-game="swipe"><span class="gico">👆</span><b>Swipe &amp; Scoor</b><span>Veeg elk kaartje naar de juiste kant. Hoe meer goed op rij, hoe meer punten!</span><em>Highscore: '+hs("swipe")+'</em></button>'+
    '<button class="gtile" data-game="memory"><span class="gico">🧠</span><b>Begrippen-memory</b><span>Zoek bij elk begrip de juiste uitleg. Lukt het in zo weinig mogelijk beurten?</span><em>Beste: '+(hs("memory")?hs("memory")+' beurten':'nog geen')+'</em></button>'+
-  '<a class="gtile" href="../kaart.html" style="text-decoration:none;color:inherit"><span class="gico">🗺️</span><b>De crisis op de kaart</b><span>Klik op New York, Rotterdam en Nederland, schuif van 1929 naar 1935 en beantwoord vragen die de AI nakijkt.</span></a><a class="gtile" href="../beeldquiz.html" style="text-decoration:none;color:inherit"><span class="gico">🖼️</span><b>Beeldquiz</b><span>Welk moment uit de les zie je? Raad het bij elk beeld.</span></a>'+
+  '<a class="gtile" href="../kaart.html" style="text-decoration:none;color:inherit"><span class="gico">🗺️</span><b>De crisis op de kaart</b><span>Klik op New York, Rotterdam en Nederland, schuif van 1929 naar 1935 en beantwoord vragen die de AI nakijkt.</span></a><a class="gtile" href="../beeldquiz.html" style="text-decoration:none;color:inherit"><span class="gico">🖼️</span><b>Beeldquiz</b><span>Welk moment uit de les zie je? Raad het bij elk beeld.</span></a><a class="gtile" href="../spotprent.html" style="text-decoration:none;color:inherit"><span class="gico">🖋️</span><b>Spotprent analyseren</b><span>Ontleed echte spotprenten (1903–1936) en examenprenten met de Kijkwijzer, stap voor stap. De AI kijkt elke stap na.</span></a>'+
   '</div>';
 }
 gWrap.addEventListener("click",function(e){var t=e.target.closest("[data-game]");if(t){if(t.dataset.game==="swipe")startSwipe();else startMemory();}
@@ -1057,7 +1057,7 @@ function endMemory(){
 gamesHome();
 
 /* ---------- leg uit (AI-nakijker) ---------- */
-/* Leg uit: AI-nakijker = Claude via ../ai.js (GV_AI), lesstof boekje 2 (SZ). Uitzetten: GV_AI_URL leeg maken in ai.js. */
+/* Leg uit: AI-nakijker = Claude via ai.js (GV_AI). Uitzetten: GV_AI_URL leeg maken in ai.js, dan valt Leg uit terug op luLocal. */
 function luInSel(p,f){return typeof inSel==="function"?inSel(p,f):(f==="alle"||p===f);}
 function luLab(f){return typeof selLabel==="function"?selLabel(f):(f==="alle"?"Alles":f);}
 var luPar="alle",luIdx=-1,luBusy=false,luS={goed:0,totaal:0},luCard=document.getElementById("luCard");
@@ -1100,7 +1100,7 @@ function luCheck(){
   var btn=document.getElementById("luCheck");
   if(!window.GV_AI||!GV_AI.enabled){luShow(c,luLocal(c,ans));return;}
   luBusy=true;btn.disabled=true;btn.textContent="Bezig met nakijken… (even geduld)";
-  GV_AI.check({h:["SZ"],begrip:c[1],uitleg:c[2],voorbeeld:c[3],antwoord:ans,paragraaf:c[0]}).then(function(f){
+  GV_AI.check({begrip:c[1],uitleg:c[2],voorbeeld:c[3],antwoord:ans,paragraaf:c[0]}).then(function(f){
     if(f.status==="ok")luShow(c,f);else luShow(c,luLocal(c,ans),f.melding||"De AI kon nu niet nakijken.");
     luBusy=false;btn.disabled=false;btn.textContent="Laat nakijken";});
 }

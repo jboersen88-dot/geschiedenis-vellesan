@@ -72,5 +72,16 @@ s = s.replace('href="kaart.html"', 'href="../kaart.html"').replace('href="beeldq
 for gone in ["racer.html", "nakijken.html", "toets.html?t="]:
     assert gone not in s, gone
 
+# lokale paden van de root (scripts, pagina's, data) laten wijzen naar ../ als boekje 2 ze zelf niet heeft
+B2 = os.path.join(ROOT, "boekje-2")
+def fix_path(m):
+    attr, path = m.group(1), m.group(2)
+    bare = path.split("?")[0].split("#")[0]
+    if (not bare or ":" in bare or "+" in bare or "'" in bare or bare.startswith(("../", "/", "#"))
+            or os.path.exists(os.path.join(B2, bare)) or not os.path.exists(os.path.join(ROOT, bare))):
+        return m.group(0)
+    return f'{attr}="../{path}"'
+s = re.sub(r'(src|href)="([^"]+)"', fix_path, s)
+
 open(os.path.join(ROOT, "boekje-2", "app.html"), "w", encoding="utf-8").write(s)
 print("boekje-2/app.html", len(s), "tekens")

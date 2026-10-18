@@ -1,5 +1,23 @@
 # Changelog
 
+## 2026-10-18 · opruimen en kwaliteit
+
+- **Drie controlescripts in `tools/`** (uitleg in de README):
+  - `vragencheck.py` herkent alle vormen van meerkeuzevragen op de site (BANK-tuples, `o`+`j`/`k`, `a`, `goed`+`fout`) en toetst de regels van de docent: 4 opties, geen dubbele, ongeveer even lang (≤ 1,5), en het juiste antwoord per bank in hooguit 25% het langste.
+  - `linkcheck.py` controleert alle lokale links, ook paden in data-bestanden; met `--extern` ook externe links.
+  - `a11ycheck.py` controleert lang, viewport, titel, alt-teksten, namen van knoppen en links, labels, dubbele id's en reduced motion.
+- **Linkcheck**: alle 146 lokale en 20 externe links werken. De vijf oude losse hoofdstukpagina's uit de eerste versie (`h1-…h4-*.html`) zijn verwijderd: ze waren vervangen door de leeromgeving en laadden het lettertype met een kapotte Google Fonts-link.
+- **Toegankelijkheid**: labels voor de cijferberekening (behaald/maximum) in alle leeromgevingen en Economie-apps, een naam voor de sluitknop van de 3D-woning, en een reduced-motion-regel in de Racer en de Economie-apps. `a11ycheck.py` geeft nu 0 fouten.
+- **Mobiel en iPad**: alle 30 pagina's gecontroleerd op 375 en 820 px: geen horizontaal scrollen en geen fouten in de console.
+- **Leg uit en `nakijken.html` naar Haiku**: was al gedaan in commit 3278837 (alle AI-nakijkers via de Claude-Worker). Gecontroleerd: er staat nergens meer een Gemini- of Apps Script-adres in de site.
+- **Meerkeuze Geschiedenis**: alle zes vragenbanken (app, boekje 2, toetsen, beeldquiz, Racer, doe-boek) voldoen. In het doe-boek H4 zijn bij 6 vragen alleen de foute antwoorden langer gemaakt; de juiste antwoorden zijn ongewijzigd.
+- **Boekje 2 gerepareerd**: `app.html` laadt sinds kort `ai.js` en linkt naar `spotprent.html`. In de gebouwde boekje 2-app wezen die paden naar de verkeerde map, waardoor "Leg uit" daar niet laadde. `bouw.py` laat lokale paden van de root nu automatisch naar `../` wijzen. De linkcheck vond dit.
+- **README** herschreven naar de huidige stand: indeling, AI-nakijker, inhoud aanpassen, controlescripts, huisstijl en bronnen.
+
+### Nog open
+- **Economie**: de 9 lesapps (1.349 meerkeuzevragen, overgenomen van meneerboersen.nl) voldoen nog niet aan de regels. Bij 242 vragen is het lengteverschil te groot, en in 8 van de 9 apps is het juiste antwoord in 30–59% van de vragen het langste. Herschrijven van de foute antwoorden is een eigen klus.
+- GitHub Actions voor automatische controle bij elke push kan pas als het gh-account het recht `workflow` heeft.
+
 ## 2026-10-18 · 02:00 Economie-lesapps aan Claude gekoppeld (stuk 2)
 
 ### Verbeterronde (vorige ronde)
