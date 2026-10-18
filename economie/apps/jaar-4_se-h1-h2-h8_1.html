@@ -149,7 +149,7 @@ const VRAGEN = [
     niveau: 2,
     vraag: "Welke van deze behoeften is een overige behoefte?",
     goed: "Een abonnement op een streamingdienst",
-    fout: ["Een warme jas voor de winter", "Brood en melk voor het ontbijt", "Een kamer om in te wonen"],
+    fout: ["Een warme jas voor de winter", "Brood en melk voor het ontbijt", "Een eigen kamer om in te wonen"],
     uitleg: "Een overige (secundaire) behoefte is fijn, maar niet nodig om te leven. Eten, kleding en wonen zijn basisbehoeften.",
     kort: { begrip: "Overige behoefte", goed: "Streamingabonnement", fout: ["Winterjas", "Brood en melk", "Woonruimte"] }
   },
@@ -452,7 +452,7 @@ const VRAGEN = [
     niveau: 2,
     vraag: "Wat zijn volgens je boek secundaire inkomens?",
     goed: "Netto inkomens plus overdrachtsinkomens",
-    fout: ["Alleen inkomens uit bezit", "Bruto inkomens plus de winst van bedrijven", "Alleen het loon van een bijbaan"],
+    fout: ["Alleen de inkomens uit bezit, zoals huur", "Bruto inkomens plus de winst van bedrijven", "Alleen het loon van een bijbaan"],
     uitleg: "Secundaire inkomens = alle netto inkomens plus de inkomens uit overdrachten, zoals uitkeringen.",
     kort: { begrip: "Secundair inkomen", goed: "Netto plus overdrachten", fout: ["Alleen uit bezit", "Bruto plus winst", "Alleen bijbaan"] }
   },
@@ -539,7 +539,7 @@ const VRAGEN = [
     niveau: 1,
     vraag: "Wat is je nettoloon?",
     goed: "Wat overblijft na loonheffing en premies",
-    fout: ["Je brutoloon plus je vakantiegeld", "Wat overblijft na huur en dagelijkse boodschappen", "Je brutoloon plus de zorgtoeslag"],
+    fout: ["Je brutoloon plus je vakantiegeld", "Wat overblijft na huur en boodschappen", "Je brutoloon plus de zorgtoeslag"],
     uitleg: "Van je brutoloon gaan loonbelasting en premies af. Wat overblijft is je nettoloon: dat komt op je rekening.",
     kort: { begrip: "Nettoloon", goed: "Komt op je rekening", fout: ["Bruto plus vakantiegeld", "Na huur en boodschappen", "Bruto plus toeslag"] }
   },
@@ -590,7 +590,7 @@ const VRAGEN = [
     niveau: 1,
     vraag: "Waardoor verdient de één vaak meer dan de ander?",
     goed: "Door opleiding, ervaring en verantwoordelijkheid",
-    fout: ["Door het aantal kinderen dat je hebt", "Door hoeveel je elke maand uitgeeft", "Door de hoogte van de inflatie"],
+    fout: ["Door het aantal kinderen dat je hebt", "Door hoeveel je elke maand uitgeeft", "Door de hoogte van de inflatie in het land"],
     uitleg: "Bij de hoogte van je loon telt mee hoe goed je opgeleid bent, je ervaring en je verantwoordelijkheid.",
     kort: { begrip: "Hoger loon door", goed: "Opleiding en ervaring", fout: ["Meer uitgeven", "Meer kinderen", "Hogere inflatie"] }
   },
@@ -713,7 +713,7 @@ const VRAGEN = [
     niveau: 1,
     vraag: "Wat is welzijn?",
     goed: "De kwaliteit van je leven",
-    fout: ["Het aantal producten dat je kunt kopen", "De hoogte van je brutoloon", "Het BBP per inwoner van je land"],
+    fout: ["Hoeveel producten je kunt kopen", "De hoogte van je brutoloon", "Het BBP per inwoner van je land"],
     uitleg: "Bij welzijn kijk je naar hoe gelukkig en tevreden je bent: gezondheid, vrienden, veiligheid.",
     kort: { begrip: "Welzijn", goed: "Kwaliteit van je leven", fout: ["Aantal producten", "Hoogte brutoloon", "BBP per inwoner"] }
   },
@@ -739,7 +739,7 @@ const VRAGEN = [
     niveau: 1,
     vraag: "Op welke drie manieren kan je welvaart toenemen?",
     goed: "Kopen, zelfvoorziening en collectieve voorzieningen",
-    fout: ["Sparen, lenen en beleggen bij de bank", "Brutoloon, nettoloon en toeslagen", "Prijs, product en promotie verbeteren"],
+    fout: ["Sparen, lenen en beleggen bij de bank", "Brutoloon, nettoloon en extra toeslagen", "Prijs, product en promotie verbeteren"],
     uitleg: "Je welvaart stijgt door goederen te kopen, door dingen zelf te maken en door voorzieningen van de overheid."
   },
   {
@@ -967,7 +967,7 @@ const VRAGEN = [
     niveau: 1,
     vraag: "Wat is deflatie?",
     goed: "Een algemene daling van de prijzen",
-    fout: ["Een algemene stijging van de prijzen", "Een algemene daling van de lonen", "Een daling van de rente"],
+    fout: ["Een algemene stijging van de prijzen", "Een algemene daling van de lonen", "Een daling van de rente bij de bank"],
     uitleg: "Deflatie is het tegenovergestelde van inflatie: de prijzen dalen.",
     kort: { begrip: "Deflatie", goed: "Prijzen dalen", fout: ["Prijzen stijgen", "Lonen dalen", "Rente daalt"] }
   },
@@ -985,7 +985,7 @@ const VRAGEN = [
     niveau: 1,
     vraag: "Waardoor wordt je koopkracht bepaald?",
     goed: "Door je inkomen en de prijzen",
-    fout: ["Alleen door de hoogte van je inkomen", "Alleen door de hoogte van de prijzen", "Door de rente en de btw"],
+    fout: ["Alleen door de hoogte van je inkomen", "Alleen door de hoogte van de prijzen", "Door de rente en de hoogte van de btw"],
     uitleg: "Je koopkracht verandert als je inkomen verandert of als de prijzen veranderen."
   },
   {
@@ -1175,7 +1175,7 @@ const VRAGEN = [
     niveau: 2,
     vraag: "De ECB verlaagt de rente. Wat is het gevolg?",
     goed: "Lenen wordt aantrekkelijker, er wordt meer uitgegeven",
-    fout: ["Sparen wordt aantrekkelijker, er wordt minder uitgegeven", "Lenen wordt duurder, er wordt minder uitgegeven", "Er verandert niets voor consumenten"],
+    fout: ["Sparen wordt aantrekkelijker, er wordt minder uitgegeven", "Lenen wordt duurder, er wordt minder uitgegeven", "Er verandert niets voor consumenten en bedrijven"],
     uitleg: "Een lagere rente maakt lenen goedkoper. Mensen gaan meer uitgeven en de inflatie stijgt.",
     kort: { begrip: "ECB verlaagt rente", goed: "Meer lenen en uitgeven", fout: ["Meer sparen", "Minder uitgeven", "Lagere inflatie"] }
   },
@@ -1192,7 +1192,7 @@ const VRAGEN = [
     niveau: 3,
     vraag: "Waarom is deflatie slecht voor de economie?",
     goed: "Mensen wachten met kopen, omzet en banen dalen",
-    fout: ["Mensen kopen juist meer, waardoor prijzen hard stijgen", "Lonen stijgen te snel door deflatie", "De rente stijgt automatisch door deflatie"],
+    fout: ["Mensen kopen juist meer, waardoor prijzen hard stijgen", "Lonen stijgen door deflatie te snel mee", "De rente stijgt automatisch door deflatie"],
     uitleg: "Als prijzen dalen, stellen mensen aankopen uit. Bedrijven verkopen minder en er verdwijnen banen."
   },
 
@@ -1210,7 +1210,7 @@ const VRAGEN = [
     niveau: 1,
     vraag: "Wat betekent: geld is een ruilmiddel?",
     goed: "Je kunt er spullen en diensten mee kopen",
-    fout: ["Je kunt er de prijzen mee vergelijken", "Je kunt het bewaren om het later uit te geven", "Je kunt het lenen bij de bank"],
+    fout: ["Je kunt er de prijzen mee vergelijken", "Je kunt het bewaren om het later uit te geven", "Je kunt het lenen bij de bank of bij vrienden"],
     uitleg: "Als ruilmiddel ruil je geld tegen spullen of diensten: je koopt iets.",
     kort: { begrip: "Ruilmiddel", goed: "Iets mee kopen", fout: ["Prijzen vergelijken", "Bewaren voor later", "Lenen bij de bank"] }
   },
@@ -1560,7 +1560,7 @@ const VRAGEN = [
     niveau: 3,
     vraag: "Twee spaarders zetten hetzelfde bedrag even lang vast tegen hetzelfde percentage. De een krijgt enkelvoudige, de ander samengestelde rente. Wie heeft het meest?",
     goed: "Samengesteld, want je krijgt rente over rente",
-    fout: ["Enkelvoudig, want dat is op lange termijn voordeliger", "Ze hebben allebei precies evenveel", "Dat hangt alleen af van de bank"],
+    fout: ["Enkelvoudig, want dat is op termijn voordeliger", "Ze hebben allebei precies evenveel", "Dat hangt alleen af van de bank waar ze sparen"],
     uitleg: "Bij samengestelde rente groeit het bedrag waarover je rente krijgt elk jaar. Daardoor krijg je meer."
   },
   {
@@ -1664,7 +1664,7 @@ const VRAGEN = [
     niveau: 2,
     vraag: "Waarom heeft beleggen meer risico dan sparen?",
     goed: "De koers kan dalen, je inleg wordt minder waard",
-    fout: ["De bank kan de spaarrente verlagen", "Je mag je geld nooit meer opnemen", "Je moet er altijd veel meer belasting over betalen"],
+    fout: ["De bank kan de spaarrente verlagen", "Je mag je geld nooit meer opnemen", "Je moet er altijd meer belasting over betalen"],
     uitleg: "Bij sparen blijft je inleg veilig. Bij beleggen kan de koers dalen en ben je een deel kwijt."
   },
 
@@ -1798,7 +1798,7 @@ const VRAGEN = [
     niveau: 1,
     vraag: "Wat is een hypotheek?",
     goed: "Een lening met het huis als onderpand",
-    fout: ["Een lening om rood te mogen staan op je rekening", "Een lening om een auto te kopen", "Een spaarrekening om later een huis te kopen"],
+    fout: ["Een lening om rood te mogen staan op je rekening", "Een lening om een nieuwe auto te kopen", "Een spaarrekening om later een huis te kopen"],
     uitleg: "Een hypotheek is een lening voor een huis. Als je niet terugbetaalt, mag de bank het huis verkopen.",
     kort: { begrip: "Hypotheek", goed: "Huis als onderpand", fout: ["Rood staan", "Lening voor auto", "Spaarrekening"] }
   },
@@ -1860,7 +1860,7 @@ const VRAGEN = [
     niveau: 1,
     vraag: "Wat zijn huishoudelijke uitgaven?",
     goed: "Uitgaven aan dagelijkse dingen, zoals boodschappen",
-    fout: ["Uitgaven die elke maand precies gelijk zijn", "Uitgaven die je maar af en toe hebt", "Uitgaven aan je huur of hypotheek"],
+    fout: ["Uitgaven die elke maand precies gelijk zijn", "Uitgaven die je maar af en toe hebt", "Uitgaven aan je huur of je hypotheek per maand"],
     uitleg: "Huishoudelijke uitgaven doe je steeds weer, zoals eten en drinken. Het bedrag verschilt per keer.",
     kort: { begrip: "Huishoudelijke uitgaven", goed: "Boodschappen", fout: ["Huur", "Nieuwe wasmachine", "Verzekering"] }
   },
@@ -1877,7 +1877,7 @@ const VRAGEN = [
     niveau: 2,
     vraag: "Je PowerPoint zegt 'huishoudelijke uitgaven', het examen zegt soms 'dagelijkse uitgaven'. Wat klopt?",
     goed: "Ze bedoelen hetzelfde",
-    fout: ["Dagelijkse uitgaven zijn vaste lasten", "Huishoudelijke uitgaven zijn incidenteel", "Dagelijks gaat alleen over eten"],
+    fout: ["Dagelijks is: vaste lasten", "Huishoudelijk is: incidenteel", "Dagelijks is alleen eten"],
     uitleg: "Allebei gaat het over uitgaven die je steeds weer doet, zoals boodschappen."
   },
   {
@@ -1983,7 +1983,7 @@ const VRAGEN = [
     niveau: 2,
     vraag: "Wat is een tijdelijk tekort?",
     goed: "Je komt één keer of kort geld tekort",
-    fout: ["Je komt elke maand geld tekort", "Je houdt elke maand geld over", "Je hebt nooit genoeg inkomen om rond te komen"],
+    fout: ["Je komt elke maand geld tekort", "Je houdt elke maand geld over", "Je hebt nooit genoeg om rond te komen"],
     uitleg: "Een tijdelijk tekort is er maar even, bijvoorbeeld door een grote rekening.",
     kort: { begrip: "Tijdelijk tekort", goed: "Eén keer tekort", fout: ["Elke maand tekort", "Elke maand over", "Nooit genoeg"] }
   },
@@ -2009,7 +2009,7 @@ const VRAGEN = [
     niveau: 2,
     vraag: "Wat doet de Consumentenbond?",
     goed: "Komt op voor consumenten en test producten",
-    fout: ["Geeft leningen aan consumenten", "Meet de koopkracht voor het CBS", "Bepaalt de btw op producten"],
+    fout: ["Geeft goedkope leningen aan consumenten", "Meet de koopkracht voor het CBS", "Bepaalt de hoogte van de btw op producten"],
     uitleg: "De Consumentenbond test producten en geeft consumenten advies.",
     kort: { begrip: "Consumentenbond", goed: "Test producten", fout: ["Geeft leningen", "Meet koopkracht", "Bepaalt btw"] }
   },

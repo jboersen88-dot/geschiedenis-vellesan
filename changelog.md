@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-18 · Economie: alle meerkeuzevragen volgens de regels
+
+- In alle 9 Economie-lesapps (jaar 2 H1–H4, jaar 4 H1–H3 en de twee SE-oefenapps) zijn de foute antwoorden van bijna 500 vragen herschreven, zodat ze ongeveer even lang zijn als het goede antwoord en het goede antwoord niet meer opvalt als het langste. Goede antwoorden en uitleg zijn niet veranderd, er zijn geen nieuwe feiten toegevoegd.
+- `tools/vragencheck.py`: 1788 meerkeuzevragen, 0 fouten. Per Economie-app is het goede antwoord nog in 6–17% van de vragen het langste (eerst 30–59%).
+
 ## 2026-10-18 · nieuwe opbouw: kaft → vak → jaar → niveau → hoofdstuk
 
 - **Kaft** (`index.html`): grote titel "Meneer Boersen … leert je hoe de wereld werkt", letter voor letter animerend, met twee panelen (Economie en Geschiedenis) die breder worden bij hover. Zwevende SVG-munten en tandwielen, langzaam bewegend licht en korrel. Op de telefoon staan de panelen onder elkaar. Alles respecteert reduced motion.
