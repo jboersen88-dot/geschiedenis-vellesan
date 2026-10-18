@@ -3,136 +3,130 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Geschiedenis jaar 3 · Meneer Boersen</title>
-<meta name="description" content="Geschiedenis jaar 3 mavo: vier boekjes met leerdoelen, lesstof, oefeningen, games en examentraining.">
+<title>Meneer Boersen · Economie en Geschiedenis</title>
+<meta name="description" content="Meneer Boersen leert je hoe de wereld werkt: Economie (jaar 2, 3 en 4) en Geschiedenis (jaar 3) op het Vellesan College.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,900;1,9..144,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-/* layout: jaaroverzicht → vier boekjes als grote kaarten (1 en 2 open, 3 en 4 volgen later); per kaart de vier hoofdstukken */
+/* layout: kaft. Bovenin de titel "Meneer Boersen" die letter voor letter binnenkomt; daaronder twee grote panelen (Economie, Geschiedenis) die breder worden bij hover; zwevende munten en tandwielen als beweging. */
 :root{
-  --bg:#f6f0e6;--card:#fffdf9;--ink:#201a14;--muted:#6f6556;--line:#e6dac4;
-  --green:#1f5f4e;--green-d:#123a30;--green-fg:#f3efe0;--green-mu:#b9d6cb;
-  --coral:#ff8d90;--coral-d:#c2484d;--teal:#2f8f86;
-  --ease-out:cubic-bezier(.23,1,.32,1);
+  --ink:#f3efe0;--mu:#b9d6cb;--deep:#0c241e;--green:#1f5f4e;--coral:#ff8d90;--teal:#7fd4c9;--gold:#f2c46b;
+  --ease-out:cubic-bezier(.23,1,.32,1);--ease-io:cubic-bezier(.77,0,.175,1);
 }
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15120d;--card:#1f1a13;--ink:#f3ecdd;--muted:#b2a68d;--line:#352c20;--coral-d:#ff9a9d;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#15120d;--card:#1f1a13;--ink:#f3ecdd;--muted:#b2a68d;--line:#352c20;--coral-d:#ff9a9d;color-scheme:dark}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:"Inter",system-ui,sans-serif;line-height:1.55}
-h1,h2,h3{font-family:"Fraunces",Georgia,serif;letter-spacing:-.015em;text-wrap:balance;margin:0}
+html,body{height:100%}
+body{margin:0;background:var(--deep);color:var(--ink);font-family:"Inter",system-ui,sans-serif;overflow-x:hidden;color-scheme:dark}
 a{color:inherit}
-.wrap{max-width:1120px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
-.eyebrow{font-size:12.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--coral)}
-header{background:var(--green-d);padding-top:env(safe-area-inset-top,0px)}
-header .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
-.brand{font-family:"Fraunces",serif;font-weight:700;font-size:19px;color:var(--green-fg);text-decoration:none}
-.brand span{color:var(--coral)}
-.hero{position:relative;color:var(--green-fg);background:var(--green-d);overflow:hidden}
-.hero:before{content:"";position:absolute;inset:0;background:url(img/industriestad.jpg) center 60%/cover;opacity:.28;filter:saturate(.7)}
-.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,58,48,.2),var(--green-d) 96%)}
-.hero .wrap{position:relative;z-index:1;padding-block:70px 80px}
-.hero h1{font-size:clamp(42px,8vw,92px);font-weight:900;line-height:.95;margin-top:14px}
-.hero p{max-width:52ch;color:var(--green-mu);font-size:clamp(16px,2vw,19px);margin:18px 0 0}
-.rv{opacity:0;transform:translateY(16px);animation:rise .7s var(--ease-out) forwards;animation-delay:calc(var(--i,0)*90ms + 80ms)}
+.cover{position:relative;min-height:100dvh;display:flex;flex-direction:column;isolation:isolate;overflow:hidden}
+/* langzaam bewegend licht op de achtergrond */
+.cover:before{content:"";position:absolute;inset:-20%;z-index:-2;background:
+  radial-gradient(40% 35% at 20% 25%,rgba(255,141,144,.20),transparent 70%),
+  radial-gradient(45% 40% at 80% 30%,rgba(127,212,201,.18),transparent 70%),
+  radial-gradient(60% 50% at 50% 100%,rgba(31,95,78,.75),transparent 70%);
+  animation:drift 22s var(--ease-io) infinite alternate}
+@keyframes drift{to{transform:translate3d(4%,-3%,0) rotate(4deg) scale(1.06)}}
+.cover:after{content:"";position:absolute;inset:0;z-index:-1;opacity:.07;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+header{display:flex;justify-content:space-between;align-items:center;padding:max(18px,env(safe-area-inset-top,0px)) max(22px,env(safe-area-inset-right,0px)) 0 max(22px,env(safe-area-inset-left,0px));font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--mu)}
+header b{color:var(--coral);font-weight:800}
+
+.title{padding:clamp(26px,6vh,70px) max(22px,env(safe-area-inset-left,0px)) clamp(18px,4vh,40px);text-align:center}
+.title h1{font-family:"Fraunces",Georgia,serif;font-weight:900;font-size:clamp(54px,13vw,184px);line-height:.88;letter-spacing:-.03em;margin:0}
+.title h1 .w{display:inline-block;white-space:nowrap}
+.title h1 .l{display:inline-block;opacity:0;transform:translateY(.45em) rotate(4deg);animation:up .9s var(--ease-out) forwards;animation-delay:calc(var(--n)*45ms + 150ms)}
+.title h1 .w2 .l{color:var(--coral)}
+@keyframes up{to{opacity:1;transform:none}}
+.title p{font-family:"Fraunces",Georgia,serif;font-style:italic;font-weight:600;font-size:clamp(20px,3vw,34px);margin:16px 0 0;color:var(--mu);opacity:0;animation:fade 1s var(--ease-out) .95s forwards}
+.title p em{color:var(--ink);font-style:italic;position:relative}
+.title p em:after{content:"";position:absolute;left:0;right:0;bottom:.05em;height:.12em;border-radius:1em;background:var(--coral);transform:scaleX(0);transform-origin:left;animation:line .8s var(--ease-out) 1.5s forwards}
+@keyframes line{to{transform:scaleX(1)}}
+@keyframes fade{to{opacity:1}}
+
+.choose{flex:1;display:flex;gap:14px;padding:0 max(14px,env(safe-area-inset-right,0px)) max(14px,env(safe-area-inset-bottom,0px)) max(14px,env(safe-area-inset-left,0px));min-height:360px}
+.door{position:relative;flex:1;display:flex;align-items:flex-end;border-radius:28px;overflow:hidden;text-decoration:none;isolation:isolate;opacity:0;transform:translateY(30px);animation:rise 1s var(--ease-out) forwards;transition:flex .7s var(--ease-out),box-shadow .5s var(--ease-out);box-shadow:0 30px 60px -40px rgba(0,0,0,.8)}
+.door:nth-child(1){animation-delay:1.1s}.door:nth-child(2){animation-delay:1.22s}
 @keyframes rise{to{opacity:1;transform:none}}
-.wave{display:block;width:100%;height:60px;margin-top:-1px}
-.wave path{fill:var(--bg)}
-main{padding-block:26px 80px}
-.head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:24px}
-.head h2{font-size:clamp(28px,4vw,42px);font-weight:700}
-.head p{color:var(--muted);margin:0;max-width:44ch}
-.books{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
-@media (max-width:760px){.books{grid-template-columns:1fr}}
-.book{position:relative;display:flex;flex-direction:column;border-radius:26px;overflow:hidden;background:var(--card);border:1px solid var(--line);text-decoration:none;color:inherit;transition:transform .35s var(--ease-out),box-shadow .35s var(--ease-out)}
-a.book:hover{transform:translateY(-5px);box-shadow:0 22px 44px -28px rgba(18,58,48,.6)}
-a.book:active{transform:translateY(-2px) scale(.995)}
-.cover{position:relative;aspect-ratio:16/8;overflow:hidden;background:var(--green)}
-.cover img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .9s var(--ease-out)}
-a.book:hover .cover img{transform:scale(1.06)}
-.cover:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(12,30,25,.86),rgba(12,30,25,.1) 70%)}
-.cover .num{position:absolute;left:20px;bottom:14px;z-index:1;color:#fff;font-family:"Fraunces",serif;font-weight:900;font-size:64px;line-height:1;opacity:.92}
-.cover .num small{display:block;font-family:"Inter",sans-serif;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--c);opacity:1;margin-bottom:2px}
-.body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:12px;flex:1}
-.body h3{font-size:clamp(22px,2.6vw,28px);font-weight:700;line-height:1.1}
-.chs{list-style:none;margin:0;padding:0;display:grid;gap:6px}
-.chs li{display:flex;gap:10px;align-items:baseline;font-size:15px}
-.chs b{flex:none;width:26px;height:22px;border-radius:7px;display:grid;place-items:center;font-size:11.5px;font-weight:800;background:color-mix(in srgb,var(--c) 22%,transparent);color:color-mix(in srgb,var(--c) 55%,var(--ink))}
-.go{margin-top:auto;display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--coral-d)}
-.go span{transition:transform .2s var(--ease-out)}
-a.book:hover .go span{transform:translateX(4px)}
-.book.later{background:transparent;border-style:dashed}
-.book.later .cover{background:repeating-linear-gradient(135deg,color-mix(in srgb,var(--green) 10%,var(--bg)) 0 14px,var(--bg) 14px 28px);aspect-ratio:16/8}
-.book.later .cover:after{display:none}
-.book.later .cover .num{color:color-mix(in srgb,var(--green) 40%,var(--bg))}
-.book.later .body h3{color:var(--muted)}
-.lock{display:inline-block;font-size:12.5px;font-weight:800;padding:5px 11px;border-radius:999px;background:color-mix(in srgb,var(--muted) 14%,transparent);color:var(--muted)}
-footer{border-top:1px solid var(--line);color:var(--muted);font-size:13px;padding-block:22px 34px}
-@media (prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
-:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
+@media (hover:hover) and (pointer:fine){.choose:hover .door{flex:.8}.choose .door:hover{flex:1.35}}
+.door img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-3;transform:scale(1.08);transition:transform 1.4s var(--ease-out),filter .6s var(--ease-out);filter:saturate(.85) brightness(.82)}
+.door:hover img{transform:scale(1.02);filter:saturate(1) brightness(.9)}
+.door:before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(0deg,rgba(8,22,18,.94) 0%,rgba(8,22,18,.45) 45%,rgba(8,22,18,.1) 80%)}
+.door .tint{position:absolute;inset:0;z-index:-2;mix-blend-mode:soft-light;background:var(--c);opacity:.55}
+.door .body{padding:clamp(20px,3vw,40px);width:100%}
+.door .k{font-size:12.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--c)}
+.door h2{font-family:"Fraunces",Georgia,serif;font-weight:900;font-size:clamp(40px,6vw,86px);line-height:.95;letter-spacing:-.02em;margin:8px 0 10px}
+.door p{margin:0;max-width:40ch;color:rgba(243,239,224,.84);font-size:clamp(15px,1.4vw,17px)}
+.door .yrs{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.door .yrs span{font-size:13px;font-weight:700;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.12);backdrop-filter:blur(8px)}
+.door .go{display:inline-flex;align-items:center;gap:10px;margin-top:20px;font-weight:800;font-size:15px;padding:13px 20px;border-radius:999px;background:var(--c);color:#13221d;transition:transform .2s var(--ease-out),gap .25s var(--ease-out)}
+.door:hover .go{gap:16px}
+.door:active .go{transform:scale(.97)}
+.door:focus-visible{outline:3px solid var(--c);outline-offset:4px}
+
+/* zwevende symbolen per paneel */
+.float{position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.float i{position:absolute;font-style:normal;line-height:0;opacity:0;filter:drop-shadow(0 8px 16px rgba(0,0,0,.35));animation:bob var(--t,9s) var(--ease-io) infinite alternate,show 1.2s var(--ease-out) forwards;animation-delay:var(--d,0s),calc(1.6s + var(--d,0s))}
+@keyframes bob{from{transform:translateY(0) rotate(-8deg)}to{transform:translateY(-26px) rotate(10deg)}}
+@keyframes show{to{opacity:.9}}
+.float i.gear{opacity:0;animation:show 1.2s var(--ease-out) 1.6s forwards}
+.float i.gear svg{display:block;animation:spin var(--dur,18s) linear infinite var(--dir,normal)}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+footer{text-align:center;color:var(--mu);font-size:12.5px;padding:0 20px max(16px,env(safe-area-inset-bottom,0px))}
+
+@media (max-width:760px){
+  .choose{flex-direction:column;min-height:0}
+  .door{min-height:300px}
+  .float{bottom:auto;height:42%}
+  .float i.gear{scale:.6;transform-origin:top right}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*:before,*:after{animation-duration:.01ms!important;animation-delay:0s!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .title h1 .l,.title p,.door{opacity:1;transform:none}
+  .title p em:after{transform:none}
+}
 </style>
 </head>
 <body>
-<header><div class="wrap"><a class="brand" href="index.html">Meneer <span>Boersen</span></a></div></header>
+<div class="cover">
+  <header><span>Vellesan College</span><span><b>mavo</b> · havo · vwo</span></header>
 
-<section class="hero"><div class="wrap">
-  <div class="eyebrow rv" style="--i:0">Vellesan College · mavo</div>
-  <h1 class="rv" style="--i:1">Geschiedenis jaar 3</h1>
-  <p class="rv" style="--i:2">Dit jaar leer je vier boekjes. Elk boekje heeft vier hoofdstukken, een onderzoek en examentraining. Kies een boekje om te beginnen.</p>
-</div></section>
-<svg class="wave" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true" style="background:var(--green-d)"><path d="M0,30 C200,60 400,2 600,26 C800,50 1000,10 1200,34 L1200,60 L0,60 Z"/></svg>
-
-<main class="wrap">
-  <div class="head"><div><div class="eyebrow" style="color:var(--coral-d)">De vier boekjes</div><h2>Kies je boekje</h2></div><p>Boekje 3 en 4 komen in het tweede deel van het jaar.</p></div>
-  <div class="books">
-    <a class="book rv" style="--i:3;--c:#ff8d90" href="boekje-1.html">
-      <div class="cover"><img src="img/industriestad.jpg" alt="Een Engelse industriestad vol rokende schoorstenen" loading="lazy"><div class="num"><small>Boekje</small>1</div></div>
-      <div class="body">
-        <h3>De industriële samenleving in Nederland</h3>
-        <ol class="chs">
-          <li><b>H1</b>De Industriële Revolutie in Engeland</li>
-          <li><b>H2</b>De Industriële Revolutie in Nederland</li>
-          <li><b>H3</b>De sociale verhoudingen in Nederland</li>
-          <li><b>H4</b>Welvaart voor iedereen</li>
-        </ol>
-        <span class="go">Open boekje 1 <span>→</span></span>
-      </div>
-    </a>
-    <a class="book rv" style="--i:4;--c:#7fd4c9" href="boekje-2/index.html">
-      <div class="cover"><img src="img/flow/arbeidsbeurs.jpg" alt="Werklozen wachten op steun in de jaren dertig" loading="lazy"><div class="num"><small>Boekje</small>2</div></div>
-      <div class="body">
-        <h3>Sociale zekerheid en verzorgingsstaat in Nederland</h3>
-        <ol class="chs">
-          <li><b>H1</b>Armenzorg en de sociale kwestie</li>
-          <li><b>H2</b>Crisis, ellende en schaamte</li>
-          <li><b>H3</b>Nooit meer armoede!</li>
-          <li><b>H4</b>De toekomst van de verzorgingsstaat</li>
-        </ol>
-        <span class="go">Open boekje 2 <span>→</span></span>
-      </div>
-    </a>
-    <div class="book later rv" style="--i:5;--c:var(--muted)" aria-label="Boekje 3 volgt later">
-      <div class="cover"><div class="num"><small>Boekje</small>3</div></div>
-      <div class="body"><h3>Boekje 3</h3><span class="lock">Volgt in het tweede deel van het jaar</span></div>
-    </div>
-    <div class="book later rv" style="--i:6;--c:var(--muted)" aria-label="Boekje 4 volgt later">
-      <div class="cover"><div class="num"><small>Boekje</small>4</div></div>
-      <div class="body"><h3>Boekje 4</h3><span class="lock">Volgt in het tweede deel van het jaar</span></div>
-    </div>
+  <div class="title">
+    <h1 aria-label="Meneer Boersen" id="t"><span class="w w1">Meneer</span> <span class="w w2">Boersen</span></h1>
+    <p>leert je <em>hoe de wereld werkt</em>.</p>
   </div>
-  <a class="eco rv" style="--i:7" href="economie/index.html">
-    <img src="economie/img/markt.jpg" alt="" loading="lazy">
-    <span class="eco-tx"><span class="eyebrow" style="color:#ffd0d1">Ook bij meneer Boersen</span><b>Economie jaar 2, 3 en 4</b><span>PowerPoints, uitleg, oefenstof, films en lesapps per hoofdstuk →</span></span>
-  </a>
-</main>
-<style>
-.eco{position:relative;isolation:isolate;display:flex;align-items:flex-end;min-height:220px;margin:34px 0 10px;border-radius:24px;overflow:hidden;color:#fff;text-decoration:none;transition:transform .2s var(--ease-out)}
-.eco img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .5s var(--ease-out)}
-.eco::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(12,28,23,.88),rgba(12,28,23,.35) 70%,rgba(12,28,23,.1))}
-.eco-tx{display:grid;gap:4px;padding:24px 26px;max-width:560px}.eco-tx b{font:700 clamp(24px,3.4vw,34px)/1.1 Fraunces,serif}
-.eco:active{transform:scale(.99)}
-@media (hover:hover) and (pointer:fine){.eco:hover img{transform:scale(1.04)}}
-</style>
-<footer><div class="wrap">Meneer Boersen · Vellesan College · Geschiedenis jaar 3 mavo · lesmateriaal: J. Boersen</div></footer>
+
+  <nav class="choose" aria-label="Kies je vak">
+    <a class="door" href="economie/index.html" style="--c:#f2c46b">
+      <img src="economie/img/markt.jpg" alt="" fetchpriority="high">
+      <span class="tint"></span>
+      <span class="float" aria-hidden="true"><i style="left:12%;top:16%;--t:8s;--d:0.1s"><svg width="44" height="44" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#f2c46b"/><circle cx="20" cy="20" r="14" fill="none" stroke="#c9952e" stroke-width="2"/><text x="20" y="26.5" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-weight="900" font-size="18" fill="#8a6418">€</text></svg></i><i style="left:72%;top:12%;--t:10s;--d:0.5s"><svg width="32" height="32" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#f2c46b"/><circle cx="20" cy="20" r="14" fill="none" stroke="#c9952e" stroke-width="2"/><text x="20" y="26.5" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-weight="900" font-size="18" fill="#8a6418">€</text></svg></i><i style="left:58%;top:36%;--t:7s;--d:0.9s"><svg width="26" height="26" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#f2c46b"/><circle cx="20" cy="20" r="14" fill="none" stroke="#c9952e" stroke-width="2"/><text x="20" y="26.5" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-weight="900" font-size="18" fill="#8a6418">€</text></svg></i><i style="left:28%;top:42%;--t:11s;--d:1.2s"><svg width="20" height="20" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#f2c46b"/><circle cx="20" cy="20" r="14" fill="none" stroke="#c9952e" stroke-width="2"/><text x="20" y="26.5" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-weight="900" font-size="18" fill="#8a6418">€</text></svg></i></span>
+      <span class="body">
+        <span class="k">Vak 1</span>
+        <h2>Economie</h2>
+        <p>Geld, werk, de markt en de overheid. Kies je jaar en je niveau, en ga aan de slag met de lesstof, films en lesapps.</p>
+        <span class="yrs"><span>Jaar 2</span><span>Jaar 3</span><span>Jaar 4</span></span>
+        <span class="go">Start Economie <span aria-hidden="true">→</span></span>
+      </span>
+    </a>
+    <a class="door" href="geschiedenis.html" style="--c:#ff8d90">
+      <img src="img/industriestad.jpg" alt="">
+      <span class="tint"></span>
+      <span class="float" aria-hidden="true"><i class="gear" style="left:70%;top:8%;--dur:20s;--dir:normal"><svg width="92" height="92" viewBox="0 0 40 40"><path d="M20 3l2.6 4.2 4.8-1 1.2 4.8 4.7 1.4-.9 4.8 3.6 3.3-3.6 3.3.9 4.8-4.7 1.4-1.2 4.8-4.8-1L20 37l-2.6-4.2-4.8 1-1.2-4.8-4.7-1.4.9-4.8L4 20l3.6-3.3-.9-4.8 4.7-1.4 1.2-4.8 4.8 1z" fill="rgba(255,141,144,.55)"/><circle cx="20" cy="20" r="6" fill="#0c241e"/></svg></i><i class="gear" style="left:84%;top:26%;--dur:13s;--dir:reverse"><svg width="58" height="58" viewBox="0 0 40 40"><path d="M20 3l2.6 4.2 4.8-1 1.2 4.8 4.7 1.4-.9 4.8 3.6 3.3-3.6 3.3.9 4.8-4.7 1.4-1.2 4.8-4.8-1L20 37l-2.6-4.2-4.8 1-1.2-4.8-4.7-1.4.9-4.8L4 20l3.6-3.3-.9-4.8 4.7-1.4 1.2-4.8 4.8 1z" fill="rgba(243,239,224,.35)"/><circle cx="20" cy="20" r="6" fill="#0c241e"/></svg></i><i class="gear" style="left:12%;top:20%;--dur:16s;--dir:reverse"><svg width="46" height="46" viewBox="0 0 40 40"><path d="M20 3l2.6 4.2 4.8-1 1.2 4.8 4.7 1.4-.9 4.8 3.6 3.3-3.6 3.3.9 4.8-4.7 1.4-1.2 4.8-4.8-1L20 37l-2.6-4.2-4.8 1-1.2-4.8-4.7-1.4.9-4.8L4 20l3.6-3.3-.9-4.8 4.7-1.4 1.2-4.8 4.8 1z" fill="rgba(255,141,144,.35)"/><circle cx="20" cy="20" r="6" fill="#0c241e"/></svg></i></span>
+      <span class="body">
+        <span class="k">Vak 2</span>
+        <h2>Geschiedenis</h2>
+        <p>Van de industriële revolutie tot de verzorgingsstaat. Vier boekjes met hoofdstukken, spotprenten, games en examentraining.</p>
+        <span class="yrs"><span>Jaar 3</span></span>
+        <span class="go">Start Geschiedenis <span aria-hidden="true">→</span></span>
+      </span>
+    </a>
+  </nav>
+  <footer>Meneer Boersen · Vellesan College · Economie en Geschiedenis</footer>
+</div>
+<script>
+/* letters van de titel apart animeren; de tekst blijft voor schermlezers in aria-label */
+(function(){var n=0;document.querySelectorAll("#t .w").forEach(function(w){var t=w.textContent;w.textContent="";w.setAttribute("aria-hidden","true");t.split("").forEach(function(c){var s=document.createElement("span");s.className="l";s.style.setProperty("--n",n++);s.textContent=c;w.appendChild(s);});});})();
+</script>
 </body>
 </html>

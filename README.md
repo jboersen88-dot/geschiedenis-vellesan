@@ -10,11 +10,12 @@ Statische HTML/CSS/JS, zonder build-stap of framework, gehost via GitHub Pages v
 
 | Pagina | Wat |
 |---|---|
-| `index.html` | **Geschiedenis jaar 3**: de vier boekjes (3 en 4 volgen in het tweede deel van het jaar) |
+| `index.html` | **Kaft** "Meneer Boersen": kies Economie of Geschiedenis |
+| `geschiedenis.html` | **Geschiedenis jaar 3**: de vier boekjes (3 en 4 volgen in het tweede deel van het jaar) |
 | `boekje-1.html` | Boekje 1 *De industriële samenleving in Nederland*: startpagina met de vier hoofdstukken |
 | `app.html` | Leeromgeving boekje 1: Leer → Oefen → Test, dia's, Oefenlab, oefentoetsen, filmpjes. Deep links: `app.html#H2`, `#H3-lab`, `#toets`, `#films` |
 | `boekje-2/` | Boekje 2 *Sociale zekerheid en verzorgingsstaat in Nederland*: `index.html`, `app.html`, `onderzoek.html` (Kijkwijzer, onderzoek, bronnen), `examentraining.html` |
-| `economie/` | Economie, nagebouwd van meneerboersen.nl (jaaroverzicht, hoofdstukpagina's en lesapps in `economie/apps/`) |
+| `economie/` | Economie, nagebouwd van meneerboersen.nl. Route: jaar (`index.html`) → niveau (`jaar.html?j=jaar-3`) → hoofdstukken (`jaar.html?j=jaar-3&n=mavo`) → hoofdstuk (`h.html?p=…`). Jaar 2 en 4: mavo; jaar 3: mavo, havo/vwo volgt. Lesapps in `economie/apps/`, eigen beelden in `economie/img/` |
 | `toets.html` | Online oefentoetsen met klok en AI-nakijker (`?t=t1` H1+H2, `t2` H3+H4, `t3` H1–H4) |
 | `spotprent.html` | Spotprenten analyseren met de Kijkwijzer, klikbare onderdelen, hints en AI-feedback. Bronnen en rechten: `docs/spotprenten-bronnen.md` |
 | `racer.html` | Geschiedenis-Racer (quiz-race met sorteerspel) |

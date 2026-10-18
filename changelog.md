@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-10-18 · nieuwe opbouw: kaft → vak → jaar → niveau → hoofdstuk
+
+- **Kaft** (`index.html`): grote titel "Meneer Boersen … leert je hoe de wereld werkt", letter voor letter animerend, met twee panelen (Economie en Geschiedenis) die breder worden bij hover. Zwevende SVG-munten en tandwielen, langzaam bewegend licht en korrel. Op de telefoon staan de panelen onder elkaar. Alles respecteert reduced motion.
+- **Geschiedenis**: het jaar 3-overzicht staat nu op `geschiedenis.html`. "Jaar 3"- en terug-links wijzen daarheen, het logo "Meneer Boersen" gaat naar de kaft.
+- **Economie**: na het jaar komt nu eerst het **niveau** (stap 2), daarna de hoofdstukken (stap 3). Jaar 2: mavo. Jaar 3: mavo, en havo/vwo als "Volgt binnenkort" (op meneerboersen.nl is daar nog geen inhoud). Jaar 4: mavo. Het kruimelpad toont Economie / Jaar / Niveau / Hoofdstuk. De inhoud van meneerboersen.nl is ongewijzigd.
+- **Economie jaar 2 H2**: 11 eigen beelden (`economie/img/j2h2/`) als hero, als galerij per paragraaf (2.1–2.4) op de hoofdstukpagina, en in de lesapp per paragraaf. Eén privéfoto (tuin met straat en auto's) in de map is bewust niet gebruikt.
+- Controles: linkcheck en a11ycheck 0 fouten, 10 kernpagina's zonder horizontaal scrollen of fouten op 375 en 820 px. De linkcheck slaat nu ook `url(#id)`-verwijzingen binnen SVG over.
+
 ## 2026-10-18 · opruimen en kwaliteit
 
 - **Drie controlescripts in `tools/`** (uitleg in de README):

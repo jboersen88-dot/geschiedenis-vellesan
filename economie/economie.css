@@ -94,3 +94,23 @@ footer{color:var(--muted);font-size:13px;padding:30px 0 50px}
 :focus-visible{outline:3px solid var(--teal);outline-offset:2px}
 @media (prefers-reduced-motion:reduce){.rv,.hero img{animation:none;opacity:1;transform:none}*{transition-duration:.01ms!important}}
 .sec .note{font-weight:600;color:var(--green);margin:10px 0 6px}
+
+/* stappen jaar → niveau → hoofdstuk */
+.step{display:flex;align-items:center;gap:10px;margin:26px 0 14px;font-family:Fraunces,Georgia,serif;font-weight:700;font-size:clamp(20px,2.6vw,26px)}
+.step span{font-family:Inter,system-ui,sans-serif;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--green);border-radius:999px;padding:5px 11px}
+.grid.niv{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.tile.niv .tx{padding:26px 24px 24px;display:flex;flex-direction:column;gap:8px;min-height:190px}
+.tile.niv h2{font-size:clamp(30px,4vw,42px)}
+.tile.niv .go{margin-top:auto;font-weight:700;color:var(--berry)}
+.tile.niv:not(.volgt){background:linear-gradient(160deg,var(--card),color-mix(in srgb,var(--teal) 10%,var(--card)))}
+.tile.volgt{background:transparent;border-style:dashed;box-shadow:none;cursor:default}
+.tile.volgt h2{color:var(--muted)}
+.tile.volgt .k{color:var(--muted)}
+.tile.volgt:hover,.tile.volgt:active{transform:none;box-shadow:none}
+
+/* galerij met eigen beelden */
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;margin:10px 0 18px}
+.gal a{display:block;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:var(--card);text-decoration:none;transition:transform .2s var(--ease-out),box-shadow .2s var(--ease-out)}
+.gal img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
+.gal span{display:block;padding:8px 10px;font-size:13px;line-height:1.35;color:var(--muted)}
+@media (hover:hover) and (pointer:fine){.gal a:hover{transform:translateY(-2px);box-shadow:0 12px 26px -18px rgba(31,95,78,.6)}}

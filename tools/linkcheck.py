@@ -27,8 +27,8 @@ def files(exts):
 
 
 def local_target(page, link):
-    if any(c in link for c in "'+{}$<>"):
-        return None
+    if any(c in link for c in "'+{}$<>") or link.startswith(("#", "%23")):
+        return None  # samengestelde links en verwijzingen binnen een SVG (url(#id))
     link = link.split("#")[0].split("?")[0]
     if not link or link.startswith(("http:", "https:", "mailto:", "tel:", "data:", "javascript:", "//")):
         return None
