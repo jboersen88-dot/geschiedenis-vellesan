@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Spotprent-opdrachten · Geschiedenis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--green:#1f5f4e;--coral:#ff8d90;--berry:#c2484d;--teal:#2f8f86;--bg:#f6f0e6;--card:#fffdf9;--ink:#201a14;--muted:#6f6556;--line:#e6dac4;--ok-soft:#e1f4ea;--ease:cubic-bezier(.23,1,.32,1)}
+@media(prefers-color-scheme:dark){:root{--bg:#17201d;--card:#1f2b27;--ink:#f2ece0;--muted:#a79f90;--line:#34433d;--ok-soft:#183a2b;--green:#8fd3bd}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,system-ui,sans-serif}
+.wrap{max-width:1180px;margin:0 auto;padding:16px 16px 80px}
+h1{font:700 clamp(26px,4.4vw,36px)/1.15 Fraunces,serif;color:var(--green);margin:8px 0 6px;letter-spacing:-.02em}
+h2{font:700 22px/1.2 Fraunces,serif;color:var(--green);margin:0 0 6px}
+h3{font:700 18px/1.25 Fraunces,serif;color:var(--green);margin:0 0 4px}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--berry)}
+.muted{color:var(--muted)}a{color:inherit}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:18px;box-shadow:0 1px 2px rgba(31,95,78,.06),0 10px 28px rgba(31,95,78,.08)}
+.tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:18px 0 16px}
+.tabs button{min-height:52px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:14px;padding:8px 10px;font:600 15px Inter;cursor:pointer;text-align:left;transition:border-color .16s,background .16s,transform .16s var(--ease)}
+.tabs button small{display:block;font-weight:500;color:var(--muted);font-size:12px}
+.tabs button[aria-selected="true"]{border-color:var(--teal);background:color-mix(in srgb,var(--teal) 10%,var(--card))}
+.tabs button:active{transform:scale(.97)}
+.grid2{display:grid;gap:20px}
+@media(min-width:900px){.grid2{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:start}.stick{position:sticky;top:16px}}
+.plaat{position:relative;margin:0 auto}
+@media(min-width:900px){.plaat{width:min(100%,calc((100vh - 150px)*var(--r)))}}
+.plaat img{display:block;width:100%;height:auto;border-radius:12px;background:#e9e0cf;cursor:zoom-in}
+.dek{position:absolute;background:#efe4cf;border:2px dashed var(--berry);border-radius:6px;display:grid;place-items:center;font:700 14px Inter;color:var(--berry);transition:opacity .3s var(--ease)}
+.dek.weg{opacity:0;pointer-events:none}
+figcaption{font-size:13px;color:var(--muted);margin-top:8px}
+.vraag{font-weight:600;margin:6px 0 10px}
+.opts{display:grid;gap:12px;margin:10px 0}
+.opt{display:block;width:100%;text-align:left;min-height:52px;border:2px solid var(--line);background:var(--card);color:var(--ink);border-radius:12px;padding:10px 14px;font:500 15px/1.45 Inter;cursor:pointer;transition:border-color .16s,background .16s,transform .16s var(--ease)}
+.opt:active{transform:scale(.98)}
+.opt.goed{border-color:#2e9b6b;background:var(--ok-soft)}
+.opt.fout{border-color:var(--berry);background:color-mix(in srgb,var(--berry) 10%,var(--card));text-decoration:line-through;opacity:.75}
+.opt[disabled]{cursor:default}
+.btn{display:inline-flex;align-items:center;gap:8px;border:0;border-radius:12px;padding:10px 16px;min-height:44px;font:600 15px Inter;background:var(--berry);color:#fff;cursor:pointer;text-decoration:none;transition:transform .16s var(--ease),filter .16s}
+.btn:active{transform:scale(.97)}.btn.ghost{background:transparent;color:var(--green);border:1.5px solid var(--line)}.btn[disabled]{opacity:.55;cursor:default}
+@media(hover:hover) and (pointer:fine){.btn:hover{filter:brightness(1.07)}.tabs button:hover,.opt:not([disabled]):hover,.paar:hover{border-color:var(--teal)}}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;align-items:center}
+.hint{margin-top:10px;border-left:4px solid var(--coral);background:color-mix(in srgb,var(--coral) 12%,transparent);border-radius:0 12px 12px 0;padding:8px 12px;font-size:15px}
+.hint b{color:var(--berry)}
+.model{margin-top:12px;background:var(--ok-soft);border-radius:12px;padding:10px 12px;font-size:15px}
+.fbk{margin-top:12px;border-radius:12px;padding:10px 12px;font-size:15px;background:color-mix(in srgb,var(--berry) 10%,transparent)}
+.tag{display:inline-block;font-size:12px;font-weight:600;color:var(--teal);border:1.5px solid color-mix(in srgb,var(--teal) 40%,transparent);border-radius:999px;padding:1px 9px;margin-bottom:6px}
+.score{font-weight:700;color:var(--green)}
+/* tijdlijn */
+.tl{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:10px}
+.tl li{display:flex;gap:12px;align-items:center;border:2px solid var(--line);background:var(--card);border-radius:14px;padding:8px;transition:border-color .2s,background .2s}
+.tl li.goed{border-color:#2e9b6b;background:var(--ok-soft)}.tl li.fout{border-color:var(--berry)}
+.tl img{width:64px;height:80px;object-fit:cover;border-radius:8px;flex:none;background:#e9e0cf;cursor:zoom-in}
+.tl .tx{flex:1;min-width:0}.tl .tx b{display:block;font-weight:600;line-height:1.3}.tl .tx small{color:var(--muted);font-size:13px;display:block}
+.tl .nr{width:28px;height:28px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font-weight:700;font-size:14px;flex:none}
+.tl .pijl{display:flex;flex-direction:column;gap:6px}
+.tl .pijl button{width:44px;height:38px;border-radius:10px;border:1.5px solid var(--line);background:var(--card);color:var(--green);font:700 18px Inter;cursor:pointer}
+.tl .pijl button[disabled]{opacity:.35;cursor:default}
+.as{position:relative;height:64px;margin:18px 6px 6px}
+.as .lijn{position:absolute;left:0;right:0;top:22px;height:4px;border-radius:2px;background:var(--line)}
+.as .j{position:absolute;top:36px;transform:translateX(-50%);font-size:12px;color:var(--muted)}
+.as .p{position:absolute;top:12px;transform:translateX(-50%);width:24px;height:24px;border-radius:50%;background:var(--berry);color:#fff;font:700 12px Inter;display:grid;place-items:center;border:2px solid #fff}
+/* vergelijken */
+.paren{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+.paar{display:block;text-align:left;border:1.5px solid var(--line);background:var(--card);color:inherit;border-radius:16px;padding:12px;cursor:pointer;font:inherit;transition:border-color .16s,transform .16s var(--ease)}
+.paar:active{transform:scale(.98)}
+.paar .duo{display:flex;gap:6px;margin-bottom:8px}.paar .duo img{width:50%;height:110px;object-fit:cover;border-radius:8px;background:#e9e0cf}
+.paar small{display:block;color:var(--muted);font-size:13px}
+.duo2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:520px){.duo2{grid-template-columns:1fr}}
+.duo2 figure{margin:0}.duo2 img{display:block;width:100%;height:auto;max-height:62vh;object-fit:contain;border-radius:10px;background:#e9e0cf;cursor:zoom-in}
+.lbl{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--berry);color:#fff;font-weight:700;font-size:14px;margin-right:6px}
+textarea{width:100%;min-height:110px;border:2px solid var(--line);border-radius:14px;padding:12px;font:16px/1.5 Inter;background:var(--card);color:var(--ink);resize:vertical}
+textarea:focus{border-color:var(--teal);outline:none}
+.aiwait{margin-top:12px;font-size:14px;color:var(--muted)}.aiwait:before{content:"";display:inline-block;width:12px;height:12px;margin-right:8px;border:2px solid var(--teal);border-right-color:transparent;border-radius:50%;vertical-align:-2px;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+.fade{animation:fade .32s var(--ease)}@keyframes fade{from{opacity:0;transform:translateY(6px)}}
+dialog{border:0;padding:0;background:transparent;max-width:96vw;max-height:96vh}dialog::backdrop{background:rgba(10,14,12,.82)}
+dialog img{display:block;max-width:96vw;max-height:92vh;width:auto;height:auto;border-radius:10px}
+dialog button{position:fixed;top:12px;right:12px}
+:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){*{transition-duration:.01ms!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+<dialog id="zoom" aria-label="Spotprent vergroot"><button class="btn" id="dicht">Sluiten</button><img id="zoomimg" alt=""></dialog>
+<script src="data/spotprenten.js"></script>
+<script src="data/spotprent-opdrachten.js"></script>
+<script src="ai.js"></script>
+<script src="nakijker.js"></script>
+<script>
+(function(){
+var L=window.SPOTPRENTEN,O=window.SPOT_OPDRACHTEN,esc=GV_AI.esc,app=document.getElementById("app");
+var byId={};L.forEach(function(p){byId[p.id]=p;});
+var KEY="gv-spot-opdrachten",S;
+try{S=JSON.parse(localStorage.getItem(KEY))||{};}catch(e){S={};}
+S.tab=S.tab||"bijschrift";S.vg=S.vg||{};
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}
+function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),t=a[i];a[i]=a[j];a[j]=t;}return a;}
+var HN=["Denkvraag","Tip"];
+function hints(l,n){return l.slice(0,n).map(function(t,i){return '<div class="hint fade"><b>'+HN[i]+':</b> '+esc(t)+'</div>';}).join("");}
+var bezig={};
+
+/* ---------- Bijschrift kiezen ---------- */
+var B=null; // ronde: {ids, i, goed, keuzes:{...}}
+function nieuweBijschriftRonde(){B={ids:shuffle(Object.keys(O.bijschrift).filter(function(k){return byId[k];})),i:0,score:0};nieuweVraag();}
+function nieuweVraag(){var id=B.ids[B.i],d=O.bijschrift[id];B.opts=shuffle([d.goed].concat(d.fout));B.fout=[];B.klaar=false;B.hint=0;}
+function bijschriftHtml(){
+  if(!B)nieuweBijschriftRonde();
+  if(B.i>=B.ids.length)return '<div class="card fade"><h2>Klaar!</h2><p>Je koos <span class="score">'+B.score+' van '+B.ids.length+'</span> bijschriften in één keer goed.</p><div class="row"><button class="btn" id="bopnieuw">Nog een keer</button></div></div>';
+  var id=B.ids[B.i],p=byId[id],d=O.bijschrift[id],r=p.formaat?p.formaat[0]/p.formaat[1]:.75;
+  var h='<div class="grid2"><div class="card stick"><div class="plaat" style="--r:'+r+'"><img class="zoombaar" src="'+p.img+'" alt="Spotprent'+(B.klaar?': '+esc(p.titel):'')+'">'+
+    d.dek.map(function(z){return '<div class="dek'+(B.klaar?' weg':'')+'" style="left:'+z[0]+'%;top:'+z[1]+'%;width:'+z[2]+'%;height:'+z[3]+'%" aria-hidden="true">?</div>';}).join("")+'</div>'+
+    '<figcaption>'+(B.klaar?esc(p.maker)+', '+p.jaar+'. ':'')+'Tik op de prent om te vergroten.</figcaption></div>';
+  h+='<div class="card"><span class="tag">Prent '+(B.i+1)+' van '+B.ids.length+' · score '+B.score+'</span><h2>Kies het bijschrift</h2><p class="muted" style="margin:0">Het echte bijschrift is afgedekt. Welk bijschrift heeft de tekenaar erbij gezet? Kijk goed naar de personen en de details.</p>';
+  h+='<div class="opts" role="group" aria-label="Kies een bijschrift">'+B.opts.map(function(o,j){var cls=B.klaar&&o===d.goed?" goed":(B.fout.indexOf(j)>=0?" fout":"");
+    return '<button class="opt'+cls+'" data-opt="'+j+'"'+(B.klaar||B.fout.indexOf(j)>=0?' disabled':'')+'>'+esc(o)+'</button>';}).join("")+'</div>';
+  var hl=(p.stappen[1]&&p.stappen[1].hints)||[];
+  if(!B.klaar){h+=hints(hl,B.hint);h+='<div class="row">'+(B.hint<hl.length?'<button class="btn ghost" id="bhint">Hint '+(B.hint+1)+' van '+hl.length+'</button>':'')+'</div>';
+    if(B.fout.length)h+='<div class="fbk fade">Dat bijschrift past niet bij deze prent. Kijk nog eens: wie is sterk en wie is zwak getekend? Probeer opnieuw.</div>';}
+  else h+='<div class="model fade"><b>'+(B.fout.length?'Gevonden.':'Goed, in één keer!')+'</b> Dit is <i>'+esc(p.titel)+'</i> van '+esc(p.maker)+' ('+p.jaar+'). '+esc(p.intro)+'</div><div class="row"><button class="btn" id="bvolgende">'+(B.i+1<B.ids.length?'Volgende prent →':'Bekijk je score')+'</button><a class="btn ghost" href="spotprent.html?p='+p.id+'">Onderzoek deze prent</a></div>';
+  return h+'</div></div>';}
+
+/* ---------- Tijdlijn ---------- */
+var T=null,N_TL=5;
+function nieuweTijdlijn(){var ids=shuffle(L.map(function(p){return p.id;}).filter(function(k){return O.tijd[k];}));
+  // geen twee prenten uit hetzelfde jaar, zodat er één juiste volgorde is
+  var gekozen=[],jaren={};ids.forEach(function(k){if(gekozen.length<N_TL&&!jaren[byId[k].jaar]){gekozen.push(k);jaren[byId[k].jaar]=1;}});
+  T={orde:gekozen,klaar:false,hint:0};}
+function tijdlijnHtml(){
+  if(!T)nieuweTijdlijn();
+  var juist=T.orde.slice().sort(function(a,b){return byId[a].jaar-byId[b].jaar;}),ok=0;
+  var h='<div class="card fade"><h2>Zet de prenten op de tijdlijn</h2><p class="muted" style="margin:0">Zet de vijf spotprenten in de goede volgorde: de oudste bovenaan, de nieuwste onderaan. Gebruik de pijltjes. Let op wat er op de prent gebeurt: welke gebeurtenis of wet hoort erbij?</p><ol class="tl">';
+  T.orde.forEach(function(k,i){var p=byId[k],cls="";if(T.klaar){cls=k===juist[i]?" goed":" fout";if(k===juist[i])ok++;}
+    h+='<li class="'+cls.trim()+'"><span class="nr">'+(i+1)+'</span><img class="zoombaar" src="'+p.img+'" alt="Spotprent: '+esc(p.titel)+'" loading="lazy"><div class="tx"><b>'+esc(p.titel)+'</b><small>'+esc(p.maker)+(T.klaar?' · <b style="display:inline;color:var(--berry)">'+p.jaar+'</b> · '+esc(O.tijd[k]):'')+'</small></div>'+
+      (T.klaar?'':'<div class="pijl"><button data-op="'+i+'" aria-label="Zet '+esc(p.titel)+' hoger"'+(i===0?' disabled':'')+'>↑</button><button data-neer="'+i+'" aria-label="Zet '+esc(p.titel)+' lager"'+(i===T.orde.length-1?' disabled':'')+'>↓</button></div>')+'</li>';});
+  h+='</ol>';
+  if(!T.klaar){h+=hints(["Kijk bij elke prent waar hij over gaat. Welke gebeurtenis of wet uit je boekje hoort erbij?","Jaartallen die je kunnen helpen: Ongevallenwet 1901 · spoorwegstaking 1903 · algemeen kiesrecht voor mannen en de Pacificatie 1917 · vrouwenkiesrecht 1919 · de crisis van de jaren dertig."],T.hint);
+    h+='<div class="row"><button class="btn" id="tcheck">Controleer</button>'+(T.hint<2?'<button class="btn ghost" id="thint">Hint '+(T.hint+1)+' van 2</button>':'')+'</div>';}
+  else{
+    var min=1900,max=1940;
+    h+='<div class="as" aria-hidden="true"><div class="lijn"></div>'+[1900,1910,1920,1930,1940].map(function(j){return '<span class="j" style="left:'+((j-min)/(max-min)*100)+'%">'+j+'</span>';}).join("")+
+      juist.map(function(k){return '<span class="p" style="left:'+((byId[k].jaar-min)/(max-min)*100)+'%">'+(T.orde.indexOf(k)+1)+'</span>';}).join("")+'</div>';
+    h+='<div class="'+(ok===T.orde.length?'model':'fbk')+' fade"><b>'+ok+' van '+T.orde.length+' op de goede plek.</b> '+(ok===T.orde.length?'Knap gedaan!':'De goede volgorde is: '+juist.map(function(k){return esc(byId[k].titel)+' ('+byId[k].jaar+')';}).join(' → ')+'.')+'</div><div class="row"><button class="btn" id="tnieuw">Nieuwe prenten</button></div>';}
+  return h+'</div>';}
+
+/* ---------- Vergelijken ---------- */
+function paarById(id){return O.paren.filter(function(x){return x.id===id;})[0];}
+function vergelijkHtml(){
+  var V=S.paar&&paarById(S.paar);
+  if(!V)return '<div class="card fade"><h2>Twee spotprenten vergelijken</h2><p class="muted" style="margin:0 0 12px">Op het examen moet je soms twee bronnen vergelijken: wat is hetzelfde, en wat is anders? Kies twee prenten.</p><div class="paren">'+
+    O.paren.map(function(x){var a=byId[x.a],b=byId[x.b],z=S.vg[x.id]||{},n=Object.keys(z.ai||{}).length;return '<button class="paar" data-paar="'+x.id+'"><div class="duo"><img src="'+a.img+'" alt="" loading="lazy"><img src="'+b.img+'" alt="" loading="lazy"></div><h3>'+esc(x.titel)+'</h3><small>'+esc(a.titel)+' ('+a.jaar+') en '+esc(b.titel)+' ('+b.jaar+')</small>'+(n?'<small style="color:#2e9b6b">'+n+' van '+x.vragen.length+' vragen nagekeken</small>':'')+'</button>';}).join("")+'</div></div>';
+  var a=byId[V.a],b=byId[V.b],z=S.vg[V.id]=S.vg[V.id]||{antw:{},ai:{},hint:{},model:{}};
+  var h='<div class="card fade"><a class="muted" href="#" id="vterug">← Andere prenten kiezen</a><h2 style="margin-top:8px">'+esc(V.titel)+'</h2><p class="muted" style="margin:0 0 12px">'+esc(V.intro)+'</p><div class="duo2">'+
+    [a,b].map(function(p,i){return '<figure><img class="zoombaar" src="'+p.img+'" alt="Spotprent '+"AB"[i]+': '+esc(p.titel)+'. '+esc(p.beschrijving)+'"><figcaption><span class="lbl">'+"AB"[i]+'</span><b>'+esc(p.titel)+'</b>, '+esc(p.maker)+', '+p.jaar+'. <a href="spotprent.html?p='+p.id+'">Onderzoek deze prent</a></figcaption></figure>';}).join("")+'</div></div>';
+  V.vragen.forEach(function(q,i){var f=z.ai[i],hl=z.hint[i]||0;
+    h+='<div class="card fade" style="margin-top:16px"><span class="tag">Vraag '+(i+1)+' · '+esc(q.soort)+'</span><p class="vraag">'+esc(q.vraag)+'</p><textarea data-vt="'+i+'" aria-label="Jouw antwoord op vraag '+(i+1)+'" placeholder="Noem beide prenten: In prent A … In prent B …">'+esc(z.antw[i]||"")+'</textarea>'+hints(q.hints,hl)+'<div class="row">'+
+      (GV_NK.enabled?'<button class="btn" data-vnk="'+i+'"'+(bezig[V.id+i]?' disabled':'')+'>'+(f?'Laat opnieuw nakijken':'Laat nakijken')+'</button>':'')+
+      (hl<q.hints.length?'<button class="btn ghost" data-vhint="'+i+'">Hint '+(hl+1)+' van '+q.hints.length+'</button>':'')+
+      ((f||hl>=q.hints.length||!GV_NK.enabled)?'<button class="btn ghost" data-vmodel="'+i+'">'+(z.model[i]?'Verberg':'Bekijk')+' het modelantwoord</button>':'')+'</div>'+
+      '<div>'+(bezig[V.id+i]?'<div class="aiwait">AI kijkt je antwoord na…</div>':f?GV_NK.render(f):'')+'</div>'+
+      (z.model[i]?'<div class="model fade"><b>Modelantwoord:</b> '+esc(q.model)+'</div>':'')+'</div>';});
+  return h;}
+function vNakijken(i){var V=paarById(S.paar),q=V.vragen[i],z=S.vg[V.id],ans=(document.querySelector('[data-vt="'+i+'"]').value||"").trim(),a=byId[V.a],b=byId[V.b];
+  if(ans.length<3){alert("Schrijf eerst je antwoord.");return;}
+  z.antw[i]=ans;bezig[V.id+i]=1;save();render();
+  var hs=[];a.h.concat(b.h).forEach(function(x){if(hs.indexOf(x)<0)hs.push(x);});
+  GV_NK.check({h:hs,vraag:q.vraag,punten:q.punten,bron:("Prent A: "+a.bronvermelding+"\n"+a.beschrijving+"\n\nPrent B: "+b.bronvermelding+"\n"+b.beschrijving).slice(0,4000),antwoord:ans.slice(0,2000)}).then(function(f){
+    delete bezig[V.id+i];z.ai[i]=f.status==="ok"?f:{status:"fout",melding:f.melding||"De AI kon nu niet nakijken. Bekijk het modelantwoord."};save();render();});}
+
+/* ---------- Pagina ---------- */
+var TABS=[["bijschrift","Bijschrift kiezen","Welke tekst hoort erbij?"],["tijdlijn","Op de tijdlijn","Welke prent is het oudst?"],["vergelijken","Vergelijken","Twee prenten naast elkaar"]];
+function render(){
+  bewaar();
+  var h='<a class="muted" href="spotprent.html">← Alle spotprenten</a><div class="eyebrow" style="margin-top:20px">Examentraining · spotprenten</div><h1>Extra opdrachten</h1><p class="muted" style="max-width:680px;margin:0">Oefen op drie manieren met de spotprenten. Tip: onderzoek een prent eerst met de Kijkwijzer, dan gaan deze opdrachten makkelijker.</p>';
+  h+='<div class="tabs" role="tablist">'+TABS.map(function(t){return '<button role="tab" data-tab="'+t[0]+'" aria-selected="'+(S.tab===t[0])+'">'+t[1]+'<small>'+t[2]+'</small></button>';}).join("")+'</div>';
+  h+='<div id="paneel" role="tabpanel">'+(S.tab==="bijschrift"?bijschriftHtml():S.tab==="tijdlijn"?tijdlijnHtml():vergelijkHtml())+'</div>';
+  app.innerHTML=h;}
+function bewaar(){var V=S.paar&&paarById(S.paar);if(!V)return;var z=S.vg[V.id];if(!z)return;document.querySelectorAll("textarea[data-vt]").forEach(function(t){z.antw[t.dataset.vt]=t.value;});save();}
+function naarPaneel(){var p=document.getElementById("paneel");if(p)p.scrollIntoView({block:"start",behavior:matchMedia("(prefers-reduced-motion:reduce)").matches?"auto":"smooth"});}
+
+app.addEventListener("click",function(e){var t=e.target,c=function(s){return t.closest(s);},x;
+  if(x=c("[data-tab]")){S.tab=x.dataset.tab;save();render();return;}
+  if(x=c(".zoombaar")){var d=document.getElementById("zoom"),zi=document.getElementById("zoomimg");zi.src=x.src;zi.alt=x.alt;d.showModal();return;}
+  // bijschrift
+  if(x=c("[data-opt]")){var j=+x.dataset.opt,id=B.ids[B.i];if(B.opts[j]===O.bijschrift[id].goed){B.klaar=true;if(!B.fout.length)B.score++;}else B.fout.push(j);render();return;}
+  if(c("#bhint")){B.hint++;render();return;}
+  if(c("#bvolgende")){B.i++;if(B.i<B.ids.length)nieuweVraag();render();naarPaneel();return;}
+  if(c("#bopnieuw")){nieuweBijschriftRonde();render();return;}
+  // tijdlijn
+  if(x=c("[data-op]")){var i=+x.dataset.op,o=T.orde;o.splice(i-1,0,o.splice(i,1)[0]);render();var q=document.querySelector('[data-op="'+(i-1)+'"]')||document.querySelector('[data-neer="0"]');if(q)q.focus();return;}
+  if(x=c("[data-neer]")){var k=+x.dataset.neer,o2=T.orde;o2.splice(k+1,0,o2.splice(k,1)[0]);render();var q2=document.querySelector('[data-neer="'+(k+1)+'"]')||document.querySelector('[data-op="'+(k+1)+'"]');if(q2)q2.focus();return;}
+  if(c("#tcheck")){T.klaar=true;render();return;}
+  if(c("#thint")){T.hint++;render();return;}
+  if(c("#tnieuw")){nieuweTijdlijn();render();return;}
+  // vergelijken
+  if(x=c("[data-paar]")){S.paar=x.dataset.paar;save();render();naarPaneel();return;}
+  if(c("#vterug")){e.preventDefault();bewaar();S.paar=null;save();render();return;}
+  if(x=c("[data-vhint]")){bewaar();var z=S.vg[S.paar];z.hint[x.dataset.vhint]=(z.hint[x.dataset.vhint]||0)+1;save();render();return;}
+  if(x=c("[data-vmodel]")){bewaar();var z2=S.vg[S.paar];z2.model[x.dataset.vmodel]=!z2.model[x.dataset.vmodel];save();render();return;}
+  if(x=c("[data-vnk]")){bewaar();vNakijken(+x.dataset.vnk);return;}
+});
+app.addEventListener("input",function(e){if(e.target.dataset.vt!=null){var z=S.vg[S.paar];if(z){z.antw[e.target.dataset.vt]=e.target.value;save();}}});
+var dz=document.getElementById("zoom");dz.addEventListener("click",function(e){if(e.target===dz||e.target.id==="dicht")dz.close();});
+var m=/[?&]tab=(\w+)/.exec(location.search);if(m&&TABS.some(function(t){return t[0]===m[1];}))S.tab=m[1];
+render();
+})();
+</script>
+</body>
+</html>
