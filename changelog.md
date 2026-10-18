@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-18 · besluiten van de docent vastgelegd
+
+- `docs/besluiten.md`: PowerPoints/dia's blijven openbaar (ook Economie), Kinderwetje en Wijnen 1874, werklozen 1935 = 640.000, voortgangscode proberen, EDU-Racer Economie mag openbaar (met melding "nog niet gecontroleerd"), films via Google Drive, koppeling meneerboersen.nl later, `[?]`-lijstjes per hoofdstuk (lokaal, niet in de repo). Drie tegenstrijdigheden zoekt de docent nog op.
+- Boekje 2: "bijna een half miljoen werklozen" vervangen door 640.000 (meerkeuze H2 en examentraining); `boekje-2/app.html` opnieuw gebouwd.
+
 ## 2026-10-18 · Economie: alle meerkeuzevragen volgens de regels
 
 - In alle 9 Economie-lesapps (jaar 2 H1–H4, jaar 4 H1–H3 en de twee SE-oefenapps) zijn de foute antwoorden van bijna 500 vragen herschreven, zodat ze ongeveer even lang zijn als het goede antwoord en het goede antwoord niet meer opvalt als het langste. Goede antwoorden en uitleg zijn niet veranderd, er zijn geen nieuwe feiten toegevoegd.

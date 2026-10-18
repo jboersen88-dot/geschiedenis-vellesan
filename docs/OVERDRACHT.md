@@ -5,7 +5,7 @@ Voor een nieuw gesprek dat verder bouwt. Werk in `~/Claude/geschiedenis-vellesan
 ## Start (in deze volgorde)
 1. `git pull --rebase origin main` (repo github.com/jboersen88-dot/geschiedenis-vellesan, live op https://jboersen88-dot.github.io/geschiedenis-vellesan/, gh is ingelogd).
 2. Lees `README.md`, de bovenste entries van `changelog.md`, `~/Claude/website-analyse-2026-10-18.md` (afvinklijst, 19 opties, top 5) en `~/Claude/ai-oefentoetsen/ONTWERP.md` (alleen "Klaar voor de website" en wat BESLOTEN is).
-3. Leg de docent in één bericht de openstaande besluiten voor (punt 1 van de analyse: o.a. mogen PowerPoints in de openbare repo, de 5 tegenstrijdigheden, Economie-indeling, voortgang, welke bronnen mogen). Kort en als keuzes. Werk ondertussen door aan wat geen besluit nodig heeft.
+3. De besluiten van de docent staan in `docs/besluiten.md` (2026-10-18). Volg die; punten die daar "open" staan laat je liggen.
 
 ## Opbouw (besloten door de docent, niet veranderen)
 - `index.html` = kaft "Meneer Boersen … leert je hoe de wereld werkt" met keuze Economie / Geschiedenis.
