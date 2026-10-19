@@ -22,7 +22,6 @@ Statische HTML/CSS/JS, zonder build-stap of framework, gehost via GitHub Pages v
 | `doeboek.html` | Doe-boek H4 als online widget |
 | `kaart.html`, `beeldquiz.html`, `verhaal.html`, `filmvragen.html`, `nakijken.html` | Crisiskaart, beeldquiz, scroll-verhaal, filmvragen, AI-nakijker voor open vragen |
 | `presenteer.html?h=H1` | Dia's schermvullend presenteren in de klas |
-| `3d-arbeiderswoning.html` | 3D-simulatie van een arbeiderswoning (sociale kwestie) |
 
 ## Toets op maat
 

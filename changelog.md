@@ -2,6 +2,7 @@
 
 ## 2026-10-19 · leeromgeving boekje 1 opgeruimd (tabs, games, oefentoetsen, menu)
 
+- **3D-arbeiderswoning verwijderd van de site**: `3d-arbeiderswoning.html` is weg, samen met de verwijzing in de startpagina (tekstlabel "3D-woning" bij H3), de regel in `README.md` en de dode CSS (`.house`, `@keyframes float`) in `boekje-1.html`. Lesstof-tekst over arbeiderswoningen en `economie/` zijn niet aangeraakt.
 - **Nieuw tabblad "Oefenmateriaal"** (`app.html`, ook in boekje 2): spotprent-analyse, AI-nakijker en Doe-boek H4 staan daar (verplaatst uit de Games), plus de lijst "Meer oefenmateriaal" (filmvragen, recherchebord, Schooltv; was onderaan Oefentoetsen). Boekje 2 toont alleen de spotprent-tegel en de lijst.
 - **Games**: alle tegels hebben nu dezelfde stijl (crème kaart, bosgroene titel, groene chip). Het scroll-verhaal (`verhaal.html`) is terug als tegel bij Games (boekje 1; niet in boekje 2).
 - **Oefentoetsen-tab**: de oude weergave met ingesloten PDF, klok, nakijkblad en cijfer-invulveld is weg (code en CSS-onderdelen van de klok blijven als dode stijlregels staan). Er staat één blok met de drie digitale toetsen (`toets.html?t=t1/t2/t3`); de PDF-versies staan als kleine link eronder. "Maak je eigen oefentoets" staat nu onder de vaste toetsen (zelfde code en id's, alleen verplaatst). Elke toets komt één keer voor.
