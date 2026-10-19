@@ -100,27 +100,45 @@ section.blk{padding-block:84px}
 .chap .links span{font-size:12.5px;font-weight:700;padding:6px 11px;border-radius:9px;background:rgba(255,255,255,.14);backdrop-filter:blur(6px)}
 @media (hover:none){.chap{transform:none!important}}
 
-/* ---------- timeline ---------- */
-.tl{position:relative;padding-left:0}
-.tl-svg{position:absolute;left:50%;top:0;height:100%;width:4px;margin-left:-2px;overflow:visible}
+/* ---------- timeline + vast beeld ---------- */
+.tl-wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:clamp(28px,5vw,72px);align-items:start}
+.tl-fig{grid-column:2;grid-row:1;position:sticky;top:92px;margin:0;border-radius:26px;background:rgba(31,95,78,.07);border:1px solid var(--line);padding:8px}
+.tl-stage{position:relative;aspect-ratio:4/3;border-radius:19px;overflow:hidden;background:var(--green-d)}
+.tl-stage img,.tl-plate{position:absolute;inset:0;width:100%;height:100%;opacity:0;transform:scale(1.045);transition:opacity .55s var(--ease-out),transform 1.1s var(--ease-out)}
+.tl-stage img{object-fit:cover}
+.tl-stage img.contain{object-fit:contain;background:#fff}
+.tl-stage .on{opacity:1;transform:none}
+.tl-plate{display:grid;place-content:center;text-align:center;gap:8px;color:var(--green-fg);background:linear-gradient(150deg,var(--green-d),var(--green))}
+.tl-plate b{font-family:"Fraunces",serif;font-weight:900;font-size:clamp(56px,9vw,112px);line-height:1;color:var(--c,var(--coral))}
+.tl-plate span{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--green-mu)}
+.tl-cap{min-height:2.6em;padding:10px 8px 4px;font-size:12.5px;color:var(--muted);display:flex;justify-content:space-between;gap:12px}
+.tl-cap b{color:var(--ink);font-weight:700}
+.tl-cap span{transition:opacity .3s var(--ease-out)}
+.tl-cap.sw span{opacity:0}
+.tl{position:relative;grid-column:1;grid-row:1;padding-left:42px}
+.tl-svg{position:absolute;left:9px;top:0;height:100%;width:4px;margin-left:-2px;overflow:visible}
 .tl-svg line{stroke:var(--line);stroke-width:4}
 .tl-svg line.draw{stroke:var(--green);stroke-linecap:round}
-.ev{position:relative;width:50%;padding:0 46px 34px 0;text-align:right}
-.ev:nth-child(even of .ev){margin-left:50%;padding:0 0 34px 46px;text-align:left}
-.ev .dot{position:absolute;top:6px;right:-9px;width:18px;height:18px;border-radius:50%;background:var(--bg);border:4px solid var(--c);transform:scale(.4);opacity:0;transition:transform .5s var(--ease-out),opacity .3s var(--ease-out)}
-.ev:nth-child(even of .ev) .dot{right:auto;left:-9px}
+.ev{position:relative;padding:14px 0 40px;outline:none;cursor:default}
+.ev .dot{position:absolute;top:20px;left:-42px;width:20px;height:20px;border-radius:50%;background:var(--bg);border:4px solid var(--c);transform:scale(.4);opacity:0;transition:transform .5s var(--ease-out),opacity .3s var(--ease-out),background .3s var(--ease-out)}
 .ev.in .dot{transform:none;opacity:1}
-.ev .yr{font-family:"Fraunces",serif;font-weight:900;font-size:30px;line-height:1;color:var(--c)}
-.ev .txt{margin-top:6px;font-weight:600}
-.ev .ch{font-size:12px;font-weight:800;letter-spacing:.06em;color:var(--muted);text-transform:uppercase;margin-top:4px}
-.ev{opacity:0;transform:translateX(-18px);transition:opacity .6s var(--ease-out),transform .6s var(--ease-out)}
-.ev:nth-child(even of .ev){transform:translateX(18px)}
-.ev.in{opacity:1;transform:none}
-@media (max-width:720px){
-  .tl-svg{left:9px}
-  .ev,.ev:nth-child(even of .ev){width:100%;margin-left:0;padding:0 0 30px 40px;text-align:left;transform:translateY(14px)}
-  .ev .dot,.ev:nth-child(even of .ev) .dot{left:0;right:auto}
+.ev.act .dot{background:var(--c);transform:scale(1.25)}
+.ev .yr{font-family:"Fraunces",serif;font-weight:900;font-size:clamp(30px,3.4vw,40px);line-height:1;color:var(--c)}
+.ev .txt{margin-top:8px;font-weight:600;font-size:clamp(16px,1.6vw,19px)}
+.ev .ch{font-size:12px;font-weight:800;letter-spacing:.06em;color:var(--muted);text-transform:uppercase;margin-top:5px}
+.ev{opacity:0;transform:translateY(14px);transition:opacity .6s var(--ease-out),transform .6s var(--ease-out)}
+.ev.in{opacity:.55;transform:none}
+.ev.in.act{opacity:1}
+.ev:focus-visible .yr{outline:3px solid var(--teal);outline-offset:6px;border-radius:6px}
+.ev .nopic{display:none}
+@media (max-width:899px){
+  .tl-wrap{display:block}
+  .tl-fig{position:sticky;top:max(66px,calc(env(safe-area-inset-top,0px) + 66px));z-index:6;border-radius:20px;padding:5px;background:var(--bg);box-shadow:0 14px 24px -16px rgba(18,58,48,.45);margin-bottom:26px}
+  .tl-stage{aspect-ratio:auto;height:min(34vh,52vw);border-radius:15px}
+  .tl-cap{padding:7px 6px 2px;font-size:11.5px;min-height:0}
 }
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .tl-fig{background:var(--card)}}
+:root[data-theme="dark"] .tl-fig{background:var(--card)}
 
 /* ---------- 3D feature ---------- */
 .feat{display:grid;grid-template-columns:1.1fr 1fr;gap:34px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:28px;padding:clamp(22px,4vw,44px);overflow:hidden}
@@ -140,6 +158,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
 @media (prefers-reduced-motion:reduce){
   *,*:before,*:after{animation:none!important;transition:none!important}
   .rv,.io,.ev{opacity:1!important;transform:none!important}
+  .tl-stage img,.tl-plate{transform:none!important}
   .hero-img{transform:scale(1.08)}
 }
 </style>
@@ -199,9 +218,15 @@ footer .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
 
 <section class="blk" id="tijdlijn">
   <div class="wrap">
-    <div class="head io"><div><div class="eyebrow">Tijdlijn</div><h2>Tweehonderdvijftig jaar in één keer.</h2></div><p>Scroll en zie de tijdlijn zich tekenen. Oefen hem daarna in het Oefenlab.</p></div>
-    <div class="tl" id="tl">
-      <svg class="tl-svg" aria-hidden="true"><line x1="2" y1="0" x2="2" y2="100%"/><line class="draw" id="tlDraw" x1="2" y1="0" x2="2" y2="0"/></svg>
+    <div class="head io"><div><div class="eyebrow">Tijdlijn</div><h2>Tweehonderdvijftig jaar in één keer.</h2></div><p>Scroll door de tijd: bij elk jaartal verschijnt een beeld. Oefen de tijdlijn daarna in het Oefenlab.</p></div>
+    <div class="tl-wrap" id="tlWrap">
+      <figure class="tl-fig" id="tlFig" aria-label="Beeld bij de gebeurtenis in beeld">
+        <div class="tl-stage" id="tlStage"></div>
+        <figcaption class="tl-cap" id="tlCap"></figcaption>
+      </figure>
+      <div class="tl" id="tl">
+        <svg class="tl-svg" aria-hidden="true"><line x1="2" y1="0" x2="2" y2="100%"/><line class="draw" id="tlDraw" x1="2" y1="0" x2="2" y2="0"/></svg>
+      </div>
     </div>
     <div style="text-align:center;margin-top:20px" class="io"><a class="btn primary" href="app.html#lab" style="color:#3a1412">Oefen de tijdlijn <span class="arr">→</span></a></div>
   </div>
@@ -269,11 +294,53 @@ document.querySelectorAll(".io").forEach(function(el){io.observe(el);});
 var EV=[["H1",1750,"± 1750","De Industriële Revolutie begint in Engeland"],["H1",1764,"± 1765","James Hargreaves bedenkt de Spinning Jenny"],["H1",1778,"1778","De eerste stoommachine draait in een katoenspinnerij"],["H2",1827,"1827","De eerste wolfabriek met een stoommachine in Tilburg"],["H1",1850,"1850","De Engelse bevolking is gegroeid tot 18 miljoen"],["H2",1871,"1871","Anton Jurgens begint een margarinefabriek"],["H3",1874,"1874","Het Kinderwetje van Samuel van Houten"],["H2",1891,"1891","Philips begint een lampenfabriek in Eindhoven"],["H3",1901,"1901","De leerplichtwet wordt ingevoerd"],["H3",1917,"1917","Het algemeen kiesrecht wordt ingevoerd"],["H3",1929,"1929","Het begin van de grote economische crisis"],["H4",1944,"1944–1945","De Hongerwinter"],["H4",1948,"1948","De Marshallhulp komt binnen"],["H4",1963,"1963","De lonen gaan snel stijgen"],["H4",1973,"1973","De eerste oliecrisis en autoloze zondagen"],["H4",2008,"2008","Een wereldwijde economische crisis"]];
 var C={H1:"var(--coral-d)",H2:"var(--teal)",H3:"var(--ochre)",H4:"var(--green)"},NM={H1:"Hoofdstuk 1",H2:"Hoofdstuk 2",H3:"Hoofdstuk 3",H4:"Hoofdstuk 4"};
 var tl=document.getElementById("tl");
-tl.insertAdjacentHTML("beforeend",EV.map(function(e){return '<div class="ev" style="--c:'+C[e[0]]+'"><span class="dot"></span><div class="yr">'+e[2]+'</div><div class="txt">'+e[3]+'</div><div class="ch">'+NM[e[0]]+'</div></div>';}).join(""));
-var tio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");tio.unobserve(e.target);}});},{threshold:.4});
-tl.querySelectorAll(".ev").forEach(function(el){tio.observe(el);});
+/* beeld per jaartal: bestand in img/tijdlijn/, beschrijving, bronregel. Jaartallen zonder beeld (1871, 1891, 2008): geen passend beeld in de repo of de dia's. */
+var AI="AI-illustratie, gemaakt door de docent",DIA="Beeld: J. Boersen (uit de dia's)";
+var IMG={
+1750:["h1-huisnijverheid","Een gezin spint en weeft thuis in een boerderij, met een weefgetouw en een spinnewiel",DIA],
+1764:["h1-spinning-jenny","Een vrouw bedient een Spinning Jenny, een houten machine die veel draden tegelijk spint",DIA],
+1778:["h1-stoommachine","Een stoommachine met groot vliegwiel in een fabriekshal",DIA],
+1827:["wolweverij","Een wever bedient een groot mechanisch weefgetouw in een fabriek",AI],
+1850:["industriestad","Een Engelse industriestad met rokende schoorstenen",AI],
+1874:["kinderwetje","In een fabriek houdt een inspecteur een wet in de hand, naast een fabrikant en een jongen",AI],
+1901:["kinderen-school","Kinderen lopen met schooltassen over een straat in een arbeiderswijk",AI],
+1917:["stemlokaal-1917","Mannen staan in de rij in een stemlokaal en brengen hun stem uit",AI],
+1929:["wallstreet-1929","Een menigte staat voor de beurs aan Wall Street na de beurskrach",AI],
+1944:["hongerwinter","Mensen krijgen warm eten bij een uitdeelpunt, in de Hongerwinter",AI],
+1948:["marshallhulp","Infographic over de Marshallhulp: van een land in puin naar herstel en welvaart","Infographic: J. Boersen (uit de dia's), AI-gemaakt"],
+1963:["wederopbouw","Een gezin in de jaren zestig thuis met een televisie en een wasmachine",AI],
+1973:["autoloze-zondag","Mensen lopen en fietsen over een lege snelweg op een autoloze zondag",AI]
+};
+var stage=document.getElementById("tlStage"),cap=document.getElementById("tlCap"),els=[],imgs={},plate;
+tl.insertAdjacentHTML("beforeend",EV.map(function(e,k){return '<div class="ev" tabindex="0" data-k="'+k+'" style="--c:'+C[e[0]]+'"><span class="dot"></span><div class="yr">'+e[2]+'</div><div class="txt">'+e[3]+'</div><div class="ch">'+NM[e[0]]+'</div></div>';}).join(""));
+Object.keys(IMG).forEach(function(y){var d=IMG[y],im=new Image();im.alt=d[1];im.decoding="async";im.dataset.src="img/tijdlijn/"+d[0]+".jpg";if(d[0]==="marshallhulp")im.className="contain";im.setAttribute("aria-hidden","true");stage.appendChild(im);imgs[y]=im;});
+plate=document.createElement("div");plate.className="tl-plate";plate.setAttribute("aria-hidden","true");plate.innerHTML='<b></b><span></span>';stage.appendChild(plate);
+function load(y){var im=imgs[y];if(im&&!im.src&&im.dataset.src)im.src=im.dataset.src;}
+var cur=-1;
+function setAct(k){
+  if(k===cur)return;
+  var e=EV[k],y=e[1],pr=cur>=0?EV[cur][1]:null;
+  if(pr!==null&&imgs[pr]){imgs[pr].classList.remove("on");imgs[pr].setAttribute("aria-hidden","true");}
+  plate.classList.remove("on");
+  if(cur>=0)els[cur].classList.remove("act");
+  cur=k;els[k].classList.add("act");
+  var d=IMG[y];
+  if(d){load(y);imgs[y].classList.add("on");imgs[y].removeAttribute("aria-hidden");}
+  else{plate.querySelector("b").textContent=e[2];plate.querySelector("b").style.setProperty("--c","#fff");plate.querySelector("span").textContent=NM[e[0]];plate.classList.add("on");}
+  for(var j=k+1;j<Math.min(EV.length,k+3);j++)load(EV[j][1]);
+  cap.classList.add("sw");
+  setTimeout(function(){cap.innerHTML='<span><b>'+e[2]+'</b>'+(d?' · '+d[2]:'')+'</span>';cap.classList.remove("sw");},RM?0:160);
+  if(RM)cap.innerHTML='<span><b>'+e[2]+'</b>'+(d?' · '+d[2]:'')+'</span>';
+}
+els=[].slice.call(tl.querySelectorAll(".ev"));
+var tio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");tio.unobserve(e.target);}});},{threshold:.3});
+els.forEach(function(el){tio.observe(el);el.addEventListener("click",function(){setAct(+el.dataset.k);});el.addEventListener("focus",function(){setAct(+el.dataset.k);});});
+/* actieve gebeurtenis = degene die in de band net onder het midden van het scherm staat */
+var act=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)setAct(+e.target.dataset.k);});},{rootMargin:"-48% 0px -44% 0px"});
+els.forEach(function(el){act.observe(el);});
+setAct(0);load(EV[1][1]);
 var draw=document.getElementById("tlDraw");
-function drawLine(){var r=tl.getBoundingClientRect(),vh=innerHeight,p=Math.min(1,Math.max(0,(vh*.6-r.top)/r.height));draw.setAttribute("y2",(p*r.height)+"px");}
+function drawLine(){var r=tl.getBoundingClientRect(),vh=innerHeight,p=Math.min(1,Math.max(0,(vh*.55-r.top)/r.height));draw.setAttribute("y2",(p*r.height)+"px");}
 addEventListener("scroll",drawLine,{passive:true});addEventListener("resize",drawLine);drawLine();
 
 /* tilt op hoofdstukkaarten */
