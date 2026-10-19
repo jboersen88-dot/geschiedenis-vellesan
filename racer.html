@@ -703,7 +703,7 @@ var ICOON = {
 var MINIGAMES = {
   quiz:     { naam: 'Quiz',             uitleg: 'Tik het goede antwoord aan. Neem de tijd die je nodig hebt.' },
   swipen:   { naam: 'Swipen',           uitleg: 'Veeg elk kaartje naar de goede bak (of tik op de bak).' },
-  vallen:   { naam: 'Vallende blokken', uitleg: 'Tik het goede antwoord aan voordat het blok de grond raakt!' },
+  vallen:   { naam: 'Vallende blokken', uitleg: 'Tik het goede antwoord aan. De blokken blijven staan: neem de tijd.' },
   poorten:  { naam: 'Poortenrace',      uitleg: 'Stuur door de poort met het goede antwoord!' },
   koppelen: { naam: 'Koppelen',         uitleg: 'Tik een begrip en daarna de omschrijving die erbij hoort.' }
 };
@@ -2061,7 +2061,7 @@ function vallen(items) {
     function kies2(k) {
       if (klaar) return; klaar = true; mg.update = null; mg.toets = null;
       blokken.forEach(function (b, j) { if (j === goedIdx) b.classList.add('goed'); else if (j === k) b.classList.add('fout'); });
-      var bonus = Math.round(50 * (1 - Math.min(1, t / duur)));
+      var bonus = 0;
       antwoord(v, k === goedIdx, { punten: 100 + bonus, bij: blokken[k] || veld, verder: volgende,
         kop: k < 0 ? 'Te laat!' : 'Helaas!', goedTekst: goedHtml(esc(v.kort.begrip) + ':', v.kort.goed) });
     }
@@ -2069,9 +2069,9 @@ function vallen(items) {
     mg.toets = function (n) { if (n >= 0 && n < 4) kies2(n); };
     mg.update = function (dt) {
       t += dt;
-      var p = Math.min(1, t / duur), y = p * Math.max(0, veld.clientHeight - blokken[0].offsetHeight - 10);
+      var p = 0, y = p * Math.max(0, veld.clientHeight - blokken[0].offsetHeight - 10);
       blokken.forEach(function (b) { b.style.transform = 'translateY(' + y + 'px)'; });
-      if (p >= 1) kies2(-1);
+      
     };
   }
   volgende();

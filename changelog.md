@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-19 · Racer: geen klok meer bij meerkeuzevragen, auto 10% sneller
+
+- **Geen klok bij meerkeuze** in de Racers: de quizvragen hebben geen tijdbalk, geen "Te laat!" en geen tijdbonus meer (100 punten per goed antwoord, voorheen 100 + tot 50 bonus). Bij **Vallende blokken** vallen de blokken niet meer; ze blijven staan (ook zonder tijdbonus). Geldt voor `racer.html` en de Economie EDU-Racers (`jaar-2_mavo_hoofdstuk-1.html`, `jaar-4_se-h1-h2-h8_1.html`). Toetsklok in `toets.html` blijft.
+- **Rijsnelheid**: `BASIS_SNELHEID` (het gewone rijden met ontwijken) is in `racer.html` al 3,08; de Economie-racers staan nu ook op 3,08 (was 2,8). Poortenrace ongewijzigd.
+
 ## 2026-10-19 · leeromgeving boekje 1 opgeruimd (tabs, games, oefentoetsen, menu)
 
 - **3D-arbeiderswoning verwijderd van de site**: `3d-arbeiderswoning.html` is weg, samen met de verwijzing in de startpagina (tekstlabel "3D-woning" bij H3), de regel in `README.md` en de dode CSS (`.house`, `@keyframes float`) in `boekje-1.html`. Lesstof-tekst over arbeiderswoningen en `economie/` zijn niet aangeraakt.
