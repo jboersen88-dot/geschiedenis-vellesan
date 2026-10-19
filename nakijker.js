@@ -17,6 +17,17 @@ function check(o){
     .catch(function(){return fb("De AI is nu niet bereikbaar. Gebruik het nakijkblad.");})
     .then(function(f){clearTimeout(t);return f;});
 }
+/* Toets op maat: o {onderwerpen:[0..14], mc, open} -> belofte met {status:"ok", mc:[...], open:[...]} of {status:"fout", melding}.
+   De Worker maakt de vragen uit de lesstof (die staat daar, niet hier) en controleert ze; dat duurt ongeveer een minuut. */
+function maak(o){
+  if(!GV_NK_URL)return Promise.resolve({status:"fout",melding:"De toetsmaker staat uit."});
+  var ctl=window.AbortController?new AbortController():null,t=setTimeout(function(){if(ctl)ctl.abort();},170000);
+  return fetch(GV_NK_URL,{method:"POST",body:JSON.stringify({actie:"toetsmaken",onderwerpen:o.onderwerpen,mc:o.mc,open:o.open}),signal:ctl?ctl.signal:undefined})
+    .then(function(r){return r.json();})
+    .then(function(f){return f&&f.status==="ok"&&f.mc&&f.mc.length?f:{status:"fout",melding:(f&&f.melding)||"De toets kon nu niet gemaakt worden. Probeer het straks opnieuw."};})
+    .catch(function(){return {status:"fout",melding:"De toetsmaker is nu niet bereikbaar. Probeer het straks opnieuw."};})
+    .then(function(f){clearTimeout(t);return f;});
+}
 /* Zelfde kaart als GV_AI.render, aangevuld met punten, per-punt-uitleg, feedback en 'buiten de lesstof' */
 function render(f){
   if(f.status!=="ok")return '<div class="aifb"><p class="ainote">'+esc(f.melding||"")+'</p></div>';
@@ -30,5 +41,5 @@ function render(f){
 var css=document.createElement("style");
 css.textContent=".aifb p{font-weight:400}.aipp{list-style:none;margin:8px 0;padding:0;display:grid;gap:8px}.aipp li{padding:8px 10px;border-radius:10px;background:color-mix(in srgb,var(--line) 35%,transparent)}";
 document.head.appendChild(css);
-window.GV_NK={check:check,render:render,enabled:!!GV_NK_URL};
+window.GV_NK={check:check,render:render,maak:maak,enabled:!!GV_NK_URL};
 })();

@@ -24,6 +24,10 @@ Statische HTML/CSS/JS, zonder build-stap of framework, gehost via GitHub Pages v
 | `presenteer.html?h=H1` | Dia's schermvullend presenteren in de klas |
 | `3d-arbeiderswoning.html` | 3D-simulatie van een arbeiderswoning (sociale kwestie) |
 
+## Toets op maat
+
+Op de Start-tab van `app.html` kiest een leerling onderwerpen uit de checklist en maakt de AI daar een eigen toets over (meerkeuze en open vragen), die daarna per leerling wordt nagekeken. De Worker doet het werk (`toetsmaken`); de lesstof en de API-sleutel staan daar, niet hier. Alleen boekje 1; boekje 2 heeft de functie uit (`var MAAT=0;`). Details en kosten: `changelog.md`.
+
 ## AI-nakijker
 
 `nakijker.js` (toetsen, spotprenten) en `ai.js` ("Leg uit", nakijken, kaart, doe-boek) sturen antwoorden naar een Cloudflare Worker met Claude Haiku 5.5. De API-sleutel en de lesstof staan in de Worker, **niet** in deze repo. Er gaan geen namen of klassen mee. Werkt de Worker niet, dan valt de site terug op zelf nakijken.

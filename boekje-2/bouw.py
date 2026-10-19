@@ -22,6 +22,8 @@ s = set_var(s, "FILMS", [])
 s = set_var(s, "DECK", {})
 s = re.sub(r"/\*SEL\*/var SEL=.*?;/\*ENDSEL\*/", "/*SEL*/var SEL={};/*ENDSEL*/", s, flags=re.S)
 s = s.replace('var KEY="gs3-ind-app-v1"', 'var KEY="gs3-szv-app-v1"')
+assert "var MAAT=1;" in s
+s = s.replace("var MAAT=1;", "var MAAT=0;", 1)  # toets op maat bestaat alleen voor boekje 1 (de Worker kent alleen die lesstof)
 
 # lokale beelden en pagina's naast Drive-ID's
 s = s.replace('var THUMB=function(id,w){', 'var THUMB=function(id,w){if(/[\\/.]/.test(id))return id;', 1)
