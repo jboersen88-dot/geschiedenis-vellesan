@@ -270,3 +270,6 @@ Aanleiding: de eerste versie was "een standaard website". Je bestaande Google Si
 - Voorpagina: banner naar Economie.
 - Getest: alle 35 inhoudspagina's bouwen zonder fouten; kijkvenster, vinkjes, film; telefoon (375 px) zonder horizontale scroll.
 - 18 okt 01:45: tegel "Spotprent analyseren" in app.html noemt nu alle prenten (1903–1936, ook examenprenten). Gecontroleerd: alle 11 prenten en hun examenvragen vallen binnen de grenzen van de AI-nakijker.
+
+## 19 okt — Kaft met bewegende scenes
+- `index.html`: Economie-paneel met spaarvarken waarin munten vallen (teller telt mee per munt) en groeiende staafjes; Geschiedenis-paneel met drie tandwielen die écht in elkaar grijpen (tanden berekend), fabriek met rook en flikkerende ramen; onderaan een lopende band met begrippen en jaartallen (1769, 1839, 1889, 1901, 1947, 1957: nakijken). Alleen transform/opacity; reduced-motion = stilstaand beeld. Titel, panelen, hover en links ongewijzigd.
