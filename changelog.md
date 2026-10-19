@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-19 · film blijft in beeld bij de filmvragen + vragencontrole voor de docent
+
+- **Filmvragen** (`filmvragen.html`): de film blijft nu zichtbaar terwijl je de vragen invult. Vanaf 820 px breed staat de film links (blijft staan) en scrollen de vragen rechts. Op een telefoon staat een compacte film vastgeplakt bovenin, met de knop "Film groter / kleiner". De Drive-embed is ongewijzigd; antwoorden, "Toon antwoord" en kopiëren werken als eerst.
+- **Vragencontrole** (nieuw, alleen lokaal: `tools/vragen-controle.html`, niet gelinkt vanaf de site): alle 1788 meerkeuzevragen met juiste antwoord, lengtes, bron en vlaggen van `vragencheck.py`; filters; knoppen Goed / Fout / Twijfel (alleen in de browser bewaard) en "Exporteer mijn oordelen". Data maak je met `tools/vragen-export.py` (`tools/vragen-data.js`). Uitleg in `README.md`.
+
 ## 2026-10-19 · kleine aanpassingen na de leeromgeving-check
 
 - **Startpagina boekje 1** (`boekje-1.html`): de blokken "Race door de industriële samenleving" (met de losse links naar toets, scroll-verhaal, kaart, AI-nakijker, beeldquiz en doe-boek) en "Stap binnen in een arbeiderswoning" zijn weggehaald. `3d-arbeiderswoning.html` blijft bestaan. Let op: het scroll-verhaal (`verhaal.html`) staat nu nergens meer op een tegel in het Oefenlab; de andere pagina's wel.

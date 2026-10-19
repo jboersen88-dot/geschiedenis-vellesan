@@ -61,6 +61,16 @@ python3 -I tools/a11ycheck.py
 
 Elk script stopt met exit-code 1 bij fouten. Automatisch draaien bij elke push (GitHub Actions) kan pas als het gh-account het recht `workflow` heeft (`gh auth refresh -s workflow`).
 
+### Vragencontrole voor de docent
+
+`tools/vragen-controle.html` laat alle meerkeuzevragen zien met het juiste antwoord, de lengtes en de vlaggen van `vragencheck.py`, met filters en knoppen Goed / Fout / Twijfel (bewaard in je browser) en een export van je oordelen. Niet gelinkt vanaf de leerlingsite. Gebruik:
+
+```bash
+python3 -I tools/vragen-export.py && python3 -m http.server 8000
+```
+
+Open daarna `http://localhost:8000/tools/vragen-controle.html`. Draai het exportscript opnieuw als vragen zijn gewijzigd.
+
 ## Huisstijl
 
 Bosgroen `#1f5f4e`, koraal `#ff8d90` (als tekst op crème `#c2484d`), teal `#2f8f86`, crème `#f6f0e6`. Fraunces voor koppen, Inter voor tekst. Licht en donker via CSS-variabelen. Alle animaties respecteren `prefers-reduced-motion`.
