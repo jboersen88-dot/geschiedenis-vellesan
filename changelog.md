@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-19 · kleine aanpassingen na de leeromgeving-check
+
+- **Startpagina boekje 1** (`boekje-1.html`): de blokken "Race door de industriële samenleving" (met de losse links naar toets, scroll-verhaal, kaart, AI-nakijker, beeldquiz en doe-boek) en "Stap binnen in een arbeiderswoning" zijn weggehaald. `3d-arbeiderswoning.html` blijft bestaan. Let op: het scroll-verhaal (`verhaal.html`) staat nu nergens meer op een tegel in het Oefenlab; de andere pagina's wel.
+- **Oefenlab** (`app.html`): het eerste tabje heet nu "Flash cards" (was "Begrippen"). Inhoud en werking zijn gelijk; de id's blijven, dus de links werken nog.
+- **Racer** (`racer.html`): geen tijdslimiet meer bij de meerkeuzevragen (de tijdbalk is weg). Een goed antwoord geeft nu 100 punten, zonder tijdbonus. De instelling `quizSeconden` doet niets meer.
+- **Racer**: de auto rijdt 10% sneller (`BASIS_SNELHEID` 2,8 → 3,08).
+
 ## 2026-10-19 · voortgangsring telt de checklist mee
 
 - De ring bovenin (`app.html`, en daarmee `boekje-2/app.html`) was los van de checklist "Dit moet je kunnen voor de toets": 8 van 15 afgevinkt, ring op 0 van 77 leerdoelen. Nu is het percentage het gemiddelde van onderdelen (checklist) en leerdoelen, en staan beide tellers eronder ("8 van 15 onderdelen · 0 van 77 leerdoelen"). Afvinken in de checklist en "Vink af als beheerst" na een toets op maat werken de ring direct bij.

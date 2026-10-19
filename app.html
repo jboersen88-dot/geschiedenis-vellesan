@@ -467,7 +467,7 @@ nav.tabs button:active{transform:scale(.97)}
         <div class="card route">
           <div class="eyebrow">Jouw route door het boekje</div>
           <button class="step" data-go="les"><span class="n" style="background:var(--p5)">1</span><div><b>Leer</b><span>De PowerPoint, beelden en leerdoelen per hoofdstuk</span></div><svg class="i" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button>
-          <button class="step" data-go="lab"><span class="n" style="background:var(--p6)">2</span><div><b>Oefen</b><span>Begrippen, tijdlijn, oorzaak en gevolg, quiz en games</span></div><svg class="i" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button>
+          <button class="step" data-go="lab"><span class="n" style="background:var(--p6)">2</span><div><b>Oefen</b><span>Flash cards, tijdlijn, oorzaak en gevolg, quiz en games</span></div><svg class="i" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button>
           <button class="step" data-go="toets"><span class="n" style="background:var(--berry)">3</span><div><b>Test jezelf</b><span>Oefentoetsen en oefenvragen met nakijkblad</span></div><svg class="i" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button>
         </div>
       </div>
@@ -521,7 +521,7 @@ nav.tabs button:active{transform:scale(.97)}
       <div class="card pad">
         <div class="row" style="justify-content:space-between;margin-bottom:12px"><div><div class="eyebrow">Oefenlab</div><h2>Oefen zo vaak als je wilt</h2></div></div>
         <div class="sub" role="tablist" id="labNav">
-          <button data-lab="begrippen" aria-selected="true">Begrippen</button>
+          <button data-lab="begrippen" aria-selected="true">Flash cards</button>
 <button data-lab="leguit" aria-selected="false">🤖 Leg uit</button>
           <button data-lab="tijd" aria-selected="false">🕰️ Tijdlijn</button>
           <button data-lab="oorzaak" aria-selected="false">🔗 Oorzaak &amp; gevolg</button>
@@ -1136,7 +1136,7 @@ function luShow(c,f,msg){
     (f.goed?'<p><b>Goed:</b> '+esc(f.goed)+'</p>':'')+(f.mist?'<p><b>Mist nog:</b> '+esc(f.mist)+'</p>':'')+(f.fout?'<p><b>Klopt niet:</b> '+esc(f.fout)+'</p>':'')+(f.tip?'<p><b>Tip:</b> '+esc(f.tip)+'</p>':'')+
     '<div class="model"><b>Uitleg uit de les:</b> '+c[2]+'<br><i>Voorbeeld: '+c[3]+'</i></div>'+
     (f.lokaal?'<p class="note">Snelle controle op kernwoorden (zonder AI).</p>':'<p class="note">Nagekeken door AI. Twijfel je? Vraag het je docent.</p>')+
-    (f.oordeel==="goed"?'<p class="note">✓ Dit begrip staat nu op "gekend" bij Begrippen.</p>':'')+
+    (f.oordeel==="goed"?'<p class="note">✓ Dit begrip staat nu op "gekend" bij Flash cards.</p>':'')+
     '</div><div class="row" style="margin-top:12px"><button class="btn" id="luNext">Volgend begrip →</button>'+(f.oordeel!=="goed"?'<button class="btn ghost" id="luAgain">Verbeter je antwoord</button>':'')+'</div>';
   luScore();
 }

@@ -662,7 +662,7 @@ if (INST.rekenAandeel > 1) INST.rekenAandeel = Math.min(1, INST.rekenAandeel / 1
 });
 
 var METER_PER_BAAN = 10;      // 1 baanbreedte = 10 meter
-var BASIS_SNELHEID = 2.8;     // banen per seconde bij de start
+var BASIS_SNELHEID = 3.08;    // banen per seconde bij de start (10% sneller dan 2,8)
 var N = INST.vragenPerTankstop;
 var TEST = /[?&]test/.test(location.search);
 
@@ -701,7 +701,7 @@ var ICOON = {
    2. CONTROLE VAN DE VRAGENLIJST
    ===================================================================== */
 var MINIGAMES = {
-  quiz:     { naam: 'Quiz',             uitleg: 'Tik het goede antwoord aan voordat de tijd op is!' },
+  quiz:     { naam: 'Quiz',             uitleg: 'Tik het goede antwoord aan. Neem de tijd die je nodig hebt.' },
   swipen:   { naam: 'Swipen',           uitleg: 'Veeg elk kaartje naar de goede bak (of tik op de bak).' },
   vallen:   { naam: 'Vallende blokken', uitleg: 'Tik het goede antwoord aan voordat het blok de grond raakt!' },
   poorten:  { naam: 'Poortenrace',      uitleg: 'Stuur door de poort met het goede antwoord!' },
@@ -1970,26 +1970,20 @@ function quiz(items) {
     nieuweVraag();
     var v = items[i++], opties = hussel([v.goed].concat(v.fout)), goedIdx = opties.indexOf(v.goed);
     var l = lijf();
-    l.innerHTML = '<div class="paneel mg-paneel"><div class="mg-vraag">' + esc(v.vraag) + '</div><div class="tijdbalk"><div></div></div>' +
+    l.innerHTML = '<div class="paneel mg-paneel"><div class="mg-vraag">' + esc(v.vraag) + '</div>' +
       '<div class="opties">' + opties.map(function (o, k) {
         return '<button class="knop optie k' + k + '" data-k="' + k + '"><span class="toets">' + (k + 1) + '</span><span>' + esc(o) + '</span></button>';
       }).join('') + '</div></div>';
-    // extra leestijd voor lange vragen en verhaalsommen (max. 8 seconden erbij)
-    var duur = INST.quizSeconden + (INST.extraLeestijd ? Math.min(8, Math.max(0, (v.vraag.length - 70) / 14)) : 0);
-    var balk = $('.tijdbalk div', l), knoppen = $$('.optie', l), rest = duur, klaar = false;
+    // geen tijdslimiet: de leerling denkt zo lang als nodig is
+    var knoppen = $$('.optie', l), klaar = false;
     function kies2(k) {
-      if (klaar) return; klaar = true; mg.update = null; mg.toets = null;
+      if (klaar) return; klaar = true; mg.toets = null;
       knoppen.forEach(function (b, j) { b.disabled = true; b.classList.add(j === goedIdx ? 'goed' : j === k ? 'fout' : 'uit'); });
-      var bonus = Math.round(50 * Math.max(0, rest) / duur);
-      antwoord(v, k === goedIdx, { punten: 100 + bonus, bij: knoppen[k] || balk, verder: volgende,
-        kop: k < 0 ? 'Te laat!' : 'Helaas!', goedTekst: goedHtml('Het goede antwoord is:', v.goed) });
+      antwoord(v, k === goedIdx, { punten: 100, bij: knoppen[k], verder: volgende,
+        kop: 'Helaas!', goedTekst: goedHtml('Het goede antwoord is:', v.goed) });
     }
     knoppen.forEach(function (b) { b.addEventListener('click', function () { kies2(+b.dataset.k); }); });
     mg.toets = function (n) { if (n >= 0 && n < 4) kies2(n); };
-    mg.update = function (dt) {
-      rest -= dt; balk.style.width = Math.max(0, rest / duur * 100) + '%';
-      if (rest <= 0) kies2(-1);
-    };
   }
   volgende();
 }
