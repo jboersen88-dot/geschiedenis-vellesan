@@ -443,7 +443,7 @@ nav.tabs button:active{transform:scale(.97)}
   <div class="top">
     <div class="badge">GS</div>
     <div class="ttl"><small>Geschiedenis · jaar 3 · mavo · boekje 2</small><b>Sociale zekerheid en verzorgingsstaat</b></div>
-    <a class="home-link" href="index.html">← Overzicht</a><div class="prog"><div class="ring" id="ring"><span id="ringTxt">0%</span></div><div>jouw voortgang<br><b id="progTxt" style="font-weight:800">0 leerdoelen</b></div></div>
+    <a class="home-link" href="index.html">← Overzicht</a><div class="prog"><div class="ring" id="ring"><span id="ringTxt">0%</span></div><div>jouw voortgang<br><b id="progTxt" style="font-weight:800">0 vragen</b></div></div>
     <nav class="tabs" role="tablist">
       <button role="tab" data-tab="start" aria-selected="true"><svg class="i" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg><span>Start</span></button>
       <button role="tab" data-tab="les" aria-selected="false"><svg class="i" viewBox="0 0 24 24"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2z"/><path d="M22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg><span>Lesstof</span></button>
@@ -468,7 +468,7 @@ nav.tabs button:active{transform:scale(.97)}
                   </div>
         <div class="card route">
           <div class="eyebrow">Jouw route door het boekje</div>
-          <button class="step" data-go="les"><span class="n" style="background:var(--p5)">1</span><div><b>Leer</b><span>De PowerPoint, beelden en leerdoelen per hoofdstuk</span></div><svg class="i" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button>
+          <button class="step" data-go="les"><span class="n" style="background:var(--p5)">1</span><div><b>Leer</b><span>De PowerPoint, beelden en vragen per hoofdstuk</span></div><svg class="i" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button>
           <button class="step" data-go="lab"><span class="n" style="background:var(--p6)">2</span><div><b>Oefen</b><span>Flash cards, tijdlijn, oorzaak en gevolg, quiz en games</span></div><svg class="i" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button>
           <button class="step" data-go="toets"><span class="n" style="background:var(--berry)">3</span><div><b>Test jezelf</b><span>Oefentoetsen, een toets op maat en extra oefenmateriaal</span></div><svg class="i" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button>
         </div>
@@ -501,10 +501,7 @@ nav.tabs button:active{transform:scale(.97)}
             <div class="viewer" id="lViewer"><div class="ph">PowerPoint laden…</div></div>
             <div class="xtra" id="lExtra"></div>
           </div>
-          <div class="two">
-            <div class="card pad"><h3>Kun jij dit beantwoorden?</h3><p class="muted" style="margin:0 0 10px;font-size:13.5px">Klik op een vraag als je het antwoord weet.</p><div class="qlist" id="lQs"></div></div>
-            <div class="card pad goals"><h3>Leerdoelen</h3><div class="bar" style="margin:8px 0 6px"><i id="lBar"></i></div><div class="muted" style="font-size:12.5px;margin-bottom:4px" id="lBarTxt"></div><div id="lGoals"></div></div>
-          </div>
+          <div class="card pad goals" style="margin-top:14px"><h3>Kun jij dit beantwoorden?</h3><p class="muted" style="margin:0 0 10px;font-size:13.5px">Vink een vraag af als je het antwoord weet. Je voortgang bovenin telt mee.</p><div class="bar" style="margin:8px 0 6px"><i id="lBar"></i></div><div class="muted" style="font-size:12.5px;margin-bottom:4px" id="lBarTxt"></div><div id="lGoals"></div></div>
         </div>
       </div>
     </section>
@@ -514,14 +511,15 @@ nav.tabs button:active{transform:scale(.97)}
       <div class="card pad">
         <div class="row" style="justify-content:space-between;margin-bottom:12px"><div><div class="eyebrow">Oefenlab</div><h2>Oefen zo vaak als je wilt</h2></div></div>
         <div class="sub" role="tablist" id="labNav">
-          <button data-lab="begrippen" aria-selected="true">Flash cards</button>
+          <button data-lab="begrippen" aria-selected="false">Flash cards</button>
 <button data-lab="leguit" aria-selected="false">🤖 Leg uit</button>
           <button data-lab="tijd" aria-selected="false">🕰️ Tijdlijn</button>
           <button data-lab="oorzaak" aria-selected="false">🔗 Oorzaak &amp; gevolg</button>
           <button data-lab="quiz" aria-selected="false">⚡ Quiz</button>
           <button data-lab="games" aria-selected="false">🎮 Games</button>
         </div>
-        <div class="lab" id="lab-begrippen">
+        <p class="muted labhint" id="labHint" style="text-align:center;margin:26px 0 14px">Kies hierboven wat je wilt oefenen.</p>
+        <div class="lab" id="lab-begrippen" hidden>
           <div class="filters" id="cardFilters"></div>
           <div class="cgrid" id="cardGrid"></div>
           <div class="row" style="justify-content:space-between;margin-top:12px"><span class="muted" id="cardCount"></span><button class="btn ghost" id="cardReset">Alle kaarten omdraaien</button></div>
@@ -595,7 +593,7 @@ var EXT='<svg class="i" viewBox="0 0 24 24" style="width:14px;height:14px"><path
 var LNK=function(x){if(/\.html/.test(x))return x;return x.indexOf('http')===0?x:VIEW(x);};
 var MAT={"kw": ["Kijkwijzer spotprenten en onderzoeksopdrachten", [["Openen", "onderzoek.html"]]]};
 var PARS=[{"id": "H1", "ch": 1, "t": "Armenzorg en de sociale kwestie", "c": "var(--p1)", "file": "", "x": ["kw"], "sum": "Liefdadigheid en de Armenwet, zwaar fabriekswerk, krotwoningen, protest, de sociale kwestie, de politieke stromingen en de eerste sociale wetten.", "img": "../img/flow/voedseluitdeling.jpg", "q": ["Wie hielp arme, zieke en oude mensen in de negentiende eeuw?", "Wat stond er in de Armenwet van 1854?", "Hoe zag het werk in de fabrieken eruit?", "Waarom werden arbeiders in de steden zo vaak ziek?", "Wat is de sociale kwestie?", "Wat is een nachtwakersstaat?", "Waarom wilden de sociaaldemocraten algemeen kiesrecht?", "Welke drie sociale wetten kwamen er aan het begin van de twintigste eeuw?"], "imgs": [["../img/flow/voedseluitdeling.jpg", "Liefdadigheid: voedsel uitdelen aan armen"], ["../img/flow/inspecteur-fabriek.jpg", "Controle in de fabriek"], ["../img/flow/kinderwetje.jpg", "Het Kinderwetje van Van Houten"], ["../img/flow/kinderen-school.jpg", "De Leerplichtwet: kinderen naar school"], ["../img/flow/demonstratie.jpg", "Arbeiders komen in verzet"], ["../img/flow/stemlokaal-1917.jpg", "Algemeen kiesrecht voor mannen, 1917"], ["../img/flow/stemlokaal-vrouwen.jpg", "Vrouwen mogen stemmen, 1919"]]}, {"id": "H2", "ch": 1, "t": "Crisis, ellende en schaamte", "c": "var(--p2)", "file": "", "x": ["kw"], "sum": "Zwarte Donderdag, massale werkloosheid, steun en stempelen, werkverschaffing, vernedering, de aanpassingspolitiek van Colijn, de Jordaanrellen en het Plan van de Arbeid.", "img": "../img/flow/wallstreet-1.jpg", "q": ["Wat gebeurde er op Zwarte Donderdag?", "Waarom kreeg ook Nederland last van de crisis in Amerika?", "Welke werklozen kregen steun van de overheid?", "Waarom moesten werklozen elke dag stempelen?", "Wat is werkverschaffing?", "Waarom vonden werklozen de hulp vaak vernederend?", "Wat was de aanpassingspolitiek?", "Wat stond er in het Plan van de Arbeid?"], "imgs": [["../img/flow/wallstreet-1.jpg", "Paniek bij de beurs van New York, 1929"], ["../img/flow/beurskrach-auto.jpg", "Alles kwijt op de beurs"], ["../img/flow/arbeidsbeurs.jpg", "Werklozen wachten op steun"], ["../img/flow/loket.jpg", "Aan het loket van de gemeente"], ["../img/flow/polder-werk.jpg", "Werkverschaffing in de polder"], ["../img/flow/dijk-1.jpg", "De aanleg van de Afsluitdijk"], ["../img/flow/jordaan.jpg", "De Jordaanrellen, 1934"], ["../img/flow/sdap-affiche-1.jpg", "Affiche: het Plan van de Arbeid (AI-beeld)"]]}, {"id": "H3", "ch": 1, "t": "Nooit meer armoede!", "c": "var(--p3)", "file": "", "x": ["kw"], "sum": "De Noodwet Ouderdomsvoorziening van Drees, de wederopbouw, het harmoniemodel, de verzorgingsstaat met WW, AOW, ABW en WAO, de loongolf en een overheid die steeds meer doet.", "img": "../img/geschiedenis/wederopbouw.jpg", "q": ["Wat was de Noodwet Ouderdomsvoorziening?", "Waarom veranderde na de oorlog de mening over de taak van de overheid?", "Welke drie dingen hielpen bij de snelle wederopbouw?", "Wat is een verzorgingsstaat?", "Voor wie waren de WW, de AOW, de ABW en de WAO?", "Waarom heet Willem Drees de vader van de verzorgingsstaat?", "Wat was de loongolf?"], "imgs": [["../img/geschiedenis/wederopbouw.jpg", "Meer welvaart: luxe in de woonkamer"]]}, {"id": "H4", "ch": 1, "t": "De toekomst van de verzorgingsstaat", "c": "var(--p4)", "file": "", "x": ["kw"], "sum": "Waarom de verzorgingsstaat te duur werd, de bezuinigingen van Lubbers, Kok en Balkenende, de participatiesamenleving, flexwerk en de standpunten van de politieke partijen.", "img": "../img/flow/demonstratie.jpg", "q": ["Noem drie oorzaken waardoor de verzorgingsstaat in de problemen kwam.", "Wat is vergrijzing?", "Hoe probeerden Lubbers en Kok de verzorgingsstaat betaalbaar te houden?", "Wat veranderde er met de WIA in 2006?", "Wat is een participatiesamenleving?", "Wat is een flexwerker?", "Waarover zijn alle partijen het eens?"], "imgs": [["../img/flow/demonstratie.jpg", "Protest tegen de plannen van de overheid"], ["../img/flow/loket.jpg", "Controle bij het loket"]]}];
-var GOALS={"H1": ["Ik kan beschrijven hoe de armenzorg tot 1930 geregeld was. Ik gebruik de woorden liefdadigheid en nachtwakersstaat. (leerdoel boekje)", "Ik kan uitleggen wat liefdadigheid is en wie die hulp gaf.", "Ik kan vertellen wat er in de Armenwet van 1854 stond.", "Ik kan uitleggen waarom de liefdadigheidsinstellingen niet meer alle armen konden helpen.", "Ik kan beschrijven hoe het werk in de fabrieken na 1870 eruitzag.", "Ik kan beschrijven hoe arbeiders in de steden woonden.", "Ik kan uitleggen waarom arbeiders in de steden vaak ziek werden.", "Ik kan uitleggen waarom de meeste arbeiders eerst niet protesteerden.", "Ik kan uitleggen hoe arbeiders met vakbonden, demonstraties en stakingen in verzet kwamen.", "Ik kan uitleggen wat de sociale kwestie is.", "Ik kan uitleggen wat een nachtwakersstaat is.", "Ik kan de standpunten van de conservatief-liberalen, jong-liberalen, confessionelen en sociaaldemocraten over de sociale kwestie vergelijken.", "Ik kan drie sociale wetten van het begin van de twintigste eeuw noemen.", "Ik kan uitleggen waarom de sociaaldemocraten algemeen kiesrecht wilden.", "Ik weet wanneer mannen (1917) en vrouwen (1919) algemeen kiesrecht kregen.", "Ik kan uitleggen wat het Kinderwetje van Van Houten (1874) regelde."], "H2": ["Ik kan minimaal twee gevolgen van de crisis in de jaren dertig noemen voor de armenzorg in Nederland. (leerdoel boekje)", "Ik kan uitleggen wat er op Zwarte Donderdag, 24 oktober 1929, gebeurde.", "Ik kan uitleggen waarom de crisis in Amerika ook gevolgen had voor Nederland.", "Ik kan noemen hoe sterk de werkloosheid in Nederland steeg tussen 1929 en 1935.", "Ik kan uitleggen welke werklozen steun kregen en hoe de overheid hen controleerde.", "Ik kan uitleggen wat werkverschaffing is en de Afsluitdijk als voorbeeld noemen.", "Ik kan uitleggen waarom werklozen de hulp vaak vernederend vonden.", "Ik kan vertellen wat het Nationaal Crisis Comité deed.", "Ik kan uitleggen wat de aanpassingspolitiek van Colijn was en wat de regering ermee wilde bereiken.", "Ik kan uitleggen waarom de export in de jaren dertig toch niet groeide.", "Ik kan vertellen wat de Jordaanrellen waren.", "Ik kan uitleggen wat er in het Plan van de Arbeid stond.", "Ik kan uitleggen hoe de NSDAP en de NSB de crisis wilden oplossen."], "H3": ["Ik kan uitleggen hoe de verzorgingsstaat zich na 1945 ontwikkelde, met de namen van de wetten uit de jaren vijftig en zestig. (leerdoel boekje)", "Ik kan uitleggen wat de Noodwet Ouderdomsvoorziening van 1947 was.", "Ik kan uitleggen waarom de mening over de taak van de overheid na de crisis en de oorlog veranderde.", "Ik kan drie redenen noemen waardoor Nederland na de oorlog snel werd opgebouwd.", "Ik kan uitleggen wat het harmoniemodel en de geleide loonpolitiek zijn.", "Ik kan uitleggen wat een verzorgingsstaat en sociale zekerheid zijn.", "Ik kan de WW, de AOW, de ABW en de WAO noemen en uitleggen voor wie ze waren.", "Ik kan uitleggen wie Willem Drees was en waarom hij de vader van de verzorgingsstaat heet.", "Ik kan uitleggen wat de loongolf was en hoe Nederland een consumptiemaatschappij werd.", "Ik kan uitleggen waarom de ontdekking van aardgas in 1959 belangrijk was voor de overheid.", "Ik kan voorbeelden noemen van zaken die de overheid na de oorlog ging regelen.", "Ik kan uitleggen wat er in 1983 in de Grondwet werd opgenomen."], "H4": ["Ik kan minimaal drie problemen noemen van de verzorgingsstaat na 1970, en minimaal drie oplossingen. (leerdoel boekje)", "Ik kan uitleggen wat vergrijzing is en waarom de AOW daardoor duurder wordt.", "Ik kan uitleggen waarom steeds meer mensen in de WAO terechtkwamen.", "Ik kan uitleggen hoe mensen in de jaren vijftig en in de jaren zeventig over een uitkering dachten.", "Ik kan vertellen hoe de regeringen-Lubbers en -Kok de verzorgingsstaat betaalbaar wilden houden.", "Ik kan uitleggen wat er in het Akkoord van Wassenaar werd afgesproken.", "Ik kan uitleggen wat er veranderde met het UWV, de WIA en de AOW-leeftijd.", "Ik kan uitleggen wat een participatiesamenleving is.", "Ik kan uitleggen wat een flexwerker is en waarom de vakbonden daar niet blij mee zijn.", "Ik kan uitleggen waarom bedrijven hun fabrieken naar het buitenland verplaatsten.", "Ik kan de standpunten van de politieke partijen over de verzorgingsstaat vergelijken."]};
+var GOALS={"H1": ["Hoe was de armenzorg tot 1930 geregeld? Gebruik de woorden liefdadigheid en nachtwakersstaat.", "Wat is liefdadigheid en wie gaf die hulp?", "Wat stond er in de Armenwet van 1854?", "Waarom konden de liefdadigheidsinstellingen niet meer alle armen helpen?", "Hoe zag het werk in de fabrieken na 1870 eruit?", "Hoe woonden arbeiders in de steden?", "Waarom werden arbeiders in de steden vaak ziek?", "Waarom protesteerden de meeste arbeiders eerst niet?", "Hoe kwamen arbeiders met vakbonden, demonstraties en stakingen in verzet?", "Wat is de sociale kwestie?", "Wat is een nachtwakersstaat?", "Wat vonden de conservatief-liberalen, jong-liberalen, confessionelen en sociaaldemocraten van de sociale kwestie en hoe verschillen die standpunten?", "Welke drie sociale wetten kwamen er aan het begin van de twintigste eeuw?", "Waarom wilden de sociaaldemocraten algemeen kiesrecht?", "Wanneer kregen mannen en vrouwen algemeen kiesrecht?", "Wat regelde het Kinderwetje van Van Houten (1874)?"], "H2": ["Wat waren minimaal twee gevolgen van de crisis in de jaren dertig voor de armenzorg in Nederland?", "Wat gebeurde er op Zwarte Donderdag, 24 oktober 1929?", "Waarom had de crisis in Amerika ook gevolgen voor Nederland?", "Hoe sterk steeg de werkloosheid in Nederland tussen 1929 en 1935?", "Welke werklozen kregen steun en hoe controleerde de overheid hen?", "Wat is werkverschaffing, met de Afsluitdijk als voorbeeld?", "Waarom vonden werklozen de hulp vaak vernederend?", "Wat deed het Nationaal Crisis Comité?", "Wat was de aanpassingspolitiek van Colijn en wat wilde de regering ermee bereiken?", "Waarom groeide de export in de jaren dertig toch niet?", "Wat waren de Jordaanrellen?", "Wat stond er in het Plan van de Arbeid?", "Hoe wilden de NSDAP en de NSB de crisis oplossen?"], "H3": ["Hoe ontwikkelde de verzorgingsstaat zich na 1945? Noem de wetten uit de jaren vijftig en zestig.", "Wat was de Noodwet Ouderdomsvoorziening van 1947?", "Waarom veranderde de mening over de taak van de overheid na de crisis en de oorlog?", "Welke drie redenen waren er waardoor Nederland na de oorlog snel werd opgebouwd?", "Wat zijn het harmoniemodel en de geleide loonpolitiek?", "Wat zijn een verzorgingsstaat en sociale zekerheid?", "Wat zijn de WW, de AOW, de ABW en de WAO en voor wie waren ze?", "Wie was Willem Drees en waarom heet hij de vader van de verzorgingsstaat?", "Wat was de loongolf en hoe werd Nederland een consumptiemaatschappij?", "Waarom was de ontdekking van aardgas in 1959 belangrijk voor de overheid?", "Welke zaken ging de overheid na de oorlog regelen? Noem voorbeelden.", "Wat werd er in 1983 in de Grondwet opgenomen?"], "H4": ["Wat waren minimaal drie problemen van de verzorgingsstaat na 1970 en minimaal drie oplossingen?", "Wat is vergrijzing en waarom wordt de AOW daardoor duurder?", "Waarom kwamen steeds meer mensen in de WAO terecht?", "Hoe dachten mensen in de jaren vijftig en in de jaren zeventig over een uitkering?", "Hoe wilden de regeringen-Lubbers en -Kok de verzorgingsstaat betaalbaar houden?", "Wat werd er in het Akkoord van Wassenaar afgesproken?", "Wat veranderde er met het UWV, de WIA en de AOW-leeftijd?", "Wat is een participatiesamenleving?", "Wat is een flexwerker en waarom zijn de vakbonden daar niet blij mee?", "Waarom verplaatsten bedrijven hun fabrieken naar het buitenland?", "Wat zijn de standpunten van de politieke partijen over de verzorgingsstaat en hoe verschillen ze?"]};
 var NORIG={"H1": 16, "H2": 13, "H3": 12, "H4": 11};
 /*SEL*/var SEL={};/*ENDSEL*/
 PARS.forEach(function(p){var all=GOALS[p.id],ix=(SEL&&SEL[p.id])||all.map(function(_,i){return i;}).slice(0,NORIG[p.id]);p.gi=ix;p.g=ix.map(function(i){return all[i];});});
@@ -617,6 +615,7 @@ function show(name){
   document.querySelectorAll(".panel").forEach(function(p){p.hidden=p.id!==name;});
   main.scrollTop=0;
   if(name!=="lab"&&SW)gamesHome();
+  if(name==="lab")showLab("");
   if(name==="les")loadLes();
   if(name==="maat")maatRender();
   if(name==="toets")loadToets();
@@ -633,12 +632,12 @@ document.addEventListener("click",function(e){
 /* ---------- voortgang ---------- */
 function goalCount(id){var p=P(id),d=0;p.gi.forEach(function(gi){if(S.goals[id+"-"+gi])d++;});return d;}
 function totals(ch){var t=0,d=0;PARS.forEach(function(p){if(ch&&p.ch!==ch)return;t+=p.g.length;d+=goalCount(p.id);});return [d,t];}
-/* De ring telt alleen de leerdoelen: het blok "Dit moet je kunnen voor de toets" is verborgen (data S.check/CHK blijft, de toets op maat gebruikt die). */
+/* De ring telt de afgevinkte vragen (voorheen leerdoelen; zelfde id's S.goals): het blok "Dit moet je kunnen voor de toets" is verborgen (data S.check/CHK blijft, de toets op maat gebruikt die). */
 function renderProgress(){
   var x=totals(),pct=x[1]?Math.round(x[0]/x[1]*100):0;
   document.getElementById("ring").style.setProperty("--v",pct);
   document.getElementById("ringTxt").textContent=pct+"%";
-  document.getElementById("progTxt").textContent=x[0]+" van "+x[1]+" leerdoelen";
+  document.getElementById("progTxt").textContent=x[0]+" van "+x[1]+" vragen";
   renderCards();
 }
 
@@ -648,9 +647,9 @@ function renderCards(){
     document.getElementById("pgrid"+ch).innerHTML=PARS.filter(function(p){return p.ch===ch;}).map(function(p){
       var d=goalCount(p.id),n=p.g.length||1;
       return '<button class="pcard" data-go="les" data-par="'+p.id+'"><div class="band" style="background:linear-gradient(180deg,rgba(0,0,0,0) 30%,color-mix(in srgb,'+p.c+' 85%,#000)),url('+THUMB(p.img,600)+'),'+p.c+'"><b>'+p.id+'</b></div>'+
-        '<div class="body"><h3>'+p.t+'</h3><p>'+p.sum+'</p><div class="bar"><i style="width:'+(d/n*100)+'%;background:'+p.c+'"></i></div><div class="meta"><span>'+d+' van '+n+' leerdoelen</span><span style="font-weight:700;color:var(--plum)">Open les →</span></div></div></button>';
+        '<div class="body"><h3>'+p.t+'</h3><p>'+p.sum+'</p><div class="bar"><i style="width:'+(d/n*100)+'%;background:'+p.c+'"></i></div><div class="meta"><span>'+d+' van '+n+' vragen</span><span style="font-weight:700;color:var(--plum)">Open les →</span></div></div></button>';
     }).join("");
-    var t=totals(ch);document.getElementById("ch"+ch+"txt").textContent=t[0]+" van "+t[1]+" leerdoelen";
+    var t=totals(ch);document.getElementById("ch"+ch+"txt").textContent=t[0]+" van "+t[1]+" vragen";
   });
 }
 function renderCheck(){
@@ -703,7 +702,7 @@ function loadLes(){
   var p=P(cur),last=0;
   document.getElementById("rail").innerHTML=PARS.map(function(x){var d=goalCount(x.id),h="";
     if(x.ch!==last){last=x.ch;h='<div class="rh">Sociale zekerheid en verzorgingsstaat</div>';}
-    return h+'<button data-par="'+x.id+'" aria-current="'+(x.id===cur)+'"><span class="dot" style="background:'+x.c+'">'+x.id+'</span><span>'+x.t+'<span class="mini">'+d+'/'+x.g.length+' leerdoelen</span></span></button>';}).join("");
+    return h+'<button data-par="'+x.id+'" aria-current="'+(x.id===cur)+'"><span class="dot" style="background:'+x.c+'">'+x.id+'</span><span>'+x.t+'<span class="mini">'+d+'/'+x.g.length+' vragen</span></span></button>';}).join("");
   document.getElementById("lEyebrow").textContent="Sociale zekerheid en verzorgingsstaat · hoofdstuk "+p.id.slice(1);
   document.getElementById("lEyebrow").style.color=p.c;
   document.getElementById("lTitle").textContent=p.t;
@@ -712,17 +711,14 @@ function loadLes(){
   if(v.dataset.file!==p.id){v.dataset.file=p.id;var st=1;try{st=+localStorage.getItem("deck-"+p.id)||1;}catch(e){}mountDeck(v,p.id,st);}
   document.getElementById("lExtra").innerHTML=p.x.map(function(k){var m=MAT[k];return '<div class="xi">📝 '+m[0]+m[1].map(function(l){return '<a target="_blank" rel="noopener" href="'+LNK(l[1])+'">'+l[0]+' ↗</a>';}).join("")+'</div>';}).join("")+
     (p.imgs&&p.imgs.length?'<div class="gal">'+p.imgs.map(function(im){return '<a target="_blank" rel="noopener" href="'+VIEW(im[0])+'"><img loading="lazy" alt="'+im[1]+'" src="'+THUMB(im[0],500)+'"><span>'+im[1]+'</span></a>';}).join("")+'</div>':'');
-  document.getElementById("lQs").innerHTML=p.q.map(function(q,i){var k=p.id+"-"+i,on=!!S.qs[k];
-    return '<button class="q'+(on?" on":"")+'" data-q="'+k+'"><span class="tick">'+CHECK+'</span><span>'+q+'</span></button>';}).join("");
   var d=goalCount(p.id);
   document.getElementById("lBar").style.width=(d/(p.g.length||1)*100)+"%";
   document.getElementById("lBar").style.background=p.c;
-  document.getElementById("lBarTxt").textContent=d+" van "+p.g.length+" behaald";
+  document.getElementById("lBarTxt").textContent=d+" van "+p.g.length+" beantwoord";
   document.getElementById("lGoals").innerHTML=p.g.map(function(g,j){var k=p.id+"-"+p.gi[j],on=!!S.goals[k];
     return '<label class="'+(on?"done":"")+'"><input type="checkbox" data-k="'+k+'"'+(on?" checked":"")+'><span>'+g+'</span></label>';}).join("");
 }
 document.getElementById("rail").addEventListener("click",function(e){var b=e.target.closest("[data-par]");if(b){cur=b.dataset.par;loadLes();}});
-document.getElementById("lQs").addEventListener("click",function(e){var b=e.target.closest("[data-q]");if(!b)return;var k=b.dataset.q;if(S.qs[k])delete S.qs[k];else S.qs[k]=1;save();b.classList.toggle("on");});
 document.getElementById("lGoals").addEventListener("change",function(e){var k=e.target.dataset.k;if(!k)return;if(e.target.checked)S.goals[k]=1;else delete S.goals[k];save();loadLes();renderProgress();});
 document.getElementById("lPractice").addEventListener("click",function(){cardFilter=cur;show("lab");showLab("begrippen");renderFlash();});
 
@@ -766,6 +762,7 @@ renderFilms();
 function showLab(name){
   document.querySelectorAll("#labNav button").forEach(function(b){b.setAttribute("aria-selected",b.dataset.lab===name?"true":"false");});
   document.querySelectorAll(".lab").forEach(function(l){l.hidden=l.id!=="lab-"+name;});
+  document.getElementById("labHint").hidden=!!name;
   if(name!=="games"&&SW)gamesHome();
 }
 document.getElementById("labNav").addEventListener("click",function(e){var b=e.target.closest("[data-lab]");if(b)showLab(b.dataset.lab);});

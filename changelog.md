@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-19 · Oefenlab opent leeg + leerdoelen en "Kun jij dit beantwoorden?" samengevoegd (`app.html`)
+
+- **Oefenlab** toont bij het openen alleen de rij knoppen (Flash cards, Leg uit, Tijdlijn, Oorzaak & gevolg, Quiz, Games) en de regel "Kies hierboven wat je wilt oefenen." De inhoud verschijnt na een klik. Deep links (`#lab`, `#H3-lab`) openen het tabblad leeg; de "Oefen →"-knoppen, "Oefen begrippen" en de stappen op Start openen direct hun onderdeel.
+- **Eén vragenlijst per paragraaf**: het blok "Leerdoelen" (77 'Ik kan …'-doelen) en het blok "Kun jij dit beantwoorden?" (39 losse vragen) zijn samengevoegd tot één lijst "Kun jij dit beantwoorden?" met een vinkje per vraag en een voortgangsbalk. Elk leerdoel is een vraag geworden (zelfde betekenis); de interne id's (`S.goals`, `H1-0` …) en de localStorage-sleutels zijn ongewijzigd, dus opgeslagen voortgang blijft staan. De oude 39 losse vragen zijn uit de weergave (de data `PARS[].q` en `S.qs` blijven). De ring en de tellers zeggen nu "x van 77 vragen". Boekje 2 (52 doelen) is op dezelfde manier omgezet in `boekje-2/data-bron.py`. Er bestaat nog geen voortgangscode (besluit 3), dus daar breekt niets.
+
 ## 2026-10-19 · Racer: geen klok meer bij meerkeuzevragen, auto 10% sneller
 
 - **Geen klok bij meerkeuze** in de Racers: de quizvragen hebben geen tijdbalk, geen "Te laat!" en geen tijdbonus meer (100 punten per goed antwoord, voorheen 100 + tot 50 bonus). Bij **Vallende blokken** vallen de blokken niet meer; ze blijven staan (ook zonder tijdbonus). Geldt voor `racer.html` en de Economie EDU-Racers (`jaar-2_mavo_hoofdstuk-1.html`, `jaar-4_se-h1-h2-h8_1.html`). Toetsklok in `toets.html` blijft.
