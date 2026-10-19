@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-19 · quiz met twee niveaus (Basis / Uitdaging)
+
+- De leerling kiest vóór de start **Alles / Basis / Uitdaging**, naast de bestaande hoofdstukkeuze (`app.html`, ook boekje 2). Onder de keuze staat een korte uitleg en het aantal vragen in de selectie.
+- **Indeling**: alleen op de vraagtekst (`tools/niveau.py`), geen vraag of antwoord is veranderd. Basis = kennen/herkennen (wat is, wie, welk jaar, hoeveel); Uitdaging = vragen met waarom, oorzaken, verschil/overeenkomst, een bron duiden. Het niveau staat als losse tekenreeks `BANKLV` (B/U, zelfde volgorde als `BANK`), zodat de bank-structuur voor `vragencheck.py` en `vragen-export.py` ongewijzigd is. Boekje 2 wordt in `bouw.py` met dezelfde regel ingedeeld. Alle indelingen staan in de notitie `niveaus-voorbeelden.txt` (bij de sessienotities).
+
 ## 2026-10-19 · Oefenlab opent leeg + leerdoelen en "Kun jij dit beantwoorden?" samengevoegd (`app.html`)
 
 - **Oefenlab** toont bij het openen alleen de rij knoppen (Flash cards, Leg uit, Tijdlijn, Oorzaak & gevolg, Quiz, Games) en de regel "Kies hierboven wat je wilt oefenen." De inhoud verschijnt na een klik. Deep links (`#lab`, `#H3-lab`) openen het tabblad leeg; de "Oefen →"-knoppen, "Oefen begrippen" en de stappen op Start openen direct hun onderdeel.

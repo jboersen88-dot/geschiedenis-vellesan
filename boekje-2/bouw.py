@@ -16,6 +16,9 @@ def set_var(s, name, value):
 s = src
 for name in ["PARS", "GOALS", "CHK", "CARDS", "BANK", "TL", "CG", "SORT", "MAT"]:
     s = set_var(s, name, ns[name])
+nv = {}
+exec(open(os.path.join(ROOT, "tools", "niveau.py"), encoding="utf-8").read(), nv)
+s = set_var(s, "BANKLV", nv["niveaus"](ns["BANK"]))  # Basis/Uitdaging per vraag
 s = set_var(s, "NORIG", {k: len(v) for k, v in ns["GOALS"].items()})
 s = set_var(s, "VERS", [])
 s = set_var(s, "FILMS", [])
