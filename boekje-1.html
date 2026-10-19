@@ -33,12 +33,14 @@ h1,h2,h3{font-family:"Fraunces",Georgia,serif;letter-spacing:-.015em;text-wrap:b
 .nav.solid{background:color-mix(in srgb,var(--green-d) 92%,transparent);backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(255,255,255,.08)}
 .brand{font-family:"Fraunces",Georgia,serif;font-weight:700;font-size:19px;color:var(--green-fg);text-decoration:none}
 .brand span{color:var(--coral)}
+.brand b{font-weight:700}.bshort{display:none}
 .nav-links{display:flex;gap:6px}
 .nav-links a{color:var(--green-fg);text-decoration:none;font-size:14px;font-weight:600;padding:8px 12px;border-radius:10px;transition:background .18s var(--ease-out)}
 .nav-links a:hover{background:rgba(255,255,255,.12)}
 .nav-links a.cta{background:var(--coral);color:#3a1412}
 .nav-links a.cta:hover{background:#ffa3a5}
-@media (max-width:640px){.nav-links a:not(.cta){display:none}}
+.nav-links a[aria-current]{background:rgba(255,255,255,.14)}
+@media (max-width:640px){.nav-links{gap:2px}.nav-links a{padding:8px 5px;font-size:12.5px;white-space:nowrap}.bfull{display:none}.bshort{display:inline}}
 
 /* ---------- hero ---------- */
 .hero{position:relative;min-height:min(100svh,880px);display:flex;align-items:flex-end;color:var(--green-fg);overflow:hidden;background:var(--green-d)}
@@ -161,8 +163,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
 <body>
 
 <header class="nav" id="nav"><div class="wrap">
-  <a class="brand" href="index.html">Meneer <span>Boersen</span></a>
-  <nav class="nav-links"><a href="geschiedenis.html">Jaar 3</a><a href="#hoofdstukken">Hoofdstukken</a><a href="#tijdlijn">Tijdlijn</a><a href="app.html#toets">Oefentoetsen</a><a href="boekje-2/index.html">Boekje 2</a><a class="cta" href="app.html">Leeromgeving</a></nav>
+  <a class="brand" href="index.html" aria-label="Meneer Boersen, naar de kaft"><b class="bfull">Meneer <span>Boersen</span></b><b class="bshort" aria-hidden="true">M<span>B</span></b></a>
+  <nav class="nav-links"><a href="geschiedenis.html">Geschiedenis</a><a href="boekje-1.html" aria-current="page">Boekje 1</a><a href="boekje-2/index.html">Boekje 2</a><a class="cta" href="app.html">Leeromgeving</a></nav>
 </div></header>
 
 <section class="hero">

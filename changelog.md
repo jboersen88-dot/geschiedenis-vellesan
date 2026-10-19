@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-10-19 · leeromgeving boekje 1 opgeruimd (tabs, games, oefentoetsen, menu)
+
+- **Nieuw tabblad "Oefenmateriaal"** (`app.html`, ook in boekje 2): spotprent-analyse, AI-nakijker en Doe-boek H4 staan daar (verplaatst uit de Games), plus de lijst "Meer oefenmateriaal" (filmvragen, recherchebord, Schooltv; was onderaan Oefentoetsen). Boekje 2 toont alleen de spotprent-tegel en de lijst.
+- **Games**: alle tegels hebben nu dezelfde stijl (crème kaart, bosgroene titel, groene chip). Het scroll-verhaal (`verhaal.html`) is terug als tegel bij Games (boekje 1; niet in boekje 2).
+- **Oefentoetsen-tab**: de oude weergave met ingesloten PDF, klok, nakijkblad en cijfer-invulveld is weg (code en CSS-onderdelen van de klok blijven als dode stijlregels staan). Er staat één blok met de drie digitale toetsen (`toets.html?t=t1/t2/t3`); de PDF-versies staan als kleine link eronder. "Maak je eigen oefentoets" staat nu onder de vaste toetsen (zelfde code en id's, alleen verplaatst). Elke toets komt één keer voor.
+- **Checklist** "Dit moet je kunnen voor de toets" is verborgen (`hidden`, data blijft; de toets op maat gebruikt die lijst nog voor de onderwerpen). De ring telt daardoor alleen de leerdoelen ("x van 77 leerdoelen"). Een voortgangscode (besluit 3) is nog niet gebouwd, dus daar is niets gebroken.
+- **Menu** `boekje-1.html`: logo (kaft) · Geschiedenis · Boekje 1 · Boekje 2 · Leeromgeving; op de telefoon een monogram "MB" zodat alles op één regel past. `boekje-2/index.html`: "Jaar 3" werd "Geschiedenis".
+- Tabbalk in de leeromgeving: zes tabs passen op een rij (op 561–900 px zonder icoontjes).
+- `boekje-2/bouw.py` aangepast aan de nieuwe toets-opzet.
+
 ## 2026-10-19 · film blijft in beeld bij de filmvragen + vragencontrole voor de docent
 
 - **Filmvragen** (`filmvragen.html`): de film blijft nu zichtbaar terwijl je de vragen invult. Vanaf 820 px breed staat de film links (blijft staan) en scrollen de vragen rechts. Op een telefoon staat een compacte film vastgeplakt bovenin, met de knop "Film groter / kleiner". De Drive-embed is ongewijzigd; antwoorden, "Toon antwoord" en kopiëren werken als eerst.
