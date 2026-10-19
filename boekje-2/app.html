@@ -648,11 +648,16 @@ document.addEventListener("click",function(e){
 /* ---------- voortgang ---------- */
 function goalCount(id){var p=P(id),d=0;p.gi.forEach(function(gi){if(S.goals[id+"-"+gi])d++;});return d;}
 function totals(ch){var t=0,d=0;PARS.forEach(function(p){if(ch&&p.ch!==ch)return;t+=p.g.length;d+=goalCount(p.id);});return [d,t];}
+/* De ring telt twee dingen mee: de checklist "Dit moet je kunnen voor de toets" (onderdelen) en de leerdoelen per paragraaf. Het percentage is het gemiddelde van die twee. */
+function checkCount(){var n=0;CHK.forEach(function(_,i){if(S.check[i])n++;});return n;}
 function renderProgress(){
-  var x=totals(),pct=x[1]?Math.round(x[0]/x[1]*100):0;
+  var x=totals(),cn=checkCount(),parts=[];
+  if(CHK.length)parts.push(cn/CHK.length);
+  if(x[1])parts.push(x[0]/x[1]);
+  var pct=parts.length?Math.round(parts.reduce(function(a,b){return a+b;},0)/parts.length*100):0;
   document.getElementById("ring").style.setProperty("--v",pct);
   document.getElementById("ringTxt").textContent=pct+"%";
-  document.getElementById("progTxt").textContent=x[0]+" van "+x[1]+" leerdoelen";
+  document.getElementById("progTxt").textContent=cn+" van "+CHK.length+" onderdelen · "+x[0]+" van "+x[1]+" leerdoelen";
   renderCards();
 }
 
@@ -675,7 +680,7 @@ function renderCheck(){
   document.getElementById("cBar").style.width=(n/CHK.length*100)+"%";
   document.getElementById("cTxt").textContent=n+" van "+CHK.length+" onderdelen beheerst";
 }
-document.getElementById("clist").addEventListener("click",function(e){var b=e.target.closest("[data-c]");if(!b)return;var i=b.dataset.c;if(S.check[i])delete S.check[i];else S.check[i]=1;save();renderCheck();});
+document.getElementById("clist").addEventListener("click",function(e){var b=e.target.closest("[data-c]");if(!b)return;var i=b.dataset.c;if(S.check[i])delete S.check[i];else S.check[i]=1;save();renderCheck();renderProgress();});
 
 /* ---------- lesstof ---------- */
 var cur="H1";
@@ -1301,7 +1306,7 @@ document.getElementById("maatBox").addEventListener("click",function(e){
   if(e.target.closest("#mLever")){maatLever();return;}
   if(e.target.closest("[data-mretry]")){maatStart((S.maatLast&&S.maatLast.sel)||undefined);return;}
   if(e.target.closest("[data-mnew]")){maatStart(S.maatT.sel);return;}
-  var k=e.target.closest("[data-mmk]");if(k){S.check[+k.dataset.mmk]=1;save();renderCheck();maatUitslag(S.maatT);return;}
+  var k=e.target.closest("[data-mmk]");if(k){S.check[+k.dataset.mmk]=1;save();renderCheck();renderProgress();maatUitslag(S.maatT);return;}
   var m=e.target.closest("[data-mmeld]");if(m)maatMeld(+m.dataset.mmeld,m);
 });
 document.getElementById("maatBox").addEventListener("input",function(e){

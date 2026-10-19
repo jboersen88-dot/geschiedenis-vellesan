@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-19 · voortgangsring telt de checklist mee
+
+- De ring bovenin (`app.html`, en daarmee `boekje-2/app.html`) was los van de checklist "Dit moet je kunnen voor de toets": 8 van 15 afgevinkt, ring op 0 van 77 leerdoelen. Nu is het percentage het gemiddelde van onderdelen (checklist) en leerdoelen, en staan beide tellers eronder ("8 van 15 onderdelen · 0 van 77 leerdoelen"). Afvinken in de checklist en "Vink af als beheerst" na een toets op maat werken de ring direct bij.
+
 ## 2026-10-19 · toets op maat (boekje 1, `app.html`)
 
 - **Start-tab**: onder de checklist staat nu "Maak je eigen oefentoets". De leerling kiest onderwerpen (standaard wat hij nog niet beheerst; knoppen Alles / Niets) en het aantal meerkeuzevragen (8, 12, 16 of 20). De AI maakt daarover een nieuwe toets met meerkeuze en 2 open vragen.
