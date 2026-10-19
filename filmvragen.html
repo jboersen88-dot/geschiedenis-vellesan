@@ -10,12 +10,20 @@
 :root{--green:#1f5f4e;--coral:#ff8d90;--berry:#c2484d;--teal:#2f8f86;--bg:#f6f0e6;--card:#fffdf9;--ink:#201a14;--muted:#6f6556;--line:#e6dac4;--ok-soft:#e1f4ea;--ease:cubic-bezier(.23,1,.32,1)}
 @media(prefers-color-scheme:dark){:root{--bg:#17201d;--card:#1f2b27;--ink:#f2ece0;--muted:#a79f90;--line:#34433d;--ok-soft:#183a2b;--green:#8fd3bd}}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,system-ui,sans-serif}
-.wrap{max-width:900px;margin:0 auto;padding:16px 16px 70px}
+.wrap{max-width:1240px;margin:0 auto;padding:16px 16px 70px}
 h1{font:700 clamp(28px,5vw,38px)/1.15 Fraunces,serif;color:var(--green);margin:8px 0 4px;letter-spacing:-.02em}
 .eyebrow{font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--berry)}
 .muted{color:var(--muted)}a{color:inherit}
 .card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:18px;margin-top:14px;box-shadow:0 1px 2px rgba(31,95,78,.06),0 10px 28px rgba(31,95,78,.08)}
-.vid{position:relative;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:#173a31;margin-top:14px}
+.vid{position:relative;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:#173a31}
+.film{position:sticky;top:0;z-index:5;background:var(--bg);padding:8px 0;margin-top:6px;display:flex;gap:10px;align-items:center}
+.film .vid{flex:0 0 52%;width:52%}.film.groot .vid{flex-basis:100%;width:100%}
+.film.groot{display:block}.film.groot #big{margin-top:6px}
+.film #big{flex:1;min-width:0}
+.qs>.card:first-child{margin-top:6px}
+@media(min-width:820px){.layout{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:20px;align-items:start}
+.film{top:16px;display:block;padding:0}.film .vid,.film.groot .vid{width:100%}.film #big{display:none}
+.qs>.card:first-child{margin-top:0}}
 .vid iframe,.vid button{position:absolute;inset:0;width:100%;height:100%;border:0}
 .vid button{background:transparent;color:#fff;font:600 16px Inter;cursor:pointer}
 .kop{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);margin:0 0 2px}
@@ -41,12 +49,13 @@ var h=(/[?&]h=(H[12])/.exec(location.search)||[])[1]||"H1",D=window.FILMVRAGEN[h
 try{A=JSON.parse(localStorage.getItem(KEY))||{};}catch(e){}
 function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;");}
 var src=YT_ID[h]?"https://www.youtube.com/embed/"+YT_ID[h]+"?rel=0":"https://drive.google.com/file/d/"+D.film+"/preview";
-var x='<a class="muted" href="app.html#films">← Terug naar de leeromgeving</a><div class="eyebrow" style="margin-top:16px">Filmvragen '+h+'</div><h1>'+esc(D.titel)+'</h1><p class="muted">Kijk de film en beantwoord de vragen. Klik daarna op “Toon antwoord” om je antwoord te vergelijken met de lesstof. Je antwoorden blijven op dit apparaat bewaard.</p><div class="vid"><iframe src="'+src+'" allow="autoplay; fullscreen" allowfullscreen title="Film '+h+'"></iframe></div>',last="";
+var x='<a class="muted" href="app.html#films">← Terug naar de leeromgeving</a><div class="eyebrow" style="margin-top:16px">Filmvragen '+h+'</div><h1>'+esc(D.titel)+'</h1><p class="muted">Kijk de film en beantwoord de vragen. Klik daarna op “Toon antwoord” om je antwoord te vergelijken met de lesstof. Je antwoorden blijven op dit apparaat bewaard.</p><div class="layout"><div class="film" id="film"><div class="vid"><iframe src="'+src+'" allow="autoplay; fullscreen" allowfullscreen title="Film '+h+'"></iframe></div><button class="btn ghost" id="big" aria-pressed="false">Film groter</button></div><div class="qs">',last="";
 D.vragen.forEach(function(q,i){x+='<div class="card q">'+(q[0]&&q[0]!==last?'<div class="kop">'+esc(q[0])+'</div>':"")+'<p>'+(i+1)+'. '+esc(q[1])+'</p><textarea data-i="'+i+'" aria-label="Antwoord vraag '+(i+1)+'" placeholder="Typ hier je antwoord">'+esc(A[i]||"")+'</textarea><div class="row"><button class="btn ghost" data-a="'+i+'">Toon antwoord</button></div><div class="ans" id="a'+i+'" hidden>'+esc(q[2])+'</div></div>';last=q[0];});
-x+='<div class="row" style="margin-top:20px"><button class="btn" id="copy">Kopieer mijn antwoorden</button><a class="btn ghost" href="app.html#lab">Oefen verder in het Oefenlab</a></div>';
+x+='<div class="row" style="margin-top:20px"><button class="btn" id="copy">Kopieer mijn antwoorden</button><a class="btn ghost" href="app.html#lab">Oefen verder in het Oefenlab</a></div></div></div>';
 document.getElementById("app").innerHTML=x;
 document.addEventListener("input",function(e){var t=e.target.closest("textarea");if(t){A[t.dataset.i]=t.value;try{localStorage.setItem(KEY,JSON.stringify(A));}catch(e){}}});
-document.addEventListener("click",function(e){var b=e.target.closest("[data-a]");if(b){var a=document.getElementById("a"+b.dataset.a);a.hidden=!a.hidden;b.textContent=a.hidden?"Toon antwoord":"Verberg antwoord";return;}
+document.addEventListener("click",function(e){var g=e.target.closest("#big");if(g){var f=document.getElementById("film").classList.toggle("groot");g.setAttribute("aria-pressed",f);g.textContent=f?"Film kleiner":"Film groter";return;}
+ var b=e.target.closest("[data-a]");if(b){var a=document.getElementById("a"+b.dataset.a);a.hidden=!a.hidden;b.textContent=a.hidden?"Toon antwoord":"Verberg antwoord";return;}
  if(e.target.closest("#copy")){var tx=D.vragen.map(function(q,i){return (i+1)+". "+q[1]+"\n"+(A[i]||"")+"\n";}).join("\n");(navigator.clipboard?navigator.clipboard.writeText(tx):Promise.reject()).then(function(){e.target.textContent="Gekopieerd";}).catch(function(){e.target.textContent="Kopiëren lukt niet";});}});
 })();
 </script>
