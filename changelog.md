@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-19 · toets op maat: 32 onderwerpen in vier inklapblokken (`app.html`, boekje 1)
+
+- De onderwerpen staan nu per hoofdstuk (H1 t/m H4) in een inklapvakje (`<details>`, met toetsenbord te openen; dicht bij het openen, de stand blijft bij kiezen) met 8 onderwerpen per hoofdstuk, 32 in totaal (was 15 in één lijst). Per vakje staat hoeveel er gekozen zijn (bv. 2/8). Alle onderwerpen komen uit de leerdoelen en paragrafen van dat hoofdstuk (array `MT`, geen nieuwe inhoud). "Wat ik nog niet beheers", "Alles", "Niets", het aantal meerkeuzevragen en de werking ("Vink af als beheerst", uitslag, opnieuw proberen) zijn gelijk. De keuze wordt bewaard onder een nieuwe sleutel (`maatSel2`); de oude keuze (`maatSel`) wordt niet meer gebruikt.
+- **Worker niet aangepast**: die kent nog 15 onderwerpen (nummers 0-14). Elk nieuw onderwerp stuurt daarom het nummer van zijn "ouder" mee (`MT[i][2]`, zonder dubbelen); oude id's werken en de regels voor de gegenereerde meerkeuze zijn ongewijzigd. Gevolg: kies je één nieuw onderwerp, dan gaat de toets over het hele oude onderwerp. Voor vragen op maat per nieuw onderwerp moet de Worker de 32 onderwerpen kennen: zie de notitie `worker-wijziging-toets-op-maat.md` (bij de sessienotities). Dat is een apart project en wacht op goedkeuring van de docent.
+
 ## 2026-10-19 · quiz met twee niveaus (Basis / Uitdaging)
 
 - De leerling kiest vóór de start **Alles / Basis / Uitdaging**, naast de bestaande hoofdstukkeuze (`app.html`, ook boekje 2). Onder de keuze staat een korte uitleg en het aantal vragen in de selectie.

@@ -432,6 +432,14 @@ nav.tabs button:active{transform:scale(.97)}
 .mper b{white-space:nowrap}
 .rv.ok{border-left:6px solid var(--ok)}.rv.no{border-left:6px solid var(--bad)}
 .mmeld{border:0;background:none;color:var(--muted);font-size:12.5px;text-decoration:underline;padding:4px 0;cursor:pointer}
+.mblocks{display:grid;gap:10px;margin:12px 0}
+.mblock{padding:0}.mblock summary{display:flex;align-items:center;gap:10px;min-height:48px;padding:8px 14px;list-style:none}
+.mblock summary::-webkit-details-marker{display:none}
+.mblock summary::after{content:"▾";margin-left:auto;color:var(--plum);transition:transform .2s}
+.mblock[open] summary::after{transform:rotate(180deg)}
+.mblock .mtit{flex:1;min-width:0}.mblock .mcnt{font-size:12.5px;font-weight:600;white-space:nowrap}
+.mblock .mlist{margin:0;padding:0 14px 14px}
+@media (prefers-reduced-motion:reduce){.mblock summary::after{transition:none}}
 @media (max-width:760px){.mlist{grid-template-columns:1fr}}
 </style>
 <script src="ai.js"></script>
@@ -566,7 +574,7 @@ nav.tabs button:active{transform:scale(.97)}
         <div class="eyebrow">Toets op maat</div><h2>Maak je eigen oefentoets</h2>
         <p class="muted" style="margin:2px 0 0;font-size:14px;max-width:760px">Kies de onderwerpen waar je op wilt oefenen. De AI maakt daar nieuwe vragen over, gebaseerd op de lesstof, en kijkt je antwoorden na. Elke toets is anders.</p>
         <div class="mrow" style="margin-top:12px"><button class="btn ghost" data-mset="nog">Wat ik nog niet beheers</button><button class="btn ghost" data-mset="alles">Alles</button><button class="btn ghost" data-mset="niets">Niets</button></div>
-        <div class="mlist" id="mList"></div>
+        <div class="mblocks" id="mList"></div>
         <div class="mrow"><label class="muted" style="font-size:13.5px">Aantal meerkeuzevragen <select id="mN"><option value="8">8 · kort</option><option value="12">12 · normaal</option><option value="16">16 · lang</option><option value="20">20 · heel lang</option></select></label><button class="btn" id="mGo">Maak mijn oefentoets</button><span class="muted" style="font-size:13.5px" id="mHint"></span></div>
         <div class="mrow" id="mLast" style="margin-top:10px" hidden></div>
         <p class="muted" style="font-size:12.5px;margin:10px 0 0">Er gaat geen naam of klas mee, alleen je gekozen onderwerpen en je antwoorden op de open vragen. De AI kan een fout maken: twijfel je, vraag het je docent.</p>
@@ -600,6 +608,9 @@ function P(id){for(var i=0;i<PARS.length;i++)if(PARS[i].id===id)return PARS[i];}
 function tag(id){return '<span class="chip" style="background:'+P(id).c+'">'+id+'</span>';}
 var CHK=[["De agrarische en de demografische revolutie uitleggen", "H1", "oorzaak"], ["Uitleggen hoe huisnijverheid veranderde in fabriekswerk", "H1", "quiz"], ["De uitvindingen: Spinning Jenny, waterframe en stoommachine", "H1", "tijd"], ["De gevolgen van de Industriële Revolutie voor arbeiders en steden", "H1", "oorzaak"], ["Uitleggen waarom Nederland later industrialiseerde", "H2", "quiz"], ["Weten waar de schoenen- en textielindustrie zat", "H2", "quiz"], ["Unilever, Shell en Philips en hoe ze ontstonden", "H2", "oorzaak"], ["De sociale kwestie uitleggen met voorbeelden", "H3", "quiz"], ["Kinderwetje, leerplichtwet en Arbeidswet in de goede volgorde zetten", "H3", "tijd"], ["Vakbonden, stakingen en het algemeen kiesrecht uitleggen", "H3", "oorzaak"], ["De Eerste Wereldoorlog en de crisis van de jaren dertig", "H3", "quiz"], ["De economie in de Tweede Wereldoorlog en de Hongerwinter", "H4", "quiz"], ["Marshallhulp, harmoniemodel en geleide loonpolitiek", "H4", "oorzaak"], ["Van wederopbouw naar consumptiemaatschappij", "H4", "tijd"], ["De oliecrisis en de verschuiving naar handel en diensten", "H4", "oorzaak"]];
 
+/* 32 onderwerpen voor de toets op maat, 8 per hoofdstuk: [hoofdstuk, titel, w]. w = nummer van het onderwerp in CHK = het id dat de Worker nu kent (15 onderwerpen);
+   een nieuw onderwerp wordt als zijn w doorgegeven. Zodra de Worker de 32 onderwerpen kent (zie changelog), kan hier het eigen nummer worden doorgegeven. */
+var MT=[["H1", "De agrarische revolutie en mechanisering", 0], ["H1", "Grootgrondbezitters en het 'dubbel probleem' op het platteland", 0], ["H1", "De demografische revolutie", 0], ["H1", "Huisnijverheid, spinners en wevers", 1], ["H1", "Spinning Jenny, waterframe en waterkracht", 2], ["H1", "De stoommachine en steenkool", 2], ["H1", "Fabrieken, lonen en slechte arbeidsomstandigheden", 3], ["H1", "Verstedelijking en de eerste industriesteden", 3], ["H2", "De Wereldtentoonstelling van 1851 en waarom Nederland achterbleef", 4], ["H2", "Landbouw in Nederland", 4], ["H2", "Nijverheid, kwaliteitsproducten en ondernemers die niet vernieuwden", 4], ["H2", "De leer- en schoenenindustrie in Noord-Brabant", 5], ["H2", "De katoen- en wolindustrie en de wevers van Tilburg", 5], ["H2", "De ploegenfabriek van Imants", 4], ["H2", "Unilever en Shell", 6], ["H2", "Philips en wanneer de industrialisatie op gang kwam", 6], ["H3", "De sociale kwestie en wie er aandacht voor vroeg", 7], ["H3", "Het Kinderwetje van Van Houten", 8], ["H3", "De leerplichtwet, de Arbeidswet en de cao", 8], ["H3", "Vakbonden en stakingen", 9], ["H3", "Censuskiesrecht en algemeen kiesrecht", 9], ["H3", "Troelstra, de SDAP, socialisten en communisten", 9], ["H3", "De Eerste Wereldoorlog en het distributiestelsel", 10], ["H3", "De crisis van 1929 en de aanpassingspolitiek van Colijn", 10], ["H4", "De economie tijdens de bezetting, 1940-1945", 11], ["H4", "Gebrek aan alles en de Hongerwinter", 11], ["H4", "Marshallhulp en wederopbouw", 12], ["H4", "Het harmoniemodel en de geleide loonpolitiek", 12], ["H4", "Landbouw en industrie na de oorlog", 13], ["H4", "Gastarbeiders en de consumptiemaatschappij", 13], ["H4", "Minder werk in de industrie en de oliecrisis van 1973", 14], ["H4", "Handel en diensten, en waarom een handelsland kwetsbaar is", 14]];
 var MAAT=1; /* toets op maat aan; boekje 2 zet dit uit (bouw.py) */
 
 /* ---------- opslag ---------- */
@@ -890,8 +901,8 @@ function quizHome(){
   var seen=Object.keys(S.qseen).length,wr=wrongIds().length;
   document.getElementById("qScore").innerHTML="Vraagbank: <b>"+BANK.length+"</b> vragen &nbsp;·&nbsp; Al gezien: <b>"+Math.min(seen,BANK.length)+"</b> &nbsp;·&nbsp; Nog te oefenen: <b>"+wr+"</b>";
   qCard.innerHTML='<div class="qhome"><div class="qbig">⚡</div><h3>Snelle quiz</h3><p class="muted">Elke ronde krijg je 10 nieuwe vragen uit de vraagbank. Vragen die je fout had, komen later terug.</p>'+
-   '<div class="filters" style="justify-content:center">'+["alle"].concat(PARS.map(function(p){return p.id;})).map(function(f){return '<button data-qpar="'+f+'" class="'+(f===quizPar?"on":"")+'"'+(P(f)?' title="'+P(f).t+'"':'')+'>'+selLabel(f)+'</button>';}).join("")+'</div>'+
-   '<div class="filters" style="justify-content:center" role="group" aria-label="Niveau">'+[["alle","Alles"],["B","Basis"],["U","Uitdaging"]].map(function(l){return '<button data-qlv="'+l[0]+'" aria-pressed="'+(l[0]===quizLv)+'" class="'+(l[0]===quizLv?"on":"")+'">'+l[1]+'</button>';}).join("")+'</div>'+
+   '<div class="muted" style="font-size:12.5px;font-weight:700">Hoofdstuk</div><div class="filters" style="justify-content:center">'+["alle"].concat(PARS.map(function(p){return p.id;})).map(function(f){return '<button data-qpar="'+f+'" class="'+(f===quizPar?"on":"")+'"'+(P(f)?' title="'+P(f).t+'"':'')+'>'+selLabel(f)+'</button>';}).join("")+'</div>'+
+   '<div class="muted" style="font-size:12.5px;font-weight:700;margin-top:6px">Niveau</div><div class="filters" style="justify-content:center" role="group" aria-label="Niveau">'+[["alle","Alles"],["B","Basis"],["U","Uitdaging"]].map(function(l){return '<button data-qlv="'+l[0]+'" aria-pressed="'+(l[0]===quizLv)+'" class="'+(l[0]===quizLv?"on":"")+'">'+l[1]+'</button>';}).join("")+'</div>'+
    '<p class="muted" style="margin:2px 0 0;font-size:13px">'+(quizLv==="B"?"Basis: kennen en herkennen (wat is, wie, welk jaar).":quizLv==="U"?"Uitdaging: uitleggen, waarom, oorzaak en gevolg, vergelijken.":"Alle vragen door elkaar.")+' ('+poolFor(quizPar).length+' vragen)</p>'+
    '<div class="row" style="justify-content:center;margin-top:8px"><button class="btn" id="qStart">Start 10 vragen</button>'+(wr?'<button class="btn ghost" id="qWrong">Oefen mijn fouten ('+wr+')</button>':'')+'</div></div>';
 }
@@ -1104,12 +1115,14 @@ luNew();
 /* ---------- init ---------- */
 /* ---------- toets op maat: de leerling kiest onderwerpen, Claude Haiku (via de Worker) maakt de toets en kijkt de open vragen na ---------- */
 var escM=window.GV_AI&&GV_AI.esc?GV_AI.esc:function(x){return String(x).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});};
-var MT_busy=0,MT_warn=0,MT_tm=null;
+var MT_open={},MT_busy=0,MT_warn=0,MT_tm=null;
 function sumP(a){var n=0;a.forEach(function(x){n+=x.p;});return n;}
 function maatOn(){return !!(MAAT&&window.GV_NK&&GV_NK.enabled&&GV_NK.maak);}
-function alleIdx(){return CHK.map(function(_,i){return i;});}
-function nogIdx(){return alleIdx().filter(function(i){return !S.check[i];});}
-function maatSel(){if(!S.maatSel){S.maatSel=nogIdx();if(!S.maatSel.length)S.maatSel=alleIdx();}return S.maatSel;}
+function alleIdx(){return MT.map(function(_,i){return i;});}
+function nogIdx(){return alleIdx().filter(function(i){return !S.check[MT[i][2]];});}
+function maatSel(){if(!S.maatSel2){S.maatSel2=nogIdx();if(!S.maatSel2.length)S.maatSel2=alleIdx();}return S.maatSel2;}
+/* de gekozen onderwerpen als id's die de Worker kent (zonder dubbelen) */
+function maatW(){var w={};maatSel().forEach(function(i){w[MT[i][2]]=1;});return Object.keys(w).map(Number);}
 function maatN(){var n=maatSel().length;return S.maatN||(n<=3?8:n<=7?12:16);}
 function maatHint(){
   var n=maatSel().length,h=document.getElementById("mHint"),g=document.getElementById("mGo");
@@ -1121,8 +1134,10 @@ function renderMaat(){
   var c=document.getElementById("maatCard");if(!c)return;
   c.hidden=!maatOn();if(c.hidden)return;
   var sel=maatSel();
-  document.getElementById("mList").innerHTML=CHK.map(function(x,i){var on=sel.indexOf(i)>=0;
-    return '<label class="mitem'+(on?" on":"")+'"><input type="checkbox" data-m="'+i+'"'+(on?" checked":"")+'><span class="ctxt">'+escM(x[0])+'</span>'+tag(x[1])+'</label>';}).join("");
+  document.getElementById("mList").innerHTML=PARS.map(function(p){
+    var ids=alleIdx().filter(function(i){return MT[i][0]===p.id;}),n=ids.filter(function(i){return sel.indexOf(i)>=0;}).length;
+    return '<details class="mblock"'+(MT_open[p.id]?" open":"")+' data-h="'+p.id+'"><summary>'+tag(p.id)+'<span class="mtit">'+escM(p.t)+'</span><span class="muted mcnt" title="gekozen onderwerpen" data-cnt="'+p.id+'">'+n+'/'+ids.length+'</span></summary><div class="mlist">'+
+      ids.map(function(i){var on=sel.indexOf(i)>=0;return '<label class="mitem'+(on?" on":"")+'"><input type="checkbox" data-m="'+i+'"'+(on?" checked":"")+'><span class="ctxt">'+escM(MT[i][1])+'</span></label>';}).join("")+'</div></details>';}).join("");
   document.getElementById("mN").value=String(maatN());
   var la=document.getElementById("mLast"),t=S.maatT;
   la.hidden=!t;
@@ -1132,7 +1147,7 @@ function renderMaat(){
 }
 document.getElementById("maatCard").addEventListener("click",function(e){
   var b=e.target.closest("[data-mset]");
-  if(b){var k=b.dataset.mset;S.maatSel=k==="alles"?alleIdx():k==="niets"?[]:nogIdx();save();renderMaat();return;}
+  if(b){var k=b.dataset.mset;S.maatSel2=k==="alles"?alleIdx():k==="niets"?[]:nogIdx();save();renderMaat();return;}
   if(e.target.closest("#mGo"))maatStart();
   if(e.target.closest("[data-mopen]"))show("maat");
 });
@@ -1141,7 +1156,9 @@ document.getElementById("mList").addEventListener("change",function(e){
   var s=maatSel(),p=s.indexOf(i);
   if(e.target.checked&&p<0)s.push(i);else if(!e.target.checked&&p>=0)s.splice(p,1);
   e.target.closest(".mitem").classList.toggle("on",e.target.checked);save();maatHint();
+  var d=e.target.closest("details"),c=d.querySelector("[data-cnt]");c.textContent=d.querySelectorAll("input:checked").length+"/"+d.querySelectorAll("input").length;
 });
+document.getElementById("mList").addEventListener("toggle",function(e){if(e.target.dataset.h)MT_open[e.target.dataset.h]=e.target.open;},true);
 document.getElementById("mN").addEventListener("change",function(){S.maatN=+this.value;save();});
 
 function maatLaden(){
@@ -1153,7 +1170,7 @@ function maatFout(msg){
   document.getElementById("maatBox").innerHTML='<div class="done-card"><div class="qbig">😕</div><h3>Het lukte niet</h3><p class="muted">'+escM(msg)+'</p><div class="row" style="justify-content:center"><button class="btn" data-mretry="1">Probeer opnieuw</button><button class="btn ghost" data-go="toets">Terug naar je onderwerpen</button></div></div>';
 }
 function maatStart(sel){
-  sel=(sel||maatSel()).slice().sort(function(a,b){return a-b;});if(!sel.length||MT_busy)return;
+  sel=(sel||maatW()).slice().sort(function(a,b){return a-b;});if(!sel.length||MT_busy)return;
   var nn=+document.getElementById("mN").value||12;
   MT_busy=1;MT_warn=0;S.maatT=null;S.maatLast={sel:sel,n:nn};save();show("maat");maatLaden();maatHint();
   GV_NK.maak({onderwerpen:sel,mc:nn,open:2}).then(function(f){
