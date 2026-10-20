@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-20 · Economie jaar 4 SE3 (H1, H2): volledige leeromgeving
+
+- Nieuwe pagina `economie/se3/app.html`, gebouwd met `python3 -I economie/bouw-eco.py se3` uit `app.html` (boekje 1) en de inhoud van de oude lesapp (`economie/se3/bron/`). Dezelfde opmaak en tabs als boekje 1, de dia's van de 8 PowerPoints (`economie/se3/slides/`), 174 oefenvragen, begrippen, leerdoelen, formule- en rekenlab, sorteergames, 4 toetsversies als kaarten en de toets op maat met AI (Worker, `vak:"eco4"`, 8 paragrafen). Plan en modelkeuze: `docs/PLAN-ECONOMIE-SE3.md`.
+- `economie/h.html?p=jaar-4/se-h1-h2-h8` heeft een kaart "Open de leeromgeving" (alleen zichtbaar als de pagina bestaat). De oude SE3-app staat niet meer op die pagina; de EDU-Racer wel.
+- Worker: de controleronde is bijgesteld (minder streng, harde fout pas onder 3 goede vragen). Getest: eco4 [0,5] 8 meerkeuze + 2 open in 22 s, ingeleverd en nagekeken. **Nog open:** een verzonnen getal in een goed antwoord kan nog doorkomen (gezien bij een vraag over 5% loonstijging); "Leg uit" gebruikt voor Economie nog alleen de lokale woordcontrole; andere Economie-hoofdstukken kunnen nu met een nieuwe `data.json` en een CONFIG-regel in `bouw-eco.py` worden gebouwd.
+
 ## 2026-10-20 · Economie jaar 4 SE3: leeromgeving gebouwd met `economie/bouw-eco.py`
 
 - `python3 -I economie/bouw-eco.py se3` bouwt `economie/se3/app.html` uit de huidige `app.html` plus `economie/se3/bron/` (data, formule- en rekenlab): zelfde tabs en opmaak, met formule- en rekenlab, 8 paragrafen, dia's uit `slides/deck.json` (anders Drive-voorbeeld), 4 toetsversies met Toets en Nakijkblad, toets op maat voor 8 paragrafen (`vak:"eco4"`, nakijken met `vak:"economie"`). Nieuw hoofdstuk = nieuwe `bron/data.json` en een regel in `CONFIG`. `nakijker.js` stuurt een optionele `vak` mee (Geschiedenis ongewijzigd). `lab-html.html` is hernoemd naar `lab-html.inc` (een fragment, zodat `a11ycheck.py` het niet als pagina telt).
