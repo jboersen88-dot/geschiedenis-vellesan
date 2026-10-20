@@ -1,0 +1,3193 @@
+{
+ "PARS": [
+  {
+   "id": "1.1",
+   "ch": 1,
+   "t": "Wat heb je te besteden?",
+   "c": "var(--p1)",
+   "file": "1SRdiwqkJL0-nnV26YnwxncE37KQ4UP8j",
+   "x": [
+    "hv"
+   ],
+   "sum": "Inkomen uit arbeid, bezit en overdrachten, bestedingen, doelgroepen, de 6 P's en maatschappelijke kosten.",
+   "q": [
+    "Noem de drie bronnen van inkomen en geef van elk een voorbeeld.",
+    "Wat is het verschil tussen primair inkomen en een overdrachtsinkomen?",
+    "Waarom gaan mensen hun geld anders besteden? Noem drie oorzaken.",
+    "Noem de 6 P's van de marketingmix en leg er twee uit.",
+    "Wat is een doelgroep? Waarom zijn jongeren voor bedrijven een interessante doelgroep?",
+    "Wat is het verschil tussen merkreclame en ideële reclame?",
+    "Wat betekent duurzaam consumeren?",
+    "Wat zijn maatschappelijke kosten? Geef een voorbeeld."
+   ]
+  },
+  {
+   "id": "1.2",
+   "ch": 1,
+   "t": "Niet ieder inkomen is hetzelfde",
+   "c": "var(--p2)",
+   "file": "1yjwzFM1XWqt1tYMhp4qfN-3IbcW_SiOK",
+   "x": [
+    "hv",
+    "lz"
+   ],
+   "sum": "Bruto, netto en besteedbaar inkomen, loonstijging met een groeifactor, modaal inkomen en de Lorenzcurve.",
+   "q": [
+    "Wat is het verschil tussen brutoloon, nettoloon en besteedbaar inkomen?",
+    "Hoe bereken je een nieuw loon met een groeifactor? Geef een voorbeeld met 3% loonstijging.",
+    "Noem drie redenen waarom inkomens van mensen verschillen.",
+    "Wat is een modaal inkomen? En wat is het sociaal minimum?",
+    "Wat is het nationaal inkomen?",
+    "Wat laat de Lorenzcurve zien? Hoe ziet de lijn eruit als iedereen evenveel verdient?",
+    "Wat gebeurt er met de Lorenzcurve als de btw op levensmiddelen omhoog gaat?",
+    "Wat is het verschil tussen nominaal en reëel inkomen?"
+   ]
+  },
+  {
+   "id": "1.3",
+   "ch": 1,
+   "t": "Wil je welvaart of welzijn?",
+   "c": "var(--p3)",
+   "file": "1EP5wPOFl2ZHj2Z4FC2mZioNuHwrLmgKv",
+   "x": [],
+   "sum": "Welvaart en welzijn, schaarse en vrije goederen, prioriteiten stellen, het BBP en rekenen met indexcijfers.",
+   "q": [
+    "Wat is het verschil tussen welvaart en welzijn? Geef van beide een voorbeeld.",
+    "Wanneer noem je een goed schaars? En wat is een vrij goed?",
+    "Waarom moet je prioriteiten stellen?",
+    "Wat zijn middelen? Noem er twee die schaars zijn.",
+    "Wat is het BBP? Hoe bereken je het BBP per inwoner?",
+    "Wat betekent een indexcijfer van 100? En een indexcijfer van 112?",
+    "Hoe bereken je een indexcijfer? Schrijf de formule op.",
+    "Benzine kost nu €1,69 bij een indexcijfer van 176,6. Hoe reken je terug naar de prijs in het basisjaar?"
+   ]
+  },
+  {
+   "id": "1.4",
+   "ch": 1,
+   "t": "Help, de prijzen stijgen!",
+   "c": "var(--p4)",
+   "file": "1-k33_2gX46KvYifJ_Z4f5KrxltsDoOAs",
+   "x": [
+    "ot"
+   ],
+   "sum": "Inflatie en deflatie, koopkracht, prijscompensatie, de loon-prijsspiraal en het gewogen CPI.",
+   "q": [
+    "Wat is inflatie? En wat is deflatie?",
+    "Noem twee oorzaken van inflatie.",
+    "Wat is koopkracht? Wanneer daalt je koopkracht?",
+    "Je loon stijgt met 4% en de inflatie is 2,5%. Wat gebeurt er met je koopkracht?",
+    "Wat is prijscompensatie en waarom willen vakbonden dat?",
+    "Leg uit hoe een loon-prijsspiraal ontstaat.",
+    "Wat is het CPI en wie berekent het?",
+    "Waarom tellen sommige producten zwaarder mee in een gewogen indexcijfer?"
+   ]
+  },
+  {
+   "id": "2.1",
+   "ch": 2,
+   "t": "Hoe geef jij je geld uit?",
+   "c": "var(--p5)",
+   "file": "1n3sdc0IUQmVgVVtS8k240mqtz12CgS3n",
+   "x": [],
+   "sum": "Dagelijkse uitgaven, vaste lasten en incidentele uitgaven, een budgetplan, week ↔ maand en reserveren.",
+   "q": [
+    "Noem de drie soorten uitgaven en geef van elk een voorbeeld.",
+    "Wat doet het Nibud?",
+    "Wat is een budgetplan? Wanneer is je begroting in balans?",
+    "Wat kun je doen als je begroting niet in balans is?",
+    "Hoe reken je een weekbedrag om naar een maandbedrag? En andersom?",
+    "Wat is reserveren? Hoe bereken je hoeveel je per maand moet reserveren?",
+    "Hoe kunnen jouw uitgaven gevolgen hebben voor anderen en het milieu?"
+   ]
+  },
+  {
+   "id": "2.2",
+   "ch": 2,
+   "t": "Ga je sparen of beleggen?",
+   "c": "var(--p6)",
+   "file": "1QnoMhCb5z_NqXzmTySgxiXmBQMzbQ7zu",
+   "x": [
+    "rt"
+   ],
+   "sum": "Spaarmotieven, enkelvoudige en samengestelde rente, nominale en reële rente, beleggen en rendement.",
+   "q": [
+    "Noem de drie spaarmotieven.",
+    "Wat is het verschil tussen enkelvoudige en samengestelde rente?",
+    "Wat is de groeifactor bij 2,5% rente?",
+    "Wat is een spaardeposito? Noem een voordeel en een nadeel.",
+    "Bereken de reële rente als de nominale rente 3% is en de inflatie 2%.",
+    "Wat is beleggen? Noem twee dingen waarin je kunt beleggen.",
+    "Wat is rendement? Waarom is beleggen riskanter dan sparen?",
+    "Wat is een obligatie?"
+   ]
+  },
+  {
+   "id": "2.3",
+   "ch": 2,
+   "t": "Wie leent, maakt schulden",
+   "c": "var(--p7)",
+   "file": "1-Q1PE8HNDYsbKzLGkTjlVWWfcfXoWLQr",
+   "x": [],
+   "sum": "Leenmotieven, kredietkosten uit een tabel, kredietvormen, koop op afbetaling, private lease en de hypotheek.",
+   "q": [
+    "Noem drie leenmotieven.",
+    "Wat zijn kredietkosten? Schrijf de formule op.",
+    "Waarom moet de looptijd van een lening korter zijn dan de levensduur van wat je koopt?",
+    "Wat is het verschil tussen een persoonlijke lening en een doorlopend krediet?",
+    "Wat is een salariskrediet en waarom is het duur?",
+    "Wat is het verschil tussen koop op afbetaling en private lease?",
+    "Wat is een hypothecaire lening? Wat is het onderpand?",
+    "Wat kan er gebeuren als je een schuld niet op tijd terugbetaalt?"
+   ]
+  },
+  {
+   "id": "2.4",
+   "ch": 2,
+   "t": "Geld moet rollen!",
+   "c": "var(--p8)",
+   "file": "1zSa73VZlE1V3hgH4XR_GKy3MruGeot8-",
+   "x": [],
+   "sum": "De drie geldfuncties, chartaal en giraal geld, je saldo, hoe banken werken, rente en de ECB.",
+   "q": [
+    "Noem de drie geldfuncties en geef van elk een voorbeeld.",
+    "Wat is het verschil tussen chartaal en giraal geld?",
+    "Hoe bereken je je nieuwe saldo? Wat is een creditsaldo en wat is een debetsaldo?",
+    "Waarom is rood staan duur?",
+    "Hoe bemiddelen banken tussen de vraag naar en het aanbod van geld?",
+    "Waarom heet rente 'de prijs van geld'?",
+    "Hoe verdient een bank geld aan sparen en lenen?",
+    "Wat doet de ECB als de inflatie te hoog is? En wat is het gevolg voor sparen en lenen?"
+   ]
+  }
+ ],
+ "GOALS": {
+  "1.1": [
+   "Ik weet wat inkomen is en ik kan drie manieren uitleggen waarop mensen geld verdienen.",
+   "Ik weet wat het verschil is tussen primair en secundair inkomen.",
+   "Ik weet wat bestedingen zijn en kan uitleggen waarom mensen hun geld anders gaan uitgeven.",
+   "Ik kan uitleggen wat de 6 P's van marketing zijn en hoe bedrijven mij proberen te beïnvloeden.",
+   "Ik weet wat een doelgroep is en waarom bedrijven zich op bepaalde groepen richten.",
+   "Ik kan uitleggen wat duurzaam consumeren is.",
+   "Ik weet wat maatschappelijke kosten zijn en kan een voorbeeld geven.",
+   "Ik kan drie voorbeelden geven van inkomen uit arbeid en drie voorbeelden van inkomen uit bezit.",
+   "Ik kan uitleggen wat een overdrachtsinkomen is en er twee voorbeelden van noemen.",
+   "Ik kan vier redenen noemen waarom mensen verschillende bestedingen hebben.",
+   "Ik kan uitleggen wat besteedbaar inkomen is.",
+   "Ik kan de zes P's van de marketingmix noemen.",
+   "Ik kan bij een voorbeeld herkennen om welke P van de marketingmix het gaat.",
+   "Ik kan een doelgroep afbakenen op basis van leeftijd, budget, behoeften en interesses.",
+   "Ik kan uitleggen waarom jongeren een aantrekkelijke doelgroep zijn voor bedrijven.",
+   "Ik kan het verschil uitleggen tussen merkreclame en ideële reclame.",
+   "Ik kan uitleggen hoe technische ontwikkelingen consumenten en bedrijven beïnvloeden.",
+   "Ik kan uitleggen hoe bedrijven mij via sociale netwerken en influencers proberen te beïnvloeden.",
+   "Ik kan een voorbeeld geven van duurzaam consumeren en uitleggen waarom iemand daarvoor kiest.",
+   "Ik kan bij een product uitleggen wat de maatschappelijke kosten zijn en wie die kosten betaalt."
+  ],
+  "1.2": [
+   "Ik weet wat bruto-, netto- en besteedbaar inkomen betekenen.",
+   "Ik kan een loonstijging of -daling berekenen met een percentage of groeifactor.",
+   "Ik kan vier redenen noemen waarom inkomens van mensen verschillen.",
+   "Ik weet wat modaal inkomen en sociaal minimum betekenen.",
+   "Ik weet wat het nationaal inkomen is.",
+   "Ik kan een Lorenzcurve lezen en uitleggen wat deze zegt over inkomensverschillen.",
+   "Ik kan uitleggen wat het verschil is tussen nominaal en reëel inkomen.",
+   "Ik kan uitleggen wat prijscompensatie is en wat een loon-prijsspiraal betekent.",
+   "Ik kan een nettoloon berekenen met brutoloon min belastingen en premies.",
+   "Ik kan een nieuw loon berekenen na een loonstijging met een groeifactor.",
+   "Ik kan de groeifactor bij een daling berekenen.",
+   "Ik kan een procentuele verandering berekenen.",
+   "Ik kan berekenen met hoeveel procent een aantal is gestegen of gedaald.",
+   "Ik kan uitleggen hoe het komt dat sommige mensen meer verdienen dan anderen.",
+   "Ik kan uitleggen waarom het modaal inkomen handig is om inkomens te vergelijken.",
+   "Ik kan uitleggen waarvoor de overheid het sociaal minimum gebruikt.",
+   "Ik kan uitleggen wat het BBP is.",
+   "Ik kan het nationaal inkomen per inwoner berekenen.",
+   "Ik kan uitleggen wat de gelijkheidslijn in een Lorenzcurve betekent.",
+   "Ik kan uit een tabel met de inkomensverdeling de punten van een Lorenzcurve uitrekenen.",
+   "Ik kan uitleggen wat de ligging van een Lorenzcurve zegt over de inkomensverdeling.",
+   "Ik kan uitleggen wat er met de Lorenzcurve gebeurt als de btw op levensmiddelen omhoog gaat.",
+   "Ik kan met een voorbeeld uitleggen hoe inkomen in de wereld verdeeld is."
+  ],
+  "1.3": [
+   "Ik weet wat welvaart is.",
+   "Ik weet wat welzijn is.",
+   "Ik kan het verschil uitleggen tussen vrije goederen en schaarse goederen.",
+   "Ik kan uitleggen waarom je moet kiezen tussen behoeften.",
+   "Ik weet wat middelen zijn en wat prioriteiten stellen betekent.",
+   "Ik weet wat indexcijfers zijn en dat ze prijsveranderingen in de tijd laten zien.",
+   "Ik kan drie manieren noemen waarop welvaart toeneemt.",
+   "Ik kan drie voorbeelden geven van welzijn dat je niet met geld kunt kopen.",
+   "Ik kan uitleggen waarom het BBP per inwoner niet alles zegt over het welzijn in een land.",
+   "Ik kan het BBP per inwoner berekenen.",
+   "Ik kan uitleggen wat collectieve voorzieningen zijn en er voorbeelden van geven.",
+   "Ik kan van een goed zeggen of het schaars of vrij is en mijn keuze uitleggen.",
+   "Ik kan uitleggen wat het verschil is tussen schaars en duur.",
+   "Ik kan de drie productiemiddelen noemen.",
+   "Ik kan uitleggen waarom niemand ooit in al zijn behoeften kan voorzien.",
+   "Ik kan een indexcijfer berekenen.",
+   "Ik kan uit een indexcijfer aflezen met hoeveel procent iets is gestegen of gedaald.",
+   "Ik kan met een indexcijfer terugrekenen naar de prijs in het basisjaar.",
+   "Ik kan met een indexcijfer berekenen wat een product nu kost.",
+   "Ik kan uit een tabel met indexcijfers aflezen hoeveel duurder iets is geworden."
+  ],
+  "1.4": [
+   "Ik kan uitleggen wat inflatie en deflatie zijn.",
+   "Ik weet wat koopkracht is en hoe die verandert bij prijsstijgingen.",
+   "Ik weet wat prijscompensatie betekent en waarom vakbonden dat willen.",
+   "Ik kan uitleggen hoe een loon-prijsspiraal ontstaat.",
+   "Ik weet waarvoor het CPI wordt gebruikt.",
+   "Ik kan twee oorzaken van inflatie noemen.",
+   "Ik kan uitleggen waarom deflatie slecht is voor de economie.",
+   "Ik kan uitleggen wat nominaal inkomen en reëel inkomen is.",
+   "Ik kan de reële verandering van een inkomen berekenen.",
+   "Ik kan bepalen of mijn koopkracht stijgt of daalt als ik de loonstijging en de inflatie weet.",
+   "Ik kan de koopkracht aflezen uit een grafiek met loonstijging en inflatie.",
+   "Ik kan uitleggen waarom 1% inflatie niet hoeft te betekenen dat mijn koopkracht ook 1% daalt.",
+   "Ik kan de loon-prijsspiraal als een cirkel tekenen en uitleggen.",
+   "Ik kan uitleggen wat het CBS doet.",
+   "Ik kan uitleggen wat een wegingsfactor is en waarom het CPI een gewogen indexcijfer is.",
+   "Ik kan een gewogen CPI uitrekenen.",
+   "Ik kan uit indexcijfers van twee jaren de inflatie in procenten berekenen.",
+   "Ik kan uitleggen waarom hoge looneisen een bedrijf in moeilijkheden kunnen brengen.",
+   "Ik kan uitleggen wat de ECB kan doen om de inflatie te beperken."
+  ],
+  "2.1": [
+   "Ik kan uitgaven verdelen in dagelijkse uitgaven, vaste lasten en incidentele uitgaven.",
+   "Ik weet wat budgetteren is en kan een eenvoudig budgetplan maken.",
+   "Ik kan bedragen omrekenen van week naar maand en van maand naar week.",
+   "Ik weet wat reserveren is en kan berekenen hoeveel je per maand moet reserveren voor een grote aankoop.",
+   "Ik kan uitleggen waarom mijn uitgaven invloed hebben op anderen en het milieu.",
+   "Ik kan uitleggen wat het Nibud is en wat het voor mij doet.",
+   "Ik kan van een uitgave bepalen of het een dagelijkse uitgave, een vaste last of een incidentele uitgave is.",
+   "Ik kan vijf voorbeelden van vaste lasten noemen.",
+   "Ik kan uitleggen wat een budgetplan (begroting) is.",
+   "Ik kan zien of een begroting in balans is en of er een tekort of overschot is.",
+   "Ik kan uitleggen wat ik kan doen als mijn begroting niet in balans is.",
+   "Ik kan inkomsten en uitgaven omrekenen naar dezelfde periode.",
+   "Ik kan een weekbedrag omrekenen naar een maandbedrag.",
+   "Ik kan een maandbedrag omrekenen naar een weekbedrag.",
+   "Ik kan een maandbedrag omrekenen naar een jaarbedrag.",
+   "Ik kan uitleggen waarom ik niet met 4 weken per maand reken.",
+   "Ik kan uitleggen waarom reserveren handig is voor een uitgave die je maar één keer per jaar betaalt.",
+   "Ik kan uitleggen op wie en wat mijn aankopen invloed hebben.",
+   "Ik kan uitleggen welke invloed mijn spaargeld heeft."
+  ],
+  "2.2": [
+   "Ik kan uitleggen waarom mensen sparen, de drie spaarmotieven.",
+   "Ik kan enkelvoudige rente berekenen.",
+   "Ik kan samengestelde rente berekenen met een groeifactor.",
+   "Ik weet wat nominale rente en reële rente betekenen.",
+   "Ik weet wat beleggen is en wat het verschil is tussen sparen en beleggen.",
+   "Ik weet wat risico en rendement betekenen bij beleggen.",
+   "Ik kan berekenen hoeveel euro mijn rendement is.",
+   "Ik weet wat een spaardeposito is en hoe dit werkt.",
+   "Ik kan bij een situatie het spaarmotief noemen.",
+   "Ik kan uitleggen waarom bij een lage rente weinig mensen voor de rente sparen.",
+   "Ik kan drie dingen noemen waarvan de rente op mijn spaarrekening afhangt.",
+   "Ik kan het verschil uitleggen tussen een vaste en een variabele rente.",
+   "Ik kan het verschil uitleggen tussen enkelvoudige en samengestelde rente.",
+   "Ik kan bij enkelvoudige rente de rente per jaar en het eindbedrag berekenen.",
+   "Ik kan de groeifactor bij een rentepercentage bepalen.",
+   "Ik kan het eindbedrag na meerdere jaren berekenen met een groeifactor.",
+   "Ik kan bij samengestelde rente uitrekenen hoeveel rente ik in totaal heb gekregen.",
+   "Ik kan uitleggen waarom samengestelde rente op lange termijn meer oplevert dan enkelvoudige rente.",
+   "Ik kan bij een som bepalen of ik de formule van enkelvoudige of van samengestelde rente moet gebruiken.",
+   "Ik kan de reële rente berekenen.",
+   "Ik kan uitleggen wat een negatieve reële rente betekent voor de koopkracht van mijn spaargeld.",
+   "Ik kan een voordeel en een nadeel van een spaardeposito noemen.",
+   "Ik kan vier voorbeelden van beleggen noemen.",
+   "Ik kan uitleggen wat een aandeel is en wat dividend is.",
+   "Ik kan uitleggen wat een obligatie is.",
+   "Ik kan een voordeel en een nadeel van beleggen noemen.",
+   "Ik kan het rendement in procenten berekenen.",
+   "Ik kan een situatie noemen waarin sparen beter is dan beleggen en uitleggen waarom."
+  ],
+  "2.3": [
+   "Ik weet waarom mensen geld lenen.",
+   "Ik weet wat kredietkosten zijn.",
+   "Ik kan kredietkosten berekenen met de juiste formule en met behulp van de tabel met maandtermijnen.",
+   "Ik kan uitrekenen hoeveel procent rente ik betaal over het geleende bedrag.",
+   "Ik weet wat consumptief krediet betekent.",
+   "Ik kan drie kredietvormen noemen en uitleggen.",
+   "Ik kan uitleggen wat koop op afbetaling en private lease zijn.",
+   "Ik weet wat een hypothecaire lening is en wat onderpand betekent.",
+   "Ik kan uitleggen welke risico's lenen heeft.",
+   "Ik kan de vier leenmotieven noemen.",
+   "Ik kan van een situatie bepalen welk leenmotief erbij hoort.",
+   "Ik kan uitleggen waarom de looptijd van een lening korter moet zijn dan de levensduur van wat je koopt.",
+   "Ik kan uitleggen wat er kan gebeuren als je een schuld niet op tijd terugbetaalt.",
+   "Ik kan uitleggen wat een termijn is en wat aflossen betekent.",
+   "Ik kan uit de tabel het maandbedrag aflezen bij een leenbedrag en een looptijd.",
+   "Ik kan het totaal berekenen dat ik terugbetaal.",
+   "Ik kan de kredietkosten van twee looptijden vergelijken en zeggen welke goedkoper is.",
+   "Ik kan uitleggen waarom een langere looptijd lagere termijnen maar hogere kredietkosten geeft.",
+   "Ik kan het verschil uitleggen tussen een persoonlijke lening en een doorlopend krediet.",
+   "Ik kan uitleggen waarom een salariskrediet (rood staan) duur is.",
+   "Ik kan het verschil uitleggen tussen koop op afbetaling en private lease.",
+   "Ik kan een voordeel en een nadeel van private lease noemen.",
+   "Ik kan uitleggen waarom de bank bij een hypotheek het huis als onderpand wil.",
+   "Ik kan uitleggen waarom schulden het moeilijker maken om een nieuwe lening te krijgen."
+  ],
+  "2.4": [
+   "Ik weet welke drie functies geld heeft.",
+   "Ik kan uitleggen wat chartaal geld en giraal geld zijn.",
+   "Ik kan mijn saldo berekenen met de formule.",
+   "Ik kan uitleggen hoe banken werken.",
+   "Ik weet wat rente is.",
+   "Ik weet wat de ECB doet en hoe die invloed heeft op de rente.",
+   "Ik kan bij een voorbeeld zeggen welke geldfunctie het is.",
+   "Ik kan voorbeelden geven van betalen met chartaal geld en met giraal geld.",
+   "Ik kan uitleggen waarom giraal geld handig is, maar dat ik mijn saldo goed in de gaten moet houden.",
+   "Ik kan het nieuwe saldo berekenen na ontvangsten en betalingen.",
+   "Ik kan uitleggen wat een creditsaldo en een debetsaldo is.",
+   "Ik kan uitleggen waarom rood staan duur is.",
+   "Ik kan uitleggen wat vraag naar geld en aanbod van geld is en wie die vormen.",
+   "Ik kan uitleggen waarom rente de prijs van geld is.",
+   "Ik kan uitleggen wat er met sparen, lenen en bestedingen gebeurt als de rente stijgt.",
+   "Ik kan uitleggen wat er met sparen, lenen en bestedingen gebeurt als de rente daalt.",
+   "Ik kan uitleggen hoe banken winst maken met het renteverschil tussen lenen en sparen.",
+   "Ik kan uitleggen welke kosten een bank heeft.",
+   "Ik kan uitleggen waarom een bank bij een risicovolle lening een hogere rente vraagt.",
+   "Ik kan uitleggen wat de ECB doet bij inflatie en wat bij deflatie.",
+   "Ik kan uitleggen waarom gezinnen lenen en waarom bedrijven lenen."
+  ]
+ },
+ "NORIG": {
+  "1.1": 7,
+  "1.2": 8,
+  "1.3": 6,
+  "1.4": 5,
+  "2.1": 5,
+  "2.2": 8,
+  "2.3": 9,
+  "2.4": 6
+ },
+ "CHK": [
+  [
+   "De drie geldfuncties: ruilmiddel, spaarmiddel en rekenmiddel",
+   "2.4",
+   "quiz"
+  ],
+  [
+   "Procent rekenen: twee bedragen met elkaar vergelijken",
+   "1.2",
+   "reken",
+   "pct"
+  ],
+  [
+   "Doelgroepen: wat zijn het en waarom jongeren?",
+   "1.1",
+   "quiz"
+  ],
+  [
+   "Het begrip schaars",
+   "1.3",
+   "quiz"
+  ],
+  [
+   "Welvaart en welzijn",
+   "1.3",
+   "quiz"
+  ],
+  [
+   "Kredietkosten berekenen vanuit een tabel",
+   "2.3",
+   "reken",
+   "krediet"
+  ],
+  [
+   "Van week of maand naar jaar rekenen",
+   "2.1",
+   "reken",
+   "maand"
+  ],
+  [
+   "De marketingmix: de 6 P's",
+   "1.1",
+   "quiz"
+  ],
+  [
+   "Hoeveel procent leerlingen zijn erbij gekomen?",
+   "1.2",
+   "reken",
+   "pct"
+  ],
+  [
+   "Koopkracht berekenen (ook vanuit een grafiek)",
+   "1.4",
+   "reken",
+   "koop"
+  ],
+  [
+   "Terugrekenen met een indexcijfer (benzine €1,69 bij 176,6)",
+   "1.3",
+   "reken",
+   "terug"
+  ],
+  [
+   "BBP per inwoner berekenen",
+   "1.3",
+   "reken",
+   "bbp"
+  ],
+  [
+   "Indexcijfers met 2015 als basisjaar",
+   "1.3",
+   "reken",
+   "index"
+  ],
+  [
+   "Het CPI uitrekenen met prijzen, indexcijfers en weging",
+   "1.4",
+   "reken",
+   "cpi"
+  ],
+  [
+   "Reële loonstijging uitrekenen",
+   "1.4",
+   "reken",
+   "koop"
+  ],
+  [
+   "Wat kan de ECB doen bij inflatie en bij deflatie?",
+   "2.4",
+   "quiz"
+  ],
+  [
+   "Gevolg van een stijgende rente voor sparen en uitgeven",
+   "2.4",
+   "quiz"
+  ],
+  [
+   "Spaardeposito en enkelvoudige rente uitrekenen",
+   "2.2",
+   "reken",
+   "enkel"
+  ],
+  [
+   "Samengestelde rente uitrekenen",
+   "2.2",
+   "reken",
+   "samen"
+  ],
+  [
+   "De drie spaarmotieven",
+   "2.2",
+   "quiz"
+  ],
+  [
+   "Een voordeel en een nadeel van beleggen",
+   "2.2",
+   "quiz"
+  ],
+  [
+   "Geld reserveren voor een grote uitgave",
+   "2.1",
+   "reken",
+   "reserve"
+  ],
+  [
+   "Lorenzcurve: wat gebeurt er als de btw op levensmiddelen omhoog gaat?",
+   "1.2",
+   "quiz"
+  ],
+  [
+   "Een creditsaldo uitrekenen",
+   "2.4",
+   "reken",
+   "saldo"
+  ]
+ ],
+ "CARDS": [
+  [
+   "1.1",
+   "Inkomen uit arbeid",
+   "Geld dat je verdient met werken: loon, of een deel van de winst.",
+   "Het loon van je bijbaan."
+  ],
+  [
+   "1.1",
+   "Inkomen uit bezit",
+   "Geld dat je krijgt omdat je iets bezit en verhuurt of uitleent.",
+   "Huur, rente, dividend, pacht."
+  ],
+  [
+   "1.1",
+   "Overdrachtsinkomen",
+   "Inkomen zonder directe tegenprestatie.",
+   "Zakgeld, kinderbijslag, een uitkering."
+  ],
+  [
+   "1.1",
+   "Primair inkomen",
+   "Inkomen dat je verdient door mee te doen aan de productie: met arbeid of bezit.",
+   "Loon, winst, huur, rente."
+  ],
+  [
+   "1.1",
+   "Secundair inkomen",
+   "Je primaire inkomen min belastingen en premies, plus uitkeringen en toeslagen.",
+   "Wat je overhoudt na de verdeling door de overheid."
+  ],
+  [
+   "1.1",
+   "Bestedingen",
+   "Het geld dat je uitgeeft aan goederen en diensten.",
+   "Kleding, eten, een abonnement."
+  ],
+  [
+   "1.1",
+   "Doelgroep",
+   "De groep consumenten waar een bedrijf zich op richt, bijvoorbeeld op leeftijd, budget of interesses.",
+   "Een energiedrankje voor jongeren."
+  ],
+  [
+   "1.1",
+   "Marketingmix",
+   "De 6 P's: product, prijs, plaats, promotie, personeel en presentatie.",
+   "Hoe een bedrijf klanten probeert te verleiden."
+  ],
+  [
+   "1.1",
+   "Promotie",
+   "De P van reclame en sponsoring: via welke media bereik je je doelgroep?",
+   "Reclame op TikTok, sponsoring van een voetbalclub."
+  ],
+  [
+   "1.1",
+   "Presentatie",
+   "Hoe een winkel zijn producten laat zien: een luxe uitstraling of juist massa.",
+   "A-merken in een chique etalage."
+  ],
+  [
+   "1.1",
+   "Merkreclame",
+   "Reclame om een merk bekend en aantrekkelijk te maken.",
+   "Een tv-spot vol logo's van een frisdrankmerk."
+  ],
+  [
+   "1.1",
+   "Ideële reclame",
+   "Reclame voor een goed doel of een idee, zonder winstdoel.",
+   "Een campagne om geld te geven tegen kanker."
+  ],
+  [
+   "1.1",
+   "Duurzaam consumeren",
+   "Kopen met oog voor mens, dier en milieu, ook voor later.",
+   "Tweedehands kleding, fairtrade koffie."
+  ],
+  [
+   "1.1",
+   "Maatschappelijke kosten",
+   "Kosten voor de samenleving die niet in de prijs van een product zitten.",
+   "Luchtvervuiling door vliegen, kinderarbeid."
+  ],
+  [
+   "1.2",
+   "Brutoloon",
+   "Je loon vóór aftrek van belastingen en premies.",
+   "€2.500 bruto per maand."
+  ],
+  [
+   "1.2",
+   "Nettoloon",
+   "Je loon na aftrek van belastingen en premies: wat er op je rekening komt.",
+   "€2.500 − €450 = €2.050."
+  ],
+  [
+   "1.2",
+   "Besteedbaar inkomen",
+   "Het inkomen dat je echt kunt uitgeven.",
+   "Je nettoloon plus toeslagen."
+  ],
+  [
+   "1.2",
+   "Groeifactor",
+   "1 + percentage : 100. Hiermee reken je een stijging of daling snel uit.",
+   "3% erbij → × 1,03 · 4% eraf → × 0,96."
+  ],
+  [
+   "1.2",
+   "Modaal inkomen",
+   "Het inkomen dat in Nederland het meest voorkomt.",
+   "Handig om inkomens mee te vergelijken."
+  ],
+  [
+   "1.2",
+   "Sociaal minimum",
+   "Het minimale inkomen dat je volgens de overheid nodig hebt om rond te komen.",
+   "De bijstandsuitkering."
+  ],
+  [
+   "1.2",
+   "Nationaal inkomen",
+   "Alle inkomens die in een jaar in een land samen verdiend worden.",
+   "Gedeeld door het aantal inwoners = inkomen per inwoner."
+  ],
+  [
+   "1.2",
+   "Lorenzcurve",
+   "Grafiek die laat zien hoe de inkomens over de bevolking verdeeld zijn.",
+   "Hoe verder van de diagonaal, hoe ongelijker."
+  ],
+  [
+   "1.2",
+   "Gelijkheidslijn",
+   "De rechte diagonaal in de Lorenzcurve: iedereen verdient precies evenveel.",
+   "20% van de mensen heeft 20% van het inkomen."
+  ],
+  [
+   "1.2",
+   "Nominaal inkomen",
+   "Je inkomen in euro's, zonder rekening te houden met prijsstijgingen.",
+   "Je loon gaat van €2.000 naar €2.060."
+  ],
+  [
+   "1.2",
+   "Reëel inkomen",
+   "Je inkomen gecorrigeerd voor inflatie: wat je er echt van kunt kopen.",
+   "+3% loon en 2% inflatie → reëel +1%."
+  ],
+  [
+   "1.2",
+   "Inkomensverschillen",
+   "Ontstaan door opleiding, soort werk, verantwoordelijkheid en vraag en aanbod.",
+   "Een chirurg verdient meer dan een vakkenvuller."
+  ],
+  [
+   "1.3",
+   "Welvaart",
+   "Hoe goed je met je middelen in je behoeften kunt voorzien.",
+   "Een goed inkomen, een fijn huis."
+  ],
+  [
+   "1.3",
+   "Welzijn",
+   "De brede kwaliteit van je leven: gezondheid, geluk, vrijheid, vrienden.",
+   "Je gezond en veilig voelen."
+  ],
+  [
+   "1.3",
+   "Schaars goed",
+   "Er zijn productiemiddelen nodig om het te maken (arbeid, kapitaal, natuur).",
+   "Brood, een fiets, een gratis krant."
+  ],
+  [
+   "1.3",
+   "Vrij goed",
+   "Is er vanzelf en in overvloed, zonder dat er iets voor gedaan hoeft te worden.",
+   "Lucht om in te ademen, zonlicht."
+  ],
+  [
+   "1.3",
+   "Middelen",
+   "Wat je nodig hebt om in je behoeften te voorzien, zoals geld en tijd. Ze zijn schaars.",
+   "Je zakgeld en je vrije middag."
+  ],
+  [
+   "1.3",
+   "Prioriteiten stellen",
+   "Bepalen wat het belangrijkst is, omdat je niet alles kunt hebben.",
+   "Eerst je telefoonrekening, dan pas een concert."
+  ],
+  [
+   "1.3",
+   "BBP",
+   "Bruto Binnenlands Product: de totale waarde van alle goederen en diensten die een land in een jaar maakt.",
+   "BBP per inwoner = BBP : aantal inwoners."
+  ],
+  [
+   "1.3",
+   "Collectieve voorzieningen",
+   "Voorzieningen die de overheid regelt voor iedereen.",
+   "Wegen, dijken, politie."
+  ],
+  [
+   "1.3",
+   "Indexcijfer",
+   "Laat een verandering zien ten opzichte van een basisjaar (= 100).",
+   "112 = 12% hoger dan in het basisjaar."
+  ],
+  [
+   "1.3",
+   "Basisjaar",
+   "Het jaar waarmee je vergelijkt. Het indexcijfer is dan 100.",
+   "2015 = 100."
+  ],
+  [
+   "1.4",
+   "Inflatie",
+   "Een stijging van het algemeen prijspeil.",
+   "Je boodschappen worden steeds duurder."
+  ],
+  [
+   "1.4",
+   "Deflatie",
+   "Een daling van het algemeen prijspeil. Mensen stellen aankopen dan uit.",
+   "Slecht voor de economie."
+  ],
+  [
+   "1.4",
+   "Koopkracht",
+   "De hoeveelheid goederen en diensten die je met je inkomen kunt kopen.",
+   "Loon +2%, prijzen +3% → koopkracht daalt."
+  ],
+  [
+   "1.4",
+   "Prijscompensatie",
+   "Een loonsverhoging om de prijsstijging te compenseren.",
+   "Inflatie 3% → lonen ook +3%."
+  ],
+  [
+   "1.4",
+   "Vakbond",
+   "Komt op voor werknemers en onderhandelt over loon in de cao.",
+   "De FNV."
+  ],
+  [
+   "1.4",
+   "Loon-prijsspiraal",
+   "Hogere lonen → hogere kosten → hogere prijzen → nieuwe looneisen → …",
+   "Een vicieuze cirkel van inflatie."
+  ],
+  [
+   "1.4",
+   "CBS",
+   "Centraal Bureau voor de Statistiek: verzamelt cijfers over Nederland.",
+   "Het CBS berekent het CPI."
+  ],
+  [
+   "1.4",
+   "CPI",
+   "Consumentenprijsindexcijfer: meet hoeveel de prijzen gemiddeld stijgen.",
+   "CPI 104 = prijzen 4% hoger dan in het basisjaar."
+  ],
+  [
+   "1.4",
+   "Wegingsfactor",
+   "Hoe zwaar een productgroep meetelt in een gewogen indexcijfer.",
+   "Huur telt zwaarder mee dan kauwgom."
+  ],
+  [
+   "1.4",
+   "Reële loonstijging",
+   "De nominale loonstijging min de inflatie.",
+   "4% − 2,5% = 1,5%."
+  ],
+  [
+   "2.1",
+   "Nibud",
+   "Nationaal Instituut voor Budgetvoorlichting: geeft tips over omgaan met geld.",
+   "Hulp bij je eerste budgetplan."
+  ],
+  [
+   "2.1",
+   "Dagelijkse uitgaven",
+   "Alledaagse, huishoudelijke uitgaven.",
+   "Boodschappen in de supermarkt."
+  ],
+  [
+   "2.1",
+   "Vaste lasten",
+   "Uitgaven die je met vaste regelmaat moet betalen.",
+   "Huur, abonnementen, contributie."
+  ],
+  [
+   "2.1",
+   "Incidentele uitgaven",
+   "Grotere uitgaven die je niet vaak doet.",
+   "Een wasmachine, een vakantie."
+  ],
+  [
+   "2.1",
+   "Budgetplan",
+   "Een overzicht van je verwachte inkomsten en uitgaven (begroting).",
+   "In balans: inkomsten = uitgaven."
+  ],
+  [
+   "2.1",
+   "Week → maand",
+   "Weekbedrag × 52 : 12.",
+   "€30 per week = €130 per maand."
+  ],
+  [
+   "2.1",
+   "Maand → week",
+   "Maandbedrag × 12 : 52.",
+   "€130 per maand = €30 per week."
+  ],
+  [
+   "2.1",
+   "Reserveren",
+   "Elke maand geld opzij zetten voor een grote, incidentele uitgave.",
+   "€480 : 12 maanden = €40 per maand."
+  ],
+  [
+   "2.2",
+   "Spaarmotieven",
+   "Redenen om te sparen: voor een doel, uit voorzorg of voor de rente.",
+   "Sparen voor een scooter."
+  ],
+  [
+   "2.2",
+   "Sparen uit voorzorg",
+   "Een buffer opbouwen voor onverwachte uitgaven.",
+   "Geld achter de hand als je fiets wordt gestolen."
+  ],
+  [
+   "2.2",
+   "Enkelvoudige rente",
+   "De rente wordt elk jaar apart uitgekeerd. Je spaargeld blijft gelijk.",
+   "2% van €1.000 = €20 per jaar."
+  ],
+  [
+   "2.2",
+   "Samengestelde rente",
+   "Rente op rente: de rente wordt bijgeschreven en levert daarna ook rente op.",
+   "€1.000 × 1,02³ = €1.061,21."
+  ],
+  [
+   "2.2",
+   "Spaardeposito",
+   "Je geld staat een afgesproken tijd vast tegen een vaste rente.",
+   "5 jaar vast tegen 2,5%."
+  ],
+  [
+   "2.2",
+   "Nominale rente",
+   "De rente waarmee de bank rekent.",
+   "De bank geeft 2%."
+  ],
+  [
+   "2.2",
+   "Reële rente",
+   "Nominale rente min inflatie: wat je spaargeld écht waard wordt.",
+   "2% − 3% = −1%."
+  ],
+  [
+   "2.2",
+   "Beleggen",
+   "Iets kopen waarvan je verwacht dat het meer waard wordt.",
+   "Aandelen, obligaties, goud."
+  ],
+  [
+   "2.2",
+   "Rendement",
+   "De opbrengst van een belegging, meestal in procenten.",
+   "Aandeel van €50 naar €55 = 10%."
+  ],
+  [
+   "2.2",
+   "Obligatie",
+   "Je leent geld uit aan een bedrijf of de overheid tegen een vaste rente.",
+   "Een staatsobligatie."
+  ],
+  [
+   "2.2",
+   "Aandeel",
+   "Een klein stukje eigendom van een bedrijf. De koers kan stijgen en dalen.",
+   "Je krijgt soms dividend."
+  ],
+  [
+   "2.2",
+   "Dividend",
+   "Het deel van de winst dat een bedrijf uitkeert aan de aandeelhouders.",
+   "€1,20 per aandeel."
+  ],
+  [
+   "2.3",
+   "Leenmotieven",
+   "Redenen om te lenen: tijdelijk tekort, dure aankoop niet uitstellen, onverwacht geld nodig, een huis kopen.",
+   "Lenen voor een auto."
+  ],
+  [
+   "2.3",
+   "Kredietkosten",
+   "Alles wat je méér terugbetaalt dan je hebt geleend.",
+   "Termijn × aantal termijnen − krediet."
+  ],
+  [
+   "2.3",
+   "Termijn",
+   "Het bedrag dat je elke maand terugbetaalt: rente plus aflossing.",
+   "€120 per maand."
+  ],
+  [
+   "2.3",
+   "Aflossen",
+   "Het geleende bedrag terugbetalen.",
+   "Elke maand een stukje van je schuld."
+  ],
+  [
+   "2.3",
+   "Consumptief krediet",
+   "Een lening om een consumptiegoed te kopen.",
+   "Een lening voor een keuken."
+  ],
+  [
+   "2.3",
+   "Persoonlijke lening",
+   "Vaste looptijd, vaste rente en vaste termijnen.",
+   "€6.000 lenen in 60 maanden."
+  ],
+  [
+   "2.3",
+   "Doorlopend krediet",
+   "Je mag tot een grens steeds opnieuw geld opnemen. De rente is variabel.",
+   "Een kredietlimiet van €5.000."
+  ],
+  [
+   "2.3",
+   "Salariskrediet",
+   "Rood staan op je betaalrekening, afhankelijk van je salaris. De rente is hoog.",
+   "−€300 op je rekening."
+  ],
+  [
+   "2.3",
+   "Koop op afbetaling",
+   "Je koopt bij een winkel en betaalt in termijnen. De rente is vaak hoog.",
+   "Een tv in 24 termijnen."
+  ],
+  [
+   "2.3",
+   "Private lease",
+   "Je huurt een auto inclusief onderhoud, belasting en verzekering. Hij wordt nooit van jou.",
+   "€349 per maand voor een auto."
+  ],
+  [
+   "2.3",
+   "Hypothecaire lening",
+   "Een lening voor de aankoop van een woning, meestal voor 30 jaar.",
+   "Een hypotheek van €300.000."
+  ],
+  [
+   "2.3",
+   "Onderpand",
+   "Zekerheid voor de bank: als je niet betaalt, mag de bank het huis verkopen.",
+   "Het huis bij een hypotheek."
+  ],
+  [
+   "2.4",
+   "Ruilmiddel",
+   "Geld gebruiken om iets te kopen.",
+   "Een broodje kopen in de kantine."
+  ],
+  [
+   "2.4",
+   "Spaarmiddel",
+   "Geld bewaren om later uit te geven.",
+   "Je verjaardagsgeld op je spaarrekening."
+  ],
+  [
+   "2.4",
+   "Rekenmiddel",
+   "Geld gebruiken om de waarde van iets uit te drukken.",
+   "Deze fiets is €400 waard."
+  ],
+  [
+   "2.4",
+   "Chartaal geld",
+   "Munten en bankbiljetten.",
+   "Een briefje van €20."
+  ],
+  [
+   "2.4",
+   "Giraal geld",
+   "Geld op een bankrekening. Je kunt het niet vastpakken.",
+   "Pinnen, iDEAL, contactloos betalen."
+  ],
+  [
+   "2.4",
+   "Creditsaldo",
+   "Een positief saldo: je hebt geld tegoed bij de bank.",
+   "+€250,40"
+  ],
+  [
+   "2.4",
+   "Debetsaldo",
+   "Een negatief saldo: je staat rood en betaalt hoge rente.",
+   "−€80,00"
+  ],
+  [
+   "2.4",
+   "Aanbod van geld",
+   "Het geld van spaarders op spaarrekeningen.",
+   "Jouw spaargeld bij de bank."
+  ],
+  [
+   "2.4",
+   "Vraag naar geld",
+   "Gezinnen en bedrijven die geld willen lenen.",
+   "Een bedrijf leent om te investeren."
+  ],
+  [
+   "2.4",
+   "Rente",
+   "De prijs voor geld.",
+   "Spaarders krijgen rente, leners betalen rente."
+  ],
+  [
+   "2.4",
+   "ECB",
+   "Europese Centrale Bank: bepaalt de basisrente voor de eurozone.",
+   "Rente omhoog bij hoge inflatie."
+  ],
+  [
+   "2.4",
+   "Renteverschil",
+   "Banken verdienen omdat de rente op leningen hoger is dan de rente op spaargeld.",
+   "Lenen 6%, sparen 2%."
+  ]
+ ],
+ "BANK": [
+  [
+   "1.1",
+   "Uit welke drie bronnen kun je inkomen krijgen?",
+   [
+    "Arbeid, bezit en overdrachten",
+    "Arbeid, sparen en lenen",
+    "Loon, belasting en de rente",
+    "Werk, school en de vakantie"
+   ],
+   "Inkomen krijg je uit arbeid (loon), uit bezit (huur, rente, dividend) of als overdracht (zakgeld, uitkering)."
+  ],
+  [
+   "1.1",
+   "Sanne verhuurt een kamer in haar huis. Wat voor inkomen is de huur die ze ontvangt?",
+   [
+    "Inkomen uit bezit",
+    "Inkomen uit arbeid",
+    "Overdrachtsinkomen",
+    "Winst uit onderneming"
+   ],
+   "Je krijgt huur omdat je iets bezit dat je verhuurt."
+  ],
+  [
+   "1.1",
+   "Wat is een overdrachtsinkomen?",
+   [
+    "Inkomen zonder directe tegenprestatie",
+    "Loon dat je krijgt voor overwerk",
+    "Rente die je krijgt over je spaargeld",
+    "Winst die je met een bedrijf maakt"
+   ],
+   "Bijvoorbeeld zakgeld, kinderbijslag of een uitkering: je hoeft er niet direct iets voor te doen."
+  ],
+  [
+   "1.1",
+   "Welk inkomen is een overdrachtsinkomen?",
+   [
+    "Een WW-uitkering",
+    "Het loon van een kok",
+    "Dividend van aandelen",
+    "Huur van een garagebox"
+   ],
+   "Een uitkering krijg je zonder dat je er direct voor werkt."
+  ],
+  [
+   "1.1",
+   "Wat is een primair inkomen?",
+   [
+    "Inkomen dat je verdient met arbeid of bezit",
+    "Inkomen dat je van de overheid krijgt",
+    "Zakgeld dat je elke week van je ouders krijgt",
+    "Geld dat je bij de bank leent voor een aankoop"
+   ],
+   "Primair inkomen verdien je door mee te doen aan de productie: met werk of met bezit."
+  ],
+  [
+   "1.1",
+   "Wat zijn bestedingen?",
+   [
+    "Het geld dat je uitgeeft aan goederen en diensten",
+    "Het geld dat je elke maand opzijzet om te sparen",
+    "Het geld dat je bij de bank leent voor iets duurs",
+    "De belasting die je over je inkomen aan de overheid betaalt"
+   ],
+   "Besteden is uitgeven aan producten die je gebruikt (consumptie)."
+  ],
+  [
+   "1.1",
+   "Wat is een doelgroep?",
+   [
+    "De groep consumenten waar een bedrijf zich op richt",
+    "Alle mensen die in een winkel van het bedrijf werken",
+    "De klanten die al eerder iets bij het bedrijf kochten",
+    "Een groep bedrijven die samen een product maken"
+   ],
+   "Een bedrijf kiest een doelgroep op basis van bijvoorbeeld leeftijd, budget of interesses."
+  ],
+  [
+   "1.1",
+   "Waarom zijn jongeren voor veel bedrijven een interessante doelgroep?",
+   [
+    "Ze zijn makkelijk te beïnvloeden en blijven een merk vaak trouw",
+    "Ze hebben nooit geld, dus ze moeten voor alles eerst lenen",
+    "Ze kopen alleen tweedehands spullen en nooit iets nieuws",
+    "Ze kijken nooit naar reclame en zijn dus moeilijk te bereiken"
+   ],
+   "Jongeren hebben vaak geld te besteden, willen steeds iets nieuws en bouwen een band op met merken."
+  ],
+  [
+   "1.1",
+   "Uit hoeveel P's bestaat de marketingmix in deze methode?",
+   [
+    "6",
+    "4",
+    "3",
+    "8"
+   ],
+   "Product, prijs, plaats, promotie, personeel en presentatie."
+  ],
+  [
+   "1.1",
+   "Een kledingmerk verkoopt alleen in winkels in dure winkelstraten. Welke P is dit?",
+   [
+    "Plaats",
+    "Prijs",
+    "Promotie",
+    "Product"
+   ],
+   "Plaats gaat over wáár je het product verkoopt."
+  ],
+  [
+   "1.1",
+   "Een energiedrankmerk sponsort een gametoernooi. Welke P is dit?",
+   [
+    "Promotie",
+    "Presentatie",
+    "Personeel",
+    "Plaats"
+   ],
+   "Promotie gaat over reclame en sponsoring."
+  ],
+  [
+   "1.1",
+   "Een winkel kiest bewust voor deskundig, goed opgeleid personeel. Welke P is dit?",
+   [
+    "Personeel",
+    "Presentatie",
+    "Product",
+    "Prijs"
+   ],
+   "Personeel: hoog of laag opgeleid, deskundig of niet."
+  ],
+  [
+   "1.1",
+   "Een frisdrankmerk maakt een reclame met vooral het logo en de slogan. Wat voor reclame is dit?",
+   [
+    "Merkreclame",
+    "Ideële reclame",
+    "Informatieve reclame",
+    "Sociale reclame"
+   ],
+   "Bij merkreclame wil het bedrijf vooral dat je het merk onthoudt."
+  ],
+  [
+   "1.1",
+   "Een goed doel vraagt in een campagne om geld te geven tegen kanker. Wat voor reclame is dit?",
+   [
+    "Ideële reclame",
+    "Merkreclame",
+    "Prijsreclame",
+    "Vergelijkende reclame"
+   ],
+   "Ideële reclame maakt reclame voor een idee of goed doel, zonder winstdoel."
+  ],
+  [
+   "1.1",
+   "Wat is duurzaam consumeren?",
+   [
+    "Kopen met oog voor mens en milieu, ook op lange termijn",
+    "Zo goedkoop mogelijk kopen, ook als het snel kapotgaat",
+    "Alleen dure merken kopen, omdat die beter zijn",
+    "Zo veel mogelijk kopen, zodat de economie groeit"
+   ],
+   "Bijvoorbeeld tweedehands kopen of fairtrade producten kiezen."
+  ],
+  [
+   "1.1",
+   "Wat zijn maatschappelijke kosten?",
+   [
+    "Kosten voor de samenleving die niet in de prijs zitten",
+    "De btw die je als consument over een product betaalt",
+    "De kosten die je elke maand voor een abonnement betaalt",
+    "Het loon dat de winkel aan een medewerker betaalt"
+   ],
+   "Denk aan luchtvervuiling of kinderarbeid: iemand anders betaalt de prijs."
+  ],
+  [
+   "1.1",
+   "Bij welk product zijn de maatschappelijke kosten waarschijnlijk het hoogst?",
+   [
+    "Een goedkope vliegreis",
+    "Een fiets",
+    "Een tweedehands boek",
+    "Een appel uit je eigen tuin"
+   ],
+   "Vliegen geeft veel CO₂-uitstoot en geluidsoverlast. Die kosten zitten niet in de ticketprijs."
+  ],
+  [
+   "1.2",
+   "Wat is het brutoloon?",
+   [
+    "Je loon vóór aftrek van belastingen en premies",
+    "Je loon na aftrek van belastingen en premies",
+    "Het loon dat uiteindelijk op je rekening komt",
+    "Je loon plus het vakantiegeld in mei"
+   ],
+   "Bruto = alles erin. Netto = wat je overhoudt."
+  ],
+  [
+   "1.2",
+   "Het brutoloon van Daan is €2.500. Hij betaalt €450 aan belastingen en premies. Wat is zijn nettoloon?",
+   [
+    "€2.050",
+    "€2.950",
+    "€2.500",
+    "€450"
+   ],
+   "€2.500 − €450 = €2.050."
+  ],
+  [
+   "1.2",
+   "Wat is de groeifactor bij een loonstijging van 3%?",
+   [
+    "1,03",
+    "0,03",
+    "1,3",
+    "0,97"
+   ],
+   "1 + 3 : 100 = 1,03."
+  ],
+  [
+   "1.2",
+   "Wat is de groeifactor bij een daling van 4%?",
+   [
+    "0,96",
+    "1,04",
+    "0,04",
+    "0,6"
+   ],
+   "1 − 4 : 100 = 0,96."
+  ],
+  [
+   "1.2",
+   "Lisa verdient €2.000 en krijgt 2,5% loonsverhoging. Wat is haar nieuwe loon?",
+   [
+    "€2.050",
+    "€2.025",
+    "€2.500",
+    "€2.250"
+   ],
+   "€2.000 × 1,025 = €2.050."
+  ],
+  [
+   "1.2",
+   "Wat is GEEN reden voor inkomensverschillen?",
+   [
+    "De kleur van je fiets",
+    "Je opleiding",
+    "Je verantwoordelijkheid in je werk",
+    "Vraag en aanbod op de arbeidsmarkt"
+   ],
+   "Inkomens verschillen door opleiding, soort werk, verantwoordelijkheid en vraag en aanbod."
+  ],
+  [
+   "1.2",
+   "Wat is een modaal inkomen?",
+   [
+    "Het inkomen dat in Nederland het meest voorkomt",
+    "Het hoogste inkomen dat in Nederland voorkomt",
+    "Het minimumloon dat de overheid vaststelt",
+    "Het gemiddelde inkomen van jongeren onder 21"
+   ],
+   "Modaal is het inkomen dat de meeste mensen ongeveer verdienen."
+  ],
+  [
+   "1.2",
+   "Wat is het sociaal minimum?",
+   [
+    "Het minimale inkomen dat je volgens de overheid nodig hebt om rond te komen",
+    "Het laagste loon dat een topsporter in Nederland per jaar mag verdienen",
+    "Het inkomen dat een modale werknemer elk jaar verdient met zijn werk",
+    "Het bedrag dat je volgens de bank elke maand minimaal moet sparen"
+   ],
+   "Bijvoorbeeld de bijstandsuitkering is op het sociaal minimum gebaseerd."
+  ],
+  [
+   "1.2",
+   "Wat is het nationaal inkomen?",
+   [
+    "Alle inkomens die in een jaar in een land samen verdiend worden",
+    "Het inkomen dat de regering elk jaar ontvangt aan belastingen",
+    "Het salaris van de minister-president en alle ministers samen",
+    "Het geld dat de overheid in een jaar aan zorg en onderwijs uitgeeft"
+   ],
+   "Deel je het door het aantal inwoners, dan krijg je het inkomen per inwoner."
+  ],
+  [
+   "1.2",
+   "Wat laat de Lorenzcurve zien?",
+   [
+    "Hoe de inkomens over de bevolking verdeeld zijn",
+    "Hoe hoog de inflatie in een land is geweest",
+    "Hoeveel mensen er in een land werkloos zijn",
+    "Hoeveel goederen een land exporteert per jaar"
+   ],
+   "Hoe verder de curve van de diagonaal ligt, hoe ongelijker de verdeling."
+  ],
+  [
+   "1.2",
+   "De Lorenzcurve ligt heel dicht bij de diagonaal. Wat betekent dat?",
+   [
+    "De inkomens zijn vrij gelijk verdeeld",
+    "De inkomens zijn heel ongelijk verdeeld",
+    "Iedereen is werkloos",
+    "De inflatie is hoog"
+   ],
+   "De diagonaal is de gelijkheidslijn: iedereen verdient evenveel."
+  ],
+  [
+   "1.2",
+   "De Lorenzcurve buigt verder af van de diagonaal dan vorig jaar. Wat is er gebeurd?",
+   [
+    "De inkomensverschillen zijn groter geworden",
+    "De inkomensverschillen zijn kleiner geworden",
+    "De prijzen zijn gemiddeld gedaald dit jaar",
+    "Iedereen verdient nu ongeveer evenveel geld"
+   ],
+   "Meer bolling = meer ongelijkheid."
+  ],
+  [
+   "1.2",
+   "De btw op levensmiddelen gaat omhoog. Wat gebeurt er met de Lorenzcurve?",
+   [
+    "Hij buigt verder af van de diagonaal: de verschillen worden groter",
+    "Hij komt dichter bij de diagonaal: de verschillen worden kleiner",
+    "Hij verandert niet, want de btw heeft niets met inkomen te maken",
+    "Hij wordt precies de diagonaal: iedereen houdt evenveel over"
+   ],
+   "Lage inkomens geven een groter deel van hun geld uit aan eten. Zij gaan er relatief het meest op achteruit."
+  ],
+  [
+   "1.2",
+   "De armste 50% van de bevolking verdient samen 20% van het totale inkomen. Wat zegt dit?",
+   [
+    "De inkomens zijn ongelijk verdeeld",
+    "De inkomens zijn precies gelijk verdeeld",
+    "De armste helft verdient het meeste geld",
+    "Iedereen verdient 20% van het totaal"
+   ],
+   "Bij een gelijke verdeling zou 50% van de mensen ook 50% van het inkomen hebben."
+  ],
+  [
+   "1.2",
+   "Wat is het verschil tussen nominaal en reëel inkomen?",
+   [
+    "Bij reëel inkomen houd je rekening met de prijsstijgingen",
+    "Nominaal inkomen is altijd lager dan je reële inkomen",
+    "Reëel inkomen is gewoon een ander woord voor je brutoloon",
+    "Er is geen verschil: allebei is het je loon in euro's"
+   ],
+   "Reëel inkomen laat zien wat je er écht van kunt kopen."
+  ],
+  [
+   "1.2",
+   "Wat is prijscompensatie?",
+   [
+    "Een loonsverhoging om de inflatie te compenseren",
+    "Korting op producten in de uitverkoop",
+    "Geld terug als een product kapotgaat",
+    "Een extra belasting op hogere prijzen"
+   ],
+   "Zo houden werknemers hun koopkracht."
+  ],
+  [
+   "1.3",
+   "Wat is welvaart?",
+   [
+    "Hoe goed je met je middelen in je behoeften kunt voorzien",
+    "Hoe gelukkig en tevreden je je meestal voelt",
+    "Hoeveel goede vrienden je om je heen hebt",
+    "Hoe gezond je bent en hoe vaak je sport"
+   ],
+   "Welvaart gaat over je middelen: wat kun je kopen en gebruiken?"
+  ],
+  [
+   "1.3",
+   "Wat is welzijn?",
+   [
+    "De brede kwaliteit van je leven, zoals gezondheid en geluk",
+    "Hoeveel geld je met je werk elke maand verdient",
+    "Hoeveel spullen en apparaten je in huis hebt staan",
+    "Het BBP van een land gedeeld door het aantal inwoners"
+   ],
+   "Welzijn is breder dan geld: gezondheid, vrijheid, vrienden, veiligheid."
+  ],
+  [
+   "1.3",
+   "Wat hoort vooral bij welzijn?",
+   [
+    "Je gelukkig en veilig voelen",
+    "Een hoger loon krijgen",
+    "Een grotere auto kopen",
+    "Meer spullen in huis halen"
+   ],
+   "Geluk en veiligheid zijn niet te koop, maar wel belangrijk voor je levenskwaliteit."
+  ],
+  [
+   "1.3",
+   "Wanneer noem je een goed in de economie schaars?",
+   [
+    "Als er productiemiddelen nodig zijn om het te maken",
+    "Als het goed duur is en niet iedereen het kan betalen",
+    "Als bijna niemand het goed wil hebben of gebruiken",
+    "Als het goed alleen in het buitenland te koop is"
+   ],
+   "Ook goedkope dingen zijn schaars: er is arbeid, kapitaal of natuur voor nodig."
+  ],
+  [
+   "1.3",
+   "Welk goed is een vrij goed?",
+   [
+    "Lucht om in te ademen",
+    "Water uit de kraan",
+    "Een appel van de markt",
+    "Een rit met de bus"
+   ],
+   "Lucht is er vanzelf en in overvloed. Voor kraanwater zijn wel productiemiddelen nodig."
+  ],
+  [
+   "1.3",
+   "Is een gratis krant een schaars goed?",
+   [
+    "Ja, want er zijn productiemiddelen nodig om hem te maken",
+    "Nee, want de krant is gratis, dus er is geen schaarste",
+    "Nee, want er liggen er altijd genoeg op het station",
+    "Alleen als alle kranten op het station al op zijn"
+   ],
+   "Schaars gaat niet over de prijs, maar over de moeite die het kost om iets te maken."
+  ],
+  [
+   "1.3",
+   "Waarom moet je prioriteiten stellen?",
+   [
+    "Omdat je middelen, zoals geld en tijd, beperkt zijn",
+    "Omdat de overheid dat bij de belastingaangifte verplicht",
+    "Omdat bijna alles in Nederland gratis is te krijgen",
+    "Omdat je maar weinig behoeften hebt om te vervullen"
+   ],
+   "Je kunt niet in al je behoeften voorzien, dus je kiest wat het belangrijkst is."
+  ],
+  [
+   "1.3",
+   "Wat is het BBP?",
+   [
+    "De totale waarde van alle goederen en diensten die een land in een jaar maakt",
+    "Het totale bedrag aan belastingen dat de overheid in een jaar ontvangt",
+    "Het geld dat de overheid in een jaar bij banken en beleggers leent",
+    "De waarde van alle huizen en gebouwen die in een land staan"
+   ],
+   "BBP = Bruto Binnenlands Product."
+  ],
+  [
+   "1.3",
+   "Een land heeft een BBP van €900 miljard en 18 miljoen inwoners. Wat is het BBP per inwoner?",
+   [
+    "€50.000",
+    "€5.000",
+    "€500.000",
+    "€16.200"
+   ],
+   "€900.000.000.000 : 18.000.000 = €50.000."
+  ],
+  [
+   "1.3",
+   "Waarom zegt het BBP per inwoner niet alles over hoe goed mensen leven?",
+   [
+    "Het zegt niets over welzijn, zoals gezondheid en vrijheid",
+    "Het BBP wordt altijd veel te laag berekend door het CBS",
+    "Het BBP telt alleen de prijzen van producten in de winkel",
+    "Het BBP telt alleen de uitkeringen die mensen ontvangen"
+   ],
+   "Een rijk land kan toch ongezond, onveilig of ongelijk zijn."
+  ],
+  [
+   "1.3",
+   "Welke voorziening is een collectieve voorziening?",
+   [
+    "Een dijk",
+    "Een eigen auto",
+    "Een spelcomputer",
+    "Een streamingabonnement"
+   ],
+   "Collectieve voorzieningen regelt de overheid voor iedereen."
+  ],
+  [
+   "1.3",
+   "Wat is het indexcijfer van het basisjaar?",
+   [
+    "100",
+    "0",
+    "1",
+    "10"
+   ],
+   "Het basisjaar is het vergelijkingspunt en krijgt altijd 100."
+  ],
+  [
+   "1.3",
+   "Het indexcijfer van een product is 112 (basisjaar = 100). Wat betekent dit?",
+   [
+    "De prijs is 12% hoger dan in het basisjaar",
+    "De prijs is nu €112",
+    "De prijs is 112% gestegen",
+    "De prijs is 12% gedaald"
+   ],
+   "112 − 100 = 12, dus 12% hoger."
+  ],
+  [
+   "1.3",
+   "Een telefoon kostte in het basisjaar €460 en nu €370. Wat is het indexcijfer?",
+   [
+    "80,4",
+    "124,3",
+    "19,6",
+    "90,0"
+   ],
+   "370 : 460 × 100 = 80,4. Onder de 100, dus een daling van 19,6%."
+  ],
+  [
+   "1.3",
+   "Het indexcijfer van de huur gaat van 100 naar 104,5. Met hoeveel procent is de huur gestegen?",
+   [
+    "4,5%",
+    "104,5%",
+    "0,45%",
+    "45%"
+   ],
+   "104,5 − 100 = 4,5%."
+  ],
+  [
+   "1.3",
+   "Benzine kost nu €1,69. Het indexcijfer is 176,6 (2015 = 100). Hoe bereken je de prijs in 2015?",
+   [
+    "1,69 : 176,6 × 100",
+    "1,69 × 176,6 : 100",
+    "176,6 − 1,69",
+    "1,69 × 1,766 × 100"
+   ],
+   "Terugrekenen: prijs : indexcijfer × 100 = €0,96."
+  ],
+  [
+   "1.3",
+   "Waarom gebruiken economen indexcijfers?",
+   [
+    "Je kunt veranderingen ten opzichte van een basisjaar makkelijk vergelijken",
+    "Indexcijfers zijn altijd precies gelijk aan de prijs in euro's",
+    "Indexcijfers laten alleen zien wanneer prijzen dalen",
+    "Indexcijfers vervangen de euro als betaalmiddel in de winkel"
+   ],
+   "Met indexcijfers zie je in één oogopslag hoeveel procent iets is veranderd."
+  ],
+  [
+   "1.4",
+   "Wat is inflatie?",
+   [
+    "Een stijging van het algemeen prijspeil",
+    "Een daling van alle lonen in een land",
+    "Een stijging van de rente bij de bank",
+    "Een daling van het algemeen prijspeil"
+   ],
+   "Bij inflatie wordt alles gemiddeld duurder."
+  ],
+  [
+   "1.4",
+   "Wat is deflatie?",
+   [
+    "Een daling van het algemeen prijspeil",
+    "Een stijging van het algemeen prijspeil",
+    "Een stijging van de lonen van werknemers",
+    "Een daling van het aantal werklozen"
+   ],
+   "Bij deflatie dalen de prijzen gemiddeld."
+  ],
+  [
+   "1.4",
+   "Waarom is deflatie slecht voor de economie?",
+   [
+    "Mensen stellen aankopen uit, omdat het later goedkoper is",
+    "Alles wordt steeds duurder, dus mensen kunnen minder kopen",
+    "Mensen gaan juist veel meer uitgeven dan ze eigenlijk hebben",
+    "Banken verdienen te veel aan de rente op leningen"
+   ],
+   "Als iedereen wacht met kopen, verkopen bedrijven minder en gaan er banen verloren."
+  ],
+  [
+   "1.4",
+   "Wat is een mogelijke oorzaak van inflatie?",
+   [
+    "Hogere grondstofprijzen, zoals olie",
+    "Een daling van de lonen van werknemers",
+    "Minder vraag van consumenten in winkels",
+    "Een lagere btw op alle producten"
+   ],
+   "Duurdere grondstoffen maken producten duurder."
+  ],
+  [
+   "1.4",
+   "Hoe kan een hogere btw voor inflatie zorgen?",
+   [
+    "Producten worden direct duurder in de winkel",
+    "De lonen van werknemers gaan direct omlaag",
+    "De rente op spaargeld en leningen daalt",
+    "Er komt minder geld in omloop in de economie"
+   ],
+   "De btw zit in de prijs, dus een hogere btw maakt alles meteen duurder."
+  ],
+  [
+   "1.4",
+   "Wat is koopkracht?",
+   [
+    "De hoeveelheid goederen en diensten die je met je inkomen kunt kopen",
+    "Het bedrag dat op je spaarrekening bij de bank staat",
+    "Je brutoloon voordat er belasting en premies af gaan",
+    "De prijs die je in de winkel voor een product betaalt"
+   ],
+   "Je koopkracht hangt af van je inkomen én van de prijzen."
+  ],
+  [
+   "1.4",
+   "Je loon stijgt met 2% en de inflatie is 3%. Wat gebeurt er met je koopkracht?",
+   [
+    "Die daalt met ongeveer 1%",
+    "Die stijgt met ongeveer 1%",
+    "Die stijgt met ongeveer 5%",
+    "Die blijft ongeveer gelijk"
+   ],
+   "2% − 3% = −1%."
+  ],
+  [
+   "1.4",
+   "Je loon stijgt met 4,2% en de prijzen stijgen met 2,7%. Wat is je reële loonstijging?",
+   [
+    "1,5%",
+    "6,9%",
+    "−1,5%",
+    "2,7%"
+   ],
+   "Reëel = nominaal − inflatie: 4,2% − 2,7% = 1,5%."
+  ],
+  [
+   "1.4",
+   "Werknemers krijgen 3% prijscompensatie en de inflatie is ook 3%. Wat gebeurt er met hun koopkracht?",
+   [
+    "Die blijft ongeveer gelijk",
+    "Die stijgt met ongeveer 3%",
+    "Die daalt met ongeveer 3%",
+    "Die stijgt met ongeveer 6%"
+   ],
+   "De loonstijging is precies even groot als de prijsstijging."
+  ],
+  [
+   "1.4",
+   "Waarom willen vakbonden prijscompensatie?",
+   [
+    "Zodat de koopkracht van werknemers niet daalt",
+    "Zodat bedrijven meer winst kunnen maken",
+    "Zodat de prijzen in de winkels dalen",
+    "Zodat de rente op spaargeld stijgt"
+   ],
+   "Zonder prijscompensatie kunnen werknemers minder kopen van hun loon."
+  ],
+  [
+   "1.4",
+   "Wat is het gevaar van prijscompensatie voor de economie?",
+   [
+    "Er kan een loon-prijsspiraal ontstaan",
+    "De prijzen gaan daardoor flink dalen",
+    "De werkloosheid verdwijnt dan helemaal",
+    "De rente bij de bank wordt dan nul"
+   ],
+   "Hogere lonen maken producten duurder, waardoor er weer hogere lonen worden geëist."
+  ],
+  [
+   "1.4",
+   "Hoe ontstaat een loon-prijsspiraal?",
+   [
+    "Prijzen stijgen → hogere looneisen → hogere kosten → prijzen stijgen weer",
+    "Lonen dalen → prijzen dalen → lonen dalen nog verder → prijzen dalen weer",
+    "Rente stijgt → mensen sparen meer → er wordt minder gekocht → prijzen dalen",
+    "Belasting daalt → lonen dalen → mensen kopen minder → prijzen stijgen toch"
+   ],
+   "Een vicieuze cirkel: lonen en prijzen jagen elkaar op."
+  ],
+  [
+   "1.4",
+   "Wat is het CPI?",
+   [
+    "Een indexcijfer dat meet hoeveel de prijzen gemiddeld stijgen",
+    "De rente die de Europese Centrale Bank aan banken vraagt",
+    "Het gemiddelde inkomen van alle werknemers in Nederland",
+    "De belasting die je bij elke aankoop over producten betaalt"
+   ],
+   "CPI = consumentenprijsindexcijfer, de graadmeter voor inflatie."
+  ],
+  [
+   "1.4",
+   "Wie berekent het CPI in Nederland?",
+   [
+    "Het CBS",
+    "De ECB",
+    "Het Nibud",
+    "De Belastingdienst"
+   ],
+   "Het Centraal Bureau voor de Statistiek koopt al jaren dezelfde spullen om de prijzen te vergelijken."
+  ],
+  [
+   "1.4",
+   "Waarom werkt het CBS met wegingsfactoren?",
+   [
+    "Omdat je aan sommige producten meer uitgeeft dan aan andere",
+    "Omdat alle producten voor huishoudens even belangrijk zijn",
+    "Omdat zware producten altijd duurder zijn dan lichte",
+    "Omdat de ECB dat verplicht voor alle landen in Europa"
+   ],
+   "Huur weegt zwaarder mee dan kauwgom, omdat je er veel meer aan uitgeeft."
+  ],
+  [
+   "1.4",
+   "Wat is een ongewogen indexcijfer?",
+   [
+    "Een indexcijfer waarbij alle producten even zwaar meetellen",
+    "Een indexcijfer waarbij geen basisjaar is gekozen",
+    "Een indexcijfer dat altijd precies op 0 uitkomt",
+    "Een indexcijfer waarin alleen voedsel wordt meegeteld"
+   ],
+   "Bij een ongewogen indexcijfer zijn alle producten even belangrijk."
+  ],
+  [
+   "1.4",
+   "Waarom zegt een loonstijging van 5% niet alles over je koopkracht?",
+   [
+    "Je moet ook naar de inflatie kijken",
+    "Belastingen tellen bij koopkracht nooit mee",
+    "Een loonstijging is eigenlijk altijd een daling",
+    "Lonen stijgen in werkelijkheid nooit echt"
+   ],
+   "Stijgen de prijzen met 6%, dan daalt je koopkracht ondanks de loonstijging."
+  ],
+  [
+   "2.1",
+   "Welke organisatie geeft voorlichting over omgaan met geld?",
+   [
+    "Het Nibud",
+    "Het CBS",
+    "De ECB",
+    "De vakbond"
+   ],
+   "Het Nationaal Instituut voor Budgetvoorlichting."
+  ],
+  [
+   "2.1",
+   "Wat is een vaste last?",
+   [
+    "Een uitgave die je met vaste regelmaat moet betalen",
+    "Een eenmalige grote aankoop, zoals een laptop",
+    "Geld dat je elke maand op je spaarrekening zet",
+    "Een uitgave die je af en toe in de supermarkt doet"
+   ],
+   "Bijvoorbeeld huur, abonnementen en contributie."
+  ],
+  [
+   "2.1",
+   "Welke uitgave is een dagelijkse uitgave?",
+   [
+    "Boodschappen in de supermarkt",
+    "De huur van je kamer",
+    "Een nieuwe bank voor de kamer",
+    "Je sportcontributie per maand"
+   ],
+   "Dagelijkse uitgaven zijn alledaagse, huishoudelijke uitgaven."
+  ],
+  [
+   "2.1",
+   "Welke uitgave is een incidentele uitgave?",
+   [
+    "Een nieuwe laptop",
+    "Je telefoonabonnement",
+    "Brood en melk",
+    "Huur"
+   ],
+   "Incidentele uitgaven zijn grotere uitgaven die je niet vaak doet."
+  ],
+  [
+   "2.1",
+   "Je betaalt elke maand contributie voor je sportclub. Wat voor uitgave is dit?",
+   [
+    "Vaste last",
+    "Dagelijkse uitgave",
+    "Incidentele uitgave",
+    "Reservering"
+   ],
+   "Je betaalt het met vaste regelmaat."
+  ],
+  [
+   "2.1",
+   "Wat is een budgetplan?",
+   [
+    "Een overzicht van je verwachte inkomsten en uitgaven",
+    "Een lening die je bij de bank afsluit voor iets duurs",
+    "Een lijst met al je spaarmotieven voor dit jaar",
+    "Een bankafschrift met je betalingen van vorige maand"
+   ],
+   "Een budgetplan heet ook wel een begroting."
+  ],
+  [
+   "2.1",
+   "Wanneer is je begroting in balans?",
+   [
+    "Als je inkomsten en uitgaven gelijk zijn",
+    "Als je meer uitgeeft dan je verdient",
+    "Als je geen vaste lasten hebt",
+    "Als je rood staat"
+   ],
+   "In balans: inkomsten = uitgaven."
+  ],
+  [
+   "2.1",
+   "Je begroting laat een tekort zien. Wat is verstandig?",
+   [
+    "Uitgaven verlagen of meer inkomsten zoeken",
+    "Meer uitgeven",
+    "Niets doen, het lost zich vanzelf op",
+    "Je boodschappen met een doorlopend krediet betalen"
+   ],
+   "Een tekort los je op door minder uit te geven of meer te verdienen."
+  ],
+  [
+   "2.1",
+   "Hoe reken je een weekbedrag om naar een maandbedrag?",
+   [
+    "× 52 : 12",
+    "× 4",
+    "× 12 : 52",
+    ": 4"
+   ],
+   "Een jaar heeft 52 weken en 12 maanden."
+  ],
+  [
+   "2.1",
+   "Je verdient €45 per week met je bijbaan. Hoeveel is dat per maand?",
+   [
+    "€195",
+    "€180",
+    "€540",
+    "€10,38"
+   ],
+   "€45 × 52 : 12 = €195."
+  ],
+  [
+   "2.1",
+   "Je telefoonabonnement kost €26 per maand. Hoeveel is dat per week?",
+   [
+    "€6",
+    "€6,50",
+    "€104",
+    "€312"
+   ],
+   "€26 × 12 : 52 = €6."
+  ],
+  [
+   "2.1",
+   "Waarom reken je niet met 4 weken per maand?",
+   [
+    "Een maand is gemiddeld iets langer dan 4 weken",
+    "Omdat rekenen met 4 weken altijd duurder uitvalt",
+    "Omdat banken verplichten dat je met dagen rekent",
+    "Een maand heeft altijd precies 4 weken, dus dat mag"
+   ],
+   "52 : 12 = 4,33 weken per maand."
+  ],
+  [
+   "2.1",
+   "Wat is reserveren?",
+   [
+    "Elke maand geld opzij zetten voor een grote, incidentele uitgave",
+    "Een tafel boeken in een restaurant voor een etentje op zaterdag",
+    "Rood staan bij de bank omdat je meer uitgeeft dan je verdient",
+    "Een lening afsluiten om een grote aankoop meteen te betalen"
+   ],
+   "Zo is het geld er als de grote rekening komt."
+  ],
+  [
+   "2.1",
+   "Je wilt over 10 maanden €650 hebben voor een vakantie. Hoeveel moet je per maand reserveren?",
+   [
+    "€65",
+    "€6,50",
+    "€650",
+    "€60"
+   ],
+   "€650 : 10 = €65 per maand."
+  ],
+  [
+   "2.1",
+   "Hoe kunnen jouw uitgaven invloed hebben op anderen?",
+   [
+    "Jouw geld gaat naar een producent, die goed of slecht voor mens en milieu kan zijn",
+    "Uitgaven hebben nooit invloed op anderen, alleen op je eigen portemonnee",
+    "Alleen de overheid heeft invloed op mens en milieu, consumenten niet",
+    "Alleen omdat je btw betaalt, die de overheid aan anderen uitgeeft"
+   ],
+   "Door bewust te kiezen bij wie je koopt, bepaal je mee wie er aan jou verdient."
+  ],
+  [
+   "2.1",
+   "Waarom reken je in een budgetplan alle bedragen om naar dezelfde periode?",
+   [
+    "Dan kun je inkomsten en uitgaven goed vergelijken",
+    "Dan betaal je over je inkomen minder belasting",
+    "Dan krijg je van de bank meer rente op je spaargeld",
+    "Dat is verplicht van het Nibud voor elk huishouden"
+   ],
+   "Bijvoorbeeld alles per maand."
+  ],
+  [
+   "2.2",
+   "Welke drie spaarmotieven zijn er?",
+   [
+    "Sparen voor een doel, uit voorzorg en voor de rente",
+    "Sparen voor de bank, de overheid en de rente",
+    "Sparen voor een lening, huur en belasting",
+    "Sparen voor een doel, voor de ECB en voor het CBS"
+   ],
+   "Dit zijn de drie redenen om te sparen."
+  ],
+  [
+   "2.2",
+   "Tom zet elke maand geld opzij voor het geval zijn fiets kapotgaat. Welk spaarmotief is dit?",
+   [
+    "Sparen uit voorzorg",
+    "Sparen voor een doel",
+    "Sparen voor de rente",
+    "Beleggen"
+   ],
+   "Hij bouwt een buffer op voor onverwachte uitgaven."
+  ],
+  [
+   "2.2",
+   "Esra spaart voor een scooter. Welk spaarmotief is dit?",
+   [
+    "Sparen voor een doel",
+    "Sparen uit voorzorg",
+    "Sparen voor de rente",
+    "Reserveren voor vaste lasten"
+   ],
+   "Ze legt telkens geld opzij om later iets duurs te kopen."
+  ],
+  [
+   "2.2",
+   "Waarom sparen weinig mensen voor de rente als de rente heel laag is?",
+   [
+    "Het levert dan bijna niets op",
+    "Dan mag je niet sparen",
+    "Dan wordt je spaargeld meer waard",
+    "Dan betaal je rente aan de bank"
+   ],
+   "Lage rente = weinig opbrengst."
+  ],
+  [
+   "2.2",
+   "Wat is enkelvoudige rente?",
+   [
+    "De rente wordt elk jaar apart uitgekeerd; je spaarbedrag blijft gelijk",
+    "Je krijgt elk jaar rente over je spaargeld én over de rente van vorig jaar",
+    "Je betaalt elk jaar rente aan de bank over het geld dat je hebt geleend",
+    "De rente wordt maar één keer per tien jaar op je rekening uitgekeerd"
+   ],
+   "Je krijgt dus elk jaar hetzelfde rentebedrag."
+  ],
+  [
+   "2.2",
+   "Je zet €2.000 vast tegen 3% enkelvoudige rente voor 4 jaar. Hoeveel rente krijg je in totaal?",
+   [
+    "€240",
+    "€60",
+    "€251,02",
+    "€2.240"
+   ],
+   "3 : 100 × 2.000 × 4 = €240."
+  ],
+  [
+   "2.2",
+   "Wat is samengestelde rente?",
+   [
+    "Rente op rente: ook over de bijgeschreven rente krijg je rente",
+    "Rente die je elk jaar apart uitgekeerd krijgt op een andere rekening",
+    "Rente die je aan de bank betaalt over een lening voor een auto",
+    "Rente die nooit verandert, hoe lang je geld ook op de rekening staat"
+   ],
+   "De rente wordt bijgeschreven en groeit daarna mee."
+  ],
+  [
+   "2.2",
+   "Wat is de groeifactor bij 2,5% rente?",
+   [
+    "1,025",
+    "1,25",
+    "0,025",
+    "2,5"
+   ],
+   "1 + 2,5 : 100 = 1,025."
+  ],
+  [
+   "2.2",
+   "€1.000 staat 2 jaar op een rekening met 5% samengestelde rente. Wat is het eindbedrag?",
+   [
+    "€1.102,50",
+    "€1.100,00",
+    "€1.050,00",
+    "€1.010,00"
+   ],
+   "€1.000 × 1,05² = €1.102,50."
+  ],
+  [
+   "2.2",
+   "Zelfde bedrag, zelfde rente, 10 jaar. Bij welke soort rente heb je aan het eind het meest?",
+   [
+    "Samengestelde rente",
+    "Enkelvoudige rente",
+    "Allebei evenveel",
+    "Dat kun je niet zeggen"
+   ],
+   "Bij samengestelde rente krijg je ook rente over eerder ontvangen rente."
+  ],
+  [
+   "2.2",
+   "Wat is een spaardeposito?",
+   [
+    "Je geld staat een afgesproken tijd vast tegen een vaste rente",
+    "Een rekening waar je elke dag zonder kosten geld van kunt halen",
+    "Een lening die je bij de bank afsluit om een huis te kopen",
+    "Een belegging in aandelen van bedrijven op de beurs"
+   ],
+   "Vaak krijg je er een iets hogere rente voor."
+  ],
+  [
+   "2.2",
+   "Wat is een nadeel van een spaardeposito?",
+   [
+    "Je kunt niet zomaar bij je geld",
+    "Je krijgt nooit rente",
+    "De rente verandert elke dag",
+    "Je betaalt kredietkosten"
+   ],
+   "Je geld staat vast tot het einde van de looptijd."
+  ],
+  [
+   "2.2",
+   "De bank geeft 2% rente en de inflatie is 3%. Wat is de reële rente?",
+   [
+    "−1%",
+    "1%",
+    "5%",
+    "6%"
+   ],
+   "Reële rente = nominale rente − inflatie = 2% − 3% = −1%."
+  ],
+  [
+   "2.2",
+   "Wat betekent een negatieve reële rente voor je spaargeld?",
+   [
+    "Je kunt er later minder van kopen",
+    "Je kunt er later meer van kopen",
+    "Je spaargeld verdwijnt van je rekening",
+    "Je moet rente betalen aan de bank"
+   ],
+   "Het bedrag op je rekening groeit, maar minder snel dan de prijzen."
+  ],
+  [
+   "2.2",
+   "De inflatie is 4% en je krijgt 1,5% rente. Wat gebeurt er met de koopkracht van je spaargeld?",
+   [
+    "Die daalt",
+    "Die stijgt",
+    "Die blijft gelijk",
+    "Die verdubbelt"
+   ],
+   "1,5% − 4% = −2,5% reële rente."
+  ],
+  [
+   "2.2",
+   "Wat is beleggen?",
+   [
+    "Iets kopen waarvan je verwacht dat het meer waard wordt",
+    "Geld op je spaarrekening zetten tegen een vaste rente",
+    "Geld lenen bij de bank om iets duurs te kunnen kopen",
+    "Je huur betalen aan de verhuurder aan het begin van de maand"
+   ],
+   "Bijvoorbeeld aandelen, obligaties, goud of gebouwen."
+  ],
+  [
+   "2.2",
+   "Wat is een voordeel van beleggen ten opzichte van sparen?",
+   [
+    "Het rendement kan hoger zijn",
+    "Je loopt geen enkel risico",
+    "Je krijgt altijd een vaste rente",
+    "Je geld wordt altijd meer waard"
+   ],
+   "Meer kans op opbrengst, maar ook meer risico."
+  ],
+  [
+   "2.2",
+   "Wat is een nadeel van beleggen?",
+   [
+    "Je kunt geld verliezen als de koers daalt",
+    "Je krijgt bij beleggen nooit enig rendement",
+    "Beleggen is door de bank voor iedereen verboden",
+    "Je moet altijd minstens 30 jaar wachten"
+   ],
+   "Het rendement kan ook lager zijn dan de rente op een spaarrekening, of zelfs negatief."
+  ],
+  [
+   "2.2",
+   "Je koopt een aandeel voor €40 en verkoopt het voor €46. Wat is je rendement?",
+   [
+    "15%",
+    "6%",
+    "13%",
+    "46%"
+   ],
+   "(46 − 40) : 40 × 100 = 15%."
+  ],
+  [
+   "2.2",
+   "Wat doe je als je een obligatie koopt?",
+   [
+    "Je leent geld uit aan een bedrijf of de overheid tegen een vaste rente",
+    "Je koopt een stukje van een bedrijf en krijgt dividend als het winst maakt",
+    "Je sluit een hypotheek af om een woning te kunnen kopen",
+    "Je koopt goud dat bij de bank in een kluis wordt bewaard"
+   ],
+   "Over een obligatie krijg je een afgesproken vaste rente."
+  ],
+  [
+   "2.3",
+   "Wat is GEEN leenmotief?",
+   [
+    "Je wilt rente ontvangen",
+    "Een tijdelijk geldtekort overbruggen",
+    "Een dure aankoop niet willen uitstellen",
+    "Een huis kopen"
+   ],
+   "Rente ontvangen is een reden om te sparen, niet om te lenen."
+  ],
+  [
+   "2.3",
+   "Wat zijn kredietkosten?",
+   [
+    "Alles wat je méér terugbetaalt dan je hebt geleend",
+    "Het bedrag dat je in het begin bij de bank leent",
+    "De rente die je over je spaargeld van de bank krijgt",
+    "De kosten die je elk jaar voor je bankpas betaalt"
+   ],
+   "Vooral rente, soms ook administratiekosten."
+  ],
+  [
+   "2.3",
+   "Hoe bereken je de kredietkosten?",
+   [
+    "Termijnbedrag × aantal termijnen − krediet",
+    "Krediet × rente × aantal termijnen",
+    "Krediet : aantal termijnen − rente",
+    "Termijnbedrag + krediet − aflossing"
+   ],
+   "Eerst bereken je wat je in totaal terugbetaalt, daarna haal je het geleende bedrag eraf."
+  ],
+  [
+   "2.3",
+   "Je leent €3.000 en betaalt 24 termijnen van €140. Wat zijn de kredietkosten?",
+   [
+    "€360",
+    "€3.360",
+    "€140",
+    "€2.860"
+   ],
+   "€140 × 24 = €3.360. €3.360 − €3.000 = €360."
+  ],
+  [
+   "2.3",
+   "Je leent €5.000 en betaalt in totaal €5.600 terug. Hoeveel procent van het geleende bedrag zijn de kredietkosten?",
+   [
+    "12%",
+    "6%",
+    "112%",
+    "60%"
+   ],
+   "€600 : €5.000 × 100 = 12%."
+  ],
+  [
+   "2.3",
+   "Waarom moet de looptijd van een lening korter zijn dan de levensduur van wat je koopt?",
+   [
+    "Anders betaal je nog af terwijl het product al kapot is",
+    "Anders is de rente lager en verdient de bank er te weinig aan",
+    "Dat is goedkoper voor de bank, die dan minder kosten maakt",
+    "Omdat de ECB dat voor alle leningen in Europa verplicht"
+   ],
+   "Je wilt geen schuld hebben voor iets dat je niet meer hebt."
+  ],
+  [
+   "2.3",
+   "Wat is een consumptief krediet?",
+   [
+    "Een lening om een consumptiegoed te kopen",
+    "Een lening voor de aankoop van een huis",
+    "Spaargeld dat je opzijzet voor later",
+    "Een belegging in aandelen of obligaties"
+   ],
+   "Bijvoorbeeld een lening voor een keuken of een caravan."
+  ],
+  [
+   "2.3",
+   "Welke kredietvorm heeft een vaste looptijd, een vaste rente en vaste termijnen?",
+   [
+    "Persoonlijke lening",
+    "Doorlopend krediet",
+    "Salariskrediet",
+    "Private lease"
+   ],
+   "Bij een persoonlijke lening ligt alles vooraf vast."
+  ],
+  [
+   "2.3",
+   "Bij welke kredietvorm kun je tot een grens steeds opnieuw geld opnemen?",
+   [
+    "Doorlopend krediet",
+    "Persoonlijke lening",
+    "Hypotheek",
+    "Koop op afbetaling"
+   ],
+   "De rente van een doorlopend krediet is variabel."
+  ],
+  [
+   "2.3",
+   "Wat is een salariskrediet?",
+   [
+    "Rood mogen staan op je betaalrekening",
+    "Een lening voor de aankoop van een huis",
+    "Een spaarrekening bij je werkgever",
+    "Elke maand een vast deel van je loon sparen"
+   ],
+   "Hoeveel je rood mag staan, hangt af van je salaris."
+  ],
+  [
+   "2.3",
+   "Waarom is rood staan duur?",
+   [
+    "De rente is hoog",
+    "Er is geen rente",
+    "De bank geeft je korting",
+    "Je hoeft niet af te lossen"
+   ],
+   "Over een debetsaldo betaal je een hoge rente."
+  ],
+  [
+   "2.3",
+   "Wat is koop op afbetaling?",
+   [
+    "Je koopt iets bij de winkel en betaalt in termijnen",
+    "Je huurt een auto per maand en levert hem daarna in",
+    "Je spaart eerst het hele bedrag en koopt het daarna",
+    "Je betaalt het hele bedrag meteen contant aan de kassa"
+   ],
+   "De leverancier geeft je krediet. De rente is vaak hoog."
+  ],
+  [
+   "2.3",
+   "Wat is waar over private lease?",
+   [
+    "Je betaalt een vast bedrag per maand, maar de auto wordt nooit van jou",
+    "De auto is na een jaar betalen helemaal van jou geworden",
+    "Je betaalt zelf het onderhoud en de reparaties van de auto",
+    "Het is een soort hypotheek, maar dan voor een auto"
+   ],
+   "Onderhoud, belasting en verzekering zitten in het maandbedrag."
+  ],
+  [
+   "2.3",
+   "Wat is een hypothecaire lening?",
+   [
+    "Een lening voor de aankoop van een woning",
+    "Een lening voor de aankoop van een auto",
+    "Een doorlopend krediet bij een winkel",
+    "Een studieschuld bij DUO na je opleiding"
+   ],
+   "Een hypotheek loopt meestal 30 jaar."
+  ],
+  [
+   "2.3",
+   "Wat is het onderpand bij een hypotheek?",
+   [
+    "Het huis",
+    "Je auto",
+    "Je spaargeld",
+    "Je loon"
+   ],
+   "Het huis is de zekerheid voor de bank."
+  ],
+  [
+   "2.3",
+   "Wat mag de bank doen als je je hypotheek niet meer betaalt?",
+   [
+    "Het huis verkopen",
+    "Je loon verdubbelen",
+    "De rente op nul zetten",
+    "Niets"
+   ],
+   "Daarom is het huis het onderpand."
+  ],
+  [
+   "2.3",
+   "Wat kan er gebeuren als je een schuld niet op tijd terugbetaalt?",
+   [
+    "Er komen extra kosten bij en er kan beslag worden gelegd",
+    "De schuld verdwijnt na een paar maanden vanzelf",
+    "De rente die je over de schuld betaalt wordt lager",
+    "Je krijgt een deel van het geleende geld terug"
+   ],
+   "In ernstige gevallen kan de rechter beslag leggen op je spullen."
+  ],
+  [
+   "2.4",
+   "Welke drie geldfuncties zijn er?",
+   [
+    "Ruilmiddel, spaarmiddel en rekenmiddel",
+    "Ruilmiddel, leenmiddel en betaalmiddel",
+    "Spaarmiddel, beleggingsmiddel en rekenmiddel",
+    "Productiemiddel, ruilmiddel en spaarmiddel"
+   ],
+   "Kopen, bewaren en de waarde uitdrukken."
+  ],
+  [
+   "2.4",
+   "Je koopt een broodje in de kantine. Welke geldfunctie gebruik je?",
+   [
+    "Ruilmiddel",
+    "Spaarmiddel",
+    "Rekenmiddel",
+    "Leenmiddel"
+   ],
+   "Je ruilt geld tegen een product."
+  ],
+  [
+   "2.4",
+   "Je zegt: “Die fiets is €400 waard.” Welke geldfunctie is dit?",
+   [
+    "Rekenmiddel",
+    "Ruilmiddel",
+    "Spaarmiddel",
+    "Betaalmiddel"
+   ],
+   "Je drukt de waarde van iets uit in geld."
+  ],
+  [
+   "2.4",
+   "Je zet je verjaardagsgeld op je spaarrekening voor later. Welke geldfunctie is dit?",
+   [
+    "Spaarmiddel",
+    "Ruilmiddel",
+    "Rekenmiddel",
+    "Leenmiddel"
+   ],
+   "Je bewaart het geld om later uit te geven."
+  ],
+  [
+   "2.4",
+   "Wat is chartaal geld?",
+   [
+    "Munten en bankbiljetten",
+    "Geld op je bankrekening",
+    "Een creditcard",
+    "Aandelen"
+   ],
+   "Chartaal geld kun je vastpakken."
+  ],
+  [
+   "2.4",
+   "Welke betaling is met giraal geld?",
+   [
+    "Betalen met iDEAL",
+    "Betalen met een briefje van €10",
+    "Muntjes in een automaat",
+    "Contant betalen op de markt"
+   ],
+   "Giraal geld staat op een rekening en is onzichtbaar."
+  ],
+  [
+   "2.4",
+   "Wat is een creditsaldo?",
+   [
+    "Je hebt geld tegoed op je rekening",
+    "Je staat rood op je rekening",
+    "Je hebt een lening bij de bank",
+    "Je hebt nog geen bankrekening"
+   ],
+   "Credit = positief saldo."
+  ],
+  [
+   "2.4",
+   "Wat is een debetsaldo?",
+   [
+    "Je staat rood (negatief saldo)",
+    "Je hebt geld tegoed op je rekening",
+    "Je hebt geld gespaard op de bank",
+    "Je hebt rente gekregen van de bank"
+   ],
+   "Over een debetsaldo betaal je hoge rente."
+  ],
+  [
+   "2.4",
+   "Je oude saldo is €320. Je ontvangt €150 en betaalt €205. Wat is je nieuwe saldo?",
+   [
+    "€265",
+    "€675",
+    "€375",
+    "−€265"
+   ],
+   "€320 + €150 − €205 = €265 (credit)."
+  ],
+  [
+   "2.4",
+   "Waar komt het aanbod van geld bij de bank vandaan?",
+   [
+    "Van spaarders",
+    "Van gezinnen en bedrijven die willen lenen",
+    "Van de Belastingdienst",
+    "Van winkels"
+   ],
+   "Spaarders zetten geld op de bank en krijgen daar rente voor."
+  ],
+  [
+   "2.4",
+   "Wie vragen geld bij de bank?",
+   [
+    "Gezinnen en bedrijven die willen lenen",
+    "Spaarders die rente willen",
+    "De ECB in Frankfurt",
+    "Het Nibud voor zijn adviezen"
+   ],
+   "Gezinnen lenen vooral voor consumptiegoederen, bedrijven om te investeren."
+  ],
+  [
+   "2.4",
+   "Waarom wordt rente ‘de prijs van geld’ genoemd?",
+   [
+    "Wie leent betaalt rente, wie spaart krijgt rente",
+    "Omdat geld altijd duur is om te maken en te drukken",
+    "Omdat de overheid elk jaar de prijs van geld vaststelt",
+    "Omdat munten van metaal zijn en metaal een prijs heeft"
+   ],
+   "Rente is de vergoeding voor het gebruik van geld."
+  ],
+  [
+   "2.4",
+   "Hoe verdient een bank geld aan sparen en lenen?",
+   [
+    "De rente op leningen is hoger dan de rente op spaargeld",
+    "De bank betaalt spaarders meer rente dan ze van leners ontvangt",
+    "De bank deelt gratis geld uit en krijgt daar later meer voor terug",
+    "De bank int belasting over het spaargeld van al haar klanten"
+   ],
+   "Het renteverschil is de winst van de bank."
+  ],
+  [
+   "2.4",
+   "Wat doet de ECB?",
+   [
+    "Ze bepaalt de basisrente voor de landen van de eurozone",
+    "Ze berekent elke maand het CPI voor Nederland",
+    "Ze geeft gezinnen advies over hun budgetplan",
+    "Ze verstrekt hypotheken aan gezinnen die een huis kopen"
+   ],
+   "Banken baseren hun eigen rente op de rente van de ECB."
+  ],
+  [
+   "2.4",
+   "De ECB verhoogt de rente. Wat is het meest waarschijnlijke gevolg?",
+   [
+    "Mensen gaan meer sparen en minder lenen, dus de bestedingen dalen",
+    "Mensen gaan minder sparen en meer lenen, dus de bestedingen stijgen",
+    "Lenen wordt goedkoper, dus mensen kopen meer huizen en auto's",
+    "De prijzen stijgen sneller, omdat er meer geld in omloop komt"
+   ],
+   "Hoge rente maakt sparen aantrekkelijk en lenen duur."
+  ],
+  [
+   "2.4",
+   "Waarom helpt een hogere rente tegen inflatie?",
+   [
+    "Er wordt minder geleend en besteed, dus de vraag naar producten daalt",
+    "De bank verlaagt zelf de prijzen van producten in de winkels",
+    "De lonen stijgen, zodat mensen de hogere prijzen kunnen betalen",
+    "Er komt meer geld in omloop, zodat de prijzen omlaag gaan"
+   ],
+   "Minder vraag remt de prijsstijgingen af."
+  ],
+  [
+   "2.4",
+   "Wat kan de ECB doen bij deflatie?",
+   [
+    "De rente verlagen, zodat lenen en besteden aantrekkelijker worden",
+    "De rente verhogen, zodat sparen aantrekkelijker wordt dan besteden",
+    "De prijzen van alle producten in de eurozone vastzetten",
+    "De lonen van werknemers in de eurozone verlagen"
+   ],
+   "Lagere rente moet de bestedingen weer op gang brengen."
+  ],
+  [
+   "2.4",
+   "Waarom vraagt een bank een hogere rente bij een risicovolle lening?",
+   [
+    "De kans dat het geld niet terugkomt is groter",
+    "Risicovolle leningen zijn kleiner, dus dat moet",
+    "De ECB verplicht banken om dat altijd te doen",
+    "Spaarders willen dat de bank veel risico neemt"
+   ],
+   "Meer risico = hogere prijs voor het geld."
+  ],
+  [
+   "2.4",
+   "Welke kosten heeft een bank?",
+   [
+    "Personeel, gebouwen en computersystemen",
+    "Alleen de rente die ze aan de ECB betaalt",
+    "Geen, want een bank heeft geen kosten",
+    "Alleen de btw over de leningen die ze geeft"
+   ],
+   "Daarom moet een bank genoeg verdienen aan het renteverschil en aan andere diensten."
+  ]
+ ],
+ "SORT": [
+  {
+   "a": "Inkomen uit arbeid",
+   "b": "Inkomen uit bezit",
+   "A": [
+    [
+     "👷",
+     "Loon van een bouwvakker"
+    ],
+    [
+     "🧑‍🍳",
+     "Salaris van een kok"
+    ],
+    [
+     "🛒",
+     "Loon van je bijbaan"
+    ],
+    [
+     "⏰",
+     "Geld voor overwerk"
+    ],
+    [
+     "💼",
+     "Winstdeel voor werknemers"
+    ]
+   ],
+   "B": [
+    [
+     "🏠",
+     "Huur van een appartement"
+    ],
+    [
+     "📈",
+     "Dividend op aandelen"
+    ],
+    [
+     "🌾",
+     "Pacht van landbouwgrond"
+    ],
+    [
+     "🏦",
+     "Rente op spaargeld"
+    ],
+    [
+     "🅿️",
+     "Verhuur van een garagebox"
+    ]
+   ]
+  },
+  {
+   "a": "Primair inkomen",
+   "b": "Overdrachtsinkomen",
+   "A": [
+    [
+     "💶",
+     "Loon"
+    ],
+    [
+     "🏪",
+     "Winst van je eigen winkel"
+    ],
+    [
+     "🏠",
+     "Huur van een kamer"
+    ],
+    [
+     "🏦",
+     "Rente"
+    ],
+    [
+     "📈",
+     "Dividend"
+    ]
+   ],
+   "B": [
+    [
+     "👛",
+     "Zakgeld"
+    ],
+    [
+     "👶",
+     "Kinderbijslag"
+    ],
+    [
+     "📄",
+     "WW-uitkering"
+    ],
+    [
+     "👵",
+     "AOW"
+    ],
+    [
+     "🩺",
+     "Zorgtoeslag"
+    ]
+   ]
+  },
+  {
+   "a": "Vaste last",
+   "b": "Incidentele uitgave",
+   "A": [
+    [
+     "🏠",
+     "Huur"
+    ],
+    [
+     "📱",
+     "Telefoonabonnement"
+    ],
+    [
+     "⚽",
+     "Sportcontributie"
+    ],
+    [
+     "🩺",
+     "Zorgverzekering"
+    ],
+    [
+     "📺",
+     "Streamingabonnement"
+    ],
+    [
+     "⚡",
+     "Energierekening"
+    ]
+   ],
+   "B": [
+    [
+     "🧺",
+     "Nieuwe wasmachine"
+    ],
+    [
+     "🏖️",
+     "Vakantie"
+    ],
+    [
+     "🚗",
+     "Rijbewijs halen"
+    ],
+    [
+     "🚲",
+     "Nieuwe fiets"
+    ],
+    [
+     "💻",
+     "Laptop"
+    ],
+    [
+     "🎉",
+     "Verjaardagsfeest"
+    ]
+   ]
+  },
+  {
+   "a": "Welvaart",
+   "b": "Welzijn",
+   "A": [
+    [
+     "💶",
+     "Een hoger loon"
+    ],
+    [
+     "🚗",
+     "Een nieuwe auto"
+    ],
+    [
+     "🏡",
+     "Een groter huis"
+    ],
+    [
+     "📱",
+     "Een nieuwe telefoon"
+    ],
+    [
+     "🛍️",
+     "Meer kunnen kopen"
+    ]
+   ],
+   "B": [
+    [
+     "💪",
+     "Een goede gezondheid"
+    ],
+    [
+     "🤝",
+     "Vriendschap"
+    ],
+    [
+     "🛡️",
+     "Je veilig voelen"
+    ],
+    [
+     "😊",
+     "Gelukkig zijn"
+    ],
+    [
+     "🗣️",
+     "Vrijheid van meningsuiting"
+    ]
+   ]
+  },
+  {
+   "a": "Schaars goed",
+   "b": "Vrij goed",
+   "A": [
+    [
+     "🚰",
+     "Kraanwater"
+    ],
+    [
+     "🍞",
+     "Brood"
+    ],
+    [
+     "🚲",
+     "Een fiets"
+    ],
+    [
+     "💇",
+     "Een knipbeurt"
+    ],
+    [
+     "📰",
+     "Een gratis krant"
+    ],
+    [
+     "💡",
+     "Elektriciteit"
+    ]
+   ],
+   "B": [
+    [
+     "🌬️",
+     "Lucht om in te ademen"
+    ],
+    [
+     "☀️",
+     "Zonlicht"
+    ],
+    [
+     "💨",
+     "Wind"
+    ],
+    [
+     "🌊",
+     "Zeewater in de oceaan"
+    ]
+   ]
+  },
+  {
+   "a": "Sparen",
+   "b": "Beleggen",
+   "A": [
+    [
+     "🏦",
+     "Spaarrekening"
+    ],
+    [
+     "🔒",
+     "Spaardeposito"
+    ],
+    [
+     "🛡️",
+     "Vaste rente, weinig risico"
+    ],
+    [
+     "🐷",
+     "Buffer voor noodgevallen"
+    ]
+   ],
+   "B": [
+    [
+     "📈",
+     "Aandelen kopen"
+    ],
+    [
+     "📜",
+     "Obligaties kopen"
+    ],
+    [
+     "🥇",
+     "Goud kopen"
+    ],
+    [
+     "🏢",
+     "Huis kopen om te verhuren"
+    ],
+    [
+     "🎢",
+     "Kans op hoger rendement, meer risico"
+    ]
+   ]
+  },
+  {
+   "a": "Chartaal geld",
+   "b": "Giraal geld",
+   "A": [
+    [
+     "💶",
+     "Briefje van €20"
+    ],
+    [
+     "🪙",
+     "Muntje van €2"
+    ],
+    [
+     "🛒",
+     "Contant betalen op de markt"
+    ],
+    [
+     "👛",
+     "Geld in je portemonnee"
+    ]
+   ],
+   "B": [
+    [
+     "💳",
+     "Pinnen"
+    ],
+    [
+     "🖥️",
+     "Betalen met iDEAL"
+    ],
+    [
+     "📱",
+     "Contactloos met je telefoon"
+    ],
+    [
+     "💸",
+     "Betaalverzoek"
+    ],
+    [
+     "🏦",
+     "Salaris op je rekening"
+    ]
+   ]
+  },
+  {
+   "a": "Koopkracht stijgt",
+   "b": "Koopkracht daalt",
+   "A": [
+    [
+     "📈",
+     "Loon +4%, inflatie 2%"
+    ],
+    [
+     "📈",
+     "Loon +3%, prijzen +1,5%"
+    ],
+    [
+     "🏷️",
+     "Prijzen dalen, loon gelijk"
+    ],
+    [
+     "📈",
+     "Loon +2,5%, inflatie 0,5%"
+    ]
+   ],
+   "B": [
+    [
+     "📉",
+     "Loon +1%, inflatie 3%"
+    ],
+    [
+     "📉",
+     "Loon gelijk, prijzen +2%"
+    ],
+    [
+     "📉",
+     "Loon +2,3%, inflatie 4,1%"
+    ],
+    [
+     "📉",
+     "Loon −1%, prijzen gelijk"
+    ]
+   ]
+  },
+  {
+   "a": "Persoonlijke lening",
+   "b": "Doorlopend krediet",
+   "A": [
+    [
+     "📅",
+     "Vaste looptijd"
+    ],
+    [
+     "🔒",
+     "Vaste rente"
+    ],
+    [
+     "🧾",
+     "Vaste maandtermijnen"
+    ],
+    [
+     "💰",
+     "Hele bedrag in één keer"
+    ]
+   ],
+   "B": [
+    [
+     "🔄",
+     "Variabele rente"
+    ],
+    [
+     "🔁",
+     "Steeds opnieuw opnemen"
+    ],
+    [
+     "🚧",
+     "Kredietlimiet"
+    ],
+    [
+     "🤸",
+     "Flexibel bijlenen"
+    ]
+   ]
+  },
+  {
+   "a": "Inflatie",
+   "b": "Deflatie",
+   "A": [
+    [
+     "⬆️",
+     "Prijzen stijgen"
+    ],
+    [
+     "🌀",
+     "Loon-prijsspiraal"
+    ],
+    [
+     "🛢️",
+     "Duurdere grondstoffen"
+    ],
+    [
+     "🏦",
+     "ECB verhoogt de rente"
+    ]
+   ],
+   "B": [
+    [
+     "⬇️",
+     "Prijzen dalen"
+    ],
+    [
+     "⏳",
+     "Mensen stellen aankopen uit"
+    ],
+    [
+     "🏦",
+     "ECB verlaagt de rente"
+    ],
+    [
+     "🏷️",
+     "Alles wordt goedkoper"
+    ]
+   ]
+  },
+  {
+   "a": "Rente omhoog",
+   "b": "Rente omlaag",
+   "A": [
+    [
+     "🐷",
+     "Meer sparen"
+    ],
+    [
+     "🚫",
+     "Minder lenen"
+    ],
+    [
+     "📉",
+     "Bestedingen dalen"
+    ],
+    [
+     "🏠",
+     "Hypotheek wordt duurder"
+    ]
+   ],
+   "B": [
+    [
+     "🛍️",
+     "Minder sparen, meer uitgeven"
+    ],
+    [
+     "💳",
+     "Meer lenen"
+    ],
+    [
+     "📈",
+     "Bestedingen stijgen"
+    ],
+    [
+     "🏠",
+     "Hypotheek wordt goedkoper"
+    ]
+   ]
+  }
+ ],
+ "MAT": {
+  "hv": [
+   "Herhalingsvragen 1.1 en 1.2",
+   "1nNEWLh4sh3HloEJPVcE6gKEzTsMZOonZ",
+   "13XbgOkdmB8_gTuNiRtmGqipOQfpsJw4u"
+  ],
+  "ot": [
+   "Oefentoets hoofdstuk 1",
+   "1YmyDrYaRoGzlWD2c2hxozvIiN60f5at7",
+   "1mTJMCWdLJgmAqesMiwK_yPQGFTSZiF71"
+  ],
+  "lz": [
+   "Opdracht Lorenzcurve",
+   "1MvG9cx1FKFbulKRqBkRaI0l3NwXcdyRe",
+   "12ji_cOyrx3EOslwBWytWQlUWLnvo6ZWL"
+  ],
+  "rt": [
+   "Oefenblad enkelvoudige en samengestelde rente",
+   "1fFDDtVlv2j6nweXsY2d_R0DSsTQdMRIh",
+   "1KnRr_8eqBoTZkBdxE6M2xPqp7JAdi9jo"
+  ]
+ },
+ "VERS": [
+  {
+   "n": 1,
+   "th": "Basis",
+   "rk": "Basis",
+   "min": 50,
+   "pts": 43,
+   "toets": "1eYELEIkgzdWZdB4MWAJLitZRwYwcwVPS",
+   "nk": "1hfqpJ49fCmHmnGDNycGoMoRU_XpbUdSa",
+   "meta": "16 meerkeuzevragen + 6 rekenopgaven"
+  },
+  {
+   "n": 2,
+   "th": "Verdieping",
+   "rk": "Basis",
+   "min": 50,
+   "pts": 43,
+   "toets": "1F7APmgTbqK78kjox8nRN29uavY20RNIV",
+   "nk": "1YqJvjasMchFJDnWEmb7F1uzYDiDFSMac",
+   "meta": "8 meerkeuzevragen + 4 open vragen + 6 rekenopgaven"
+  },
+  {
+   "n": 3,
+   "th": "Basis",
+   "rk": "Verdieping",
+   "min": 35,
+   "pts": 30,
+   "toets": "1GGQMWQNSVYjiiXkt0dCiiz0HU1MT2-yJ",
+   "nk": "1mInI9KSFzUSLU5UWWsHCM4xoakmM7oY0",
+   "meta": "16 meerkeuzevragen + 3 pittige rekenopgaven"
+  },
+  {
+   "n": 4,
+   "th": "Verdieping",
+   "rk": "Verdieping",
+   "min": 35,
+   "pts": 30,
+   "toets": "1IMqCtxN1KC9DRun9qko7ErwRONCCmeGZ",
+   "nk": "1YWXvmXNYO5Za3fDFYQWeKeVHao2VrpzD",
+   "meta": "8 meerkeuzevragen + 4 open vragen + 3 pittige rekenopgaven"
+  }
+ ],
+ "FILMS": [
+  [
+   "14riFlgfNjXvP-xpfhnzkqRpW4E5jhPvA",
+   "Instructiefilm",
+   "Samengestelde rente",
+   "Rente op rente: zo reken je met een groeifactor uit hoeveel spaargeld je na een paar jaar hebt.",
+   "reken",
+   "samen",
+   "Oefen: samengestelde rente"
+  ],
+  [
+   "1TgF29g54LEn3vBRlNB4fuTv54pTHCDPM",
+   "Instructiefilm",
+   "Enkelvoudige rente",
+   "Je krijgt elk jaar dezelfde rente uitgekeerd. Zo bereken je de rente per jaar en in totaal.",
+   "reken",
+   "enkel",
+   "Oefen: enkelvoudige rente"
+  ],
+  [
+   "1_1UlBrRLF7RsCyYUeTBrKTyOuL0d10TO",
+   "Uitleg",
+   "Wanneer gebruik je welke formule?",
+   "Enkelvoudig of samengesteld? Procent, indexcijfer of kredietkosten? Zo kies je de juiste formule.",
+   "formule",
+   "",
+   "Oefen: welke formule?"
+  ],
+  [
+   "18FpPk9_R6FqpiOS07g3hirX5b8HsAU8G",
+   "Instructiefilm",
+   "Kredietkosten",
+   "Zo bereken je met de tabel met maandtermijnen hoeveel een lening je extra kost.",
+   "reken",
+   "krediet",
+   "Oefen: kredietkosten"
+  ],
+  [
+   "1KdQINFxxpyh7JLHi9YqdycUH6Di-6WE8",
+   "Instructiefilm",
+   "Saldo uitrekenen",
+   "Nieuw saldo = oud saldo + ontvangsten − betalingen. Credit of debet?",
+   "reken",
+   "saldo",
+   "Oefen: saldo"
+  ],
+  [
+   "16N5D3Uk7W3dtGwI9u8KE6zPuN2LAx5CF",
+   "Instructiefilm",
+   "Van week naar maand",
+   "Keer 52 en gedeeld door 12. Niet keer 4!",
+   "reken",
+   "maand",
+   "Oefen: week ↔ maand"
+  ]
+ ]
+}
