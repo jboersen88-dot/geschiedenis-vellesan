@@ -290,3 +290,4 @@ Aanleiding: de eerste versie was "een standaard website". Je bestaande Google Si
 
 ## 19 okt — Kaft met bewegende scenes
 - `index.html`: Economie-paneel met spaarvarken waarin munten vallen (teller telt mee per munt) en groeiende staafjes; Geschiedenis-paneel met drie tandwielen die écht in elkaar grijpen (tanden berekend), fabriek met rook en flikkerende ramen; onderaan een lopende band met begrippen en jaartallen (1769, 1839, 1889, 1901, 1947, 1957: nakijken). Alleen transform/opacity; reduced-motion = stilstaand beeld. Titel, panelen, hover en links ongewijzigd.
+- 20 okt: kaft **professioneler** gemaakt na feedback (te kinderlijk): spaarvarken, gekleurde tandwielen, munten en fabriek vervangen door fijne lijntekeningen: vraag-en-aanbodgrafiek waarvan het evenwichtspunt rustig meebeweegt (Economie) en blauwdruk-tandwielen met een tijdliniaal 1750–1950 en een lopend merkteken (Geschiedenis). Teller weg; foto in de panelen bovenin donkerder voor leesbaarheid.

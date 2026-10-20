@@ -50,7 +50,7 @@ header b{color:var(--coral);font-weight:800}
 @media (hover:hover) and (pointer:fine){.choose:hover .door{flex:.9}.choose .door:hover{flex:1.25}}
 .door img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-3;transform:scale(1.08);transition:transform 1.4s var(--ease-out),filter .6s var(--ease-out);filter:saturate(.85) brightness(.82)}
 .door:hover img{transform:scale(1.02);filter:saturate(1) brightness(.9)}
-.door:before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(0deg,rgba(8,22,18,.94) 0%,rgba(8,22,18,.45) 45%,rgba(8,22,18,.1) 80%)}
+.door:before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(180deg,rgba(8,22,18,.78) 0%,rgba(8,22,18,.5) 38%,transparent 62%),linear-gradient(0deg,rgba(8,22,18,.94) 0%,rgba(8,22,18,.45) 45%,rgba(8,22,18,.1) 80%)}
 .door .tint{position:absolute;inset:0;z-index:-2;mix-blend-mode:soft-light;background:var(--c);opacity:.55}
 .door .body{padding:clamp(20px,3vw,40px);width:100%}
 .door .k{font-size:12.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--c)}
@@ -63,33 +63,29 @@ header b{color:var(--coral);font-weight:800}
 .door:active .go{transform:scale(.97)}
 .door:focus-visible{outline:3px solid var(--c);outline-offset:4px}
 
-/* scenes per paneel: Economie = spaarvarken met vallende munten, Geschiedenis = tandwielen die in elkaar grijpen en fabriek met rook. Alleen transform/opacity. */
+/* scenes per paneel als fijne lijntekening: Economie = vraag en aanbod met bewegend evenwicht, Geschiedenis = tandwielen en tijdliniaal. Alleen transform/opacity. */
 .scene{position:absolute;z-index:-1;pointer-events:none;overflow:visible;opacity:0;animation:fade 1s var(--ease-out) 1.5s forwards;left:0;right:0;top:0;width:100%;height:250px}
-.scene *{transform-box:view-box}
-.coin{animation:drop 3s linear infinite;animation-delay:var(--d)}
-.coin>g{animation:flip .55s linear infinite alternate}
-@keyframes drop{0%{transform:translateY(-190px);opacity:0;animation-timing-function:cubic-bezier(.45,0,.85,.55)}6%{opacity:1}33%{transform:translateY(24px)}100%{transform:translateY(24px);opacity:1}}
-@keyframes flip{from{transform:scaleX(1)}to{transform:scaleX(.18)}}
-.oink{animation:oink 1s linear infinite}
-@keyframes oink{0%{transform:scale(1.06,.9)}22%{transform:scale(.98,1.04)}42%,100%{transform:none}}
-.bar{transform:scaleY(.2);animation:grow 6s var(--ease-io) infinite alternate;animation-delay:calc(var(--i)*.35s)}
-@keyframes grow{to{transform:scaleY(1)}}
-.cnt{position:absolute;top:16px;right:18px;z-index:1;font-family:"Fraunces",Georgia,serif;font-weight:900;font-size:clamp(22px,2.4vw,34px);color:var(--gold);font-variant-numeric:tabular-nums;opacity:0;animation:fade 1s var(--ease-out) 1.7s forwards;text-shadow:0 2px 12px rgba(0,0,0,.5)}
-.cnt small{font:700 11px "Inter",sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--mu);display:block;text-align:right;text-shadow:none}
+.dem{animation:shift 7s var(--ease-io) infinite alternate}
+.eq{animation:eqm 7s var(--ease-io) infinite alternate}
+@keyframes shift{from{transform:translateX(-36px)}to{transform:translateX(36px)}}
+@keyframes eqm{from{transform:translate(-18px,8.5px)}to{transform:translate(18px,-8.5px)}}
+.ring{transform-origin:0 0;animation:ring 2.6s var(--ease-out) infinite}
+@keyframes ring{from{transform:scale(.7);opacity:.9}to{transform:scale(2.4);opacity:0}}
 .gw{animation:turn var(--dur) linear infinite}
 .gw.rev{animation-direction:reverse}
+.gw path{fill:rgba(246,240,230,.05);stroke:#f6f0e6;stroke-opacity:.8;stroke-width:1.6;stroke-linejoin:round}
+.gw circle{fill:none;stroke:#ff8d90;stroke-width:1.6}
+#gA .gw path{stroke:#ff8d90;stroke-opacity:1;fill:rgba(255,141,144,.10)}
 @keyframes turn{from{transform:rotate(var(--r0))}to{transform:rotate(calc(var(--r0) + 360deg))}}
-.puff{opacity:0;animation:puff 5s ease-out infinite;animation-delay:var(--d)}
-@keyframes puff{0%{transform:translate(0,0) scale(.5);opacity:0}15%{opacity:.55}100%{transform:translate(var(--dx,14px),-110px) scale(2.2);opacity:0}}
-.win{animation:glow 3.4s steps(1) infinite;animation-delay:var(--d)}
-@keyframes glow{0%{opacity:.35}30%{opacity:1}65%{opacity:.5}85%{opacity:1}}
+.mark{animation:sweep 16s var(--ease-io) infinite alternate}
+@keyframes sweep{to{transform:translateX(420px)}}
 
 /* de strook: een lopende band met begrippen en jaartallen */
 .strip{overflow:hidden;white-space:nowrap;padding:10px 0;margin:0 0 6px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);opacity:0;animation:fade 1s var(--ease-out) 1.8s forwards}
 .strip div{display:inline-block;animation:belt 70s linear infinite;will-change:transform}
 .strip span{display:inline-block;margin:0 18px;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--mu)}
 .strip span.y{font-family:"Fraunces",Georgia,serif;letter-spacing:.02em;text-transform:none;font-size:16px;font-weight:600;color:var(--ink)}
-.strip span.y em{color:var(--coral);font-style:normal;margin-right:6px}
+.strip span.y em{color:var(--gold);font-style:normal;margin-right:6px}
 .strip svg{vertical-align:-6px;margin:0 4px}
 @keyframes belt{to{transform:translateX(-50%)}}
 
@@ -101,15 +97,13 @@ footer{text-align:center;color:var(--mu);font-size:12.5px;padding:0 20px max(16p
   .choose{flex-direction:column;min-height:0}
   .door{min-height:540px}
   .scene{height:240px}
-  .cnt{top:12px;right:14px}
 }
 @media (prefers-reduced-motion:reduce){
   *,*:before,*:after{animation-duration:.01ms!important;animation-delay:0s!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
   .title h1 .l,.title p,.door{opacity:1;transform:none}
   .title p em:after{transform:none}
-  .scene,.cnt,.strip{opacity:1}
+  .scene,.strip{opacity:1}
   .scene *,.strip div{animation:none!important}
-  .puff{opacity:.3}
   .strip{overflow-x:auto}
 }
 </style>
@@ -128,29 +122,20 @@ footer{text-align:center;color:var(--mu);font-size:12.5px;padding:0 20px max(16p
       <img src="economie/img/markt.jpg" alt="" fetchpriority="high">
       <span class="tint"></span>
       <svg class="scene" viewBox="0 0 560 340" preserveAspectRatio="xMidYMin meet" aria-hidden="true" focusable="false">
-        <defs><g id="m"><circle r="16" fill="#f2c46b"/><circle r="12" fill="none" stroke="#c9952e" stroke-width="2"/><text y="6" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-weight="900" font-size="17" fill="#8a6418">€</text></g></defs>
-        <g transform="translate(274 198)"><g class="coin" style="--d:0s"><g><use href="#m"/></g></g></g>
-        <g transform="translate(274 198)"><g class="coin" style="--d:-1s"><g><use href="#m"/></g></g></g>
-        <g transform="translate(274 198)"><g class="coin" style="--d:-2s"><g><use href="#m"/></g></g></g>
-        <g transform="translate(280 328)">
-          <ellipse cy="2" rx="104" ry="8" fill="rgba(0,0,0,.35)"/>
-          <g class="oink">
-            <path d="M-84-84q-26-4-18-30 4-9 12-1" fill="none" stroke="#e8696f" stroke-width="7" stroke-linecap="round"/>
-            <rect x="-60" y="-30" width="22" height="30" rx="7" fill="#e8696f"/><rect x="-26" y="-30" width="22" height="30" rx="7" fill="#e8696f"/><rect x="26" y="-30" width="22" height="30" rx="7" fill="#e8696f"/><rect x="58" y="-30" width="22" height="30" rx="7" fill="#e8696f"/>
-            <ellipse cy="-72" rx="92" ry="62" fill="#ff8d90"/>
-            <path d="M40-122l26-14 4 26z" fill="#e8696f"/>
-            <ellipse cx="88" cy="-62" rx="24" ry="19" fill="#ffb1b3"/><circle cx="82" cy="-62" r="3.4" fill="#7a2c31"/><circle cx="96" cy="-62" r="3.4" fill="#7a2c31"/>
-            <circle cx="58" cy="-90" r="5" fill="#2a1013"/><circle cx="59.6" cy="-91.6" r="1.6" fill="#fff"/>
-            <rect x="-30" y="-136" width="46" height="8" rx="4" fill="#5a1f23"/>
-            <path d="M-60-40q40 20 100 4" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="5" stroke-linecap="round"/>
-          </g>
+        <defs><clipPath id="cl"><rect x="90" y="40" width="380" height="250"/></clipPath></defs>
+        <g stroke="#f6f0e6" stroke-opacity=".12" stroke-width="1"><path d="M90 102H470M90 165H470M90 228H470M185 40V290M280 40V290M375 40V290"/></g>
+        <g clip-path="url(#cl)" fill="none" stroke-linecap="round">
+          <path d="M90 280L470 100" stroke="#f2c46b" stroke-width="2.4"/>
+          <g class="dem"><path d="M-30 14L550 288" stroke="#f6f0e6" stroke-width="2.4"/></g>
+          <g transform="translate(280 190)"><g class="eq">
+            <path d="M-400 0H0M0 0V200" stroke="#f2c46b" stroke-opacity=".55" stroke-width="1.2" stroke-dasharray="3 5"/>
+            <circle class="ring" r="9" stroke="#f2c46b" stroke-width="1.5"/><circle r="5" fill="#f2c46b" stroke="#0c241e" stroke-width="2"/>
+          </g></g>
         </g>
-        <g transform="translate(34 190)" opacity=".92">
-          <rect class="bar" style="--i:0" x="0" y="-34" width="22" height="34" rx="4" fill="#7fd4c9"/><rect class="bar" style="--i:1" x="30" y="-58" width="22" height="58" rx="4" fill="#7fd4c9"/><rect class="bar" style="--i:2" x="60" y="-46" width="22" height="46" rx="4" fill="#7fd4c9"/><rect class="bar" style="--i:3" x="90" y="-84" width="22" height="84" rx="4" fill="#f2c46b"/><rect class="bar" style="--i:4" x="120" y="-112" width="22" height="112" rx="4" fill="#ff8d90"/>
-          <path d="M-6 6H148" stroke="rgba(243,239,224,.5)" stroke-width="2" stroke-linecap="round"/>
-        </g>
+        <path d="M90 36V290H474" fill="none" stroke="#f6f0e6" stroke-opacity=".6" stroke-width="1.5" stroke-linecap="round"/>
+        <text x="86" y="28" font-family="Inter,sans-serif" font-size="10.5" font-weight="600" letter-spacing="1.4" fill="#d8e6df" fill-opacity=".78">PRIJS</text><text x="474" y="308" text-anchor="end" font-family="Inter,sans-serif" font-size="10.5" font-weight="600" letter-spacing="1.4" fill="#d8e6df" fill-opacity=".78">HOEVEELHEID</text>
+        <text x="464" y="90" text-anchor="end" font-family="Inter,sans-serif" font-size="10.5" font-weight="600" letter-spacing="1.4" fill="#d8e6df" fill-opacity=".78" fill="#f2c46b" fill-opacity="1">AANBOD</text><text x="464" y="272" text-anchor="end" font-family="Inter,sans-serif" font-size="10.5" font-weight="600" letter-spacing="1.4" fill="#d8e6df" fill-opacity=".78">VRAAG</text>
       </svg>
-      <span class="cnt" aria-hidden="true"><small>gespaard</small>€ <b id="cnt">0</b></span>
       <span class="body">
         <span class="k">Vak 1</span>
         <h2>Economie</h2>
@@ -163,16 +148,12 @@ footer{text-align:center;color:var(--mu);font-size:12.5px;padding:0 20px max(16p
       <img src="img/industriestad.jpg" alt="">
       <span class="tint"></span>
       <svg class="scene" viewBox="0 0 560 340" preserveAspectRatio="xMidYMin meet" aria-hidden="true" focusable="false">
-        <g transform="translate(180 250)">
-          <path d="M0 90V30l34 22V30l34 22V30l34 22V6h30v84z" fill="#10332b"/>
-          <rect x="108" y="-70" width="16" height="78" fill="#10332b"/><rect x="138" y="-50" width="14" height="60" fill="#10332b"/>
-          <rect class="win" style="--d:0s" x="12" y="66" width="12" height="14" rx="2" fill="#f2c46b"/><rect class="win" style="--d:-1s" x="40" y="66" width="12" height="14" rx="2" fill="#f2c46b"/><rect class="win" style="--d:-2s" x="68" y="66" width="12" height="14" rx="2" fill="#f2c46b"/><rect class="win" style="--d:-.5s" x="96" y="66" width="12" height="14" rx="2" fill="#f2c46b"/>
-          <circle class="puff" style="--d:0s;--dx:16px" cx="116" cy="-76" r="12" fill="#f6f0e6"/><circle class="puff" style="--d:-2.5s;--dx:20px" cx="116" cy="-76" r="12" fill="#f6f0e6"/>
-          <circle class="puff" style="--d:-1s;--dx:12px" cx="145" cy="-56" r="10" fill="#f6f0e6"/><circle class="puff" style="--d:-3.5s;--dx:16px" cx="145" cy="-56" r="10" fill="#f6f0e6"/>
-        </g>
-        <g id="gA" transform="translate(330 96)"><g class="gw" style="--dur:12.6s"><path fill="#ff8d90"/><circle r="9" fill="#0c241e"/></g></g>
-        <g id="gB"><g class="gw rev" style="--dur:8.1s"><path fill="#f6f0e6"/><circle r="7" fill="#0c241e"/></g></g>
-        <g id="gC"><g class="gw" style="--dur:10.8s"><path fill="#7fd4c9"/><circle r="8" fill="#0c241e"/></g></g>
+        <g id="gA"><g class="gw" style="--dur:12.6s"><path/><circle r="9"/></g></g>
+        <g id="gB"><g class="gw rev" style="--dur:8.1s"><path/><circle r="7"/></g></g>
+        <g id="gC"><g class="gw" style="--dur:10.8s"><path/><circle r="8"/></g></g>
+        <g stroke="#f6f0e6" stroke-linecap="round"><path d="M70 322H490" stroke-opacity=".6" stroke-width="1.5"/><path id="tk" stroke-opacity=".5" stroke-width="1.2"/></g>
+        <text x="70" y="312" font-family="Inter,sans-serif" font-size="10.5" font-weight="600" letter-spacing="1.4" fill="#d8e6df" fill-opacity=".78">1750</text><text x="280" y="312" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" font-weight="600" letter-spacing="1.4" fill="#d8e6df" fill-opacity=".78">1850</text><text x="490" y="312" text-anchor="end" font-family="Inter,sans-serif" font-size="10.5" font-weight="600" letter-spacing="1.4" fill="#d8e6df" fill-opacity=".78">1950</text>
+        <g transform="translate(70 322)"><g class="mark"><path d="M0 0l-5-9h10z" fill="#ff8d90"/><path d="M0-9V-24" stroke="#ff8d90" stroke-width="1.5"/></g></g>
       </svg>
       <span class="body">
         <span class="k">Vak 2</span>
@@ -190,11 +171,11 @@ footer{text-align:center;color:var(--mu);font-size:12.5px;padding:0 20px max(16p
 /* letters van de titel apart animeren; de tekst blijft voor schermlezers in aria-label */
 (function(){var n=0;document.querySelectorAll("#t .w").forEach(function(w){var t=w.textContent;w.textContent="";w.setAttribute("aria-hidden","true");t.split("").forEach(function(c){var s=document.createElement("span");s.className="l";s.style.setProperty("--n",n++);s.textContent=c;w.appendChild(s);});});})();
 
-/* geschiedenis: tandwielen worden berekend zodat de tanden in elkaar vallen; economie: teller telt mee met elke munt die landt */
+/* tandwielen worden berekend zodat de tanden in elkaar vallen; tijdliniaal met streepjes */
 (function(){
   var M=9,R=Math.PI/180;
   function path(n,r){var p=2*Math.PI/n,t=r+.6*M,b=r-.7*M,d="";for(var i=0;i<n;i++){var c=i*p;[[c-.3*p,b],[c-.14*p,t],[c+.14*p,t],[c+.3*p,b]].forEach(function(q,k){d+=(i||k?"L":"M")+(q[1]*Math.cos(q[0])).toFixed(1)+" "+(q[1]*Math.sin(q[0])).toFixed(1)})}return d+"Z"}
-  var A={n:14,r:63,x:330,y:96},B={n:9,r:40.5},C={n:12,r:54};
+  var A={n:14,r:63,x:330,y:84},B={n:9,r:40.5},C={n:12,r:54};
   var phiB=118,dAB=A.r+B.r,pB=360/B.n,pC=360/C.n;
   var a0=phiB;                       /* tand van A wijst naar B */
   var b0=phiB+180-pB/2;              /* B heeft daar een gat */
@@ -203,8 +184,8 @@ footer{text-align:center;color:var(--mu);font-size:12.5px;padding:0 20px max(16p
   var c0=psi+180-pC/2;
   C.x=B.x+(B.r+C.r)*Math.cos(psi*R);C.y=B.y+(B.r+C.r)*Math.sin(psi*R);
   [["gA",A,a0],["gB",B,b0],["gC",C,c0]].forEach(function(g){var e=document.getElementById(g[0]);if(!e)return;e.setAttribute("transform","translate("+g[1].x.toFixed(1)+" "+g[1].y.toFixed(1)+")");var w=e.firstElementChild;w.style.setProperty("--r0",g[2]+"deg");w.firstElementChild.setAttribute("d",path(g[1].n,g[1].r))});
-  var n=0,out=document.getElementById("cnt"),pig=document.querySelector(".oink");
-  if(pig&&out)pig.addEventListener("animationiteration",function(){n+=5;out.textContent=n.toLocaleString("nl-NL")});
+  var tk="";for(var k=0;k<=42;k++){var x=70+k*10,h=k%5?5:11;tk+="M"+x+" 322v-"+h}
+  var t=document.getElementById("tk");if(t)t.setAttribute("d",tk);
 })();
 </script>
 </body>
