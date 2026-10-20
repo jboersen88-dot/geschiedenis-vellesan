@@ -124,7 +124,7 @@ function rScore(){document.getElementById("rScore").innerHTML="Goed: <b>"+rs.goo
 function newR(){
 rModes.innerHTML=MODES.map(function(m){return '<button data-m="'+m[0]+'" class="'+(m[0]===mode?"on":"")+'">'+m[1]+'</button>';}).join("");
 rq=RGEN[mode]();
-rCard.innerHTML=rq.body+'<p style="font-weight:700;margin:8px 0 0">'+rq.h+'</p>'+(rq.f!=="cpi"?'<div class="muted" style="font-size:13px;margin-top:4px">Formule: <code>'+FORM[rq.f]+'</code></div>':'')+answerRow("r",rq.u);
+rCard.innerHTML=rq.body+'<p style="font-weight:700;margin:8px 0 0">'+rq.h+'</p>'+answerRow("r",rq.u);
 var inp=document.getElementById("rIn");inp.addEventListener("keydown",function(ev){if(ev.key==="Enter")checkR();});
 document.getElementById("rCheck").addEventListener("click",checkR);rScore();
 }

@@ -1,0 +1,1022 @@
+{
+ "blokken": {
+  "mc_basis": [
+   {
+    "v": "Wat is een primair inkomen?",
+    "o": [
+     "Inkomen dat je zelf verdient, zoals loon of winst",
+     "Inkomen dat je van de overheid krijgt, zonder dat je ervoor werkt",
+     "Inkomen dat alleen kinderen ontvangen, zoals zakgeld",
+     "Inkomen dat een bedrijf afdraagt aan de Belastingdienst"
+    ],
+    "j": 0,
+    "u": "Een primair inkomen verdien je zelf met arbeid of bezit, zoals loon, winst, rente of huur. B is een secundair inkomen (overdrachtsinkomen)."
+   },
+   {
+    "v": "Welk onderdeel van de marketingmix gaat over de verkoopprijs van een product?",
+    "o": [
+     "Personeelsbeleid",
+     "Prijsbeleid",
+     "Plaatsbeleid",
+     "Presentatiebeleid"
+    ],
+    "j": 1,
+    "u": "Prijsbeleid is de P van Prijs uit de marketingmix: kies je voor een hoge of een lage prijs?"
+   },
+   {
+    "v": "Wat meet de Lorenzcurve?",
+    "o": [
+     "De hoogte van de inflatie in een land",
+     "De hoogte van het sociaal minimum",
+     "De verdeling van inkomens onder de bevolking",
+     "De hoogte van de koopkracht van huishoudens"
+    ],
+    "j": 2,
+    "u": "De Lorenzcurve laat zien hoe het inkomen over de bevolking verdeeld is. Hoe verder de curve van de diagonaal af ligt, hoe ongelijker de verdeling."
+   },
+   {
+    "v": "Wat is welzijn?",
+    "o": [
+     "De hoeveelheid geld die iemand per maand verdient",
+     "De prijs van goederen in verhouding tot het inkomen",
+     "De hoeveelheid spullen die iemand kan kopen",
+     "De brede kwaliteit van leven, zoals gezondheid en geluk"
+    ],
+    "j": 3,
+    "u": "Welzijn is de brede kwaliteit van leven (gezondheid, geluk, vrijheid, veiligheid). Welvaart gaat over hoe goed je met goederen en diensten in je behoeften kunt voorzien."
+   },
+   {
+    "v": "Wanneer noem je een goed ‘schaars’?",
+    "o": [
+     "Als er productiemiddelen nodig zijn om het te maken",
+     "Als het product duur is in de winkel",
+     "Als bijna niemand het product wil kopen",
+     "Als het product alleen in het buitenland te koop is"
+    ],
+    "j": 0,
+    "u": "Economisch schaars betekent: er zijn productiemiddelen (arbeid, kapitaal, natuur) voor nodig. \"Er is weinig van\" is géén economische definitie."
+   },
+   {
+    "v": "Wat doet het CBS?",
+    "o": [
+     "Het bepaalt de hoogte van de rente in Nederland",
+     "Het verzamelt cijfers over de Nederlandse economie",
+     "Het int belasting namens de Nederlandse overheid",
+     "Het keurt reclames van bedrijven vooraf goed"
+    ],
+    "j": 1,
+    "u": "Het CBS (Centraal Bureau voor de Statistiek) verzamelt cijfers over Nederland, bijvoorbeeld de CPI voor de inflatie."
+   },
+   {
+    "v": "Wat gebeurt er met je koopkracht als prijzen sneller stijgen dan je loon?",
+    "o": [
+     "Je koopkracht stijgt",
+     "Je koopkracht blijft precies gelijk",
+     "Je koopkracht daalt",
+     "Dit is niet vast te stellen"
+    ],
+    "j": 2,
+    "u": "Stijgen de prijzen harder dan je loon, dan kun je minder kopen: je koopkracht daalt."
+   },
+   {
+    "v": "Wat betekent een indexcijfer van 100?",
+    "o": [
+     "De prijs is nul euro",
+     "Er is dat jaar geen prijsstijging geweest",
+     "De prijzen zijn sindsdien verdubbeld",
+     "Dit is het cijfer van het basisjaar, het vergelijkingspunt"
+    ],
+    "j": 3,
+    "u": "Het basisjaar krijgt altijd indexcijfer 100. Daarmee vergelijk je de andere jaren."
+   },
+   {
+    "v": "Welke uitgave is een vaste last?",
+    "o": [
+     "Een weekend weg met je vrienden",
+     "De wekelijkse boodschappen voor thuis",
+     "De maandelijkse huur van je woning",
+     "Een nieuwe wasmachine voor in huis"
+    ],
+    "j": 2,
+    "u": "Huur betaal je met vaste regelmaat: een vaste last. Boodschappen zijn dagelijkse uitgaven, een wasmachine en een weekend weg zijn incidenteel."
+   },
+   {
+    "v": "Wat is het doel van budgetteren?",
+    "o": [
+     "Zo veel mogelijk geld opzij zetten",
+     "Precies weten hoeveel belasting je moet betalen",
+     "Een lening afsluiten tegen een lage rente",
+     "Inkomsten en uitgaven met elkaar in balans brengen"
+    ],
+    "j": 3,
+    "u": "Met een budgetplan zorg je dat je inkomsten en uitgaven met elkaar in balans zijn."
+   },
+   {
+    "v": "Wat is een spaarmotief?",
+    "o": [
+     "Een reden waarom iemand geld opzij zet",
+     "Een reden waarom iemand geld leent",
+     "Een reden waarom iemand gaat beleggen in aandelen",
+     "Een reden waarom een bank rente vraagt"
+    ],
+    "j": 0,
+    "u": "Een spaarmotief is een reden om te sparen: voor een doel, uit voorzorg of voor de rente."
+   },
+   {
+    "v": "Wat is het belangrijkste risico van beleggen in aandelen?",
+    "o": [
+     "Je kunt je geld nooit meer opnemen",
+     "De koers kan dalen, waardoor je verlies lijdt",
+     "Je betaalt altijd hoge kosten aan de bank",
+     "Je krijgt nooit dividend uitgekeerd"
+    ],
+    "j": 1,
+    "u": "De koers van een aandeel kan dalen. Verkoop je dan, dan lijd je verlies."
+   },
+   {
+    "v": "Waarom vraagt een bank bij een hypotheek om de woning als onderpand?",
+    "o": [
+     "Omdat dit wettelijk verplicht is bij elke soort lening",
+     "Omdat de bank de woning zelf wil gaan gebruiken",
+     "Zodat de bank het huis kan verkopen als je niet betaalt",
+     "Omdat de rente hierdoor automatisch lager wordt"
+    ],
+    "j": 2,
+    "u": "Het huis is het onderpand: betaalt de klant niet terug, dan mag de bank het huis verkopen."
+   },
+   {
+    "v": "Wat is géén geldfunctie?",
+    "o": [
+     "Ruilmiddel",
+     "Rekenmiddel",
+     "Spaarmiddel",
+     "Productiemiddel"
+    ],
+    "j": 3,
+    "u": "De drie geldfuncties zijn ruilmiddel, rekenmiddel en spaarmiddel. Productiemiddel hoort er niet bij."
+   },
+   {
+    "v": "Wat is chartaal geld?",
+    "o": [
+     "Munten en briefgeld",
+     "Geld dat alleen op een bankrekening staat",
+     "Geld dat een bank uitleent aan klanten",
+     "Geld dat is belegd in aandelen"
+    ],
+    "j": 0,
+    "u": "Chartaal geld is contant geld: munten en bankbiljetten. Geld op je rekening is giraal geld."
+   },
+   {
+    "v": "Wat kan de ECB doen om hoge inflatie te bestrijden?",
+    "o": [
+     "De belasting op producten verlagen",
+     "De rente verhogen",
+     "Meer geld bijdrukken voor de eurolanden",
+     "De lonen van werknemers bevriezen"
+    ],
+    "j": 1,
+    "u": "Bij een hogere rente gaan mensen meer sparen en minder lenen. Er wordt minder besteed, waardoor prijzen minder snel stijgen."
+   }
+  ],
+  "mc_verd": [
+   {
+    "v": "Een frisdrankmerk plaatst een reclame waarin vooral het logo in beeld komt, met de boodschap “wij dragen bij aan een betere wereld”. Wat voor reclame is dit vooral?",
+    "o": [
+     "Merkreclame die als ideële reclame is verpakt",
+     "Pure ideële reclame zonder commercieel doel",
+     "Informatieve reclame over de samenstelling",
+     "Sociale reclame die namens de overheid wordt gemaakt"
+    ],
+    "j": 0,
+    "u": "Het logo en het merk staan centraal: het echte doel is het merk verkopen. De \"betere wereld\"-boodschap is de verpakking. Pure ideële reclame heeft geen commercieel doel."
+   },
+   {
+    "v": "Werknemers krijgen 2,5% prijscompensatie, terwijl de inflatie dat jaar 3,1% is. Wat gebeurt er met hun koopkracht?",
+    "o": [
+     "Hun koopkracht stijgt een beetje",
+     "Hun koopkracht daalt een beetje",
+     "Hun koopkracht blijft precies gelijk",
+     "Dit is met deze gegevens niet te bepalen"
+    ],
+    "j": 1,
+    "u": "De prijscompensatie (2,5%) is lager dan de inflatie (3,1%). De koopkracht daalt licht, met 0,6 procentpunt."
+   },
+   {
+    "v": "Twee huishoudens hebben exact hetzelfde inkomen, maar het ene huishouden is veel gelukkiger dan het andere. Waar zegt dit vooral iets over?",
+    "o": [
+     "Het verschil in welvaart tussen de huishoudens",
+     "Het verschil in koopkracht tussen de huishoudens",
+     "Het verschil in welzijn tussen de huishoudens",
+     "Het verschil in besteedbaar inkomen tussen de huishoudens"
+    ],
+    "j": 2,
+    "u": "Het inkomen (en dus de welvaart in geld) is gelijk. Het verschil in geluk zegt iets over welzijn."
+   },
+   {
+    "v": "De lonen in een land stijgen twee jaar achter elkaar harder dan de prijzen. Wat is hiervan het meest waarschijnlijke gevolg?",
+    "o": [
+     "De werkloosheid daalt hierdoor automatisch",
+     "De overheid moet de belastingen verlagen",
+     "De inflatie daalt hierdoor vanzelf naar nul",
+     "De koopkracht van huishoudens stijgt in deze periode"
+    ],
+    "j": 3,
+    "u": "Als lonen harder stijgen dan prijzen, stijgt het reële inkomen. Huishoudens kunnen meer kopen: de koopkracht stijgt."
+   },
+   {
+    "v": "Familie Jansen reserveert maandelijks €40 voor de jaarlijkse autoverzekering van €480. Waarom doen zij dit?",
+    "o": [
+     "Omdat de autoverzekering een vaste maandelijkse last is",
+     "Zodat het geld er wél is wanneer de jaarrekening komt",
+     "Omdat de bank hen verplicht om te reserveren",
+     "Omdat reserveren de kosten van de verzekering verlaagt"
+    ],
+    "j": 1,
+    "u": "Dit is reserveren: €480 : 12 maanden = €40 per maand, zodat het geld er is als de jaarrekening komt."
+   },
+   {
+    "v": "Twee spaarders zetten hetzelfde bedrag voor 6 jaar vast tegen hetzelfde rentepercentage. Spaarder 1 kiest enkelvoudige rente, spaarder 2 samengestelde rente. Wie heeft na 6 jaar het meeste?",
+    "o": [
+     "Spaarder 2, want de rente groeit hier ook over eerder ontvangen rente",
+     "Spaarder 1, want enkelvoudige rente is op lange termijn altijd voordeliger",
+     "Beide spaarders hebben na 6 jaar precies evenveel geld",
+     "Dit hangt volledig af van de bank, niet van het type rente"
+    ],
+    "j": 0,
+    "u": "Bij samengestelde rente krijg je ook rente over de rente van eerdere jaren (rente op rente). Daardoor heeft spaarder 2 meer."
+   },
+   {
+    "v": "Kenji sluit een doorlopend krediet af in plaats van een persoonlijke lening, omdat hij flexibel wil kunnen bijlenen. Wat past hierbij?",
+    "o": [
+     "Bij een doorlopend krediet leen je altijd het hele bedrag in één keer",
+     "Een doorlopend krediet kan alleen worden afgesloten met een huis als onderpand",
+     "Bij een doorlopend krediet ligt het maandbedrag voor de hele looptijd vast",
+     "Bij een doorlopend krediet kan hij binnen een grens telkens opnieuw geld opnemen"
+    ],
+    "j": 3,
+    "u": "Bij een doorlopend krediet heb je een kredietlimiet. Binnen die grens kun je steeds opnieuw geld opnemen; de rente is variabel."
+   },
+   {
+    "v": "De ECB verlaagt de rente fors. Wat is het meest waarschijnlijke gevolg?",
+    "o": [
+     "Sparen wordt aantrekkelijker, lenen wordt duurder",
+     "Bestedingen van consumenten nemen hierdoor waarschijnlijk af",
+     "Lenen wordt aantrekkelijker, waardoor bestedingen kunnen toenemen",
+     "Dit heeft in de praktijk geen effect op consumenten"
+    ],
+    "j": 2,
+    "u": "Een lage rente maakt lenen goedkoper en sparen minder aantrekkelijk. Mensen en bedrijven gaan meer lenen en besteden."
+   }
+  ],
+  "open_verd": [
+   {
+    "nr": 9,
+    "titel": "Welvaart, welzijn en het BBP",
+    "p": 2,
+    "v": "Leg uit waarom het voor de overheid belangrijk is om zowel naar welvaart als naar welzijn te kijken, en niet alleen naar het Bruto Binnenlands Product (BBP).",
+    "model": "Het BBP meet alleen de waarde van alle goederen en diensten die in een land worden geproduceerd. Dat zegt iets over de welvaart, maar niets over zaken als gezondheid, geluk, vrije tijd, veiligheid of een schoon milieu (welzijn). Een hoger BBP kan zelfs samengaan met meer stress of vervuiling. Als de overheid alleen naar het BBP kijkt, mist zij dus belangrijke delen van de kwaliteit van leven.",
+    "g": [
+     {
+      "t": "het BBP/welvaart meet alleen de productie of het materiële (geld, goederen en diensten).",
+      "p": 1
+     },
+     {
+      "t": "welzijn gaat over niet-materiële zaken (met een voorbeeld), dus de overheid moet ook daarop letten om de kwaliteit van leven echt te verbeteren.",
+      "p": 1
+     }
+    ],
+    "h": [
+     "E4-1.3"
+    ],
+    "opm": "Alleen een begrip noemen is niet genoeg. Geef alleen het volle punt als de leerling ook uitlegt hoe het werkt."
+   },
+   {
+    "nr": 10,
+    "titel": "Loon-prijsspiraal en concurrentiepositie",
+    "p": 2,
+    "v": "Een loon-prijsspiraal kan de concurrentiepositie van Nederlandse bedrijven ten opzichte van het buitenland verzwakken. Leg uit hoe dit komt.",
+    "model": "Bij een loon-prijsspiraal stijgen eerst de prijzen. Werknemers eisen dan hogere lonen (prijscompensatie). Daardoor stijgen de loonkosten van bedrijven, die vervolgens hun prijzen weer verhogen, enzovoort. Nederlandse producten worden zo duurder dan die van buitenlandse concurrenten. Buitenlandse klanten kopen dan liever bij de goedkopere concurrent, waardoor Nederlandse bedrijven minder verkopen (exporteren).",
+    "g": [
+     {
+      "t": "juiste beschrijving van de spiraal (hogere prijzen → hogere lonen → hogere kosten → hogere prijzen).",
+      "p": 1
+     },
+     {
+      "t": "Nederlandse producten worden duurder dan buitenlandse, waardoor bedrijven minder verkopen / minder exporteren.",
+      "p": 1
+     }
+    ],
+    "h": [
+     "E4-1.4"
+    ],
+    "opm": "Alleen een begrip noemen is niet genoeg. Geef alleen het volle punt als de leerling ook uitlegt hoe het werkt."
+   },
+   {
+    "nr": 11,
+    "titel": "Sparen bij lage rente en hoge inflatie",
+    "p": 2,
+    "v": "Leg uit waarom sparen bij een lage rente en een hoge inflatie in feite geld kan kosten, ook al daalt het bedrag op je rekening niet.",
+    "model": "Reële rente = nominale rente − inflatie. Is de rente lager dan de inflatie, dan is de reële rente negatief. Het bedrag op je rekening stijgt wel een beetje, maar de prijzen stijgen harder. Je kunt met je spaargeld dus minder kopen dan eerst: de koopkracht van je spaargeld daalt.",
+    "g": [
+     {
+      "t": "de prijzen (inflatie) stijgen sneller dan je spaargeld groeit door de rente / de reële rente is negatief.",
+      "p": 1
+     },
+     {
+      "t": "daardoor daalt de koopkracht van je spaargeld: je kunt er later minder mee kopen.",
+      "p": 1
+     }
+    ],
+    "h": [
+     "E4-2.2",
+     "E4-1.4"
+    ],
+    "opm": "Alleen een begrip noemen is niet genoeg. Geef alleen het volle punt als de leerling ook uitlegt hoe het werkt."
+   },
+   {
+    "nr": 12,
+    "titel": "Risico voor de bank",
+    "p": 2,
+    "v": "Een bank verdient onder andere aan het renteverschil tussen sparen en lenen. Leg uit welk risico de bank hiermee loopt als veel klanten hun lening niet meer kunnen terugbetalen.",
+    "model": "Een bank leent het geld van spaarders uit aan mensen en bedrijven. Als veel klanten hun lening niet terugbetalen, krijgt de bank haar geld en de rente niet terug. De bank moet de spaarders wel hun geld plus rente terugbetalen. Zo lijdt de bank verlies en kan zij in het ergste geval in de problemen komen of failliet gaan.",
+    "g": [
+     {
+      "t": "de bank leent het spaargeld uit en moet spaarders wel terugbetalen.",
+      "p": 1
+     },
+     {
+      "t": "als leners niet terugbetalen, lijdt de bank verlies (kredietrisico).",
+      "p": 1
+     }
+    ],
+    "h": [
+     "E4-2.3",
+     "E4-2.4"
+    ],
+    "opm": "Alleen een begrip noemen is niet genoeg. Geef alleen het volle punt als de leerling ook uitlegt hoe het werkt."
+   }
+  ],
+  "rek_basis": [
+   {
+    "nr": 1,
+    "titel": "Koopkracht van Mila",
+    "tekst": "Mila verdient €1.850 per maand. Haar loon stijgt met 2,3%. De inflatie is dat jaar 1,6%.",
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken haar nieuwe maandloon (2 decimalen).",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         1892.55
+        ],
+        "p": 2,
+        "eenh": "€",
+        "tol": 0.005
+       }
+      ],
+      "uitw": [
+       "1.850 × 1,023 = €1.892,55",
+       "2 p: 1 p voor de factor 1,023 en 1 p voor het antwoord"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken het verschil tussen haar loonstijging en de inflatie, in procentpunten.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         0.7
+        ],
+        "p": 1,
+        "eenh": "procentpunt",
+        "tol": 0.005
+       }
+      ],
+      "uitw": [
+       "2,3 − 1,6 = 0,7 procentpunt"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Neemt haar koopkracht toe of af?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Toe",
+         "Af"
+        ],
+        "j": 0,
+        "p": 1
+       }
+      ],
+      "uitw": [
+       "Haar koopkracht neemt toe, want haar loon stijgt harder dan de prijzen."
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Bereken hoeveel euro haar loon in totaal stijgt (2 decimalen).",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         42.55
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005
+       }
+      ],
+      "uitw": [
+       "1.892,55 − 1.850 = €42,55 (of 1.850 × 0,023 = €42,55)"
+      ]
+     }
+    ],
+    "p": 5
+   },
+   {
+    "nr": 2,
+    "titel": "Indexcijfer van brood",
+    "tekst": "De prijs van een brood is dit jaar €2,35. Het indexcijfer van brood is dit jaar 106,0, met 2017 als basisjaar.",
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken de prijs van een brood in het basisjaar 2017 (2 decimalen).",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         2.22
+        ],
+        "p": 2,
+        "eenh": "€",
+        "tol": 0.005
+       }
+      ],
+      "uitw": [
+       "2,35 : 106,0 × 100 = €2,22",
+       "2 p: 1 p voor de berekening en 1 p voor het antwoord"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Volgend jaar wordt een indexcijfer van 109,4 verwacht. Bereken de verwachte prijs (2 decimalen).",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         2.43
+        ],
+        "p": 2,
+        "eenh": "€",
+        "tol": 0.005
+       }
+      ],
+      "uitw": [
+       "2,2170 × 109,4 : 100 = €2,43",
+       "Ook goed: 2,22 × 109,4 : 100 = €2,43"
+      ]
+     }
+    ],
+    "p": 4
+   },
+   {
+    "nr": 3,
+    "titel": "Enkelvoudige rente van Timo",
+    "tekst": "Timo zet €4.175 op een spaarrekening tegen 1,8% enkelvoudige rente per jaar, voor 3 jaar.",
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken de rente die hij per jaar ontvangt (2 decimalen).",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         75.15
+        ],
+        "p": 2,
+        "eenh": "€",
+        "tol": 0.005
+       }
+      ],
+      "uitw": [
+       "4.175 × 0,018 = €75,15 per jaar"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken de totale rente na 3 jaar (2 decimalen).",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         225.45
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005
+       }
+      ],
+      "uitw": [
+       "75,15 × 3 = €225,45"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Bereken het eindbedrag (inleg + rente).",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         4400.45
+        ],
+        "p": 2,
+        "eenh": "€",
+        "tol": 0.005
+       }
+      ],
+      "uitw": [
+       "4.175 + 225,45 = €4.400,45"
+      ]
+     }
+    ],
+    "p": 5
+   },
+   {
+    "nr": 4,
+    "titel": "Samengestelde rente van Noor",
+    "tekst": "Noor zet €2.900 op een spaarrekening met 2,2% samengestelde rente per jaar, voor 4 jaar.",
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken de groeifactor bij 2,2% rente.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         1.022
+        ],
+        "p": 1,
+        "eenh": "",
+        "tol": 0.0005
+       }
+      ],
+      "uitw": [
+       "1 + 2,2 : 100 = 1,022"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken het eindbedrag na 4 jaar (2 decimalen).",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         3163.75
+        ],
+        "p": 2,
+        "eenh": "€",
+        "tol": 0.005
+       }
+      ],
+      "uitw": [
+       "2.900 × 1,022 × 1,022 × 1,022 × 1,022 = 2.900 × 1,022⁴ = €3.163,75",
+       "2 p: 1 p voor de macht 4 (vier keer de factor) en 1 p voor het antwoord"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Bereken hoeveel rente Noor in totaal heeft ontvangen.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         263.75
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005
+       }
+      ],
+      "uitw": [
+       "3.163,75 − 2.900 = €263,75"
+      ]
+     }
+    ],
+    "p": 4
+   },
+   {
+    "nr": 5,
+    "titel": "Kredietkosten van Wesley",
+    "tekst": "Wesley wil €6.000 lenen via een persoonlijke lening. Gebruik onderstaande tabel met de maandelijkse termijnen.",
+    "delen": [
+     {
+      "id": "a",
+      "v": "Wesley kiest voor 60 maanden looptijd. Welk maandbedrag hoort hierbij in de tabel?",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         113.33
+        ],
+        "p": 1,
+        "eenh": "€ per maand",
+        "tol": 0.005
+       }
+      ],
+      "uitw": [
+       "€113,33 per maand (rij €6.000, kolom 60 mnd)"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken de totale kredietkosten van deze lening (2 decimalen).",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         799.8
+        ],
+        "p": 2,
+        "eenh": "€",
+        "tol": 0.005
+       }
+      ],
+      "uitw": [
+       "113,33 × 60 = €6.799,80",
+       "6.799,80 − 6.000 = €799,80 kredietkosten"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Bereken de kredietkosten in procenten van het geleende bedrag (2 decimalen).",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         13.33
+        ],
+        "p": 2,
+        "eenh": "%",
+        "tol": 0.005
+       }
+      ],
+      "uitw": [
+       "799,80 : 6.000 × 100 = 13,33%"
+      ]
+     }
+    ],
+    "tabel": [
+     [
+      "Netto krediet",
+      "36 mnd",
+      "48 mnd",
+      "60 mnd"
+     ],
+     [
+      "€ 6.000",
+      "178,50",
+      "137,65",
+      "113,33"
+     ],
+     [
+      "€ 9.000",
+      "267,70",
+      "206,40",
+      "169,90"
+     ]
+    ],
+    "p": 5
+   },
+   {
+    "nr": 6,
+    "titel": "Beleggen in aandelen van Sem",
+    "tekst": "Sem koopt 150 aandelen voor €18,45 per aandeel. Na een jaar verkoopt hij ze weer voor €19,75 per aandeel. Tussentijds ontving hij in totaal €0,35 dividend per aandeel.",
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken de totale aankoopwaarde (inleg) van de aandelen.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         2767.5
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005
+       }
+      ],
+      "uitw": [
+       "150 × 18,45 = €2.767,50"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken het totale rendement in euro's (koerswinst + dividend samen).",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         247.5
+        ],
+        "p": 2,
+        "eenh": "€",
+        "tol": 0.005
+       }
+      ],
+      "uitw": [
+       "Koerswinst: (19,75 − 18,45) × 150 = €195,00",
+       "Dividend: 0,35 × 150 = €52,50",
+       "Totaal rendement: 195,00 + 52,50 = €247,50"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Bereken het rendement in procenten van zijn inleg (1 decimaal).",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         8.9
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.05
+       }
+      ],
+      "uitw": [
+       "247,50 : 2.767,50 × 100 = 8,9%"
+      ]
+     }
+    ],
+    "p": 4
+   }
+  ],
+  "rek_verd": [
+   {
+    "nr": 1,
+    "titel": "Samengestelde rente en koopkracht van Sanne",
+    "tekst": "Sanne zet €3.750 op een spaarrekening met 2,6% samengestelde rente per jaar, voor 3 jaar. In diezelfde periode stijgen de prijzen (inflatie) met gemiddeld 2,1% per jaar.",
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken het eindbedrag van haar spaargeld na 3 jaar (2 decimalen).",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         4050.17
+        ],
+        "p": 3,
+        "eenh": "€",
+        "tol": 0.005
+       }
+      ],
+      "uitw": [
+       "Groeifactor: 1 + 2,6 : 100 = 1,026",
+       "3.750 × 1,026 × 1,026 × 1,026 = 3.750 × 1,026³ = €4.050,17",
+       "3 p: 1 p groeifactor, 1 p drie jaar (macht 3), 1 p antwoord"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken hoeveel rente zij in totaal heeft ontvangen.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         300.17
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005
+       }
+      ],
+      "uitw": [
+       "4.050,17 − 3.750 = €300,17"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Is de koopkracht van haar spaargeld toegenomen of afgenomen? Onderbouw je antwoord met een vergelijking tussen het rentepercentage en het inflatiepercentage.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Toegenomen",
+         "Afgenomen"
+        ],
+        "j": 0,
+        "p": 1
+       },
+       {
+        "type": "open",
+        "nr": "R1c",
+        "p": 1,
+        "label": "Onderbouwing: vergelijk het rentepercentage met het inflatiepercentage",
+        "v": "Sanne zet €3.750 op een spaarrekening met 2,6% samengestelde rente per jaar, voor 3 jaar. In diezelfde periode stijgen de prijzen (inflatie) met gemiddeld 2,1% per jaar. Is de koopkracht van haar spaargeld toegenomen of afgenomen? Onderbouw je antwoord met een vergelijking tussen het rentepercentage en het inflatiepercentage.",
+        "model": "De koopkracht van haar spaargeld is toegenomen: de rente (2,6%) is hoger dan de inflatie (2,1%). De reële rente is 2,6 − 2,1 = +0,5% per jaar.",
+        "g": [
+         {
+          "t": "vergelijking: de rente (2,6%) is hoger dan de inflatie (2,1%) / de reële rente is +0,5% per jaar.",
+          "p": 1
+         }
+        ],
+        "h": [
+         "E4-2.2"
+        ]
+       }
+      ],
+      "uitw": [
+       "De koopkracht van haar spaargeld is toegenomen: de rente (2,6%) is hoger dan de inflatie (2,1%). De reële rente is 2,6 − 2,1 = +0,5% per jaar.",
+       "2 p: 1 p voor de vergelijking, 1 p voor de conclusie"
+      ]
+     }
+    ],
+    "p": 6
+   },
+   {
+    "nr": 2,
+    "titel": "CPI en koopkracht van Bilal",
+    "tekst": "Gebruik onderstaande tabel om de CPI te berekenen.",
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken de CPI (2 decimalen).",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         102.12,
+         102.118
+        ],
+        "p": 2,
+        "eenh": "",
+        "tol": 0.005
+       }
+      ],
+      "uitw": [
+       "32 × 102,8 = 3.289,6",
+       "18 × 105,3 = 1.895,4",
+       "16 × 98,7 = 1.579,2",
+       "34 × 101,4 = 3.447,6",
+       "Totaal 10.211,8 : 100 = CPI 102,12",
+       "2 p: 1 p voor de wegingsfactoren × indexcijfers, 1 p voor het delen door 100"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bilals loon stijgt dit jaar met 1,9%. Bereken met behulp van de CPI of zijn koopkracht is gestegen of gedaald, en met hoeveel procentpunt (2 decimalen).",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Gestegen",
+         "Gedaald"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Zijn koopkracht is"
+       },
+       {
+        "type": "num",
+        "ans": [
+         0.22,
+         0.21
+        ],
+        "p": 2,
+        "eenh": "procentpunt",
+        "tol": 0.005,
+        "abs": true,
+        "label": "Met hoeveel procentpunt (zonder min-teken)"
+       }
+      ],
+      "uitw": [
+       "Inflatie: 102,12 − 100 = 2,12%",
+       "Reële verandering: 1,9 − 2,12 = −0,22 procentpunt",
+       "Zijn koopkracht is gedaald, met 0,22 procentpunt.",
+       "3 p: 1 p inflatie, 1 p berekening, 1 p conclusie",
+       "Met de exacte methode (101,9 : 102,12 × 100 = 99,79, dus −0,21%) is het ook goed."
+      ]
+     }
+    ],
+    "tabel": [
+     [
+      "Onderdeel",
+      "Wegingsfactor",
+      "Indexcijfer"
+     ],
+     [
+      "Wonen",
+      "32",
+      "102,8"
+     ],
+     [
+      "Voeding",
+      "18",
+      "105,3"
+     ],
+     [
+      "Vervoer",
+      "16",
+      "98,7"
+     ],
+     [
+      "Overig",
+      "34",
+      "101,4"
+     ]
+    ],
+    "p": 5
+   },
+   {
+    "nr": 3,
+    "titel": "Kredietkosten van Elif",
+    "tekst": "Elif leent €7.500 en betaalt dit terug in 84 maandelijkse termijnen van €98,35.",
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken de totale kredietkosten van deze lening (2 decimalen).",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         761.4
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005
+       }
+      ],
+      "uitw": [
+       "98,35 × 84 = €8.261,40",
+       "8.261,40 − 7.500 = €761,40"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken de kredietkosten in procenten van het geleende bedrag (2 decimalen).",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         10.15
+        ],
+        "p": 2,
+        "eenh": "%",
+        "tol": 0.005
+       }
+      ],
+      "uitw": [
+       "761,40 : 7.500 × 100 = 10,15%"
+      ]
+     }
+    ],
+    "p": 3
+   }
+  ]
+ },
+ "toetsen": {
+  "t1": {
+   "n": 1,
+   "th": "Basis",
+   "rk": "Basis",
+   "min": 50,
+   "mc": "mc_basis",
+   "open": null,
+   "rek": "rek_basis"
+  },
+  "t2": {
+   "n": 2,
+   "th": "Verdieping",
+   "rk": "Basis",
+   "min": 50,
+   "mc": "mc_verd",
+   "open": "open_verd",
+   "rek": "rek_basis"
+  },
+  "t3": {
+   "n": 3,
+   "th": "Basis",
+   "rk": "Verdieping",
+   "min": 35,
+   "mc": "mc_basis",
+   "open": null,
+   "rek": "rek_verd"
+  },
+  "t4": {
+   "n": 4,
+   "th": "Verdieping",
+   "rk": "Verdieping",
+   "min": 35,
+   "mc": "mc_verd",
+   "open": "open_verd",
+   "rek": "rek_verd"
+  }
+ }
+}

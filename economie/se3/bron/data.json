@@ -1230,6 +1230,61 @@
    "Vliegen geeft veel CO₂-uitstoot en geluidsoverlast. Die kosten zitten niet in de ticketprijs."
   ],
   [
+   "1.1",
+   "Een sportmerk sponsort een jeugdtoernooi en verkoopt zijn kleding alleen via een eigen webwinkel. Welke twee P's komen hier samen aan bod?",
+   [
+    "Promotie en plaats",
+    "Prijs en personeel",
+    "Product en presentatie",
+    "Plaats en prijs"
+   ],
+   "Sponsoring is promotie. De webwinkel gaat over waar je het product verkoopt: plaats."
+  ],
+  [
+   "1.1",
+   "Waarom past reclame op TikTok bij een bedrijf dat jongeren als doelgroep heeft?",
+   [
+    "Daar zitten veel jongeren, dus de doelgroep wordt bereikt",
+    "Op TikTok kan een bedrijf zijn producten goedkoper maken",
+    "Jongeren kopen alleen producten die op TikTok worden getoond",
+    "Reclame op TikTok is volgens de wet voor jongeren verplicht"
+   ],
+   "Bij promotie kies je de media waarmee je je doelgroep bereikt."
+  ],
+  [
+   "1.1",
+   "Waarom horen de kosten van luchtvervuiling door vliegen bij de maatschappelijke kosten?",
+   [
+    "Ze zitten niet in de prijs van het ticket, iemand anders betaalt ze",
+    "De vlieger betaalt ze zelf altijd via de prijs van het ticket",
+    "Het zijn kosten die de luchtvaartmaatschappij aan het CBS betaalt",
+    "Het zijn kosten die alleen gelden voor de piloot en de bemanning"
+   ],
+   "Maatschappelijke kosten zitten niet in de prijs: de samenleving betaalt ze, bijvoorbeeld via luchtvervuiling."
+  ],
+  [
+   "1.1",
+   "Wat is het verschil tussen merkreclame en ideële reclame?",
+   [
+    "Merkreclame maakt een merk bekend, ideële reclame steunt een goed doel",
+    "Merkreclame is voor een goed doel, ideële reclame voor een product",
+    "Merkreclame heeft geen winstdoel, ideële reclame heeft dat wel",
+    "Merkreclame staat alleen op tv, ideële reclame alleen online"
+   ],
+   "Merkreclame wil dat je het merk onthoudt. Ideële reclame is reclame voor een idee of goed doel, zonder winstdoel."
+  ],
+  [
+   "1.1",
+   "Winkel A laat A-merken zien in een chique etalage, winkel B zet producten voor de massa neer. Welke P verschilt hier?",
+   [
+    "Presentatie",
+    "Personeel",
+    "Promotie",
+    "Plaats"
+   ],
+   "Presentatie is hoe een winkel zijn producten laat zien: luxe of juist massa."
+  ],
+  [
    "1.2",
    "Wat is het brutoloon?",
    [
@@ -1398,21 +1453,76 @@
    "1.2",
    "Wat is prijscompensatie?",
    [
-    "Een loonsverhoging om de inflatie te compenseren",
-    "Korting op producten in de uitverkoop",
-    "Geld terug als een product kapotgaat",
-    "Een extra belasting op hogere prijzen"
+    "Loonsverhoging om de inflatie te compenseren",
+    "Korting op producten tijdens de uitverkoop",
+    "Geld terug als een product kapot is gegaan",
+    "Een extra belasting op alle hogere prijzen"
    ],
    "Zo houden werknemers hun koopkracht."
+  ],
+  [
+   "1.2",
+   "Het loon van Noor stijgt van €2.400 naar €2.472. Hoeveel procent is haar loon gestegen?",
+   [
+    "3%",
+    "2,4%",
+    "72%",
+    "30%"
+   ],
+   "€2.472 − €2.400 = €72. €72 : €2.400 × 100 = 3%."
+  ],
+  [
+   "1.2",
+   "Mo heeft een brutoloon van €2.800, betaalt €546 aan belastingen en premies en krijgt €120 toeslag. Wat is zijn besteedbaar inkomen?",
+   [
+    "€2.374",
+    "€2.254",
+    "€2.920",
+    "€2.134"
+   ],
+   "Netto: €2.800 − €546 = €2.254. Besteedbaar: €2.254 + €120 = €2.374."
+  ],
+  [
+   "1.2",
+   "Een salaris van €2.000 stijgt eerst met 5% en daarna met 2%. Wat is het salaris daarna?",
+   [
+    "€2.142",
+    "€2.140",
+    "€2.100",
+    "€2.147"
+   ],
+   "€2.000 × 1,05 × 1,02 = €2.142. Je mag de percentages niet optellen (dat geeft €2.140)."
+  ],
+  [
+   "1.2",
+   "Waarom is de gelijkheidslijn in de Lorenzcurve een rechte diagonaal?",
+   [
+    "Bij gelijke verdeling heeft 20% van de mensen 20% van het inkomen",
+    "Op de diagonaal heeft iedereen precies hetzelfde beroep gekozen",
+    "De diagonaal laat zien dat de armste mensen het meeste verdienen",
+    "De diagonaal toont dat de prijzen in het land elk jaar gelijk stijgen"
+   ],
+   "Als iedereen evenveel verdient, hoort bij elk percentage mensen hetzelfde percentage van het inkomen."
+  ],
+  [
+   "1.2",
+   "Je loon stijgt van €2.000 naar €2.060 en de inflatie is 2%. Met hoeveel procent stijgt je reële inkomen ongeveer?",
+   [
+    "1%",
+    "3%",
+    "5%",
+    "2%"
+   ],
+   "€2.060 − €2.000 = €60. €60 : €2.000 × 100 = 3%. Reëel: 3% − 2% = 1%."
   ],
   [
    "1.3",
    "Wat is welvaart?",
    [
-    "Hoe goed je met je middelen in je behoeften kunt voorzien",
-    "Hoe gelukkig en tevreden je je meestal voelt",
-    "Hoeveel goede vrienden je om je heen hebt",
-    "Hoe gezond je bent en hoe vaak je sport"
+    "Hoe goed je met je middelen in je behoeften voorziet",
+    "Hoe gelukkig en tevreden je je meestal voelt in je leven",
+    "Hoeveel goede vrienden en familie je om je heen hebt",
+    "Hoe gezond je bent en hoe vaak je in de week sport"
    ],
    "Welvaart gaat over je middelen: wat kun je kopen en gebruiken?"
   ],
@@ -1542,9 +1652,9 @@
    "Het indexcijfer van een product is 112 (basisjaar = 100). Wat betekent dit?",
    [
     "De prijs is 12% hoger dan in het basisjaar",
-    "De prijs is nu €112",
-    "De prijs is 112% gestegen",
-    "De prijs is 12% gedaald"
+    "De prijs is 112% hoger dan in het basisjaar",
+    "De prijs is nu €112 in plaats van €100",
+    "De prijs is 12% lager dan in het basisjaar"
    ],
    "112 − 100 = 12, dus 12% hoger."
   ],
@@ -1585,12 +1695,67 @@
    "1.3",
    "Waarom gebruiken economen indexcijfers?",
    [
-    "Je kunt veranderingen ten opzichte van een basisjaar makkelijk vergelijken",
+    "Je kunt veranderingen ten opzichte van een basisjaar vergelijken",
     "Indexcijfers zijn altijd precies gelijk aan de prijs in euro's",
-    "Indexcijfers laten alleen zien wanneer prijzen dalen",
+    "Indexcijfers laten alleen zien wanneer prijzen echt dalen",
     "Indexcijfers vervangen de euro als betaalmiddel in de winkel"
    ],
    "Met indexcijfers zie je in één oogopslag hoeveel procent iets is veranderd."
+  ],
+  [
+   "1.3",
+   "Land A heeft een BBP van €600 miljard en 12 miljoen inwoners, land B €450 miljard en 6 miljoen inwoners. Welk land heeft het hoogste BBP per inwoner?",
+   [
+    "Land B, met €75.000 per inwoner",
+    "Land A, met €50.000 per inwoner",
+    "Land B, met €7.500 per inwoner",
+    "Land A, met €75.000 per inwoner"
+   ],
+   "A: €600 miljard : 12 miljoen = €50.000. B: €450 miljard : 6 miljoen = €75.000. Land A heeft wel het hoogste BBP, maar land B het hoogste BBP per inwoner."
+  ],
+  [
+   "1.3",
+   "Een land heeft een hoog BBP per inwoner, maar veel mensen voelen zich onveilig en ongezond. Wat zegt dit over welvaart en welzijn?",
+   [
+    "Hoge welvaart, maar een laag welzijn",
+    "Lage welvaart en een hoog welzijn",
+    "Hoge welvaart en een hoog welzijn",
+    "Lage welvaart en een laag welzijn"
+   ],
+   "Het BBP zegt iets over welvaart (middelen). Gezondheid en veiligheid horen bij welzijn."
+  ],
+  [
+   "1.3",
+   "De prijs van een broodje is €2,50 in het basisjaar. Nu is het indexcijfer 120. Wat kost het broodje nu?",
+   [
+    "€3,00",
+    "€2,70",
+    "€5,00",
+    "€2,62"
+   ],
+   "Het indexcijfer 120 betekent 20% hoger: €2,50 × 120 : 100 = €3,00."
+  ],
+  [
+   "1.3",
+   "Een tv kost nu €660. Het indexcijfer is 110 (basisjaar = 100). Wat kostte de tv in het basisjaar?",
+   [
+    "€600",
+    "€726",
+    "€650",
+    "€1.100"
+   ],
+   "Terugrekenen: prijs : indexcijfer × 100 = €660 : 110 × 100 = €600."
+  ],
+  [
+   "1.3",
+   "Je hebt €50 en wilt zowel een concert van €50 als schoenen van €50. Wat laat dit zien?",
+   [
+    "Je middelen zijn schaars, dus je moet prioriteiten stellen",
+    "Je behoeften zijn beperkt, dus je kunt alles kopen",
+    "Beide goederen zijn vrije goederen, dus je hoeft niet te kiezen",
+    "Het BBP van je land is te laag, dus je koopt niets"
+   ],
+   "Je middelen, zoals geld, zijn beperkt. Je kunt niet alles hebben, dus je kiest wat het belangrijkst is."
   ],
   [
    "1.4",
@@ -1651,10 +1816,10 @@
    "1.4",
    "Wat is koopkracht?",
    [
-    "De hoeveelheid goederen en diensten die je met je inkomen kunt kopen",
-    "Het bedrag dat op je spaarrekening bij de bank staat",
-    "Je brutoloon voordat er belasting en premies af gaan",
-    "De prijs die je in de winkel voor een product betaalt"
+    "Wat je aan goederen en diensten met je inkomen kunt kopen",
+    "Het bedrag dat op je spaarrekening bij je eigen bank staat",
+    "Je brutoloon voordat er belasting en premies van af gaan",
+    "De prijs die je in de winkel voor een product moet betalen"
    ],
    "Je koopkracht hangt af van je inkomen én van de prijzen."
   ],
@@ -1695,10 +1860,10 @@
    "1.4",
    "Waarom willen vakbonden prijscompensatie?",
    [
-    "Zodat de koopkracht van werknemers niet daalt",
-    "Zodat bedrijven meer winst kunnen maken",
-    "Zodat de prijzen in de winkels dalen",
-    "Zodat de rente op spaargeld stijgt"
+    "Zodat werknemers hun koopkracht behouden",
+    "Zodat bedrijven daardoor meer winst kunnen maken",
+    "Zodat de prijzen in de winkels daardoor gaan dalen",
+    "Zodat de rente op spaargeld daardoor gaat stijgen"
    ],
    "Zonder prijscompensatie kunnen werknemers minder kopen van hun loon."
   ],
@@ -1778,6 +1943,61 @@
     "Lonen stijgen in werkelijkheid nooit echt"
    ],
    "Stijgen de prijzen met 6%, dan daalt je koopkracht ondanks de loonstijging."
+  ],
+  [
+   "1.4",
+   "De lonen stijgen met 3% en de prijzen met 5%. Wat gebeurt er met de koopkracht?",
+   [
+    "Die daalt: de reële loonstijging is ongeveer −2%",
+    "Die stijgt: de reële loonstijging is ongeveer +2%",
+    "Die daalt: de reële loonstijging is ongeveer −8%",
+    "Die stijgt: de reële loonstijging is ongeveer +8%"
+   ],
+   "Reëel = nominaal − inflatie: 3% − 5% = −2%."
+  ],
+  [
+   "1.4",
+   "Het CPI is 104 (basisjaar = 100). Een jaar later is het CPI 107,12. Hoeveel procent bedroeg de inflatie in dat jaar?",
+   [
+    "3%",
+    "7,12%",
+    "3,12%",
+    "4%"
+   ],
+   "107,12 − 104 = 3,12. 3,12 : 104 × 100 = 3%."
+  ],
+  [
+   "1.4",
+   "Waarom kan prijscompensatie voor iedereen inflatie juist aanjagen?",
+   [
+    "Hogere lonen maken producten duurder, waardoor er nieuwe looneisen komen",
+    "Hogere lonen maken producten goedkoper, waardoor de vraag weer stijgt",
+    "Hogere lonen zorgen dat de rente daalt, waardoor iedereen gaat lenen",
+    "Hogere lonen zorgen voor deflatie, waardoor de prijzen weer stijgen"
+   ],
+   "Dit is een loon-prijsspiraal: lonen en prijzen jagen elkaar op."
+  ],
+  [
+   "1.4",
+   "Waarom stellen consumenten bij deflatie grote aankopen uit en wat is het gevolg voor bedrijven?",
+   [
+    "Het wordt later goedkoper, dus bedrijven verkopen minder",
+    "Het wordt later duurder, dus bedrijven verkopen minder",
+    "Het wordt later goedkoper, dus bedrijven verkopen meer",
+    "Het wordt later duurder, dus bedrijven verkopen meer"
+   ],
+   "Als iedereen wacht met kopen, verkopen bedrijven minder en gaan er banen verloren."
+  ],
+  [
+   "1.4",
+   "In een gewogen CPI telt huur zwaarder mee dan kauwgom. De prijs van kauwgom verdubbelt, de huur blijft gelijk. Wat verwacht je van het CPI?",
+   [
+    "Het stijgt, maar slechts een klein beetje",
+    "Het verdubbelt, net als de prijs van kauwgom",
+    "Het blijft helemaal gelijk, want de huur blijft gelijk",
+    "Het daalt licht, omdat de huur zwaarder weegt"
+   ],
+   "Kauwgom heeft een lage wegingsfactor, dus een prijsstijging ervan werkt maar weinig door in het CPI."
   ],
   [
    "2.1",
@@ -1954,6 +2174,61 @@
     "Dat is verplicht van het Nibud voor elk huishouden"
    ],
    "Bijvoorbeeld alles per maand."
+  ],
+  [
+   "2.1",
+   "Maaike verdient €60 per week met haar bijbaan. Per maand betaalt ze €40 abonnement en €25 contributie. Hoeveel houdt ze per maand over?",
+   [
+    "€195",
+    "€175",
+    "€260",
+    "€325"
+   ],
+   "€60 × 52 : 12 = €260 per maand. €260 − €40 − €25 = €195. Rekenen met 4 weken geeft het foute antwoord €175."
+  ],
+  [
+   "2.1",
+   "Je reserveert €720 voor een laptop over 9 maanden. Hoeveel is dat ongeveer per week?",
+   [
+    "€18,46",
+    "€13,85",
+    "€80,00",
+    "€20,00"
+   ],
+   "€720 : 9 = €80 per maand. €80 × 12 : 52 = ongeveer €18,46 per week."
+  ],
+  [
+   "2.1",
+   "Je krijgt €240 per maand en hebt €135 vaste lasten per maand plus €25 per week aan boodschappen. Wat is het resultaat van je budget?",
+   [
+    "Een tekort van ongeveer €3,33 per maand",
+    "Een overschot van ongeveer €5 per maand",
+    "Precies in balans: inkomsten = uitgaven",
+    "Een tekort van ongeveer €20 per maand"
+   ],
+   "€25 × 52 : 12 = €108,33 per maand. €240 − €135 − €108,33 = −€3,33: een tekort."
+  ],
+  [
+   "2.1",
+   "Waarom is een doorlopend krediet geen goede oplossing voor een tekort in je begroting?",
+   [
+    "Je lost het tekort niet op, want je moet de schuld later met rente terugbetalen",
+    "Je mag een doorlopend krediet alleen gebruiken voor je vaste lasten",
+    "Een doorlopend krediet heeft altijd een lagere rente dan een spaarrekening",
+    "Met een doorlopend krediet verdwijnt je tekort na een paar maanden vanzelf"
+   ],
+   "Een tekort los je op door minder uit te geven of meer te verdienen. Lenen maakt het later duurder."
+  ],
+  [
+   "2.1",
+   "Wat is het verschil tussen je zorgverzekering en een nieuwe wasmachine als uitgave?",
+   [
+    "Een vaste last tegenover een incidentele uitgave",
+    "Een incidentele uitgave tegenover een vaste last",
+    "Een dagelijkse uitgave tegenover een vaste last",
+    "Allebei zijn ze een vaste last, zonder verschil"
+   ],
+   "Een zorgverzekering betaal je met vaste regelmaat. Een wasmachine is een grote uitgave die je niet vaak doet."
   ],
   [
    "2.2",
@@ -2176,6 +2451,61 @@
    "Over een obligatie krijg je een afgesproken vaste rente."
   ],
   [
+   "2.2",
+   "Je zet €1.500 vast tegen 2% enkelvoudige rente voor 3 jaar. Wat is je eindbedrag?",
+   [
+    "€1.590",
+    "€90",
+    "€1.591,81",
+    "€1.530"
+   ],
+   "Rente: 2 : 100 × 1.500 × 3 = €90. Eindbedrag: €1.500 + €90 = €1.590."
+  ],
+  [
+   "2.2",
+   "Je zet €1.000 twee jaar vast tegen 5% rente. Hoeveel meer rente levert samengestelde rente op dan enkelvoudige rente?",
+   [
+    "€2,50",
+    "€5,00",
+    "€102,50",
+    "€0,25"
+   ],
+   "Samengesteld: €1.000 × 1,05² − €1.000 = €102,50. Enkelvoudig: 5 : 100 × 1.000 × 2 = €100. Verschil: €2,50."
+  ],
+  [
+   "2.2",
+   "Een spaarrekening geeft 1,5% rente en de inflatie is 0,5%. Wat is de reële rente en wat betekent die?",
+   [
+    "+1%: je kunt er later meer van kopen",
+    "−1%: je kunt er later minder van kopen",
+    "+2%: je kunt er later meer van kopen",
+    "−2%: je kunt er later minder van kopen"
+   ],
+   "Reële rente = nominale rente − inflatie = 1,5% − 0,5% = 1%. Je spaargeld groeit sneller dan de prijzen."
+  ],
+  [
+   "2.2",
+   "Anna belegt €500 en haar belegging is nu €450 waard. Bart spaart €500 een jaar tegen 2%. Wie heeft er nu meer en hoeveel?",
+   [
+    "Bart, €60 meer",
+    "Anna, €60 meer",
+    "Bart, €10 meer",
+    "Bart, €50 meer"
+   ],
+   "Bart: €500 × 1,02 = €510. Anna: €450. Verschil: €510 − €450 = €60."
+  ],
+  [
+   "2.2",
+   "Waarom kiest iemand die geen risico wil lopen eerder voor een spaardeposito dan voor aandelen?",
+   [
+    "De rente ligt vast, maar een aandeel kan in koers dalen",
+    "Bij een spaardeposito kun je op elk moment bij je geld",
+    "Een aandeel levert altijd minder op dan een spaardeposito",
+    "Bij aandelen betaal je rente aan de bank over het bedrag"
+   ],
+   "Bij een spaardeposito weet je de opbrengst, bij beleggen kun je geld verliezen als de koers daalt."
+  ],
+  [
    "2.3",
    "Wat is GEEN leenmotief?",
    [
@@ -2201,10 +2531,10 @@
    "2.3",
    "Hoe bereken je de kredietkosten?",
    [
-    "Termijnbedrag × aantal termijnen − krediet",
-    "Krediet × rente × aantal termijnen",
-    "Krediet : aantal termijnen − rente",
-    "Termijnbedrag + krediet − aflossing"
+    "Termijn × aantal termijnen − krediet",
+    "Krediet × rente × het aantal termijnen",
+    "Krediet : aantal termijnen − de rente",
+    "Termijn + krediet − de aflossing"
    ],
    "Eerst bereken je wat je in totaal terugbetaalt, daarna haal je het geleende bedrag eraf."
   ],
@@ -2311,10 +2641,10 @@
    "2.3",
    "Wat is waar over private lease?",
    [
-    "Je betaalt een vast bedrag per maand, maar de auto wordt nooit van jou",
+    "Je betaalt maandelijks vast, maar de auto wordt nooit van jou",
     "De auto is na een jaar betalen helemaal van jou geworden",
     "Je betaalt zelf het onderhoud en de reparaties van de auto",
-    "Het is een soort hypotheek, maar dan voor een auto"
+    "Het is een soort hypotheek, maar dan voor een gewone auto"
    ],
    "Onderhoud, belasting en verzekering zitten in het maandbedrag."
   ],
@@ -2361,6 +2691,61 @@
     "Je krijgt een deel van het geleende geld terug"
    ],
    "In ernstige gevallen kan de rechter beslag leggen op je spullen."
+  ],
+  [
+   "2.3",
+   "Je leent €4.000 en betaalt 36 termijnen van €125. Hoeveel procent van het geleende bedrag zijn de kredietkosten?",
+   [
+    "12,5%",
+    "11,1%",
+    "125%",
+    "112,5%"
+   ],
+   "€125 × 36 = €4.500. Kredietkosten: €4.500 − €4.000 = €500. €500 : €4.000 × 100 = 12,5%."
+  ],
+  [
+   "2.3",
+   "Je koopt een tv van €900 op afbetaling en betaalt 24 termijnen van €50. Wat zijn de kredietkosten?",
+   [
+    "€300",
+    "€1.200",
+    "€850",
+    "€100"
+   ],
+   "€50 × 24 = €1.200. Kredietkosten: €1.200 − €900 = €300."
+  ],
+  [
+   "2.3",
+   "Wat gebeurt er aan het einde van een private leasecontract?",
+   [
+    "Niets: je levert de auto in, want hij is nooit van jou geworden",
+    "De auto, want je hebt hem tijdens de looptijd helemaal afbetaald",
+    "Een deel van je geld terug, omdat je het onderhoud zelf betaalde",
+    "Een hypotheek waarbij de auto het onderpand voor de bank is"
+   ],
+   "Bij private lease zitten onderhoud, belasting en verzekering in het maandbedrag, maar de auto wordt nooit van jou."
+  ],
+  [
+   "2.3",
+   "Waarom kun je bij een doorlopend krediet minder goed vooraf zien wat het kost dan bij een persoonlijke lening?",
+   [
+    "De rente is variabel, bij een persoonlijke lening liggen rente en termijnen vast",
+    "De rente is vast, bij een persoonlijke lening verandert de rente elke maand",
+    "De looptijd is vast, bij een persoonlijke lening bepaal je die telkens zelf",
+    "Je mag niets opnemen, bij een persoonlijke lening mag dat tot een grens"
+   ],
+   "Bij een persoonlijke lening ligt alles vooraf vast. Bij een doorlopend krediet mag je steeds opnieuw opnemen en is de rente variabel."
+  ],
+  [
+   "2.3",
+   "Esra wil een keuken van €6.000 kopen en die in 60 maanden met vaste termijnen en een vaste rente terugbetalen. Welke kredietvorm past hierbij?",
+   [
+    "Persoonlijke lening",
+    "Doorlopend krediet",
+    "Salariskrediet",
+    "Hypothecaire lening"
+   ],
+   "Een persoonlijke lening heeft een vaste looptijd, een vaste rente en vaste termijnen."
   ],
   [
    "2.4",
@@ -2477,9 +2862,9 @@
    "Wie vragen geld bij de bank?",
    [
     "Gezinnen en bedrijven die willen lenen",
-    "Spaarders die rente willen",
-    "De ECB in Frankfurt",
-    "Het Nibud voor zijn adviezen"
+    "Spaarders die rente willen ontvangen",
+    "De Europese Centrale Bank in Frankfurt",
+    "Het Nibud voor zijn advies aan gezinnen"
    ],
    "Gezinnen lenen vooral voor consumptiegoederen, bedrijven om te investeren."
   ],
@@ -2570,6 +2955,61 @@
     "Alleen de btw over de leningen die ze geeft"
    ],
    "Daarom moet een bank genoeg verdienen aan het renteverschil en aan andere diensten."
+  ],
+  [
+   "2.4",
+   "Je saldo is €85,40. Je pint €120 en ontvangt €20. Wat is je nieuwe saldo?",
+   [
+    "−€14,60, een debetsaldo",
+    "€14,60, een creditsaldo",
+    "−€34,60, een debetsaldo",
+    "€225,40, een creditsaldo"
+   ],
+   "€85,40 − €120 + €20 = −€14,60. Een negatief saldo is een debetsaldo: je staat rood."
+  ],
+  [
+   "2.4",
+   "De ECB verlaagt de rente. Wat is het meest waarschijnlijke gevolg?",
+   [
+    "Sparen is minder aantrekkelijk en lenen goedkoper, dus men geeft meer uit",
+    "Sparen wordt aantrekkelijker en lenen duurder, dus de bestedingen dalen",
+    "Sparen en lenen worden allebei duurder, dus de bestedingen blijven gelijk",
+    "Banken stoppen met lenen, dus de prijzen in de eurozone dalen sterk"
+   ],
+   "Lage rente maakt lenen goedkoop en sparen onaantrekkelijk, dus mensen geven meer uit."
+  ],
+  [
+   "2.4",
+   "De inflatie in de eurozone is hoog. Hoe kan de ECB de prijsstijging afremmen?",
+   [
+    "Rente omhoog: minder lenen en besteden, dus de vraag naar producten daalt",
+    "Rente omlaag: meer lenen en besteden, dus de vraag naar producten daalt",
+    "Rente omhoog: meer lenen en besteden, dus de vraag naar producten daalt",
+    "Rente omlaag: minder lenen en besteden, dus de vraag naar producten stijgt"
+   ],
+   "Een hogere rente remt de vraag af en dat remt de prijsstijging af."
+  ],
+  [
+   "2.4",
+   "Een bank betaalt spaarders 2% rente en rekent leners 6% rente. Wat verdient de bank in een jaar over €10.000 dat gespaard en helemaal uitgeleend is?",
+   [
+    "€400",
+    "€800",
+    "€600",
+    "€200"
+   ],
+   "Renteverschil: 6% − 2% = 4%. 4 : 100 × €10.000 = €400."
+  ],
+  [
+   "2.4",
+   "Lisa vindt een jas van €80 duurder dan schoenen van €60 en betaalt de jas met haar pinpas. Welke twee geldfuncties gebruikt ze?",
+   [
+    "Rekenmiddel en ruilmiddel",
+    "Spaarmiddel en rekenmiddel",
+    "Ruilmiddel en spaarmiddel",
+    "Ruilmiddel en leenmiddel"
+   ],
+   "Waarden vergelijken is rekenmiddel. Betalen met je pinpas is ruilmiddel."
   ]
  ],
  "SORT": [

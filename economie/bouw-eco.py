@@ -66,9 +66,10 @@ s = src
 mat = {k: [v[0], [["Opdracht", v[1]], ["Nakijkblad", v[2]]]] for k, v in D["MAT"].items()}  # app-formaat
 films = [{"par": "alle", "film": f[0], "k": f[1], "t": f[2], "d": f[3], "lab": f[4], "mode": f[5], "btn": f[6]} for f in D["FILMS"]]
 nv = {}
-exec(open(os.path.join(ROOT, "tools", "niveau.py"), encoding="utf-8").read(), nv)
+exec(open(os.path.join(BRON, "niveau-eco.py"), encoding="utf-8").read(), nv)
 chs = sorted({p["ch"] for p in PARS})
-MT = [[p["id"], p["id"] + " " + p["t"], i] for i, p in enumerate(PARS)]  # w = index in PARS = onderwerp voor de Worker
+ONDW = json.load(open(os.path.join(BRON, "onderwerpen.json"), encoding="utf-8"))
+MT = [[o["paragraaf"], o["paragraaf"] + " " + o["titel"], i] for i, o in enumerate(ONDW)]  # w = index in onderwerpen.json = onderwerp voor de Worker (zelfde volgorde in de Worker)
 MTB = [{"id": str(c), "t": "Hoofdstuk %d" % c} for c in chs]
 for k, v in [("PARS", PARS), ("GOALS", GOALS), ("CHK", D["CHK"]), ("CARDS", D["CARDS"]), ("BANK", D["BANK"]), ("SORT", D["SORT"]),
              ("MAT", mat), ("VERS", D["VERS"]), ("FILMS", films), ("DECK", DECK), ("MT", MT),
@@ -97,7 +98,11 @@ s = rep(s, "De PowerPoint, beelden en vragen per hoofdstuk", "De PowerPoint en d
 s = rep(s, "Flash cards, tijdlijn, oorzaak en gevolg, quiz en games", "Flash cards, formules, rekentrainer, quiz en games")
 # startpagina: paragrafen per hoofdstuk
 blok = "".join('<h3 class="chh"><span class="cn" style="background:var(--p%d)">H%d</span>Hoofdstuk %d<small id="ch%dtxt"></small></h3>\n      <div class="pgrid" id="pgrid%d"></div>\n      ' % (c, c, c, c, c) for c in chs)
-s = rex(s, r'<h3 class="chh">.*?<div class="pgrid" id="pgrid1"></div>\s*', blok)
+s = rex(s, r'<h3 class="chh">.*?<div class="pgrid" id="pgrid1"></div>\s*', "")  # weg van Start ...
+s = rep(s, '<section class="panel" id="les" hidden>\n      <div class="les">', '<section class="panel" id="les" hidden>\n      ' + blok + '<div class="les">')  # ... naar Lesstof
+# klik op een kaart vanuit Lesstof: scroll naar de les zelf
+s = rep(s, 'if(g.dataset.par)cur=g.dataset.par;show(g.dataset.go);}',
+        'if(g.dataset.par)cur=g.dataset.par;show(g.dataset.go);if(g.dataset.par&&g.closest("#les"))document.querySelector("#les .les").scrollIntoView();}')
 s = rep(s, "[1].forEach(function(ch){", "%s.forEach(function(ch){" % json.dumps(chs))
 s = rep(s, ",url('+THUMB(p.img,600)+'),'+p.c+'\"", ",'+p.c+'\"")  # geen kopafbeelding: gradient op kleur
 s = rep(s, "h='<div class=\"rh\">De industriële samenleving</div>'", "h='<div class=\"rh\">Hoofdstuk '+x.ch+'</div>'")
@@ -121,9 +126,24 @@ s = rep(s, """var go=c[2]==="quiz"?' data-golab="quiz" data-qpar="'+c[1]+'"':' d
 s = rep(s, "/* ---------- oefenlab navigatie ---------- */",
         "/* ---------- formule- en rekenlab (eigen scope) ---------- */\nvar RK=(function(){\n" + REKEN.strip() + "\nreturn {setMode:function(m){mode=m;newR();}};\n})();\n\n/* ---------- oefenlab navigatie ---------- */")
 
-# ---------- games: alleen sorteren en memory ----------
-for g in ["kaart", "beeldquiz", "verhaal", "racer"]:
+# ---------- flash cards: richting omkeren ----------
+s = rep(s, '<div class="filters" id="cardFilters"></div>',
+        '<div class="filters" id="cardDir" role="group" aria-label="Richting van de kaarten"><button data-d="0">Begrip → omschrijving</button><button data-d="1">Omschrijving → begrip</button></div>\n          <div class="filters" id="cardFilters"></div>')
+s = rep(s, 'var cardFilter="alle",', 'var cardRev=false;try{cardRev=localStorage.getItem("%s-dir")==="1";}catch(e){}\nvar cardFilter="alle",' % C["key"])
+s = rep(s, "function renderFlash(){\n", """function renderFlash(){
+  document.querySelectorAll("#cardDir button").forEach(function(b){var on=(b.dataset.d==="1")===cardRev;b.className=on?"on":"";b.setAttribute("aria-pressed",on);});
+""")
+s = rep(s, """aria-label="Begrip: '+c[1]+'">""", """aria-label="'+(cardRev?"Omschrijving: "+c[2].replace(/"/g,"&quot;"):"Begrip: "+c[1])+'">""")
+s = rep(s, "<strong>'+c[1]+'</strong><small>", "'+(cardRev?'<span style=\"font-size:14.5px;line-height:1.35;margin-top:6px;overflow:auto\">'+c[2]+'</span>':'<strong>'+c[1]+'</strong>')+'<small>")
+s = rep(s, """<div class="b"><div>'+c[2]+'</div>""", """<div class="b">'+(cardRev?'<strong style="font-size:18px;color:var(--plum)">'+c[1]+'</strong>':'<div>'+c[2]+'</div>')+'""")
+s = rep(s, 'cf.addEventListener("click"', """document.getElementById("cardDir").addEventListener("click",function(e){var d=e.target.dataset.d;if(d===undefined)return;cardRev=d==="1";try{localStorage.setItem("%s-dir",d);}catch(x){}renderFlash();});
+cf.addEventListener("click\"""" % C["key"])
+
+# ---------- games: sorteren, memory en EDU-Racer ----------
+for g in ["kaart", "beeldquiz", "verhaal"]:
     s = rex(s, r"\s*'<a class=\"gtile\" href=\"" + g + r"\.html\".*?</a>'\+\n", "\n")
+s = rex(s, r"\s*'<a class=\"gtile\" href=\"racer\.html\".*?</a>'\+\n",
+        """\n   '<a class="gtile" href="../apps/jaar-4_se-h1-h2-h8_1.html"><span class="gico">🏎️</span><b>EDU-Racer</b><span>Race en tank bij elk station bij met vragen over hoofdstuk 1 en 2.</span><em>Vragen nog niet door de docent gecontroleerd</em></a>'+\n""")
 s = rep(s, '"gs3-"+k', '"%s-"+k' % C["key"], 2)
 s = rep(s, 'var KEY="gs3-ind-app-v1"', 'var KEY="%s"' % C["key"])
 # Leg uit: de AI-nakijker van de Worker kent alleen de Geschiedenis-lesstof; hier altijd de lokale kernwoordencontrole
@@ -139,19 +159,20 @@ s = rep(s, '"deck-"+p.id', '"deck-%s-"+p.id' % name)
 # ---------- oefentoetsen: vier versies als kaarten met Toets en Nakijkblad ----------
 s = rex(s, r'<div class="eyebrow">Oefentoetsen</div>.*?id="pdfLinks" hidden></p>',
         '<div class="eyebrow">Oefentoetsen</div><h2>Oefentoetsen met nakijkblad</h2>\n'
-        '        <p class="muted" style="margin:2px 0 12px;font-size:14px;max-width:700px">Maak de toets op papier, zonder boek en zonder hulp, met je rekenmachine. Kijk daarna na met het nakijkblad. Elke toets opent in een nieuw tabblad.</p>\n'
+        '        <p class="muted" style="margin:2px 0 12px;font-size:14px;max-width:700px">Maak de toets digitaal, met klok, zonder boek en zonder hulp (je rekenmachine mag). Meerkeuze en rekenen kijken zichzelf na met het nakijkblad van je docent, bij de open vragen kijkt de AI mee. Liever op papier? Gebruik dan de kleine links onder de toets.</p>\n'
         '        <div class="vgrid" id="versList"></div>')
 s = rex(s, r"function loadToets\(\)\{.*?\n\}\n", """function loadToets(){
   var el=document.getElementById("versList");if(!el||el.firstChild)return;
   el.innerHTML=VERS.map(function(v){return '<div class="vcard"><h3>Toets '+v.n+'</h3><div class="lvls"><i class="'+(v.th==="Verdieping"?"v":"")+'">Theorie '+v.th.toLowerCase()+'</i><i class="'+(v.rk==="Verdieping"?"v":"")+'">Rekenen '+v.rk.toLowerCase()+'</i></div>'+
     '<p class="muted" style="margin:0;font-size:13.5px">'+v.meta+'</p><p class="muted" style="margin:0;font-size:13px">'+v.min+' minuten · '+v.pts+' punten</p>'+
-    '<div class="row" style="margin-top:auto;padding-top:6px"><a class="btn" target="_blank" rel="noopener" href="'+VIEW(v.toets)+'">Toets ↗</a><a class="btn ghost" target="_blank" rel="noopener" href="'+VIEW(v.nk)+'">Nakijkblad ↗</a></div></div>';}).join("");
+    '<div class="row" style="margin-top:auto;padding-top:6px"><a class="btn" href="toets.html?t=t'+v.n+'">Maak de toets digitaal</a></div>'+
+    '<p class="muted" style="margin:6px 0 0;font-size:12.5px">Op papier: <a target="_blank" rel="noopener" href="'+VIEW(v.toets)+'">toets ↗</a> · <a target="_blank" rel="noopener" href="'+VIEW(v.nk)+'">Nakijkblad ↗</a></p></div>';}).join("");
 }
 """)
 s = rep(s, "</style>", ".vgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:12px}\n"
         ".vcard{display:flex;flex-direction:column;gap:6px;border:1.5px solid var(--line);border-radius:14px;padding:14px;background:#fff}.vcard h3{margin:0}\n</style>")
 
-# ---------- toets op maat: 8 onderwerpen = de paragrafen, twee blokken, vak meesturen ----------
+# ---------- toets op maat: 24 onderwerpen (onderwerpen.json, 3 per paragraaf), twee blokken, vak meesturen ----------
 s = rep(s, "var MT_open={},", "var MTB=%s;\nvar MT_open={}," % json.dumps(MTB, ensure_ascii=False))
 s = rep(s, "PARS.map(function(p){\n    var ids=alleIdx().filter(function(i){return MT[i][0]===p.id;})",
         "MTB.map(function(p){\n    var ids=alleIdx().filter(function(i){return MT[i][0].charAt(0)===p.id;})")
@@ -182,7 +203,7 @@ s = re.sub(r'(src|href)="([^"]+)"', fix_path, s)
 assert 'src="../../ai.js"' in s and 'src="../../nakijker.js"' in s
 
 # ---------- geen Geschiedenis meer ----------
-for gone in ["racer.html", "nakijken.html", "toets.html?t=", "spotprent", "doeboek", "kaart.html", "beeldquiz", "verhaal.html", "presenteer.html",
+for gone in ["racer.html", "nakijken.html", "toets.html?t=t1", "toets.html?t=t2", "toets.html?t=t3", "spotprent", "doeboek", "kaart.html", "beeldquiz", "verhaal.html", "presenteer.html",
              "Boekje 1", "boekje-1", "industri", "Engeland", "Geschiedenis", "tlCard", "cgCard", "newT(", "newC(", "gs3-"]:
     assert gone not in s, gone
 for need in ['id="lab-formule"', 'id="lab-reken"', 'vak:"eco4"', C["key"], "../h.html?p=jaar-4%2Fse-h1-h2-h8", 'id="versList"']:

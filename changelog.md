@@ -1,3 +1,11 @@
+## 2026-10-20 · Economie SE3: verbeteringen na jouw notities
+
+- **Economie-pagina**: de EDU-Racer staat niet meer op de pagina SE3 H1, H2 (staat nu als tegel bij Games in de leeromgeving); onder de kaart "Open de leeromgeving" staat een kopje Lesstof.
+- **Leeromgeving** (`bouw-eco.py`): de paragraafkaarten staan op het tabblad Lesstof in plaats van op Start; de rekentrainer toont geen formule meer bij de opgave (alleen in de uitleg); flash cards hebben een schakelaar Begrip → omschrijving / omschrijving → begrip.
+- **Quiz**: eigen niveau-indeling voor Economie (`bron/niveau-eco.py`), 40 nieuwe vragen op Uitdaging uit de lesstof (179 vragen: 90 Basis, 89 Uitdaging), 9 vragen herschreven waar het juiste antwoord merkbaar het langste was.
+- **Oefentoetsen digitaal**: `economie/se3/toets.html?t=t1..t4` (gebouwd met `economie/bouw-toets.py` uit `bron/toetsen.json`): klok, meerkeuze, rekenopgaven nagekeken tegen het nakijkblad, open vragen nagekeken door de AI (`vak:"economie"`). Opties van 6 meerkeuzevragen zijn gelijk getrokken in lengte (op verzoek).
+- **Toets op maat**: 24 onderwerpen (3 per paragraaf, uit de leerdoelen, `bron/onderwerpen.json`) in plaats van 8. Worker aangepast en gedeployd (kent de 24 onderwerpen; controleronde keurt vragen af waarvan de getallen niet kloppen). Opgeslagen keuze van een leerling met de oude 8 onderwerpen wordt anders gelezen.
+
 # Changelog
 
 ## 2026-10-20 · Economie jaar 4 SE3 (H1, H2): volledige leeromgeving
