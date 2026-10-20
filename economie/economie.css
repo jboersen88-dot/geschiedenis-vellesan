@@ -114,3 +114,11 @@ footer{color:var(--muted);font-size:13px;padding:30px 0 50px}
 .gal img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
 .gal span{display:block;padding:8px 10px;font-size:13px;line-height:1.35;color:var(--muted)}
 @media (hover:hover) and (pointer:fine){.gal a:hover{transform:translateY(-2px);box-shadow:0 12px 26px -18px rgba(31,95,78,.6)}}
+
+/* kaart naar de volledige leeromgeving */
+.leerkaart{display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:linear-gradient(135deg,var(--green),var(--green-d));color:#fff;border-radius:22px;padding:22px 24px;margin:0 0 22px}
+.leerkaart h2{color:#fff;font-size:clamp(22px,3.4vw,30px);margin:4px 0 6px}
+.leerkaart p{margin:0;max-width:640px;opacity:.92}
+.leerkaart .eyebrow{color:var(--coral)}
+.leerkaart .btn{background:var(--coral);color:#201a14}
+.leerkaart[hidden]{display:none}

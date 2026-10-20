@@ -14,7 +14,9 @@ var THEMA={"jaar-2/mavo/hoofdstuk-0-rekenvaardigheden":"rekenen","jaar-2/mavo/ho
   "jaar-4/hoofdstuk-0-rekenvaardigheden":"rekenen","jaar-4/hoofdstuk-1-verdien-je-genoeg":"inkomen","jaar-4/hoofdstuk-2-geld-moet-rollen":"geld","jaar-4/se-h1-h2-h8":"toets","jaar-4/hoofdstuk-3":"winst","jaar-4/hoofdstuk-4-aan-het-werk":"werk","jaar-4/hoofdstuk-5-kan-de-overheid-dat-regelen":"overheid","jaar-4/hoofdstuk-6-de-overheid-en-ons-inkomen":"inkomen","jaar-4/se-h5-en-h6":"toets","jaar-4/hoofdstuk-7":"wereldhandel","jaar-4/hoofdstuk-8":"welvaart","jaar-4/se4":"toets","jaar-4/se6":"toets","jaar-4/eindexamen":"toets"};
 /* pagina's waar op meneerboersen.nl een eigen lesapp in staat (kopie in apps/) */
 var APPS={"jaar-2/mavo/hoofdstuk-1":[["Lesapp","jaar-2_mavo_hoofdstuk-1.html"]],"jaar-2/mavo/hoofdstuk-2":[["Lesapp","jaar-2_mavo_hoofdstuk-2.html"]],"jaar-2/mavo/hoofdstuk-3-aan-het-werk":[["Lesapp","jaar-2_mavo_hoofdstuk-3-aan-het-werk.html"]],"jaar-2/mavo/hoofdstuk-4":[["Lesapp","jaar-2_mavo_hoofdstuk-4.html"]],
-  "jaar-4/hoofdstuk-1-verdien-je-genoeg":[["Lesapp","jaar-4_hoofdstuk-1-verdien-je-genoeg.html"]],"jaar-4/hoofdstuk-2-geld-moet-rollen":[["Lesapp","jaar-4_hoofdstuk-2-geld-moet-rollen.html"]],"jaar-4/se-h1-h2-h8":[["SE3-app","jaar-4_se-h1-h2-h8.html"],["EDU-Racer","jaar-4_se-h1-h2-h8_1.html"]],"jaar-4/hoofdstuk-3":[["Lesapp","jaar-4_hoofdstuk-3.html"]]};
+  "jaar-4/hoofdstuk-1-verdien-je-genoeg":[["Lesapp","jaar-4_hoofdstuk-1-verdien-je-genoeg.html"]],"jaar-4/hoofdstuk-2-geld-moet-rollen":[["Lesapp","jaar-4_hoofdstuk-2-geld-moet-rollen.html"]],"jaar-4/se-h1-h2-h8":[["EDU-Racer","jaar-4_se-h1-h2-h8_1.html"]],"jaar-4/hoofdstuk-3":[["Lesapp","jaar-4_hoofdstuk-3.html"]]};
+/* pagina's met een eigen volledige leeromgeving (zelfde opzet als de Geschiedenis-boekjes): [link, titel, tekst] */
+var LEEROMG={"jaar-4/se-h1-h2-h8":["se3/app.html","Open de leeromgeving SE3","Dia's per paragraaf, begrippen, leerdoelen, rekenen en formules, quiz, games en een toets op maat die de AI voor je nakijkt. Werkt ook op je telefoon en iPad."]};
 /* eigen beelden per hoofdstuk (AI-illustraties van de docent), gegroepeerd per paragraaf */
 var BEELDEN={"jaar-2/mavo/hoofdstuk-2":[
   ["2.1 Jouw inkomen en uitgaven",[["maandlasten","Vaste lasten en rekeningen op een rij"],["begroting","Een begroting maken voor het hele jaar"],["boodschappen","Uitgaven aan de dagelijkse boodschappen"]]],
@@ -94,9 +96,13 @@ function hoofdstuk(){
   var apps=(APPS[p.pad]||[]).map(function(a){return '<section class="sec"><h2>'+esc(a[0])+'</h2><iframe class="app" src="apps/'+a[1]+'" title="'+esc(a[0]+" "+t)+'" loading="lazy"></iframe><p><a class="btn ghost" href="apps/'+a[1]+'" target="_blank" rel="noopener">Open op volledig scherm</a></p></section>';}).join("");
   var h=top(' / <a href="'+jaarUrl(j)+'">'+esc(j.titel)+'</a> / <a href="'+jaarUrl(j,n)+'">'+esc(n.titel)+'</a> / '+esc(t))+'<main class="wrap"><section class="hero"><img src="img/'+(THEMA[p.pad]||j.img)+'.jpg" alt="" fetchpriority="high"><div class="in"><div class="eyebrow">Economie · '+esc(naam(j,n))+'</div><h1>'+esc(t)+'</h1><p>'+esc(telling(p))+'</p></div></section>';
   if(chips.length>1)h+='<nav class="chips" aria-label="Onderdelen van deze pagina">'+chips.join("")+'</nav>';
+  var lo=LEEROMG[p.pad];
+  if(lo)h+='<section class="sec leerkaart"><div><div class="eyebrow">Nieuw · alles op één plek</div><h2>'+esc(lo[1])+'</h2><p>'+esc(lo[2])+'</p></div><a class="btn" href="'+lo[0]+'">Open de leeromgeving →</a></section>';
   h+=apps+beelden(p.pad)+body+'<p><a class="btn ghost" href="'+jaarUrl(j,n)+'">← Alle hoofdstukken van '+esc(naam(j,n))+'</a></p></main>'+voet();
   h+='<dialog class="viewer" id="viewer" aria-label="Bestand bekijken"><div class="bar"><b id="vtitel"></b><a class="btn ghost" id="vopen" target="_blank" rel="noopener">Open in Drive</a><button class="btn" id="vdicht">Sluiten</button></div><iframe id="vframe" title="Bestand" allow="autoplay; fullscreen"></iframe></dialog>';
-  document.body.innerHTML=h;}
+  document.body.innerHTML=h;
+  var lk=document.querySelector(".leerkaart");/* kaart pas tonen als de leeromgeving er echt is */
+  if(lk){lk.hidden=true;fetch(lo[0],{method:"HEAD"}).then(function(r){if(r.ok)lk.hidden=false;}).catch(function(){});}}
 /* Google Sites gebruikt koppen ook voor gewone zinnen: alleen korte koppen of paragraafkoppen tellen als kop */
 var PARKOP=/^((paragraaf|hoofdstuk|h)\s*\d|\d+(\.\d+)+|se\s*\d)/i;
 function echteKop(t){return PARKOP.test(t)||(t.length<=40&&!/[.!]$/.test(t)&&!/^(link|klik)/i.test(t)&&!/=/.test(t));}
