@@ -4,25 +4,25 @@
 (function(){
 var GV_NK_URL="https://geschiedenis-nakijker.nakijker-worker.workers.dev"; // Cloudflare Worker (sleutel en lesstof staan daar, niet hier)
 var esc=window.GV_AI?GV_AI.esc:function(t){return String(t).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});};
-/* o: {h:["H1","H2"], vraag, punten:[{t,p}], bron?, antwoord}
+/* o: {h:["H1","H2"], vak? (bv. "economie"), vraag, punten:[{t,p}], bron?, antwoord}
    -> belofte met {status:"ok",...} van het script, of {status:"fout", melding, lokaal?, ...local} */
 function check(o){
   var fb=function(msg){var f=window.GV_AI?GV_AI.local(o.punten.map(function(p){return p.t;}),o.antwoord):{};f.status="fout";f.melding=msg;f.lokaal=true;return f;};
   if(!GV_NK_URL)return Promise.resolve(fb(""));
   var ctl=window.AbortController?new AbortController():null,t=setTimeout(function(){if(ctl)ctl.abort();},45000);
   // geen Content-Type -> geen CORS-preflight
-  return fetch(GV_NK_URL,{method:"POST",body:JSON.stringify({actie:"nakijken",hoofdstukken:o.h,vraag:o.vraag,nakijkpunten:o.punten,bron:o.bron||"",antwoord:o.antwoord}),signal:ctl?ctl.signal:undefined})
+  return fetch(GV_NK_URL,{method:"POST",body:JSON.stringify({actie:"nakijken",hoofdstukken:o.h,vraag:o.vraag,nakijkpunten:o.punten,bron:o.bron||"",antwoord:o.antwoord,vak:o.vak}),signal:ctl?ctl.signal:undefined})
     .then(function(r){return r.json();})
     .then(function(f){return f&&f.status==="ok"?f:fb((f&&f.melding)||"De AI kon nu niet nakijken. Gebruik het nakijkblad.");})
     .catch(function(){return fb("De AI is nu niet bereikbaar. Gebruik het nakijkblad.");})
     .then(function(f){clearTimeout(t);return f;});
 }
-/* Toets op maat: o {onderwerpen:[0..14], mc, open} -> belofte met {status:"ok", mc:[...], open:[...]} of {status:"fout", melding}.
+/* Toets op maat: o {onderwerpen:[0..14], mc, open, vak? (bv. "eco4")} -> belofte met {status:"ok", mc:[...], open:[...]} of {status:"fout", melding}.
    De Worker maakt de vragen uit de lesstof (die staat daar, niet hier) en controleert ze; dat duurt ongeveer een minuut. */
 function maak(o){
   if(!GV_NK_URL)return Promise.resolve({status:"fout",melding:"De toetsmaker staat uit."});
   var ctl=window.AbortController?new AbortController():null,t=setTimeout(function(){if(ctl)ctl.abort();},170000);
-  return fetch(GV_NK_URL,{method:"POST",body:JSON.stringify({actie:"toetsmaken",onderwerpen:o.onderwerpen,mc:o.mc,open:o.open}),signal:ctl?ctl.signal:undefined})
+  return fetch(GV_NK_URL,{method:"POST",body:JSON.stringify({actie:"toetsmaken",onderwerpen:o.onderwerpen,mc:o.mc,open:o.open,vak:o.vak}),signal:ctl?ctl.signal:undefined})
     .then(function(r){return r.json();})
     .then(function(f){return f&&f.status==="ok"&&f.mc&&f.mc.length?f:{status:"fout",melding:(f&&f.melding)||"De toets kon nu niet gemaakt worden. Probeer het straks opnieuw."};})
     .catch(function(){return {status:"fout",melding:"De toetsmaker is nu niet bereikbaar. Probeer het straks opnieuw."};})

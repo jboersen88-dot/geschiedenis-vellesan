@@ -1,4 +1,4 @@
-// Haalt de inhoud uit de oude SE3-lesapp (../../apps/jaar-4_se-h1-h2-h8.html) en schrijft data.json + reken.js + lab-html.html.
+// Haalt de inhoud uit de oude SE3-lesapp (../../apps/jaar-4_se-h1-h2-h8.html) en schrijft data.json + reken.js + lab-html.inc.
 // Gebruik: node economie/se3/bron/extract.mjs   (vanuit de root van de repo)
 import fs from "node:fs"; import vm from "node:vm";
 const bron = fs.readFileSync("economie/apps/jaar-4_se-h1-h2-h8.html", "utf8");
@@ -21,5 +21,5 @@ const a = bron.indexOf("function rnd(a,b)"), b = bron.indexOf("var BANK=[");
 fs.writeFileSync("economie/se3/bron/reken.js", bron.slice(a, b));
 // HTML van de twee labs
 const h1 = bron.indexOf('<div class="lab ex" id="lab-formule"'), h2 = bron.indexOf('<div class="lab ex" id="lab-quiz"');
-fs.writeFileSync("economie/se3/bron/lab-html.html", bron.slice(h1, h2));
+fs.writeFileSync("economie/se3/bron/lab-html.inc", bron.slice(h1, h2));
 console.log(Object.fromEntries(Object.entries(data).map(([k, v]) => [k, Array.isArray(v) ? v.length : typeof v === "object" && v ? Object.keys(v).length : typeof v])), "reken.js", b - a, "tekens, lab-html", h2 - h1, "tekens");

@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-20 · Economie jaar 4 SE3: leeromgeving gebouwd met `economie/bouw-eco.py`
+
+- `python3 -I economie/bouw-eco.py se3` bouwt `economie/se3/app.html` uit de huidige `app.html` plus `economie/se3/bron/` (data, formule- en rekenlab): zelfde tabs en opmaak, met formule- en rekenlab, 8 paragrafen, dia's uit `slides/deck.json` (anders Drive-voorbeeld), 4 toetsversies met Toets en Nakijkblad, toets op maat voor 8 paragrafen (`vak:"eco4"`, nakijken met `vak:"economie"`). Nieuw hoofdstuk = nieuwe `bron/data.json` en een regel in `CONFIG`. `nakijker.js` stuurt een optionele `vak` mee (Geschiedenis ongewijzigd). `lab-html.html` is hernoemd naar `lab-html.inc` (een fragment, zodat `a11ycheck.py` het niet als pagina telt).
+
 ## 2026-10-19 · toets op maat: 32 onderwerpen in vier inklapblokken (`app.html`, boekje 1)
 
 - De onderwerpen staan nu per hoofdstuk (H1 t/m H4) in een inklapvakje (`<details>`, met toetsenbord te openen; dicht bij het openen, de stand blijft bij kiezen) met 8 onderwerpen per hoofdstuk, 32 in totaal (was 15 in één lijst). Per vakje staat hoeveel er gekozen zijn (bv. 2/8). Alle onderwerpen komen uit de leerdoelen en paragrafen van dat hoofdstuk (array `MT`, geen nieuwe inhoud). "Wat ik nog niet beheers", "Alles", "Niets", het aantal meerkeuzevragen en de werking ("Vink af als beheerst", uitslag, opnieuw proberen) zijn gelijk. De keuze wordt bewaard onder een nieuwe sleutel (`maatSel2`); de oude keuze (`maatSel`) wordt niet meer gebruikt.
