@@ -826,6 +826,19 @@ function mountGal(el,p){
         return '<button type="button" class="ig-th" data-i="'+i+'" aria-pressed="'+(i===cur)+'"><img alt="" loading="lazy" src="'+THUMB(im[0],300)+'"><span>'+im[1]+(k?' <em>· '+k+' bolletjes</em>':'')+'</span></button>';}).join("")+'</div>';
     view(true);
   }
+  function key(){return imgs[cur][0]+"#"+sel;}
+  function fb(f){ // toont de AI-nakijking, of (zonder AI) de nakijkpunten om mee te vergelijken
+    var d=document.querySelector("#igCard .ig-fb"),h=info(cur).hs[sel];if(!d)return;
+    d.innerHTML=(f?GV_NK.render(f):'')+(!f||f.status!=="ok"?'<p class="muted" style="margin:8px 0 0">Dit hadden we gezocht. Vergelijk met jouw antwoord:</p><ul class="ig-punten">'+h.punten.map(function(x){return '<li>'+x.t+'</li>';}).join("")+'</ul>':'');}
+  function nakijk(btn){
+    var h=info(cur).hs[sel],k=key(),ta=document.querySelector("#igCard .ig-ta"),a=ta.value.trim(),d=document.querySelector("#igCard .ig-fb");
+    if(!a){d.innerHTML='<p class="muted">Typ eerst een antwoord.</p>';ta.focus();return;}
+    (IGANS[k]=IGANS[k]||{}).a=ta.value;btn.disabled=true;d.innerHTML='<p class="muted">De AI kijkt je antwoord na…</p>';
+    GV_NK.check({h:[info(cur).g.hk],vraag:h.vraag,punten:h.punten,antwoord:a}).then(function(f){
+      IGANS[k].f=f;if(f.status==="ok"){IGANS[k].ok=1;}
+      if(key()===k&&document.getElementById("igCard")){btn.disabled=false;fb(f);}
+      if(f.status==="ok"){view(0,1);var ey=document.querySelector("#igCard .eyebrow");if(key()===k&&ey&&!ey.querySelector(".ig-ok"))ey.insertAdjacentHTML("beforeend",'<span class="ig-ok">✓ nagekeken</span>');}});
+  }
   function card(act){
     var m=info(cur),n=m.hs.length,c=document.getElementById("igCard"),h=m.hs[sel],d=pct(cur),b="",nx=cur<imgs.length-1;
     var open='<a class="btn ghost" target="_blank" rel="noopener" href="'+VIEW(m.id)+'">Open groot '+EXT+'</a>';
@@ -835,6 +848,9 @@ function mountGal(el,p){
         (h.tekst?'<p>'+h.tekst+'</p>':'')+
         (h.dia?'<p class="bron">📖 Uit de les, dia '+h.dia+'</p>':'')+
         '<div class="vr"><b>'+(h.tekst?'Denk na':'Kijk goed en bedenk zelf')+'</b>'+h.vraag+'</div>'+
+        (h.punten?'<textarea class="ig-ta" rows="3" maxlength="600" aria-label="Jouw antwoord op de vraag" placeholder="Typ hier je antwoord…"></textarea>'+
+          (aiOn?'<div class="row"><button type="button" class="btn" data-act="ai">Kijk na met AI</button></div>':'')+'<div class="ig-fb" aria-live="polite"></div>':'')+
+        (fl.length?'<div class="ig-films"><b>Kijk verder</b>'+fl.map(function(f){return '<a class="btn ghost" target="_blank" rel="noopener" href="'+f.u+'">▶ Schooltv: '+f.t+' '+EXT+'</a>';}).join("")+'</div>':'')+
         '<div class="row"><button type="button" class="btn ghost" data-act="hele">Hele plaat</button>'+(n>1?'<button type="button" class="btn" data-act="next">Volgend bolletje ›</button>':'')+'</div>';
     }else if(n&&d===n){
       var s=m.g.slot||{};
@@ -849,33 +865,23 @@ function mountGal(el,p){
       b='<h3>'+m.t+'</h3><div class="row">'+open+(nx?'<button type="button" class="btn" data-act="nextimg">Volgende plaat ›</button>':'')+'</div>';
     }
     c.innerHTML=b;
+    if(h&&h.punten){var ta=c.querySelector(".ig-ta"),A2=IGANS[key()]||{};ta.value=A2.a||"";ta.oninput=function(){(IGANS[key()]=IGANS[key()]||{}).a=ta.value;};
+      if(A2.f)fb(A2.f);else if(!(window.GV_NK&&GV_NK.enabled&&m.g.hk))fb(null);}
     if(!IGRM.matches&&act!==2)c.animate([{opacity:0,transform:"translateY(6px)"},{opacity:1,transform:"none"}],{duration:220,easing:"cubic-bezier(.23,1,.32,1)"});
   }
   function view(first,keep){
-  function key(){return imgs[cur][0]+"#"+sel;}
-  function fb(f){ // toont de AI-nakijking, of (zonder AI) de nakijkpunten om mee te vergelijken
-    var d=document.querySelector("#igCard .ig-fb"),h=info(cur).hs[sel];if(!d)return;
-    d.innerHTML=(f?GV_NK.render(f):'')+(!f||f.status!=="ok"?'<p class="muted" style="margin:8px 0 0">Dit hadden we gezocht. Vergelijk met jouw antwoord:</p><ul class="ig-punten">'+h.punten.map(function(x){return '<li>'+x.t+'</li>';}).join("")+'</ul>':'');}
-  function nakijk(btn){
-    var h=info(cur).hs[sel],k=key(),ta=document.querySelector("#igCard .ig-ta"),a=ta.value.trim(),d=document.querySelector("#igCard .ig-fb");
-    if(!a){d.innerHTML='<p class="muted">Typ eerst een antwoord.</p>';ta.focus();return;}
-    (IGANS[k]=IGANS[k]||{}).a=ta.value;btn.disabled=true;d.innerHTML='<p class="muted">De AI kijkt je antwoord na…</p>';
-    GV_NK.check({h:[info(cur).g.hk],vraag:h.vraag,punten:h.punten,antwoord:a}).then(function(f){
-      IGANS[k].f=f;if(f.status==="ok"){IGANS[k].ok=1;}
-      if(key()===k&&document.getElementById("igCard")){btn.disabled=false;fb(f);}
-      if(f.status==="ok"){view(0,1);var ey=document.querySelector("#igCard .eyebrow");if(key()===k&&ey&&!ey.querySelector(".ig-ok"))ey.insertAdjacentHTML("beforeend",'<span class="ig-ok">✓ nagekeken</span>');}});
-  }
     var m=info(cur),n=m.hs.length,h=m.hs[sel],pan=el.querySelector(".ig-pan"),lens=el.querySelector(".ig-lens"),z=1,tx=0,ty=0,d=pct(cur);
     if(h&&!IGRM.matches){z=IGZOOM;tx=Math.min(0,Math.max(100*(1-z),50-h.x*z));ty=Math.min(0,Math.max(100*(1-z),50-h.y*z));}
     pan.style.setProperty("--z",z);pan.style.transform="translate("+tx+"%,"+ty+"%) scale("+z+")";
+    var sh=el.querySelector(".ig-sharp");
+    if(sh){if(h){var rr=11*m.w/Math.sqrt((m.w*m.w+m.h*m.h)/2),cp="circle("+rr.toFixed(2)+"% at "+h.x+"% "+h.y+"%)";
+      if(!el.classList.contains("zoom")){sh.style.transition="none";sh.style.clipPath=cp;sh.offsetWidth;sh.style.transition="";}sh.style.clipPath=cp;}
+      el.classList.toggle("zoom",!!h);}
     if(lens){
       if(h){if(!lens.classList.contains("on")){lens.style.transition="none";lens.style.transform="translate("+h.x+"%,"+h.y+"%)";lens.offsetWidth;lens.style.transition="";}
         lens.style.transform="translate("+h.x+"%,"+h.y+"%)";}
       lens.classList.toggle("on",!!h);
     }
-        (h.punten?'<textarea class="ig-ta" rows="3" maxlength="600" aria-label="Jouw antwoord op de vraag" placeholder="Typ hier je antwoord…"></textarea>'+
-          (aiOn?'<div class="row"><button type="button" class="btn" data-act="ai">Kijk na met AI</button></div>':'')+'<div class="ig-fb" aria-live="polite"></div>':'')+
-        (fl.length?'<div class="ig-films"><b>Kijk verder</b>'+fl.map(function(f){return '<a class="btn ghost" target="_blank" rel="noopener" href="'+f.u+'">▶ Schooltv: '+f.t+' '+EXT+'</a>';}).join("")+'</div>':'')+
     el.querySelectorAll("[data-h]").forEach(function(b){var i=+b.dataset.h,on=i===sel,dn=!!seen(cur)[i],ai=!!(IGANS[imgs[cur][0]+"#"+i]||{}).ok;b.setAttribute("aria-pressed",on);
       if(b.classList.contains("ig-hs")){var was=b.classList.contains("gedaan");b.classList.toggle("gedaan",dn);if(dn&&!was)b.innerHTML=CHECK;b.setAttribute("aria-label","Bolletje "+(i+1)+" van "+n+": "+m.hs[i].naam+(dn?", bekeken":"")+(ai?", door AI nagekeken":""));}
       else{b.classList.toggle("gedaan",dn);b.classList.toggle("nk",ai);}});
@@ -889,25 +895,22 @@ function mountGal(el,p){
     sel=i;seen(cur)[i]=1;el.classList.add("geraakt");view();
     var c=document.getElementById("igCard");if(c.getBoundingClientRect().bottom>innerHeight)c.scrollIntoView({block:"nearest",behavior:IGRM.matches?"auto":"smooth"});
   }
-  el.addEventListener("click",function(e){
-    if(h&&h.punten){var ta=c.querySelector(".ig-ta"),A2=IGANS[key()]||{};ta.value=A2.a||"";ta.oninput=function(){(IGANS[key()]=IGANS[key()]||{}).a=ta.value;};
-      if(A2.f)fb(A2.f);else if(!(window.GV_NK&&GV_NK.enabled&&m.g.hk))fb(null);}
+  if(el._ig){el.removeEventListener("click",el._ig[0]);el.removeEventListener("keydown",el._ig[1]);} // mountGal draait opnieuw bij een ander hoofdstuk: oude handlers weg
+  var onClick=function(e){
     var b=e.target.closest("[data-h],[data-i],[data-act]");if(!b)return;
     if(b.dataset.h!=null){pick(+b.dataset.h);}
     else if(b.dataset.i!=null){cur=+b.dataset.i;draw();var t=el.querySelector('[data-i="'+cur+'"]');if(t)t.focus({preventScroll:true});}
     else{
       var a=b.dataset.act,m=info(cur),n=m.hs.length;
       if(a==="hele"){sel=-1;view();}
-    var sh=el.querySelector(".ig-sharp");
-    if(sh){if(h){var rr=11*m.w/Math.sqrt((m.w*m.w+m.h*m.h)/2),cp="circle("+rr.toFixed(2)+"% at "+h.x+"% "+h.y+"%)";
-      if(!el.classList.contains("zoom")){sh.style.transition="none";sh.style.clipPath=cp;sh.offsetWidth;sh.style.transition="";}sh.style.clipPath=cp;}
-      el.classList.toggle("zoom",!!h);}
       else if(a==="next"){var k=(sel+1)%n;for(var j=1;j<=n;j++){var c=(sel+j)%n;if(!seen(cur)[c]){k=c;break;}}pick(k);}
       else if(a==="nextimg"){cur++;draw();}
+      else if(a==="ai"){nakijk(b);return;}
       var nb=el.querySelector('#igCard [data-act="'+a+'"]');(nb||document.getElementById("igCard")).focus({preventScroll:true});
     }
-  });
-  el.addEventListener("keydown",function(e){if(e.key==="Escape"&&sel>=0){sel=-1;view();}});
+  };
+  var onKey=function(e){if(e.key==="Escape"&&sel>=0){sel=-1;view();}};
+  el.addEventListener("click",onClick);el.addEventListener("keydown",onKey);el._ig=[onClick,onKey];
   draw();
 }
 function loadLes(){
@@ -929,7 +932,6 @@ function loadLes(){
   document.getElementById("lBar").style.background=p.c;
   document.getElementById("lBarTxt").textContent=d+" van "+p.g.length+" beantwoord";
   document.getElementById("lGoals").innerHTML=p.g.map(function(g,j){var k=p.id+"-"+p.gi[j],on=!!S.goals[k];
-      else if(a==="ai"){nakijk(b);return;}
     return '<label class="'+(on?"done":"")+'"><input type="checkbox" data-k="'+k+'"'+(on?" checked":"")+'><span>'+g+'</span></label>';}).join("");
 }
 document.getElementById("rail").addEventListener("click",function(e){var b=e.target.closest("[data-par]");if(b){cur=b.dataset.par;loadLes();}});

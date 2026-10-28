@@ -1,3 +1,10 @@
+## 2026-10-29 · Interactieve kijkplaten voor boekje 2 (H1 en H2)
+
+- **Wat**: alle 15 plaatjes van boekje 2 hoofdstuk 1 en 2 hebben bolletjes (3 of 4 per plaat; H4 deelt `demonstratie` en `loket`). Klik op een bolletje: inzoomen, de rest vaag (geblurde basis plus scherpe kopie met `clip-path`; geen blur-animatie bij `prefers-reduced-motion`), tekst naast het plaatje (vanaf 1000 px breed; daaronder eronder), een vraag met invulvak en *Kijk na met AI* (`GV_NK.check`, lesstofsleutel `hk:"SZ"`), en een blokje *Kijk verder* met Schooltv-films (`GALERIJ_FILMS`). Is de AI niet bereikbaar, dan staan de nakijkpunten onder *Dit hadden we gezocht*. Antwoorden blijven per bolletje bewaard binnen de sessie; een AI-nakijking geeft een extra vinkje.
+- **Code**: `mountGal` in `app.html` (nieuwe optionele velden `hk`, `punten`, `films`; Geschiedenis boekje 1 werkt ongewijzigd). Ook gerepareerd: bij wisselen van hoofdstuk bleven oude klik-handlers hangen (consolefout).
+- **Data**: `data/galerij.js` (uitleg bovenin over een nieuw plaatje toevoegen). Boekje 2 opnieuw gebouwd met `python3 -I boekje-2/bouw.py`.
+- **Nog open**: H3 (1 plaatje, `wederopbouw.jpg`) heeft nog geen bolletjes; vragen en nakijkpunten wachten op controle door de docent.
+
 ## 2026-10-28 · Voortgangscode (besluit 3)
 
 - **Wat**: knop *Mijn voortgangscode* in het tabblad Start van `app.html` en `boekje-2/app.html` (boekje 2 via `bouw.py`, `var BOEKJE`). De code bevat boekje, datum, per hoofdstuk beheerst/totaal, een bitmap van de aangevinkte vragen en een controlesom van 2 tekens, bv. `GS1-261028-2.20-1.18-0.19-1.20-12G70GVEK92RYB5S-VO` (boekje 1: ca. 50 tekens, boekje 2: ca. 45). Geen naam of andere persoonsgegevens, niets naar een server. Kopieerknop met terugval (geselecteerde tekst). *Code terugzetten* met bevestigingsstap in de pagina. Uitleg *Wat zit er in mijn code?*.

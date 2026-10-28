@@ -29,6 +29,7 @@ window.GALERIJ_FILMS = {
   vakbond: { t: "De geschiedenis van de vakbond", u: "https://schooltv.nl/video-item/de-geschiedenis-van-de-vakbond-werknemers-gingen-zich-organiseren" },
   socialisme: { t: "Wat is socialisme?", u: "https://schooltv.nl/video-item/clipphanger-wat-is-socialisme" },
   kiesrecht: { t: "Kiesrecht voor man en vrouw", u: "https://schooltv.nl/video-item/kiesrecht-kiesrecht-voor-man-en-vrouw" },
+  crisisjaren: { t: "De crisisjaren: armoede in Nederland", u: "https://schooltv.nl/video-item/de-crisisjaren-armoede-in-nederland" },
   aletta: { t: "Wie was Aletta Jacobs?", u: "https://schooltv.nl/video-item/clipphanger-wie-was-aletta-jacobs" }
 };
 window.GALERIJ = {
@@ -240,6 +241,185 @@ window.GALERIJ = {
         punten: [{ t: "Sociaaldemocraten (en sommige confessionelen)", p: 1 }, { t: "Meebeslissen over sociale wetten", p: 1 }] },
       { x: 83, y: 58, naam: "De heren met de boeken", tekst: "", dia: 0,
         vraag: "Twee heren zitten aan tafel met hun boeken. Wat denk je dat zij ervan vinden dat vrouwen nu mogen stemmen? Waarom denk je dat?" }
+    ]
+  }
+  ,
+  // ===== Boekje 2, hoofdstuk 2 (dia's = slides/SZ2) =====
+  "../img/flow/wallstreet-1.jpg": {
+    w: 1200, h: 896, hk: "SZ",
+    alt: "Zwart-witfoto van een enorme mensenmassa op straat en op de trap voor een groot gebouw met Amerikaanse vlaggen. Mannen in hoeden lezen kranten, rechts staan oude auto's.",
+    intro: { tekst: "Paniek bij de beurs van New York op Zwarte Donderdag, 24 oktober 1929. Kijk goed rond. Tik op de bolletjes.", dia: 5 },
+    slot: { tekst: "Na de beurskrach gingen veel bedrijven en banken failliet en werden massa's mensen ontslagen. De crisis in Amerika had ook gevolgen voor Nederland.",
+      vraag: "Wat zou jij doen als je op deze dag aandelen had? Leg uit waarom.", dia: 5 },
+    hotspots: [
+      { x: 43, y: 55, naam: "De mensenmassa", dia: 4,
+        tekst: "Op 24 oktober 1929 daalden de koersen van alle aandelen, steeds sneller. Voor de deuren van de beurs stond een enorme mensenmassa.",
+        vraag: "Waarom wilde iedereen tegelijk zijn aandelen verkopen? Wat gebeurde er met de koersen?",
+        punten: [{ t: "De koersen van de aandelen daalden (steeds sneller)", p: 1 }, { t: "Mensen raakten in paniek en wilden allemaal van hun aandelen af", p: 1 }],
+        films: ["crisisjaren"] },
+      { x: 46, y: 84, naam: "De mannen met de krant", dia: 4,
+        tekst: "Het nieuws ging als een lopend vuurtje door de stad. Deze dag heet Zwarte Donderdag.",
+        vraag: "Hoe heet de dag van 24 oktober 1929 en wat gebeurde er daarna met bedrijven, banken en werknemers?",
+        punten: [{ t: "Zwarte Donderdag", p: 1 }, { t: "Veel bedrijven en banken gingen failliet en massa's mensen werden ontslagen", p: 1 }] },
+      { x: 32, y: 18, naam: "De Amerikaanse vlaggen", dia: 7,
+        tekst: "Amerikanen hadden na de crisis geen geld meer voor Europese producten. Daarom moesten ook in Nederland bedrijven en fabrieken sluiten.",
+        vraag: "Hoe kwam het dat de crisis in Amerika ook werkloosheid in Nederland veroorzaakte?",
+        punten: [{ t: "Amerikanen hadden geen geld meer voor Europese producten", p: 1 }, { t: "Daardoor sloten Nederlandse bedrijven en fabrieken, dus mensen verloren hun werk", p: 1 }] }
+    ]
+  },
+  "../img/flow/beurskrach-auto.jpg": {
+    w: 1200, h: 896, hk: "SZ",
+    alt: "Een man in een jas en hoed leunt tegen een oude auto in een straat in New York. Op een bord staat dat de auto voor 100 dollar te koop is omdat hij alles verloren heeft op de beurs.",
+    intro: { tekst: "Een man verkoopt zijn auto, in 1929 in New York. Lees het bord. Tik op de bolletjes.", dia: 4 },
+    slot: { tekst: "Joe kocht aandelen en leende geld voor nog meer aandelen. Na de beurskrach waren zijn aandelen waardeloos en had hij schulden.",
+      vraag: "Wat is het risico als je geld leent om aandelen te kopen?", dia: 3 },
+    hotspots: [
+      { x: 73, y: 79, naam: "Het bord", dia: 4,
+        tekst: "Op het bord staat dat de auto 100 dollar kost, dat de man geld nodig heeft en dat hij alles heeft verloren op de beurs.",
+        vraag: "Waarom verkoopt deze man zijn auto zo goedkoop?",
+        punten: [{ t: "Hij heeft geld nodig", p: 1 }, { t: "Hij heeft alles verloren op de beurs (beurskrach)", p: 1 }] },
+      { x: 53, y: 35, naam: "De man", dia: 3,
+        tekst: "Joe in het verhaal kocht steeds meer aandelen. De bank wilde hem zelfs geld lenen voor nog meer aandelen.",
+        vraag: "Waarom kocht Joe steeds meer aandelen?",
+        punten: [{ t: "De aandelen werden steeds meer waard", p: 1 }, { t: "Hij dacht dat hij er rijk van kon worden (nu of nooit); de bank leende hem geld", p: 1 }] },
+      { x: 24, y: 42, naam: "De voorbijgangers", dia: 0,
+        tekst: "Na de beurskrach gingen veel bedrijven en banken failliet. Massa's mensen werden ontslagen.",
+        vraag: "Wat betekende de beurskrach voor mensen die werk hadden?",
+        punten: [{ t: "Veel bedrijven en banken gingen failliet", p: 1 }, { t: "Massa's mensen werden ontslagen", p: 1 }] }
+    ]
+  },
+  "../img/flow/arbeidsbeurs.jpg": {
+    w: 1200, h: 896, hk: "SZ",
+    alt: "Een zaal vol wachtende mannen met petten en jassen. Links hangt een groot krijtbord met de titel Gemeentelijke Arbeidsbeurs, rechts zitten ambtenaren achter een loket.",
+    intro: { tekst: "Werklozen wachten bij de gemeentelijke arbeidsbeurs. Kijk goed rond. Tik op de bolletjes.", dia: 8 },
+    slot: { tekst: "Door de crisis steeg de werkloosheid enorm. De overheid hielp maar weinig: niet iedere werkloze kreeg steun.",
+      vraag: "Hoe zou het voelen om hier elke dag in de rij te staan?", dia: 8 },
+    hotspots: [
+      { x: 20, y: 27, naam: "Het krijtbord", dia: 7,
+        tekst: "Na de beurskrach moesten ook in Nederland bedrijven en fabrieken sluiten. Het aantal werklozen steeg sterk.",
+        vraag: "Waarom moesten in Nederland bedrijven en fabrieken sluiten? Leg uit in twee stappen.",
+        punten: [{ t: "Amerikanen hadden geen geld meer voor Europese producten", p: 1 }, { t: "Daardoor sloten bedrijven en fabrieken en kwamen er werklozen bij", p: 1 }] },
+      { x: 43, y: 62, naam: "De wachtende mannen", dia: 12,
+        tekst: "Alleen werklozen tussen de 21 en 60 jaar die buiten hun schuld zonder werk zaten, kregen steun. Slechts de helft van de werklozen kon dit gebruiken.",
+        vraag: "Wie kreeg steun en wie niet? Noem twee voorwaarden.",
+        punten: [{ t: "Tussen de 21 en 60 jaar oud", p: 1 }, { t: "Buiten eigen schuld zonder werk", p: 1 }],
+        films: ["crisisjaren"] },
+      { x: 93, y: 49, naam: "Het loket", dia: 0,
+        tekst: "Sommige arbeiders hadden een werkloosheidsverzekering en kregen ongeveer zestig dagen een uitkering. Daarna kregen ze de veel lagere steunuitkering.",
+        vraag: "Wat gebeurde er na zestig dagen met een werkloze die een werkloosheidsverzekering had?",
+        punten: [{ t: "De uitkering van de verzekering hield op", p: 1 }, { t: "Hij moest aankloppen bij de overheid voor de veel lagere steunuitkering", p: 1 }] }
+    ]
+  },
+  "../img/flow/loket.jpg": {
+    w: 1200, h: 896, hk: "SZ",
+    alt: "Een man in een versleten jas geeft een briefje aan een ambtenaar aan een houten loket. Achter hem staat een lange rij mannen te wachten. Aan de muur hangen bordjes Stilte en Dienst voor Sociale Zorg.",
+    intro: { tekst: "Een werkloze man staat aan het loket. Kijk goed naar de rij achter hem. Tik op de bolletjes.", dia: 13 },
+    slot: { tekst: "Werklozen kregen weinig steun en werden streng gecontroleerd. Veel mensen vonden de hulp vernederend.",
+      vraag: "Waarom willen veel mensen liever geen hulp vragen als ze zich schamen?", dia: 12 },
+    hotspots: [
+      { x: 43, y: 44, naam: "De man met het briefje", dia: 13,
+        tekst: "Werklozen moesten elke dag, soms twee keer per dag, in de rij staan voor een stempel.",
+        vraag: "Waarom moesten werklozen elke dag in de rij staan voor een stempel?",
+        punten: [{ t: "Zo kon de gemeente controleren dat ze niet stiekem iets bijverdienden", p: 1 }, { t: "Ze moesten elke dag, soms twee keer per dag, komen", p: 1 }],
+        films: ["crisisjaren"] },
+      { x: 86, y: 53, naam: "De ambtenaar", dia: 12,
+        tekst: "De gemeente controleerde of mensen niet stiekem 's nachts werkten of thuiswerk deden, en of ze geen luxe spullen thuis hadden.",
+        vraag: "Waarom controleerde de gemeente of werklozen luxe spullen thuis hadden? En wat gebeurde er bij fraude?",
+        punten: [{ t: "Een arme werkloze kan geen luxe spullen betalen, dus misschien verdiende hij stiekem bij", p: 1 }, { t: "Wie betrapt werd op steunfraude verloor zijn uitkering en moest in een werkkamp werken", p: 1 }] },
+      { x: 18, y: 44, naam: "De rij wachtenden", dia: 0,
+        tekst: "Voor eerste levensbehoeften kon je een speciale uitkering aanvragen. Kleren en schoenen kregen dan een stempel.",
+        vraag: "Waarom vonden werklozen het vernederend om kleding met een stempel te krijgen?",
+        punten: [{ t: "Iedereen kon aan de stempel zien dat ze werkloos waren", p: 1 }, { t: "Daarom gebruikten veel mensen liever geen hulp", p: 1 }] }
+    ]
+  },
+  "../img/flow/polder-werk.jpg": {
+    w: 1200, h: 896, hk: "SZ",
+    alt: "Veel mannen met schoppen werken in de modder aan een kanaal in een polder. Op smalle rails staan kiepwagens vol aarde. Op de achtergrond staat een klein treintje.",
+    intro: { tekst: "Werklozen graven een kanaal in de Wieringermeerpolder. Kijk goed: welke machines zie je niet? Tik op de bolletjes.", dia: 16 },
+    slot: { tekst: "Werkverschaffing was verplicht werk voor werklozen voor een laag loon, bijvoorbeeld het aanleggen van kanalen en dijken.",
+      vraag: "Zou jij dit werk willen doen als je geen andere keus had?", dia: 16 },
+    hotspots: [
+      { x: 20, y: 53, naam: "De schoppen", dia: 16,
+        tekst: "Bij werkverschaffingsprojecten werden vaak bewust geen graafmachines gebruikt.",
+        vraag: "Waarom gebruikte men schoppen en geen graafmachines?",
+        punten: [{ t: "Zo konden zoveel mogelijk werklozen aan het werk", p: 1 }] },
+      { x: 43, y: 55, naam: "De kiepwagen", dia: 16,
+        tekst: "De vrijgekomen grond werd weggevoerd op een wagon van een smalspoortreintje.",
+        vraag: "Wat is werkverschaffing? Geef een voorbeeld.",
+        punten: [{ t: "De overheid laat werklozen aan het werk gaan in grote projecten", p: 1 }, { t: "Voorbeeld: een kanaal, een dijk of de Afsluitdijk", p: 1 }],
+        films: ["crisisjaren"] },
+      { x: 57, y: 26, naam: "De rij arbeiders", dia: 16,
+        tekst: "De werkomstandigheden waren erg zwaar. Het loon was net iets hoger dan de steunuitkering.",
+        vraag: "Hoe was het werk en wat verdienden de werklozen vergeleken met steun?",
+        punten: [{ t: "Het werk was erg zwaar", p: 1 }, { t: "Het loon was net iets hoger dan de steunuitkering", p: 1 }] }
+    ]
+  },
+  "../img/flow/dijk-1.jpg": {
+    w: 1200, h: 896, hk: "SZ",
+    alt: "Veel mannen leggen stenen en dragen manden op een dijk in aanbouw in de zee. Rechts rijden kiepwagens over rails, op het water liggen schepen en houten steigers.",
+    intro: { tekst: "De aanleg van de Afsluitdijk in 1932. Kijk goed naar het werk en het weer. Tik op de bolletjes.", dia: 17 },
+    slot: { tekst: "De Afsluitdijk is het bekendste werkverschaffingsproject. Het werk was zwaar en het loon lag net boven de steun.",
+      vraag: "Waarom was een dijk een goed project om veel werklozen aan het werk te zetten?", dia: 17 },
+    hotspots: [
+      { x: 57, y: 58, naam: "De stenen", dia: 17,
+        tekst: "Werkverschaffingsprojecten waren grote projecten, zoals het aanleggen van kanalen en dijken.",
+        vraag: "Waarom bedacht de overheid werkverschaffing?",
+        punten: [{ t: "Om werklozen aan het werk te helpen", p: 1 }, { t: "Het waren grote projecten zoals kanalen en dijken", p: 1 }] },
+      { x: 86, y: 46, naam: "De kiepwagens", dia: 17,
+        tekst: "De werkomstandigheden waren erg zwaar. Werklozen kregen een loon dat net iets hoger was dan hun steunuitkering.",
+        vraag: "Hoe zwaar was het werk en wat kregen de werklozen ervoor?",
+        punten: [{ t: "Het werk was erg zwaar", p: 1 }, { t: "Het loon was net iets hoger dan de steunuitkering", p: 1 }] },
+      { x: 44, y: 22, naam: "De dijk in de verte", dia: 17,
+        tekst: "De Afsluitdijk (1932) verbindt Noord-Holland en Friesland.",
+        vraag: "Welk werkverschaffingsproject is dit en welke twee provincies verbindt het?",
+        punten: [{ t: "De Afsluitdijk (1932)", p: 1 }, { t: "Noord-Holland en Friesland", p: 1 }],
+        films: ["crisisjaren"] }
+    ]
+  },
+  "../img/flow/jordaan.jpg": {
+    w: 1200, h: 896, hk: "SZ",
+    alt: "Een straat in de Jordaan in Amsterdam. Boze mensen gooien met straatstenen, een man hurkt bij een kar vol stenen. Rechts staan mannen in uniform met helmen en knuppels.",
+    intro: { tekst: "De Jordaanrellen in Amsterdam in 1934. Kijk goed rond. Tik op de bolletjes.", dia: 0 },
+    slot: { tekst: "De Jordaanrellen kostten vijf mensen het leven. De verlaging van de uitkering bleef.",
+      vraag: "Wat denk je: waarom zochten mensen toch geweld in plaats van een andere manier van protesteren?", dia: 0 },
+    hotspots: [
+      { x: 20, y: 55, naam: "De boze mensen", dia: 24,
+        tekst: "In 1934 brak er een opstand uit in de Jordaan. Mensen waren boos over de verlaging van de steunuitkeringen.",
+        vraag: "Waarom waren de mensen in de Jordaan zo boos? Waarom verlaagde de regering de steun?",
+        punten: [{ t: "De steunuitkeringen werden verlaagd", p: 1 }, { t: "De overheid kreeg door de crisis minder belasting binnen, dus gaf ze minder uit (aanpassingspolitiek)", p: 1 }] },
+      { x: 36, y: 70, naam: "De straatstenen", dia: 0,
+        tekst: "Na de rellen werden de straten in de Jordaan geasfalteerd.",
+        vraag: "Wat veranderde er in de straten van de Jordaan na de rellen, en waarom?",
+        punten: [{ t: "De straten werden geasfalteerd", p: 1 }, { t: "Zodat relschoppers bij een nieuwe opstand niet meer met straatstenen konden gooien", p: 1 }] },
+      { x: 75, y: 58, naam: "De mannen in uniform", dia: 0,
+        tekst: "Uiteindelijk moest het leger de rellen beëindigen. De rellen kostten vijf mensen het leven, maar de verlaging van de uitkering bleef.",
+        vraag: "Wie beëindigde de rellen, en wat bereikten de relschoppers met hun protest?",
+        punten: [{ t: "Het leger beëindigde de rellen", p: 1 }, { t: "Ze bereikten niets: de verlaging van de uitkering bleef", p: 1 }] }
+    ]
+  },
+  "../img/flow/sdap-affiche-1.jpg": {
+    w: 1200, h: 896, hk: "SZ",
+    alt: "Een rood-zwart affiche van de SDAP: een gespierde arm breekt een ketting met het woord Crisis. Rechts steken vuisten met een hamer en een schop omhoog voor bruggen en fabrieken. Onderaan staat Plan van de Arbeid, tegen crisis en werkloosheid. Dit is een AI-beeld.",
+    intro: { tekst: "Een affiche van de SDAP uit de jaren dertig (AI-beeld). Lees de tekst en bekijk de plaatjes. Tik op de bolletjes.", dia: 27 },
+    slot: { tekst: "De SDAP kwam in 1935 met het Plan van de Arbeid. Omdat de SDAP niet in de regering zat, kwam er weinig van terecht.",
+      vraag: "Wat zou je op een affiche zetten om mensen van dit plan te overtuigen?", dia: 27 },
+    hotspots: [
+      { x: 38, y: 53, naam: "De ketting", dia: 27,
+        tekst: "In het Plan van de Arbeid stond dat de overheid juist geld moest uitgeven om de werkloosheid en de crisis op te lossen.",
+        vraag: "Wat moest de overheid volgens het Plan van de Arbeid doen om de crisis op te lossen?",
+        punten: [{ t: "Juist geld uitgeven (niet bezuinigen)", p: 1 }, { t: "Om de werkloosheid en de crisis op te lossen", p: 1 }] },
+      { x: 84, y: 23, naam: "De kranen en bruggen", dia: 27,
+        tekst: "Door meer werkverschaffingsprojecten en hogere lonen zouden arbeiders meer geld te besteden hebben.",
+        vraag: "Hoe zouden meer werkverschaffing en hogere lonen de crisis kunnen oplossen?",
+        punten: [{ t: "Meer werkverschaffing en hogere lonen", p: 1 }, { t: "Dan hebben arbeiders meer geld te besteden", p: 1 }] },
+      { x: 50, y: 78, naam: "De titel", dia: 27,
+        tekst: "De sociaaldemocratische partij SDAP kwam in 1935 met het Plan van de Arbeid. Zij vonden dat verder bezuinigen de problemen alleen maar erger zou maken.",
+        vraag: "Welke partij kwam met het plan en wat vond die partij van bezuinigen?",
+        punten: [{ t: "De SDAP (sociaaldemocraten)", p: 1 }, { t: "Verder bezuinigen maakt de problemen alleen maar erger", p: 1 }] },
+      { x: 76, y: 44, naam: "De vuisten", dia: 27,
+        tekst: "De SDAP zat niet in de regering. Toen ze in 1939 voor het eerst in de regering kwam, was het te laat: de Tweede Wereldoorlog brak uit.",
+        vraag: "Waarom kwam er van het Plan van de Arbeid weinig terecht?",
+        punten: [{ t: "De SDAP zat niet in de regering", p: 1 }, { t: "In 1939 kwam de SDAP in de regering, maar toen was het te laat door de oorlog", p: 1 }] }
     ]
   }
 
