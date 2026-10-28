@@ -12,7 +12,9 @@
 html,body{margin:0;height:100%;background:#0b231d;color:#e9f3ef;font-family:"Inter",system-ui,sans-serif;overflow:hidden}
 .stage{position:fixed;inset:0;bottom:44px}
 .stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;transform:scale(1.012);transition:opacity .3s var(--ease-out),transform .5s var(--ease-out)}
-.stage img.on{opacity:1;transform:none}
+.stage img.on{opacity:1;transform:none;z-index:2}
+.stage img.under{opacity:1;transform:none;z-index:1;transition:none}
+.stage.stp img{transform:none}
 .bar{position:fixed;left:0;right:0;bottom:0;height:44px;display:flex;align-items:center;gap:12px;padding:0 max(14px,env(safe-area-inset-left)) env(safe-area-inset-bottom) max(14px,env(safe-area-inset-right));background:#123a30;font-size:13px;font-weight:700;transition:opacity .4s var(--ease-out)}
 .bar.idle{opacity:0}
 .prog{flex:1;height:4px;border-radius:4px;background:rgba(255,255,255,.16);overflow:hidden}
@@ -27,23 +29,29 @@ button:hover,a:hover{background:rgba(255,255,255,.12)}
 </head>
 <body>
 <div class="stage"><img alt=""><img alt=""></div>
-<button class="hit l" aria-label="Vorige dia"></button><button class="hit r" aria-label="Volgende dia"></button>
+<button class="hit l" aria-label="Vorige"></button><button class="hit r" aria-label="Volgende"></button>
 <div class="bar"><a href="app.html">← Leeromgeving</a><span class="cnt"></span><div class="prog"><i></i></div><button id="fs">⛶ Schermvullend</button></div>
 <script>
 (function(){
 var DECK={"H1":21,"H2":9,"H3":27,"H4":44};
+/* STEPS: klikstappen per dia, zie app.html en tools/dias/stappen.py (houd beide gelijk) */
+var STEPS={"H4":{"1":1,"2":6,"3":5,"4":2,"5":3,"6":3,"7":4,"8":4,"9":3,"10":4,"11":2,"12":5,"13":4,"14":4,"15":4,"16":2,"17":3,"18":3,"19":3,"20":3,"21":5,"22":5,"23":5,"24":2,"25":1,"26":4,"27":6,"28":3,"29":6,"30":4,"31":4,"32":2,"33":5,"34":5,"35":4,"36":2,"37":3,"38":4,"39":4,"40":2,"41":4,"42":6,"43":5,"44":3}};
 var h=(new URLSearchParams(location.search).get("h")||"H1").toUpperCase();if(!DECK[h])h="H1";
-var N=DECK[h],i=1,imgs=document.querySelectorAll(".stage img"),front=0,cnt=document.querySelector(".cnt"),bar=document.querySelector(".prog i");
+var N=DECK[h],i=1,s=0,tok=0,stg=document.querySelector(".stage"),imgs=stg.querySelectorAll("img"),front=0,cnt=document.querySelector(".cnt"),bar=document.querySelector(".prog i");
 document.title="Presenteren · "+h;
-function src(n){return "slides/"+h+"/"+(n<10?"0":"")+n+".jpg";}
-function go(n){n=Math.min(Math.max(1,n),N);var nx=imgs[1-front],cu=imgs[front];nx.onload=function(){nx.className="on";cu.className="";front=1-front;};nx.src=src(n);nx.alt="Dia "+n+" van "+N;i=n;cnt.textContent=n+" / "+N;bar.style.width=(n/N*100)+"%";if(n<N){new Image().src=src(n+1);}}
-document.querySelector(".hit.l").onclick=function(){go(i-1);};
-document.querySelector(".hit.r").onclick=function(){go(i+1);};
+function K(n){return (STEPS[h]||{})[n]||0;}
+function src(n,st){return "slides/"+h+"/"+(n<10?"0":"")+n+(st<K(n)?"-"+st:"")+".jpg";}
+/* dia n in stap st (0..K(n)); dezelfde dia: alleen een zachte fade, de oude stap blijft eronder staan */
+function go(n,st,dir){n=Math.min(Math.max(1,n),N);st=Math.min(Math.max(0,st),K(n));var same=n===i,nx=imgs[1-front],cu=imgs[front],t=++tok;stg.classList.toggle("stp",same);nx.style.transition="none";nx.className="";void nx.offsetWidth;nx.style.transition="";nx.onload=function(){if(t!==tok)return;nx.className="on";cu.className=same?"under":"";front=1-front;};nx.src=src(n,st);nx.alt="Dia "+n+" van "+N+(K(n)?", stap "+(st+1)+" van "+(K(n)+1):"");i=n;s=st;cnt.textContent=n+" / "+N;bar.style.width=(n/N*100)+"%";var pre=st<K(n)?src(n,st+1):(n<N?src(n+1,0):"");if(pre)new Image().src=pre;}
+function next(){if(s<K(i))go(i,s+1);else if(i<N)go(i+1,0);}
+function prev(){if(s>0)go(i,s-1);else if(i>1)go(i-1,K(i-1));}
+document.querySelector(".hit.l").onclick=prev;
+document.querySelector(".hit.r").onclick=next;
 document.getElementById("fs").onclick=function(){if(document.fullscreenElement)document.exitFullscreen();else document.documentElement.requestFullscreen&&document.documentElement.requestFullscreen().catch(function(){});};
-addEventListener("keydown",function(e){if(["ArrowRight"," ","PageDown","Enter"].includes(e.key)){e.preventDefault();go(i+1);}else if(["ArrowLeft","PageUp","Backspace"].includes(e.key)){e.preventDefault();go(i-1);}else if(e.key==="Home")go(1);else if(e.key==="End")go(N);else if(e.key==="f")document.getElementById("fs").click();});
-var sx=null;addEventListener("pointerdown",function(e){sx=e.clientX;});addEventListener("pointerup",function(e){if(sx===null)return;var d=e.clientX-sx;sx=null;if(Math.abs(d)>50)go(i+(d<0?1:-1));});
+addEventListener("keydown",function(e){if(["ArrowRight"," ","PageDown","Enter"].includes(e.key)){e.preventDefault();next();}else if(["ArrowLeft","PageUp","Backspace"].includes(e.key)){e.preventDefault();prev();}else if(e.key==="Home")go(1,0);else if(e.key==="End")go(N,K(N));else if(e.key==="f")document.getElementById("fs").click();});
+var sx=null;addEventListener("pointerdown",function(e){sx=e.clientX;});addEventListener("pointerup",function(e){if(sx===null)return;var d=e.clientX-sx;sx=null;if(Math.abs(d)>50){if(d<0)next();else prev();}});
 var t,b=document.querySelector(".bar");function wake(){b.classList.remove("idle");clearTimeout(t);t=setTimeout(function(){b.classList.add("idle");},2500);}addEventListener("mousemove",wake);wake();
-go(1);
+go(1,0);
 })();
 </script>
 </body>
