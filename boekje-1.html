@@ -334,7 +334,7 @@ function setAct(k){
 }
 els=[].slice.call(tl.querySelectorAll(".ev"));
 var tio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");tio.unobserve(e.target);}});},{threshold:.3});
-els.forEach(function(el){tio.observe(el);el.addEventListener("click",function(){setAct(+el.dataset.k);});el.addEventListener("focus",function(){setAct(+el.dataset.k);});});
+els.forEach(function(el){tio.observe(el);el.addEventListener("click",function(){setAct(+el.dataset.k);});el.addEventListener("focus",function(){setAct(+el.dataset.k);if(el.matches(":focus-visible"))el.scrollIntoView({block:"center"});});/* toetsenbord: naar het midden, anders zet de middenband er een ander beeld overheen */});
 /* actieve gebeurtenis = degene die in de band net onder het midden van het scherm staat */
 var act=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)setAct(+e.target.dataset.k);});},{rootMargin:"-48% 0px -44% 0px"});
 els.forEach(function(el){act.observe(el);});
