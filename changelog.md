@@ -1,3 +1,10 @@
+## 2026-10-28 · Dia-animaties als klikstappen (proef: boekje 1 H4)
+
+- **Wat je ziet**: in de dia-viewer (`app.html`, tab Lesstof) en in `presenteer.html` gaat "volgende" (pijl, klik, spatie, swipe) eerst door de animatiestappen van een dia en pas daarna naar de volgende dia, zoals in PowerPoint. Terug gaat andersom. Elke stap wisselt met een zachte fade (bij "minder beweging" direct). De teller toont dia's (`10 / 44`), niet stappen. Dia's zonder animatie werken als eerder.
+- **H4**: alle 44 dia's, 162 stappen (`slides/H4/NN-S.jpg`, 1280 px breed, 18 MB samen, gemiddeld 113 KB, grootste 215 KB). Afbeeldingen laden lui: alleen de huidige en de eerstvolgende stap. De vlieg-/groei-beweging zelf zit er niet in.
+- **Gemaakt met** `tools/dias/stappen.py` (leest de animatie-XML van de pptx, maakt per stap een kopie met de nog niet getoonde vormen verborgen; PowerPoint exporteert die naar PDF; `pdf2jpg.swift` kreeg een optionele kwaliteit). Werkwijze in `tools/dias/README.md`. Gegevens: `STEPS` naast `DECK` in `app.html` en `presenteer.html`.
+- **Nog niet**: H1 (11 stappen) en H3 (41), Economie-dia's (`economie/se3/app.html` heeft een eigen kopie van de viewer; die krijgt de stappen bij de eerstvolgende `bouw-eco.py`).
+
 ## 2026-10-28 · Interactieve plaatjes bij de lesstof (eerst: huisnijverheid)
 
 - **Lesstof-tab** (`app.html`, boekje 1 en 2): de plaatjes-galerij is nu één groot plaatje met klikbare bolletjes, de andere plaatjes staan als kleine keuzeknoppen eronder. Tik op een bolletje: het beeld zoomt in, een spotlight licht het detail uit en de uitleg komt eronder, met een vraag om over na te denken. Bekeken bolletjes krijgen een vinkje, bovenin staat "1 van 4 ontdekt", en daarna volgt een slotvraag en de knop naar het volgende plaatje. Ook te bedienen met een lijst, toetsenbord (Esc = hele plaat) en screenreader; bij `prefers-reduced-motion` geen zoom en geen pulserende bolletjes.
