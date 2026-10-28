@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Doe-boek · Boekje 2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+<link rel="stylesheet" href="stijl.css">
+<style>
+/* Doe-boek van boekje 2: één pagina voor hoofdstuk 1 en 2 (?h=1 of ?h=2). De vragen staan in data/doeboek-h1.js en data/doeboek-h2.js. */
+:root{--berry:var(--coral-d);--ok-b:#2e9b6b}
+.hero{padding-block:26px 40px}
+.hero h1{font-size:clamp(28px,5vw,44px)}
+.hero p{font-size:16px;margin-top:10px}
+main{padding-block:6px 70px}
+main.wrap{max-width:860px}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding:14px 2px 12px;scrollbar-width:none;position:sticky;top:0;z-index:4;background:var(--bg)}
+.tabs::-webkit-scrollbar{display:none}
+.tabs button{flex:none;border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:14px;padding:8px 14px;min-height:48px;font:700 14px/1.2 Inter,sans-serif;cursor:pointer;text-align:left;transition:transform .16s var(--ease-out),background-color .2s,border-color .2s}
+.tabs button small{display:block;font-weight:500;color:var(--muted);font-size:12px}
+.tabs button:active{transform:scale(.97)}
+.tabs button[aria-pressed=true]{background:var(--green);border-color:var(--green);color:#fff}.tabs button[aria-pressed=true] small{color:#d6efe6}
+.tabs button.done:not([aria-pressed=true]){border-color:var(--ok-b)}
+.tabs button.done small:after{content:" ✓"}
+.bhead{margin:8px 0 2px;scroll-margin-top:84px}.bhead:focus{outline:none}
+.bhead h2{font-size:26px;line-height:1.2;color:var(--green)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .bhead h2{color:var(--green-mu)}}
+.vc{margin-top:14px;animation:cin .35s var(--ease-out) backwards;scroll-margin-top:84px}
+@keyframes cin{from{opacity:0;transform:translateY(10px)}}
+.vc .tg{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--teal)}
+.vc .tg i{font-style:normal;color:var(--muted);letter-spacing:0;font-weight:600;text-transform:none}
+.vc .vs{display:inline-block;margin-left:6px;font-size:11.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;background:color-mix(in srgb,var(--coral) 30%,transparent);color:var(--coral-d);border-radius:99px;padding:2px 9px}
+.v{font-weight:600;margin:4px 0 10px;white-space:pre-line;font-size:17px}
+.pl{font-weight:600;margin:16px 0 8px;white-space:pre-line}
+.vc .pl:first-child{margin-top:4px}
+.hint{font-size:14px;color:var(--muted);margin:0 0 8px}
+.bron{border-left:4px solid var(--coral);padding:2px 0 2px 12px;margin:0 0 12px;font-style:italic}
+.bron cite{display:block;font-style:normal;font-size:13px;color:var(--muted);margin-top:4px}
+figure.im{margin:0 0 12px}
+figure.im img{display:block;width:100%;max-height:440px;object-fit:contain;border-radius:14px;background:#0001;border:1px solid var(--line)}
+figure.im figcaption{font-size:13px;color:var(--muted);margin-top:6px}
+.ph{border:1.5px dashed var(--line);border-radius:14px;padding:22px 16px;text-align:center;color:var(--muted);background:color-mix(in srgb,var(--teal) 6%,var(--card))}
+.ph b{display:block;color:var(--ink);font-size:15px}
+.tw{overflow-x:auto;margin:0 0 12px;border:1px solid var(--line);border-radius:12px}
+table.tb{border-collapse:collapse;width:100%;font-size:14.5px;font-variant-numeric:tabular-nums}
+table.tb caption{caption-side:bottom;text-align:left;font-size:13px;color:var(--muted);padding:8px 10px}
+table.tb th,table.tb td{padding:7px 12px;text-align:right;border-bottom:1px solid var(--line)}
+table.tb th[scope=row],table.tb th:first-child{text-align:left}
+table.tb thead th{background:color-mix(in srgb,var(--green) 10%,var(--card));font-size:13px}
+@media(max-width:480px){table.tb{font-size:13.5px}table.tb th,table.tb td{padding:7px 6px}}
+table.tb tr:last-child td,table.tb tr:last-child th{border-bottom:0}
+.opts{display:flex;flex-direction:column;gap:.9rem}
+.opt{display:flex;gap:12px;align-items:center;text-align:left;width:100%;border:2px solid var(--line);background:var(--bg);color:var(--ink);border-radius:14px;padding:11px 14px;min-height:52px;font:600 15.5px/1.35 Inter,sans-serif;cursor:pointer;transition:transform .16s var(--ease-out),border-color .16s,background-color .2s}
+.opt b{flex:none;width:28px;height:28px;border-radius:50%;background:var(--card);border:2px solid var(--line);display:grid;place-items:center;font-size:13px}
+.opt:active{transform:scale(.98)}.opt.sel{border-color:var(--teal)}.opt.ok{background:var(--ok-soft);border-color:var(--ok-b)}.opt.no{background:var(--bad-soft);border-color:var(--berry)}
+label.opt input{position:absolute;opacity:0;width:1px;height:1px}
+label.opt b{border-radius:8px}
+label.opt:has(input:checked) b{background:var(--teal);border-color:var(--teal);color:#fff}
+label.opt:has(input:checked) b:after{content:"✓"}
+label.opt:has(input:checked) b span{display:none}
+label.opt:has(input:focus-visible){outline:3px solid var(--coral);outline-offset:2px}
+@media(hover:hover) and (pointer:fine){.opt:hover{border-color:var(--teal)}}
+.leg{display:flex;flex-direction:column;gap:6px;margin:0 0 12px;font-size:15px}
+.leg div b{display:inline-block;min-width:1.5em;color:var(--teal)}
+.row2{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;padding:9px 0;border-top:1px dashed var(--line)}
+.row2:first-of-type{border-top:0}
+.row2.z{grid-template-columns:1fr;gap:6px}
+.row2.ok{color:#1f7a54}.row2.no{color:var(--berry)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .row2.ok{color:#6fd3a5}}
+select,input[type=text]{border:2px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);font:700 15px Inter,sans-serif;padding:8px 10px;min-height:44px;max-width:100%}
+select:focus,input:focus,textarea:focus{border-color:var(--teal);outline:none}
+select.ok,input.ok{border-color:var(--ok-b)}select.no,input.no{border-color:var(--berry)}
+.bank{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 10px}.bank span{background:var(--ok-soft);border-radius:99px;padding:4px 12px;font-size:14px;font-weight:600}
+.chain{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.chain .st{background:var(--bg);border:1.5px solid var(--line);border-radius:12px;padding:8px 12px;font-size:14.5px}.chain .ar{color:var(--muted)}
+.fl{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 12px;align-items:center;padding:8px 0;border-top:1px dashed var(--line)}
+.fl:first-of-type{border-top:0}
+.fl label{font-weight:500}
+.fl input{width:150px}.fl textarea{grid-column:1/-1;min-height:70px}
+.fl.w{grid-template-columns:1fr}.fl.w input{width:100%}
+.fl .mk{font-weight:800;margin-left:6px}
+.tr{border-top:1px dashed var(--line);padding:10px 0}.tr:first-of-type{border-top:0}
+.tr>b{display:block;margin-bottom:2px}
+.tr .gv{font-size:14.5px;color:var(--muted);margin:0 0 6px}
+.tr label{font-size:12.5px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;display:block;margin:6px 0 3px}
+.tr textarea{min-height:64px}
+.sub{margin-top:10px}
+.cnt{font-size:13px;color:var(--muted);margin:4px 0 0}.cnt.ok{color:#1f7a54;font-weight:700}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .cnt.ok{color:#6fd3a5}}
+.vc .btn{margin-top:12px}
+.btn:disabled{opacity:.6;cursor:default}
+.res{margin-top:8px;font-weight:700}.res.ok{color:#1f7a54}.res.no{color:var(--berry)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .res.ok{color:#6fd3a5}}
+.nav{display:flex;justify-content:space-between;gap:10px;margin-top:22px;flex-wrap:wrap}
+.nav .btn{margin:0}
+.zelf{display:flex;gap:6px}.zelf button{width:44px;height:44px;border-radius:50%;border:2px solid var(--line);background:var(--bg);color:var(--ink);font:700 15px Inter,sans-serif;cursor:pointer}.zelf button.on{background:var(--green);border-color:var(--green);color:#fff}
+@media(max-width:420px){.zelf button{width:40px;height:40px}.zelf{gap:4px}}
+.keuze{display:grid;gap:14px;margin-top:20px}
+.keuze a{display:block;text-decoration:none;border:1.5px solid var(--line);background:var(--card);border-radius:18px;padding:20px}
+.keuze a b{font:700 22px Fraunces,serif;display:block}.keuze a span{color:var(--muted)}
+.keuze a:hover{border-color:var(--teal)}
+.klein{font-size:13px;color:var(--muted);margin-top:26px}
+.klein button{background:none;border:0;padding:6px 0;font:inherit;color:var(--muted);text-decoration:underline;cursor:pointer}
+@media print{.tabs,.nav,.btn,.top,.hero .wave{display:none}.vc{break-inside:avoid;box-shadow:none}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="../index.html">Meneer <span>Boersen</span></a>
+  <nav><a class="hide-s" href="index.html">Boekje 2</a><a href="app.html#oefen">Leeromgeving</a></nav>
+</div></header>
+<section class="hero"><div class="wrap">
+  <div class="eyebrow" id="eb">Boekje 2 · doe-boek</div>
+  <h1 id="h1">Doe-boek</h1>
+  <p id="hv"></p>
+</div></section>
+<svg class="wave" viewBox="0 0 1200 46" preserveAspectRatio="none" aria-hidden="true" style="background:var(--green)"><path d="M0,24 C200,46 400,2 600,20 C800,38 1000,8 1200,26 L1200,46 L0,46 Z"/></svg>
+<main class="wrap" id="main">
+  <noscript><p>Dit doe-boek heeft JavaScript nodig.</p></noscript>
+  <div class="tabs" id="tabs" role="group" aria-label="Blokken" hidden></div>
+  <div id="blok" aria-live="off"></div>
+  <div class="nav" id="nav" hidden><button class="btn ghost" id="prev">← Vorig blok</button><button class="btn ghost" id="copy">Kopieer mijn antwoorden</button><button class="btn" id="next">Volgend blok →</button></div>
+  <p class="klein" id="klein" hidden>Alles wordt automatisch bewaard op dit apparaat en gaat nergens naartoe, behalve de antwoorden die je zelf laat nakijken door de AI (zonder naam of klas). <button id="wis">Wis mijn antwoorden</button></p>
+</main>
+<script src="../ai.js"></script>
+<script>
+(function(){
+/* Datagestuurd doe-boek. Data: window.DOEBOEK = {key, h, titel, hv, par, blokken:[{t,p,s}], vragen:[…]}.
+   Vraag: {n, b (blok), d (dia), l (label), v (vraag), bron, br, i (beeld), t (type) of P:[onderdelen]}.
+   Typen: mc (o,k) · mm (o,m) · jo (items,ch) · co (items,u) · vo (items) · ke (steps,bank,k) · wi (items) · fl (f) · tb (cols,rows) · ta · sc · ze. p = nakijkpunten voor de AI. */
+var $=function(i){return document.getElementById(i);},esc=GV_AI.esc;
+var sp=location.search.match(/[?&]h=(\d)/),HN=sp?sp[1]:"";
+var D,A={},cur=0,Q=[];
+function save(){try{localStorage.setItem(D.key,JSON.stringify(A));}catch(e){}}
+function L(i){return "ABCDEF"[i];}
+function sk(q,pi){return q.n+"_"+pi;}
+function norm(s){return String(s==null?"":s).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/[^a-z0-9]/g,"");}
+function num(s){s=String(s).trim().replace(/\s/g,"").replace(/[−–]/g,"-").replace(/(procent|km|uur|gulden|cent|jaar|keer|dollar|meter|m|\$|€|ƒ|%)+$/i,"");
+  if(/^-?\d{1,3}(\.\d{3})+(,\d+)?$/.test(s))s=s.replace(/\./g,"");s=s.replace(",",".");return /^-?\d+(\.\d+)?$/.test(s)?parseFloat(s):NaN;}
+/* k: getal · {r:[min,max]} · "tekst|tekst" (komt voor in antwoord) · [alternatieven] */
+function keyok(v,k){if(Array.isArray(k))return k.some(function(x){return keyok(v,x);});
+  if(typeof k==="number")return num(v)===k;if(k&&k.r){var n=num(v);return n>=k.r[0]&&n<=k.r[1];}
+  var nv=norm(v);return nv!==""&&String(k).split("|").some(function(x){return nv.indexOf(norm(x))>=0;});}
+function filled(a){if(a==null||a==="")return false;if(Array.isArray(a))return a.length>0;
+  if(typeof a==="object")return Object.keys(a).some(function(k){return k[0]!=="_"&&a[k]!==""&&a[k]!=null;});return true;}
+function partDone(q,pi){var a=A[sk(q,pi)],P=q.P[pi];if(P.t==="mm")return !!(a&&a.s&&a.s.length);if(P.t==="sc"||P.t==="ze")return !!a&&P.items.every(function(_,i){return a[i];});return filled(a);}
+function answered(q){return q.P.every(function(_,pi){return partDone(q,pi);});}
+function tabs(){$("tabs").innerHTML=D.blokken.map(function(b,i){var qs=Q.filter(function(q){return q.b===i;}),d=qs.filter(answered).length;
+  return '<button type="button" data-b="'+i+'" aria-pressed="'+(i===cur)+'" class="'+(d===qs.length&&qs.length?"done":"")+'">'+esc(b.t)+'<small>'+d+' / '+qs.length+'</small></button>';}).join("");}
+function score(q,pi){var P=q.P[pi],a=A[sk(q,pi)]||{},tot=0,ok=0;
+  if(P.t==="ke")P.k.forEach(function(k,i){tot++;if(a[i]===k)ok++;});
+  else if(P.t==="wi")P.items.forEach(function(it,i){tot++;if(norm(a[i])===norm(it[1]))ok++;});
+  else if(P.t==="fl")P.f.forEach(function(f,i){if(f.k==null)return;tot++;if(keyok(a[i],f.k))ok++;});
+  else if(P.t==="tb")P.rows.forEach(function(r,i){(r.k||[]).forEach(function(k,c){if(k==null)return;tot++;if(norm(a[i+"_"+c])===norm(k))ok++;});});
+  else P.items.forEach(function(it,i){if(it[1]==null)return;tot++;if(String(a[i])===String(it[1]))ok++;});
+  return '<p class="res '+(ok===tot?"ok":"no")+'" role="status">'+ok+' van '+tot+' goed'+(ok===tot?" ✓":", probeer de rode nog eens.")+'</p>';}
+function mark(a,ok){return a&&a._c?(ok?" ok":" no"):"";}
+function sym(a,ok){return a&&a._c?(ok?' <span class="mk">✓</span>':' <span class="mk">✗</span>'):"";}
+function chkBtn(q,pi){return '<button type="button" class="btn" id="chk'+sk(q,pi)+'" data-chk="'+sk(q,pi)+'">Controleer</button>';}
+function aiBtn(q,pi){return '<button type="button" class="btn ghost" data-ai="'+sk(q,pi)+'">Vraag de AI om feedback</button><div id="fb'+sk(q,pi)+'" aria-live="polite"></div>';}
+function wordsLine(P,t){var w=P.wb||[],low=norm(t),n=w.filter(function(x){return low.indexOf(norm(x))>=0;}).length,z=(t.match(/[.!?](\s|$)/g)||[]).length;
+  return 'Woordbank: '+w.map(esc).join(", ")+'. Je gebruikt nu '+n+' van de woorden'+(P.z?' en '+z+' zin'+(z===1?"":"nen"):"")+'.';}
+function part(q,pi){
+  var P=q.P[pi],k=sk(q,pi),a=A[k],h="",id="f"+k;
+  var lab=P!==q&&P.v?'<p class="pl">'+esc(P.v)+'</p>':"";
+  if(P.hint)lab+='<p class="hint">'+esc(P.hint)+'</p>';
+  if(P.t==="mc"){
+    h='<div class="opts" role="group" aria-label="Antwoordkeuzes">'+P.o.map(function(t,i){var c=a===i?(P.k==null?"sel":i===P.k?"ok":"no"):(a!=null&&P.k===i?"ok":"");
+      return '<button type="button" id="'+id+'_'+i+'" class="opt '+c+'" data-mc="'+k+'" data-i="'+i+'" aria-pressed="'+(a===i)+'"><b>'+L(i)+'</b><span>'+esc(t)+'</span></button>';}).join("")+'</div>';
+    if(a!=null&&P.k!=null)h+='<p class="res '+(a===P.k?"ok":"no")+'" role="status">'+(a===P.k?"✓ Goed":"✗ Het juiste antwoord is "+L(P.k)+".")+'</p>';}
+  else if(P.t==="mm"){
+    a=a||{s:[]};var s=a.s||[];
+    h='<div class="opts" role="group" aria-label="Meerdere antwoorden zijn goed">'+P.o.map(function(t,i){var on=s.indexOf(i)>=0,c=a._c?(P.m.indexOf(i)>=0?(on?"ok":"no"):(on?"no":"")):"";
+      return '<label class="opt '+c+'"><input type="checkbox" id="'+id+'_'+i+'" data-mm="'+k+'" data-i="'+i+'"'+(on?" checked":"")+'><b><span>'+L(i)+'</span></b><span>'+esc(t)+'</span></label>';}).join("")+'</div>'+chkBtn(q,pi);
+    if(a._c){var good=s.length===P.m.length&&P.m.every(function(x){return s.indexOf(x)>=0;});
+      h+='<p class="res '+(good?"ok":"no")+'" role="status">'+(good?"✓ Goed":"✗ Nog niet helemaal: de goede antwoorden zijn "+P.m.map(L).join(" en ")+".")+'</p>';}}
+  else if(P.t==="jo"||P.t==="co"||P.t==="vo"){
+    a=a||{};var opts=P.t==="jo"?(P.ch||["J","O"]):P.t==="co"?P.u.map(function(_,i){return L(i);}):P.items.map(function(_,i){return i+1;});
+    if(P.t==="co")h+='<div class="leg">'+P.u.map(function(t,i){return '<div><b>'+L(i)+'</b> '+esc(t)+'</div>';}).join("")+'</div>';
+    else if(P.leg)h+='<p class="hint">'+esc(P.leg)+'</p>';
+    h+=P.items.map(function(it,i){var v=a[i],ok=it[1]!=null&&v!=null&&v!==""&&String(v)===String(it[1]),st=it[1]!=null&&v!=null&&v!==""?mark(a,ok):"";
+      return '<div class="row2'+st+'"><label for="'+id+'_'+i+'">'+(P.t==="co"?(i+1)+". ":"")+esc(it[0])+(st?(ok?"  ✓":"  ✗"):"")+'</label><select id="'+id+'_'+i+'" data-sel="'+k+'" data-i="'+i+'"><option value="">–</option>'+opts.map(function(o){return '<option'+(String(v)===String(o)?" selected":"")+'>'+o+'</option>';}).join("")+'</select></div>';}).join("");
+    if(P.items.some(function(it){return it[1]!=null;}))h+=chkBtn(q,pi)+(a._c?score(q,pi):"");}
+  else if(P.t==="ke"){
+    a=a||{};
+    h='<div class="bank">'+P.bank.map(function(w){return '<span>'+esc(w)+'</span>';}).join("")+'</div><div class="chain">'+P.steps.map(function(s,i){var ar=i?'<span class="ar" aria-hidden="true">➜</span>':'';
+      if(typeof s==="string")return ar+'<span class="st">'+esc(s)+'</span>';
+      var bi=s-1,v=a[bi],st=a._c&&v?(v===P.k[bi]?"ok":"no"):"";
+      return ar+'<select id="'+id+'_'+bi+'" data-sel="'+k+'" data-i="'+bi+'" class="'+st+'" aria-label="Ontbrekend woord '+s+'"><option value="">?</option>'+P.bank.map(function(w){return '<option'+(v===w?" selected":"")+'>'+esc(w)+'</option>';}).join("")+'</select>'+(st==="ok"?" ✓":st==="no"?" ✗":"");}).join("")+'</div>'+chkBtn(q,pi)+(a._c?score(q,pi):"");}
+  else if(P.t==="wi"){
+    a=a||{};
+    h=P.items.map(function(it,i){var v=a[i],ok=norm(v)===norm(it[1]);
+      return '<div class="fl w"><label for="'+id+'_'+i+'">'+String.fromCharCode(97+i)+'. '+esc(it[0])+' <span class="muted">('+norm(it[1]).length+' letters)</span>'+(a._c&&v?(ok?' <span class="mk">✓</span>':' <span class="mk">✗</span>'):"")+'</label><input type="text" id="'+id+'_'+i+'" data-f="'+k+'" data-i="'+i+'" maxlength="'+(norm(it[1]).length+4)+'" value="'+esc(v||"")+'" autocomplete="off" autocapitalize="characters" spellcheck="false" class="'+(a._c&&v?(ok?"ok":"no"):"")+'" style="text-transform:uppercase;letter-spacing:.12em"></div>';}).join("")+chkBtn(q,pi)+(a._c?score(q,pi):"");}
+  else if(P.t==="fl"){
+    a=a||{};
+    h=P.f.map(function(f,i){var v=a[i]||"",ok=f.k!=null&&v!==""&&keyok(v,f.k),st=f.k!=null&&v!==""&&a._c?(ok?"ok":"no"):"",lb=esc(f.l);
+      if(f.ta)return '<div class="fl w"><label for="'+id+'_'+i+'">'+lb+'</label><textarea id="'+id+'_'+i+'" data-f="'+k+'" data-i="'+i+'" maxlength="400" placeholder="Typ hier je antwoord…">'+esc(v)+'</textarea></div>';
+      return '<div class="fl"><label for="'+id+'_'+i+'">'+lb+(st?(ok?' <span class="mk">✓</span>':' <span class="mk">✗</span>'):"")+'</label><input type="text" id="'+id+'_'+i+'" data-f="'+k+'" data-i="'+i+'" value="'+esc(v)+'" class="'+st+'" autocomplete="off" spellcheck="false"'+(f.num?' inputmode="decimal"':'')+(f.w?' style="width:'+f.w+'px"':'')+'></div>';}).join("");
+    if(P.f.some(function(f){return f.k!=null;}))h+=chkBtn(q,pi)+(a._c?score(q,pi):"");}
+  else if(P.t==="tb"){
+    a=a||{};
+    h=P.rows.map(function(r,i){return '<div class="tr"><b>'+esc(r.l)+'</b>'+(r.g?'<p class="gv">'+esc(r.g)+'</p>':'')+P.cols.map(function(c,ci){var v=a[i+"_"+ci]||"",key=(r.k||[])[ci],cid=id+"_"+i+"_"+ci,ok=key!=null&&norm(v)===norm(key);
+      if(c.sel)return '<label for="'+cid+'">'+esc(c.h)+(key!=null&&v&&a._c?(ok?" ✓":" ✗"):"")+'</label><select id="'+cid+'" data-tbs="'+k+'" data-i="'+i+'_'+ci+'" class="'+(key!=null&&v&&a._c?(ok?"ok":"no"):"")+'"><option value="">–</option>'+c.sel.map(function(o){return '<option'+(v===o?" selected":"")+'>'+o+'</option>';}).join("")+'</select>';
+      return '<label for="'+cid+'">'+esc(c.h)+'</label><textarea id="'+cid+'" data-f="'+k+'" data-i="'+i+'_'+ci+'" maxlength="300" placeholder="Typ hier…">'+esc(v)+'</textarea>';}).join("")+'</div>';}).join("");
+    if(P.rows.some(function(r){return (r.k||[]).some(function(x){return x!=null;});}))h+=chkBtn(q,pi)+(a._c?score(q,pi):"");
+    if(P.p)h+=aiBtn(q,pi);}
+  else if(P.t==="sc"||P.t==="ze"){
+    a=a||{};var mx=P.max||5;
+    h='<div>'+P.items.map(function(n,i){var bs="";for(var x=1;x<=mx;x++)bs+='<button type="button" id="'+id+'_'+i+'_'+x+'" data-z="'+k+'" data-i="'+i+'" data-v="'+x+'" class="'+(a[i]===x?"on":"")+'" aria-pressed="'+(a[i]===x)+'" aria-label="'+esc(n)+': '+x+'">'+x+'</button>';
+      return '<div class="row2 z"><span>'+esc(n)+'</span><span class="zelf">'+bs+'</span></div>';}).join("")+'</div>';
+  }
+  else{ // ta
+    var v=a||"";
+    h='<textarea id="'+id+'" data-ta="'+k+'" maxlength="900" placeholder="'+(P.ph||"Typ hier je antwoord…")+'" aria-label="'+esc((P.v||q.v).slice(0,90))+'">'+esc(v)+'</textarea>';
+    if(P.wb)h+='<p class="cnt" id="cnt'+k+'">'+wordsLine(P,v)+'</p>';
+    if(P.p)h+=aiBtn(q,pi);}
+  return lab+h;
+}
+function img(q){var i=q.i;if(!i)return "";
+  if(i.ph)return '<figure class="im"><div class="ph" role="img" aria-label="'+esc(i.c)+'"><b>📷 '+esc(i.c)+'</b>Deze afbeelding staat op '+esc(i.ph)+' van de PowerPoint. Kijk daar.</div></figure>';
+  return '<figure class="im"><img src="img/doeboek/'+i.f+'" alt="'+esc(i.alt||i.c)+'" loading="lazy" decoding="async"><figcaption>'+esc(i.c)+(i.ai?" · AI-illustratie":"")+(i.b?" · "+esc(i.b):"")+'</figcaption></figure>';}
+function tabel(q){var t=q.tabel;if(!t)return "";
+  return '<div class="tw" role="region" tabindex="0" aria-label="'+esc(t.n)+'"><table class="tb"><caption>'+esc(t.n)+'</caption><thead><tr>'+t.c.map(function(c){return '<th scope="col">'+esc(c)+'</th>';}).join("")+'</tr></thead><tbody>'+
+    t.r.map(function(r){return '<tr>'+r.map(function(c,i){return i?'<td>'+esc(c)+'</td>':'<th scope="row">'+esc(c)+'</th>';}).join("")+'</tr>';}).join("")+'</tbody></table></div>';}
+function card(q){
+  return '<div class="tg">'+esc(q.l)+(q.vs?' <span class="vs">Voorspel</span>':'')+' <i>· vraag '+q.n+(q.d?' · dia '+esc(q.d):'')+'</i></div>'+
+    '<p class="v" id="v'+q.n+'">'+q.n+'. '+esc(q.v)+'</p>'+
+    (q.bron||[]).map(function(b){return '<blockquote class="bron">'+esc(b[0])+(b[1]?'<cite>'+esc(b[1])+'</cite>':'')+'</blockquote>';}).join("")+tabel(q)+img(q)+
+    q.P.map(function(_,pi){return '<div class="sub">'+part(q,pi)+'</div>';}).join("");}
+function draw(foc){
+  A._b=cur;save();tabs();var b=D.blokken[cur];
+  $("blok").innerHTML='<div class="bhead" id="bh" tabindex="-1"><h2>'+esc(b.t)+(b.p?' <span class="muted" style="font:500 16px Inter,sans-serif">'+esc(b.p)+'</span>':'')+'</h2>'+(b.s?'<p class="muted" style="margin:2px 0 0">'+esc(b.s)+'</p>':'')+'</div>'+
+    Q.filter(function(q){return q.b===cur;}).map(function(q,i){return '<div class="card vc" id="q'+q.n+'" style="animation-delay:'+Math.min(i,6)*45+'ms">'+card(q)+'</div>';}).join("");
+  $("prev").style.visibility=cur?"visible":"hidden";$("next").style.visibility=cur<D.blokken.length-1?"visible":"hidden";
+  if(foc)$("bh").focus({preventScroll:true});}
+function qof(n){return Q.filter(function(x){return x.n===n;})[0];}
+function redraw(n){var q=qof(n),c=$("q"+n),ae=document.activeElement,fid=ae&&ae.id,st=ae&&ae.selectionStart,en=ae&&ae.selectionEnd;
+  c.style.animation="none";c.innerHTML=card(q);tabs();
+  if(fid){var e=$(fid);if(e){e.focus({preventScroll:true});try{if(st!=null)e.setSelectionRange(st,en);}catch(x){}}}}
+function split(k){var m=k.split("_");return [+m[0],+m[1]];}
+function st(k){var s=split(k);return {q:qof(s[0]),pi:s[1]};}
+function go(b){cur=b;draw(true);window.scrollTo({top:0});}
+document.addEventListener("click",function(e){
+  var t,k;
+  if((t=e.target.closest("[data-b]"))){go(+t.dataset.b);return;}
+  if((t=e.target.closest("[data-mc]"))){k=t.dataset.mc;A[k]=+t.dataset.i;save();redraw(st(k).q.n);return;}
+  if((t=e.target.closest("[data-chk]"))){k=t.dataset.chk;if(typeof A[k]!=="object"||A[k]===null)A[k]={};A[k]._c=1;save();redraw(st(k).q.n);return;}
+  if((t=e.target.closest("[data-z]"))){k=t.dataset.z;A[k]=A[k]||{};A[k][t.dataset.i]=+t.dataset.v;save();redraw(st(k).q.n);return;}
+  if((t=e.target.closest("[data-ai]"))){ask(t);return;}
+});
+document.addEventListener("change",function(e){var t=e.target,k;
+  if(t.dataset.sel){k=t.dataset.sel;A[k]=A[k]||{};A[k][t.dataset.i]=t.value;A[k]._c=0;save();redraw(st(k).q.n);}
+  else if(t.dataset.tbs){k=t.dataset.tbs;A[k]=A[k]||{};A[k][t.dataset.i]=t.value;A[k]._c=0;save();redraw(st(k).q.n);}
+  else if(t.dataset.mm){k=t.dataset.mm;var a=A[k]=A[k]||{s:[]},i=+t.dataset.i,s=a.s||[];s=t.checked?s.concat([i]):s.filter(function(x){return x!==i;});a.s=s.sort();a._c=0;save();redraw(st(k).q.n);}});
+document.addEventListener("input",function(e){var t=e.target,k,o;
+  if(t.dataset.f){k=t.dataset.f;o=A[k];if(typeof o!=="object"||!o)o=A[k]={};o[t.dataset.i]=t.value;
+    if(o._c){o._c=0;t.className="";var lb=t.parentNode.querySelector(".mk");if(lb)lb.remove();var sc=t.closest(".sub").querySelector(".res");if(sc)sc.remove();}
+    save();tabs();}
+  else if(t.dataset.ta){k=t.dataset.ta;A[k]=t.value;save();tabs();var p=st(k),P=p.q.P[p.pi],c=$("cnt"+k);if(c&&P.wb){c.textContent=wordsLine(P,t.value);c.className="cnt"+(P.wb.filter(function(x){return norm(t.value).indexOf(norm(x))>=0;}).length>=(P.min||0)?" ok":"");}}});
+function aiText(P,a){if(P.t==="tb")return P.rows.map(function(r,i){return r.l+": "+P.cols.map(function(c,ci){return (a[i+"_"+ci]||"").trim();}).filter(Boolean).join(" / ");}).filter(function(x){return /: .+/.test(x);}).join("\n");return String(a||"").trim();}
+function ask(btn){
+  var k=btn.dataset.ai,s=st(k),q=s.q,P=q.P[s.pi],a=aiText(P,A[k]),fb=$("fb"+k);
+  if(a.length<5){fb.innerHTML='<div class="aifb bijna"><p>Typ eerst je antwoord.</p></div>';return;}
+  btn.disabled=true;btn.textContent="Bezig met nakijken…";
+  var vraag=q.v+(P!==q&&P.v?" "+P.v:"");if(vraag.length<60&&vraag.indexOf("?")<0)vraag+=" Beantwoord de vraag zo volledig mogelijk.";
+  GV_AI.check({begrip:vraag,uitleg:"",antwoord:a,h:D.ai,paragraaf:D.par,samenvatting:[(q.bron||[]).map(function(b){return b[0]+(b[1]?" ("+b[1]+")":"");}).join(" "),P.ctx||q.ctx].filter(Boolean).join(" "),punten:P.p}).then(function(f){
+    btn.disabled=false;btn.textContent="Vraag de AI om feedback";
+    if(f.lokaal){fb.innerHTML='<div class="aifb bijna"><p>De AI is nu niet bereikbaar. Bespreek dit antwoord met je docent of kijk het na in de PowerPoint.</p></div>';return;}
+    fb.innerHTML=GV_AI.render(f);});}
+function copyText(){var s="Doe-boek "+D.titel+"\n\n";
+  Q.forEach(function(q){var lines=[];q.P.forEach(function(P,pi){var a=A[sk(q,pi)],v="";if(a==null||a==="")return;
+    if(P.t==="mc")v=L(a);else if(P.t==="mm")v=(a.s||[]).map(L).join(", ");
+    else if(typeof a==="object")v=Object.keys(a).filter(function(x){return x[0]!=="_"&&a[x]!=="";}).map(function(x){var it=(P.items&&P.items[x])||(P.f&&P.f[x])||(P.rows&&P.rows[x.split("_")[0]]);
+      var lab=it?(Array.isArray(it)?it[0]:(it.l||"")).slice(0,34):"";return (lab?lab+" = ":"")+a[x];}).join("\n   ");else v=a;
+    if(v)lines.push(v);});
+    if(lines.length)s+=q.n+". "+lines.join("\n   ")+"\n";});return s;}
+$("prev").onclick=function(){go(Math.max(0,cur-1));};
+$("next").onclick=function(){go(Math.min(D.blokken.length-1,cur+1));};
+$("copy").onclick=function(){var s=copyText(),b=$("copy");
+  (navigator.clipboard?navigator.clipboard.writeText(s):Promise.reject()).then(function(){b.textContent="Gekopieerd ✓";},function(){prompt("Kopieer je antwoorden:",s);});
+  setTimeout(function(){b.textContent="Kopieer mijn antwoorden";},2200);};
+$("wis").onclick=function(){if(confirm("Alle antwoorden van dit doe-boek wissen van dit apparaat?")){A={};try{localStorage.removeItem(D.key);}catch(e){}cur=0;draw(true);}};
+function init(){
+  D=window.DOEBOEK;document.title="Doe-boek H"+D.h+" · "+D.titel+" · Boekje 2";
+  $("eb").textContent="Boekje 2 · doe-boek · hoofdstuk "+D.h;$("h1").textContent=D.titel;$("hv").innerHTML="Hoofdvraag: <b>"+esc(D.hv)+"</b> Werk de blokken door, bij de dia’s van de PowerPoint.";
+  Q=D.vragen;Q.forEach(function(q){q.P=q.P||[q];});
+  try{A=JSON.parse(localStorage.getItem(D.key)||"{}")||{};}catch(e){A={};}
+  cur=Math.min(+(A._b||0),D.blokken.length-1);
+  $("tabs").hidden=$("nav").hidden=$("klein").hidden=false;draw(false);}
+if(HN==="1"||HN==="2"){var s=document.createElement("script");s.src=["data","doeboek-h"+HN+".js"].join("/");s.onload=init;
+  s.onerror=function(){$("blok").innerHTML='<p class="card">Dit doe-boek kon niet geladen worden. Probeer het later opnieuw.</p>';};document.head.appendChild(s);}
+else{$("h1").textContent="Kies je doe-boek";$("hv").textContent="Twee doe-boeken bij de PowerPoints van boekje 2. Je antwoorden blijven bewaard op dit apparaat.";
+  $("blok").innerHTML='<div class="keuze"><a href="doeboek.html?h=1"><b>Hoofdstuk 1 · Arm in de 19e eeuw</b><span>Liefdadigheid, zwaar werk, wonen, de vier groepen in het parlement en de eerste wetten.</span></a><a href="doeboek.html?h=2"><b>Hoofdstuk 2 · Crisis, ellende en schaamte</b><span>Beurskrach, hulp en steun, werkverschaffing, bezuinigen en het Plan van de Arbeid.</span></a></div>';}
+})();
+</script>
+</body>
+</html>

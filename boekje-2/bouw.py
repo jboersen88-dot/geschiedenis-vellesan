@@ -79,9 +79,17 @@ s = s.replace("Maak de toets zonder boek en zonder hulp. Meerkeuze wordt direct 
 # games die alleen boekje 1-vragen hebben weglaten; kaart en beeldquiz passen bij H2
 s = re.sub(r'<a class="gtile" href="nakijken\.html".*?</a>', "", s, flags=re.S)
 s = re.sub(r'<a class="gtile" href="racer\.html".*?</a>', "", s, flags=re.S)
-s = re.sub(r'<a class="gtile" href="doeboek\.html".*?</a>', "", s, flags=re.S)
+# Doe-boek H4 (boekje 1) wordt Doe-boek H1 en H2 van boekje 2 (boekje-2/doeboek.html?h=1|2, data in boekje-2/data/doeboek-hN.js)
+def doeboek_tegel(h):
+    d = open(os.path.join(ROOT, "boekje-2", "data", f"doeboek-h{h}.js"), encoding="utf-8").read()
+    titel = re.search(r'titel:"([^"]+)"', d).group(1)
+    n = len(re.findall(r"\{n:\d+,b:\d+,", d))
+    blokken = len(re.findall(r"\{t:\"[^\"]+\",p:", d))
+    return (f'<a class="gtile" href="doeboek.html?h={h}"><span class="gico">📘</span><b>Doe-boek H{h}: {titel}</b>'
+            f'<span>Het hele doe-boek online: {n} vragen in {blokken} blokken, met controle en AI-feedback. Zonder downloaden.</span></a>')
+s = re.sub(r'<a class="gtile" href="doeboek\.html".*?</a>', lambda m: doeboek_tegel(1) + "\n          " + doeboek_tegel(2), s, count=1, flags=re.S)
 s = re.sub(r'<a class="gtile" href="verhaal\.html".*?</a>', "", s, flags=re.S)
-assert "doeboek.html" not in s
+assert s.count("doeboek.html?h=") == 2
 s = s.replace('href="kaart.html"', 'href="../kaart.html"').replace('href="beeldquiz.html"', 'href="../beeldquiz.html"')
 for gone in ["racer.html", "nakijken.html", "toets.html?t="]:
     assert gone not in s, gone

@@ -1408,7 +1408,7 @@ document.getElementById("maatBox").addEventListener("input",function(e){
 });
 renderFlash();renderProgress();renderCheck();renderMaat();
 /* ---------- deep links: app.html#H2, #H3-lab, #toets, #films ---------- */
-function route(){var m=/^#(?:(H[1-4])-?)?(les|lab|toets|films|start|maat)?$/.exec(location.hash);if(!m||(!m[1]&&!m[2]))return;if(m[1])cur=m[1];show(m[2]||"les");}
+function route(){var m=/^#(?:(H[1-4])-?)?(les|lab|toets|films|start|maat|oefen)?$/.exec(location.hash);if(!m||(!m[1]&&!m[2]))return;if(m[1])cur=m[1];show(m[2]||"les");}
 window.addEventListener("hashchange",route);route();
 
 })();

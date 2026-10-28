@@ -19,6 +19,7 @@ Herkende vormen:
   o + j / k    {o:[...], j: index}  of  {o:[...], k: index}
   a            {q:"...", a:[juist, fout, fout, fout]}
   goed + fout  {goed:"...", fout:[fout, fout, fout]}
+  o + m        {o:[...], m:[indexen]}  meerdere antwoorden goed (doe-boeken boekje 2): 4 opties en lengte tellen, "juiste = langste" niet
 """
 import json, os, re, sys
 
@@ -46,6 +47,11 @@ def find_questions(text):
         before = text[max(0, m.start() - 400):m.start()]
         qm = re.findall(r'"?(?:q|v|vraag)"?\s*:\s*(' + STR + r')', before)
         out.append((json.loads(qm[-1]) if qm else "(vraag)", arr(m.group(1)), int(m.group(3))))
+    # {o:[...], m:[0,1]}: meerdere goed; j = None (geen "langste"-controle)
+    for m in re.finditer(r'"?o"?\s*:\s*(' + ARR + r')\s*,\s*"?m"?\s*:\s*\[\s*\d+(?:\s*,\s*\d+)*\s*\]', text):
+        before = text[max(0, m.start() - 600):m.start()]
+        qm = re.findall(r'"?(?:q|v|vraag)"?\s*:\s*(' + STR + r')', before)
+        out.append((json.loads(qm[-1]) if qm else "(vraag)", arr(m.group(1)), None))
     # {q:"...", a:[...]} met a[0] juist
     for m in re.finditer(r'\bq\s*:\s*(' + STR + r')\s*,\s*a\s*:\s*(' + ARR + r')', text):
         out.append((json.loads(m.group(1)), arr(m.group(2)), 0))
@@ -67,7 +73,7 @@ def check_q(opts, j):
     if L and min(L) > 20 and max(L) / min(L) > 1.5:
         probs.append(f"lengteverschil {max(L)/min(L):.2f} (max 1,5)")
     others = sorted((l for i, l in enumerate(L) if i != j), reverse=True)
-    longest = bool(others) and j < len(L) and L[j] >= others[0] * 1.08 and L[j] - others[0] >= 5
+    longest = j is not None and bool(others) and j < len(L) and L[j] >= others[0] * 1.08 and L[j] - others[0] >= 5
     return probs, longest
 
 
