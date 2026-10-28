@@ -1,3 +1,9 @@
+## 2026-10-28 · Interactieve plaatjes bij de lesstof (eerst: huisnijverheid)
+
+- **Lesstof-tab** (`app.html`, boekje 1 en 2): de plaatjes-galerij is nu één groot plaatje met klikbare bolletjes, de andere plaatjes staan als kleine keuzeknoppen eronder. Tik op een bolletje: het beeld zoomt in, een spotlight licht het detail uit en de uitleg komt eronder, met een vraag om over na te denken. Bekeken bolletjes krijgen een vinkje, bovenin staat "1 van 4 ontdekt", en daarna volgt een slotvraag en de knop naar het volgende plaatje. Ook te bedienen met een lijst, toetsenbord (Esc = hele plaat) en screenreader; bij `prefers-reduced-motion` geen zoom en geen pulserende bolletjes.
+- **Huisnijverheid** (H1): lokale kopie van het plaatje uit de PowerPoint (H1 dia 6) in `img/galerij/huisnijverheid.jpg` (144 KB), 4 bolletjes in `data/galerij.js`. Teksten alleen uit dia 6 en dia 9; waar de lesstof niets zegt staat een vraag. Andere plaatjes (nog van Drive) werken met een lege lijst bolletjes als grote weergave; hoe je ze vult staat bovenin `data/galerij.js`.
+- `THUMB` en `VIEW` in `app.html` kennen nu lokale paden zelf; `boekje-2/bouw.py` hoeft ze niet meer te patchen.
+
 ## 2026-10-20 · Economie SE3: verbeteringen na jouw notities
 
 - **Economie-pagina**: de EDU-Racer staat niet meer op de pagina SE3 H1, H2 (staat nu als tegel bij Games in de leeromgeving); onder de kaart "Open de leeromgeving" staat een kopje Lesstof.

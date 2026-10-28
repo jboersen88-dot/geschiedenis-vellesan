@@ -335,10 +335,51 @@ summary{cursor:pointer;font-weight:700;color:var(--plum)}
 .banner .cap span{opacity:.85;font-size:13.5px}
 .pcard .band{height:110px;background-size:cover!important;background-position:center!important}
 .pcard .band b{text-shadow:0 2px 8px rgba(0,0,0,.45)}
-.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-top:12px;width:100%}
-.gal a{display:block;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:#fff;text-decoration:none;color:var(--ink)}
-.gal img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;background:#e9dfd2}
-.gal span{display:block;font-size:12px;font-weight:700;padding:6px 8px}
+.ig{max-width:820px;margin-top:14px}
+.ig-stage{position:relative;overflow:hidden;border-radius:var(--r);border:1px solid var(--line);background:#e9dfd2;box-shadow:var(--shadow);animation:igfade .35s var(--ease-out)}
+.ig-stage:after{content:"";position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 70px rgba(30,20,10,.22)}
+.ig-pan{position:absolute;inset:0;transform-origin:0 0;transition:transform .52s var(--ease-in-out)}
+.ig-pan img{display:block;width:100%;height:100%;object-fit:cover;user-select:none;-webkit-user-drag:none}
+.ig-lens{position:absolute;inset:0;pointer-events:none;opacity:0;transition:transform .52s var(--ease-in-out),opacity .3s var(--ease-out)}
+.ig-lens.on{opacity:1}
+.ig-lens i{position:absolute;left:0;top:0;width:22%;aspect-ratio:1;margin:-11% 0 0 -11%;border-radius:50%;box-shadow:0 0 0 200vmax rgba(14,26,22,.5),inset 0 0 0 2px rgba(255,255,255,.9)}
+.ig-hs{position:absolute;translate:-50% -50%;scale:calc(1/var(--z,1));width:34px;height:34px;padding:0;border-radius:50%;border:3px solid #fff;background:var(--berry);color:#fff;font:800 15px Inter,sans-serif;display:grid;place-items:center;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.4);transition:scale .52s var(--ease-in-out),background .16s;animation:igin .45s var(--ease-out) backwards;animation-delay:calc(var(--i)*70ms + 200ms);touch-action:manipulation}
+.ig-hs:after{content:"";position:absolute;inset:-9px;border-radius:50%}
+.ig-hs:before{content:"";position:absolute;inset:-3px;border-radius:50%;border:2px solid var(--coral);opacity:0;animation:igping 2.4s var(--ease-out) infinite;animation-delay:calc(var(--i)*400ms + 900ms);pointer-events:none}
+.ig-hs.gedaan{background:var(--plum)}
+.ig-hs.gedaan:before,.ig.klaar .ig-hs:before,.ig.geraakt .ig-hs:before{animation:none}
+.ig-hs[aria-pressed="true"]{outline:3px solid var(--coral);outline-offset:2px}
+.ig-hs:active{scale:calc(.9/var(--z,1))}
+.ig-hs svg{width:16px;height:16px;stroke-width:3}
+@media(hover:hover) and (pointer:fine){.ig-hs:hover{scale:calc(1.12/var(--z,1))}}
+.ig-prog{position:absolute;left:10px;top:10px;z-index:2;display:flex;align-items:center;gap:6px;padding:5px 11px;border-radius:999px;background:rgba(25,18,14,.62);color:#fff;font-size:12.5px;font-weight:700;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.ig-prog.klaar{background:var(--plum);animation:igpop .35s var(--ease-out)}
+.ig-card{margin-top:10px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 16px;box-shadow:var(--shadow);outline:0}
+.ig-card h3{margin:2px 0 6px;font-size:19px}
+.ig-card p{margin:0 0 8px;font-size:14.5px}
+.ig-card .bron{font-size:12.5px;color:var(--muted);font-weight:600}
+.ig-card .vr{border-left:4px solid var(--coral);background:color-mix(in srgb,var(--berry) 7%,var(--card));border-radius:0 12px 12px 0;padding:9px 12px;margin:10px 0 4px;font-size:14.5px}
+.ig-card .vr b{display:block;font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--berry);margin-bottom:2px}
+.ig-card .row{margin-top:10px;gap:8px}
+.ig-card .btn{min-height:44px}
+.ig-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:6px;margin:10px 0 0;padding:0;list-style:none}
+.ig-list button{width:100%;min-height:44px;display:flex;align-items:center;gap:9px;text-align:left;border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:12px;padding:6px 12px;font:600 14px Inter,sans-serif;cursor:pointer;touch-action:manipulation}
+.ig-list button[aria-pressed="true"]{border-color:var(--berry)}
+.ig-list .nr{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--berry);color:#fff;font-weight:800;font-size:12.5px;flex:none}
+.ig-list .gedaan .nr{background:var(--plum)}
+.ig-list svg{width:14px;height:14px;stroke-width:3}
+.ig-thumbs{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:8px;margin-top:12px}
+.ig-th{display:block;padding:0;text-align:left;border:2px solid var(--line);border-radius:12px;overflow:hidden;background:#fff;color:var(--ink);cursor:pointer;touch-action:manipulation}
+.ig-th[aria-pressed="true"]{border-color:var(--berry)}
+.ig-th img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;background:#e9dfd2}
+.ig-th span{display:block;font-size:11.5px;font-weight:700;line-height:1.25;padding:5px 7px}
+.ig-th em{font-style:normal;color:var(--berry)}
+@keyframes igfade{from{opacity:0}}
+@keyframes igin{from{opacity:0;scale:.4}}
+@keyframes igping{0%{opacity:.8;transform:scale(1)}70%,100%{opacity:0;transform:scale(1.9)}}
+@keyframes igpop{from{transform:scale(.9)}}
+@media(max-width:560px){.ig-hs:after{inset:-5px}}
+@media(prefers-reduced-motion:reduce){.ig-hs:before{animation:none}.ig-stage,.ig-hs,.ig-prog{animation:none}}
 .tl{display:grid;gap:8px}
 .tlitem{display:flex;gap:10px;align-items:center;border:2px solid var(--line);border-radius:12px;padding:12px 14px;background:#fff;text-align:left;font-weight:700;touch-action:manipulation}
 .tlitem:hover:not(:disabled){border-color:var(--berry)}
@@ -444,6 +485,7 @@ nav.tabs button:active{transform:scale(.97)}
 </style>
 <script src="ai.js"></script>
 <script src="nakijker.js"></script>
+<script src="data/galerij.js"></script>
 </head>
 <body>
 <div class="app">
@@ -507,6 +549,7 @@ nav.tabs button:active{transform:scale(.97)}
             </div>
             <div class="viewer" id="lViewer"><div class="ph">PowerPoint laden…</div></div>
             <div class="xtra" id="lExtra"></div>
+            <div id="lGal"></div>
           </div>
           <div class="card pad goals" style="margin-top:14px"><h3>Kun jij dit beantwoorden?</h3><p class="muted" style="margin:0 0 10px;font-size:13.5px">Vink een vraag af als je het antwoord weet. Je voortgang bovenin telt mee.</p><div class="bar" style="margin:8px 0 6px"><i id="lBar"></i></div><div class="muted" style="font-size:12.5px;margin-bottom:4px" id="lBarTxt"></div><div id="lGoals"></div></div>
         </div>
@@ -592,14 +635,14 @@ nav.tabs button:active{transform:scale(.97)}
 <script>
 (function(){
 "use strict";
-var THUMB=function(id,w){return "https://drive.google.com/thumbnail?id="+id+"&sz=w"+(w||800);};
+var THUMB=function(id,w){if(/[\/.]/.test(id))return id;return "https://drive.google.com/thumbnail?id="+id+"&sz=w"+(w||800);};
 var DRIVE=function(id){return "https://drive.google.com/file/d/"+id+"/preview";};
-var VIEW=function(id){return "https://drive.google.com/file/d/"+id+"/view";};
+var VIEW=function(id){if(/[\/.]/.test(id))return id;return "https://drive.google.com/file/d/"+id+"/view";};
 var CHECK='<svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>';
 var EXT='<svg class="i" viewBox="0 0 24 24" style="width:14px;height:14px"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>';
 var LNK=function(x){return x.indexOf('http')===0?x:VIEW(x);};
 var MAT={"f1": ["Filmvragen H1: industrialisatie in Engeland", [["Document", "1kwxbMUjOb_csPW4R4YFDfLrN_UDmDD6Y"]]], "f2": ["Filmvragen H2: industrialisatie van Nederland", [["Document", "1APOtmkXDXqU5RgweXczQZEQkBFC9SYgK"]]], "rb": ["Opdracht: historisch recherchebord (H1 + H2)", [["PDF", "1At0SKY5oI6EzIG84kZmpOxRgy077PZ63"]]], "st": ["Schooltv: fabrieksarbeiders, wolkenstof en onveilige machines", [["Filmpje", "https://schooltv.nl/video-item/fabrieksarbeiders-dikke-wolkenstof-en-onveilige-machines"]]], "db": ["Doe-boek bij de PowerPoint van H4", [["Document", "1ZmQIoc5GzGCKx6KtK0SLvuPo7QxZ4wDW"]]]};
-var PARS=[{"id": "H1", "ch": 1, "t": "De Industriële Revolutie in Engeland", "c": "var(--p1)", "file": "1SGccpOAw28i4rps0FRPUvi2CoV1hV8yu", "x": ["f1", "rb"], "sum": "Agrarische en demografische revolutie, huisnijverheid, Spinning Jenny, waterframe, stoommachine en de schaduwkant.", "img": "1BWODeEpAY-pe8ZSvfcL5huJg9B7iclnM", "q": ["Wat was de agrarische revolutie en waardoor groeiden de oogsten?", "Hoe werden edelen grootgrondbezitters?", "Wat is de demografische revolutie en waardoor stierven er minder mensen?", "Waarom was er op het platteland een 'dubbel probleem'?", "Wat is huisnijverheid?", "Welk probleem loste de Spinning Jenny op?", "Waarom verhuisde het spinnen door het waterframe naar fabrieken?", "Wat was het voordeel van de stoommachine van James Watt?", "Waarom konden fabrikanten de lonen zo laag houden?", "Hoe zagen de eerste industriesteden eruit?"], "imgs": [["1h1cVKJoTwbEaePxHR3G_0YB9H_ojL6rZ", "Huisnijverheid: spinnen op de boerderij"], ["1BWODeEpAY-pe8ZSvfcL5huJg9B7iclnM", "De Spinning Jenny"], ["1ANjpcXJkcOOY1b276VW7wFR5k5n3X7ou", "Het waterframe aan de rivier"], ["1D5fWpFUzKcH17jUedMMK9JPMVCFnlj-7", "Een weefgetouw in de fabriek"], ["1PWz1fNptNOnunJyAP4CiVqgURcAMMQBU", "Een industriestad vol rook"], ["1_XqufVALOtVawkYoIDowuK4_MOQqf9Wu", "Een arbeidersgezin thuis"], ["15I02T6IWhwmdenqqKu1VpMuOJAbcTaii", "De kettingreactie van de Industriële Revolutie"]]}, {"id": "H2", "ch": 1, "t": "De Industriële Revolutie in Nederland", "c": "var(--p2)", "file": "10vrNf6kLK9D3zWUl4taJYQkBrsvn1zSY", "x": ["f2", "rb"], "sum": "Waarom Nederland achterliep, kwaliteitsproducten, schoenen en textiel, en de opkomst van Unilever, Shell en Philips.", "img": "1me5f0tq5N-nfdqXXDHlfcpD7_Dn5UEi8", "q": ["Wat liet de Wereldtentoonstelling van 1851 zien over Nederland?", "Noem twee redenen waarom Nederland later industrialiseerde dan Engeland.", "Welke kwaliteitsproducten maakte Nederland? Noem er drie.", "Waarom ontstond de leer- en schoenenindustrie in Noord-Brabant?", "Waar zaten de katoen- en de wolindustrie?", "Hoe veranderde het werk van een wever door de stoomweefmachine?", "Welke drie multinationals ontstonden er en wat maakten ze?", "Hoe werd Philips zo'n groot bedrijf?", "Waarom bleef Nederland toch achter op Engeland en België?"], "imgs": [["1me5f0tq5N-nfdqXXDHlfcpD7_Dn5UEi8", "De Wereldtentoonstelling van 1851"], ["1oyu0AMmfvQxaX70teawLH_st5xIqFiTo", "Een wever aan het stoomweefgetouw"], ["1T_5ePgVm-HVsVqt9tve3O7EijruvxID4", "Lampen maken bij Philips"]]}, {"id": "H3", "ch": 1, "t": "De sociale verhoudingen in Nederland", "c": "var(--p3)", "file": "1qEHfLNN1RaeKhBhZidDSu4cs3LP1djNv", "x": ["st"], "sum": "De sociale kwestie, het Kinderwetje, vakbonden en stakingen, kiesrecht, de Eerste Wereldoorlog en de crisis van de jaren dertig.", "img": "1_XqufVALOtVawkYoIDowuK4_MOQqf9Wu", "q": ["Wat is de sociale kwestie? Geef voorbeelden.", "Wie was Samuel van Houten en wat regelde zijn Kinderwetje?", "Waarom had het Kinderwetje weinig succes en de leerplichtwet wel?", "Wat zijn vakbonden en waarom bestaan ze?", "Waarom werkt een staking alleen als veel arbeiders meedoen?", "Wat wilde Troelstra met de SDAP?", "Waarom was het algemeen kiesrecht belangrijk voor arbeiders?", "Wat waren de gevolgen van de Eerste Wereldoorlog voor Nederland?", "Wat regelde de Arbeidswet van 1919 en wat is een cao?", "Wat was de aanpassingspolitiek van Colijn?"], "imgs": [["1_XqufVALOtVawkYoIDowuK4_MOQqf9Wu", "De sociale kwestie: een arbeiderswoning"], ["1PWz1fNptNOnunJyAP4CiVqgURcAMMQBU", "Wonen in de rook van de fabriek"]]}, {"id": "H4", "ch": 1, "t": "Welvaart voor iedereen", "c": "var(--p4)", "file": "1yOZPTTHYoA4407wq3Tp2MvgQ3RUoZGHo", "x": ["db"], "sum": "Oorlog en Hongerwinter, Marshallhulp en wederopbouw, het harmoniemodel, de jaren zestig, de oliecrisis en Nederland nu.", "img": "1tRzEqU4IoGEDexn7WrJTq_ZqNpAw1wkH", "q": ["Waarom ging het eerst goed en later slecht met de economie in de oorlog?", "Wat was de Arbeitseinsatz en wat was de Hongerwinter?", "Wat was de Marshallhulp en wat deed Nederland ermee?", "Wat is het harmoniemodel en wat is geleide loonpolitiek?", "Wat veranderde er in de landbouw na de oorlog?", "Waarom kwamen er gastarbeiders naar Nederland?", "Wat is een consumptiemaatschappij?", "Waarom verdween er na 1970 veel werk in de industrie?", "Wat was de oliecrisis en wat deed Den Uyl?", "Waarom is Nederland als handelsland kwetsbaar?"], "imgs": [["1rqmvDE2XuL-UAhnS239Gru-eF34IchNG", "De oorlogseconomie 1940–1945"], ["14_SmeFtyvYNokvRWznWtV4l4fxh5ym-F", "Rotterdam in puin"], ["1Eun7pea8-pGbyyyDzqU41xEVvd5y6Y7K", "De Marshallhulp"], ["1h1fxXYECxQgal6JDCDSo3SzUv9zmmPoO", "De wederopbouw 1945–1960"], ["1tRzEqU4IoGEDexn7WrJTq_ZqNpAw1wkH", "De televisie komt"], ["1t_HiRVyECINKC81G_7XA8nuF1dxPBN12", "Luxe in de huiskamer"], ["1GgJjeKGFYiA0fbZlEHWSkXUAhd-lLpU5", "Zelfbediening in de supermarkt"], ["12i5E5CY2v3s5dzA-dEurHhuf0wkIFqRt", "Autoloze zondag (1973)"]]}];
+var PARS=[{"id": "H1", "ch": 1, "t": "De Industriële Revolutie in Engeland", "c": "var(--p1)", "file": "1SGccpOAw28i4rps0FRPUvi2CoV1hV8yu", "x": ["f1", "rb"], "sum": "Agrarische en demografische revolutie, huisnijverheid, Spinning Jenny, waterframe, stoommachine en de schaduwkant.", "img": "1BWODeEpAY-pe8ZSvfcL5huJg9B7iclnM", "q": ["Wat was de agrarische revolutie en waardoor groeiden de oogsten?", "Hoe werden edelen grootgrondbezitters?", "Wat is de demografische revolutie en waardoor stierven er minder mensen?", "Waarom was er op het platteland een 'dubbel probleem'?", "Wat is huisnijverheid?", "Welk probleem loste de Spinning Jenny op?", "Waarom verhuisde het spinnen door het waterframe naar fabrieken?", "Wat was het voordeel van de stoommachine van James Watt?", "Waarom konden fabrikanten de lonen zo laag houden?", "Hoe zagen de eerste industriesteden eruit?"], "imgs": [["img/galerij/huisnijverheid.jpg", "Huisnijverheid: spinnen op de boerderij"], ["1BWODeEpAY-pe8ZSvfcL5huJg9B7iclnM", "De Spinning Jenny"], ["1ANjpcXJkcOOY1b276VW7wFR5k5n3X7ou", "Het waterframe aan de rivier"], ["1D5fWpFUzKcH17jUedMMK9JPMVCFnlj-7", "Een weefgetouw in de fabriek"], ["1PWz1fNptNOnunJyAP4CiVqgURcAMMQBU", "Een industriestad vol rook"], ["1_XqufVALOtVawkYoIDowuK4_MOQqf9Wu", "Een arbeidersgezin thuis"], ["15I02T6IWhwmdenqqKu1VpMuOJAbcTaii", "De kettingreactie van de Industriële Revolutie"]]}, {"id": "H2", "ch": 1, "t": "De Industriële Revolutie in Nederland", "c": "var(--p2)", "file": "10vrNf6kLK9D3zWUl4taJYQkBrsvn1zSY", "x": ["f2", "rb"], "sum": "Waarom Nederland achterliep, kwaliteitsproducten, schoenen en textiel, en de opkomst van Unilever, Shell en Philips.", "img": "1me5f0tq5N-nfdqXXDHlfcpD7_Dn5UEi8", "q": ["Wat liet de Wereldtentoonstelling van 1851 zien over Nederland?", "Noem twee redenen waarom Nederland later industrialiseerde dan Engeland.", "Welke kwaliteitsproducten maakte Nederland? Noem er drie.", "Waarom ontstond de leer- en schoenenindustrie in Noord-Brabant?", "Waar zaten de katoen- en de wolindustrie?", "Hoe veranderde het werk van een wever door de stoomweefmachine?", "Welke drie multinationals ontstonden er en wat maakten ze?", "Hoe werd Philips zo'n groot bedrijf?", "Waarom bleef Nederland toch achter op Engeland en België?"], "imgs": [["1me5f0tq5N-nfdqXXDHlfcpD7_Dn5UEi8", "De Wereldtentoonstelling van 1851"], ["1oyu0AMmfvQxaX70teawLH_st5xIqFiTo", "Een wever aan het stoomweefgetouw"], ["1T_5ePgVm-HVsVqt9tve3O7EijruvxID4", "Lampen maken bij Philips"]]}, {"id": "H3", "ch": 1, "t": "De sociale verhoudingen in Nederland", "c": "var(--p3)", "file": "1qEHfLNN1RaeKhBhZidDSu4cs3LP1djNv", "x": ["st"], "sum": "De sociale kwestie, het Kinderwetje, vakbonden en stakingen, kiesrecht, de Eerste Wereldoorlog en de crisis van de jaren dertig.", "img": "1_XqufVALOtVawkYoIDowuK4_MOQqf9Wu", "q": ["Wat is de sociale kwestie? Geef voorbeelden.", "Wie was Samuel van Houten en wat regelde zijn Kinderwetje?", "Waarom had het Kinderwetje weinig succes en de leerplichtwet wel?", "Wat zijn vakbonden en waarom bestaan ze?", "Waarom werkt een staking alleen als veel arbeiders meedoen?", "Wat wilde Troelstra met de SDAP?", "Waarom was het algemeen kiesrecht belangrijk voor arbeiders?", "Wat waren de gevolgen van de Eerste Wereldoorlog voor Nederland?", "Wat regelde de Arbeidswet van 1919 en wat is een cao?", "Wat was de aanpassingspolitiek van Colijn?"], "imgs": [["1_XqufVALOtVawkYoIDowuK4_MOQqf9Wu", "De sociale kwestie: een arbeiderswoning"], ["1PWz1fNptNOnunJyAP4CiVqgURcAMMQBU", "Wonen in de rook van de fabriek"]]}, {"id": "H4", "ch": 1, "t": "Welvaart voor iedereen", "c": "var(--p4)", "file": "1yOZPTTHYoA4407wq3Tp2MvgQ3RUoZGHo", "x": ["db"], "sum": "Oorlog en Hongerwinter, Marshallhulp en wederopbouw, het harmoniemodel, de jaren zestig, de oliecrisis en Nederland nu.", "img": "1tRzEqU4IoGEDexn7WrJTq_ZqNpAw1wkH", "q": ["Waarom ging het eerst goed en later slecht met de economie in de oorlog?", "Wat was de Arbeitseinsatz en wat was de Hongerwinter?", "Wat was de Marshallhulp en wat deed Nederland ermee?", "Wat is het harmoniemodel en wat is geleide loonpolitiek?", "Wat veranderde er in de landbouw na de oorlog?", "Waarom kwamen er gastarbeiders naar Nederland?", "Wat is een consumptiemaatschappij?", "Waarom verdween er na 1970 veel werk in de industrie?", "Wat was de oliecrisis en wat deed Den Uyl?", "Waarom is Nederland als handelsland kwetsbaar?"], "imgs": [["1rqmvDE2XuL-UAhnS239Gru-eF34IchNG", "De oorlogseconomie 1940–1945"], ["14_SmeFtyvYNokvRWznWtV4l4fxh5ym-F", "Rotterdam in puin"], ["1Eun7pea8-pGbyyyDzqU41xEVvd5y6Y7K", "De Marshallhulp"], ["1h1fxXYECxQgal6JDCDSo3SzUv9zmmPoO", "De wederopbouw 1945–1960"], ["1tRzEqU4IoGEDexn7WrJTq_ZqNpAw1wkH", "De televisie komt"], ["1t_HiRVyECINKC81G_7XA8nuF1dxPBN12", "Luxe in de huiskamer"], ["1GgJjeKGFYiA0fbZlEHWSkXUAhd-lLpU5", "Zelfbediening in de supermarkt"], ["12i5E5CY2v3s5dzA-dEurHhuf0wkIFqRt", "Autoloze zondag (1973)"]]}];
 var GOALS={"H1": ["Wat is de agrarische revolutie?", "Hoe werden edelen in Engeland grootgrondbezitters?", "Wat is mechanisering?", "Wat zijn drie redenen waarom de voedselproductie in Engeland groeide?", "Wat is de demografische revolutie?", "Wat zijn drie oorzaken waardoor er in Engeland minder mensen stierven?", "Waarom had de demografische revolutie niet kunnen gebeuren zonder de agrarische revolutie?", "Welk 'dubbel probleem' ontstond er op het Engelse platteland?", "Wat is huisnijverheid?", "Welk probleem was er tussen spinners en wevers en hoe werd dat opgelost?", "Waarom paste de Spinning Jenny nog in de huisnijverheid?", "Waarom ontstonden door het waterframe de eerste fabrieken?", "Welke twee problemen had waterkracht?", "Wie verbeterde de stoommachine en wat was het grote voordeel daarvan voor fabrieken?", "Waarom was steenkool zo belangrijk voor de Industriële Revolutie?", "Waarom konden fabrikanten de lonen laag houden?", "Wat zijn vier voorbeelden van slechte arbeidsomstandigheden in de eerste fabrieken?", "Wat is verstedelijking en hoe zagen de eerste industriesteden eruit?", "Hoe leidde de verkoop van dorpsgrond, in een keten van oorzaak en gevolg, tot goedkope arbeiders in de fabrieken?", "Welke informatie over het leven van arbeiders haal je uit een bron over kinderarbeid of mijnwerk?"], "H2": ["Wat liet de Wereldtentoonstelling van 1851 zien over Nederland?", "Wat zijn twee redenen waarom Nederland later industrialiseerde dan Engeland?", "Waarom hadden Nederlandse boeren in de negentiende eeuw genoeg werk en inkomen?", "Hoe zag de Nederlandse nijverheid rond 1850 eruit?", "Wat zijn drie voorbeelden van Nederlandse kwaliteitsproducten uit die tijd?", "Waarom zagen Nederlandse ondernemers geen reden om te vernieuwen?", "Waarom staken rijke Nederlanders weinig geld in fabrieken?", "Waarom ontstond de leer- en schoenenindustrie in Noord-Brabant?", "Hoe groeiden schoenmakerijen in Noord-Brabant uit tot fabrieken?", "Wat is arbeidsverdeling in een fabriek?", "Waar in Nederland zaten de katoenindustrie en de wolindustrie?", "Waarom werd er in Tilburg nog lang met de hand geweven?", "Hoe veranderde het werk van een wever door de stoomweefmachine?", "Hoe industrialiseerde Nederland, uitgelegd met het voorbeeld van de ploegenfabriek van Imants?", "Wat zijn de drie grote Nederlandse multinationals en wat maakten ze?", "Ik kan uitleggen wat een fusie is en welke bedrijven door een fusie ontstonden.", "Ik kan uitleggen hoe de broers Philips samen het bedrijf groot maakten.", "Waarom groeide Philips tijdens de Eerste Wereldoorlog?", "Waarom had Nederland rond 1900 nog steeds minder industrie dan Engeland en België?", "Vanaf wanneer kwam de industrialisatie in Nederland echt op gang?"], "H3": ["Wat is de sociale kwestie?", "Wat zijn vier voorbeelden van de sociale kwestie?", "Welke groepen mensen vroegen aandacht voor de sociale kwestie?", "Hoe leefden en werkten arbeidersgezinnen, volgens een bron?", "Wie was Samuel van Houten en wat regelde zijn Kinderwetje?", "Wat zijn drie redenen waarom het Kinderwetje weinig succes had?", "Waarom was het Kinderwetje toch een belangrijke wet?", "Wat zijn drie redenen waarom de leerplichtwet van 1901 wel een succes werd?", "Ik kan uitleggen wat een staking is en wanneer een staking werkt.", "Wat is een vakbond en waarvoor diende een stakingskas?", "Wat is censuskiesrecht en wat was het gevolg daarvan voor arbeiders?", "Wie was Pieter Jelles Troelstra en wat wilde de SDAP?", "Wat is het verschil tussen socialisten en communisten?", "Wanneer kwam het algemeen kiesrecht en waarom was dat belangrijk voor arbeiders?", "Wat is een positief en een negatief gevolg van de Eerste Wereldoorlog voor de Nederlandse economie?", "Wat is een distributiestelsel en waarom werd het ingevoerd?", "Waarom voerde de regering in 1919 de Arbeidswet in en wat regelde die wet?", "Wat is een cao en welke twee rechten kregen arbeiders daarna?", "Wat zijn twee gevolgen van de crisis van 1929 voor Nederland?", "Wat was de aanpassingspolitiek van Colijn en waarom mislukte die?"], "H4": ["Waarom ging het in 1940 en 1941 goed met de Nederlandse economie?", "Waarom ging het later in de oorlog slecht met de economie?", "Wat was de Arbeitseinsatz?", "Waarom was er aan het einde van de oorlog aan alles gebrek en wat was de Hongerwinter?", "Tot wanneer waren er na de oorlog nog distributiebonnen?", "Hoe groot was de schade na de oorlog, uitgedrukt in getallen?", "Wat was de Marshallhulp en hoeveel kreeg Nederland ervan?", "Wat is de keten van de wederopbouw, van oorlogsschade tot welvaart?", "Wat is het harmoniemodel?", "Wat is de geleide loonpolitiek en wat kregen werknemers ervoor terug?", "Hoe veranderde de landbouw na de oorlog en wat betekende dat voor het werk?", "Waarom vond de regering de industrie belangrijk en hoe ging Nederland meer exporteren?", "Waarom kwamen er in de jaren zestig gastarbeiders en uit welke landen?", "Wat is een consumptiemaatschappij en welke drie voorbeelden van luxeproducten zijn er?", "Waarom stegen de lonen vanaf 1963 snel?", "Wat zijn twee oorzaken waardoor er na 1970 minder werk was in de industrie?", "Wat was de oliecrisis van 1973 en welke maatregelen kwamen er?", "Wie was Joop den Uyl en wat wilde hij de Nederlanders duidelijk maken?", "Waar richt de Nederlandse economie zich nu vooral op?", "Waarom is een land dat vooral handelt kwetsbaar?"]};
 var NORIG={"H1":20,"H2":20,"H3":20,"H4":20};
 /*SEL*/var SEL={"H1": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19], "H2": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 17, 18, 19], "H3": [0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19], "H4": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]};/*ENDSEL*/
@@ -708,6 +751,88 @@ function mountDeck(el,h,startAt){
   go(i,1);
 }
 
+/* Interactieve plaatjes: één plaatje groot met klikbare bolletjes (data/galerij.js), de rest als keuzeknoppen. */
+var IGSEEN={},IGZOOM=1.7,IGRM=matchMedia("(prefers-reduced-motion:reduce)");
+function mountGal(el,p){
+  var imgs=p.imgs||[],cur=0,sel=-1;
+  if(!imgs.length){el.innerHTML="";return;}
+  function info(i){var im=imgs[i],g=(window.GALERIJ||{})[im[0]]||{};return {id:im[0],t:im[1],g:g,alt:g.alt||im[1],w:g.w||16,h:g.h||10,hs:g.hotspots||[]};}
+  function seen(i){return IGSEEN[imgs[i][0]]=IGSEEN[imgs[i][0]]||{};}
+  function pct(i){return Object.keys(seen(i)).length;}
+  function draw(){
+    var m=info(cur),n=m.hs.length;sel=-1;
+    el.className="ig"+(n&&pct(cur)===n?" klaar":"");
+    el.innerHTML='<div class="ig-stage" style="aspect-ratio:'+m.w+'/'+m.h+'"><div class="ig-pan"><img alt="'+m.alt+'" src="'+THUMB(m.id,1100)+'" decoding="async">'+
+      (n?'<div class="ig-lens"><i></i></div>':'')+
+      m.hs.map(function(h,i){var d=seen(cur)[i];return '<button type="button" class="ig-hs'+(d?' gedaan':'')+'" data-h="'+i+'" style="left:'+h.x+'%;top:'+h.y+'%;--i:'+i+'" aria-pressed="false" aria-label="Bolletje '+(i+1)+' van '+n+': '+h.naam+(d?', bekeken':'')+'">'+(d?CHECK:i+1)+'</button>';}).join("")+
+      '</div>'+(n?'<div class="ig-prog" aria-hidden="true"></div>':'')+'</div>'+
+      '<div class="ig-card" id="igCard" tabindex="-1" aria-live="polite"></div>'+
+      (n?'<ul class="ig-list" aria-label="Alle bolletjes van dit plaatje">'+m.hs.map(function(h,i){return '<li><button type="button" data-h="'+i+'" aria-pressed="false"><span class="nr">'+(i+1)+'</span>'+h.naam+'</button></li>';}).join("")+'</ul>':'')+
+      '<div class="ig-thumbs" role="group" aria-label="Kies een plaatje">'+imgs.map(function(im,i){var k=info(i).hs.length;
+        return '<button type="button" class="ig-th" data-i="'+i+'" aria-pressed="'+(i===cur)+'"><img alt="" loading="lazy" src="'+THUMB(im[0],300)+'"><span>'+im[1]+(k?' <em>· '+k+' bolletjes</em>':'')+'</span></button>';}).join("")+'</div>';
+    view(true);
+  }
+  function card(act){
+    var m=info(cur),n=m.hs.length,c=document.getElementById("igCard"),h=m.hs[sel],d=pct(cur),b="",nx=cur<imgs.length-1;
+    var open='<a class="btn ghost" target="_blank" rel="noopener" href="'+VIEW(m.id)+'">Open groot '+EXT+'</a>';
+    if(h){
+      b='<div class="eyebrow">Bolletje '+(sel+1)+' van '+n+'</div><h3>'+h.naam+'</h3>'+
+        (h.tekst?'<p>'+h.tekst+'</p>':'')+
+        (h.dia?'<p class="bron">📖 Uit de les, dia '+h.dia+'</p>':'')+
+        '<div class="vr"><b>'+(h.tekst?'Denk na':'Kijk goed en bedenk zelf')+'</b>'+h.vraag+'</div>'+
+        '<div class="row"><button type="button" class="btn ghost" data-act="hele">Hele plaat</button>'+(n>1?'<button type="button" class="btn" data-act="next">Volgend bolletje ›</button>':'')+'</div>';
+    }else if(n&&d===n){
+      var s=m.g.slot||{};
+      b='<div class="eyebrow">Alles ontdekt ✓</div><h3>'+m.t+'</h3>'+(s.tekst?'<p>'+s.tekst+'</p>':'')+(s.dia?'<p class="bron">📖 Uit de les, dia '+s.dia+'</p>':'')+
+        (s.vraag?'<div class="vr"><b>Denk na</b>'+s.vraag+'</div>':'')+
+        '<div class="row">'+(nx?'<button type="button" class="btn" data-act="nextimg">Volgende plaat: '+imgs[cur+1][1]+' ›</button>':'')+open+'</div>';
+    }else if(n){
+      var i0=m.g.intro||{};
+      b='<div class="eyebrow">Ontdek het plaatje</div><h3>'+m.t+'</h3><p>'+(i0.tekst||'Kijk eerst goed. Tik dan op de bolletjes.')+'</p>'+(i0.dia?'<p class="bron">📖 Uit de les, dia '+i0.dia+'</p>':'')+
+        '<div class="row">'+open+'</div>';
+    }else{
+      b='<h3>'+m.t+'</h3><div class="row">'+open+(nx?'<button type="button" class="btn" data-act="nextimg">Volgende plaat ›</button>':'')+'</div>';
+    }
+    c.innerHTML=b;
+    if(!IGRM.matches&&act!==2)c.animate([{opacity:0,transform:"translateY(6px)"},{opacity:1,transform:"none"}],{duration:220,easing:"cubic-bezier(.23,1,.32,1)"});
+  }
+  function view(first){
+    var m=info(cur),n=m.hs.length,h=m.hs[sel],pan=el.querySelector(".ig-pan"),lens=el.querySelector(".ig-lens"),z=1,tx=0,ty=0,d=pct(cur);
+    if(h&&!IGRM.matches){z=IGZOOM;tx=Math.min(0,Math.max(100*(1-z),50-h.x*z));ty=Math.min(0,Math.max(100*(1-z),50-h.y*z));}
+    pan.style.setProperty("--z",z);pan.style.transform="translate("+tx+"%,"+ty+"%) scale("+z+")";
+    if(lens){
+      if(h){if(!lens.classList.contains("on")){lens.style.transition="none";lens.style.transform="translate("+h.x+"%,"+h.y+"%)";lens.offsetWidth;lens.style.transition="";}
+        lens.style.transform="translate("+h.x+"%,"+h.y+"%)";}
+      lens.classList.toggle("on",!!h);
+    }
+    el.querySelectorAll("[data-h]").forEach(function(b){var i=+b.dataset.h,on=i===sel,dn=!!seen(cur)[i];b.setAttribute("aria-pressed",on);
+      if(b.classList.contains("ig-hs")){var was=b.classList.contains("gedaan");b.classList.toggle("gedaan",dn);if(dn&&!was)b.innerHTML=CHECK;b.setAttribute("aria-label","Bolletje "+(i+1)+" van "+n+": "+m.hs[i].naam+(dn?", bekeken":""));}
+      else b.classList.toggle("gedaan",dn);});
+    el.querySelectorAll(".ig-list .nr").forEach(function(r,i){r.innerHTML=seen(cur)[i]?CHECK:i+1;});
+    var pr=el.querySelector(".ig-prog");if(pr){pr.innerHTML=d===n?CHECK+' Alles ontdekt':'<b>'+d+'</b> van '+n+' ontdekt';pr.classList.toggle("klaar",d===n);}
+    el.classList.toggle("klaar",!!n&&d===n);
+    card(first?2:0);
+  }
+  function pick(i){
+    if(i===sel){sel=-1;view();return;}
+    sel=i;seen(cur)[i]=1;el.classList.add("geraakt");view();
+    var c=document.getElementById("igCard");if(c.getBoundingClientRect().bottom>innerHeight)c.scrollIntoView({block:"nearest",behavior:IGRM.matches?"auto":"smooth"});
+  }
+  el.addEventListener("click",function(e){
+    var b=e.target.closest("[data-h],[data-i],[data-act]");if(!b)return;
+    if(b.dataset.h!=null){pick(+b.dataset.h);}
+    else if(b.dataset.i!=null){cur=+b.dataset.i;draw();var t=el.querySelector('[data-i="'+cur+'"]');if(t)t.focus({preventScroll:true});}
+    else{
+      var a=b.dataset.act,m=info(cur),n=m.hs.length;
+      if(a==="hele"){sel=-1;view();}
+      else if(a==="next"){var k=(sel+1)%n;for(var j=1;j<=n;j++){var c=(sel+j)%n;if(!seen(cur)[c]){k=c;break;}}pick(k);}
+      else if(a==="nextimg"){cur++;draw();}
+      var nb=el.querySelector('#igCard [data-act="'+a+'"]');(nb||document.getElementById("igCard")).focus({preventScroll:true});
+    }
+  });
+  el.addEventListener("keydown",function(e){if(e.key==="Escape"&&sel>=0){sel=-1;view();}});
+  draw();
+}
 function loadLes(){
   var p=P(cur),last=0;
   document.getElementById("rail").innerHTML=PARS.map(function(x){var d=goalCount(x.id),h="";
@@ -719,8 +844,9 @@ function loadLes(){
   document.getElementById("lOpen").href=VIEW(p.file);
   var v=document.getElementById("lViewer");
   if(v.dataset.file!==p.id){v.dataset.file=p.id;var st=1;try{st=+localStorage.getItem("deck-"+p.id)||1;}catch(e){}mountDeck(v,p.id,st);}
-  document.getElementById("lExtra").innerHTML=p.x.map(function(k){var m=MAT[k];return '<div class="xi">📝 '+m[0]+m[1].map(function(l){return '<a target="_blank" rel="noopener" href="'+LNK(l[1])+'">'+l[0]+' ↗</a>';}).join("")+'</div>';}).join("")+
-    (p.imgs&&p.imgs.length?'<div class="gal">'+p.imgs.map(function(im){return '<a target="_blank" rel="noopener" href="'+VIEW(im[0])+'"><img loading="lazy" alt="'+im[1]+'" src="'+THUMB(im[0],500)+'"><span>'+im[1]+'</span></a>';}).join("")+'</div>':'');
+  document.getElementById("lExtra").innerHTML=p.x.map(function(k){var m=MAT[k];return '<div class="xi">📝 '+m[0]+m[1].map(function(l){return '<a target="_blank" rel="noopener" href="'+LNK(l[1])+'">'+l[0]+' ↗</a>';}).join("")+'</div>';}).join("");
+  var gal=document.getElementById("lGal");
+  if(gal.dataset.par!==p.id){gal.dataset.par=p.id;mountGal(gal,p);}
   var d=goalCount(p.id);
   document.getElementById("lBar").style.width=(d/(p.g.length||1)*100)+"%";
   document.getElementById("lBar").style.background=p.c;

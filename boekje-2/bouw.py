@@ -28,11 +28,9 @@ s = s.replace('var KEY="gs3-ind-app-v1"', 'var KEY="gs3-szv-app-v1"')
 assert "var MAAT=1;" in s
 s = s.replace("var MAAT=1;", "var MAAT=0;", 1)  # toets op maat bestaat alleen voor boekje 1 (de Worker kent alleen die lesstof)
 
-# lokale beelden en pagina's naast Drive-ID's
-s = s.replace('var THUMB=function(id,w){', 'var THUMB=function(id,w){if(/[\\/.]/.test(id))return id;', 1)
-s = s.replace('var VIEW=function(id){', 'var VIEW=function(id){if(/[\\/.]/.test(id))return id;', 1)
+# lokale beelden en pagina's naast Drive-ID's (THUMB en VIEW in app.html kennen lokale paden zelf)
 s = s.replace('var LNK=function(x){', 'var LNK=function(x){if(/\\.html/.test(x))return x;', 1)
-assert s.count("/[\\/.]/.test(id)") == 2 and "/\\.html/.test(x)" in s
+assert "/\\.html/.test(x)" in s and s.count("/[\\/.]/.test(id)") == 2
 
 assert '["f1","f2","rb","st","db"].map(' in s
 s = s.replace('["f1","f2","rb","st","db"].map(', 'Object.keys(MAT).map(')
