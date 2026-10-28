@@ -21,7 +21,7 @@ Statische HTML/CSS/JS, zonder build-stap of framework, gehost via GitHub Pages v
 | `racer.html` | Geschiedenis-Racer (quiz-race met sorteerspel) |
 | `doeboek.html` | Doe-boek H4 als online widget |
 | `kaart.html`, `beeldquiz.html`, `verhaal.html`, `filmvragen.html`, `nakijken.html` | Crisiskaart, beeldquiz, scroll-verhaal, filmvragen, AI-nakijker voor open vragen |
-| `presenteer.html?h=H1` | Dia's schermvullend presenteren in de klas |
+| `presenteer.html?h=H1` | Dia's schermvullend presenteren in de klas; boekje 2: `presenteer.html?b=2&h=H1` (dia's in `slides/SZ1`, `slides/SZ2`) |
 
 ## Toets op maat
 
@@ -35,7 +35,7 @@ Op de Start-tab van `app.html` kiest een leerling onderwerpen uit de checklist e
 
 - **Vragen boekje 1**: in `app.html` staat de vragenbank in `var BANK=[[hoofdstuk, vraag, [juist, fout, fout, fout], uitleg], ...]`. Het eerste antwoord is het juiste; de app schudt de volgorde.
 - **Racer**: vragen bovenaan `racer.html` (`goed:` en precies 3 `fout:`), met uitleg in het bestand.
-- **Boekje 2**: inhoud staat in `boekje-2/data-bron.py`. Daarna opnieuw bouwen met `python3 -I boekje-2/bouw.py`. Dat bouwt `boekje-2/app.html` uit de nieuwste `app.html`, dus draai dit ook na elke wijziging aan `app.html`.
+- **Boekje 2**: inhoud staat in `boekje-2/data-bron.py`. Daarna opnieuw bouwen met `python3 -I boekje-2/bouw.py`. Dat bouwt `boekje-2/app.html` uit de nieuwste `app.html`, dus draai dit ook na elke wijziging aan `app.html`. De dia's van boekje 2 staan in `slides/SZ<n>/`; het aantal dia's en de klikstappen staan in `presenteer.html` (`DECK2`, `STEPS2`), `bouw.py` neemt ze daar over (werkwijze: `tools/dias/README.md`).
 - **Interactieve plaatjes (Lesstof-tab)**: bolletjes en teksten per plaatje in `data/galerij.js` (uitleg bovenin dat bestand), plaatjes in `img/galerij/`. Alleen uitleg uit de lesstof; waar die zwijgt een vraag aan de leerling.
 - **Oefentoetsen**: `data/toetsen.js` (`o:` opties, `j:` index van het juiste antwoord).
 

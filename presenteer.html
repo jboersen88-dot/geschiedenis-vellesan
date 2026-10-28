@@ -36,11 +36,15 @@ button:hover,a:hover{background:rgba(255,255,255,.12)}
 var DECK={"H1":21,"H2":9,"H3":27,"H4":44};
 /* STEPS: klikstappen per dia, zie app.html en tools/dias/stappen.py (houd beide gelijk) */
 var STEPS={"H4":{"1":1,"2":6,"3":5,"4":2,"5":3,"6":3,"7":4,"8":4,"9":3,"10":4,"11":2,"12":5,"13":4,"14":4,"15":4,"16":2,"17":3,"18":3,"19":3,"20":3,"21":5,"22":5,"23":5,"24":2,"25":1,"26":4,"27":6,"28":3,"29":6,"30":4,"31":4,"32":2,"33":5,"34":5,"35":4,"36":2,"37":3,"38":4,"39":4,"40":2,"41":4,"42":6,"43":5,"44":3}};
-var h=(new URLSearchParams(location.search).get("h")||"H1").toUpperCase();if(!DECK[h])h="H1";
+/* boekje 2 (?b=2&h=H1): dia's in slides/SZ<n>/; boekje-2/bouw.py leest DECK2 en STEPS2 hieruit voor boekje-2/app.html */
+var DECK2={"H1":25,"H2":24};
+var STEPS2={"H1":{"25":11}};
+var q=new URLSearchParams(location.search),b2=q.get("b")==="2";if(b2){DECK=DECK2;STEPS=STEPS2;document.querySelector(".bar a").href="boekje-2/app.html#"+(q.get("h")||"H1").toUpperCase();}
+var h=(q.get("h")||"H1").toUpperCase();if(!DECK[h])h="H1";
 var N=DECK[h],i=1,s=0,tok=0,stg=document.querySelector(".stage"),imgs=stg.querySelectorAll("img"),front=0,cnt=document.querySelector(".cnt"),bar=document.querySelector(".prog i");
-document.title="Presenteren · "+h;
+document.title="Presenteren · "+(b2?"boekje 2 · ":"")+h;
 function K(n){return (STEPS[h]||{})[n]||0;}
-function src(n,st){return "slides/"+h+"/"+(n<10?"0":"")+n+(st<K(n)?"-"+st:"")+".jpg";}
+function src(n,st){return "slides/"+(b2?"SZ"+h.slice(1):h)+"/"+(n<10?"0":"")+n+(st<K(n)?"-"+st:"")+".jpg";}
 /* dia n in stap st (0..K(n)); dezelfde dia: alleen een zachte fade, de oude stap blijft eronder staan */
 function go(n,st,dir){n=Math.min(Math.max(1,n),N);st=Math.min(Math.max(0,st),K(n));var same=n===i,nx=imgs[1-front],cu=imgs[front],t=++tok;stg.classList.toggle("stp",same);nx.style.transition="none";nx.className="";void nx.offsetWidth;nx.style.transition="";nx.onload=function(){if(t!==tok)return;nx.className="on";cu.className=same?"under":"";front=1-front;};nx.src=src(n,st);nx.alt="Dia "+n+" van "+N+(K(n)?", stap "+(st+1)+" van "+(K(n)+1):"");i=n;s=st;cnt.textContent=n+" / "+N;bar.style.width=(n/N*100)+"%";var pre=st<K(n)?src(n,st+1):(n<N?src(n+1,0):"");if(pre)new Image().src=pre;}
 function next(){if(s<K(i))go(i,s+1);else if(i<N)go(i+1,0);}

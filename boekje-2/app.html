@@ -485,6 +485,7 @@ nav.tabs button:active{transform:scale(.97)}
 .mblock .mlist{margin:0;padding:0 14px 14px}
 @media (prefers-reduced-motion:reduce){.mblock summary::after{transition:none}}
 @media (max-width:760px){.mlist{grid-template-columns:1fr}}
+@media (max-width:480px){.deck-bar{flex-wrap:wrap}.deck-prog{flex:1 1 40%}}
 #lOpen[hidden]{display:none}#lViewer .ph{position:static;display:block;padding:34px 18px;text-align:center;border-radius:16px;background:color-mix(in srgb,var(--plum) 8%,var(--card));color:var(--muted);opacity:1;border:1.5px dashed var(--line)}
 </style>
 <script src="../ai.js"></script>
@@ -515,7 +516,7 @@ nav.tabs button:active{transform:scale(.97)}
         <div class="card intro">
           <div class="eyebrow">Boekje 2</div>
           <h2>Van liefdadigheid tot verzorgingsstaat.<br>Begin hier.</h2>
-          <p>Alles voor het boekje Sociale zekerheid en verzorgingsstaat op één plek: leerdoelen om af te vinken, begrippen, een tijdlijn, oorzaak en gevolg, een vraagbank, games, de Kijkwijzer spotprenten, onderzoeksopdrachten en de examentraining. De PowerPoints volgen.</p>
+          <p>Alles voor het boekje Sociale zekerheid en verzorgingsstaat op één plek: leerdoelen om af te vinken, begrippen, een tijdlijn, oorzaak en gevolg, een vraagbank, games, de Kijkwijzer spotprenten, onderzoeksopdrachten en de examentraining. De dia's van hoofdstuk 3 en 4 volgen.</p>
           <div class="row"><button class="btn" data-go="les" data-par="H1"><svg class="i" viewBox="0 0 24 24"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2z"/><path d="M22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg>Begin met H1</button><button class="btn ghost" data-go="toets">Naar de oefentoetsen</button></div>
           <div class="blob"></div>
                   </div>
@@ -723,18 +724,18 @@ document.getElementById("clist").addEventListener("click",function(e){var b=e.ta
 var cur="H1";
 
 /* ---------- HTML-presentatie (dia-viewer) ---------- */
-var DECK={};
+var DECK={"H1": 25, "H2": 24};
 /* STEPS: per dia het aantal klikstappen k (animatie uit de PowerPoint). Stap s<k = slides/H/NN-s.jpg (toestand na s klikken),
    stap k = de volledige dia NN.jpg. Dia's zonder vermelding hebben geen stappen. Gemaakt met tools/dias/stappen.py. */
-var STEPS={"H4":{"1":1,"2":6,"3":5,"4":2,"5":3,"6":3,"7":4,"8":4,"9":3,"10":4,"11":2,"12":5,"13":4,"14":4,"15":4,"16":2,"17":3,"18":3,"19":3,"20":3,"21":5,"22":5,"23":5,"24":2,"25":1,"26":4,"27":6,"28":3,"29":6,"30":4,"31":4,"32":2,"33":5,"34":5,"35":4,"36":2,"37":3,"38":4,"39":4,"40":2,"41":4,"42":6,"43":5,"44":3}};
-function slideSrc(h,n,s){var k=(STEPS[h]||{})[n]||0,nn=(n<10?"0":"")+n;return "slides/"+h+"/"+nn+(s<k?"-"+s:"")+".jpg";}
+var STEPS={"H1": {"25": 11}};
+function slideSrc(h,n,s){var k=(STEPS[h]||{})[n]||0,nn=(n<10?"0":"")+n;return "../slides/SZ"+h.slice(1)+"/"+nn+(s<k?"-"+s:"")+".jpg";}
 function mountDeck(el,h,startAt){
   var N=DECK[h]||0,i=Math.min(Math.max(1,startAt||1),N),s=0,tok=0;
   if(!N){el.innerHTML='<div class="ph">📽️ De PowerPoint van dit hoofdstuk volgt.</div>';return;}
   function K(n){return (STEPS[h]||{})[n]||0;}
   el.innerHTML='<div class="sdeck" tabindex="0" aria-roledescription="presentatie" aria-label="Presentatie '+h+'">'+
    '<div class="deck-stage"><img alt=""><img alt=""><button class="deck-nav l" aria-label="Vorige"><span>‹</span></button><button class="deck-nav r" aria-label="Volgende"><span>›</span></button></div>'+
-   '<div class="deck-bar"><span class="cnt"></span><div class="deck-prog"><i></i></div><button data-act="fs">⛶ Schermvullend</button><a href="../presenteer.html?h='+h+'" target="_blank" rel="noopener">Presenteer ↗</a></div>'+
+   '<div class="deck-bar"><span class="cnt"></span><div class="deck-prog"><i></i></div><button data-act="fs">⛶ Schermvullend</button><a href="../presenteer.html?b=2&amp;h='+h+'" target="_blank" rel="noopener">Presenteer ↗</a></div>'+
    '<div class="deck-thumbs">'+Array.from({length:N},function(_,k){return '<button data-n="'+(k+1)+'" aria-label="Dia '+(k+1)+'"><img loading="lazy" alt="" src="'+slideSrc(h,k+1,K(k+1))+'"></button>';}).join("")+'</div></div>';
   var d=el.querySelector(".sdeck"),stg=d.querySelector(".deck-stage"),imgs=stg.querySelectorAll("img"),front=0,cnt=d.querySelector(".cnt"),bar=d.querySelector(".deck-prog i"),th=d.querySelectorAll(".deck-thumbs button");
   /* toon dia n in stap st (0..K(n)); dir<0: terug, andere dia glijdt van links; bij dezelfde dia alleen een zachte fade */
@@ -749,7 +750,7 @@ function mountDeck(el,h,startAt){
     th.forEach(function(b){b.setAttribute("aria-current",String(+b.dataset.n===n));});
     var tb=th[n-1];if(tb&&!same)tb.scrollIntoView({block:"nearest",inline:"nearest",behavior:"smooth"});
     var pre=new Image();pre.src=st<K(n)?slideSrc(h,n,st+1):(n<N?slideSrc(h,n+1,0):"");
-    try{localStorage.setItem("deck-"+h,n);}catch(e){}
+    try{localStorage.setItem("deck2-"+h,n);}catch(e){}
   }
   function next(){if(s<K(i))go(i,s+1,1);else if(i<N)go(i+1,0,1);}
   function prev(){if(s>0)go(i,s-1,-1);else if(i>1)go(i-1,K(i-1),-1);}
@@ -856,7 +857,7 @@ function loadLes(){
   document.getElementById("lTitle").textContent=p.t;
   document.getElementById("lOpen").href=VIEW(p.file);document.getElementById("lOpen").hidden=!p.file;
   var v=document.getElementById("lViewer");
-  if(v.dataset.file!==p.id){v.dataset.file=p.id;var st=1;try{st=+localStorage.getItem("deck-"+p.id)||1;}catch(e){}mountDeck(v,p.id,st);}
+  if(v.dataset.file!==p.id){v.dataset.file=p.id;var st=1;try{st=+localStorage.getItem("deck2-"+p.id)||1;}catch(e){}mountDeck(v,p.id,st);}
   document.getElementById("lExtra").innerHTML=p.x.map(function(k){var m=MAT[k];return '<div class="xi">📝 '+m[0]+m[1].map(function(l){return '<a target="_blank" rel="noopener" href="'+LNK(l[1])+'">'+l[0]+' ↗</a>';}).join("")+'</div>';}).join("");
   var gal=document.getElementById("lGal");
   if(gal.dataset.par!==p.id){gal.dataset.par=p.id;mountGal(gal,p);}
