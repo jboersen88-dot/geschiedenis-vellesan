@@ -1,3 +1,9 @@
+## 2026-10-28 · Voortgangscode (besluit 3)
+
+- **Wat**: knop *Mijn voortgangscode* in het tabblad Start van `app.html` en `boekje-2/app.html` (boekje 2 via `bouw.py`, `var BOEKJE`). De code bevat boekje, datum, per hoofdstuk beheerst/totaal, een bitmap van de aangevinkte vragen en een controlesom van 2 tekens, bv. `GS1-261028-2.20-1.18-0.19-1.20-12G70GVEK92RYB5S-VO` (boekje 1: ca. 50 tekens, boekje 2: ca. 45). Geen naam of andere persoonsgegevens, niets naar een server. Kopieerknop met terugval (geselecteerde tekst). *Code terugzetten* met bevestigingsstap in de pagina. Uitleg *Wat zit er in mijn code?*.
+- **Docent**: `tools/voortgang-lezen.html` (lokaal, niet gelinkt; zie README, Kwaliteitscontrole) leest codes (één per regel), controleert de controlesom, toont per code de vragen en een samenvatting per vraag. `node tools/voortgang-test.js` test bouwen en lezen, inclusief typefouten.
+- **Getest**: 375, 820 en 1280 px, geen horizontaal scrollen of consolefouten; `vragencheck`, `linkcheck`, `a11ycheck` geen fouten.
+
 ## 2026-10-28 · Economie: lettertype-stylesheet blokkeert het tonen niet meer
 
 - **Wat**: de Google Fonts-link op 13 Economie-pagina's (`economie/index.html`, `jaar.html`, `h.html`, `se3/app.html`, `se3/toets.html` en 8 lesapps in `economie/apps/`) laadt nu zonder blokkade (`media="print" onload="this.media='all'"` plus `<noscript>`), zoals de kaft en de Geschiedenis-pagina's in 3756ebe en 9d72cec. Geen styling of inhoud gewijzigd; de generatoren (`bouw-eco.py`, `bouw-toets.py`) zetten deze link niet, dus daar is niets aangepast.

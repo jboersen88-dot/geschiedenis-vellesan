@@ -549,6 +549,30 @@ nav.tabs button:active{transform:scale(.97)}
         <div class="clist" id="clist"></div>
       </div>
       <div class="tip"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01"/><path d="M11 12h1v4h1"/></svg>Je voortgang wordt bewaard op dit apparaat, in deze browser.</div>
+      <section class="card pad" id="codeCard" aria-labelledby="codeH" style="margin-top:14px">
+        <div class="eyebrow">Voortgang inleveren</div>
+        <h2 id="codeH" style="margin:2px 0 6px">Mijn voortgangscode</h2>
+        <p class="muted" style="margin:0 0 12px;font-size:13.5px">Plak deze code in Teams of Magister bij de opdracht van je docent.</p>
+        <div class="row" style="gap:8px;flex-wrap:wrap">
+          <button type="button" class="btn" id="codeMaak">Mijn voortgangscode</button>
+          <button type="button" class="btn ghost" id="codeTerug">Code terugzetten</button>
+        </div>
+        <div id="codeOut" hidden style="margin-top:12px">
+          <label for="codeTxt" style="font-weight:700;font-size:13.5px">Jouw code (kopieer of selecteer hem)</label>
+          <textarea id="codeTxt" readonly rows="3" style="display:block;width:100%;margin-top:6px;font:600 14px/1.4 ui-monospace,Menlo,Consolas,monospace;padding:10px;border:1.5px solid var(--line);border-radius:12px;box-sizing:border-box;resize:none;overflow-wrap:anywhere"></textarea>
+          <div class="row" style="gap:8px;margin-top:8px;align-items:center;flex-wrap:wrap"><button type="button" class="btn ghost" id="codeKopie">Kopieer code</button><span id="codeMsg" role="status" aria-live="polite" class="muted" style="font-size:13.5px"></span></div>
+        </div>
+        <div id="codeIn" hidden style="margin-top:12px">
+          <label for="codeInTxt" style="font-weight:700;font-size:13.5px">Plak hier je code</label>
+          <textarea id="codeInTxt" rows="3" autocomplete="off" autocapitalize="off" spellcheck="false" style="display:block;width:100%;margin-top:6px;font:600 14px/1.4 ui-monospace,Menlo,Consolas,monospace;padding:10px;border:1.5px solid var(--line);border-radius:12px;box-sizing:border-box;resize:none;overflow-wrap:anywhere"></textarea>
+          <div class="row" style="gap:8px;margin-top:8px;flex-wrap:wrap"><button type="button" class="btn" id="codeLees">Lees code</button></div>
+          <div id="codeBev" hidden style="margin-top:10px"><p id="codeBevTxt" style="margin:0 0 8px;font-weight:700"></p><div class="row" style="gap:8px;flex-wrap:wrap"><button type="button" class="btn" id="codeJa">Ja, zet terug</button><button type="button" class="btn ghost" id="codeNee">Annuleren</button></div></div>
+          <p id="codeInMsg" role="status" aria-live="polite" style="margin:8px 0 0;font-size:13.5px;font-weight:700"></p>
+        </div>
+        <details style="margin-top:12px"><summary style="cursor:pointer;font-weight:700;font-size:13.5px">Wat zit er in mijn code?</summary>
+          <p class="muted" style="font-size:13.5px;margin:8px 0 0">In je code zit alleen: het boekje, de datum van vandaag, per hoofdstuk hoeveel vragen je beheerst (van het totaal), welke vragen je hebt aangevinkt bij 'Kun jij dit beantwoorden?' en een controlegetal waaraan je docent ziet of er een typefout in zit. Er zit <b>geen</b> naam, klas, e-mailadres of ander persoonsgegeven in. De code wordt in je eigen browser gemaakt en nergens naartoe gestuurd. Alleen jij beslist waar je hem plakt. Je scores bij de quiz, de flash cards en de toetsen zitten er niet in.</p></details>
+      </section>
+
     </section>
 
     <!-- TOETS OP MAAT -->
@@ -677,6 +701,7 @@ var MT=[["H1", "De agrarische revolutie en mechanisering", 0], ["H1", "Grootgron
 var MAAT=0; /* toets op maat aan; boekje 2 zet dit uit (bouw.py) */
 
 /* ---------- opslag ---------- */
+var BOEKJE=2; /* bouw.py zet dit op 2 */
 var KEY="gs3-szv-app-v1",S={goals:{},qs:{},known:{},unlock:{},check:{},ver:1};
 try{var s=JSON.parse(localStorage.getItem(KEY));if(s&&s.goals)S=Object.assign(S,s);}catch(e){}
 function save(){try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}
@@ -1446,6 +1471,59 @@ document.getElementById("maatBox").addEventListener("click",function(e){
 });
 document.getElementById("maatBox").addEventListener("input",function(e){
   var i=e.target.dataset.oq;if(i==null||!S.maatT)return;S.maatT.ans.op[i]=e.target.value;save();
+});
+renderFlash();renderProgress();renderCheck();renderMaat();
+/* ---------- voortgangscode: GS<boekje>-<jjmmdd>-<beheerst>.<totaal>(per hoofdstuk)-<bitmap base36>-<controle 2 tekens>; leest tools/voortgang-lezen.html ---------- */
+function codeVragen(){var l=[];PARS.forEach(function(p){p.gi.forEach(function(gi){l.push(p.id+"-"+gi);});});return l;}
+function codeCheck(t){var h=2166136261;for(var i=0;i<t.length;i++){h^=t.charCodeAt(i);h=Math.imul(h,16777619)>>>0;}return ("0"+(h%1296).toString(36)).slice(-2).toUpperCase();}
+function codeMaak(){
+  var d=new Date(),yy=("0"+(d.getFullYear()%100)).slice(-2),mm=("0"+(d.getMonth()+1)).slice(-2),dd=("0"+d.getDate()).slice(-2);
+  var bits="1",ch=PARS.map(function(p){return goalCount(p.id)+"."+p.g.length;});
+  codeVragen().forEach(function(k){bits+=S.goals[k]?"1":"0";});
+  var t="GS"+BOEKJE+"-"+yy+mm+dd+"-"+ch.join("-")+"-"+BigInt("0b"+bits).toString(36).toUpperCase();
+  return t+"-"+codeCheck(t);
+}
+function codeLees(txt){
+  var t=String(txt).replace(/\s+/g,"").toUpperCase(),p=t.split("-");
+  if(p.length<5||!/^GS\d$/.test(p[0]))return {fout:"Dit lijkt geen voortgangscode. Een code begint met GS."};
+  if(codeCheck(p.slice(0,-1).join("-"))!==p[p.length-1])return {fout:"Er zit een typefout in de code (de controle klopt niet). Kopieer de code opnieuw."};
+  if(+p[0].slice(2)!==BOEKJE)return {fout:"Deze code hoort bij boekje "+p[0].slice(2)+". Je zit nu in boekje "+BOEKJE+"."};
+  var n=PARS.length;if(p.length!==n+4)return {fout:"Deze code past niet bij de vragen van dit boekje."};
+  var q=codeVragen(),bits;
+  try{bits=p[n+2].split("").reduce(function(a,c){return a*36n+BigInt(parseInt(c,36));},0n).toString(2);}catch(e){return {fout:"De code is niet te lezen."};}
+  if(bits.length!==q.length+1||bits[0]!=="1")return {fout:"Deze code past niet bij de vragen van dit boekje."};
+  var g={};q.forEach(function(k,i){if(bits[i+1]==="1")g[k]=1;});
+  return {goals:g,n:Object.keys(g).length,van:q.length};
+}
+var codeNieuw=null;
+function cMsg(id,t){document.getElementById(id).textContent=t;}
+document.getElementById("codeMaak").addEventListener("click",function(){
+  var o=document.getElementById("codeOut"),t=document.getElementById("codeTxt");
+  document.getElementById("codeIn").hidden=true;o.hidden=false;t.value=codeMaak();cMsg("codeMsg","");t.focus();t.select();
+});
+document.getElementById("codeKopie").addEventListener("click",function(){
+  var t=document.getElementById("codeTxt");t.focus();t.select();
+  var ok=function(){cMsg("codeMsg","Gekopieerd. Plak de code in Teams of Magister.");},nee=function(){cMsg("codeMsg","Kopiëren lukt niet. Houd de tekst ingedrukt of druk op Ctrl+C: de code is al geselecteerd.");};
+  if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(t.value).then(ok,function(){try{document.execCommand("copy")?ok():nee();}catch(e){nee();}});
+  else{try{document.execCommand("copy")?ok():nee();}catch(e){nee();}}
+});
+document.getElementById("codeTerug").addEventListener("click",function(){
+  document.getElementById("codeOut").hidden=true;document.getElementById("codeIn").hidden=false;document.getElementById("codeBev").hidden=true;cMsg("codeInMsg","");document.getElementById("codeInTxt").focus();
+});
+document.getElementById("codeLees").addEventListener("click",function(){
+  var r=codeLees(document.getElementById("codeInTxt").value),b=document.getElementById("codeBev");
+  codeNieuw=null;b.hidden=true;
+  if(r.fout){cMsg("codeInMsg",r.fout);return;}
+  codeNieuw=r.goals;cMsg("codeInMsg","");
+  var nu=totals()[0];
+  document.getElementById("codeBevTxt").textContent="In deze code staan "+r.n+" van "+r.van+" vragen als beheerst. Nu heb je er "+nu+" aangevinkt. Wil je jouw voortgang vervangen door deze code?";
+  b.hidden=false;document.getElementById("codeJa").focus();
+});
+document.getElementById("codeNee").addEventListener("click",function(){codeNieuw=null;document.getElementById("codeBev").hidden=true;cMsg("codeInMsg","Niets veranderd.");document.getElementById("codeLees").focus();});
+document.getElementById("codeJa").addEventListener("click",function(){
+  if(!codeNieuw)return;
+  codeVragen().forEach(function(k){delete S.goals[k];});Object.assign(S.goals,codeNieuw);codeNieuw=null;save();renderProgress();
+  document.getElementById("codeBev").hidden=true;cMsg("codeInMsg","Klaar: je voortgang is teruggezet.");
 });
 renderFlash();renderProgress();renderCheck();renderMaat();
 /* ---------- deep links: app.html#H2, #H3-lab, #toets, #films ---------- */

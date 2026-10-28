@@ -57,6 +57,7 @@ python3 -I tools/a11ycheck.py
 ```
 
 - **vragencheck**: alle meerkeuzevragen moeten precies 4 opties hebben die ongeveer even lang zijn (langste / kortste ≤ 1,5, antwoorden ≤ 20 tekens tellen niet mee), en het juiste antwoord mag per vragenbank in hooguit 25% van de vragen het langste zijn. Met `-v` zie je ook welke vragen dat zijn.
+- **Voortgangscodes lezen** (alleen voor jou, niet gelinkt vanaf de leerlingsite): start in de root van de repo `python3 -m http.server` en open `http://localhost:8000/tools/voortgang-lezen.html`. Plak de codes van leerlingen (één per regel); de pagina controleert de controlesom en toont per code en per vraag wat beheerst is. Zonder server (dubbelklik) werkt het ook, maar dan zie je vraagnummers in plaats van vraagteksten. `node tools/voortgang-test.js` controleert het bouwen en lezen van codes.
 - **linkcheck**: alle lokale links en bestanden; met `--extern` ook externe links.
 - **a11ycheck**: `lang`, viewport, titel, alt-teksten, knoppen en links met een naam, labels bij invulvelden, dubbele id's, `prefers-reduced-motion`.
 

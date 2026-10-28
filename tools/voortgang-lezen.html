@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex"><title>Voortgangscodes lezen (docent)</title>
+<style>
+:root{--ink:#2b1a2f;--muted:#6b5a6f;--line:#e3d9e6;--bg:#faf7fb;--ok:#1f7a4d;--bad:#b3261e;--berry:#8a1c5c}
+*{box-sizing:border-box}body{margin:0;font:16px/1.5 system-ui,sans-serif;color:var(--ink);background:var(--bg);padding:16px}
+main{max-width:980px;margin:0 auto}h1{font-size:22px;margin:0 0 4px}h2{font-size:18px;margin:0 0 8px}
+.card{background:#fff;border:1.5px solid var(--line);border-radius:14px;padding:14px;margin:12px 0;overflow-x:auto}
+textarea{width:100%;min-height:120px;font:600 14px/1.4 ui-monospace,Menlo,monospace;padding:10px;border:1.5px solid var(--line);border-radius:10px}
+button{font:inherit;font-weight:700;border:0;border-radius:10px;padding:10px 16px;background:var(--berry);color:#fff;cursor:pointer}
+:focus-visible{outline:3px solid #f08a5d;outline-offset:2px}
+.muted{color:var(--muted);font-size:14px}.bad{color:var(--bad);font-weight:700}.ok{color:var(--ok);font-weight:700}
+table{border-collapse:collapse;width:100%;font-size:14px}th,td{text-align:left;padding:5px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+code{font-size:12.5px;overflow-wrap:anywhere}.bar{display:inline-block;height:8px;background:var(--berry);border-radius:4px;vertical-align:middle}
+</style></head><body><main>
+<h1>Voortgangscodes lezen</h1>
+<p class="muted">Alleen voor de docent, lokaal. Niets wordt opgeslagen of verstuurd. Plak de codes uit Teams of Magister, één per regel. Er staan geen namen in de codes: koppel zelf code en leerling.</p>
+<div id="bron" class="muted"></div>
+<div class="card"><label for="inv"><b>Codes (één per regel)</b></label><textarea id="inv" spellcheck="false" autocomplete="off"></textarea>
+<p><button id="go" type="button">Lees codes</button></p></div>
+<div id="uit" aria-live="polite"></div>
+<script>
+/*CODE*/
+function codeCheck(t){var h=2166136261;for(var i=0;i<t.length;i++){h^=t.charCodeAt(i);h=Math.imul(h,16777619)>>>0;}return ("0"+(h%1296).toString(36)).slice(-2).toUpperCase();}
+function decodeCode(txt){
+  var p=String(txt).replace(/\s+/g,"").toUpperCase().split("-");
+  if(p.length<5||!/^GS\d$/.test(p[0])||!/^\d{6}$/.test(p[1]))return {fout:"geen voortgangscode"};
+  if(codeCheck(p.slice(0,-1).join("-"))!==p[p.length-1])return {fout:"typefout: controlesom klopt niet"};
+  var n=p.length-4,ch=[],i;
+  for(i=0;i<n;i++){var m=/^(\d+)\.(\d+)$/.exec(p[2+i]);if(!m)return {fout:"hoofdstukdeel onleesbaar"};ch.push([+m[1],+m[2]]);}
+  var bits;try{bits=p[2+n].split("").reduce(function(a,c){var d=parseInt(c,36);if(isNaN(d))throw 0;return a*36n+BigInt(d);},0n).toString(2);}catch(e){return {fout:"bitmap onleesbaar"};}
+  var tot=ch.reduce(function(a,c){return a+c[1];},0);
+  if(bits[0]!=="1"||bits.length!==tot+1)return {fout:"aantal vragen klopt niet met de bitmap"};
+  bits=bits.slice(1);var o=0;
+  for(i=0;i<n;i++){var s=bits.substr(o,ch[i][1]).split("1").length-1;if(s!==ch[i][0])return {fout:"aantal beheerst klopt niet met de bitmap"};o+=ch[i][1];}
+  return {boekje:+p[0].slice(2),datum:"20"+p[1].slice(0,2)+"-"+p[1].slice(2,4)+"-"+p[1].slice(4),ch:ch,bits:bits};
+}
+/*ENDCODE*/
+function esc(t){return String(t).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+function jv(s,name){var m=new RegExp("var\\s+"+name+"\\s*=\\s*").exec(s);return JSON.parse(JSON.stringify(m?eval("("+(function(){var d=0,i=m.index+m[0].length,q=null,e=false,st=i;for(;i<s.length;i++){var c=s[i];if(q){if(e)e=false;else if(c==="\\")e=true;else if(c===q)q=null;}else if(c==='"')q='"';else if(c==="{"||c==="[")d++;else if(c==="}"||c==="]"){d--;if(!d){i++;break;}}}return s.slice(st,i);})()+")"):null));}
+var BRON={};
+function laad(b){
+  if(BRON[b])return BRON[b];
+  return BRON[b]=fetch(b===2?"../boekje-2/app.html":"../app.html").then(function(r){if(!r.ok)throw 0;return r.text();}).then(function(s){
+    var PARS=jv(s,"PARS"),G=jv(s,"GOALS"),N=jv(s,"NORIG"),SEL=jv(s,"SEL")||{},q=[];
+    PARS.forEach(function(p){var ix=SEL[p.id]||G[p.id].map(function(_,i){return i;}).slice(0,N[p.id]);ix.forEach(function(i){q.push({h:p.id,t:G[p.id][i]});});});
+    return q;
+  }).catch(function(){return null;});
+}
+document.getElementById("go").addEventListener("click",function(){
+  var regels=document.getElementById("inv").value.split(/\n/).map(function(x){return x.trim();}).filter(Boolean),u=document.getElementById("uit");
+  var dec=regels.map(function(r){return {r:r,d:decodeCode(r)};});
+  var boeken=[],stat={};
+  dec.forEach(function(x){if(!x.d.fout&&boeken.indexOf(x.d.boekje)<0)boeken.push(x.d.boekje);});
+  Promise.all(boeken.map(laad)).then(function(vr){
+    var q={};boeken.forEach(function(b,i){q[b]=vr[i];});
+    var h="",geen=boeken.filter(function(b){return !q[b];});
+    document.getElementById("bron").innerHTML=geen.length?'<span class="bad">Vraagteksten van boekje '+geen.join(", ")+' niet geladen: open deze pagina via <code>python3 -m http.server</code> in de repo-map en ga naar <code>/tools/voortgang-lezen.html</code>. Je ziet nu alleen vraagnummers.</span>':"";
+    dec.forEach(function(x,n){
+      if(x.d.fout){h+='<div class="card"><b>Code '+(n+1)+'</b>: <span class="bad">'+esc(x.d.fout)+'</span><br><code>'+esc(x.r)+'</code></div>';return;}
+      var d=x.d,vq=q[d.boekje],o=0,b=stat[d.boekje]=stat[d.boekje]||{n:0,c:new Array(d.bits.length).fill(0)};
+      if(b.c.length!==d.bits.length){h+='<div class="card"><b>Code '+(n+1)+'</b>: <span class="bad">aantal vragen wijkt af van andere codes van boekje '+d.boekje+'</span></div>';return;}
+      b.n++;for(var i=0;i<d.bits.length;i++)if(d.bits[i]==="1")b.c[i]++;
+      h+='<div class="card"><h2>Code '+(n+1)+' · boekje '+d.boekje+' · '+d.datum+' · <span class="ok">controle klopt</span></h2><p>'+d.ch.map(function(c,i){return "H"+(i+1)+": "+c[0]+"/"+c[1];}).join(" · ")+'</p><details><summary>Per vraag</summary><table>';
+      for(var k=0;k<d.bits.length;k++)h+='<tr><td>'+(d.bits[k]==="1"?"✓":"✗")+'</td><td>'+esc(vq?vq[k].h+": "+vq[k].t:"vraag "+(k+1))+'</td></tr>';
+      h+='</table></details></div>';
+    });
+    boeken.forEach(function(bk){var b=stat[bk];if(!b)return;var vq=q[bk],r=b.c.map(function(c,i){return i;}).sort(function(a,z){return b.c[a]-b.c[z];});
+      h+='<div class="card"><h2>Samenvatting boekje '+bk+' ('+b.n+' codes) · slechtst beheerst bovenaan</h2><table><tr><th>Beheerst</th><th>Vraag</th></tr>';
+      r.forEach(function(i){h+='<tr><td>'+b.c[i]+' van '+b.n+' <span class="bar" style="width:'+Math.round(b.c[i]/b.n*80)+'px"></span></td><td>'+esc(vq?vq[i].h+": "+vq[i].t:"vraag "+(i+1))+'</td></tr>';});
+      h+='</table></div>';});
+    u.innerHTML=h||'<p class="muted">Nog geen codes ingevoerd.</p>';
+  });
+});
+</script></main></body></html>

@@ -38,6 +38,8 @@ for a, b in [('return "slides/"+h+"/"+nn', 'return "../slides/SZ"+h.slice(1)+"/"
     s = s.replace(a, b)
 s = re.sub(r"/\*SEL\*/var SEL=.*?;/\*ENDSEL\*/", "/*SEL*/var SEL={};/*ENDSEL*/", s, flags=re.S)
 s = s.replace('var KEY="gs3-ind-app-v1"', 'var KEY="gs3-szv-app-v1"')
+assert "var BOEKJE=1;" in s
+s = s.replace("var BOEKJE=1;", "var BOEKJE=2;", 1)  # voortgangscode: boekje 2
 assert "var MAAT=1;" in s
 s = s.replace("var MAAT=1;", "var MAAT=0;", 1)  # toets op maat bestaat alleen voor boekje 1 (de Worker kent alleen die lesstof)
 
