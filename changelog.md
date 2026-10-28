@@ -1,3 +1,8 @@
+## 2026-10-28 · Economie: lettertype-stylesheet blokkeert het tonen niet meer
+
+- **Wat**: de Google Fonts-link op 13 Economie-pagina's (`economie/index.html`, `jaar.html`, `h.html`, `se3/app.html`, `se3/toets.html` en 8 lesapps in `economie/apps/`) laadt nu zonder blokkade (`media="print" onload="this.media='all'"` plus `<noscript>`), zoals de kaft en de Geschiedenis-pagina's in 3756ebe en 9d72cec. Geen styling of inhoud gewijzigd; de generatoren (`bouw-eco.py`, `bouw-toets.py`) zetten deze link niet, dus daar is niets aangepast.
+- **Getest**: `vragencheck`, `linkcheck` en `a11ycheck` geen fouten; `economie/index.html` lokaal: Fraunces en Inter laden, geen consolefouten.
+
 ## 2026-10-28 · Doe-boek H1 en H2 van boekje 2 online
 
 - **Wat**: `boekje-2/doeboek.html?h=1` (*Arm in de 19e eeuw*, 51 vragen) en `?h=2` (*Crisis, ellende en schaamte*, 53 vragen), zoals `doeboek.html` voor H4 maar datagestuurd: de vragen staan in `boekje-2/data/doeboek-h1.js` en `-h2.js`. Elk doe-boek heeft 7 tabs (Start, vijf blokken, Afsluiting) met voortgang per blok; antwoorden alleen in localStorage; knop "Kopieer mijn antwoorden" en "Wis mijn antwoorden". `doeboek.html` (H4) is niet gewijzigd.
