@@ -1,5 +1,7 @@
 # Overdracht: website Meneer Boersen afmaken
 
+**Regel: elke nieuwe PowerPoint op de site krijgt ALTIJD ook klikstappen (`tools/dias/stappen.py`); losse dia's zonder animaties zijn niet af.**
+
 Voor een nieuw gesprek dat verder bouwt. Werk in `~/Claude/geschiedenis-vellesan`.
 
 ## Start (in deze volgorde)

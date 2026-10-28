@@ -31,6 +31,15 @@ def dia_paden(z):
     return ["ppt/" + rid[s.get("{%s}id" % NS["r"])] for s in pres.find("p:sldIdLst", NS)]
 
 
+def zichtbaar(z):
+    """[(nummer, pad)] van de dia's die de PDF-export meeneemt: verborgen dia's (show="0") tellen niet mee."""
+    uit = []
+    for pad in dia_paden(z):
+        if not re.search(r'<p:sld\b[^>]*\bshow="0"', z.read(pad).decode("utf8")[:3000]):
+            uit.append((len(uit) + 1, pad))
+    return uit
+
+
 def klikken(xml):
     """(start, [(spid, klasse, (par_van, par_tot)|None), ...] per klik), uit de hoofdreeks.
     start = effecten die zonder klik meteen bij het openen van de dia lopen ('na vorige'/'met vorige' als eerste)."""
@@ -114,7 +123,7 @@ def analyse(pptx):
     z = zipfile.ZipFile(pptx)
     namen = {}
     tot = 0
-    for n, pad in enumerate(dia_paden(z), 1):
+    for n, pad in zichtbaar(z):
         xml = z.read(pad).decode("utf8")
         start, kl = klikken(xml)
         if not kl and not start:
@@ -132,10 +141,9 @@ def analyse(pptx):
 
 def bouw(pptx, uit, alleen=None):
     zin = zipfile.ZipFile(pptx)
-    paden = dia_paden(zin)
-    nieuw, manifest = {}, []
+    nieuw, manifest, dgm_ct, dgm_oud = {}, [], [], set()
     teller = 0
-    for n, pad in enumerate(paden, 1):
+    for n, pad in zichtbaar(zin):
         xml = zin.read(pad).decode("utf8")
         start, kl = klikken(xml)
         if (not kl and not start) or (alleen and n not in alleen):
@@ -158,7 +166,18 @@ def bouw(pptx, uit, alleen=None):
             ET.fromstring(x)  # moet geldige XML blijven
             teller += 1
             nieuw["ppt/slides/slide%d.xml" % (1000 + teller)] = x
-            nieuw["ppt/slides/_rels/slide%d.xml.rels" % (1000 + teller)] = rel
+            # SmartArt-onderdelen mogen niet door meer dia's gedeeld worden: elke kopie krijgt eigen exemplaren
+            rel_k = rel
+            for d in sorted(set(re.findall(r'Target="\.\./diagrams/([^"]+)"', rel))):
+                nm = "ppt/diagrams/" + d
+                nd = "%s_%d.%s" % (d.rsplit(".", 1)[0], teller, d.rsplit(".", 1)[1])
+                rel_k = rel_k.replace("../diagrams/" + d, "../diagrams/" + nd)
+                nieuw["ppt/diagrams/" + nd] = zin.read(nm)
+                dgm_oud.add(nm)
+                m = re.search(r'<Override PartName="/%s" ContentType="([^"]*)"' % re.escape(nm), zin.read("[Content_Types].xml").decode("utf8"))
+                if m:
+                    dgm_ct.append('<Override PartName="/ppt/diagrams/%s" ContentType="%s"/>' % (nd, m.group(1)))
+            nieuw["ppt/slides/_rels/slide%d.xml.rels" % (1000 + teller)] = rel_k
             manifest.append([n, s])
     if not manifest:
         raise SystemExit("geen geanimeerde dia's gevonden")
@@ -176,14 +195,15 @@ def bouw(pptx, uit, alleen=None):
     ct = zin.read("[Content_Types].xml").decode("utf8")
     ct = re.sub(r'<Override PartName="/ppt/(slides|notesSlides|changesInfos)/[^"]*"[^>]*/>', "", ct)
     ct = re.sub(r'<Override PartName="/ppt/revisionInfo.xml"[^>]*/>', "", ct)
-    ct = ct.replace("</Types>", "".join(
+    ct = re.sub(r'<Override PartName="/(%s)"[^>]*/>' % "|".join(re.escape(x) for x in dgm_oud), "", ct) if dgm_oud else ct
+    ct = ct.replace("</Types>", "".join(dgm_ct) + "".join(
         '<Override PartName="/ppt/slides/slide%d.xml" ContentType="application/vnd.openxmlformats-officedocument.'
         'presentationml.slide+xml"/>' % (1000 + i) for i in range(1, teller + 1)) + "</Types>")
     os.makedirs(os.path.dirname(os.path.abspath(uit)), exist_ok=True)
     with zipfile.ZipFile(uit, "w", zipfile.ZIP_DEFLATED) as zu:
         for info in zin.infolist():
             nm = info.filename
-            if re.match(r"ppt/(slides|notesSlides|changesInfos)/", nm) or nm == "ppt/revisionInfo.xml":
+            if re.match(r"ppt/(slides|notesSlides|changesInfos)/", nm) or nm == "ppt/revisionInfo.xml" or nm in dgm_oud:
                 continue  # originele dia's, notities en revisiegegevens vervallen
             data = zin.read(nm)
             if nm == "ppt/presentation.xml":

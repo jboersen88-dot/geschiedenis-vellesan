@@ -36,6 +36,9 @@ assert "</script" not in json.dumps(D) + REKEN, "</script in de data"
 # dia's: deck.json van stuk C, anders {} (dan valt de viewer terug op de Drive-weergave)
 dj = os.path.join(OUT, "slides", "deck.json")
 DECK = json.load(open(dj, encoding="utf-8")) if os.path.exists(dj) else {}
+# klikstappen per paragraaf en dia ({"1.1": {"2": 5}}), gemaakt met tools/dias/stappen.py
+sj = os.path.join(OUT, "slides", "steps.json")
+STEPS = json.load(open(sj, encoding="utf-8")) if os.path.exists(sj) else {}
 
 PARS = D["PARS"]
 GOALS = D["GOALS"]
@@ -72,7 +75,7 @@ ONDW = json.load(open(os.path.join(BRON, "onderwerpen.json"), encoding="utf-8"))
 MT = [[o["paragraaf"], o["paragraaf"] + " " + o["titel"], i] for i, o in enumerate(ONDW)]  # w = index in onderwerpen.json = onderwerp voor de Worker (zelfde volgorde in de Worker)
 MTB = [{"id": str(c), "t": "Hoofdstuk %d" % c} for c in chs]
 for k, v in [("PARS", PARS), ("GOALS", GOALS), ("CHK", D["CHK"]), ("CARDS", D["CARDS"]), ("BANK", D["BANK"]), ("SORT", D["SORT"]),
-             ("MAT", mat), ("VERS", D["VERS"]), ("FILMS", films), ("DECK", DECK), ("MT", MT),
+             ("MAT", mat), ("VERS", D["VERS"]), ("FILMS", films), ("DECK", DECK), ("STEPS", STEPS), ("MT", MT),
              ("NORIG", {k: len(g) for k, g in GOALS.items()}), ("BANKLV", nv["niveaus"](D["BANK"]))]:
     s = set_var(s, k, v)
 s = rex(s, r"/\*SEL\*/var SEL=.*?;/\*ENDSEL\*/", "/*SEL*/var SEL={};/*ENDSEL*/")

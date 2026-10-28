@@ -1,3 +1,9 @@
+## 2026-10-29 · Klikstappen voor alle PowerPoints: boekje 1 H1 en H3, Economie SE3 (8 paragrafen)
+
+- **Wat**: "volgende" gaat nu bij elke dia eerst door de animatiestappen en dan naar de volgende dia. Boekje 1: H1 (dia 14, 16, 18: 11 stappen), H3 (7 dia's, 41 stappen); H2 heeft geen animaties. Economie SE3: 1.1 (20 dia's, 159 stappen), 1.2 (8, 99), 1.3 (6, 61), 1.4 (5, 49), 2.1 (6, 46), 2.2 (9, 139), 2.3 (9, 126), 2.4 (6, 47). Dia's zonder animatie hebben geen stap-bestanden. Stappen 1280 px, JPG-kwaliteit 0,6; samen ± 45 MB.
+- **Economie**: `economie/se3/slides/steps.json` (nieuw) wordt door `economie/bouw-eco.py` als `STEPS` in `economie/se3/app.html` gezet; de viewer is dezelfde als in boekje 1.
+- **Gereedschap**: `tools/dias/stappen.py` slaat verborgen dia's over (zoals PowerPoint bij PDF-export) en geeft SmartArt-dia's eigen diagram-onderdelen per stap. Regel vastgelegd in `tools/dias/README.md` en `docs/OVERDRACHT.md`: elke nieuwe PowerPoint krijgt altijd klikstappen.
+
 ## 2026-10-29 · Interactieve kijkplaten voor boekje 2 (H1 en H2)
 
 - **Wat**: alle 15 plaatjes van boekje 2 hoofdstuk 1 en 2 hebben bolletjes (3 of 4 per plaat; H4 deelt `demonstratie` en `loket`). Klik op een bolletje: inzoomen, de rest vaag (geblurde basis plus scherpe kopie met `clip-path`; geen blur-animatie bij `prefers-reduced-motion`), tekst naast het plaatje (vanaf 1000 px breed; daaronder eronder), een vraag met invulvak en *Kijk na met AI* (`GV_NK.check`, lesstofsleutel `hk:"SZ"`), en een blokje *Kijk verder* met Schooltv-films (`GALERIJ_FILMS`). Is de AI niet bereikbaar, dan staan de nakijkpunten onder *Dit hadden we gezocht*. Antwoorden blijven per bolletje bewaard binnen de sessie; een AI-nakijking geeft een extra vinkje.

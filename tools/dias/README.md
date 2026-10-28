@@ -1,5 +1,7 @@
 # PowerPoint → dia's voor de site
 
+**Regel: elke nieuwe PowerPoint op de site krijgt ALTIJD ook klikstappen (`tools/dias/stappen.py`); losse dia's zonder animaties zijn niet af.**
+
 Zo zijn de dia's in `slides/H1..H4/` (boekje 1) en `slides/SZ1`, `slides/SZ2` (boekje 2) gemaakt (exacte opmaak van de docent).
 
 1. PowerPoint is sandboxed: kopieer de .pptx eerst naar
@@ -59,3 +61,5 @@ python3 -I tools/dias/stappen.py plaats /tmp/H4s.json /tmp/jH4 slides/H4
 Zet de bestanden als `NN-S.jpg` in `slides/H4/` en print de regel voor `STEPS`. Verdwijnt er bij de animatie een vorm (een 'exit'-effect, zoals de foto op dia 25 van boekje 2 H1), dan is de gewone export van de dia niet de eindstand van de presentatie: `bouw` maakt dan een extra pagina `[dia, -1]` en `plaats` zet die als `NN.jpg` neer (render die pagina met `pdf2jpg … 800` voor 1600 px, net als de gewone dia's). Plak die in `app.html` en `presenteer.html` (`var STEPS={"H4":{...}}`) en draai `python3 -I boekje-2/bouw.py`.
 
 **Let op**: gebruik voor elke export een nieuwe bestandsnaam in `slides-export` en sluit alleen je eigen bestand (`close presentation "naam.pptx" saving no`), nooit "active presentation": als je zelf een presentatie open hebt, is dat de actieve. Geeft PowerPoint bij `open` fout -9074, dan weigert het bestanden te openen (bij H1/H3 gebeurde dat op 2026-10-28, ook voor de originele pptx): sluit dialoogvensters in PowerPoint of start PowerPoint opnieuw en probeer het nog eens. H1 en H3 van boekje 1 hebben tekst die per alinea verschijnt (`stappen.py` maakt de alinea's die nog niet aan de beurt zijn leeg); dat is gecontroleerd met een echte export van boekje 2 H1 dia 25 (11 klikken, klopt met de animatie in de pptx), nog niet met die van boekje 1.
+
+**Economie SE3** (`economie/se3/slides/<id>/`, id 1.1 … 2.4): de klikstappen staan in `economie/se3/slides/steps.json` (`{"1.1":{"2":5,…}}`); `python3 -I economie/bouw-eco.py se3` zet ze als `STEPS` in `economie/se3/app.html` (de knop Presenteer ↗ is daar weggelaten). **Verborgen dia's** (`show="0"`) tellen niet mee: PowerPoint neemt ze niet mee in de PDF en `stappen.py` nummert alleen zichtbare dia's (1.1: dia 6 verborgen, 1.3: 5 verborgen, 1.4: 9 verborgen). Dia's met SmartArt krijgen per stap een eigen kopie van de diagram-onderdelen (gedeelde onderdelen geven -9074). Toont PowerPoint na een mislukte export steeds -9074, ook voor goede bestanden: `pkill -x "Microsoft PowerPoint"`, opnieuw starten en een nieuwe bestandsnaam gebruiken.
