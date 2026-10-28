@@ -9,7 +9,9 @@ analyse: per dia het aantal klikken en welke vormen bij welke klik verschijnen.
 bouw:    een pptx waarin elke geanimeerde dia is vervangen door k kopieen (stap 0..k-1,
          stap s = toestand na s klikken; nog niet getoonde vormen zijn verborgen) en
          een .json-lijst [[dia, stap], ...] in de volgorde van de pagina's.
-         De laatste toestand (alles zichtbaar) is de bestaande dia NN.jpg.
+         De laatste toestand (alles zichtbaar) is de bestaande dia NN.jpg, behalve als een
+         vorm bij een 'exit'-effect verdwijnt: dan komt er een extra pagina [dia, -1] met de
+         eindstand, die `plaats` als NN.jpg neerzet (de gewone export zou de vorm weer tonen).
 plaats:  zet de JPG's van de PDF-export (01.jpg, 02.jpg, ... per pagina) als NN-S.jpg
          in de dia-map en print de waarde voor STEPS in app.html.
 """
@@ -64,7 +66,7 @@ def toestanden(kl):
             eerste.setdefault(spid, kls)
     verb = {s for s, k in eerste.items() if k == "entr" and s not in tekst}
     stappen = []
-    for s in range(len(kl)):  # stap s = na s klikken
+    for s in range(len(kl) + 1):  # stap s = na s klikken; s == len(kl): eindstand
         v, zicht, t = set(verb), {}, dict.fromkeys(tekst, 0)
         for eff in kl[:s]:
             for spid, kls, pr in eff:
@@ -135,6 +137,10 @@ def bouw(pptx, uit, alleen=None):
         rel = re.sub(r'<Relationship [^>]*relationships/notesSlide"[^>]*/>', "", rel)  # notitie mag niet gedeeld worden
         basis = re.sub(r"<p:timing>.*?</p:timing>", "", xml, flags=re.S)
         for s, (verb, tekst) in enumerate(toestanden(kl)):
+            if s == len(kl):
+                if not verb:
+                    continue  # eindstand = alles zichtbaar = de gewone dia
+                s = -1
             x = verberg(basis, verb)
             for spid, aantal in tekst.items():
                 x = beperk_alineas(x, spid, aantal)
@@ -187,9 +193,10 @@ def plaats(manifest, jpgmap, doel):
     steps, tot = {}, 0
     for pag, (dia, s) in enumerate(man, 1):
         bron = os.path.join(jpgmap, "%02d.jpg" % pag)
-        shutil.copyfile(bron, os.path.join(doel, "%02d-%d.jpg" % (dia, s)))
+        shutil.copyfile(bron, os.path.join(doel, "%02d.jpg" % dia if s < 0 else "%02d-%d.jpg" % (dia, s)))
         tot += os.path.getsize(bron)
-        steps[dia] = steps.get(dia, 0) + 1
+        if s >= 0:
+            steps[dia] = steps.get(dia, 0) + 1
     print("%d afbeeldingen, %.1f MB, gemiddeld %d KB" % (len(man), tot / 1e6, tot / len(man) / 1000))
     print("STEPS:", json.dumps({str(k): v for k, v in steps.items()}, separators=(",", ":")))
 
