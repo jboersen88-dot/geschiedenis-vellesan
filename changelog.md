@@ -64,6 +64,11 @@ Getest in de browser op 375, 820 en 1280 px, licht en donker en met `prefers-red
 
 # Changelog
 
+## 2026-10-28 · bronnen bij de vragen (boekje 2)
+
+- Uit het document "alle extra bronnen" zijn de afbeeldingen en bronteksten bij de juiste plek gezet (`boekje-2/img/bronnen/`, 10 JPG's, 1,8 MB). **Examentraining**: bron 1 (leegstaand bankgebouw) bij vraag 2, bron 4 (protestbord) bij vraag 9, bron 6 (advertentie) bij vraag 11; de bronnen 2, 3 en 5 stonden er al als tekst. **Onderzoek**: de foto's bij Demonstreren (1916 en Klimaatmars 2021), Epidemieën (geen riolering rond 1900, coronavirus 2022) en Werkverschaffing (1934, mantelzorg 2016, bron 49 bijstandsuitkeringen per gemeente en bron 50 huisbezoek-tekst van de gemeente Utrecht).
+- De afbeeldingen komen uit het uitgeversmateriaal van de docent; plaatsing op de openbare site is op zijn verzoek (rechten bij de docent). De tijdlijn-afbeelding uit het document is niet gebruikt (de site heeft een eigen tijdlijn). Bron 49 en 50 staan bij de opdracht Werkverschaffing omdat ze over de bijstand gaan; in het document staan ze zonder vraag.
+
 ## 2026-10-20 · Economie jaar 4 SE3 (H1, H2): volledige leeromgeving
 
 - Nieuwe pagina `economie/se3/app.html`, gebouwd met `python3 -I economie/bouw-eco.py se3` uit `app.html` (boekje 1) en de inhoud van de oude lesapp (`economie/se3/bron/`). Dezelfde opmaak en tabs als boekje 1, de dia's van de 8 PowerPoints (`economie/se3/slides/`), 174 oefenvragen, begrippen, leerdoelen, formule- en rekenlab, sorteergames, 4 toetsversies als kaarten en de toets op maat met AI (Worker, `vak:"eco4"`, 8 paragrafen). Plan en modelkeuze: `docs/PLAN-ECONOMIE-SE3.md`.

@@ -13,7 +13,7 @@
 .q{scroll-margin-top:20px}
 .q .num{font-family:"Fraunces",serif;font-weight:900;font-size:15px;color:var(--coral-d)}
 .q h3{font-size:20px;margin:4px 0 10px;line-height:1.25}
-.bronref{font-size:14px;background:var(--bg);border:1px dashed var(--line);border-radius:12px;padding:10px 12px;margin-bottom:12px}
+.bronref img{display:block;width:100%;max-width:560px;height:auto;border-radius:10px;margin:0 0 8px}.bronref{font-size:14px;background:var(--bg);border:1px dashed var(--line);border-radius:12px;padding:10px 12px;margin-bottom:12px}
 .opts{display:flex;flex-direction:column;gap:.9rem;margin:6px 0 4px}
 .opt{display:flex;gap:12px;align-items:flex-start;border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;cursor:pointer;background:var(--card);transition:border-color .18s var(--ease-out),background .18s var(--ease-out)}
 .opt input{margin-top:3px;width:18px;height:18px;flex:none;accent-color:var(--green)}
@@ -61,12 +61,12 @@ function put(k,v){try{localStorage.setItem(LS+k,v);}catch(e){}}
 function esc(t){return String(t).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
 
 var BR={
- 1:{t:null,c:"Bron 1 · Een leegstaand bankgebouw in Iowa, Verenigde Staten (foto in je boekje)."},
+ 1:{t:null,i:"img/bronnen/exam-bron1-bankgebouw.jpg",a:"Foto van een leegstaand bankgebouw",c:"Bron 1 · Een leegstaand bankgebouw in Iowa, Verenigde Staten."},
  2:{t:"We krijgen zo langzamerhand een volk waarin er geen enkele man meer is die niet op krukken loopt. En ik vraag mij af: is dat nou waarlijk de weg om een krachtig volk te behouden? Dat wordt met geld alleen, met het strooien van geld uit de gemeenschap, niet verkregen.",c:"Bron 2 · Minister-president Colijn in de jaren dertig."},
  3:{t:"Hooggeachte vader Drees, als ik u zo maar noemen mag! Eindelijk heb ik dan ook voor de eerste keer de […] ontvangen. Ik zou daar toch graag een keer iemand voor danken. En dat doe ik dan bij deze U! Want u hebt daar toch maar voor gezorgd.",c:"Bron 3 · Een brief van mevrouw R. van Eekelen aan minister-president Drees."},
- 4:{t:null,c:"Bron 4 · Een foto van een protestbord (in je boekje)."},
+ 4:{t:null,i:"img/bronnen/exam-bron4-protestbord.jpg",a:"Foto van demonstranten met een protestbord",c:"Bron 4 · Een foto van een protestbord."},
  5:{t:"Gelukkig bewijzen Nederlanders iedere dag dat zij de overheid voor veel dingen helemaal niet nodig hebben. Zij zorgen voor zichzelf en geven om een ander. Niet omdat het moet, maar omdat ze het zelf willen.",c:"Bron 5 · Standpunt van een politieke partij (bron: VVD.nl)."},
- 6:{t:null,c:"Bron 6 · In je boekje."}
+ 6:{t:null,i:"img/bronnen/exam-bron6-advertentie.jpg",a:"Advertentie met een telefoon in een broekzak",c:"Bron 6 · Een advertentie."}
 };
 
 /* type: multi (meerdere juist), keuze (keuze + uitleg), open */
@@ -93,7 +93,7 @@ var Q=[
 var main=document.getElementById("qs");
 main.innerHTML=Q.map(function(q,i){
   var b=q.bron?BR[q.bron]:null;
-  var bron=b?'<div class="bronref">'+(b.t?'<blockquote class="src" style="margin:0">'+esc(b.t)+'<cite>'+esc(b.c)+'</cite></blockquote>':'📷 '+esc(b.c))+'</div>':"";
+  var bron=b?'<div class="bronref">'+(b.t?'<blockquote class="src" style="margin:0">'+esc(b.t)+'<cite>'+esc(b.c)+'</cite></blockquote>':(b.i?'<img src="'+b.i+'" alt="'+esc(b.a||"")+'" loading="lazy"><cite style="font-size:13px;color:var(--muted);font-style:normal">'+esc(b.c)+'</cite>':'📷 '+esc(b.c)))+'</div>':"";
   var body="";
   if(q.type==="multi") body='<div class="opts">'+q.opts.map(function(o,j){return '<label class="opt" data-j="'+j+'"><input type="checkbox" data-m="'+i+'-'+j+'"><span>'+esc(o[0])+'</span></label>';}).join("")+'</div><div class="row" style="margin-top:12px"><button class="btn" data-check="'+i+'">Kijk na</button></div><div class="fb" id="fb'+i+'"></div>';
   if(q.type==="keuze") body='<div class="choice">'+q.keuzes.map(function(k){return '<button data-k="'+i+'" data-v="'+k+'" aria-pressed="false">'+k+'</button>';}).join("")+'</div><p class="muted" style="margin:0 0 8px;font-size:14px">'+esc(q.zin)+'</p>';
