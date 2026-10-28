@@ -1042,7 +1042,7 @@ function quizHome(){
    '<div class="muted" style="font-size:12.5px;font-weight:700">Hoofdstuk</div><div class="filters" style="justify-content:center">'+["alle"].concat(PARS.map(function(p){return p.id;})).map(function(f){return '<button data-qpar="'+f+'" class="'+(f===quizPar?"on":"")+'"'+(P(f)?' title="'+P(f).t+'"':'')+'>'+selLabel(f)+'</button>';}).join("")+'</div>'+
    '<div class="muted" style="font-size:12.5px;font-weight:700;margin-top:6px">Niveau</div><div class="filters" style="justify-content:center" role="group" aria-label="Niveau">'+[["alle","Alles"],["B","Basis"],["U","Uitdaging"]].map(function(l){return '<button data-qlv="'+l[0]+'" aria-pressed="'+(l[0]===quizLv)+'" class="'+(l[0]===quizLv?"on":"")+'">'+l[1]+'</button>';}).join("")+'</div>'+
    '<p class="muted" style="margin:2px 0 0;font-size:13px">'+(quizLv==="B"?"Basis: kennen en herkennen (wat is, wie, welk jaar).":quizLv==="U"?"Uitdaging: uitleggen, waarom, oorzaak en gevolg, vergelijken.":"Alle vragen door elkaar.")+' ('+poolFor(quizPar).length+' vragen)</p>'+
-   '<div class="row" style="justify-content:center;margin-top:8px"><button class="btn" id="qStart">Start 10 vragen</button>'+(wr?'<button class="btn ghost" id="qWrong">Oefen mijn fouten ('+wr+')</button>':'')+'</div></div>';
+   '<div class="row" style="justify-content:center;margin-top:8px"><button class="btn" id="qStart">Start '+Math.min(10,poolFor(quizPar).length)+' vragen</button>'+(wr?'<button class="btn ghost" id="qWrong">Oefen mijn fouten ('+wr+')</button>':'')+'</div></div>';
 }
 function startQuiz(mode){quizMode=mode||"mix";qs=pickQuiz();qi=0;qGood=0;qWrongList=[];if(!qs.length){quizHome();return;}nextQ();}
 function qScore(){document.getElementById("qScore").innerHTML="Vraag <b>"+Math.min(qi+1,qs.length)+"</b> van "+qs.length+" &nbsp;·&nbsp; Goed: <b>"+qGood+"</b>"+(quizMode==="fouten"?" &nbsp;·&nbsp; <span style=\"color:var(--berry)\">foutenronde</span>":"");}
@@ -1067,7 +1067,7 @@ function endQuiz(){
   document.getElementById("qScore").innerHTML="Klaar!";
   var rev=qWrongList.length?'<div class="review"><h3>Dit ging nog mis</h3>'+qWrongList.map(function(i){return '<div class="rv">'+tag(BANK[i][0])+' <b>'+BANK[i][1]+'</b><br><span class="muted">Goed antwoord:</span> '+BANK[i][2][0]+'</div>';}).join("")+'</div>':'';
   var wr=wrongIds().length;
-  qCard.innerHTML='<div class="done-card"><div class="big">'+qGood+' / '+n+'</div><p>'+msg+'</p><div class="row" style="justify-content:center"><button class="btn" id="qStart">Nieuwe 10 vragen</button>'+(wr?'<button class="btn ghost" id="qWrong">Oefen mijn fouten ('+wr+')</button>':'')+'<button class="btn ghost" id="qHome">Kies paragraaf</button></div></div>'+rev;
+  qCard.innerHTML='<div class="done-card"><div class="big">'+qGood+' / '+n+'</div><p>'+msg+'</p><div class="row" style="justify-content:center"><button class="btn" id="qStart">Nieuwe '+Math.min(10,poolFor(quizPar).length)+' vragen</button>'+(wr?'<button class="btn ghost" id="qWrong">Oefen mijn fouten ('+wr+')</button>':'')+'<button class="btn ghost" id="qHome">Kies paragraaf</button></div></div>'+rev;
 }
 quizHome();
 
