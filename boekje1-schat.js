@@ -96,7 +96,7 @@ function check(){
   var q=Q[st.i],g=st.val,v=verdict(q,g),dif=g-q.truth,ab=Math.abs(dif);
   st.done=true;st.res[st.i]={v:v,g:g};
   var rng=document.getElementById("sxr"),b=document.getElementById("sxb"),res=document.getElementById("sxres"),rd=document.getElementById("sxread"),n=document.getElementById("sxn");
-  rng.disabled=true;
+  rng.disabled=true;b.focus({preventScroll:true}); /* de schuif wordt uitgezet: focus naar de knop, anders raakt een toetsenbordgebruiker de plek kwijt */
   var lab={raak:"Raak!",dicht:"Dichtbij",mis:"Ernaast"}[v];
   var cmp=v==="raak"&&ab===0?"Precies goed: "+(q.tv||q.f(q.truth))+".":
     "Je schatte "+q.f(g)+". Het was "+(q.tv||q.f(q.truth))+(ab===0?".":". Je zat "+q.d(ab)+" te "+(dif>0?"hoog":"laag")+".");
