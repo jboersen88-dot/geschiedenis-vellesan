@@ -125,7 +125,7 @@ function placeShips(){
 }
 placeShips();addEventListener("resize",function(){clearTimeout(placeShips.t);placeShips.t=setTimeout(placeShips,150);});
 /* ---- jaarschakelaar ---- */
-var DATA={1929:{inv:2.75,uit:1.99,wl:0,ships:8},1935:{inv:.94,uit:.67,wl:640000,ships:2}},yr=1929,cur={inv:2.75,uit:1.99,wl:0};
+var DATA={1929:{inv:2.75,uit:1.99,wl:0,ships:8},1935:{inv:.94,uit:.67,wl:430000,ships:2}},yr=1929,cur={inv:2.75,uit:1.99,wl:0};
 function fmt(n){return n.toFixed(2).replace(".",",");}
 function tween(to){
   var from={inv:cur.inv,uit:cur.uit,wl:cur.wl},t0=performance.now(),dur=RM?1:900;
@@ -156,7 +156,7 @@ rt:{pos:RT,naam:"Rotterdam",t:"Rotterdam: de handel stort in",imgs:[["haven","Sc
   feiten:["Na de Eerste Wereldoorlog ging het geweldig: geen oorlogsschade en heel veel handel (Rotterdam).","1929 (voor de krach): invoer 2,75 en uitvoer 1,99 miljard gulden.","1935 (dieptepunt): invoer 0,94 en uitvoer 0,67 miljard gulden.","Zet de schakelaar boven de kaart op 1935 en kijk naar de scheepvaart."],
   q:"Beschrijf wat er tussen 1929 en 1935 gebeurt met de invoer en de uitvoer van Nederland.",punten:[o26.g[0].t],par:"H3 · De crisis"},
 nl:{pos:[RT[0]-70,RT[1]-78],naam:"Nederland",t:"Nederland in de crisisjaren",imgs:[["arbeidsbeurs","Mannen wachten bij een arbeidsbeurs."],["voedseluitdeling","Voedsel wordt uitgedeeld."],["sdap-affiche-1","Een affiche van de SDAP."],["demonstratie","Een demonstratie."]],
-  feiten:["Werkloosheid: ongeveer 640.000 mensen in 1935.","Premier Colijn voerde de aanpassingspolitiek: minder inkomsten (belasting) betekent minder uitgaven, dus bezuinigen, en loonmatiging.","De SDAP (Troelstra) wilde verandering via wetten, niet via een revolutie."],
+  feiten:["Werkloosheid: in 1935 gemiddeld ongeveer 430.000 mensen (winter 1935/36: bijna 580.000). Schattingen verschillen.","Premier Colijn voerde de aanpassingspolitiek: minder inkomsten (belasting) betekent minder uitgaven, dus bezuinigen, en loonmatiging.","De SDAP (Troelstra) wilde verandering via wetten, niet via een revolutie."],
   q:"Wat was de aanpassingspolitiek van Colijn in de crisis van de jaren dertig?",punten:["Geen schulden: minder inkomsten (belasting) betekent minder uitgaven, dus bezuinigen.","Lagere lonen (loonmatiging).","Dit beleid van Colijn heette aanpassingspolitiek."],par:"H3 · De crisis"}};
 Object.keys(PL).forEach(function(k){var p=PL[k],b=document.createElement("button");b.className="hs";b.dataset.k=k;b.setAttribute("aria-pressed","false");
   b.style.left=(p.pos[0]/10)+"%";b.style.top=(p.pos[1]/6)+"%";b.innerHTML='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span class="n">'+p.naam+'</span><span class="sr" style="position:absolute;width:1px;height:1px;overflow:hidden">'+p.naam+'</span>';

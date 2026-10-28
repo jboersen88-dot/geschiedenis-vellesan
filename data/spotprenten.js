@@ -208,7 +208,7 @@ window.SPOTPRENTEN = [
       { x: 17, y: 78, naam: "De hand in het water", stap: 2,
         vraag: "Van wie is deze hand? Wat gebeurt er met die persoon?",
         hints: ["Waarom steekt iemand zijn hand uit het water?", "Over welke groep mensen gaat de titel van de prent?"],
-        uitleg: "Uit het water steekt de hand van iemand die verdrinkt en om hulp vraagt. Volgens de titel staat die persoon voor de werklozen. In 1935 waren er in Nederland 640.000 werklozen." },
+        uitleg: "Uit het water steekt de hand van iemand die verdrinkt en om hulp vraagt. Volgens de titel staat die persoon voor de werklozen. In 1935 waren er in Nederland gemiddeld ongeveer 430.000 werklozen." },
       { x: 75, y: 92, naam: "Het water", stap: 3,
         vraag: "Waar staat het water voor? Gebruik de titel.",
         hints: ["Wat gebeurt er als je in diep water valt en niet kunt zwemmen?", "Waar 'verdrinken' de mensen in deze tijd in?"],

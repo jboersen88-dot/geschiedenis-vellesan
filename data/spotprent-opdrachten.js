@@ -37,7 +37,7 @@ window.SPOT_OPDRACHTEN = {
   tijd: {
     "raderwerk": "Gemaakt tijdens de spoorwegstaking van 1903.",
     "zoo-moet-het": "Er was nog censuskiesrecht: algemeen kiesrecht voor mannen kwam pas in 1917.",
-    "regering-werkloosheid": "De crisis van de jaren dertig: in 1935 waren er 640.000 werklozen en premier Colijn voerde de aanpassingspolitiek.",
+    "regering-werkloosheid": "De crisis van de jaren dertig: in 1935 waren er gemiddeld ongeveer 430.000 werklozen en premier Colijn voerde de aanpassingspolitiek.",
     "stemt-rood": "De socialisten vragen de 'kleine luyden' van de ARP om rood te stemmen: dat speelde rond 1900, toen er nog censuskiesrecht was.",
     "jute": "De sociale kwestie: rond 1900 werkten arbeiders lang en ongezond in fabrieken.",
     "hier-met-het-kiesrecht": "Het kiesrecht zit nog vast aan geld (censuskiesrecht): dus vóór 1917.",

@@ -71,7 +71,7 @@ table{border-collapse:collapse;font-size:14px;margin-top:10px}td,th{padding:4px 
       <div class="cap"><span>1929</span><span>1935</span></div>
       <div class="leg"><span><b style="background:var(--blue)"></b>Invoer</span><span><b style="background:var(--berry)"></b>Uitvoer</span><span class="muted">in miljarden gulden</span></div>
     </div>
-    <div class="scene" data-s="2"><div class="big" id="n2">0<small>werklozen in 1935, een kwart van de mannen die konden werken</small></div></div>
+    <div class="scene" data-s="2"><div class="big" id="n2">0<small>werklozen gemiddeld in 1935 (winter 1935/36: bijna 580.000)</small></div></div>
     <div class="scene" data-s="3"><div class="big" id="n3">265.000<small>trekpaarden aan het werk in 1950; twintig jaar later: allemaal vervangen door tractoren</small></div></div>
     <div class="scene" data-s="4"><div class="big">2<small>volle maandsalarissen van een vakman kostte een gewone tv in 1963</small></div></div>
   </div></div>
@@ -79,7 +79,7 @@ table{border-collapse:collapse;font-size:14px;margin-top:10px}td,th{padding:4px 
     <section class="step" data-s="0"><div class="k">1929</div><h2>De beurs stort in</h2><p>Op 24 oktober 1929, Zwarte Donderdag, dalen de koersen van alle aandelen. Veel bedrijven en banken gaan failliet. Amerikanen kopen geen Europese producten meer.</p></section>
     <section class="step" data-s="1"><div class="k">1929 → 1935</div><h2>De handel valt weg</h2><p>Nederland leeft van handel. Invoer en uitvoer dalen tot ongeveer een derde. Bedrijven en fabrieken sluiten.</p>
       <table><caption class="muted" style="text-align:left;font-size:13px">Tabel: miljarden gulden</caption><tr><th></th><th>1929</th><th>1935</th></tr><tr><td>Invoer</td><td>2,75</td><td>0,94</td></tr><tr><td>Uitvoer</td><td>1,99</td><td>0,67</td></tr></table></section>
-    <section class="step" data-s="2"><div class="k">1935</div><h2>Zonder werk</h2><p>Er zijn 640.000 werklozen. Colijn wil niet dat de overheid schulden maakt en bezuinigt: de aanpassingspolitiek. De lonen gaan omlaag, maar de export neemt niet toe.</p></section>
+    <section class="step" data-s="2"><div class="k">1935</div><h2>Zonder werk</h2><p>In 1935 zijn gemiddeld ongeveer 430.000 mensen werkloos; in de winter van 1935/36 stijgt dat tot bijna 580.000. Colijn wil niet dat de overheid schulden maakt en bezuinigt: de aanpassingspolitiek. De lonen gaan omlaag, maar de export neemt niet toe.</p></section>
     <section class="step" data-s="3"><div class="k">1945 → 1970</div><h2>Machines nemen het land over</h2><p>Na de Hongerwinter moet Nederland nooit meer honger hebben. Boeren mechaniseren en worden groter. Tussen 1947 en 1960 verdwijnt bijna de helft van de banen in de landbouw. Het werk verhuist naar de industrie.</p></section>
     <section class="step" data-s="4"><div class="k">1963</div><h2>Eerst sparen, dan kopen</h2><p>De lonen stijgen snel, de geleide loonpolitiek stopt en Nederland wordt een consumptiemaatschappij. Een tv blijft nog duur, maar steeds meer gezinnen kunnen luxe kopen.</p><p><a class="btn" href="app.html#H4">Lees hoofdstuk 4</a></p></section>
   </div>
@@ -93,7 +93,7 @@ function count(el,from,to,txt){var small=el.querySelector("small");var node=el.f
   if(red){node.nodeValue=fmt(to);return;}
   var t0=null;function f(t){if(t0===null)t0=t;var p=Math.min(1,(t-t0)/900),e=1-Math.pow(1-p,4);node.nodeValue=fmt(from+(to-from)*e);if(p<1)requestAnimationFrame(f);}requestAnimationFrame(f);}
 function show(i){if(i===cur)return;cur=i;scenes.forEach(function(s){s.classList.toggle("on",+s.dataset.s===i);});
-  if(i===2)count(document.getElementById("n2"),0,640000);
+  if(i===2)count(document.getElementById("n2"),0,430000);
   if(i===3)count(document.getElementById("n3"),265000,0);}
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)show(+e.target.dataset.s);});},{rootMargin:"-45% 0px -45% 0px"});
 document.querySelectorAll(".step").forEach(function(s){io.observe(s);});
