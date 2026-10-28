@@ -55,3 +55,5 @@ python3 -I tools/dias/stappen.py plaats /tmp/H4s.json /tmp/jH4 slides/H4
 ```
 
 Zet de bestanden als `NN-S.jpg` in `slides/H4/` en print de regel voor `STEPS`. Plak die in `app.html` en `presenteer.html` (`var STEPS={"H4":{...}}`) en draai `python3 -I boekje-2/bouw.py`.
+
+**Let op**: gebruik voor elke export een nieuwe bestandsnaam in `slides-export` en sluit alleen je eigen bestand (`close presentation "naam.pptx" saving no`), nooit "active presentation": als je zelf een presentatie open hebt, is dat de actieve. Geeft PowerPoint bij `open` fout -9074, dan weigert het bestanden te openen (bij H1/H3 gebeurde dat op 2026-10-28, ook voor de originele pptx): sluit dialoogvensters in PowerPoint of start PowerPoint opnieuw en probeer het nog eens. H1 en H3 hebben tekst die per alinea verschijnt (`stappen.py` maakt de alinea's die nog niet aan de beurt zijn leeg); dat is nog niet met een echte export gecontroleerd.

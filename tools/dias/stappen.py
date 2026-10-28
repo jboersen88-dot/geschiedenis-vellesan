@@ -96,7 +96,7 @@ def beperk_alineas(xml, spid, zichtbaar):
                 k[0] += 1
                 if k[0] < zichtbaar:
                     return a.group(0)
-                return re.sub(r"<a:(r|br|fld)\b.*?(</a:\1>|/>)", "", a.group(0), flags=re.S)
+                return re.sub(r"<a:r>.*?</a:r>|<a:fld\b.*?</a:fld>|<a:br\s*/>|<a:br>.*?</a:br>", "", a.group(0), flags=re.S)
             nieuw = re.sub(r"<a:p>.*?</a:p>|<a:p/>", leeg, sp, flags=re.S)
             return xml[:m.start()] + nieuw + xml[m.end():]
     raise SystemExit("tekstvorm %s niet gevonden" % spid)
@@ -138,6 +138,7 @@ def bouw(pptx, uit, alleen=None):
             x = verberg(basis, verb)
             for spid, aantal in tekst.items():
                 x = beperk_alineas(x, spid, aantal)
+            ET.fromstring(x)  # moet geldige XML blijven
             teller += 1
             nieuw["ppt/slides/slide%d.xml" % (1000 + teller)] = x
             nieuw["ppt/slides/_rels/slide%d.xml.rels" % (1000 + teller)] = rel
@@ -149,13 +150,15 @@ def bouw(pptx, uit, alleen=None):
     ids = "".join('<p:sldId id="%d" r:id="rIdS%d"/>' % (400 + i, i) for i in range(1, teller + 1))
     pres = re.sub(r"<p:sldIdLst>.*?</p:sldIdLst>", "<p:sldIdLst>%s</p:sldIdLst>" % ids, pres, flags=re.S)
     pres = re.sub(r"<p:extLst>.*?</p:extLst>", "", pres, flags=re.S) if "sectionLst" in pres else pres
-    prels = re.sub(r'<Relationship Id="[^"]*" Type="[^"]*/slide" Target="[^"]*"/>', "",
+    # revisiegegevens verwijzen naar de oude dia's en laten PowerPoint het bestand weigeren (-9074)
+    prels = re.sub(r'<Relationship Id="[^"]*" Type="[^"]*/(slide|revisionInfo|changesInfo)" Target="[^"]*"/>', "",
                    zin.read(REL_PRES).decode("utf8"))
     prels = prels.replace("</Relationships>", "".join(
         '<Relationship Id="rIdS%d" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide" '
         'Target="slides/slide%d.xml"/>' % (i, 1000 + i) for i in range(1, teller + 1)) + "</Relationships>")
     ct = zin.read("[Content_Types].xml").decode("utf8")
-    ct = re.sub(r'<Override PartName="/ppt/(slides|notesSlides)/[^"]*"[^>]*/>', "", ct)
+    ct = re.sub(r'<Override PartName="/ppt/(slides|notesSlides|changesInfos)/[^"]*"[^>]*/>', "", ct)
+    ct = re.sub(r'<Override PartName="/ppt/revisionInfo.xml"[^>]*/>', "", ct)
     ct = ct.replace("</Types>", "".join(
         '<Override PartName="/ppt/slides/slide%d.xml" ContentType="application/vnd.openxmlformats-officedocument.'
         'presentationml.slide+xml"/>' % (1000 + i) for i in range(1, teller + 1)) + "</Types>")
@@ -163,8 +166,8 @@ def bouw(pptx, uit, alleen=None):
     with zipfile.ZipFile(uit, "w", zipfile.ZIP_DEFLATED) as zu:
         for info in zin.infolist():
             nm = info.filename
-            if re.match(r"ppt/(slides|notesSlides)/", nm):
-                continue  # originele dia's en hun notities vervallen
+            if re.match(r"ppt/(slides|notesSlides|changesInfos)/", nm) or nm == "ppt/revisionInfo.xml":
+                continue  # originele dia's, notities en revisiegegevens vervallen
             data = zin.read(nm)
             if nm == "ppt/presentation.xml":
                 data = pres.encode("utf8")
