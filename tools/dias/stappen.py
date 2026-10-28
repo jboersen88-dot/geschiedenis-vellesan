@@ -32,14 +32,15 @@ def dia_paden(z):
 
 
 def klikken(xml):
-    """[(spid, klasse, (par_van, par_tot)|None), ...] per klik, uit de hoofdreeks."""
+    """(start, [(spid, klasse, (par_van, par_tot)|None), ...] per klik), uit de hoofdreeks.
+    start = effecten die zonder klik meteen bij het openen van de dia lopen ('na vorige'/'met vorige' als eerste)."""
     tm = ET.fromstring(xml).find("p:timing", NS)
     if tm is None:
-        return []
+        return [], []
     seq = [c for c in tm.iter(P + "cTn") if c.get("nodeType") == "mainSeq"]
     if not seq:
-        return []
-    uit = []
+        return [], []
+    uit, start = [], []
     for klik in seq[0].find("p:childTnLst", NS):
         eff = []
         for c in klik.iter(P + "cTn"):
@@ -52,13 +53,18 @@ def klikken(xml):
             eff.append((t.get("spid"), c.get("presetClass"),
                         (int(pr.get("st")), int(pr.get("end"))) if pr is not None else None))
         uit.append(eff)
-    return uit
+        eerste = next((c.get("nodeType") for c in klik.iter(P + "cTn")
+                       if c.get("nodeType") in ("clickEffect", "afterEffect", "withEffect")), None)
+        if len(uit) == 1 and eerste in ("afterEffect", "withEffect"):
+            start, uit = uit[0], []
+    return start, uit
 
 
-def toestanden(kl):
-    """Per stap 0..k-1: (verborgen vormen, {spid: aantal zichtbare alinea's}).
+def toestanden(kl, start=()):
+    """Per stap 0..k: (verborgen vormen, {spid: aantal zichtbare alinea's}).
     Vorm: eerste effect 'entr' -> begint verborgen; 'exit' -> begint zichtbaar.
     Tekstopbouw per alinea (pRg): vorm blijft zichtbaar, alinea's verschijnen een voor een."""
+    kl = [list(start)] + list(kl)  # stap 0 = na het automatische begin, klik 1 = kl[1]
     tekst = {spid: 0 for eff in kl for spid, _, pr in eff if pr is not None}
     eerste = {}
     for eff in kl:
@@ -66,7 +72,7 @@ def toestanden(kl):
             eerste.setdefault(spid, kls)
     verb = {s for s, k in eerste.items() if k == "entr" and s not in tekst}
     stappen = []
-    for s in range(len(kl) + 1):  # stap s = na s klikken; s == len(kl): eindstand
+    for s in range(1, len(kl) + 1):  # stap s-1 = na s-1 klikken; laatste = eindstand
         v, zicht, t = set(verb), {}, dict.fromkeys(tekst, 0)
         for eff in kl[:s]:
             for spid, kls, pr in eff:
@@ -110,12 +116,14 @@ def analyse(pptx):
     tot = 0
     for n, pad in enumerate(dia_paden(z), 1):
         xml = z.read(pad).decode("utf8")
-        kl = klikken(xml)
-        if not kl:
+        start, kl = klikken(xml)
+        if not kl and not start:
             continue
         tot += len(kl)
         nm = dict(re.findall(r'<p:cNvPr id="(\d+)" name="([^"]*)"', xml))
-        print("dia %2d: %d klikken" % (n, len(kl)))
+        print("dia %2d: %d klikken%s" % (n, len(kl), " (+ automatisch begin)" if start else ""))
+        if start:
+            print("   begin: %s" % ", ".join("%s%s" % (nm.get(sp, sp), "" if k == "entr" else " (" + k + ")") for sp, k, pr in start))
         for i, eff in enumerate(kl, 1):
             print("   klik %d: %s" % (i, ", ".join("%s%s%s" % (nm.get(s, s), "" if k == "entr" else " (" + k + ")",
                                                                  " alinea %d-%d" % pr if pr else "") for s, k, pr in eff)))
@@ -129,18 +137,21 @@ def bouw(pptx, uit, alleen=None):
     teller = 0
     for n, pad in enumerate(paden, 1):
         xml = zin.read(pad).decode("utf8")
-        kl = klikken(xml)
-        if not kl or (alleen and n not in alleen):
+        start, kl = klikken(xml)
+        if (not kl and not start) or (alleen and n not in alleen):
             continue
         rel_pad = pad.replace("slides/", "slides/_rels/") + ".rels"
         rel = zin.read(rel_pad).decode("utf8")
         rel = re.sub(r'<Relationship [^>]*relationships/notesSlide"[^>]*/>', "", rel)  # notitie mag niet gedeeld worden
         basis = re.sub(r"<p:timing>.*?</p:timing>", "", xml, flags=re.S)
-        for s, (verb, tekst) in enumerate(toestanden(kl)):
-            if s == len(kl):
-                if not verb:
-                    continue  # eindstand = alles zichtbaar = de gewone dia
-                s = -1
+        uniek = []  # opeenvolgende gelijke toestanden (klik zonder zichtbaar effect, bv. nadruk) tellen als een
+        for st in toestanden(kl, start):
+            if not uniek or st != uniek[-1]:
+                uniek.append(st)
+        pagina = [(i, st) for i, st in enumerate(uniek[:-1])]
+        if uniek[-1][0]:
+            pagina.append((-1, uniek[-1]))  # eindstand heeft verborgen vormen: gewone export is niet de eindstand
+        for s, (verb, tekst) in pagina:
             x = verberg(basis, verb)
             for spid, aantal in tekst.items():
                 x = beperk_alineas(x, spid, aantal)

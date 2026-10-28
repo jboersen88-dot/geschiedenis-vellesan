@@ -725,10 +725,10 @@ document.getElementById("clist").addEventListener("click",function(e){var b=e.ta
 var cur="H1";
 
 /* ---------- HTML-presentatie (dia-viewer) ---------- */
-var DECK={"H1": 25, "H2": 24};
+var DECK={"H1": 44, "H2": 35};
 /* STEPS: per dia het aantal klikstappen k (animatie uit de PowerPoint). Stap s<k = slides/H/NN-s.jpg (toestand na s klikken),
    stap k = de volledige dia NN.jpg. Dia's zonder vermelding hebben geen stappen. Gemaakt met tools/dias/stappen.py. */
-var STEPS={"H1": {"25": 11}};
+var STEPS={"H1": {"1": 3, "2": 9, "3": 7, "4": 10, "5": 8, "7": 9, "8": 3, "9": 3, "10": 9, "11": 6, "13": 7, "14": 2, "15": 5, "16": 5, "17": 1, "18": 1, "19": 1, "20": 1, "21": 1, "22": 1, "23": 1, "24": 1, "25": 1, "26": 7, "27": 6, "29": 1, "30": 1, "31": 1, "32": 1, "33": 1, "34": 1, "35": 1, "36": 5, "38": 11, "39": 4, "40": 8, "41": 9, "42": 7, "43": 10, "44": 4}, "H2": {"2": 5, "3": 3, "4": 3, "5": 3, "6": 4, "7": 16, "8": 5, "9": 1, "10": 1, "11": 1, "12": 11, "13": 4, "14": 3, "15": 2, "16": 7, "17": 6, "18": 5, "19": 7, "20": 3, "21": 1, "22": 2, "23": 2, "24": 7, "25": 7, "26": 10, "27": 16, "28": 4, "30": 1, "31": 1, "32": 1, "33": 1, "34": 1, "35": 5}};
 function slideSrc(h,n,s){var k=(STEPS[h]||{})[n]||0,nn=(n<10?"0":"")+n;return "../slides/SZ"+h.slice(1)+"/"+nn+(s<k?"-"+s:"")+".jpg";}
 function mountDeck(el,h,startAt){
   var N=DECK[h]||0,i=Math.min(Math.max(1,startAt||1),N),s=0,tok=0;
