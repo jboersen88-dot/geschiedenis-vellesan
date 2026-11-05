@@ -17,28 +17,14 @@ var APPS={"jaar-2/mavo/hoofdstuk-1":[["Lesapp","jaar-2_mavo_hoofdstuk-1.html"]],
   "jaar-4/hoofdstuk-1-verdien-je-genoeg":[["Lesapp","jaar-4_hoofdstuk-1-verdien-je-genoeg.html"]],"jaar-4/hoofdstuk-2-geld-moet-rollen":[["Lesapp","jaar-4_hoofdstuk-2-geld-moet-rollen.html"]],"jaar-4/hoofdstuk-3":[["Lesapp","jaar-4_hoofdstuk-3.html"]]};
 /* pagina's met een eigen volledige leeromgeving (zelfde opzet als de Geschiedenis-boekjes): [link, titel, tekst] */
 var LEEROMG={"jaar-4/se-h1-h2-h8":["se3/app.html","Open de leeromgeving SE3","Dia's per paragraaf, begrippen, leerdoelen, rekenen en formules, quiz, games en een toets op maat die de AI voor je nakijkt. Werkt ook op je telefoon en iPad."]};
-/* hoofdstukken met een eigen pagina op volle breedte (opzet van Geschiedenis boekje 1); vereist een lesapp (APPS) en oefentoetsen (TOETSEN).
-   Teksten en aantallen komen uit de lesapp van het hoofdstuk. img = AI-illustraties van de docent in img/<map>/, de eerste staat op de kaart;
-   q = kernvragen; c = kleur op de kaart, k = kleur op de lichte band. */
+/* hoofdstukken met een eigen pagina op volle breedte (opzet van Geschiedenis boekje 1): hoofdstukpagina, per paragraaf een leeromgeving
+   (h.html?p=...&par=2.1) en een oefenomgeving. De inhoud staat in <map>/data.json en <map>/oefen.html, gemaakt door bouw-oefen.py
+   uit de oude lesapp. Hier alleen de vormgeving: hero, kaartbeeld (als het niet het eerste beeld is) en kleuren [op de kaart, op de lichte band]. */
 var RIJK={"jaar-2/mavo/hoofdstuk-2":{map:"j2h2",kop:["Jij en je ","geld"],hero:"begroting",
   alt:"Een vrouw maakt 's avonds aan een bureau een jaarbegroting, met rekenmachine, bonnetjes en een laptop met bankapp",
   intro:"Inkomsten en uitgaven, sparen, lenen en verzekeren: vier paragrafen om slim met je geld om te gaan.",
-  par:[
-   {id:"2.1",t:"Jouw inkomen en uitgaven",c:"var(--coral)",k:"var(--berry)",sum:"Soorten inkomen, drie groepen uitgaven, van week naar maand rekenen en een begroting maken.",tags:["12 begrippen","3 filmpjes","Quiz"],
-    q:["Welke drie soorten inkomen zijn er?","Wat is het verschil tussen loon en winst?","Wat is een uitkering en wie geeft die?","Welke drie groepen uitgaven zijn er?"],
-    img:[["maandlasten","Vaste lasten en rekeningen op een rij"],["begroting","Een begroting maken voor het hele jaar"],["boodschappen","Uitgaven aan de dagelijkse boodschappen"]]},
-   {id:"2.2",t:"Met geld kun je meer",c:"#7fd4c9",k:"var(--teal)",sum:"De drie geldfuncties, waarom je spaart, wat rente is en hoe je de rente op je spaarrekening berekent.",tags:["9 begrippen","3 filmpjes","Quiz"],
-    q:["Welke drie functies heeft geld?","Waarom sparen mensen geld? Noem drie redenen en leg deze uit.","Waarom krijg je rente van de bank?","Hoe bereken je de rente over een spaarsaldo in procenten?"],
-    img:[["bankapp","Je spaargeld bijhouden in de bankapp"],["sparen","Sparen voor iets wat je graag wilt kopen"]]},
-   {id:"2.3",t:"Geld te kort?",c:"#f2c46b",k:"var(--ochre)",sum:"Waarom mensen lenen, lenen bij de bank, de maandtermijn, de kosten van een lening en percentages berekenen.",tags:["6 begrippen","2 filmpjes","Quiz"],
-    q:["Waarom lenen mensen geld? Noem twee redenen.","Wat moet je altijd bedenken vóórdat je geld leent?","Wat is aflossing bij een lening?","Wat is de maandtermijn bij een lening?"],
-    img:[["lenen-vergelijken","Geleend bedrag tegenover de totale terugbetaling, met rente"],["lening","Een lening: elke maand aflossing plus rente"]]},
-   {id:"2.4",t:"Voor alle zekerheid",c:"#b9d6cb",k:"var(--green)",sum:"Waarom je je verzekert, verplichte en vrijwillige verzekeringen, premie, polis en eigen risico.",tags:["10 begrippen","Quiz"],
-    q:["Wat betekent het om je te verzekeren?","Waarom sluiten mensen verzekeringen af?","Wat betekent risico bij verzekeren?","Welke verzekeringen zijn verplicht in Nederland?"],
-    img:[["verzekeringspapieren","De papieren van je verzekeringen"],["polis-tekenen","Een verzekering afsluiten"],["schade-uitkering","Schade vergoed: het eigen risico gaat eraf"],["fiets-op-slot","Je fiets op slot, tegen diefstal"]]}]}};
-var TOETSEN={"jaar-2/mavo/hoofdstuk-2":[["Hoofdstuk 2 · Jij en je geld (§2.1 en §2.2)","h2"]]};
-function toetsen(pad){var T=TOETSEN[pad];if(!T)return "";
-  return '<section class="rblk" id="oefentoetsen" style="padding-top:0"><div class="wrap"><div class="rfeat io"><div><div class="eyebrow">Oefentoetsen</div><h2>Test jezelf met een oefentoets.</h2><p>Kies een variant (1, 2 of 3 sterren), download het Word-bestand en vul het in op je iPad of laptop: tik op een blauw vak en typ je antwoord.</p></div><div>'+T.map(function(g){return '<h3>'+esc(g[0])+'</h3><div class="files">'+[1,2,3].map(function(n){var u="oefentoetsen/oefentoets-"+g[1]+"-"+n+"-ster.docx";return '<a class="file" href="'+u+'" download="Oefentoets '+g[1].toUpperCase()+' '+n+'-ster.docx"><span class="ic doc">'+"★".repeat(n)+'</span><span>'+n+'-ster oefentoets<small>Word-bestand · download en vul in op je iPad of laptop</small></span></a>';}).join("")+'</div>';}).join("")+'</div></div></div></section>';}
+  kaart:{"2.2":"bankapp"},/* sparen.jpg is een drieluik */
+  kleur:{"2.1":["var(--coral)","var(--berry)"],"2.2":["#7fd4c9","var(--teal)"],"2.3":["#f2c46b","var(--ochre)"],"2.4":["#b9d6cb","var(--green)"]}}};
 var NAAM={"jaar-2/mavo/kopie-van-hoofdstuk-1":"Hoofdstuk 1 · lesstof en PowerPoints"};
 
 var esc=function(t){return String(t).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});};
@@ -95,30 +81,73 @@ function niveau(j){
 
 /* ---------- hoofdstuk op volle breedte (RIJK) ---------- */
 function rijk(p,j,n,c){
-  var app=APPS[p.pad][0],bn=jaarUrl(j,n),t=titel(p),src=function(f){return "img/"+c.map+"/"+f+".jpg";},ar=function(x){return "par-"+x.id.replace(".","-");},
-  golf=function(m){return '<svg class="rwave'+m+'" viewBox="0 0 1200 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0,36 C200,70 400,4 600,30 C800,56 1000,12 1200,40 L1200,70 L0,70 Z"/></svg>';},
-  kaart=function(x,i){return '<a class="rchap io" style="--c:'+x.c+';--d:'+i+'" href="#'+ar(x)+'"><img src="'+src(x.img[0][0])+'" alt="" loading="lazy"><span class="glare"></span><span class="num">'+x.id+'</span><div class="body"><span class="tag">Paragraaf '+x.id+'</span><h3>'+esc(x.t)+'</h3><p>'+esc(x.sum)+'</p><div class="links">'+x.tags.map(function(g){return '<span>'+esc(g)+'</span>';}).join("")+'</div></div></a>';},
-  /* de laatste band heeft de gewone achtergrond: de golf eronder loopt daar naadloos in */
-  band=function(x,i){return '<section class="rpar'+((c.par.length-1-i)%2?" alt":"")+(i%2?" flip":"")+'" id="'+ar(x)+'" style="--k:'+x.k+'"><div class="wrap rpar-in"><div class="io"><div class="rnum">'+x.id+'</div><div class="eyebrow">Paragraaf '+x.id+'</div><h2>'+esc(x.t)+'</h2><p class="rpar-sum">'+esc(x.sum)+'</p><div class="rqh">Kun jij dit beantwoorden?</div><ul class="rq">'+x.q.map(function(q){return '<li>'+esc(q)+'</li>';}).join("")+'</ul><div class="rtags">'+x.tags.map(function(g){return '<span>'+esc(g)+'</span>';}).join("")+'</div><a class="rbtn primary" href="#lesapp">Oefen in de lesapp <span class="arr">→</span></a></div><div class="rgal n'+x.img.length+' io" style="--d:1">'+x.img.map(function(b){return '<a href="'+src(b[0])+'" target="_blank" rel="noopener"><img src="'+src(b[0])+'" alt="" loading="lazy"><span>'+esc(b[1])+'</span></a>';}).join("")+'</div></div></section>';};
+  fetch(c.map+"/data.json").then(function(r){return r.json();}).then(function(D){
+    var x=D.pars.filter(function(y){return y.id===Q.get("par");})[0];
+    document.body.className="rijk";
+    if(x)paragraaf(p,j,n,c,D,x);else hoofdpagina(p,j,n,c,D);
+    rijkGedrag(D,!!x);
+  }).catch(function(){document.body.innerHTML='<main class="wrap"><p>De pagina kon niet laden. Probeer het opnieuw.</p></main>';});}
+function rUrl(p,id){return "h.html?p="+encodeURIComponent(p.pad)+(id?"&par="+id:"");}
+function rSrc(c,f){return "img/"+c.map+"/"+f+".jpg";}
+/* voortgang staat onder dezelfde sleutel als in de oefenomgeving, zodat afvinken op beide plekken meetelt */
+function rStaat(D){try{return JSON.parse(localStorage.getItem(D.key))||{};}catch(e){return {};}}
+function rTel(D,x){var g=rStaat(D).goals||{};return x.gi.filter(function(i){return g[x.id+"-"+i];}).length;}
+function rTags(D,x){var nb=D.cards.filter(function(k){return k[0]===x.id;}).length,nf=D.films.filter(function(f){return f.par===x.id;}).length,d=rTel(D,x);
+  return [nb+" begrippen"].concat(nf?[nf+" filmpje"+(nf>1?"s":"")]:[]).concat([(d?d+" van ":"")+x.g.length+" leerdoelen"]);}
+function rSpans(a){return a.map(function(g){return '<span>'+esc(g)+'</span>';}).join("");}
+function rNav(links,cta){return '<header class="rnav" id="rnav"><div class="wrap"><a class="brand" href="../index.html" aria-label="Meneer Boersen, naar de homepage"><b class="bfull">Meneer <span>Boersen</span></b><b class="bshort" aria-hidden="true">M<span>B</span></b></a><nav class="rlinks" aria-label="Menu">'+links.map(function(l){return '<a href="'+l[0]+'"'+(l[2]?' aria-current="page"':'')+'>'+esc(l[1])+'</a>';}).join("")+'<a class="cta" href="'+cta+'">Oefenomgeving</a></nav></div></header>';}
+function rGolf(m){return '<svg class="rwave'+m+'" viewBox="0 0 1200 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0,36 C200,70 400,4 600,30 C800,56 1000,12 1200,40 L1200,70 L0,70 Z"/></svg>';}
+function rVoet(j,n){var w=esc(j.titel.toLowerCase()+" "+n.titel.toLowerCase());return '<footer class="rfoot"><div class="wrap"><span>Meneer Boersen · Vellesan College · Economie '+w+'</span><span>Beelden: AI-illustraties, gemaakt door de docent</span></div></footer>';}
+function rGal(c,x){return '<div class="rgal n'+x.imgs.length+' io" style="--d:1">'+x.imgs.map(function(b){return '<a href="'+rSrc(c,b[0])+'" target="_blank" rel="noopener"><img src="'+rSrc(c,b[0])+'" alt="" loading="lazy"><span>'+esc(b[1])+'</span></a>';}).join("")+'</div>';}
+
+function hoofdpagina(p,j,n,c,D){
+  var t=titel(p),bn=jaarUrl(j,n),oef=D.oefen,w=esc(j.titel.toLowerCase()+" "+n.titel.toLowerCase());
+  var kaart=function(x,i){return '<a class="rchap io" style="--c:'+c.kleur[x.id][0]+';--d:'+i+'" href="'+rUrl(p,x.id)+'"><img src="'+rSrc(c,(c.kaart||{})[x.id]||x.imgs[0][0])+'" alt="" loading="lazy"><span class="glare"></span><span class="num">'+x.id+'</span><div class="body"><span class="tag">Paragraaf '+x.id+'</span><h3>'+esc(x.t)+'</h3><p>'+esc(x.sum)+'</p><div class="links">'+rSpans(rTags(D,x))+'</div></div></a>';};
+  var tegels=[["#lab/begrippen","Begrippen","Flash cards en Leg uit: oefen alle "+D.cards.length+" begrippen van dit hoofdstuk."],["#lab/reken","Rekenen","Begroting, saldo, rente, lening en procenten, met de juiste formule."],["#lab/games","Quiz en games","Een snelle quiz, Swipe & Scoor en begrippen-memory."],["#toets","Oefentoetsen","Met klok en nakijkblad, of als Word-bestand voor je iPad."]];
   document.title=c.kop.join("")+" · Economie "+naam(j,n);
-  document.body.className="rijk";
-  document.body.innerHTML='<header class="rnav" id="rnav"><div class="wrap"><a class="brand" href="../index.html" aria-label="Meneer Boersen, naar de homepage"><b class="bfull">Meneer <span>Boersen</span></b><b class="bshort" aria-hidden="true">M<span>B</span></b></a><nav class="rlinks" aria-label="Menu"><a href="index.html">Economie</a><a href="'+bn+'">'+esc(j.titel)+'</a><a class="cta" href="#lesapp">Lesapp</a></nav></div></header>'
-  +'<section class="rhero"><div class="rhero-img" id="rimg" style="background-image:url('+src(c.hero)+')" role="img" aria-label="'+esc(c.alt)+'"></div><div class="wrap rhero-in"><div class="eyebrow rv" style="--i:0;color:var(--coral)">Economie · '+esc(naam(j,n))+' · '+esc(t.toLowerCase())+'</div><h1 class="rv" style="--i:1">'+esc(c.kop[0])+'<em>'+esc(c.kop[1])+'</em></h1><p class="rv" style="--i:2">'+esc(c.intro)+'</p><div class="rbtns rv" style="--i:3"><a class="rbtn primary" href="#lesapp">Start de lesapp <span class="arr">→</span></a><a class="rbtn ghost" href="#oefentoetsen">Maak een oefentoets</a></div></div><div class="rscroll" aria-hidden="true"></div></section>'
-  +'<section class="rblk" id="paragrafen"><div class="wrap"><div class="rhead io"><div><div class="eyebrow">'+esc(t)+' · '+esc(c.kop.join(""))+'</div><h2>Vier paragrafen over jouw geld.</h2></div><p>In de lesapp staan de begrippen, filmpjes, oefenvragen en leerdoelen van alle vier.</p></div><div class="rchaps">'+c.par.map(kaart).join("")+'</div></div></section>'
-  +c.par.map(band).join("")
-  +golf(" top")+'<section class="rblk rapp" id="lesapp"><div class="wrap"><div class="rhead io"><div><div class="eyebrow">Lesapp</div><h2>Leer, oefen en test jezelf.</h2></div><p>Lesstof, oefenlab, oefentoetsen en filmpjes van '+esc(t.toLowerCase())+' in één app. Je voortgang wordt op dit apparaat bewaard.</p></div><div class="rframe io"><iframe src="apps/'+app[1]+'" title="'+esc(app[0]+" "+t)+'" loading="lazy"></iframe></div><div class="rbtns"><a class="rbtn ghost" href="apps/'+app[1]+'" target="_blank" rel="noopener">Open op volledig scherm</a></div></div></section>'+golf("")
-  +toetsen(p.pad)
-  +'<section class="rblk rend"><div class="wrap"><div class="eyebrow" style="color:var(--coral)">Klaar met dit hoofdstuk?</div><h2>Verder met Economie.</h2><p>Kies een ander hoofdstuk van '+esc(j.titel.toLowerCase()+" "+n.titel.toLowerCase())+' of ga terug naar het overzicht.</p><div class="rbtns"><a class="rbtn primary" href="'+bn+'">Alle hoofdstukken <span class="arr">→</span></a><a class="rbtn ghost" href="index.html">Ander jaar</a></div></div></section>'
-  +'<footer class="rfoot"><div class="wrap"><span>Meneer Boersen · Vellesan College · Economie '+esc(j.titel.toLowerCase()+" "+n.titel.toLowerCase())+'</span><span>Beelden: AI-illustraties, gemaakt door de docent</span></div></footer>';
+  document.body.innerHTML=rNav([["index.html","Economie"],[bn,j.titel]],oef)
+  +'<section class="rhero"><div class="rhero-img" id="rimg" style="background-image:url('+rSrc(c,c.hero)+')" role="img" aria-label="'+esc(c.alt)+'"></div><div class="wrap rhero-in"><div class="eyebrow rv" style="--i:0;color:var(--coral)">Economie · '+esc(naam(j,n))+' · '+esc(t.toLowerCase())+'</div><h1 class="rv" style="--i:1">'+esc(c.kop[0])+'<em>'+esc(c.kop[1])+'</em></h1><p class="rv" style="--i:2">'+esc(c.intro)+'</p><div class="rbtns rv" style="--i:3"><a class="rbtn primary" href="'+rUrl(p,D.pars[0].id)+'">Begin met '+D.pars[0].id+' <span class="arr">→</span></a><a class="rbtn ghost" href="'+oef+'">Naar de oefenomgeving</a></div></div><div class="rscroll" aria-hidden="true"></div></section>'
+  +'<section class="rblk" id="paragrafen"><div class="wrap"><div class="rhead io"><div><div class="eyebrow">'+esc(t)+' · '+esc(c.kop.join(""))+'</div><h2>Vier paragrafen over jouw geld.</h2></div><p>Open een paragraaf voor de PowerPoint, de filmpjes, de begrippen en je leerdoelen. Oefenen doe je daarna in de oefenomgeving.</p></div><div class="rchaps">'+D.pars.map(kaart).join("")+'</div></div></section>'
+  +rGolf(" top")+'<section class="rblk rapp" id="oefenen"><div class="wrap"><div class="rhead io"><div><div class="eyebrow">Oefenomgeving</div><h2>Oefen tot je het kunt.</h2></div><p>Alles om hoofdstuk 2 te oefenen op één plek. Je voortgang wordt op dit apparaat bewaard.</p></div><div class="roef">'
+  +tegels.map(function(g,i){return '<a class="io" style="--d:'+i+'" href="'+oef+g[0]+'"><b>'+(i+1)+'</b><h3>'+esc(g[1])+'</h3><p>'+esc(g[2])+'</p><span class="arr">→</span></a>';}).join("")
+  +'</div><div class="rbtns" style="justify-content:center;margin-top:30px"><a class="rbtn primary" href="'+oef+'">Naar de oefenomgeving <span class="arr">→</span></a></div></div></section>'+rGolf("")
+  +'<section class="rblk rend"><div class="wrap"><div class="eyebrow" style="color:var(--coral)">Klaar met dit hoofdstuk?</div><h2>Verder met Economie.</h2><p>Kies een ander hoofdstuk van '+w+' of ga terug naar het overzicht.</p><div class="rbtns"><a class="rbtn primary" href="'+bn+'">Alle hoofdstukken <span class="arr">→</span></a><a class="rbtn ghost" href="index.html">Ander jaar</a></div></div></section>'+rVoet(j,n);}
+
+/* leeromgeving: alles om de stof van één paragraaf te leren; oefenen gebeurt in de oefenomgeving */
+function paragraaf(p,j,n,c,D,x){
+  var t=titel(p),oef=D.oefen,k=c.kleur[x.id][1],i=D.pars.indexOf(x),vor=D.pars[i-1],na=D.pars[i+1],S=rStaat(D),go=S.goals||{},qs=S.qs||{},
+  beg=D.cards.filter(function(b){return b[0]===x.id;}),films=D.films.filter(function(f){return f.par===x.id;}),d=rTel(D,x),
+  doel=function(f){return f.lab==="reken"?"#lab/reken/"+f.mode:"#lab/quiz/"+(f.qpar||x.id);},
+  film=function(f){var id=f.yt||f.film;return '<div class="rfilm io"><div class="yt"><img src="'+(f.yt?"https://i.ytimg.com/vi/"+esc(id)+"/hqdefault.jpg":"https://drive.google.com/thumbnail?id="+esc(id)+"&sz=w1200")+'" alt="" loading="lazy" onerror="this.remove()"><button '+(f.yt?'data-yt':'data-film')+'="'+esc(id)+'" aria-label="Speel film af: '+esc(f.t)+'"><span></span></button></div><div class="rfilm-tx"><div class="eyebrow">'+esc(f.k)+'</div><h3>'+esc(f.t)+'</h3><p>'+esc(f.d)+'</p><a class="rlink" href="'+oef+doel(f)+'">'+esc(f.btn)+' →</a></div></div>';},
+  mat=x.x.map(function(m){var M=D.mat[m];return M[1].map(function(l){return '<a class="file" href="https://drive.google.com/file/d/'+esc(l[1])+'/view" target="_blank" rel="noopener"><span class="ic '+(/powerpoint/i.test(l[0])?"ppt\">PPT":"doc\">DOC")+'</span><span>'+esc(M[0])+'<small>'+esc(l[0])+' · opent in Google Drive</small></span></a>';}).join("");}).join("");
+  document.title=x.id+" "+x.t+" · Leeromgeving · Economie";
+  document.body.innerHTML=rNav([[rUrl(p),t],[rUrl(p,x.id),"Leeromgeving",1]],oef)
+  /* de band van de paragraaf, zoals op de hoofdstukpagina */
+  +'<section class="rpar rtop" style="--k:'+k+'"><div class="wrap"><div class="rpills"><div class="eyebrow">Leeromgeving · '+esc(t)+' · '+esc(c.kop.join(""))+'</div><nav aria-label="Paragrafen">'+D.pars.map(function(y){return '<a href="'+rUrl(p,y.id)+'"'+(y===x?' aria-current="page"':'')+' style="--k:'+c.kleur[y.id][1]+'">'+y.id+'<span> '+esc(y.t)+'</span></a>';}).join("")+'</nav></div>'
+  +'<div class="rpar-in"><div class="io"><div class="rnum">'+x.id+'</div><div class="eyebrow">Paragraaf '+x.id+'</div><h1>'+esc(x.t)+'</h1><p class="rpar-sum">'+esc(x.sum)+'</p><div class="rqh">Kun jij dit beantwoorden?</div><ul class="rq">'+x.q.slice(0,4).map(function(q){return '<li>'+esc(q)+'</li>';}).join("")+'</ul><div class="rtags">'+rSpans(rTags(D,x))+'</div><div class="rbtns"><a class="rbtn primary" href="'+oef+'#lab/quiz/'+x.id+'">Oefen '+x.id+' <span class="arr">→</span></a><a class="rbtn line" href="#lesstof">Naar de lesstof ↓</a></div></div>'+rGal(c,x)+'</div></div></section>'
+  +'<section class="rblk" id="lesstof"><div class="wrap"><div class="rhead io"><div><div class="eyebrow">Lesstof</div><h2>De PowerPoint van '+x.id+'.</h2></div><p>Blader door de dia\'s. Wil je hem groter? Open hem in Google Drive.</p></div><div class="rppt io"><iframe src="https://drive.google.com/file/d/'+esc(x.file)+'/preview" allow="autoplay" loading="lazy" title="PowerPoint '+x.id+' '+esc(x.t)+'"></iframe></div><div class="files" style="margin-top:14px"><a class="file" href="https://drive.google.com/file/d/'+esc(x.file)+'/view" target="_blank" rel="noopener"><span class="ic ppt">PPT</span><span>PowerPoint '+x.id+'<small>Open in Google Drive</small></span></a>'+mat+'</div></div></section>'
+  +(films.length?'<section class="rblk ralt"><div class="wrap"><div class="rhead io"><div><div class="eyebrow">Filmpjes</div><h2>Kijk en luister.</h2></div><p>Bekijk de uitleg en oefen daarna meteen hetzelfde in de oefenomgeving.</p></div><div class="rfilms">'+films.map(film).join("")+'</div></div></section>':'')
+  +'<section class="rblk"><div class="wrap"><div class="rhead io"><div><div class="eyebrow">Begrippen</div><h2>'+beg.length+' begrippen om te kennen.</h2></div><p>Lees ze goed. Kun je ze uitleggen zonder te kijken? Oefen ze met flash cards.</p></div><div class="rbeg">'+beg.map(function(b,m){return '<div class="io" style="--k:'+k+';--d:'+(m%4)+'"><h3>'+esc(b[1])+'</h3><p>'+esc(b[2])+'</p>'+(b[3]?'<small><b>Voorbeeld</b> '+esc(b[3])+'</small>':'')+'</div>';}).join("")+'</div><div class="rbtns" style="margin-top:22px"><a class="rbtn primary" href="'+oef+'#lab/begrippen/'+x.id+'">Oefen de begrippen <span class="arr">→</span></a></div></div></section>'
+  +'<section class="rblk ralt" id="leerdoelen"><div class="wrap"><div class="rhead io"><div><div class="eyebrow">Leerdoelen</div><h2>Wat kun je na '+x.id+'?</h2></div><p>Vink af wat je beheerst. Je voortgang telt ook mee in de oefenomgeving.</p></div><div class="rdoel">'
+  +'<div class="rcard io"><div class="rbar"><i id="rbar" style="width:'+(d/x.g.length*100)+'%;background:'+k+'"></i></div><p class="rbar-tx" id="rbartx">'+d+' van '+x.g.length+' leerdoelen behaald</p><ul class="kunnen">'+x.g.map(function(g,m){var key=x.id+"-"+x.gi[m],af=!!go[key];return '<li'+(af?' class="af"':'')+'><input type="checkbox" id="g'+m+'" data-goal="'+key+'"'+(af?" checked":"")+'><label for="g'+m+'">'+esc(g)+'</label></li>';}).join("")+'</ul></div>'
+  +'<div class="rcard io" style="--d:1"><h3>Kun jij dit beantwoorden?</h3><p class="rbar-tx">Tik op een vraag als je het antwoord weet.</p><div class="rvragen">'+x.q.map(function(q,m){var key=x.id+"-"+m;return '<button class="rvraag'+(qs[key]?" on":"")+'" data-vraag="'+key+'" aria-pressed="'+!!qs[key]+'"><i aria-hidden="true"></i>'+esc(q)+'</button>';}).join("")+'</div></div></div></div></section>'
+  +'<section class="rblk rend"><div class="wrap"><div class="eyebrow" style="color:var(--coral)">Klaar met '+x.id+'?</div><h2>Ga oefenen.</h2><p>Oefen de begrippen en sommen van '+x.id+' in de oefenomgeving'+(na?', of ga door met '+na.id+' '+esc(na.t)+'.':'.')+'</p><div class="rbtns"><a class="rbtn primary" href="'+oef+'#lab/quiz/'+x.id+'">Naar de oefenomgeving <span class="arr">→</span></a>'+(na?'<a class="rbtn ghost" href="'+rUrl(p,na.id)+'">Volgende: '+na.id+' →</a>':'<a class="rbtn ghost" href="'+rUrl(p)+'">Terug naar het hoofdstuk</a>')+'</div>'+(vor?'<p style="margin:22px auto 0"><a class="rterug" href="'+rUrl(p,vor.id)+'">← Vorige: '+vor.id+' '+esc(vor.t)+'</a></p>':'')+'</div></section>'+rVoet(j,n);}
+
+function rijkGedrag(D,vast){
   var RM=matchMedia("(prefers-reduced-motion: reduce)").matches,nav=$("rnav"),img=$("rimg");
-  function onScroll(){nav.classList.toggle("solid",scrollY>40);if(!RM&&scrollY<1200)img.style.setProperty("--py",scrollY*.28+"px");}
+  function onScroll(){nav.classList.toggle("solid",vast||scrollY>40);if(img&&!RM&&scrollY<1200)img.style.setProperty("--py",scrollY*.28+"px");}
   addEventListener("scroll",onScroll,{passive:true});onScroll();
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}});},{threshold:.18,rootMargin:"0px 0px -6% 0px"});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}});},{threshold:.12,rootMargin:"0px 0px -6% 0px"});
   document.querySelectorAll(".io").forEach(function(el){io.observe(el);});
   /* tilt op de paragraafkaarten (alleen met muis) */
   if(!RM&&matchMedia("(hover:hover) and (pointer:fine)").matches)document.querySelectorAll(".rchap").forEach(function(k){
     k.addEventListener("pointermove",function(e){var r=k.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;k.classList.add("tilting");k.style.setProperty("--ry",((x-.5)*7)+"deg");k.style.setProperty("--rx",((.5-y)*6)+"deg");k.style.setProperty("--gx",(x*100)+"%");k.style.setProperty("--gy",(y*100)+"%");});
-    k.addEventListener("pointerleave",function(){k.classList.remove("tilting");k.style.setProperty("--ry","0deg");k.style.setProperty("--rx","0deg");});});}
+    k.addEventListener("pointerleave",function(){k.classList.remove("tilting");k.style.setProperty("--ry","0deg");k.style.setProperty("--rx","0deg");});});
+  /* leerdoelen en vragen afvinken: lezen en schrijven in dezelfde opslag als de oefenomgeving */
+  function zet(veld,key,aan){var S=rStaat(D);S[veld]=S[veld]||{};if(aan)S[veld][key]=1;else delete S[veld][key];try{localStorage.setItem(D.key,JSON.stringify(S));}catch(e){}}
+  document.addEventListener("change",function(e){var c=e.target.closest("[data-goal]");if(!c)return;zet("goals",c.dataset.goal,c.checked);c.closest("li").classList.toggle("af",c.checked);
+    var l=document.querySelectorAll("[data-goal]"),a=document.querySelectorAll("[data-goal]:checked").length;$("rbar").style.width=(a/l.length*100)+"%";$("rbartx").textContent=a+" van "+l.length+" leerdoelen behaald";});
+  document.addEventListener("click",function(e){var b=e.target.closest("[data-vraag]");if(!b)return;var aan=!b.classList.contains("on");zet("qs",b.dataset.vraag,aan);b.classList.toggle("on",aan);b.setAttribute("aria-pressed",aan);});}
 
 /* ---------- hoofdstuk ---------- */
 var K;try{K=JSON.parse(localStorage.getItem("gv-eco-kunnen"))||{};}catch(e){K={};}
@@ -179,6 +208,7 @@ function sectie(s,pad,si){var h="",kop=0,i=0;
 document.addEventListener("click",function(e){
   var d=e.target.closest("[data-drive]");if(d){var v=$("viewer");$("vtitel").textContent=d.dataset.naam;$("vframe").src="https://drive.google.com/file/d/"+d.dataset.drive+"/preview";$("vopen").href="https://drive.google.com/file/d/"+d.dataset.drive+"/view";v.showModal();return;}
   if(e.target.closest("#vdicht")||e.target.id==="viewer"){$("viewer").close();return;}
+  var fm=e.target.closest("[data-film]");if(fm){fm.parentNode.innerHTML='<iframe src="https://drive.google.com/file/d/'+fm.dataset.film+'/preview" title="Film" allow="autoplay; fullscreen" allowfullscreen></iframe>';return;}
   var y=e.target.closest("[data-yt]");if(y){y.parentNode.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+y.dataset.yt+'?autoplay=1&rel=0" title="Film" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>';}
 });
 document.addEventListener("close",function(e){if(e.target.id==="viewer")$("vframe").src="about:blank";},true);
