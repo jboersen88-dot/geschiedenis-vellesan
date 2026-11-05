@@ -1,0 +1,210 @@
+{
+ "key": "eco-j3h0-v1",
+ "groepen": [
+  {
+   "t": "Rekenen met procenten",
+   "sub": "De drie formules die je het vaakst gebruikt. Leer ze uit je hoofd.",
+   "f": [
+    {
+     "id": "euro",
+     "naam": "Van procenten naar euro's",
+     "f": "(percentage : 100) × totaal",
+     "w": "Je weet het percentage en het totaal, en je zoekt een bedrag of een aantal.",
+     "vb": "20% korting op een hoodie van €79,95: (20 : 100) × 79,95 = €15,99 korting."
+    },
+    {
+     "id": "procent",
+     "naam": "Van euro's naar procenten",
+     "f": "(deel : geheel) × 100",
+     "w": "Je zoekt welk percentage een deel is van het geheel.",
+     "vb": "9 van de 26 leerlingen hebben een nieuwe telefoon: (9 : 26) × 100 = 34,6%."
+    },
+    {
+     "id": "verandering",
+     "naam": "Stijging of daling in procenten",
+     "f": "(nieuw − oud) : oud × 100",
+     "w": "Iets wordt duurder of goedkoper en je zoekt met hoeveel procent.",
+     "vb": "Een telefoon was €480 en is nu €372 waard: (372 − 480) : 480 × 100 = −22,5%. De waarde is met 22,5% gedaald."
+    }
+   ]
+  },
+  {
+   "t": "Btw",
+   "sub": "Van de verkoopprijs zonder btw naar de prijs die de consument betaalt, en terug.",
+   "f": [
+    {
+     "id": "btw",
+     "naam": "Consumentenprijs berekenen",
+     "f": "verkoopprijs × 1,21",
+     "w": "Je weet de prijs zonder btw. Bij het hoge tarief (21%) doe je × 1,21, bij het lage tarief (9%) × 1,09.",
+     "vb": "Een fiets kost €400 zonder btw: 400 × 1,21 = €484 consumentenprijs."
+    },
+    {
+     "id": "exbtw",
+     "naam": "Prijs zonder btw berekenen",
+     "f": "consumentenprijs : 1,21",
+     "w": "Je weet de prijs met btw en je zoekt de prijs zonder btw. Bij 9% btw deel je door 1,09.",
+     "vb": "Een broodje kost €3,27 met 9% btw: 3,27 : 1,09 = €3,00 zonder btw."
+    }
+   ]
+  },
+  {
+   "t": "Je eigen bedrijf",
+   "sub": "Van verkoopprijs en omzet tot de winst die overblijft.",
+   "f": [
+    {
+     "id": "omzet",
+     "naam": "Omzet",
+     "f": "afzet × verkoopprijs",
+     "w": "De afzet is het aantal producten dat je verkoopt. De omzet is het geld dat daarvoor binnenkomt.",
+     "vb": "Je verkoopt 250 taarten van €12: 250 × 12 = €3.000 omzet."
+    },
+    {
+     "id": "bruto",
+     "naam": "Brutowinst",
+     "f": "omzet − inkoopwaarde",
+     "w": "De inkoopwaarde is wat je zelf voor de verkochte producten hebt betaald (inkoopprijs × afzet).",
+     "vb": "Omzet €3.000, inkoopprijs €5 per taart: 3.000 − (250 × 5) = €1.750 brutowinst."
+    },
+    {
+     "id": "netto",
+     "naam": "Nettowinst",
+     "f": "brutowinst − overige kosten",
+     "w": "Overige kosten zijn bijvoorbeeld huur, loon, energie en afschrijving.",
+     "vb": "Brutowinst €1.750, overige kosten €1.100: 1.750 − 1.100 = €650 nettowinst."
+    },
+    {
+     "id": "afschrijving",
+     "naam": "Afschrijving per jaar",
+     "f": "(aanschafprijs − restwaarde) : aantal jaren",
+     "w": "Een machine of bus wordt elk jaar minder waard. Dat bedrag reken je elk jaar als kosten.",
+     "vb": "Een oven van €6.000 met een restwaarde van €1.000 gaat 5 jaar mee: (6.000 − 1.000) : 5 = €1.000 per jaar."
+    },
+    {
+     "id": "reserveren",
+     "naam": "Reserveren per maand",
+     "f": "benodigd bedrag : aantal maanden",
+     "w": "Je spaart elke maand een vast bedrag voor iets wat je later moet betalen.",
+     "vb": "Over 5 jaar heb je €5.000 nodig voor een nieuwe oven: 5.000 : 60 maanden = €83,33 per maand."
+    }
+   ]
+  },
+  {
+   "t": "Geld op je rekening",
+   "sub": "Saldo en het omrekenen van week naar maand.",
+   "f": [
+    {
+     "id": "saldo",
+     "naam": "Nieuw saldo",
+     "f": "oud saldo + bij − af",
+     "w": "Bij komt erbij (bijvoorbeeld loon), af gaat eraf (bijvoorbeeld een betaling). Een negatief saldo is een tekort.",
+     "vb": "Oud saldo €245,60, €182,50 bij en €77,45 af: 245,60 + 182,50 − 77,45 = €350,65."
+    },
+    {
+     "id": "weekmaand",
+     "naam": "Van week naar maand",
+     "f": "weekbedrag × 52 : 12",
+     "w": "Een jaar heeft 52 weken en 12 maanden. Nooit × 4! Van maand naar week doe je × 12 : 52.",
+     "vb": "€35 per week: 35 × 52 : 12 = €151,67 per maand."
+    }
+   ]
+  }
+ ],
+ "afronden": "Rond geldbedragen af op 2 decimalen (€15,99) en procenten op 1 decimaal (34,6%). Schrijf altijd je berekening op.",
+ "films": [
+  {
+   "film": "1EN_S_SEca6zPTW3gp4XepzGCes8qs4-y",
+   "t": "De juiste formule kiezen",
+   "d": "Wanneer gebruik je welke van de drie procentformules? Met het schema dat je uit je hoofd moet kennen."
+  },
+  {
+   "film": "16N5D3Uk7W3dtGwI9u8KE6zPuN2LAx5CF",
+   "t": "Van week naar maand",
+   "d": "Keer 52 en gedeeld door 12. Niet keer 4!"
+  },
+  {
+   "film": "1OP3t9NLtG-gLZjJ7XZ2qOQZIvePWvvgV",
+   "t": "Consumentenprijs berekenen",
+   "d": "Van de verkoopprijs zonder btw naar de prijs die de consument betaalt."
+  },
+  {
+   "film": "1SmNfU66peB98zg73UlKBqw-x18GXQXxS",
+   "t": "Omzet, bruto- en nettowinst",
+   "d": "Van omzet naar de winst die je overhoudt."
+  },
+  {
+   "film": "1KdQINFxxpyh7JLHi9YqdycUH6Di-6WE8",
+   "t": "Nieuw saldo berekenen",
+   "d": "Oud saldo, wat erbij komt en wat eraf gaat."
+  }
+ ],
+ "ppt": [
+  "Belangrijkste formules van economie jaar 3",
+  "1BfwzQR-jrdiqJ1fIZyLTyFLJPyNtI4sO"
+ ],
+ "schema": [
+  "Schema: wanneer kies je welke formule?",
+  "1Mlka91YfDnrUah9UX4XF3tNlLlTRVC1Q"
+ ],
+ "mat": {
+  "ot": [
+   "Oefentoets rekenen",
+   [
+    [
+     "Oefentoets",
+     "1Zxar3pk3dV2ue3yQZPrfD7uEMShXDxxb"
+    ],
+    [
+     "Nakijkblad",
+     "1-NzDonKWiR9nj7WAhwIMndhX1c3vtFIb"
+    ]
+   ],
+   "Maak hem zonder hulp, je rekenmachine mag."
+  ],
+  "fo": [
+   "Rekenen met formules",
+   [
+    [
+     "Opgaven",
+     "1npvnjJVr8pFCEdOmF6VfoozyEsF7WB2l"
+    ],
+    [
+     "Nakijkblad",
+     "1HfOKRlDd_KQRkxSycX8E1n_X0c8oM91U"
+    ]
+   ]
+  ],
+  "b": [
+   "Rekentraining versie B",
+   [
+    [
+     "Opgaven",
+     "1EjTX9B_tIbX5WS-bM2xngh9UOV9IjDGG"
+    ],
+    [
+     "Met antwoorden",
+     "1AN99btxUfX1p8R3Wcqaua0orukX4UaLT"
+    ]
+   ]
+  ],
+  "c": [
+   "Rekentraining versie C",
+   [
+    [
+     "Opgaven",
+     "1aw1qPbt9LxJxkZvoOTSVFGunmkH2J0Sf"
+    ],
+    [
+     "Met antwoorden",
+     "1qdBe5QzZ2qA5PZHLPLheUghWfAl-68ID"
+    ]
+   ]
+  ]
+ },
+ "extra": [
+  "ot",
+  "fo",
+  "b",
+  "c"
+ ]
+}

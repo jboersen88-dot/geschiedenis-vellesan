@@ -67,3 +67,5 @@ Zet de bestanden als `NN-S.jpg` in `slides/H4/` en print de regel voor `STEPS`. 
 **Economie jaar 2 H2** (`economie/j2h2/slides/<id>/`, id 2.1 … 2.4): zelfde werkwijze; het aantal dia's staat in `economie/j2h2/slides/deck.json` en de klikstappen in `steps.json`. `python3 -I economie/bouw-oefen.py j2h2` zet ze in `economie/j2h2/data.json`, de leeromgeving (`economie.js`, `rDeck`) toont ze. De PowerPoints zijn de Drive-bestanden uit de lesapp (`file` per paragraaf). Op 2026-11-05 gaf PowerPoint na de eerste export -9074 voor alle volgende bestanden; na een herstart van PowerPoint lukten ze allemaal.
 
 **Economie jaar 2 H1** (`economie/j2h1/slides/<id>/`, id 1.1 … 1.4): zelfde werkwijze als H2 (bestandsnamen K11, K11s … in `slides-export`); op 2026-11-05 exporteerden alle acht bestanden in één keer, zonder -9074.
+
+**Economie jaar 3 H1 en H2** (`economie/j3h1/slides/1.x`, `economie/j3h2/slides/2.x`): bestandsnamen L11 … L24 in `slides-export`; alles exporteerde in één keer. Dia's over de lesplanning (Deze les, regels, huiswerk) zijn na `plaats` weggehaald en de rest is opnieuw genummerd (lijst `weg` in `economie/bouw-pagina.py`).
