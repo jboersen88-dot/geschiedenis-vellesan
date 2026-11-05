@@ -1,3 +1,9 @@
+## 2026-11-05 · Economie jaar 2 mavo hoofdstuk 2: pagina op volle breedte, in de opzet van boekje 1
+
+- **Wat**: `economie/h.html?p=jaar-2/mavo/hoofdstuk-2` had nog de Google Sites-opmaak (smalle kolom met kaarten, kleine hero). Nu dezelfde opzet als `boekje-1.html`: vaste nav, hero over het hele scherm met parallax (`begroting.jpg`), vier paragraafkaarten met foto en tilt, per paragraaf een band met kernvragen en een collage van de eigen beelden (om en om), de lesapp in een groene band met golven, de oefentoetsen en een slot. Teksten en aantallen (begrippen, filmpjes) komen uit de lesapp. Werkt in licht en donker en op mobiel.
+- **Code**: `RIJK` en `rijk()` in `economie/economie.js` (alleen hoofdstukken met een `RIJK`-regel krijgen deze pagina; alle andere hoofdstukken houden de oude opmaak), stijl onder `body.rijk` in `economie/economie.css`, Fraunces 900 en cursief in `economie/h.html`. De oude galerij (`beelden()`, `.gal`) is vervallen: de beelden staan nu in `RIJK`.
+- **Let op**: de Google Sites-tekst van dit hoofdstuk bestond alleen uit de kop en "Jij en je geld"; die staat nu in de hero.
+
 ## 2026-10-29 · Klikstappen voor alle PowerPoints: boekje 1 H1 en H3, Economie SE3 (8 paragrafen)
 
 - **Wat**: "volgende" gaat nu bij elke dia eerst door de animatiestappen en dan naar de volgende dia. Boekje 1: H1 (dia 14, 16, 18: 11 stappen), H3 (7 dia's, 41 stappen); H2 heeft geen animaties. Economie SE3: 1.1 (20 dia's, 159 stappen), 1.2 (8, 99), 1.3 (6, 61), 1.4 (5, 49), 2.1 (6, 46), 2.2 (9, 139), 2.3 (9, 126), 2.4 (6, 47). Dia's zonder animatie hebben geen stap-bestanden. Stappen 1280 px, JPG-kwaliteit 0,6; samen ± 45 MB.
