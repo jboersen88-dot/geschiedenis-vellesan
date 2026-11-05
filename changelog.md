@@ -1,3 +1,8 @@
+## 2026-11-05 · Economie: startpagina in de nieuwe opzet
+
+- **Startpagina** (`economie/index.html`): dezelfde opzet als de hoofdstukpagina's: hero op volle breedte (containerhaven), de drie jaren als grote fotokaarten (jaar 2 en 4 gaan meteen naar mavo, jaar 3 eerst naar de keuze van het niveau), een groene band "Leren en oefenen op één plek" met de hoofdstukken die een eigen leeromgeving hebben (uit `RIJK` en `LEEROMG`, dus nieuwe hoofdstukken komen er vanzelf bij) en een slotband naar Geschiedenis. Licht en donker, getest op 375, 820 en desktop.
+- **Klein**: de voet van een hoofdstukpagina noemt nu de juiste beeldbron (`beeld` in `RIJK`; H1: Unsplash). Jaar 4 heeft een andere foto, omdat de containerhaven nu de hero is.
+
 ## 2026-11-05 · Economie jaar 2 mavo H1 in de nieuwe opzet; oefenomgeving duidelijker
 
 - **H1 "Wat heb je nodig?"** (`h.html?p=jaar-2/mavo/hoofdstuk-1`) heeft nu dezelfde opzet als H2: hoofdstukpagina met vier paragraafkaarten, per paragraaf een leeromgeving (`&par=1.1` … `1.4`) met de PowerPoint als klikbare presentatie (44 dia's met klikstappen in `economie/j2h1/slides/`), de filmpjes en de kernvragen, en een oefenomgeving (`economie/j2h1/oefen.html`, uit de oude lesapp, met Edu-Racer). Foto's van Unsplash in `economie/img/j2h1/`. Voortgang in `h1-app-v1`, zoals in de oude lesapp.
