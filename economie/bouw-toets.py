@@ -17,6 +17,14 @@ CONFIG = {
         data="se3/bron/data.json",           # VERS: n, min, pts moeten kloppen met toetsen.json
         lab="app.html#lab", opg="Opgave", terug=("app.html#toets", "Terug naar de leeromgeving"),
     ),
+    # jaar 2 mavo H1: de twee Word-oefentoetsen (versie A en B, 40 minuten) met de antwoordenbladen van de docent; 15 meerkeuze + 8 opgaven
+    "j2h1": dict(
+        titel="Online oefentoets · Economie jaar 2 mavo · hoofdstuk 1",
+        key="eco-j2h1-toets-v1",
+        bron="j2h1/bron",
+        data="j2h1/bron/toetsen.json",       # VERS staat in hetzelfde bestand
+        lab="oefen.html#lab", opg="Opgave", rek="Opgaven", terug=("oefen.html#toets", "Terug naar de oefenomgeving"),
+    ),
     # jaar 2 mavo H2: de drie Word-oefentoetsen (1-, 2- en 3-ster) met de nakijkbladen van de docent; geen meerkeuze, alles als opgaven
     "j2h2": dict(
         titel="Online oefentoets · Economie jaar 2 mavo · hoofdstuk 2",
@@ -84,7 +92,7 @@ for blk in [k for k in B if k.startswith("mc") and B[k]]:
 toetsjs = ",".join('"%s":{"t":%s,"th":"%s","rk":"%s","sub":%s,"min":%d,"mc":B.%s,"open":%s,"rek":B.%s}' % (
     k, json.dumps(t.get("t", "Oefentoets %d" % t["n"]), ensure_ascii=False), t.get("th", ""), t.get("rk", ""), json.dumps(t.get("sub", ""), ensure_ascii=False),
     t["min"], t["mc"], ("B." + t["open"]) if t["open"] else "[]", t["rek"]) for k, t in T.items())
-data = "var OPG=%s,LAB=%s;\n" % (json.dumps(C["opg"]), json.dumps(C["lab"])) + "var B=" + json.dumps(B, ensure_ascii=False, separators=(",", ":")) + ";\nwindow.TOETSEN={" + toetsjs + "};"
+data = "var OPG=%s,LAB=%s,REK=%s;\n" % (json.dumps(C["opg"]), json.dumps(C["lab"]), json.dumps(C.get("rek", "Rekenen"))) + "var B=" + json.dumps(B, ensure_ascii=False, separators=(",", ":")) + ";\nwindow.TOETSEN={" + toetsjs + "};"
 assert "</script" not in data
 
 s = rep(s, "<title>Online oefentoets · Geschiedenis</title>", "<title>%s</title>" % C["titel"])
@@ -168,13 +176,13 @@ function rekEx(r){var h='<div class="card q"><div class="n">'+OPG+' '+r.nr+' · 
   return h+'<div class="rk"><label class="muted" style="font-size:13.5px" for="rc-'+r.nr+'">Je berekening (mag ook op papier; hier wordt niets mee nagekeken)</label><textarea class="s" id="rc-'+r.nr+'" data-c="'+r.nr+'">'+esc((st[cur].calc||{})[r.nr]||"")+'</textarea></div></div>';}
 function exam(){
   var d=D[cur],a=st[cur],n=0;
-  var h='<div class="bar"><span class="t" id="clk">--:--</span><div class="pr"><i id="pr"></i></div><small id="pn"></small></div><div class="eyebrow" style="margin-top:18px">Oefentoets</div><h1>'+esc(d.t.replace("Oefentoets ","Toets "))+'</h1><p class="muted">'+maxPts(cur)+' punten · '+d.min+' minuten · zonder boek, een rekenmachine mag.'+(d.mc.length?' Meerkeuze: kies één antwoord.':'')+(d.open.length?' Open vragen: schrijf in hele zinnen.':'')+(d.mc.length?' Rekenen: vul alleen je antwoord in':' Bedragen en procenten: vul alleen je antwoord in')+', met een komma (bijvoorbeeld 12,50).'+(d.mc.length?'':' Uitlegvragen: schrijf in hele zinnen.')+'</p>'+(d.mc.length?'<h2>Deel A · Meerkeuze</h2>':'');
+  var h='<div class="bar"><span class="t" id="clk">--:--</span><div class="pr"><i id="pr"></i></div><small id="pn"></small></div><div class="eyebrow" style="margin-top:18px">Oefentoets</div><h1>'+esc(d.t.replace("Oefentoets ","Toets "))+'</h1><p class="muted">'+maxPts(cur)+' punten · '+d.min+' minuten · zonder boek, een rekenmachine mag.'+(d.mc.length?' Meerkeuze: kies één antwoord.':'')+(d.open.length?' Open vragen: schrijf in hele zinnen.':'')+(d.mc.length?' '+REK+': vul bij bedragen en procenten alleen je antwoord in':' Bedragen en procenten: vul alleen je antwoord in')+', met een komma (bijvoorbeeld 12,50).'+(d.mc.length?'':' Uitlegvragen: schrijf in hele zinnen.')+'</p>'+(d.mc.length?'<h2>Deel A · Meerkeuze</h2>':'');
   d.mc.forEach(function(q,i){n++;h+='<div class="card q fade" style="animation-delay:'+Math.min(i,8)*30+'ms"><div class="n">Vraag '+n+' · 1 punt</div><p>'+esc(q.v)+'</p><div class="opts" role="radiogroup" aria-label="Antwoorden">';
     a.perm[i].forEach(function(oi,pos){h+='<button class="opt" role="radio" aria-checked="'+(a.mc[i]===oi)+'" data-q="'+i+'" data-i="'+oi+'"><span class="l">'+"ABCD"[pos]+'</span><span>'+esc(q.o[oi])+'</span></button>';});
     h+="</div></div>";});
   if(d.open.length){h+='<h2>Deel B · Open vragen</h2>';
     d.open.forEach(function(o){h+='<div class="card q"><div class="n">Vraag '+o.nr+' · '+o.p+' punt'+(o.p>1?"en":"")+'</div>'+(o.b?bronHtml(o.b):"")+'<p>'+qtext(o.v)+'</p><textarea data-o="'+o.nr+'" aria-label="Antwoord vraag '+o.nr+'" placeholder="Typ hier je antwoord">'+esc(a.open[o.nr]||"")+'</textarea></div>';});}
-  if(d.mc.length)h+='<h2>Deel '+(d.open.length?"C":"B")+' · Rekenen</h2>';
+  if(d.mc.length)h+='<h2>Deel '+(d.open.length?"C":"B")+' · '+REK+'</h2>';
   d.rek.forEach(function(r){h+=rekEx(r);});
   h+='<div class="stick"><button class="btn" id="hand">Inleveren en nakijken</button></div>';
   app.innerHTML=h;prog();clearInterval(timer);tick();timer=setInterval(tick,1000);
@@ -219,7 +227,7 @@ function result(){
     h+='</div>'+(q.u?'<div class="fb">'+esc(q.u)+'</div>':"")+'</div>';});
   if(d.open.length){h+='<h2>Open vragen nakijken</h2>';
     d.open.forEach(function(o){h+='<div class="card q"><div class="n">Vraag '+o.nr+' · '+o.p+' punt'+(o.p>1?"en":"")+'</div>'+(o.b?bronHtml(o.b):"")+'<p>'+qtext(o.v)+'</p>'+openRes(o)+'</div>';});}
-  h+='<h2>'+(d.mc.length?'Rekenen nagekeken':'Je antwoorden nagekeken')+'</h2>';
+  h+='<h2>'+(d.mc.length?REK+' nagekeken':'Je antwoorden nagekeken')+'</h2>';
   d.rek.forEach(function(r){h+=rekRes(r);});
   h+='<div style="margin-top:26px;display:flex;gap:10px;flex-wrap:wrap"><button class="btn ghost" id="again">Deze toets opnieuw maken</button><a class="btn" href="'+LAB+'">Oefen verder in het Oefenlab</a></div>';
   app.innerHTML=h;score();runAI();

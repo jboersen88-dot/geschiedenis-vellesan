@@ -1,0 +1,1545 @@
+{
+ "blokken": {
+  "mc_a": [
+   {
+    "v": "Lisa heeft €50. Ze wil kleding, een game én een avondje uit, maar samen kost dat €120. Wat is de juiste conclusie?",
+    "o": [
+     "Haar behoeften verdwijnen vanzelf.",
+     "Ze kan alles kopen, want behoeften kosten geen geld.",
+     "Ze moet kiezen, want ze kan met haar geld niet al haar behoeften vervullen.",
+     "Ze moet wachten tot de prijzen dalen."
+    ],
+    "j": 2,
+    "u": "Behoeften heb je meestal genoeg, maar geld en tijd zijn beperkt. Daarom moet je kiezen wat voor jou het belangrijkst is; daar gaat het vak economie over. A is fout: behoeften verdwijnen niet vanzelf. B is fout: consumeren kost juist geld. D is fout: Lisa kan zelf kiezen, ze hoeft niet op lagere prijzen te wachten."
+   },
+   {
+    "v": "Een berekening geeft als uitkomst €5,348. Hoe noteer je dit bedrag op de juiste manier?",
+    "o": [
+     "€5,34",
+     "€5,35",
+     "€5,3",
+     "€5,348"
+    ],
+    "j": 1,
+    "u": "Geld noteer je met twee decimalen. Je kijkt naar het derde cijfer: dat is een 8, dus een 5 of hoger, en je rondt naar boven af (€5,34 wordt €5,35). €5,34 is afgekapt in plaats van afgerond, €5,3 heeft maar één decimaal en €5,348 is helemaal niet afgerond."
+   },
+   {
+    "v": "Lena laat haar haar knippen bij de kapper en betaalt daarvoor. Welke uitspraak is juist?",
+    "o": [
+     "Lena is producent en de kapper is consument.",
+     "De kapper levert een goed, want Lena kan het resultaat zien.",
+     "Lena doet aan zelfvoorziening, want het gaat om haar eigen haar.",
+     "Lena is consument en de kapper is producent; de kapper levert haar een dienst."
+    ],
+    "j": 3,
+    "u": "Wie iets koopt voor zijn eigen behoeften is consument. Lena koopt een knipbeurt. De kapper is producent en levert een dienst: een niet-tastbaar product waarbij iemand iets voor jou doet. Zelfvoorziening was het alleen als Lena haar eigen haar zelf zou knippen."
+   },
+   {
+    "v": "Bakker Jan geeft boer Kees elke week 10 broden. Boer Kees geeft Jan daarvoor 12 liter melk. Er wordt geen geld gebruikt. Wat is dit?",
+    "o": [
+     "Directe ruil",
+     "Indirecte ruil",
+     "Zelfvoorziening",
+     "Betalen met giraal geld"
+    ],
+    "j": 0,
+    "u": "Een product wordt geruild voor een ander product en er komt geen geld aan te pas: dat is directe ruil (ruilhandel). Bij indirecte ruil gebruik je geld als ruilmiddel. Zelfvoorziening is zelf iets maken of doen in plaats van het te kopen."
+   },
+   {
+    "v": "Noa betaalt haar boodschappen door haar smartwatch bij de betaalautomaat te houden. Welk soort geld gebruikt Noa?",
+    "o": [
+     "Chartaal geld",
+     "Directe ruil",
+     "Zelfvoorziening",
+     "Giraal geld"
+    ],
+    "j": 3,
+    "u": "Giraal geld is het geld dat op je bankrekening staat en waarmee je elektronisch kunt betalen, bijvoorbeeld met je bankpas, telefoon of smartwatch. Chartaal geld zijn de munten en bankbiljetten die je fysiek overhandigt."
+   },
+   {
+    "v": "Vroeger gaven geldwisselaars reizigers wisselbrieven mee in plaats van gouden en zilveren munten. Wat was de belangrijkste reden?",
+    "o": [
+     "Mensen wilden terug naar directe ruil zonder geld.",
+     "Gouden en zilveren munten zijn zwaar, lastig mee te nemen en aantrekkelijk voor overvallers.",
+     "Goud en zilver kon je niet in stukjes opdelen.",
+     "De overheid verbood het reizen met munten."
+    ],
+    "j": 1,
+    "u": "Munten van goud en zilver zijn zwaar, lastig mee te nemen op reis en aantrekkelijk voor overvallers. Met een wisselbrief reisde je veiliger en kon je die ruilen voor muntgeld. Later werden dat bankbiljetten. Goud en zilver waren juist goed te verdelen, daarom werden er munten van gemaakt."
+   },
+   {
+    "v": "Daan heeft een oud saldo van €86,50. Er wordt €20,00 bijgeschreven en €112,75 afgeschreven. Wat is zijn nieuwe saldo?",
+    "o": [
+     "Een tekort van €6,25",
+     "Een tegoed van €6,25",
+     "Een tegoed van €219,25",
+     "Een tekort van €26,25"
+    ],
+    "j": 0,
+    "u": "Nieuw saldo = oud saldo + ontvangsten − uitgaven: €86,50 + €20,00 − €112,75 = −€6,25. Een negatief saldo is een tekort (een positief saldo is een tegoed). B negeert het minteken. C telt alles bij elkaar op. D vergeet de €20,00 die erbij komt (€112,75 − €86,50 = €26,25)."
+   },
+   {
+    "v": "Welke rij bevat alleen primaire behoeften?",
+    "o": [
+     "Eten, een nieuwe telefoon en een vakantie",
+     "Make-up, drinken en onderdak",
+     "Eten, drinken en onderdak",
+     "Een game, kleding van een duur merk en uitgaan"
+    ],
+    "j": 2,
+    "u": "Primaire behoeften (basisbehoeften) heb je nodig om te kunnen leven: eten, drinken, onderdak. Een telefoon, vakantie, make-up, game, duur merk en uitgaan maken je leven leuker of gemakkelijker, maar je kunt ze missen. Dat zijn secundaire behoeften."
+   },
+   {
+    "v": "Welke van de volgende behoeften is een immateriële behoefte?",
+    "o": [
+     "Een nieuwe game",
+     "Vriendschap",
+     "Een schooltas",
+     "Een broodje"
+    ],
+    "j": 1,
+    "u": "Materiële behoeften kun je aanraken en in geld uitdrukken (game, schooltas, broodje). Immateriële behoeften zijn niet zichtbaar en niet te koop, zoals liefde, vriendschap en gezondheid."
+   },
+   {
+    "v": "Welke combinatie is juist?",
+    "o": [
+     "Een fiets is een verbruiksgoed en zeep is een gebruiksgoed.",
+     "Batterijen en zeep zijn gebruiksgoederen.",
+     "Een mobiel en een auto zijn verbruiksgoederen.",
+     "Een auto is een gebruiksgoed en benzine is een verbruiksgoed."
+    ],
+    "j": 3,
+    "u": "Een gebruiksgoed gaat lang mee en raakt niet op (auto, fiets, mobiel). Een verbruiksgoed raakt op en moet daarna vervangen worden (benzine, batterijen, zeep). De andere antwoorden draaien de twee begrippen om."
+   },
+   {
+    "v": "Welk voorbeeld is zelfvoorziening?",
+    "o": [
+     "Je bakt zelf een taart in plaats van er een te kopen.",
+     "Je koopt een taart bij de bakker.",
+     "Je laat een taart bezorgen door een webshop.",
+     "Je geeft je buurman een boek en krijgt daarvoor een taart van hem."
+    ],
+    "j": 0,
+    "u": "Bij zelfvoorziening voorzie je in je eigen behoeften door zelf iets te maken of te doen, in plaats van het te kopen. Een taart kopen of laten bezorgen is consumeren, en een boek voor een taart ruilen is directe ruil."
+   },
+   {
+    "v": "Waarom wordt de Consumentenbond gezien als een betrouwbare bron van productinformatie?",
+    "o": [
+     "Hij krijgt sponsorgeld van producenten voor goede testresultaten.",
+     "Hij verkoopt zelf de producten die hij test.",
+     "Hij wordt betaald door zijn leden en neemt geen geld aan van bedrijven, dus hij is onafhankelijk.",
+     "Hij bepaalt de prijs van de producten in de winkel."
+    ],
+    "j": 2,
+    "u": "De Consumentenbond leeft van de contributie van leden en neemt geen geld aan van bedrijven. Daardoor is de informatie onafhankelijk en eerlijk. Bij sponsoring of eigen verkoop zou de informatie beïnvloed kunnen worden."
+   },
+   {
+    "v": "Een product dat je koopt mag geen gevaar voor je gezondheid opleveren. In welke wet is dat geregeld en wie controleert of die wet wordt nageleefd?",
+    "o": [
+     "De garantiewet; de Consumentenbond controleert dit.",
+     "De Warenwet; de NVWA controleert dit.",
+     "De Warenwet; de Consumentenbond controleert dit.",
+     "De garantiewet; de NVWA controleert dit."
+    ],
+    "j": 1,
+    "u": "Dat een product geen gevaar voor je gezondheid mag opleveren, staat in de Warenwet. De NVWA (Nederlandse Voedsel- en Warenautoriteit) controleert of die wet wordt nageleefd. De Consumentenbond test en informeert, maar controleert de wet niet. Garantie gaat over producten die te snel kapotgaan, niet over veiligheid."
+   },
+   {
+    "v": "De tv van Mira gaat na 18 maanden kapot, terwijl ze hem normaal gebruikte. De verkoper zegt dat de garantie na één jaar is verlopen. Wat klopt?",
+    "o": [
+     "De verkoper heeft gelijk: na één jaar is er geen garantie meer.",
+     "Mira heeft alleen recht als ze het eerst meldt bij de Consumentenbond.",
+     "Mira heeft recht op reparatie, maar moet die zelf betalen.",
+     "Mira heeft recht op reparatie of vervanging: op elektronica heb je in de EU minstens twee jaar garantie."
+    ],
+    "j": 3,
+    "u": "In de EU is afgesproken dat je op elektronische apparaten zoals tv&apos;s minstens twee jaar garantie hebt. Na 18 maanden valt de tv daar dus nog onder. Gaat het product kapot, dan moet de verkoper het gratis repareren of vervangen; lukt dat niet, dan krijgt Mira haar geld terug."
+   },
+   {
+    "v": "Mees heeft voor economie een 6,0 voor een toets die 1 keer meetelt en een 8,0 voor een proefwerk dat 3 keer meetelt. Wat is zijn gemiddelde cijfer?",
+    "o": [
+     "7,5",
+     "7,0",
+     "6,5",
+     "8,0"
+    ],
+    "j": 0,
+    "u": "Bij een gewogen gemiddelde telt het ene cijfer vaker mee dan het andere: (6,0 × 1 + 8,0 × 3) ÷ (1 + 3) = 30 ÷ 4 = 7,5. 7,0 is het ongewogen gemiddelde (je negeert de weging). 6,5 krijg je als je de weging omdraait. 8,0 is alleen het hoogste cijfer."
+   }
+  ],
+  "mc_b": [
+   {
+    "v": "Waarom moeten mensen in de economie keuzes maken?",
+    "o": [
+     "Omdat winkels niet alles verkopen wat mensen willen.",
+     "Omdat ze door gebrek aan geld en tijd niet al hun behoeften kunnen vervullen.",
+     "Omdat behoeften na een paar dagen vanzelf verdwijnen.",
+     "Omdat de overheid bepaalt wat je mag kopen."
+    ],
+    "j": 1,
+    "u": "Behoeften heb je meestal genoeg, maar geld en tijd zijn beperkt. Je kunt dus niet alles hebben en moet kiezen wat voor jou het belangrijkst is. Daar gaat het vak economie over."
+   },
+   {
+    "v": "Welke uitspraak over zelfvoorziening is juist?",
+    "o": [
+     "Je koopt altijd het goedkoopste product dat je kunt vinden.",
+     "Je ruilt iets met een buurman zonder geld te gebruiken.",
+     "Je laat iemand anders voor jou iets doen en betaalt daarvoor.",
+     "Je voorziet in je eigen behoefte door zelf iets te maken of te doen, in plaats van het te kopen."
+    ],
+    "j": 3,
+    "u": "Bij zelfvoorziening maak of doe je iets zelf, zoals je band plakken of een moestuin onderhouden. Dat kan geld besparen of je vindt het gewoon leuk. A is geen zelfvoorziening maar een kwestie van prijs. B is directe ruil. D is een dienst kopen."
+   },
+   {
+    "v": "Een berekening geeft als uitkomst €17,8349. Hoe noteer je dit bedrag op de juiste manier?",
+    "o": [
+     "€17,83",
+     "€17,84",
+     "€17,8",
+     "€17,835"
+    ],
+    "j": 0,
+    "u": "Geld noteer je met twee decimalen. Je kijkt naar het derde cijfer: dat is een 4, dus lager dan 5. Je schrapt de cijfers die er te veel staan en houdt €17,83 over. €17,84 is naar boven afgerond, €17,8 heeft maar één decimaal en €17,835 is niet afgerond."
+   },
+   {
+    "v": "Een berekening geeft als uitkomst 12,349%. Hoe noteer je dit percentage op de juiste manier?",
+    "o": [
+     "12,35%",
+     "12%",
+     "12,3%",
+     "12,4%"
+    ],
+    "j": 2,
+    "u": "Procenten rond je af op één decimaal. Je kijkt naar het tweede cijfer achter de komma: dat is een 4, dus je rondt naar beneden af: 12,3%. 12,4% krijg je als je verkeerd (naar boven) afrondt, 12,35% heeft twee decimalen en 12% is op een heel getal afgerond."
+   },
+   {
+    "v": "Welk bedrag is op de juiste manier genoteerd?",
+    "o": [
+     "€1.250,50",
+     "€1,250.50",
+     "€1.250.50",
+     "€1250.50"
+    ],
+    "j": 0,
+    "u": "Bij geld schrijf je het €-teken voor het bedrag, een punt bij duizendtallen en een komma tussen de helen en de decimalen. €1,250.50 is de Engelse schrijfwijze. Bij €1.250.50 staat een punt waar een komma hoort. €1250.50 heeft geen duizendtal-punt en een decimale punt."
+   },
+   {
+    "v": "Waarom zijn euromunten en bankbiljetten chartaal geld?",
+    "o": [
+     "Omdat je ze kunt pinnen met je bankpas.",
+     "Omdat ze op je bankrekening staan.",
+     "Omdat ze van goud en zilver gemaakt zijn.",
+     "Omdat in de wet is vastgelegd dat het onze betaalmiddelen zijn."
+    ],
+    "j": 3,
+    "u": "Het woord chartaal komt van ‘charta’, dat akte of wet betekent. In de wet is vastgelegd dat euromunten en -bankbiljetten onze betaalmiddelen zijn. Geld op je bankrekening is giraal geld, en goud en zilver werden vroeger gebruikt, maar zijn nu niet de betaalmiddelen."
+   },
+   {
+    "v": "Maarten rekent contant €12,48 af in een winkel. Wat mag de winkelier doen?",
+    "o": [
+     "Het eindbedrag afronden op hele euro’s, dus op €13,00.",
+     "Het eindbedrag afronden op 5 of 10 cent, dus op €12,50.",
+     "Niets: het bedrag moet altijd op de cent nauwkeurig zijn.",
+     "Het eindbedrag alleen afronden als Maarten pint."
+    ],
+    "j": 1,
+    "u": "Munten van één en twee cent zijn chartaal geld, maar we gebruiken ze bijna niet meer. Winkeliers mogen daarom het eindbedrag afronden op 5 of 10 cent. €12,48 wordt dus €12,50."
+   },
+   {
+    "v": "Eva neemt €40 op bij een geldautomaat. Wat gebeurt er?",
+    "o": [
+     "Ze zet chartaal geld om in giraal geld.",
+     "Ze ruilt geld direct voor een product.",
+     "Ze zet giraal geld om in chartaal geld.",
+     "Haar saldo verandert niet, want contant geld telt niet mee."
+    ],
+    "j": 2,
+    "u": "Bij een geldautomaat zet je in een paar tellen giraal geld (op je rekening) om in chartaal geld (bankbiljetten). Haar saldo wordt daardoor €40 lager. Er wordt niets geruild voor een product."
+   },
+   {
+    "v": "Het nieuwe saldo van Joris is €230,00. In de periode is €60,00 bijgeschreven en €25,00 afgeschreven. Wat was zijn oude saldo?",
+    "o": [
+     "€265,00",
+     "€195,00",
+     "€145,00",
+     "€315,00"
+    ],
+    "j": 1,
+    "u": "Je rekent terug in de tijd: wat eraf is gegaan tel je erbij op en wat erbij is gekomen trek je af. Oud saldo = €230,00 + €25,00 − €60,00 = €195,00. Controle: €195,00 + €60,00 − €25,00 = €230,00. De andere antwoorden komen door de tekens verkeerd om te gebruiken."
+   },
+   {
+    "v": "Een gezin heeft grote geldproblemen. In welke behoeften proberen ze dan in elk geval te voorzien?",
+    "o": [
+     "Hun primaire behoeften, zoals eten, drinken, kleding en onderdak.",
+     "Hun secundaire behoeften, zoals een nieuwe telefoon.",
+     "De behoeften van hun vrienden en kennissen.",
+     "Dat hoeft niet, want ze hoeven niets te kiezen."
+    ],
+    "j": 0,
+    "u": "Gezinnen met geldproblemen zijn allang blij als ze in hun primaire behoeften kunnen voorzien: dat is wat je nodig hebt om te kunnen leven. Secundaire behoeften kun je missen. Mensen met te weinig geld moeten juist kiezen."
+   },
+   {
+    "v": "Een monteur repareert je wasmachine. Welke combinatie is juist?",
+    "o": [
+     "De wasmachine is een verbruiksgoed; wat de monteur doet is een dienst.",
+     "De wasmachine is een gebruiksgoed; wat de monteur doet is een goed.",
+     "De wasmachine is een verbruiksgoed; wat de monteur doet is een goed.",
+     "De wasmachine is een gebruiksgoed; wat de monteur doet is een dienst."
+    ],
+    "j": 3,
+    "u": "Een wasmachine gaat lang mee en raakt niet op: dat is een gebruiksgoed. De monteur doet iets voor jou en je kunt dat niet vastpakken: dat is een dienst."
+   },
+   {
+    "v": "Je twijfelt tussen twee telefoons. Welke bron is het meest betrouwbaar om te kiezen?",
+    "o": [
+     "De reclame van de fabrikant.",
+     "De mening van de verkoper in de winkel.",
+     "Een vergelijkend warenonderzoek van de Consumentenbond.",
+     "Een positieve review op de website van de fabrikant zelf."
+    ],
+    "j": 2,
+    "u": "Een vergelijkend warenonderzoek is onafhankelijk: deskundigen testen producten van verschillende merken op prijs, kwaliteit en milieu. Reclame, een verkoper en reviews op de site van het bedrijf zelf zijn niet onafhankelijk. Ook websites als kieskeurig.nl en tweakers.net geven productinformatie en reviews van consumenten, maar niet alle reviews zijn even betrouwbaar."
+   },
+   {
+    "v": "In de wet staat dat een product ‘deugdelijk’ moet zijn. Wat betekent dat?",
+    "o": [
+     "Het moet minstens vijf jaar meegaan.",
+     "Het moet bij normaal gebruik een redelijke tijd meegaan.",
+     "Het moet het goedkoopste product van het merk zijn.",
+     "Het moet eerst door de Consumentenbond zijn goedgekeurd."
+    ],
+    "j": 1,
+    "u": "Een deugdelijk product gaat bij normaal gebruik een redelijke tijd mee. Is dat niet zo, dan moet de verkoper het repareren of omruilen, en anders krijg je je geld terug. Er staat geen vast aantal jaren in de wet en de Consumentenbond hoeft niets goed te keuren."
+   },
+   {
+    "v": "Een supermarkt verkoopt eten waarvan de houdbaarheidsdatum al lang verlopen is. Welke organisatie controleert of de Warenwet wordt nageleefd?",
+    "o": [
+     "De Consumentenbond",
+     "Kieskeurig.nl",
+     "De Belastingdienst",
+     "De NVWA"
+    ],
+    "j": 3,
+    "u": "De NVWA (Nederlandse Voedsel- en Warenautoriteit) controleert of de Warenwet wordt nageleefd, bijvoorbeeld bij houdbaarheidsdata en restaurants. De Consumentenbond test en informeert, maar controleert de wet niet."
+   },
+   {
+    "v": "Een wasmachine krijgt van de Consumentenbond voor vijf onderdelen deze cijfers: 7, 8, 6, 9 en 5. Wat is het gemiddelde cijfer?",
+    "o": [
+     "7,0",
+     "7,5",
+     "6,5",
+     "8,0"
+    ],
+    "j": 0,
+    "u": "Bij een ongewogen gemiddelde tel je de getallen bij elkaar op en deel je door het aantal getallen: (7 + 8 + 6 + 9 + 5) ÷ 5 = 35 ÷ 5 = 7,0."
+   }
+  ],
+  "rek_a": [
+   {
+    "nr": 1,
+    "titel": "Ruilen",
+    "tekst": "",
+    "delen": [
+     {
+      "id": "a",
+      "v": "Leg uit wat het verschil is tussen directe en indirecte ruil.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "A1a",
+        "p": 2,
+        "label": "Verschil directe en indirecte ruil",
+        "v": "Leg uit wat het verschil is tussen directe en indirecte ruil.",
+        "model": "Directe ruil: je ruilt een product of dienst voor een ander product of dienst, zonder geld (bijvoorbeeld een kip voor 15 tomaten). Indirecte ruil: je gebruikt geld als ruilmiddel (bijvoorbeeld een broodje kopen).",
+        "g": [
+         {
+          "t": "directe ruil: een product of dienst ruilen voor een ander product, zonder geld",
+          "p": 1
+         },
+         {
+          "t": "indirecte ruil: met geld als ruilmiddel",
+          "p": 1
+         }
+        ],
+        "h": [
+         "E2H1"
+        ]
+       }
+      ],
+      "uitw": [
+       "Directe ruil: je ruilt een product of dienst voor een ander product of dienst, zonder geld (bijvoorbeeld een kip voor 15 tomaten).",
+       "Indirecte ruil: je gebruikt geld als ruilmiddel (bijvoorbeeld een broodje kopen).",
+       "Bij directe ruil wordt geen geld gebruikt (ruilhandel). Bij indirecte ruil ruil je een product voor geld en koop je daarmee iets anders. Dat is gemakkelijker, want iedereen wil geld hebben."
+      ]
+     }
+    ],
+    "p": 2
+   },
+   {
+    "nr": 2,
+    "titel": "Op je bankrekening",
+    "tekst": "Sanne heeft aan het begin van de maand een saldo van €245,60. In die maand krijgt ze €182,50 loon van haar bijbaan. Ze betaalt €64,95 voor kleding en €12,50 voor haar telefoonabonnement.",
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken Sannes nieuwe saldo aan het eind van de maand. Laat je berekening zien.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         350.65
+        ],
+        "p": 2,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Nieuw saldo"
+       }
+      ],
+      "uitw": [
+       "Uitgaven: €64,95 + €12,50 = €77,45",
+       "Nieuw saldo: €245,60 + €182,50 − €77,45 = €350,65",
+       "Nieuw saldo = oud saldo + ontvangsten − uitgaven. Wat erbij komt tel je op, wat eraf gaat trek je af. Een veelgemaakte fout is de uitgaven er ook bij optellen."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Daarna betaalt Sanne met haar pinpas nog een jas van €399,00. Wat is haar saldo nu? Is dat een tegoed of een tekort?",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         -48.35,
+         48.35
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Saldo"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Tegoed",
+         "Tekort"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Tegoed of tekort?"
+       }
+      ],
+      "uitw": [
+       "€350,65 − €399,00 = −€48,35",
+       "Dit is een tekort, want het saldo is negatief.",
+       "Een positief saldo is een tegoed, een negatief saldo is een tekort. Sanne gaat onder nul en staat dus rood."
+      ]
+     }
+    ],
+    "p": 4
+   },
+   {
+    "nr": 3,
+    "titel": "Als het slecht gaat met de economie",
+    "tekst": "Het gaat al een tijd slecht met de economie: er is een crisis. De ouders van Bo werken allebei bij een bedrijf dat producten maakt.",
+    "delen": [
+     {
+      "id": "a",
+      "v": "Wat betekent het dat er een crisis is?",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "A3a",
+        "p": 1,
+        "label": "Crisis",
+        "v": "Wat betekent het dat er een crisis is?",
+        "model": "Het gaat slecht met de economie: bedrijven hebben minder werk en mensen verdienen minder.",
+        "g": [
+         {
+          "t": "het gaat slecht met de economie (bedrijven hebben minder werk, mensen verdienen minder)",
+          "p": 1
+         }
+        ],
+        "h": [
+         "E2H1"
+        ]
+       }
+      ],
+      "uitw": [
+       "Het gaat slecht met de economie: bedrijven hebben minder werk en mensen verdienen minder.",
+       "Een crisis is het omgekeerde van een goed draaiende economie. Dan hebben bedrijven meer werk en kunnen mensen meer verdienen."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Leg uit hoe de crisis ervoor kan zorgen dat Bo’s gezin minder geld te besteden heeft.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "A3b",
+        "p": 2,
+        "label": "Minder geld voor Bo's gezin",
+        "v": "Het gaat al een tijd slecht met de economie: er is een crisis. De ouders van Bo werken allebei bij een bedrijf dat producten maakt. Leg uit hoe de crisis ervoor kan zorgen dat Bo’s gezin minder geld te besteden heeft.",
+        "model": "Het bedrijf waar Bo’s ouders werken verkoopt minder en heeft minder werk. Daardoor werken de ouders minder of raken ze hun baan kwijt, verdienen ze minder en heeft het gezin minder geld.",
+        "g": [
+         {
+          "t": "het bedrijf van de ouders verkoopt minder of heeft minder werk",
+          "p": 1
+         },
+         {
+          "t": "daardoor verdienen de ouders minder of raken ze hun baan kwijt, dus het gezin heeft minder geld",
+          "p": 1
+         }
+        ],
+        "h": [
+         "E2H1"
+        ]
+       }
+      ],
+      "uitw": [
+       "Het bedrijf waar Bo’s ouders werken verkoopt minder en heeft minder werk.",
+       "Daardoor werken de ouders minder of raken ze hun baan kwijt, verdienen ze minder en heeft het gezin minder geld.",
+       "Hoe het met de economie gaat, heeft gevolgen voor jou en je familie. Het loopt via de bedrijven naar het inkomen van gezinnen."
+      ]
+     }
+    ],
+    "p": 3
+   },
+   {
+    "nr": 4,
+    "titel": "Jayden en de sneakers",
+    "tekst": "Jayden (14) ziet op Instagram een influencer met nieuwe sneakers van €110. Bijna al zijn vrienden dragen ze al. Jayden wil ze ook, maar zijn oude schoenen zijn nog heel.",
+    "delen": [
+     {
+      "id": "a",
+      "v": "Is het willen van deze sneakers voor Jayden een primaire of een secundaire behoefte? Leg uit.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Primaire behoefte",
+         "Secundaire behoefte"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Primair of secundair?"
+       },
+       {
+        "type": "open",
+        "nr": "A4a",
+        "p": 1,
+        "label": "Uitleg",
+        "v": "Jayden (14) wil sneakers van €110, maar zijn oude schoenen zijn nog heel. Is het willen van deze sneakers een primaire of een secundaire behoefte? Leg uit.",
+        "model": "Secundair: zijn oude schoenen zijn nog heel, dus hij heeft de sneakers niet nodig om te leven; ze maken zijn leven alleen leuker.",
+        "g": [
+         {
+          "t": "uitleg: hij heeft ze niet nodig om te leven (zijn oude schoenen zijn nog heel), ze maken zijn leven leuker",
+          "p": 1
+         }
+        ],
+        "h": [
+         "E2H1"
+        ]
+       }
+      ],
+      "uitw": [
+       "Een secundaire behoefte.",
+       "Zijn oude schoenen zijn nog heel, dus hij heeft de sneakers niet nodig om te leven; ze maken zijn leven alleen leuker.",
+       "Primaire behoeften heb je nodig om te kunnen leven. Dingen die je ook wilt, maar kunt missen, zijn secundair."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Jayden wordt op twee manieren beïnvloed om deze sneakers te willen. Noem die twee manieren en leg bij allebei uit hoe dat gebeurt.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "A4b",
+        "p": 2,
+        "label": "Twee manieren van beïnvloeding",
+        "v": "Jayden (14) ziet op Instagram een influencer met nieuwe sneakers van €110. Bijna al zijn vrienden dragen ze al. Jayden wordt op twee manieren beïnvloed om deze sneakers te willen. Noem die twee manieren en leg bij allebei uit hoe dat gebeurt.",
+        "model": "Zijn vrienden: bijna iedereen draagt ze al en Jayden wil erbij horen (sociale beïnvloeding). Reclame/social media: hij ziet de influencer de sneakers dragen op Instagram, waardoor hij ze mooi en belangrijk gaat vinden.",
+        "g": [
+         {
+          "t": "vrienden/omgeving: bijna iedereen draagt ze en hij wil erbij horen, met uitleg",
+          "p": 1
+         },
+         {
+          "t": "reclame/influencer/social media (Instagram), met uitleg",
+          "p": 1
+         }
+        ],
+        "h": [
+         "E2H1"
+        ]
+       }
+      ],
+      "uitw": [
+       "Zijn vrienden: bijna iedereen draagt ze al en Jayden wil erbij horen (sociale beïnvloeding).",
+       "Reclame/social media: hij ziet de influencer de sneakers dragen op Instagram, waardoor hij ze mooi en belangrijk gaat vinden.",
+       "Wat je koopt wordt beïnvloed door je omgeving (wat dragen en doen je vrienden) en door reclame in verschillende media."
+      ]
+     }
+    ],
+    "p": 4
+   },
+   {
+    "nr": 5,
+    "titel": "Een lekke band",
+    "tekst": "Sven heeft een lekke fietsband. Hij kan naar de fietsenmaker (€12,50) of de band zelf plakken met een plakset van €3,95.",
+    "delen": [
+     {
+      "id": "a",
+      "v": "Wat levert de fietsenmaker aan Sven: een goed of een dienst? Leg uit.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Een goed",
+         "Een dienst"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Goed of dienst?"
+       },
+       {
+        "type": "open",
+        "nr": "A5a",
+        "p": 1,
+        "label": "Uitleg",
+        "v": "Sven laat zijn lekke fietsband maken bij de fietsenmaker. Levert de fietsenmaker een goed of een dienst? Leg uit.",
+        "model": "Een dienst: de fietsenmaker doet iets voor Sven (hij repareert de band); je kunt het niet vastpakken.",
+        "g": [
+         {
+          "t": "uitleg: de fietsenmaker doet iets voor Sven / het is niet tastbaar",
+          "p": 1
+         }
+        ],
+        "h": [
+         "E2H1"
+        ]
+       }
+      ],
+      "uitw": [
+       "Een dienst.",
+       "De fietsenmaker doet iets voor Sven (hij repareert de band); je kunt het niet vastpakken.",
+       "Goederen zijn tastbare producten, diensten zijn niet-tastbare producten waarbij iemand iets voor je doet."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Hoe heet het als Sven de band zelf plakt? Noem ook één reden waarom hij daarvoor kan kiezen.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "A5b",
+        "p": 2,
+        "label": "Zelf de band plakken",
+        "v": "Sven heeft een lekke fietsband. Hij kan naar de fietsenmaker (€12,50) of de band zelf plakken met een plakset van €3,95. Hoe heet het als Sven de band zelf plakt? Noem ook één reden waarom hij daarvoor kan kiezen.",
+        "model": "Zelfvoorziening. Reden: geld besparen (€3,95 in plaats van €12,50), of omdat hij het leuk vindt.",
+        "g": [
+         {
+          "t": "zelfvoorziening",
+          "p": 1
+         },
+         {
+          "t": "een juiste reden, bijvoorbeeld geld besparen (€3,95 in plaats van €12,50) of omdat hij het leuk vindt",
+          "p": 1
+         }
+        ],
+        "h": [
+         "E2H1"
+        ]
+       }
+      ],
+      "uitw": [
+       "Zelfvoorziening.",
+       "Reden: geld besparen (€3,95 in plaats van €12,50), of omdat hij het leuk vindt.",
+       "Bij zelfvoorziening voorzie je zelf in je behoefte door iets zelf te maken of te doen, in plaats van het te kopen."
+      ]
+     }
+    ],
+    "p": 4
+   },
+   {
+    "nr": 6,
+    "titel": "Rekenen met procenten",
+    "tekst": "Schrijf bij elke vraag je berekening op. Rond af zoals je geleerd hebt.",
+    "delen": [
+     {
+      "id": "a",
+      "v": "In klas 2B zitten 26 leerlingen. Negen van hen hebben de afgelopen zes maanden een nieuwe telefoon gekocht. Hoeveel procent van de klas is dat?",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         34.6
+        ],
+        "p": 2,
+        "eenh": "%",
+        "tol": 0.05,
+        "label": "Percentage"
+       }
+      ],
+      "uitw": [
+       "(9 ÷ 26) × 100 = 34,615…",
+       "≈ 34,6%",
+       "Je berekent ‘iets van iets’: het deel (9) gedeeld door het geheel (26), keer 100. Procenten rond je af op één decimaal: het tweede cijfer achter de komma is een 1, dus je rondt naar beneden af."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Daan kocht een jaar geleden een telefoon voor €480. Op Marktplaats is hij nu nog €372 waard. Met hoeveel procent is de waarde gedaald?",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         22.5,
+         -22.5
+        ],
+        "p": 2,
+        "eenh": "%",
+        "tol": 0.05,
+        "label": "Daling in procenten"
+       }
+      ],
+      "uitw": [
+       "(372 − 480) ÷ 480 × 100 = −22,5%",
+       "De waarde is met 22,5% gedaald.",
+       "Voor een stijging of daling reken je (nieuw − oud) ÷ oud × 100. Een negatieve uitkomst betekent een daling."
+      ]
+     },
+     {
+      "id": "c",
+      "v": "In de uitverkoop krijg je 20% korting op een hoodie van €79,95. Hoeveel euro korting is dat?",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         15.99
+        ],
+        "p": 2,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Korting"
+       }
+      ],
+      "uitw": [
+       "(20 ÷ 100) × 79,95 = €15,99 korting",
+       "Een percentage van een bedrag in euro’s reken je uit met percentage ÷ 100 × totaal. De vraag is naar de korting zelf, niet naar de nieuwe prijs."
+      ]
+     }
+    ],
+    "p": 6
+   },
+   {
+    "nr": 7,
+    "titel": "Wie verdient het meest?",
+    "tekst": "Femke krijgt elke twee weken €548,70 uitbetaald. Kevin krijgt elke maand €1.150,00.",
+    "delen": [
+     {
+      "id": "a",
+      "v": "Wie verdient per maand het meest? Laat je berekening zien.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         1188.85
+        ],
+        "p": 2,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Femke per maand"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Femke",
+         "Kevin"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Wie verdient per maand het meest?"
+       }
+      ],
+      "uitw": [
+       "Femke per jaar: €548,70 × 26 = €14.266,20",
+       "Femke per maand: €14.266,20 ÷ 12 = €1.188,85",
+       "Femke verdient het meest (€38,85 per maand meer dan Kevin).",
+       "Een jaar heeft 26 periodes van twee weken en 12 maanden. Wie €548,70 × 2 = €1.097,40 doet, denkt ten onrechte dat Kevin meer verdient."
+      ]
+     }
+    ],
+    "p": 3
+   },
+   {
+    "nr": 8,
+    "titel": "Weet wat je koopt",
+    "tekst": "Lotte wil een koptelefoon van €150 kopen. Op de website van het merk staan alleen maar positieve reviews.",
+    "delen": [
+     {
+      "id": "a",
+      "v": "Lotte kijkt ook bij de Consumentenbond. Noem twee redenen waarom de informatie van de Consumentenbond betrouwbaarder is dan de reviews op de website van het merk.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "A8a",
+        "p": 2,
+        "label": "Twee redenen",
+        "v": "Lotte wil een koptelefoon van €150 kopen. Op de website van het merk staan alleen maar positieve reviews. Lotte kijkt ook bij de Consumentenbond. Noem twee redenen waarom de informatie van de Consumentenbond betrouwbaarder is dan de reviews op de website van het merk.",
+        "model": "Twee van: de Consumentenbond is onafhankelijk en neemt geen geld aan van bedrijven (hij leeft van de contributie van leden); bedrijven plaatsen zelf soms positieve reviews; deskundigen testen producten van verschillende merken met elkaar (vergelijkend warenonderzoek) op prijs, kwaliteit en milieu.",
+        "g": [
+         {
+          "t": "een juiste reden (onafhankelijk, geen geld van bedrijven / betaald door leden)",
+          "p": 1
+         },
+         {
+          "t": "een tweede juiste reden (bedrijven plaatsen zelf soms positieve reviews / deskundigen testen en vergelijken producten)",
+          "p": 1
+         }
+        ],
+        "h": [
+         "E2H1"
+        ]
+       }
+      ],
+      "uitw": [
+       "Twee van: de Consumentenbond is onafhankelijk en neemt geen geld aan van bedrijven (hij leeft van de contributie van leden); bedrijven plaatsen zelf soms positieve reviews; deskundigen testen producten van verschillende merken met elkaar (vergelijkend warenonderzoek) op prijs, kwaliteit en milieu.",
+       "De Consumentenbond is er om de consument te steunen en wordt door niemand gesponsord. Reviews op de site van een bedrijf kunnen door het bedrijf zelf geplaatst zijn."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Na tien maanden gaat de koptelefoon kapot, terwijl Lotte hem normaal heeft gebruikt. Noem twee dingen die de verkoper kan doen.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "A8b",
+        "p": 2,
+        "label": "Twee dingen die de verkoper kan doen",
+        "v": "Lottes koptelefoon gaat na tien maanden kapot, terwijl ze hem normaal heeft gebruikt. Na tien maanden gaat de koptelefoon kapot, terwijl Lotte hem normaal heeft gebruikt. Noem twee dingen die de verkoper kan doen.",
+        "model": "Twee van: het product gratis repareren; een nieuw (goed) exemplaar geven; het geld terugbetalen.",
+        "g": [
+         {
+          "t": "een juiste mogelijkheid: gratis repareren, een nieuw exemplaar geven of geld terugbetalen",
+          "p": 1
+         },
+         {
+          "t": "een tweede juiste mogelijkheid",
+          "p": 1
+         }
+        ],
+        "h": [
+         "E2H1"
+        ]
+       }
+      ],
+      "uitw": [
+       "Twee van: het product gratis repareren; een nieuw (goed) exemplaar geven; het geld terugbetalen.",
+       "Een product moet bij normaal gebruik een redelijke tijd meegaan (deugdelijk product). Is dat niet zo, dan moet de verkoper het repareren of omruilen, en anders krijg je je geld terug."
+      ]
+     }
+    ],
+    "p": 4
+   }
+  ],
+  "rek_b": [
+   {
+    "nr": 1,
+    "titel": "Koppelen",
+    "tekst": "",
+    "delen": [
+     {
+      "id": "",
+      "v": "Koppel elk voorbeeld aan het juiste begrip. Elk begrip gebruik je maximaal één keer; er blijft één begrip over.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Chartaal geld",
+         "Giraal geld",
+         "Gebruiksgoed",
+         "Verbruiksgoed",
+         "Dienst",
+         "Zelfvoorziening",
+         "Directe ruil"
+        ],
+        "j": 1,
+        "p": 0.5,
+        "label": "Je betaalt in de winkel met je smartwatch."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Chartaal geld",
+         "Giraal geld",
+         "Gebruiksgoed",
+         "Verbruiksgoed",
+         "Dienst",
+         "Zelfvoorziening",
+         "Directe ruil"
+        ],
+        "j": 0,
+        "p": 0.5,
+        "label": "Een munt van twee euro."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Chartaal geld",
+         "Giraal geld",
+         "Gebruiksgoed",
+         "Verbruiksgoed",
+         "Dienst",
+         "Zelfvoorziening",
+         "Directe ruil"
+        ],
+        "j": 3,
+        "p": 0.5,
+        "label": "Een pak batterijen."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Chartaal geld",
+         "Giraal geld",
+         "Gebruiksgoed",
+         "Verbruiksgoed",
+         "Dienst",
+         "Zelfvoorziening",
+         "Directe ruil"
+        ],
+        "j": 2,
+        "p": 0.5,
+        "label": "Een laptop."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Chartaal geld",
+         "Giraal geld",
+         "Gebruiksgoed",
+         "Verbruiksgoed",
+         "Dienst",
+         "Zelfvoorziening",
+         "Directe ruil"
+        ],
+        "j": 4,
+        "p": 0.5,
+        "label": "Een taxirit naar het station."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Chartaal geld",
+         "Giraal geld",
+         "Gebruiksgoed",
+         "Verbruiksgoed",
+         "Dienst",
+         "Zelfvoorziening",
+         "Directe ruil"
+        ],
+        "j": 5,
+        "p": 0.5,
+        "label": "Zelf een moestuin onderhouden om groente te eten."
+       }
+      ],
+      "uitw": [
+       "1 – B (giraal geld)   ·   2 – A (chartaal geld)   ·   3 – D (verbruiksgoed)",
+       "4 – C (gebruiksgoed)   ·   5 – E (dienst)   ·   6 – F (zelfvoorziening)   ·   G (directe ruil) blijft over",
+       "Met je smartwatch betaal je van je bankrekening: giraal geld. Munten en biljetten zijn chartaal geld. Een laptop gaat lang mee (gebruiksgoed), batterijen raken op (verbruiksgoed). Een taxirit is iets wat iemand voor je doet (dienst). Zelf je groente verbouwen is zelfvoorziening. Directe ruil (producten ruilen zonder geld) komt in geen enkel voorbeeld voor."
+      ]
+     }
+    ],
+    "p": 3
+   },
+   {
+    "nr": 2,
+    "titel": "Zet in volgorde: de ontwikkeling van geld",
+    "tekst": "",
+    "delen": [
+     {
+      "id": "",
+      "v": "Zet de stappen uit de ontwikkeling van geld in de juiste volgorde: 1 is de oudste stap, 4 de nieuwste.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "1",
+         "2",
+         "3",
+         "4"
+        ],
+        "j": 1,
+        "p": 0.5,
+        "label": "Gouden en zilveren munten"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "1",
+         "2",
+         "3",
+         "4"
+        ],
+        "j": 3,
+        "p": 0.5,
+        "label": "Giraal geld op je bankrekening"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "1",
+         "2",
+         "3",
+         "4"
+        ],
+        "j": 0,
+        "p": 0.5,
+        "label": "Ruilen van een product voor een ander product, zonder geld"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "1",
+         "2",
+         "3",
+         "4"
+        ],
+        "j": 2,
+        "p": 0.5,
+        "label": "Bankbiljetten (papiergeld)"
+       }
+      ],
+      "uitw": [
+       "1 – Ruilen van een product voor een ander product, zonder geld (directe ruil)",
+       "2 – Gouden en zilveren munten",
+       "3 – Bankbiljetten (papiergeld)",
+       "4 – Giraal geld op je bankrekening",
+       "Eerst ruilden mensen direct. Omdat dat onhandig was, kwamen er gouden en zilveren munten. Die waren zwaar en gevaarlijk om mee te reizen, daarom kwamen er wisselbrieven en later bankbiljetten. Tegenwoordig betalen we steeds vaker met giraal geld."
+      ]
+     }
+    ],
+    "p": 2
+   },
+   {
+    "nr": 3,
+    "titel": "Waar of niet waar?",
+    "tekst": "",
+    "delen": [
+     {
+      "id": "a",
+      "v": "Waar of niet waar? Verbeter de stelling als hij niet waar is: “In een crisis hebben bedrijven meer werk, zodat mensen meer kunnen verdienen.”",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "B3a",
+        "p": 1,
+        "label": "Waar of niet waar, met verbetering",
+        "v": "In een crisis hebben bedrijven meer werk, zodat mensen meer kunnen verdienen.",
+        "model": "Niet waar. In een crisis hebben bedrijven juist minder werk en kunnen mensen minder verdienen.",
+        "g": [
+         {
+          "t": "‘niet waar’ met een juiste verbetering: in een crisis hebben bedrijven minder werk en kunnen mensen minder verdienen",
+          "p": 1
+         }
+        ],
+        "h": [
+         "E2H1"
+        ]
+       }
+      ],
+      "uitw": [
+       "Niet waar. In een crisis hebben bedrijven juist minder werk en kunnen mensen minder verdienen.",
+       "Een crisis is het omgekeerde van een goed draaiende economie. Dat kan gevolgen hebben voor jou en je familie."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Waar of niet waar? Verbeter de stelling als hij niet waar is: “Giraal geld kun je niet vastpakken: je ziet alleen in je bankapp hoeveel je hebt.”",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "B3b",
+        "p": 1,
+        "label": "Waar of niet waar, met verbetering",
+        "v": "Giraal geld kun je niet vastpakken: je ziet alleen in je bankapp hoeveel je hebt.",
+        "model": "Waar.",
+        "g": [
+         {
+          "t": "‘waar’ (een verbetering is niet nodig)",
+          "p": 1
+         }
+        ],
+        "h": [
+         "E2H1"
+        ]
+       }
+      ],
+      "uitw": [
+       "Waar.",
+       "Giraal geld is onzichtbaar geld dat op je bankrekening staat. Hoeveel je hebt, weet je alleen door te kijken op je rekening of in je bankapp."
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Waar of niet waar? Verbeter de stelling als hij niet waar is: “Een gebruiksgoed, zoals een fiets, raakt snel op en moet daarna worden vervangen.”",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "B3c",
+        "p": 1,
+        "label": "Waar of niet waar, met verbetering",
+        "v": "Een gebruiksgoed, zoals een fiets, raakt snel op en moet daarna worden vervangen.",
+        "model": "Niet waar. Dat is een verbruiksgoed. Een gebruiksgoed (zoals een fiets) gaat lang mee en raakt niet op.",
+        "g": [
+         {
+          "t": "‘niet waar’ met een juiste verbetering: dat is een verbruiksgoed; een gebruiksgoed gaat lang mee en raakt niet op",
+          "p": 1
+         }
+        ],
+        "h": [
+         "E2H1"
+        ]
+       }
+      ],
+      "uitw": [
+       "Niet waar. Dat is een verbruiksgoed. Een gebruiksgoed (zoals een fiets) gaat lang mee en raakt niet op.",
+       "Gebruiksgoederen (fiets, auto, mobiel) gaan lang mee. Verbruiksgoederen (batterijen, zeep, benzine) raken op."
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Waar of niet waar? Verbeter de stelling als hij niet waar is: “Immateriële behoeften, zoals vriendschap, kun je in geld uitdrukken.”",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "B3d",
+        "p": 1,
+        "label": "Waar of niet waar, met verbetering",
+        "v": "Immateriële behoeften, zoals vriendschap, kun je in geld uitdrukken.",
+        "model": "Niet waar. Materiële behoeften kun je in geld uitdrukken; immateriële behoeften (zoals liefde, vriendschap en gezondheid) kun je niet kopen of vastpakken.",
+        "g": [
+         {
+          "t": "‘niet waar’ met een juiste verbetering: materiële behoeften kun je in geld uitdrukken, immateriële behoeften (zoals vriendschap) niet",
+          "p": 1
+         }
+        ],
+        "h": [
+         "E2H1"
+        ]
+       }
+      ],
+      "uitw": [
+       "Niet waar. Materiële behoeften kun je in geld uitdrukken; immateriële behoeften (zoals liefde, vriendschap en gezondheid) kun je niet kopen of vastpakken.",
+       "Materiële behoeften kun je aanraken en in geld uitdrukken. Immateriële behoeften zijn niet zichtbaar en niet te koop."
+      ]
+     }
+    ],
+    "p": 4
+   },
+   {
+    "nr": 4,
+    "titel": "Op je bankrekening",
+    "tekst": "In de tabel staan drie rekeningen. Bij elke rekening ontbreekt één bedrag (…….).",
+    "delen": [
+     {
+      "id": "a",
+      "v": "Vul de drie ontbrekende bedragen in de tabel in.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         367.15
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Rij 1: nieuw saldo"
+       },
+       {
+        "type": "num",
+        "ans": [
+         940.0
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Rij 2: oud saldo"
+       },
+       {
+        "type": "num",
+        "ans": [
+         56.2
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Rij 3: bij"
+       }
+      ],
+      "uitw": [
+       "Rij 1 (nieuw saldo): €420,50 + €75,00 − €128,35 = €367,15",
+       "Rij 2 (oud saldo): €1.054,20 + €95,80 − €210,00 = €940,00",
+       "Rij 3 (bij): −€21,40 − €72,40 + €150,00 = €56,20",
+       "Nieuw saldo = oud saldo + ontvangsten − uitgaven. Bij rij 1 reken je vooruit. Bij rij 2 en 3 reken je terug in de tijd: + wordt − en − wordt +. Controleer door vooruit te rekenen: €940,00 + €210,00 − €95,80 = €1.054,20 en €72,40 + €56,20 − €150,00 = −€21,40."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Het nieuwe saldo in rij 3 is negatief. Hoe heet dit? Noem één ding dat de rekeninghouder kan doen om weer een positief saldo te krijgen.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "B4b",
+        "p": 1,
+        "label": "Hoe heet dit, en wat kan de rekeninghouder doen?",
+        "v": "Het nieuwe saldo in rij 3 is negatief. Hoe heet dit? Noem één ding dat de rekeninghouder kan doen om weer een positief saldo te krijgen.",
+        "model": "Een tekort (hij staat rood). Bijvoorbeeld: meer ontvangen (inkomsten) of minder uitgeven.",
+        "g": [
+         {
+          "t": "‘tekort’ (rood staan) met één juiste oplossing: meer ontvangen of minder uitgeven",
+          "p": 1
+         }
+        ],
+        "h": [
+         "E2H1"
+        ]
+       }
+      ],
+      "uitw": [
+       "Een tekort (hij staat rood).",
+       "Bijvoorbeeld: meer ontvangen (inkomsten) of minder uitgeven.",
+       "Een positief saldo is een tegoed, een negatief saldo een tekort. Het saldo stijgt weer als er meer binnenkomt of als je minder uitgeeft."
+      ]
+     }
+    ],
+    "p": 4,
+    "tabel": [
+     [
+      "Rij",
+      "Oud saldo",
+      "Bij",
+      "Af",
+      "Nieuw saldo"
+     ],
+     [
+      "1",
+      "€420,50",
+      "€75,00",
+      "€128,35",
+      "€ .............."
+     ],
+     [
+      "2",
+      "€ ..............",
+      "€210,00",
+      "€95,80",
+      "€1.054,20"
+     ],
+     [
+      "3",
+      "€72,40",
+      "€ ..............",
+      "€150,00",
+      "−€21,40"
+     ]
+    ]
+   },
+   {
+    "nr": 5,
+    "titel": "Rekenen met procenten",
+    "tekst": "Schrijf bij elke vraag je berekening op. Rond af zoals je geleerd hebt.",
+    "delen": [
+     {
+      "id": "a",
+      "v": "In klas 2C zitten 28 leerlingen. Elf van hen fietsen naar school. Hoeveel procent van de klas fietst naar school?",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         39.3
+        ],
+        "p": 2,
+        "eenh": "%",
+        "tol": 0.05,
+        "label": "Percentage"
+       }
+      ],
+      "uitw": [
+       "(11 ÷ 28) × 100 = 39,285…",
+       "≈ 39,3%",
+       "Je berekent ‘iets van iets’: het deel (11) gedeeld door het geheel (28), keer 100. Het tweede cijfer achter de komma is een 8, dus je rondt naar boven af."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Een broodje in de kantine kostte vorig jaar €2,40 en kost nu €2,76. Met hoeveel procent is de prijs gestegen?",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         15
+        ],
+        "p": 2,
+        "eenh": "%",
+        "tol": 0.05,
+        "label": "Stijging in procenten"
+       }
+      ],
+      "uitw": [
+       "(2,76 − 2,40) ÷ 2,40 × 100 = 0,36 ÷ 2,40 × 100 = 15%",
+       "De prijs is met 15% gestegen.",
+       "Voor een stijging of daling reken je (nieuw − oud) ÷ oud × 100. De uitkomst is positief, dus het is een stijging."
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Mila verdient €9,80 per uur en krijgt 5% opslag (loonsverhoging). Wat is haar nieuwe uurloon?",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         0.49
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Extra per uur"
+       },
+       {
+        "type": "num",
+        "ans": [
+         10.29
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Nieuw uurloon"
+       }
+      ],
+      "uitw": [
+       "(5 ÷ 100) × 9,80 = €0,49 extra",
+       "€9,80 + €0,49 = €10,29 per uur",
+       "Een percentage van een bedrag in euro’s reken je uit met percentage ÷ 100 × totaal. Dat is het extra bedrag; het nieuwe uurloon krijg je door dat bij het oude uurloon op te tellen."
+      ]
+     }
+    ],
+    "p": 6
+   },
+   {
+    "nr": 6,
+    "titel": "Wie verdient het meest?",
+    "tekst": "Daniël krijgt elke twee weken €437,60 uitbetaald. Lisa krijgt elke maand €960,00.",
+    "delen": [
+     {
+      "id": "a",
+      "v": "Wie verdient per maand het meest? Laat je berekening zien.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         948.13,
+         948.14
+        ],
+        "p": 2,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Daniël per maand"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Daniël",
+         "Lisa"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Wie verdient per maand het meest?"
+       }
+      ],
+      "uitw": [
+       "Daniël per jaar: €437,60 × 26 = €11.377,60",
+       "Daniël per maand: €11.377,60 ÷ 12 = €948,13",
+       "Lisa verdient het meest (€960,00 − €948,13 = €11,87 per maand meer).",
+       "Een jaar heeft 26 periodes van twee weken en 12 maanden. Wie €437,60 × 2 = €875,20 doet, denkt ten onrechte dat Lisa veel meer verdient."
+      ]
+     }
+    ],
+    "p": 3
+   },
+   {
+    "nr": 7,
+    "titel": "Sem en de skins",
+    "tekst": "Sem (13) gamet graag. Bijna alle jongens uit zijn klas kopen skins in hun favoriete game. Op YouTube laat zijn favoriete gamer elke week een nieuwe skin zien. Sem krijgt €8 zakgeld per week. Zijn opa (72) vindt het onzin.",
+    "delen": [
+     {
+      "id": "a",
+      "v": "Sem wordt op twee manieren beïnvloed om skins te willen kopen. Noem die twee manieren en leg bij allebei uit hoe dat gebeurt.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "B7a",
+        "p": 2,
+        "label": "Twee manieren van beïnvloeding",
+        "v": "Sem (13) gamet graag. Bijna alle jongens uit zijn klas kopen skins in hun favoriete game. Op YouTube laat zijn favoriete gamer elke week een nieuwe skin zien. Sem wordt op twee manieren beïnvloed om skins te willen kopen. Noem die twee manieren en leg bij allebei uit hoe dat gebeurt.",
+        "model": "Zijn klasgenoten/vrienden: iedereen koopt ze en Sem wil erbij horen (sociale beïnvloeding). Reclame/YouTube: de gamer laat elke week een nieuwe skin zien, waardoor Sem ze ook wil hebben.",
+        "g": [
+         {
+          "t": "klasgenoten/vrienden: iedereen koopt ze en Sem wil erbij horen, met uitleg",
+          "p": 1
+         },
+         {
+          "t": "reclame/YouTube/media: de gamer laat elke week een nieuwe skin zien, met uitleg",
+          "p": 1
+         }
+        ],
+        "h": [
+         "E2H1"
+        ]
+       }
+      ],
+      "uitw": [
+       "Zijn klasgenoten/vrienden: iedereen koopt ze en Sem wil erbij horen (sociale beïnvloeding).",
+       "Reclame/YouTube: de gamer laat elke week een nieuwe skin zien, waardoor Sem ze ook wil hebben.",
+       "Wat je koopt wordt beïnvloed door je omgeving (wat dragen en doen je vrienden) en door reclame in verschillende media."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "De behoeften van Sem en zijn opa zijn heel verschillend. Noem twee dingen waardoor de behoeften van mensen verschillen.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "B7b",
+        "p": 2,
+        "label": "Waardoor behoeften verschillen",
+        "v": "Sem (13) wil skins voor zijn game. Zijn opa (72) vindt het onzin. De behoeften van Sem en zijn opa zijn heel verschillend. Noem twee dingen waardoor de behoeften van mensen verschillen.",
+        "model": "Twee van: leeftijd, hoeveel geld je kunt uitgeven (budget), smaak/hobby’s en interesses, waar je woont, gender, wat vrienden dragen of doen.",
+        "g": [
+         {
+          "t": "een juiste factor (leeftijd, budget, smaak/hobby's, woonplaats, gender, vrienden)",
+          "p": 1
+         },
+         {
+          "t": "een tweede juiste factor",
+          "p": 1
+         }
+        ],
+        "h": [
+         "E2H1"
+        ]
+       }
+      ],
+      "uitw": [
+       "Twee van: leeftijd, hoeveel geld je kunt uitgeven (budget), smaak/hobby’s en interesses, waar je woont, gender, wat vrienden dragen of doen.",
+       "Niet iedereen heeft dezelfde behoeften. Dat hangt onder andere af van je leeftijd, je budget, je smaak en je omgeving."
+      ]
+     }
+    ],
+    "p": 4
+   },
+   {
+    "nr": 8,
+    "titel": "Een bakkerij",
+    "tekst": "Bakkerij De Korenbloem maakt broden en taarten en verkoopt ze in haar eigen winkel.",
+    "delen": [
+     {
+      "id": "a",
+      "v": "Is de bakkerij een producent of een consument? Leg uit waarom de bakkerij en haar klanten elkaar nodig hebben.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "B8a",
+        "p": 2,
+        "label": "Producent of consument?",
+        "v": "Bakkerij De Korenbloem maakt broden en taarten en verkoopt ze in haar eigen winkel. Is de bakkerij een producent of een consument? Leg uit waarom de bakkerij en haar klanten elkaar nodig hebben.",
+        "model": "Producent: de bakkerij maakt en verkoopt producten om geld te verdienen. Klanten willen in hun behoeften voorzien en de bakkerij wil geld verdienen, dus ze hebben elkaar nodig.",
+        "g": [
+         {
+          "t": "producent, met reden (maakt en verkoopt producten om geld te verdienen)",
+          "p": 1
+         },
+         {
+          "t": "uitleg: klanten willen in hun behoeften voorzien en de bakkerij wil geld verdienen, dus ze hebben elkaar nodig",
+          "p": 1
+         }
+        ],
+        "h": [
+         "E2H1"
+        ]
+       }
+      ],
+      "uitw": [
+       "Producent: de bakkerij maakt en verkoopt producten om geld te verdienen.",
+       "Klanten willen in hun behoeften voorzien en de bakkerij wil geld verdienen, dus ze hebben elkaar nodig.",
+       "Consumenten willen in hun behoeften voorzien, producenten willen geld verdienen. Dat je elkaar nodig hebt en moet samenwerken is een kenmerk van economie."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Ook producenten moeten keuzes maken. Noem twee keuzes waar de bakkerij mee te maken heeft.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "B8b",
+        "p": 2,
+        "label": "Twee keuzes van de bakkerij",
+        "v": "Bakkerij De Korenbloem maakt broden en taarten en verkoopt ze in haar eigen winkel. Ook producenten moeten keuzes maken. Noem twee keuzes waar de bakkerij mee te maken heeft.",
+        "model": "Twee van: wat ze willen verkopen; voor welke prijs ze het verkopen; of ze het verkopen in een winkel of via een webshop.",
+        "g": [
+         {
+          "t": "een juiste keuze: wat ze verkopen, voor welke prijs of hoe (winkel of webshop)",
+          "p": 1
+         },
+         {
+          "t": "een tweede juiste keuze",
+          "p": 1
+         }
+        ],
+        "h": [
+         "E2H1"
+        ]
+       }
+      ],
+      "uitw": [
+       "Twee van: wat ze willen verkopen; voor welke prijs ze het verkopen; of ze het verkopen in een winkel of via een webshop.",
+       "Niet alleen consumenten maar ook producenten moeten kiezen: wat verkopen ze, voor welke prijs en op welke manier?"
+      ]
+     }
+    ],
+    "p": 4
+   }
+  ]
+ },
+ "toetsen": {
+  "t1": {
+   "n": 1,
+   "t": "oefentoets versie A",
+   "sub": "Versie A",
+   "min": 40,
+   "mc": "mc_a",
+   "open": null,
+   "rek": "rek_a"
+  },
+  "t2": {
+   "n": 2,
+   "t": "oefentoets versie B",
+   "sub": "Versie B",
+   "min": 40,
+   "mc": "mc_b",
+   "open": null,
+   "rek": "rek_b"
+  }
+ },
+ "VERS": [
+  {
+   "n": 1,
+   "min": 40,
+   "pts": 45
+  },
+  {
+   "n": 2,
+   "min": 40,
+   "pts": 45
+  }
+ ]
+}
