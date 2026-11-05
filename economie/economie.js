@@ -85,20 +85,57 @@ function rijk(p,j,n,c){
     var x=D.pars.filter(function(y){return y.id===Q.get("par");})[0];
     document.body.className="rijk";
     if(x)paragraaf(p,j,n,c,D,x);else hoofdpagina(p,j,n,c,D);
+    if(x&&D.deck[x.id])rDeck($("rdeck"),c.map+"/slides/"+x.id+"/",D.deck[x.id],D.steps[x.id]||{},"deck-"+c.map+"-"+x.id);
     rijkGedrag(D,!!x);
   }).catch(function(){document.body.innerHTML='<main class="wrap"><p>De pagina kon niet laden. Probeer het opnieuw.</p></main>';});}
 function rUrl(p,id){return "h.html?p="+encodeURIComponent(p.pad)+(id?"&par="+id:"");}
 function rSrc(c,f){return "img/"+c.map+"/"+f+".jpg";}
 /* voortgang staat onder dezelfde sleutel als in de oefenomgeving, zodat afvinken op beide plekken meetelt */
 function rStaat(D){try{return JSON.parse(localStorage.getItem(D.key))||{};}catch(e){return {};}}
-function rTel(D,x){var g=rStaat(D).goals||{};return x.gi.filter(function(i){return g[x.id+"-"+i];}).length;}
-function rTags(D,x){var nb=D.cards.filter(function(k){return k[0]===x.id;}).length,nf=D.films.filter(function(f){return f.par===x.id;}).length,d=rTel(D,x);
-  return [nb+" begrippen"].concat(nf?[nf+" filmpje"+(nf>1?"s":"")]:[]).concat([(d?d+" van ":"")+x.g.length+" leerdoelen"]);}
+function rTel(D,x){var q=rStaat(D).qs||{};return x.q.filter(function(_,i){return q[x.id+"-"+i];}).length;}
+function rTags(D,x){var nf=D.films.filter(function(f){return f.par===x.id;}).length,d=rTel(D,x);
+  return [(d?d+" van ":"")+x.q.length+" vragen"].concat(nf?[nf+" filmpje"+(nf>1?"s":"")]:[]);}
 function rSpans(a){return a.map(function(g){return '<span>'+esc(g)+'</span>';}).join("");}
 function rNav(links,cta){return '<header class="rnav" id="rnav"><div class="wrap"><a class="brand" href="../index.html" aria-label="Meneer Boersen, naar de homepage"><b class="bfull">Meneer <span>Boersen</span></b><b class="bshort" aria-hidden="true">M<span>B</span></b></a><nav class="rlinks" aria-label="Menu">'+links.map(function(l){return '<a href="'+l[0]+'"'+(l[2]?' aria-current="page"':'')+'>'+esc(l[1])+'</a>';}).join("")+'<a class="cta" href="'+cta+'">Oefenomgeving</a></nav></div></header>';}
 function rGolf(m){return '<svg class="rwave'+m+'" viewBox="0 0 1200 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0,36 C200,70 400,4 600,30 C800,56 1000,12 1200,40 L1200,70 L0,70 Z"/></svg>';}
 function rVoet(j,n){var w=esc(j.titel.toLowerCase()+" "+n.titel.toLowerCase());return '<footer class="rfoot"><div class="wrap"><span>Meneer Boersen · Vellesan College · Economie '+w+'</span><span>Beelden: AI-illustraties, gemaakt door de docent</span></div></footer>';}
 function rGal(c,x){return '<div class="rgal n'+x.imgs.length+' io" style="--d:1">'+x.imgs.map(function(b){return '<a href="'+rSrc(c,b[0])+'" target="_blank" rel="noopener"><img src="'+rSrc(c,b[0])+'" alt="" loading="lazy"><span>'+esc(b[1])+'</span></a>';}).join("")+'</div>';}
+
+/* dia-viewer met klikstappen, overgenomen uit app.html (mountDeck). STEPS: per dia het aantal klikstappen k;
+   stap s<k = NN-s.jpg (toestand na s klikken), stap k = de volledige dia NN.jpg. Gemaakt met tools/dias/stappen.py. */
+function rDeck(el,dir,N,STEPS,key){
+  var i=1,s=0,tok=0;try{i=Math.min(Math.max(1,+localStorage.getItem(key)||1),N);}catch(e){}
+  function K(n){return STEPS[n]||0;}
+  function src(n,st){var nn=(n<10?"0":"")+n;return dir+nn+(st<K(n)?"-"+st:"")+".jpg";}
+  el.innerHTML='<div class="sdeck" tabindex="0" aria-roledescription="presentatie" aria-label="Presentatie">'+
+   '<div class="deck-stage"><img alt=""><img alt=""><button class="deck-nav l" aria-label="Vorige"><span>‹</span></button><button class="deck-nav r" aria-label="Volgende"><span>›</span></button></div>'+
+   '<div class="deck-bar"><span class="cnt"></span><div class="deck-prog"><i></i></div><button data-act="fs">⛶ Schermvullend</button></div>'+
+   '<div class="deck-thumbs">'+Array.from({length:N},function(_,k){return '<button data-n="'+(k+1)+'" aria-label="Dia '+(k+1)+'"><img loading="lazy" alt="" src="'+src(k+1,K(k+1))+'"></button>';}).join("")+'</div></div>';
+  var d=el.querySelector(".sdeck"),stg=d.querySelector(".deck-stage"),imgs=stg.querySelectorAll("img"),front=0,cnt=d.querySelector(".cnt"),bar=d.querySelector(".deck-prog i"),th=d.querySelectorAll(".deck-thumbs button"),eerst=true;
+  function go(n,st,dir2){
+    n=Math.min(Math.max(1,n),N);st=Math.min(Math.max(0,st),K(n));
+    var same=n===i&&!eerst,nextImg=imgs[1-front],curImg=imgs[front],t=++tok;eerst=false;
+    stg.classList.toggle("stp",same);
+    nextImg.style.transition="none";nextImg.className="";void nextImg.offsetWidth;nextImg.style.transition="";
+    nextImg.onload=function(){if(t!==tok)return;nextImg.className="on";curImg.className=same?"under":(dir2<0?"":"prev-out");front=1-front;};
+    nextImg.src=src(n,st);nextImg.alt="Dia "+n+" van "+N+(K(n)?", stap "+(st+1)+" van "+(K(n)+1):"");
+    i=n;s=st;cnt.textContent=n+" / "+N;bar.style.width=(n/N*100)+"%";
+    th.forEach(function(b){b.setAttribute("aria-current",String(+b.dataset.n===n));});
+    var tb=th[n-1];if(tb&&!same)tb.parentNode.scrollTo({left:tb.offsetLeft-tb.parentNode.clientWidth/2,behavior:"smooth"});
+    var pre=new Image();pre.src=st<K(n)?src(n,st+1):(n<N?src(n+1,0):"");
+    try{localStorage.setItem(key,n);}catch(e){}
+  }
+  function next(){if(s<K(i))go(i,s+1,1);else if(i<N)go(i+1,0,1);}
+  function prev(){if(s>0)go(i,s-1,-1);else if(i>1)go(i-1,K(i-1),-1);}
+  d.querySelector(".deck-nav.l").onclick=prev;
+  d.querySelector(".deck-nav.r").onclick=next;
+  d.querySelector(".deck-thumbs").onclick=function(e){var b=e.target.closest("[data-n]");if(b)go(+b.dataset.n,0,+b.dataset.n>i?1:-1);};
+  d.querySelector('[data-act="fs"]').onclick=function(){if(document.fullscreenElement)document.exitFullscreen();else if(d.requestFullscreen)d.requestFullscreen().catch(function(){});};
+  d.addEventListener("keydown",function(e){if(e.key==="ArrowRight"||e.key===" "||e.key==="PageDown"){e.preventDefault();next();}else if(e.key==="ArrowLeft"||e.key==="PageUp"){e.preventDefault();prev();}else if(e.key==="Home")go(1,0,-1);else if(e.key==="End")go(N,K(N),1);});
+  var sx=null;
+  stg.addEventListener("pointerdown",function(e){sx=e.clientX;});
+  stg.addEventListener("pointerup",function(e){if(sx===null)return;var dx=e.clientX-sx;sx=null;if(Math.abs(dx)>40){if(dx<0)next();else prev();}});
+  go(i,0,1);}
 
 function hoofdpagina(p,j,n,c,D){
   var t=titel(p),bn=jaarUrl(j,n),oef=D.oefen,w=esc(j.titel.toLowerCase()+" "+n.titel.toLowerCase());
@@ -107,7 +144,7 @@ function hoofdpagina(p,j,n,c,D){
   document.title=c.kop.join("")+" · Economie "+naam(j,n);
   document.body.innerHTML=rNav([["index.html","Economie"],[bn,j.titel]],oef)
   +'<section class="rhero"><div class="rhero-img" id="rimg" style="background-image:url('+rSrc(c,c.hero)+')" role="img" aria-label="'+esc(c.alt)+'"></div><div class="wrap rhero-in"><div class="eyebrow rv" style="--i:0;color:var(--coral)">Economie · '+esc(naam(j,n))+' · '+esc(t.toLowerCase())+'</div><h1 class="rv" style="--i:1">'+esc(c.kop[0])+'<em>'+esc(c.kop[1])+'</em></h1><p class="rv" style="--i:2">'+esc(c.intro)+'</p><div class="rbtns rv" style="--i:3"><a class="rbtn primary" href="'+rUrl(p,D.pars[0].id)+'">Begin met '+D.pars[0].id+' <span class="arr">→</span></a><a class="rbtn ghost" href="'+oef+'">Naar de oefenomgeving</a></div></div><div class="rscroll" aria-hidden="true"></div></section>'
-  +'<section class="rblk" id="paragrafen"><div class="wrap"><div class="rhead io"><div><div class="eyebrow">'+esc(t)+' · '+esc(c.kop.join(""))+'</div><h2>Vier paragrafen over jouw geld.</h2></div><p>Open een paragraaf voor de PowerPoint, de filmpjes, de begrippen en je leerdoelen. Oefenen doe je daarna in de oefenomgeving.</p></div><div class="rchaps">'+D.pars.map(kaart).join("")+'</div></div></section>'
+  +'<section class="rblk" id="paragrafen"><div class="wrap"><div class="rhead io"><div><div class="eyebrow">'+esc(t)+' · '+esc(c.kop.join(""))+'</div><h2>Vier paragrafen over jouw geld.</h2></div><p>Open een paragraaf voor de PowerPoint, de filmpjes en de vragen die je moet kunnen beantwoorden. Oefenen doe je daarna in de oefenomgeving.</p></div><div class="rchaps">'+D.pars.map(kaart).join("")+'</div></div></section>'
   +rGolf(" top")+'<section class="rblk rapp" id="oefenen"><div class="wrap"><div class="rhead io"><div><div class="eyebrow">Oefenomgeving</div><h2>Oefen tot je het kunt.</h2></div><p>Alles om hoofdstuk 2 te oefenen op één plek. Je voortgang wordt op dit apparaat bewaard.</p></div><div class="roef">'
   +tegels.map(function(g,i){return '<a class="io" style="--d:'+i+'" href="'+oef+g[0]+'"><b>'+(i+1)+'</b><h3>'+esc(g[1])+'</h3><p>'+esc(g[2])+'</p><span class="arr">→</span></a>';}).join("")
   +'</div><div class="rbtns" style="justify-content:center;margin-top:30px"><a class="rbtn primary" href="'+oef+'">Naar de oefenomgeving <span class="arr">→</span></a></div></div></section>'+rGolf("")
@@ -115,8 +152,7 @@ function hoofdpagina(p,j,n,c,D){
 
 /* leeromgeving: alles om de stof van één paragraaf te leren; oefenen gebeurt in de oefenomgeving */
 function paragraaf(p,j,n,c,D,x){
-  var t=titel(p),oef=D.oefen,k=c.kleur[x.id][1],i=D.pars.indexOf(x),vor=D.pars[i-1],na=D.pars[i+1],S=rStaat(D),go=S.goals||{},qs=S.qs||{},
-  beg=D.cards.filter(function(b){return b[0]===x.id;}),films=D.films.filter(function(f){return f.par===x.id;}),d=rTel(D,x),
+  var t=titel(p),oef=D.oefen,k=c.kleur[x.id][1],i=D.pars.indexOf(x),vor=D.pars[i-1],na=D.pars[i+1],S=rStaat(D),qs=S.qs||{},films=D.films.filter(function(f){return f.par===x.id;}),d=rTel(D,x),
   doel=function(f){return f.lab==="reken"?"#lab/reken/"+f.mode:"#lab/quiz/"+(f.qpar||x.id);},
   film=function(f){var id=f.yt||f.film;return '<div class="rfilm io"><div class="yt"><img src="'+(f.yt?"https://i.ytimg.com/vi/"+esc(id)+"/hqdefault.jpg":"https://drive.google.com/thumbnail?id="+esc(id)+"&sz=w1200")+'" alt="" loading="lazy" onerror="this.remove()"><button '+(f.yt?'data-yt':'data-film')+'="'+esc(id)+'" aria-label="Speel film af: '+esc(f.t)+'"><span></span></button></div><div class="rfilm-tx"><div class="eyebrow">'+esc(f.k)+'</div><h3>'+esc(f.t)+'</h3><p>'+esc(f.d)+'</p><a class="rlink" href="'+oef+doel(f)+'">'+esc(f.btn)+' →</a></div></div>';},
   mat=x.x.map(function(m){var M=D.mat[m];return M[1].map(function(l){return '<a class="file" href="https://drive.google.com/file/d/'+esc(l[1])+'/view" target="_blank" rel="noopener"><span class="ic '+(/powerpoint/i.test(l[0])?"ppt\">PPT":"doc\">DOC")+'</span><span>'+esc(M[0])+'<small>'+esc(l[0])+' · opent in Google Drive</small></span></a>';}).join("");}).join("");
@@ -124,13 +160,11 @@ function paragraaf(p,j,n,c,D,x){
   document.body.innerHTML=rNav([[rUrl(p),t],[rUrl(p,x.id),"Leeromgeving",1]],oef)
   /* de band van de paragraaf, zoals op de hoofdstukpagina */
   +'<section class="rpar rtop" style="--k:'+k+'"><div class="wrap"><div class="rpills"><div class="eyebrow">Leeromgeving · '+esc(t)+' · '+esc(c.kop.join(""))+'</div><nav aria-label="Paragrafen">'+D.pars.map(function(y){return '<a href="'+rUrl(p,y.id)+'"'+(y===x?' aria-current="page"':'')+' style="--k:'+c.kleur[y.id][1]+'">'+y.id+'<span> '+esc(y.t)+'</span></a>';}).join("")+'</nav></div>'
-  +'<div class="rpar-in"><div class="io"><div class="rnum">'+x.id+'</div><div class="eyebrow">Paragraaf '+x.id+'</div><h1>'+esc(x.t)+'</h1><p class="rpar-sum">'+esc(x.sum)+'</p><div class="rqh">Kun jij dit beantwoorden?</div><ul class="rq">'+x.q.slice(0,4).map(function(q){return '<li>'+esc(q)+'</li>';}).join("")+'</ul><div class="rtags">'+rSpans(rTags(D,x))+'</div><div class="rbtns"><a class="rbtn primary" href="'+oef+'#lab/quiz/'+x.id+'">Oefen '+x.id+' <span class="arr">→</span></a><a class="rbtn line" href="#lesstof">Naar de lesstof ↓</a></div></div>'+rGal(c,x)+'</div></div></section>'
-  +'<section class="rblk" id="lesstof"><div class="wrap"><div class="rhead io"><div><div class="eyebrow">Lesstof</div><h2>De PowerPoint van '+x.id+'.</h2></div><p>Blader door de dia\'s. Wil je hem groter? Open hem in Google Drive.</p></div><div class="rppt io"><iframe src="https://drive.google.com/file/d/'+esc(x.file)+'/preview" allow="autoplay" loading="lazy" title="PowerPoint '+x.id+' '+esc(x.t)+'"></iframe></div><div class="files" style="margin-top:14px"><a class="file" href="https://drive.google.com/file/d/'+esc(x.file)+'/view" target="_blank" rel="noopener"><span class="ic ppt">PPT</span><span>PowerPoint '+x.id+'<small>Open in Google Drive</small></span></a>'+mat+'</div></div></section>'
+  +'<div class="rpar-in"><div class="io"><div class="rnum">'+x.id+'</div><div class="eyebrow">Paragraaf '+x.id+'</div><h1>'+esc(x.t)+'</h1><p class="rpar-sum">'+esc(x.sum)+'</p><div class="rqh">Kun jij dit beantwoorden?</div><ul class="rq">'+x.q.slice(0,4).map(function(q){return '<li>'+esc(q)+'</li>';}).join("")+'</ul><div class="rtags">'+rSpans(rTags(D,x))+'</div><div class="rbtns"><a class="rbtn primary" href="'+oef+'#lab/quiz/'+x.id+'">Oefen '+x.id+' <span class="arr">→</span></a><a class="rbtn line" href="#lesstof">Naar de PowerPoint ↓</a></div></div>'+rGal(c,x)+'</div></div></section>'
+  +'<section class="rblk" id="lesstof"><div class="wrap"><div class="rhead io"><div><div class="eyebrow">Lesstof</div><h2>De PowerPoint van '+x.id+'.</h2></div><p>'+(D.deck[x.id]?'Klik of tik door de presentatie, met dezelfde animaties als in de les. Pijltjestoetsen werken ook.':'Blader door de dia\'s. Wil je hem groter? Open hem in Google Drive.')+'</p></div>'+(D.deck[x.id]?'<div id="rdeck" class="io"></div>':'<div class="rppt io"><iframe src="https://drive.google.com/file/d/'+esc(x.file)+'/preview" allow="autoplay" loading="lazy" title="PowerPoint '+x.id+' '+esc(x.t)+'"></iframe></div>')+'<div class="files" style="margin-top:14px"><a class="file" href="https://drive.google.com/file/d/'+esc(x.file)+'/view" target="_blank" rel="noopener"><span class="ic ppt">PPT</span><span>PowerPoint '+x.id+'<small>Open in Google Drive</small></span></a>'+mat+'</div></div></section>'
   +(films.length?'<section class="rblk ralt"><div class="wrap"><div class="rhead io"><div><div class="eyebrow">Filmpjes</div><h2>Kijk en luister.</h2></div><p>Bekijk de uitleg en oefen daarna meteen hetzelfde in de oefenomgeving.</p></div><div class="rfilms">'+films.map(film).join("")+'</div></div></section>':'')
-  +'<section class="rblk"><div class="wrap"><div class="rhead io"><div><div class="eyebrow">Begrippen</div><h2>'+beg.length+' begrippen om te kennen.</h2></div><p>Lees ze goed. Kun je ze uitleggen zonder te kijken? Oefen ze met flash cards.</p></div><div class="rbeg">'+beg.map(function(b,m){return '<div class="io" style="--k:'+k+';--d:'+(m%4)+'"><h3>'+esc(b[1])+'</h3><p>'+esc(b[2])+'</p>'+(b[3]?'<small><b>Voorbeeld</b> '+esc(b[3])+'</small>':'')+'</div>';}).join("")+'</div><div class="rbtns" style="margin-top:22px"><a class="rbtn primary" href="'+oef+'#lab/begrippen/'+x.id+'">Oefen de begrippen <span class="arr">→</span></a></div></div></section>'
-  +'<section class="rblk ralt" id="leerdoelen"><div class="wrap"><div class="rhead io"><div><div class="eyebrow">Leerdoelen</div><h2>Wat kun je na '+x.id+'?</h2></div><p>Vink af wat je beheerst. Je voortgang telt ook mee in de oefenomgeving.</p></div><div class="rdoel">'
-  +'<div class="rcard io"><div class="rbar"><i id="rbar" style="width:'+(d/x.g.length*100)+'%;background:'+k+'"></i></div><p class="rbar-tx" id="rbartx">'+d+' van '+x.g.length+' leerdoelen behaald</p><ul class="kunnen">'+x.g.map(function(g,m){var key=x.id+"-"+x.gi[m],af=!!go[key];return '<li'+(af?' class="af"':'')+'><input type="checkbox" id="g'+m+'" data-goal="'+key+'"'+(af?" checked":"")+'><label for="g'+m+'">'+esc(g)+'</label></li>';}).join("")+'</ul></div>'
-  +'<div class="rcard io" style="--d:1"><h3>Kun jij dit beantwoorden?</h3><p class="rbar-tx">Tik op een vraag als je het antwoord weet.</p><div class="rvragen">'+x.q.map(function(q,m){var key=x.id+"-"+m;return '<button class="rvraag'+(qs[key]?" on":"")+'" data-vraag="'+key+'" aria-pressed="'+!!qs[key]+'"><i aria-hidden="true"></i>'+esc(q)+'</button>';}).join("")+'</div></div></div></div></section>'
+  +'<section class="rblk" id="vragen"><div class="wrap"><div class="rhead io"><div><div class="eyebrow">Kun jij dit beantwoorden?</div><h2>Wat moet je weten na '+x.id+'?</h2></div><p>Tik op een vraag als je het antwoord weet. Je voortgang telt ook mee in de oefenomgeving.</p></div>'
+  +'<div class="rcard io"><div class="rbar"><i id="rbar" style="width:'+(d/x.q.length*100)+'%;background:'+k+'"></i></div><p class="rbar-tx" id="rbartx">'+d+' van '+x.q.length+' vragen kun je beantwoorden</p><div class="rvragen">'+x.q.map(function(q,m){var key=x.id+"-"+m;return '<button class="rvraag'+(qs[key]?" on":"")+'" data-vraag="'+key+'" aria-pressed="'+!!qs[key]+'"><i aria-hidden="true"></i>'+esc(q)+'</button>';}).join("")+'</div></div></div></section>'
   +'<section class="rblk rend"><div class="wrap"><div class="eyebrow" style="color:var(--coral)">Klaar met '+x.id+'?</div><h2>Ga oefenen.</h2><p>Oefen de begrippen en sommen van '+x.id+' in de oefenomgeving'+(na?', of ga door met '+na.id+' '+esc(na.t)+'.':'.')+'</p><div class="rbtns"><a class="rbtn primary" href="'+oef+'#lab/quiz/'+x.id+'">Naar de oefenomgeving <span class="arr">→</span></a>'+(na?'<a class="rbtn ghost" href="'+rUrl(p,na.id)+'">Volgende: '+na.id+' →</a>':'<a class="rbtn ghost" href="'+rUrl(p)+'">Terug naar het hoofdstuk</a>')+'</div>'+(vor?'<p style="margin:22px auto 0"><a class="rterug" href="'+rUrl(p,vor.id)+'">← Vorige: '+vor.id+' '+esc(vor.t)+'</a></p>':'')+'</div></section>'+rVoet(j,n);}
 
 function rijkGedrag(D,vast){
@@ -143,11 +177,10 @@ function rijkGedrag(D,vast){
   if(!RM&&matchMedia("(hover:hover) and (pointer:fine)").matches)document.querySelectorAll(".rchap").forEach(function(k){
     k.addEventListener("pointermove",function(e){var r=k.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;k.classList.add("tilting");k.style.setProperty("--ry",((x-.5)*7)+"deg");k.style.setProperty("--rx",((.5-y)*6)+"deg");k.style.setProperty("--gx",(x*100)+"%");k.style.setProperty("--gy",(y*100)+"%");});
     k.addEventListener("pointerleave",function(){k.classList.remove("tilting");k.style.setProperty("--ry","0deg");k.style.setProperty("--rx","0deg");});});
-  /* leerdoelen en vragen afvinken: lezen en schrijven in dezelfde opslag als de oefenomgeving */
+  /* vragen afvinken: lezen en schrijven in dezelfde opslag als de oefenomgeving */
   function zet(veld,key,aan){var S=rStaat(D);S[veld]=S[veld]||{};if(aan)S[veld][key]=1;else delete S[veld][key];try{localStorage.setItem(D.key,JSON.stringify(S));}catch(e){}}
-  document.addEventListener("change",function(e){var c=e.target.closest("[data-goal]");if(!c)return;zet("goals",c.dataset.goal,c.checked);c.closest("li").classList.toggle("af",c.checked);
-    var l=document.querySelectorAll("[data-goal]"),a=document.querySelectorAll("[data-goal]:checked").length;$("rbar").style.width=(a/l.length*100)+"%";$("rbartx").textContent=a+" van "+l.length+" leerdoelen behaald";});
-  document.addEventListener("click",function(e){var b=e.target.closest("[data-vraag]");if(!b)return;var aan=!b.classList.contains("on");zet("qs",b.dataset.vraag,aan);b.classList.toggle("on",aan);b.setAttribute("aria-pressed",aan);});}
+  document.addEventListener("click",function(e){var b=e.target.closest("[data-vraag]");if(!b)return;var aan=!b.classList.contains("on");zet("qs",b.dataset.vraag,aan);b.classList.toggle("on",aan);b.setAttribute("aria-pressed",aan);
+    var l=document.querySelectorAll("[data-vraag]").length,a=document.querySelectorAll("[data-vraag].on").length;$("rbar").style.width=(a/l*100)+"%";$("rbartx").textContent=a+" van "+l+" vragen kun je beantwoorden";});}
 
 /* ---------- hoofdstuk ---------- */
 var K;try{K=JSON.parse(localStorage.getItem("gv-eco-kunnen"))||{};}catch(e){K={};}

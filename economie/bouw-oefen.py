@@ -14,7 +14,8 @@ CONFIG = {
         hoofdstuk="Hoofdstuk 2",
         eyebrow="Economie · jaar 2 mavo · hoofdstuk 2",
         kop=["Jij en je ", "geld"],
-        hero="boodschappen",                # img/<naam>/<hero>.jpg
+        nr="H2",
+        beelden=["boodschappen", "lenen-vergelijken", "polis-tekenen"],  # collage in de kop: img/<naam>/<beeld>.jpg
         toetsen=("h2", "§2.1 en §2.2"),     # oefentoetsen/oefentoets-<h2>-<n>-ster.docx
     ),
 }
@@ -63,7 +64,9 @@ for p in PARS:
     pars.append(dict(id=p["id"], t=p["t"], sum=p["sum"], file=p["file"], x=p["x"], q=p["q"],
                      imgs=[[os.path.basename(i[0])[:-4], i[1]] for i in p.get("imgs", [])],
                      g=[GOALS[p["id"]][i] for i in gi], gi=gi))
-data = dict(key=key, oefen=name + "/oefen.html", pars=pars, cards=grab("CARDS"), films=grab("FILMS"), mat=grab("MAT"))
+# dia's als klikbare presentatie: slides/deck.json ({"2.1": aantal dia's}) en slides/steps.json (klikstappen), zie tools/dias/README.md
+sl = lambda f: json.load(open(os.path.join(OUT, "slides", f), encoding="utf-8")) if os.path.exists(os.path.join(OUT, "slides", f)) else {}
+data = dict(key=key, oefen=name + "/oefen.html", pars=pars, cards=grab("CARDS"), films=grab("FILMS"), mat=grab("MAT"), deck=sl("deck.json"), steps=sl("steps.json"))
 os.makedirs(OUT, exist_ok=True)
 json.dump(data, open(os.path.join(OUT, "data.json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
 
@@ -88,11 +91,13 @@ tabs = tab("start").replace("<span>Start</span>", "<span>Overzicht</span>") + ta
 s = rex(s, r'<div class="top">.*?</nav>\s*</div>',
         '<header class="onav"><div class="owrap"><a class="brand" href="%s" aria-label="Meneer Boersen, terug naar het hoofdstuk"><b class="ofull">Meneer <span>Boersen</span></b><b class="oshort" aria-hidden="true">M<span>B</span></b></a>'
         '<nav class="olinks" aria-label="Menu"><a href="%s">%s</a><a href="%s">Leeromgeving</a><a class="cta" href="#" aria-current="page">Oefenomgeving</a></nav></div></header>\n'
-        '<section class="ohero" style="--img:url(../img/%s/%s.jpg)"><div class="owrap ohero-in"><div><div class="oeyebrow">Oefenomgeving · %s</div>'
-        '<h1>%s<em>%s</em></h1><p>Begrippen, rekenen, quiz, games en oefentoetsen met nakijkblad. De PowerPoints, filmpjes en leerdoelen staan in de <a href="%s">leeromgeving</a>.</p></div>'
-        '<div class="prog"><div class="ring" id="ring"><span id="ringTxt">0%%</span></div><div>jouw voortgang<br><b id="progTxt">0 leerdoelen</b></div></div></div></section>\n'
+        '<section class="otop"><div class="owrap"><div class="oeyebrow">Oefenomgeving · %s</div><div class="otop-in"><div>'
+        '<div class="onum">%s</div><h1>%s<em>%s</em></h1><p>Begrippen, rekenen, quiz, games en oefentoetsen met nakijkblad. De PowerPoints en filmpjes staan in de <a href="%s">leeromgeving</a>.</p>'
+        '<div class="prog"><div class="ring" id="ring"><span id="ringTxt">0%%</span></div><div>jouw voortgang<br><b id="progTxt">0 vragen</b></div></div></div>'
+        '<div class="ogal">%s</div></div></div></section>\n'
         '<div class="otabs"><div class="owrap"><nav class="tabs" role="tablist">%s</nav></div></div>'
-        % (TERUG, TERUG, C["hoofdstuk"], LES, name, C["hero"], C["eyebrow"], C["kop"][0], C["kop"][1], LES, tabs))
+        % (TERUG, TERUG, C["hoofdstuk"], LES, C["eyebrow"], C["nr"], C["kop"][0], C["kop"][1], LES,
+           "".join('<img src="../img/%s/%s.jpg" alt="" loading="lazy">' % (name, b) for b in C["beelden"]), tabs))
 s = rep(s, "</main>", '</main>\n<footer class="ofoot"><div class="owrap"><span>Meneer Boersen · Vellesan College · %s</span><span>Je voortgang wordt op dit apparaat bewaard, in deze browser.</span></div></footer>' % C["eyebrow"])
 
 # startpagina: teksten voor een oefenomgeving
@@ -103,6 +108,15 @@ s = rex(s, r'(<div class="card intro">.*?<p>)[^<]*(</p>)',
 s = rex(s, r'<button class="btn" data-go="les" data-par="[\d.]+">(<svg.*?</svg>)Begin met [\d.]+</button>',
         r'<button class="btn" data-go="lab">Start met oefenen</button><button class="btn ghost" data-go="les" data-par="%s">\g<1>Lees %s</button>' % (pars[0]["id"], pars[0]["id"]), groepen=True)
 s = rep(s, "De PowerPoint en je leerdoelen per paragraaf", "De lesstof per paragraaf, in de leeromgeving")
+
+# voortgang telt de kernvragen die in de leeromgeving zijn afgevinkt (S.qs), niet meer de leerdoelen
+s = rep(s, 'function goalCount(id){var p=P(id),d=0;p.gi.forEach(function(gi){if(S.goals[id+"-"+gi])d++;});return d;}',
+        'function goalCount(id){var p=P(id),d=0;p.q.forEach(function(_,i){if(S.qs[id+"-"+i])d++;});return d;}')
+s = rep(s, "t+=p.g.length;d+=goalCount(p.id);", "t+=p.q.length;d+=goalCount(p.id);")
+s = rep(s, 'textContent=x[0]+" van "+x[1]+" leerdoelen";', 'textContent=x[0]+" van "+x[1]+" vragen";')
+s = rep(s, "var d=goalCount(p.id),n=p.g.length||1;", "var d=goalCount(p.id),n=p.q.length||1;")
+s = rep(s, "<span>'+d+' van '+n+' leerdoelen</span>", "<span>'+d+' van '+n+' vragen</span>")
+s = rep(s, 'textContent=t[0]+" van "+t[1]+" leerdoelen";', 'textContent=t[0]+" van "+t[1]+" vragen";')
 
 # naar "les" = naar de leeromgeving; deep links #lab/reken/<mode>, #lab/quiz/<par>, #lab/begrippen/<par>, #toets
 s = rep(s, 'var g=e.target.closest("[data-go]");if(g){if(g.dataset.par)cur=g.dataset.par;show(g.dataset.go);}',
@@ -123,13 +137,20 @@ toMain(true);}
 route();addEventListener("hashchange",route);
 })();""")
 
-# oefentoetsen: de Word-versies (1, 2 en 3 sterren) bovenaan het tabblad
+# oefentoetsen zoals bij Geschiedenis: de digitale toetsen (toets.html, gebouwd door bouw-toets.py uit bron/toetsen.json) als kaarten,
+# op papier de Word-versies en de oude PDF-toets met nakijkblad. Het oude tabblad (PDF, klok, nakijkblad) blijft verborgen staan: de app-code verwijst ernaar.
+TJ = json.load(open(os.path.join(OUT, "bron", "toetsen.json"), encoding="utf-8"))
+kaart = lambda k, t: ('<a class="ovcard" href="toets.html?t=%s"><span class="ster">%s</span><h3>%s</h3><p>%d punten · %d vragen · %d minuten</p><span class="btn">Maak de toets →</span></a>'
+                      % (k, "★" * t["n"], t["t"][0].upper() + t["t"][1:], sum(o["p"] for o in TJ["blokken"][t["rek"]]), len(TJ["blokken"][t["rek"]]), t["min"]))
 t, ov = C["toetsen"]
+papier = " · ".join('<a href="../oefentoetsen/oefentoets-%s-%d-ster.docx" download="Oefentoets %s %d-ster.docx">%d-ster (Word)</a>' % (t, n, t.upper(), n, n) for n in (1, 2, 3))
+papier += "".join(' · <a target="_blank" rel="noopener" href="https://drive.google.com/file/d/%s/view">%s (PDF)</a> met <a target="_blank" rel="noopener" href="https://drive.google.com/file/d/%s/view">nakijkblad</a>' % (v["toets"], v["t"], v["nk"]) for v in grab("VERS") if v.get("nk"))
 s = rep(s, '<section class="panel" id="toets" hidden>',
-        '<section class="panel" id="toets" hidden>\n<div class="card pad odl"><div><div class="eyebrow">Op je iPad of laptop</div><h2>Oefentoets als Word-bestand</h2>'
-        '<p class="muted">Over %s. Kies een variant, download het bestand en tik op een blauw vak om je antwoord te typen.</p></div><div class="odl-grid">%s</div></div>'
-        % (ov, "".join('<a href="../oefentoetsen/oefentoets-%s-%d-ster.docx" download="Oefentoets %s %d-ster.docx"><span>%s</span><b>%d-ster oefentoets</b><small>Word-bestand</small></a>'
-                       % (t, n, t.upper(), n, "★" * n, n) for n in (1, 2, 3))))
+        '<section class="panel" id="toets" hidden>\n<div class="card pad otoets"><div class="eyebrow">Oefentoetsen</div><h2>Maak de toets hier, met klok en automatisch nakijken</h2>'
+        '<p class="muted">Maak de toets zonder boek en zonder hulp, je rekenmachine mag. Bedragen, procenten en keuzes worden direct nagekeken met het nakijkblad van je docent; bij de uitlegvragen kijkt de AI mee. Kies je niveau: 1, 2 of 3 sterren. Werkt ook op de iPad. De toetsen gaan over %s.</p>'
+        '<div class="ovgrid">%s</div><p class="muted opapier">Liever op papier? %s</p></div>\n<div hidden>' % (ov, "".join(kaart(k, x) for k, x in TJ["toetsen"].items()), papier))
+s = rex(s, r"</section>(\s*<!-- FILMPJES -->)", r"</div></section>\g<1>", groepen=True)
+s = rep(s, 'if(name==="toets")loadToets();', "")
 
 # huisstijl van de site: zelfde kleuren en letters als economie.css en boekje 1; de pagina scrolt als geheel
 s = rep(s, "</style>", """
@@ -138,8 +159,15 @@ s = rep(s, "</style>", """
   --p3:#1f5f4e;--p4:#b97a1f;--p5:#c2484d;--p6:#2f8f86;--coral:#ff8d90;--green-fg:#f3efe0;--green-mu:#b9d6cb;
   --shadow:0 1px 2px rgba(31,95,78,.06),0 10px 28px rgba(31,95,78,.08);--r:20px;--ease-out:cubic-bezier(.23,1,.32,1);color-scheme:light}
 html,body{height:auto;font-family:Inter,system-ui,-apple-system,sans-serif}
-h1,h2,h3,.chh,.vbtn b{font-family:Fraunces,Georgia,serif;letter-spacing:-.01em}
-h2{font-size:clamp(22px,2.6vw,28px);font-weight:700}
+h1,h2,h3,.chh,.vbtn b{font-family:Fraunces,Georgia,serif;letter-spacing:-.015em;color:var(--ink)}
+h2{font-size:clamp(24px,2.8vw,32px);font-weight:700;line-height:1.08}
+/* panelen zonder witte kaders, net als de leeromgeving: grote zwarte koppen op de beige achtergrond */
+#lab>.card,#toets>.card,.hero .intro,.checkcard{background:transparent;border:0;box-shadow:none;padding-left:0;padding-right:0}
+#lab>.card>.row h2,#toets>.card h2,.hero .intro h2,.checkcard h2{font-size:clamp(30px,4.4vw,50px);font-weight:700;line-height:1.02;margin-top:8px}
+.blob,.coins{display:none}
+.sub button,.filters button{background:var(--card);color:var(--ink);padding:8px 15px;font-size:14px}
+.sub button[aria-selected=true],.filters button.on{background:var(--berry);border-color:var(--berry);color:#fff}
+.sub{margin-bottom:22px}
 .app{height:auto;min-height:0;max-width:none;padding:0;display:block}
 main{overflow:visible;max-width:1180px;margin:0 auto;padding:28px max(16px,env(safe-area-inset-left,0px)) 64px}
 .owrap{max-width:1180px;margin:0 auto;padding:0 max(16px,env(safe-area-inset-left,0px))}
@@ -149,34 +177,41 @@ main{overflow:visible;max-width:1180px;margin:0 auto;padding:28px max(16px,env(s
 .olinks{display:flex;gap:4px}
 .olinks a{color:var(--green-fg);text-decoration:none;font-size:14px;font-weight:600;padding:8px 12px;border-radius:10px;white-space:nowrap}
 .olinks a:hover{background:rgba(255,255,255,.12)}.olinks a.cta{background:var(--coral);color:#3a1412}
-.ohero{position:relative;isolation:isolate;overflow:hidden;color:var(--green-fg);background:var(--plum-2) var(--img) center/cover;padding:140px 0 54px}
-.ohero:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(18,58,48,.6),rgba(18,58,48,.78) 55%,var(--plum-2))}
-.ohero-in{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
-.oeyebrow{font-size:12.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--coral)}
-.ohero h1{font:900 clamp(42px,7vw,84px)/.95 Fraunces,Georgia,serif;margin:12px 0 0;color:var(--green-fg)}
-.ohero h1 em{font-style:italic;font-weight:600;color:var(--coral)}
-.ohero p{max-width:52ch;color:var(--green-mu);margin:16px 0 0;font-size:17px}.ohero p a{color:#fff}
-.ohero .prog{font-size:14px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:18px;padding:12px 16px}
-.ring{width:58px;height:58px;background:conic-gradient(var(--coral) calc(var(--v)*1%),rgba(255,255,255,.18) 0)}.ring span{width:46px;height:46px;font-size:13px}
+/* kop: dezelfde lichte band als de paragraafpagina's van de leeromgeving (groot nummer, titel, collage) */
+.otop{background:color-mix(in srgb,var(--line) 38%,var(--bg));padding:calc(62px + env(safe-area-inset-top,0px) + 26px) 0 clamp(36px,6vw,64px)}
+.oeyebrow{font-size:12.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--berry)}
+.otop-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(28px,5vw,72px);align-items:center;margin-top:clamp(18px,3vw,34px)}
+.onum{font:900 clamp(72px,11vw,140px)/.9 Fraunces,Georgia,serif;color:var(--berry)}
+.otop h1{font-size:clamp(34px,4.6vw,52px);font-weight:700;line-height:1.05;margin:10px 0 12px}
+.otop h1 em{font-style:italic;font-weight:600;color:var(--berry)}
+.otop p{max-width:46ch;color:var(--muted);margin:0 0 22px;font-size:17px}.otop p a{color:var(--ink)}
+.otop .prog{display:inline-flex;font-size:14px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:12px 16px;color:var(--ink)}
+.ring{width:58px;height:58px;background:conic-gradient(var(--berry) calc(var(--v)*1%),color-mix(in srgb,var(--line) 70%,transparent) 0)}.ring span{width:46px;height:46px;font-size:13px;background:var(--card);color:var(--ink)}
+.ogal{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ogal img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:20px;box-shadow:0 14px 40px -24px rgba(18,58,48,.6)}
+.ogal img:first-child{grid-column:1/-1;aspect-ratio:16/10}
+@media (max-width:860px){.otop-in{grid-template-columns:1fr}}
+/* tabbladen als knoppen, zoals 2.1 · 2.2 · 2.3 · 2.4 in de leeromgeving */
 .otabs{position:sticky;top:calc(62px + env(safe-area-inset-top,0px));z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:10px 0}
-.otabs nav.tabs{max-width:560px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:5px;flex-wrap:nowrap;box-shadow:var(--shadow)}
-.otabs nav.tabs button{color:var(--ink);border-radius:999px}
-.otabs nav.tabs button:hover{background:color-mix(in srgb,var(--line) 50%,transparent);color:var(--ink)}
-.otabs nav.tabs button[aria-selected=true]{background:var(--plum);color:#fff;box-shadow:none}
+.otabs nav.tabs{background:none;border:0;padding:0;gap:8px;flex-wrap:nowrap}
+.otabs nav.tabs button{flex:none;color:var(--ink);border-radius:999px;border:1.5px solid var(--line);background:var(--card);padding:9px 16px}
+.otabs nav.tabs button:hover{border-color:var(--berry);background:var(--card);color:var(--ink)}
+.otabs nav.tabs button[aria-selected=true]{background:var(--berry);border-color:var(--berry);color:#fff;box-shadow:none}
 nav.tabs button span{display:inline!important}
 .btn{border-radius:999px;padding:11px 18px;background:var(--coral);color:#3a1412}
 .btn.ghost{background:var(--card)}
 .card{border-radius:var(--r)}
-.odl{display:grid;grid-template-columns:1fr 1.2fr;gap:20px;align-items:center;margin-bottom:16px}
-.odl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.odl-grid a{display:flex;flex-direction:column;gap:2px;padding:14px;border:1.5px solid var(--line);border-radius:16px;text-decoration:none;background:var(--card);transition:border-color .16s,transform .16s var(--ease-out)}
-.odl-grid a:hover{border-color:var(--p6)}.odl-grid a:active{transform:scale(.97)}
-.odl-grid span{color:var(--p4);font-size:18px;letter-spacing:2px}.odl-grid small{color:var(--muted)}
+.otoets{margin-bottom:16px}.otoets>p{max-width:720px}
+.ovgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:14px;margin:18px 0 14px}
+.ovcard{display:flex;flex-direction:column;gap:6px;padding:20px;border:1.5px solid var(--line);border-radius:22px;background:var(--card);text-decoration:none;color:var(--ink);transition:border-color .16s,transform .16s var(--ease-out)}
+.ovcard:hover{border-color:var(--berry)}.ovcard:active{transform:scale(.98)}
+.ovcard .ster{color:var(--p4);font-size:22px;letter-spacing:3px}.ovcard h3{font-size:24px;margin:0}.ovcard p{margin:0 0 12px;color:var(--muted);font-size:14px}
+.ovcard .btn{margin-top:auto;align-self:flex-start}
+.opapier{font-size:14px}.opapier a{color:var(--ink)}
 .ofoot{background:var(--plum-2);color:var(--green-mu);font-size:13px;padding:22px 0 34px}
 .ofoot .owrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
-@media (max-width:820px){.odl{grid-template-columns:1fr}}
 @media (max-width:560px){.ofull,.olinks a:not(.cta):first-child{display:none}.oshort{display:inline}.olinks a{padding:8px 8px;font-size:13px}
-  .otabs nav.tabs button{padding:9px 6px;font-size:13px;gap:5px}.odl-grid{grid-template-columns:1fr}.ohero{padding-top:110px}}
+  .otabs nav.tabs button{padding:9px 6px;font-size:13px;gap:5px}}
 @media (max-width:400px){.otabs nav.tabs button svg{display:none}}
 </style>""")
 
