@@ -26,6 +26,9 @@ var BEELDEN={"jaar-2/mavo/hoofdstuk-2":[
 var BEELD_MAP={"jaar-2/mavo/hoofdstuk-2":"j2h2"};
 function beelden(pad){var B=BEELDEN[pad];if(!B)return "";var d=BEELD_MAP[pad];
   return '<section class="sec rv"><h2>Beelden bij dit hoofdstuk</h2>'+B.map(function(g){return '<h3>'+esc(g[0])+'</h3><div class="gal">'+g[1].map(function(b){var src="img/"+d+"/"+b[0]+".jpg";return '<a href="'+src+'" target="_blank" rel="noopener"><img src="'+src+'" alt="'+esc(b[1])+'" loading="lazy"><span>'+esc(b[1])+'</span></a>';}).join("")+'</div>';}).join("")+'</section>';}
+var TOETSEN={"jaar-2/mavo/hoofdstuk-2":[["Hoofdstuk 2 · Jij en je geld (§2.1 en §2.2)","h2"]]};
+function toetsen(pad){var T=TOETSEN[pad];if(!T)return "";
+  return '<section class="sec rv" id="oefentoetsen"><h2>Oefentoetsen</h2>'+T.map(function(g){return '<h3>'+esc(g[0])+'</h3><div class="files">'+[1,2,3].map(function(n){var u="oefentoetsen/oefentoets-"+g[1]+"-"+n+"-ster.docx";return '<a class="file" href="'+u+'" download="Oefentoets '+g[1].toUpperCase()+' '+n+'-ster.docx"><span class="ic doc">'+"\u2605".repeat(n)+'</span><span>'+n+'-ster oefentoets<small>Word-bestand \u00b7 download en vul in op je iPad of laptop</small></span></a>';}).join("")+'</div>';}).join("")+'</section>';}
 var NAAM={"jaar-2/mavo/kopie-van-hoofdstuk-1":"Hoofdstuk 1 · lesstof en PowerPoints"};
 
 var esc=function(t){return String(t).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});};
@@ -100,7 +103,7 @@ function hoofdstuk(){
   if(lo)h+='<section class="sec leerkaart"><div><div class="eyebrow">Nieuw · alles op één plek</div><h2>'+esc(lo[1])+'</h2><p>'+esc(lo[2])+'</p></div><a class="btn" href="'+lo[0]+'">Open de leeromgeving →</a></section>';
   if(lo){var lz=blokken(p).filter(function(b){return b.t==="drive"||b.t==="link";});/* lesstof-links uit paginas.json, of een verwijzing naar de leeromgeving */
     h+='<section class="sec"><h2>Lesstof</h2>'+(lz.length?sectie(lz,p.pad,0):'<p>De lesstof vind je in de leeromgeving: <a href="'+lo[0]+'#les">tabblad Lesstof</a>.</p>')+'</section>';}
-  h+=apps+beelden(p.pad)+body+'<p><a class="btn ghost" href="'+jaarUrl(j,n)+'">← Alle hoofdstukken van '+esc(naam(j,n))+'</a></p></main>'+voet();
+  h+=apps+beelden(p.pad)+toetsen(p.pad)+body+'<p><a class="btn ghost" href="'+jaarUrl(j,n)+'">← Alle hoofdstukken van '+esc(naam(j,n))+'</a></p></main>'+voet();
   h+='<dialog class="viewer" id="viewer" aria-label="Bestand bekijken"><div class="bar"><b id="vtitel"></b><a class="btn ghost" id="vopen" target="_blank" rel="noopener">Open in Drive</a><button class="btn" id="vdicht">Sluiten</button></div><iframe id="vframe" title="Bestand" allow="autoplay; fullscreen"></iframe></dialog>';
   document.body.innerHTML=h;
   var lk=document.querySelector(".leerkaart");/* kaart pas tonen als de leeromgeving er echt is */
