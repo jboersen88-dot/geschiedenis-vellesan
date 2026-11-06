@@ -3,7 +3,10 @@
 - **Vraag 7 (Mila)**: "Sportclub" heet nu "Contributie sportclub". Vraag d (lukt het om €25 over te houden?) was te makkelijk en is vervangen door: hoeveel maanden spaart Mila haar overschot voor een telefoon van €148,50 (6 maanden).
 - **Vraag 8 (Noa)**: andere weekbedragen (€9,00, €36,00 en €7,50), zodat de maandbedragen niet meer op ,67 uitkomen (€39,00, €156,00 en €32,50). De weekbedragen staan in een eigen tabelletje bij a; bij b staat de maandbegroting met links de inkomsten en rechts de uitgaven, met "antwoord a" op de plekken van de omgerekende bedragen. De vraag naar het kleedgeld is vervallen; het totaal van de inkomsten telt nu voor 2 punten (opgave blijft 8 punten).
 - **Toetsen (`bouw-toets.py`)**: een deelvraag kan een eigen tabel hebben (`tabel` bij de deelvraag). Tabellen met vier kolommen passen nu ook op een telefoon (kleinere letter, woorden worden afgebroken).
-- De Word-versie (`economie/oefentoetsen/oefentoets-h2-1-ster.docx`) heeft nog de oude vragen 7d en 8.
+- **Geen dubbele vragen meer**: de begroting van Noa is weggehaald. Mila heeft al een begroting met totalen en overschot, en het omrekenen van week naar maand zit al in de twee omreken-vragen. De toets heeft nu 15 vragen en 61 punten.
+- **Geldfuncties en redenen om te sparen** staan nu bovenin bij de theorie (vraag 5 en 6). Bij geldfuncties kies je eerst bij elke situatie de functie (a) en leg je daarna in eigen woorden uit wat elke functie betekent (b); de open vraag "noem de drie geldfuncties" gaf het antwoord weg, omdat de namen eronder als knoppen stonden.
+- **Klein**: geen ".:" meer achter een situatie die met een punt eindigt (in alle online toetsen).
+- De Word-versie (`economie/oefentoetsen/oefentoets-h2-1-ster.docx`) heeft nog de oude vragen en volgorde.
 
 ## 2026-11-06 · Economie jaar 2 mavo: GL-versie van hoofdstuk 1 in de nieuwe opzet
 

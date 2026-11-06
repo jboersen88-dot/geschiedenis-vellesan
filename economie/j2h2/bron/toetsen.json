@@ -262,6 +262,140 @@
    },
    {
     "nr": 5,
+    "titel": "Geldfuncties",
+    "tekst": "",
+    "delen": [
+     {
+      "id": "a",
+      "v": "Kies bij elke situatie welke geldfunctie erbij hoort.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Ruilmiddel",
+         "Spaarmiddel",
+         "Rekenmiddel"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Je betaalt met je pinpas bij de supermarkt."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Ruilmiddel",
+         "Spaarmiddel",
+         "Rekenmiddel"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Je zet elke maand geld opzij voor later."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Ruilmiddel",
+         "Spaarmiddel",
+         "Rekenmiddel"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "Je ziet dat de ene hoofdtelefoon €15 goedkoper is dan de andere."
+       }
+      ],
+      "uitw": [
+       "Pinnen is geld ruilen voor een product: ruilmiddel. Opzij zetten voor later: spaarmiddel. Prijzen vergelijken: rekenmiddel."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Leg in je eigen woorden uit wat de drie geldfuncties betekenen. Schrijf bij elke functie één zin.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "1-5b",
+        "p": 3,
+        "label": "Wat betekenen ruilmiddel, spaarmiddel en rekenmiddel?",
+        "v": "Geld heeft drie functies: ruilmiddel, spaarmiddel en rekenmiddel. Leg in je eigen woorden uit wat de drie geldfuncties betekenen. Schrijf bij elke functie één zin.",
+        "model": "Ruilmiddel: je ruilt geld voor producten en diensten (je betaalt ermee). Spaarmiddel: je kunt geld bewaren om het later uit te geven. Rekenmiddel: je drukt de waarde van iets uit in geld, zodat je prijzen kunt vergelijken.",
+        "g": [
+         {
+          "t": "ruilmiddel: je betaalt ermee / ruilt het voor producten of diensten",
+          "p": 1
+         },
+         {
+          "t": "spaarmiddel: je kunt het bewaren om later uit te geven",
+          "p": 1
+         },
+         {
+          "t": "rekenmiddel: je drukt de waarde van iets uit in geld / kunt prijzen vergelijken",
+          "p": 1
+         }
+        ],
+        "h": [
+         "E2H2"
+        ]
+       }
+      ],
+      "uitw": [
+       "Ruilmiddel: betalen. Spaarmiddel: bewaren voor later. Rekenmiddel: de waarde aangeven en prijzen vergelijken."
+      ]
+     }
+    ],
+    "p": 6
+   },
+   {
+    "nr": 6,
+    "titel": "Redenen om te sparen",
+    "tekst": "Er zijn drie redenen om te sparen.",
+    "delen": [
+     {
+      "id": "",
+      "v": "Kies bij elk voorbeeld de reden om te sparen.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Sparen voor een doel",
+         "Sparen voor de rente",
+         "Sparen uit voorzorg"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Dave legt elke week €5 opzij voor een nieuwe gameconsole."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Sparen voor een doel",
+         "Sparen voor de rente",
+         "Sparen uit voorzorg"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Sanne zet haar geld op een spaarrekening, want de bank geeft haar elk jaar extra geld."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Sparen voor een doel",
+         "Sparen voor de rente",
+         "Sparen uit voorzorg"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "Joris houdt altijd €50 achter de hand voor als zijn fiets stuk gaat."
+       }
+      ],
+      "uitw": [
+       "Dave wil iets kopen: een doel. Sanne krijgt extra geld van de bank: de rente. Joris wil onverwachte kosten kunnen betalen: voorzorg."
+      ]
+     }
+    ],
+    "p": 3
+   },
+   {
+    "nr": 7,
     "titel": "Omrekenen van week naar maand en andersom",
     "tekst": "Een jaar heeft 12 maanden en 52 weken. Schrijf de stappen op. Je rekent nog niets uit.",
     "delen": [
@@ -271,7 +405,7 @@
       "velden": [
        {
         "type": "open",
-        "nr": "1-5a",
+        "nr": "1-7a",
         "p": 2,
         "label": "Stappen van week naar maand",
         "v": "Hoe reken je een weekbedrag om naar een maandbedrag? Schrijf de stappen op (een jaar heeft 12 maanden en 52 weken).",
@@ -301,7 +435,7 @@
       "velden": [
        {
         "type": "open",
-        "nr": "1-5b",
+        "nr": "1-7b",
         "p": 2,
         "label": "Stappen van maand naar week",
         "v": "Hoe reken je een maandbedrag om naar een weekbedrag? Schrijf de stappen op (een jaar heeft 12 maanden en 52 weken).",
@@ -329,9 +463,9 @@
     "p": 4
    },
    {
-    "nr": 6,
+    "nr": 8,
     "titel": "Omrekenen",
-    "tekst": "Gebruik je stappen uit vraag 5. Rond af op 2 decimalen.",
+    "tekst": "Gebruik je stappen uit vraag 7. Rond af op 2 decimalen.",
     "delen": [
      {
       "id": "a",
@@ -375,7 +509,7 @@
     "p": 4
    },
    {
-    "nr": 7,
+    "nr": 9,
     "titel": "Begroting van Mila",
     "tekst": "Mila heeft een begroting gemaakt voor november. Alle bedragen zijn per maand.",
     "delen": [
@@ -442,7 +576,7 @@
       "velden": [
        {
         "type": "open",
-        "nr": "1-7c",
+        "nr": "1-9c",
         "p": 2,
         "label": "Twee vaste lasten",
         "v": "Mila's uitgaven in november: eten en drinken, contributie sportclub, kleding, telefoonabonnement, uitgaan. Welke twee uitgaven in deze begroting zijn vaste lasten?",
@@ -528,159 +662,7 @@
     "p": 8
    },
    {
-    "nr": 8,
-    "titel": "Begroting van Noa",
-    "tekst": "Noa maakt een begroting per maand. Drie bedragen krijgt of betaalt ze per week. Die reken je eerst om naar een bedrag per maand.",
-    "delen": [
-     {
-      "id": "a",
-      "tabel": [
-       [
-        "Per week",
-        "Bedrag"
-       ],
-       [
-        "Zakgeld",
-        "€ 9,00"
-       ],
-       [
-        "Bijbaantje",
-        "€ 36,00"
-       ],
-       [
-        "Eten en drinken",
-        "€ 7,50"
-       ]
-      ],
-      "v": "Reken de drie weekbedragen om naar maandbedragen.",
-      "velden": [
-       {
-        "type": "num",
-        "ans": [
-         39.0
-        ],
-        "p": 1,
-        "eenh": "€",
-        "tol": 0.005,
-        "label": "Zakgeld per maand"
-       },
-       {
-        "type": "num",
-        "ans": [
-         156.0
-        ],
-        "p": 1,
-        "eenh": "€",
-        "tol": 0.005,
-        "label": "Bijbaantje per maand"
-       },
-       {
-        "type": "num",
-        "ans": [
-         32.5
-        ],
-        "p": 1,
-        "eenh": "€",
-        "tol": 0.005,
-        "label": "Eten en drinken per maand"
-       }
-      ],
-      "uitw": [
-       "Zakgeld: (9,00 × 52) : 12 = 468 : 12 = €39,00",
-       "Bijbaantje: (36,00 × 52) : 12 = 1.872 : 12 = €156,00",
-       "Eten en drinken: (7,50 × 52) : 12 = 390 : 12 = €32,50",
-       "Een jaar heeft 52 weken en 12 maanden. Keer 4 is niet goed: een maand is iets langer dan 4 weken."
-      ]
-     },
-     {
-      "id": "b",
-      "tabel": [
-       [
-        "Inkomsten",
-        "Per maand",
-        "Uitgaven",
-        "Per maand"
-       ],
-       [
-        "Zakgeld",
-        "antwoord a",
-        "Eten en drinken",
-        "antwoord a"
-       ],
-       [
-        "Kleedgeld",
-        "€ 32,00",
-        "Contributie voetbal",
-        "€ 21,00"
-       ],
-       [
-        "Bijbaantje",
-        "antwoord a",
-        "Kleding en verzorging",
-        "€ 30,00"
-       ]
-      ],
-      "v": "Dit is de maandbegroting van Noa. Bij 'antwoord a' hoort het bedrag dat je bij a hebt uitgerekend. Bereken het totaal van de inkomsten en het totaal van de uitgaven.",
-      "velden": [
-       {
-        "type": "num",
-        "ans": [
-         227.0
-        ],
-        "p": 2,
-        "eenh": "€",
-        "tol": 0.005,
-        "label": "Totaal inkomsten"
-       },
-       {
-        "type": "num",
-        "ans": [
-         83.5
-        ],
-        "p": 1,
-        "eenh": "€",
-        "tol": 0.005,
-        "label": "Totaal uitgaven"
-       }
-      ],
-      "uitw": [
-       "Inkomsten: 39,00 + 32,00 + 156,00 = €227,00.",
-       "Uitgaven: 32,50 + 21,00 + 30,00 = €83,50."
-      ]
-     },
-     {
-      "id": "c",
-      "v": "Heeft Noa een overschot of een tekort? Hoeveel euro?",
-      "velden": [
-       {
-        "type": "keuze",
-        "opties": [
-         "Overschot",
-         "Tekort"
-        ],
-        "j": 0,
-        "p": 1
-       },
-       {
-        "type": "num",
-        "ans": [
-         143.5
-        ],
-        "p": 1,
-        "eenh": "€",
-        "tol": 0.005,
-        "label": "Bedrag"
-       }
-      ],
-      "uitw": [
-       "€227,00 − €83,50 = €143,50 overschot."
-      ]
-     }
-    ],
-    "p": 8
-   },
-   {
-    "nr": 9,
+    "nr": 10,
     "titel": "Rekenen met procenten",
     "tekst": "In klas 2B zitten 28 leerlingen. 9 leerlingen komen met de fiets naar school.",
     "delen": [
@@ -726,7 +708,7 @@
     "p": 3
    },
    {
-    "nr": 10,
+    "nr": 11,
     "titel": "Korting op een jas",
     "tekst": "Een jas kost €79,95. In de uitverkoop gaat er 15% af.",
     "delen": [
@@ -790,7 +772,7 @@
     "p": 4
    },
    {
-    "nr": 11,
+    "nr": 12,
     "titel": "Duurdere chips",
     "tekst": "Een pak chips kostte €2,15. Nu kost het pak €2,39.",
     "delen": [
@@ -846,7 +828,7 @@
     "p": 4
    },
    {
-    "nr": 12,
+    "nr": 13,
     "titel": "Kleding van Noa",
     "tekst": "Noa verdient €142 per maand met haar bijbaan. Ze geeft €38 per maand uit aan kleding.",
     "delen": [
@@ -892,141 +874,7 @@
     "p": 3
    },
    {
-    "nr": 13,
-    "titel": "Geldfuncties",
-    "tekst": "",
-    "delen": [
-     {
-      "id": "a",
-      "v": "Noem de drie geldfuncties.",
-      "velden": [
-       {
-        "type": "open",
-        "nr": "1-13a",
-        "p": 3,
-        "label": "De drie geldfuncties",
-        "v": "Noem de drie geldfuncties.",
-        "model": "Ruilmiddel, spaarmiddel en rekenmiddel.",
-        "g": [
-         {
-          "t": "ruilmiddel",
-          "p": 1
-         },
-         {
-          "t": "spaarmiddel",
-          "p": 1
-         },
-         {
-          "t": "rekenmiddel",
-          "p": 1
-         }
-        ],
-        "h": [
-         "E2H2"
-        ]
-       }
-      ],
-      "uitw": [
-       "Geld gebruik je om iets te kopen (ruilmiddel), om te bewaren (spaarmiddel) en om de waarde van iets aan te geven (rekenmiddel)."
-      ]
-     },
-     {
-      "id": "b",
-      "v": "Kies bij elke situatie welke geldfunctie erbij hoort.",
-      "velden": [
-       {
-        "type": "keuze",
-        "opties": [
-         "Ruilmiddel",
-         "Spaarmiddel",
-         "Rekenmiddel"
-        ],
-        "j": 0,
-        "p": 1,
-        "label": "Je betaalt met je pinpas bij de supermarkt."
-       },
-       {
-        "type": "keuze",
-        "opties": [
-         "Ruilmiddel",
-         "Spaarmiddel",
-         "Rekenmiddel"
-        ],
-        "j": 1,
-        "p": 1,
-        "label": "Je zet elke maand geld opzij voor later."
-       },
-       {
-        "type": "keuze",
-        "opties": [
-         "Ruilmiddel",
-         "Spaarmiddel",
-         "Rekenmiddel"
-        ],
-        "j": 2,
-        "p": 1,
-        "label": "Je ziet dat de ene hoofdtelefoon €15 goedkoper is dan de andere."
-       }
-      ],
-      "uitw": [
-       "Pinnen is geld ruilen voor een product: ruilmiddel. Opzij zetten voor later: spaarmiddel. Prijzen vergelijken: rekenmiddel."
-      ]
-     }
-    ],
-    "p": 6
-   },
-   {
     "nr": 14,
-    "titel": "Redenen om te sparen",
-    "tekst": "Er zijn drie redenen om te sparen.",
-    "delen": [
-     {
-      "id": "",
-      "v": "Kies bij elk voorbeeld de reden om te sparen.",
-      "velden": [
-       {
-        "type": "keuze",
-        "opties": [
-         "Sparen voor een doel",
-         "Sparen voor de rente",
-         "Sparen uit voorzorg"
-        ],
-        "j": 0,
-        "p": 1,
-        "label": "Dave legt elke week €5 opzij voor een nieuwe gameconsole."
-       },
-       {
-        "type": "keuze",
-        "opties": [
-         "Sparen voor een doel",
-         "Sparen voor de rente",
-         "Sparen uit voorzorg"
-        ],
-        "j": 1,
-        "p": 1,
-        "label": "Sanne zet haar geld op een spaarrekening, want de bank geeft haar elk jaar extra geld."
-       },
-       {
-        "type": "keuze",
-        "opties": [
-         "Sparen voor een doel",
-         "Sparen voor de rente",
-         "Sparen uit voorzorg"
-        ],
-        "j": 2,
-        "p": 1,
-        "label": "Joris houdt altijd €50 achter de hand voor als zijn fiets stuk gaat."
-       }
-      ],
-      "uitw": [
-       "Dave wil iets kopen: een doel. Sanne krijgt extra geld van de bank: de rente. Joris wil onverwachte kosten kunnen betalen: voorzorg."
-      ]
-     }
-    ],
-    "p": 3
-   },
-   {
-    "nr": 15,
     "titel": "Rente",
     "tekst": "",
     "delen": [
@@ -1036,7 +884,7 @@
       "velden": [
        {
         "type": "open",
-        "nr": "1-15",
+        "nr": "1-14",
         "p": 2,
         "label": "Rente",
         "v": "Wat is rente? Schrijf in je eigen woorden wat rente is.",
@@ -1064,7 +912,7 @@
     "p": 2
    },
    {
-    "nr": 16,
+    "nr": 15,
     "titel": "Rente van Tim",
     "tekst": "Tim heeft €463 op zijn spaarrekening. De bank geeft 1,6% rente per jaar. Tim laat het geld een jaar staan.",
     "delen": [
@@ -3074,7 +2922,7 @@
   {
    "n": 1,
    "min": 50,
-   "pts": 69
+   "pts": 61
   },
   {
    "n": 2,
