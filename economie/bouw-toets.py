@@ -111,6 +111,8 @@ input.num:focus{border-color:var(--teal);outline:none}
 .rr{padding:8px 10px;border-radius:10px;margin:6px 0;border:1.5px solid var(--line)}.rr.ok{border-color:var(--ok);background:var(--ok-soft)}.rr.bad{border-color:var(--bad);background:var(--bad-soft)}
 .bron th{border:1px solid var(--line);padding:5px 10px;text-align:left;background:color-mix(in srgb,var(--line) 40%,transparent)}
 .bron .t{margin-bottom:6px}
+.bron{overflow-x:auto}
+@media(max-width:520px){.bron table{font-size:13px}.bron td,.bron th{padding:4px 5px;hyphens:auto}}
 </style>"""
 s = rep(s, "</style>", CSS.lstrip("\n"))
 
@@ -162,6 +164,7 @@ function deelPts(r,dl){var a=((st[cur].rek||{})[r.nr+dl.id])||[],p=0,w=0;
   dl.velden.forEach(function(f,i){if(f.type==="open")return;if(fieldOk(f,a[i]))p+=f.p;else if(f.type==="num")w+=f.p;});
   var max=Math.max(w-1,0),ex=Math.min(max,+st[cur].self["x"+r.nr+dl.id]||0);return {p:p,ex:ex,max:max,ok:a};}
 function rekScore(){var s=0;D[cur].rek.forEach(function(r){r.delen.forEach(function(dl){var q=deelPts(r,dl);s+=q.p+q.ex;});});return s;}
+/* een tabel kan bij de hele opgave horen (r.tabel) of bij één deelvraag (dl.tabel, staat dan boven die deelvraag) */
 function rtbl(r){return '<table>'+r.map(function(c,i){return '<tr>'+c.map(function(x){return i?'<td>'+esc(x)+'</td>':'<th scope="col">'+esc(x)+'</th>';}).join("")+'</tr>';}).join("")+'</table>';}
 function rekBron(r){return r.tekst||r.tabel?'<div class="bron">'+(r.tekst?'<div class="t">'+esc(r.tekst)+'</div>':"")+(r.tabel?rtbl(r.tabel):"")+'</div>':"";}
 function fieldEx(r,dl,f,i){var key=r.nr+dl.id,v=((st[cur].rek||{})[key]||[])[i],lab=OPG+" "+r.nr+" "+dl.id;
@@ -170,7 +173,7 @@ function fieldEx(r,dl,f,i){var key=r.nr+dl.id,v=((st[cur].rek||{})[key]||[])[i],
   var pre=f.eenh==="€"?"€":"",post=f.eenh&&!pre?f.eenh:"";
   return '<div class="ans">'+(f.label?'<label class="muted" for="rk-'+key+i+'">'+esc(f.label)+':</label>':"")+(pre?'<span>€</span>':"")+'<input class="num" type="text" inputmode="decimal" autocomplete="off" id="rk-'+key+i+'" data-r="'+key+'" data-f="'+i+'" value="'+escA(v==null?"":v)+'" aria-label="Antwoord '+lab+'">'+(post?'<span class="muted">'+esc(post)+'</span>':"")+'</div>';}
 function rekEx(r){var h='<div class="card q"><div class="n">'+OPG+' '+r.nr+' · '+r.p+' punten</div><p>'+esc(r.titel)+'</p>'+rekBron(r);
-  r.delen.forEach(function(dl){h+='<div class="rk"><div class="rl">'+(dl.id?dl.id+') ':'')+esc(dl.v)+' <span class="muted">('+dp(dl)+' p)</span></div>';
+  r.delen.forEach(function(dl){h+='<div class="rk">'+(dl.tabel?rekBron(dl):"")+'<div class="rl">'+(dl.id?dl.id+') ':'')+esc(dl.v)+' <span class="muted">('+dp(dl)+' p)</span></div>';
     dl.velden.forEach(function(f,i){h+=fieldEx(r,dl,f,i);});h+='</div>';});
   if(!r.delen.some(function(dl){return dl.velden.some(function(f){return f.type==="num";});}))return h+'</div>';/* geen rekenantwoord: geen vak voor de berekening */
   return h+'<div class="rk"><label class="muted" style="font-size:13.5px" for="rc-'+r.nr+'">Je berekening (mag ook op papier; hier wordt niets mee nagekeken)</label><textarea class="s" id="rc-'+r.nr+'" data-c="'+r.nr+'">'+esc((st[cur].calc||{})[r.nr]||"")+'</textarea></div></div>';}
@@ -211,7 +214,7 @@ function fieldShow(f,v){if(v==null||v==="")return "niet ingevuld";return f.type=
 function fieldGoed(f){if(f.type==="keuze")return f.opties[f.j];var e=f.eenh||"",eu=/^€/.test(e),post=e.replace(/^€\s*/,"");
   return f.ans.map(function(x){return (eu?"€ ":"")+nl(x,eu?2:((String(x).split(".")[1]||"").length))+(post?" "+post:"");}).join(" of ");}
 function rekRes(r){var a=st[cur],h='<div class="card q"><div class="n">'+OPG+' '+r.nr+' · '+r.p+' punten</div><p>'+esc(r.titel)+'</p>'+rekBron(r);
-  r.delen.forEach(function(dl){var q=deelPts(r,dl),key=r.nr+dl.id;h+='<div class="rk"><div class="rl">'+(dl.id?dl.id+') ':'')+esc(dl.v)+' <span class="muted">('+dp(dl)+' p)</span></div>';
+  r.delen.forEach(function(dl){var q=deelPts(r,dl),key=r.nr+dl.id;h+='<div class="rk">'+(dl.tabel?rekBron(dl):"")+'<div class="rl">'+(dl.id?dl.id+') ':'')+esc(dl.v)+' <span class="muted">('+dp(dl)+' p)</span></div>';
     dl.velden.forEach(function(f,i){if(f.type==="open"){h+=openRes(f);return;}
       var ok=fieldOk(f,q.ok[i]);h+='<div class="rr '+(ok?"ok":"bad")+'"><b>'+(ok?"✓":"✗")+'</b> '+(f.label?esc(f.label)+': ':'')+'Jouw antwoord: <b>'+esc(fieldShow(f,q.ok[i]))+'</b>'+(ok?'':' · Goed: <b>'+esc(fieldGoed(f))+'</b>')+' <span class="muted">('+(ok?f.p:0)+'/'+f.p+' p)</span></div>';});
     h+='<div class="fb">'+dl.uitw.map(esc).join("<br>")+'</div>';

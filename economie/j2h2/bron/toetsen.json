@@ -445,11 +445,11 @@
         "nr": "1-7c",
         "p": 2,
         "label": "Twee vaste lasten",
-        "v": "Mila's uitgaven in november: eten en drinken, sportclub, kleding, telefoonabonnement, uitgaan. Welke twee uitgaven in deze begroting zijn vaste lasten?",
-        "model": "De sportclub en het telefoonabonnement.",
+        "v": "Mila's uitgaven in november: eten en drinken, contributie sportclub, kleding, telefoonabonnement, uitgaan. Welke twee uitgaven in deze begroting zijn vaste lasten?",
+        "model": "De contributie van de sportclub en het telefoonabonnement.",
         "g": [
          {
-          "t": "de sportclub (contributie)",
+          "t": "de contributie van de sportclub",
           "p": 1
          },
          {
@@ -468,38 +468,22 @@
      },
      {
       "id": "d",
-      "v": "Mila wil elke maand minstens €25,00 overhouden. Lukt dat deze maand? Leg uit met een berekening.",
+      "v": "Mila spaart elke maand haar overschot voor een nieuwe telefoon van €148,50. Hoeveel maanden moet ze sparen?",
       "velden": [
        {
-        "type": "keuze",
-        "opties": [
-         "Ja",
-         "Nee"
+        "type": "num",
+        "ans": [
+         6
         ],
-        "j": 1,
-        "p": 1,
-        "label": "Lukt het?"
-       },
-       {
-        "type": "open",
-        "nr": "1-7d",
-        "p": 1,
-        "label": "Uitleg met een berekening",
-        "v": "Mila heeft deze maand een overschot van €24,75. Ze wil elke maand minstens €25,00 overhouden. Lukt dat deze maand? Leg uit met een berekening.",
-        "model": "Nee. Haar overschot is €24,75. Dat is €0,25 minder dan €25,00.",
-        "g": [
-         {
-          "t": "uitleg met het overschot van €24,75 (€0,25 minder dan €25,00)",
-          "p": 1
-         }
-        ],
-        "h": [
-         "E2H2"
-        ]
+        "p": 2,
+        "eenh": "maanden",
+        "tol": 0.005,
+        "label": "Aantal maanden"
        }
       ],
       "uitw": [
-       "Je vergelijkt je overschot (uitkomst b) met het bedrag dat Mila wil overhouden."
+       "€148,50 : €24,75 = 6 maanden.",
+       "Deel het bedrag dat ze nodig heeft door het bedrag dat ze elke maand overhoudt (je antwoord bij b)."
       ]
      }
     ],
@@ -519,7 +503,7 @@
      [
       "Kleedgeld",
       "€ 27,50",
-      "Sportclub",
+      "Contributie sportclub",
       "€ 22,00"
      ],
      [
@@ -546,16 +530,34 @@
    {
     "nr": 8,
     "titel": "Begroting van Noa",
-    "tekst": "Noa wil een begroting per maand maken. Sommige bedragen zijn per week en sommige per maand. Rond af op 2 decimalen.",
+    "tekst": "Noa maakt een begroting per maand. Drie bedragen krijgt of betaalt ze per week. Die reken je eerst om naar een bedrag per maand.",
     "delen": [
      {
       "id": "a",
+      "tabel": [
+       [
+        "Per week",
+        "Bedrag"
+       ],
+       [
+        "Zakgeld",
+        "€ 9,00"
+       ],
+       [
+        "Bijbaantje",
+        "€ 36,00"
+       ],
+       [
+        "Eten en drinken",
+        "€ 7,50"
+       ]
+      ],
       "v": "Reken de drie weekbedragen om naar maandbedragen.",
       "velden": [
        {
         "type": "num",
         "ans": [
-         34.67
+         39.0
         ],
         "p": 1,
         "eenh": "€",
@@ -565,7 +567,7 @@
        {
         "type": "num",
         "ans": [
-         164.67
+         156.0
         ],
         "p": 1,
         "eenh": "€",
@@ -575,7 +577,7 @@
        {
         "type": "num",
         "ans": [
-         41.17
+         32.5
         ],
         "p": 1,
         "eenh": "€",
@@ -584,33 +586,48 @@
        }
       ],
       "uitw": [
-       "Zakgeld: (8,00 × 52) : 12 = 416 : 12 = €34,67",
-       "Bijbaantje: (38,00 × 52) : 12 = 1.976 : 12 = €164,67",
-       "Eten en drinken: (9,50 × 52) : 12 = 494 : 12 = €41,17",
-       "Alleen de bedragen per week reken je om; de bedragen per maand neem je over."
+       "Zakgeld: (9,00 × 52) : 12 = 468 : 12 = €39,00",
+       "Bijbaantje: (36,00 × 52) : 12 = 1.872 : 12 = €156,00",
+       "Eten en drinken: (7,50 × 52) : 12 = 390 : 12 = €32,50",
+       "Een jaar heeft 52 weken en 12 maanden. Keer 4 is niet goed: een maand is iets langer dan 4 weken."
       ]
      },
      {
       "id": "b",
-      "v": "Maak de maandbegroting van Noa. Hoeveel is het kleedgeld per maand, en wat zijn de totalen?",
+      "tabel": [
+       [
+        "Inkomsten",
+        "Per maand",
+        "Uitgaven",
+        "Per maand"
+       ],
+       [
+        "Zakgeld",
+        "antwoord a",
+        "Eten en drinken",
+        "antwoord a"
+       ],
+       [
+        "Kleedgeld",
+        "€ 32,00",
+        "Contributie voetbal",
+        "€ 21,00"
+       ],
+       [
+        "Bijbaantje",
+        "antwoord a",
+        "Kleding en verzorging",
+        "€ 30,00"
+       ]
+      ],
+      "v": "Dit is de maandbegroting van Noa. Bij 'antwoord a' hoort het bedrag dat je bij a hebt uitgerekend. Bereken het totaal van de inkomsten en het totaal van de uitgaven.",
       "velden": [
        {
         "type": "num",
         "ans": [
-         32.0
+         227.0
         ],
-        "p": 1,
-        "eenh": "€",
-        "tol": 0.005,
-        "label": "Kleedgeld per maand"
-       },
-       {
-        "type": "num",
-        "ans": [
-         231.34,
-         231.33
-        ],
-        "p": 1,
+        "p": 2,
         "eenh": "€",
         "tol": 0.005,
         "label": "Totaal inkomsten"
@@ -618,7 +635,7 @@
        {
         "type": "num",
         "ans": [
-         92.17
+         83.5
         ],
         "p": 1,
         "eenh": "€",
@@ -627,8 +644,8 @@
        }
       ],
       "uitw": [
-       "In de tabel: zakgeld €34,67, kleedgeld €32,00, bijbaantje €164,67, eten en drinken €41,17, contributie voetbal €21,00, kleding en verzorging €30,00.",
-       "Inkomsten: 34,67 + 32,00 + 164,67 = €231,34. Uitgaven: 41,17 + 21,00 + 30,00 = €92,17."
+       "Inkomsten: 39,00 + 32,00 + 156,00 = €227,00.",
+       "Uitgaven: 32,50 + 21,00 + 30,00 = €83,50."
       ]
      },
      {
@@ -647,8 +664,7 @@
        {
         "type": "num",
         "ans": [
-         139.17,
-         139.16
+         143.5
         ],
         "p": 1,
         "eenh": "€",
@@ -657,56 +673,9 @@
        }
       ],
       "uitw": [
-       "€231,34 − €92,17 = €139,17 overschot."
+       "€227,00 − €83,50 = €143,50 overschot."
       ]
      }
-    ],
-    "tabel": [
-     [
-      "Post",
-      "Bedrag",
-      "Per"
-     ],
-     [
-      "Inkomsten",
-      "",
-      ""
-     ],
-     [
-      "Zakgeld",
-      "€ 8,00",
-      "per week"
-     ],
-     [
-      "Kleedgeld",
-      "€ 32,00",
-      "per maand"
-     ],
-     [
-      "Bijbaantje",
-      "€ 38,00",
-      "per week"
-     ],
-     [
-      "Uitgaven",
-      "",
-      ""
-     ],
-     [
-      "Eten en drinken",
-      "€ 9,50",
-      "per week"
-     ],
-     [
-      "Contributie voetbal",
-      "€ 21,00",
-      "per maand"
-     ],
-     [
-      "Kleding en verzorging",
-      "€ 30,00",
-      "per maand"
-     ]
     ],
     "p": 8
    },

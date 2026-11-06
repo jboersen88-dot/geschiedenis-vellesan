@@ -1,3 +1,10 @@
+## 2026-11-06 · Economie jaar 2 H2: 1-ster oefentoets, begrotingsvragen duidelijker
+
+- **Vraag 7 (Mila)**: "Sportclub" heet nu "Contributie sportclub". Vraag d (lukt het om €25 over te houden?) was te makkelijk en is vervangen door: hoeveel maanden spaart Mila haar overschot voor een telefoon van €148,50 (6 maanden).
+- **Vraag 8 (Noa)**: andere weekbedragen (€9,00, €36,00 en €7,50), zodat de maandbedragen niet meer op ,67 uitkomen (€39,00, €156,00 en €32,50). De weekbedragen staan in een eigen tabelletje bij a; bij b staat de maandbegroting met links de inkomsten en rechts de uitgaven, met "antwoord a" op de plekken van de omgerekende bedragen. De vraag naar het kleedgeld is vervallen; het totaal van de inkomsten telt nu voor 2 punten (opgave blijft 8 punten).
+- **Toetsen (`bouw-toets.py`)**: een deelvraag kan een eigen tabel hebben (`tabel` bij de deelvraag). Tabellen met vier kolommen passen nu ook op een telefoon (kleinere letter, woorden worden afgebroken).
+- De Word-versie (`economie/oefentoetsen/oefentoets-h2-1-ster.docx`) heeft nog de oude vragen 7d en 8.
+
 ## 2026-11-06 · Economie jaar 2 mavo: GL-versie van hoofdstuk 1 in de nieuwe opzet
 
 - **GL-versie H1** (`h.html?p=jaar-2/mavo/kopie-van-hoofdstuk-1`): hoofdstukpagina met vier paragraafkaarten (1.1 Wat wil je kopen?, 1.2 Waarom koop je dat?, 1.3 Sta je sterk als consument?, 1.4 Kom je uit met je geld?) en per paragraaf een leeromgeving met de PowerPoint als klikbare presentatie (`economie/j2h1gl/slides`; de dia "Deze les" van 1.2 is weggelaten), de kernvragen van de oude pagina en de instructiefilms. De oefentoets en de nakijkbladen staan in de groene band "Oefenstof". Gemaakt met `python3 -I economie/bouw-pagina.py j2h1gl`; de foto's zijn die van jaar 3 H1 en H2.
