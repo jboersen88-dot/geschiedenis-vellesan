@@ -69,3 +69,5 @@ Zet de bestanden als `NN-S.jpg` in `slides/H4/` en print de regel voor `STEPS`. 
 **Economie jaar 2 H1** (`economie/j2h1/slides/<id>/`, id 1.1 … 1.4): zelfde werkwijze als H2 (bestandsnamen K11, K11s … in `slides-export`); op 2026-11-05 exporteerden alle acht bestanden in één keer, zonder -9074.
 
 **Economie jaar 3 H1 en H2** (`economie/j3h1/slides/1.x`, `economie/j3h2/slides/2.x`): bestandsnamen L11 … L24 in `slides-export`; alles exporteerde in één keer. Dia's over de lesplanning (Deze les, regels, huiswerk) zijn na `plaats` weggehaald en de rest is opnieuw genummerd (lijst `weg` in `economie/bouw-pagina.py`).
+
+**Economie jaar 2 H1, GL-versie** (`economie/j2h1gl/slides/1.x`): bestandsnamen M11 … M14s in `slides-export`; alles exporteerde in één keer. Dia 1 van 1.2 ("Deze les") is weggehaald.

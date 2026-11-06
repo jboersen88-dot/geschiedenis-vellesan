@@ -95,6 +95,49 @@ CONFIG = {
         extra=["ot", "n21", "n22", "n23", "n24"],
         weg={"2.1": [1], "2.2": [1], "2.3": [1, 5]},
     ),
+    # jaar 2 H1, de GL-versie (pagina "kopie-van-hoofdstuk-1"); foto's van jaar 3 hergebruikt
+    "j2h1gl": dict(
+        key="eco-j2h1gl-v1",
+        pars=[
+            dict(id="1.1", t="Wat wil je kopen?", file="1aPLEShv2ifJdN7_vmJeqnV3SaHJcuErh", x=["nr"],
+                 sum="Behoeften, goederen en diensten, consumeren, zelfvoorziening, geldbedragen noteren en het gemiddelde berekenen.",
+                 imgs=[["../j3h1/wensen", "Een lijstje met wensen: wat heb jij nodig?"], ["../j3h1/eten", "Samen eten: een behoefte"]],
+                 q=["Wat zijn behoeften?", "Behoeften kun je in twee groepen verdelen. Welke twee? Geef van allebei twee voorbeelden.",
+                    "Geef drie voorbeelden van goederen.", "Geef drie voorbeelden van diensten.",
+                    "Met welke twee dingen moet je rekening houden als je een geldbedrag opschrijft?", "Wat is consumeren?",
+                    "Wat wordt er bedoeld met zelfvoorziening?", "Hoe bereken je het gemiddelde van iets? Schrijf de formule op."]),
+            dict(id="1.2", t="Waarom koop je dat?", file="1jQt0b_jB1aK8rkfIm6s1GYLNPhVpwUnk", x=["nr"],
+                 sum="Je budget, sociale en commerciële beïnvloeding, commerciële en ideële reclame en rekenen met korting.",
+                 imgs=[["../j3h1/vlogger", "Een vlogger filmt zichzelf: beïnvloeding via social media"], ["../j3h1/reclamebord", "Een reclamebord langs de weg"]],
+                 q=["Wat wordt er bedoeld met een budget?", "Hoe heet het als je beïnvloed wordt door vrienden?",
+                    "Hoe heet het als je beïnvloed wordt door grote bedrijven?", "Geef een voorbeeld van commerciële reclame.",
+                    "Wat wordt er bedoeld met ideële reclame?", "Noem drie manieren (media) waarop bedrijven hun reclame verspreiden.",
+                    "Een tv kost €300 en je krijgt 20% korting. Hoe bereken je hoeveel korting je krijgt?"]),
+            dict(id="1.3", t="Sta je sterk als consument?", file="1snOhw2ldCy_a2ZhU2Ktlg5dtdNOfAzV6", x=["nh"],
+                 sum="Consumentenorganisaties, vergelijkend warenonderzoek en garantie.",
+                 imgs=[["../j3h2/winkel", "Een supermarkt vol producten om te vergelijken"], ["../j3h2/kapot", "Een kapot scherm: heb je nog garantie?"]],
+                 q=["Wat is een consumentenorganisatie?", "Noem drie dingen die consumentenorganisaties doen.",
+                    "Leg uit waarom een vergelijkend warenonderzoek handig kan zijn.", "Wat is garantie?"]),
+            dict(id="1.4", t="Kom je uit met je geld?", file="1HAZgct64wPetMVPTdGhOFfXy8WjpTp7_", x=["nr"],
+                 sum="Soorten inkomsten en uitgaven, van week naar maand rekenen, een begroting maken en geld reserveren.",
+                 imgs=[["../j3h1/begroting", "Rekeningen en een rekenmachine: een begroting maken"], ["../j3h1/spaarvarken", "Sparen: geld reserveren voor later"]],
+                 q=["Welke soorten inkomsten heb je? Geef van elke soort minstens twee voorbeelden.",
+                    "Welke soorten uitgaven heb je? Geef van elke soort minstens twee voorbeelden.",
+                    "Je verdient €50 per week. Hoeveel verdien je dan per maand? Hoe bereken je dat?", "Wat staat er in een begroting?",
+                    "Hoe maak je een begroting?", "Waarom is het handig om een begroting te maken?", "Wat betekent geld reserveren?",
+                    "Met welke formule bereken je hoeveel geld je moet reserveren?"]),
+        ],
+        mat={"ot": ["Oefentoets hoofdstuk 1", [["Oefentoets", "13pJeEmldejfE6TNaKlrxl-hkFkJess5L"], ["Met antwoorden", "15Smp4iqHeYIZZENDP3PiGDyRrDXWgJOp"]]],
+             "no": ["Nakijkblad oefentoets", [["Nakijkblad", "1946XgRIBFYOxd_Bimo2Z5p0WPVvN9y9H"]]],
+             "nh": ["Nakijkblad herhalingsvragen", [["Nakijkblad", "1ZsEMwlwcs2w4VuGiFyv3cRSQmg3n7lc0"]]],
+             "nr": ["Nakijkblad rekenen", [["Nakijkblad", "1JOahNgKIJwAEEKjgQwyRfjdB5l63GxTP"]]]},
+        extra=["ot", "no", "nh", "nr"],
+        films=[dict(par="1.2", film="1EN_S_SEca6zPTW3gp4XepzGCes8qs4-y", k="Instructiefilm", t="De juiste formule kiezen",
+                    d="Gemiddelde, korting of procent: welke formule gebruik je wanneer?", btn="Naar de oefenstof"),
+               dict(par="1.4", film="16N5D3Uk7W3dtGwI9u8KE6zPuN2LAx5CF", k="Instructiefilm", t="Van week naar maand",
+                    d="Keer 52 en gedeeld door 12. Niet keer 4!", btn="Naar de oefenstof")],
+        weg={"1.2": [1]},
+    ),
 }
 
 if len(sys.argv) != 2 or sys.argv[1] not in CONFIG:
@@ -105,11 +148,11 @@ OUT = os.path.join(ECO, name)
 for p in C["pars"]:
     assert all(k in C["mat"] for k in p["x"]), p["id"]
     for b, _ in p["imgs"]:
-        assert os.path.exists(os.path.join(ECO, "img", name, b + ".jpg")), b
+        assert os.path.exists(os.path.normpath(os.path.join(ECO, "img", name, b + ".jpg"))), b
 assert all(k in C["mat"] for k in C["extra"])
 sl = lambda f: json.load(open(os.path.join(OUT, "slides", f), encoding="utf-8")) if os.path.exists(os.path.join(OUT, "slides", f)) else {}
 pars = [dict(p, g=[], gi=[]) for p in C["pars"]]
-data = dict(key=C["key"], oefen=None, pars=pars, cards=[], films=[], mat=C["mat"], extra=C["extra"], deck=sl("deck.json"), steps=sl("steps.json"))
+data = dict(key=C["key"], oefen=None, pars=pars, cards=[], films=C.get("films", []), mat=C["mat"], extra=C["extra"], deck=sl("deck.json"), steps=sl("steps.json"))
 os.makedirs(OUT, exist_ok=True)
 json.dump(data, open(os.path.join(OUT, "data.json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
 print("economie/%s/data.json:" % name, len(pars), "paragrafen,", sum(len(p["q"]) for p in pars), "kernvragen,", len(data["deck"]), "presentaties")

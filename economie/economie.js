@@ -39,6 +39,11 @@ var RIJK={"jaar-3/mavo/hoofdstuk-0-rekenvaardigheden":{map:"j3h0",soort:"reken",
   intro:"Keuzes maken, geld en betalen, behoeften en slim kopen: vier paragrafen over jou als consument.",
   par:"Vier paragrafen over keuzes en geld.",beeld:"Foto's: Unsplash (gratis licentie)",reken:"Saldo, afronden, week naar maand, gemiddelde en procenten.",games:"Edu-Racer, Swipe & Scoor en begrippen-memory.",
   kleur:{"1.1":["var(--coral)","var(--berry)"],"1.2":["#7fd4c9","var(--teal)"],"1.3":["#b9d6cb","var(--green)"],"1.4":["#f2c46b","var(--ochre)"]}},
+  "jaar-2/mavo/kopie-van-hoofdstuk-1":{map:"j2h1gl",kop:["Wat heb je ","nodig?"],versie:"GL-versie",van:"jaar-2/mavo/hoofdstuk-1",/* tweede versie: niet als eigen hoofdstuk op de jaarpagina, wel via een knop op het hoofdstuk */hero:"../j2h1/shoppen",
+  alt:"Een meisje zoekt in een kledingwinkel tussen de jurken aan het rek",
+  intro:"De GL-versie van hoofdstuk 1: wat wil je kopen, waarom koop je dat, sta je sterk als consument en kom je uit met je geld?",
+  par:"Vier paragrafen over jou als consument.",beeld:"Foto's: Unsplash (gratis licentie)",
+  kleur:{"1.1":["var(--coral)","var(--berry)"],"1.2":["#7fd4c9","var(--teal)"],"1.3":["#f2c46b","var(--ochre)"],"1.4":["#b9d6cb","var(--green)"]}},
   "jaar-2/mavo/hoofdstuk-2":{map:"j2h2",kop:["Jij en je ","geld"],hero:"begroting",
   alt:"Een vrouw maakt 's avonds aan een bureau een jaarbegroting, met rekenmachine, bonnetjes en een laptop met bankapp",
   intro:"Inkomsten en uitgaven, sparen, lenen en verzekeren: vier paragrafen om slim met je geld om te gaan.",
@@ -73,7 +78,7 @@ function index(){
   var KL=[["var(--coral)"],["#7fd4c9"],["#f2c46b"]],
   jaar=function(j,i){var nv=j.niv.filter(function(n){return n.pre;});return '<a class="rchap io" style="--c:'+KL[i%3][0]+';--d:'+i+'" href="'+jaarUrl(j,nv.length===1&&j.niv.length===1?nv[0]:null)+'"><img src="img/'+j.img+'.jpg" alt="" loading="lazy"><span class="glare"></span><span class="num">'+j.id.slice(-1)+'</span><div class="body"><span class="tag">'+esc(j.niv.map(function(n){return n.titel;}).join(" · "))+'</span><h3>'+esc(j.titel)+'</h3><p>'+esc(j.intro)+'</p><div class="links">'+rSpans([jaarTotaal(j)+" onderdelen"].concat(j.niv.filter(function(n){return !n.pre;}).map(function(n){return n.titel+" volgt";})))+'</div></div></a>';},
   /* uitgelicht: de hoofdstukken met een eigen leeromgeving en oefenomgeving */
-  nieuw=Object.keys(RIJK).map(function(pad){var c=RIJK[pad],jn=jaarVan(pad),p=P.filter(function(x){return x.pad===pad;})[0];return ["h.html?p="+encodeURIComponent(pad),naam(jn[0],jn[1])+(p?" · "+titel(p).toLowerCase():""),c.kop.join(""),c.intro];})
+  nieuw=Object.keys(RIJK).filter(function(pad){return !RIJK[pad].van;}).map(function(pad){var c=RIJK[pad],jn=jaarVan(pad),p=P.filter(function(x){return x.pad===pad;})[0];return ["h.html?p="+encodeURIComponent(pad),naam(jn[0],jn[1])+(p?" · "+titel(p).toLowerCase():""),c.kop.join(""),c.intro];})
     .concat(Object.keys(LEEROMG).map(function(pad){var jn=jaarVan(pad),p=P.filter(function(x){return x.pad===pad;})[0];return [LEEROMG[pad][0],naam(jn[0],jn[1]),p?titel(p):"Leeromgeving",LEEROMG[pad][2]];}));
   document.title="Economie · Meneer Boersen";
   document.body.className="rijk";
@@ -100,7 +105,7 @@ function jaar(){
   var n=j.niv.filter(function(x){return x.id===Q.get("n");})[0];
   if(!n||!n.pre){niveau(j);return;}
   var L=hoofdstukken(n),se=L.filter(function(p){return isSE(p.pad);}),rest=L.filter(function(p){return !isSE(p.pad);}),
-  nul=rest.filter(function(p){return hNum(p)[0]===0;}),hs=rest.filter(function(p){return hNum(p)[0]!==0;});
+  nul=rest.filter(function(p){return hNum(p)[0]===0;}),hs=rest.filter(function(p){return hNum(p)[0]!==0&&!(RIJK[p.pad]&&RIJK[p.pad].van);});
   hs.sort(function(a,b){return (hNum(a)[0]===null?99:hNum(a)[0])-(hNum(b)[0]===null?99:hNum(b)[0]);});
   document.title=naam(j,n)+" · Economie";document.body.className="rijk";
   var url=function(p){return "h.html?p="+encodeURIComponent(p.pad);},
@@ -221,12 +226,12 @@ function rDeck(el,dir,N,STEPS,key){
   go(i,0,1);}
 
 function hoofdpagina(p,j,n,c,D){
-  var t=rKort(p),bn=jaarUrl(j,n),oef=D.oefen||"#oefenstof",zonder=!D.oefen,w=esc(j.titel.toLowerCase()+" "+n.titel.toLowerCase());
+  var t=rKort(p),bn=jaarUrl(j,n),oef=D.oefen||"#oefenstof",zonder=!D.oefen,ver=Object.keys(RIJK).filter(function(k){return RIJK[k].van===p.pad;})[0],w=esc(j.titel.toLowerCase()+" "+n.titel.toLowerCase());
   var kaart=function(x,i){return '<a class="rchap io" style="--c:'+c.kleur[x.id][0]+';--d:'+i+'" href="'+rUrl(p,x.id)+'"><img src="'+rSrc(c,(c.kaart||{})[x.id]||x.imgs[0][0])+'" alt="" loading="lazy"><span class="glare"></span><span class="num">'+x.id+'</span><div class="body"><span class="tag">Paragraaf '+x.id+'</span><h3>'+esc(x.t)+'</h3><p>'+esc(x.sum)+'</p><div class="links">'+rSpans(rTags(D,x))+'</div></div></a>';};
   var tegels=[["#lab/begrippen","Begrippen","Flash cards en Leg uit: oefen alle "+D.cards.length+" begrippen van dit hoofdstuk."],["#lab/reken","Rekenen",c.reken],["#lab/games","Quiz en games",c.games],["#toets","Oefentoetsen","Met klok en nakijkblad, of als Word-bestand voor je iPad."]];
   document.title=c.kop.join("")+" · Economie "+naam(j,n);
   document.body.innerHTML=rNav([["index.html","Economie"],[bn,j.titel]],oef,zonder?"Oefenstof":"")
-  +'<section class="rhero"><div class="rhero-img" id="rimg" style="background-image:url('+rSrc(c,c.hero)+')" role="img" aria-label="'+esc(c.alt)+'"></div><div class="wrap rhero-in"><div class="eyebrow rv" style="--i:0;color:var(--coral)">Economie · '+esc(naam(j,n))+' · '+esc(t.toLowerCase())+'</div><h1 class="rv" style="--i:1">'+esc(c.kop[0])+'<em>'+esc(c.kop[1])+'</em>'+esc(c.kop[2]||"")+'</h1><p class="rv" style="--i:2">'+esc(c.intro)+'</p><div class="rbtns rv" style="--i:3"><a class="rbtn primary" href="'+rUrl(p,D.pars[0].id)+'">Begin met '+D.pars[0].id+' <span class="arr">→</span></a><a class="rbtn ghost" href="'+oef+'">'+(zonder?"Naar de oefenstof":"Naar de oefenomgeving")+'</a></div></div><div class="rscroll" aria-hidden="true"></div></section>'
+  +'<section class="rhero"><div class="rhero-img" id="rimg" style="background-image:url('+rSrc(c,c.hero)+')" role="img" aria-label="'+esc(c.alt)+'"></div><div class="wrap rhero-in"><div class="eyebrow rv" style="--i:0;color:var(--coral)">Economie · '+esc(naam(j,n))+' · '+esc(t.toLowerCase())+'</div><h1 class="rv" style="--i:1">'+esc(c.kop[0])+'<em>'+esc(c.kop[1])+'</em>'+esc(c.kop[2]||"")+'</h1><p class="rv" style="--i:2">'+esc(c.intro)+'</p><div class="rbtns rv" style="--i:3"><a class="rbtn primary" href="'+rUrl(p,D.pars[0].id)+'">Begin met '+D.pars[0].id+' <span class="arr">→</span></a><a class="rbtn ghost" href="'+oef+'">'+(zonder?"Naar de oefenstof":"Naar de oefenomgeving")+'</a>'+(ver?'<a class="rbtn ghost" href="h.html?p='+encodeURIComponent(ver)+'">'+esc(RIJK[ver].versie)+'</a>':c.van?'<a class="rbtn ghost" href="h.html?p='+encodeURIComponent(c.van)+'">Andere versie</a>':'')+'</div></div><div class="rscroll" aria-hidden="true"></div></section>'
   +'<section class="rblk" id="paragrafen"><div class="wrap"><div class="rhead io"><div><div class="eyebrow">'+esc(t)+' · '+esc(c.kop.join(""))+'</div><h2>'+esc(c.par)+'</h2></div><p>Open een paragraaf voor de PowerPoint, de filmpjes en de vragen die je moet kunnen beantwoorden. Oefenen doe je daarna '+(zonder?"met de oefenstof onderaan deze pagina":"in de oefenomgeving")+'.</p></div><div class="rchaps">'+D.pars.map(kaart).join("")+'</div></div></section>'
   +rGolf(" top")+(zonder?rOefenstof(D,t):'<section class="rblk rapp" id="oefenen"><div class="wrap"><div class="rhead io"><div><div class="eyebrow">Oefenomgeving</div><h2>Oefen tot je het kunt.</h2></div><p>Alles om '+esc(t.toLowerCase())+' te oefenen op één plek. Je voortgang wordt op dit apparaat bewaard.</p></div><div class="roef">'
   +tegels.map(function(g,i){return '<a class="io" style="--d:'+i+'" href="'+oef+g[0]+'"><b>'+(i+1)+'</b><h3>'+esc(g[1])+'</h3><p>'+esc(g[2])+'</p><span class="arr">→</span></a>';}).join("")
@@ -237,7 +242,7 @@ function hoofdpagina(p,j,n,c,D){
 function paragraaf(p,j,n,c,D,x){
   var t=rKort(p),zonder=!D.oefen,oef=D.oefen||rUrl(p)+"#oefenstof",oq=zonder?oef:oef+"#lab/quiz/"+x.id,k=c.kleur[x.id][1],i=D.pars.indexOf(x),vor=D.pars[i-1],na=D.pars[i+1],S=rStaat(D),qs=S.qs||{},films=D.films.filter(function(f){return f.par===x.id;}),d=rTel(D,x),
   doel=function(f){return f.lab==="reken"?"#lab/reken"+(f.mode?"/"+f.mode:""):f.lab==="quiz"?"#lab/quiz/"+(f.qpar||x.id):"#lab/"+f.lab;},
-  film=function(f){var id=f.yt||f.film;return '<div class="rfilm io"><div class="yt"><img src="'+(f.yt?"https://i.ytimg.com/vi/"+esc(id)+"/hqdefault.jpg":"https://drive.google.com/thumbnail?id="+esc(id)+"&sz=w1200")+'" alt="" loading="lazy" onerror="this.remove()"><button '+(f.yt?'data-yt':'data-film')+'="'+esc(id)+'" aria-label="Speel film af: '+esc(f.t)+'"><span></span></button></div><div class="rfilm-tx"><div class="eyebrow">'+esc(f.k)+'</div><h3>'+esc(f.t)+'</h3><p>'+esc(f.d)+'</p><a class="rlink" href="'+oef+doel(f)+'">'+esc(f.btn)+' →</a></div></div>';},
+  film=function(f){var id=f.yt||f.film;return '<div class="rfilm io"><div class="yt"><img src="'+(f.yt?"https://i.ytimg.com/vi/"+esc(id)+"/hqdefault.jpg":"https://drive.google.com/thumbnail?id="+esc(id)+"&sz=w1200")+'" alt="" loading="lazy" onerror="this.remove()"><button '+(f.yt?'data-yt':'data-film')+'="'+esc(id)+'" aria-label="Speel film af: '+esc(f.t)+'"><span></span></button></div><div class="rfilm-tx"><div class="eyebrow">'+esc(f.k)+'</div><h3>'+esc(f.t)+'</h3><p>'+esc(f.d)+'</p><a class="rlink" href="'+(zonder?oef:oef+doel(f))+'">'+esc(f.btn)+' →</a></div></div>';},
   mat=x.x.map(function(m){var M=D.mat[m];return M[1].map(function(l){var url=/^https?:/.test(l[1]);return '<a class="file" href="'+rLink(l[1])+'" target="_blank" rel="noopener"><span class="ic '+(url?"web\">WEB":/powerpoint/i.test(l[0])?"ppt\">PPT":"doc\">DOC")+'</span><span>'+esc(M[0])+'<small>'+esc(l[0])+(url?' · opent in een nieuw tabblad':' · opent in Google Drive')+'</small></span></a>';}).join("");}).join("");
   document.title=x.id+" "+x.t+" · Leeromgeving · Economie";
   document.body.innerHTML=rNav([[rUrl(p),t],[rUrl(p,x.id),"Leeromgeving",1]],oef,zonder?"Oefenstof":"")

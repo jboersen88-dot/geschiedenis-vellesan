@@ -1,3 +1,9 @@
+## 2026-11-06 · Economie jaar 2 mavo: GL-versie van hoofdstuk 1 in de nieuwe opzet
+
+- **GL-versie H1** (`h.html?p=jaar-2/mavo/kopie-van-hoofdstuk-1`): hoofdstukpagina met vier paragraafkaarten (1.1 Wat wil je kopen?, 1.2 Waarom koop je dat?, 1.3 Sta je sterk als consument?, 1.4 Kom je uit met je geld?) en per paragraaf een leeromgeving met de PowerPoint als klikbare presentatie (`economie/j2h1gl/slides`; de dia "Deze les" van 1.2 is weggelaten), de kernvragen van de oude pagina en de instructiefilms. De oefentoets en de nakijkbladen staan in de groene band "Oefenstof". Gemaakt met `python3 -I economie/bouw-pagina.py j2h1gl`; de foto's zijn die van jaar 3 H1 en H2.
+- **Eén hoofdstuk 1 op de jaarpagina**: een hoofdstuk met `van` in `RIJK` (een tweede versie) staat niet als eigen kaart op de jaarpagina en de startpagina. Op de pagina van H1 staat een knop "GL-versie"; de GL-versie heeft een knop terug ("Andere versie").
+- **Klein**: in een leeromgeving zonder oefenomgeving gaat de knop onder een film naar de oefenstof.
+
 ## 2026-11-05 · Economie: jaarpagina's, alle oude hoofdstukpagina's en jaar 3 mavo H0, H1 en H2 in de nieuwe opzet
 
 - **Jaarpagina** (`jaar.html?j=jaar-3&n=mavo` en de andere jaren): in drie blokken: "Begin hier" (hoofdstuk 0 rekenvaardigheden), de hoofdstukken als genummerde fotokaarten en een groene band "Toetsen en SE's". De keuze van het niveau (`jaar.html?j=jaar-3`) heeft dezelfde opzet.
