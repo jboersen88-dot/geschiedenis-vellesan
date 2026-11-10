@@ -20,6 +20,15 @@ Voor een nieuw gesprek dat verder bouwt. Werk in `~/Claude/geschiedenis-vellesan
 - **Bestanden van Google Drive**: de bestanden die op de site kunnen, staan op de Google Drive van de docent; daar mag je bij. Gebruik de Google Drive-connector (search_files / list_recent_files / read_file_content / download_file_content). Zoek o.a. PowerPoints en materiaal voor Economie (ook havo/vwo jaar 3) en Geschiedenis boekje 2. PowerPoints → exacte dia's met `tools/dias/`. Vraag eerst of PowerPoints in de openbare repo mogen. Lesstof van een uitgever niet letterlijk in de openbare repo.
 - Overige punten uit de afvinklijst en "Nog open" in `changelog.md`, bijvoorbeeld Economie-hoofdstukken verrijken zoals jaar 2 H2 (eigen beelden + galerij, zie `BEELDEN` in `economie.js`) en de Economie-lesapps naar het niveau van de Geschiedenis-app tillen.
 
+
+## Stand van de grote klus (10 november 2026, 's avonds)
+De volledige opdracht staat in `~/Claude/geschiedenis-werk/opdracht-2026-11-10.md` (buiten de repo; lees die eerst). Regels daarin gelden: fases in volgorde, hulpagenten (Sonnet: dia's, afleiders, bouwen naar jouw opzet; Haiku: checks, screenshots, bestanden zoeken), niets meer in de oude Google-opzet.
+- **Af**: fase 1 voor de hoofdstukpagina en leeromgeving (economie.js/css) en de oefenomgeving (bouw-oefen.py, j2h2 en j2h1 herbouwd). Zie de changelog-entry van 10 nov. Checks op 0. Gepusht.
+- **Bezig/nog te doen in fase 1**: (1) alle "na"-screenshots maken: `~/Claude/geschiedenis-werk/alle-shots.sh na` (server: `python3 -m http.server 8001` in `~/Claude/geschiedenis-werk`, daar staat een symlink `repo`); (2) Edu-Racer, memory en rekentrainer één keer in de browser proberen; (3) `voor-en-na.html` komt pas aan het eind.
+- **Volgende stap**: fase 2 (persoonlijke oefenroute jaar 2 H1 en H2). Ontwerpidee: een nieuw tabblad "Mijn route" in oefen.html (via bouw-oefen.py) met een vragenbank per leerdoel op drie niveaus in `economie/<map>/route.json` en een gedeelde module `economie/route.js`; opslag onder een NIEUWE sleutel (bestaande sleutels niet aanraken); voortgangscode per leerdoel het niveau (zie tools/voortgang-lezen.html). Bronnen: `~/Claude/geschiedenis-werk/bronnen.md` (inventaris door een Haiku-agent, als die klaar is) en de leerdoelen/CHK/BANK/RGEN in economie/apps/jaar-2_mavo_hoofdstuk-1.html en -2.html.
+- Daarna fase 3 (jaar 3 H3), fase 4 (jaar 4 H5), fase 5 (overige hoofdstukken uit de oude opzet).
+- Eindrapport voor de docent schrijven in `~/Claude/geschiedenis-werk/eindrapport.md`; nu al te melden: de herschreven afleiders in `economie/j2h1/bron/toetsen.json` (git log van 10 nov) moet de docent nakijken.
+
 ## Harde regels
 - Meerkeuze: exact 4 opties, elk op een eigen regel met witruimte, ongeveer even lang, het juiste antwoord niet steeds het langste (`tools/vragencheck.py`).
 - Vóór elke push: `python3 -I tools/vragencheck.py`, `python3 -I tools/linkcheck.py`, `python3 -I tools/a11ycheck.py`, en een browsertest (python3 -m http.server) op 375 en 820 px.

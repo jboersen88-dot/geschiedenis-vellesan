@@ -119,6 +119,13 @@ KLEUR = {"#3b1534": "#123a30", "#5a1f4f": "#1f5f4e", "#6a2559": "#174a3d", "#2a0
          "rgba(59,21,52": "rgba(31,95,78"}
 for oud, nieuw in KLEUR.items():
     s = re.sub(re.escape(oud) + (r"(?![0-9a-fA-F])" if oud[0] == "#" else ""), nieuw, s, flags=re.I)
+# donkere modus (fase 1, 2026-11-10): vaste witte en beige vlakken in de CSS van de app worden variabelen; alleen in de eerste <style>,
+# niet in het ingebedde spel (EDU_RACER_HTML)
+kop, rest = s.split("</style>", 1)
+kop = re.sub(r"background:#fff(?![0-9a-fA-F])", "background:var(--card)", kop)
+kop = re.sub(r"background:(#fffdf9|#f9f3ea|#f4ecdf|#f6efe4|#fbf6ee|#efe6d6)(?![0-9a-fA-F])", "background:var(--soft)", kop)
+kop = kop.replace("repeating-linear-gradient(45deg,var(--card),var(--card) 10px,#fbf6ee 10px,#fbf6ee 20px)", "repeating-linear-gradient(45deg,var(--card),var(--card) 10px,var(--soft) 10px,var(--soft) 20px)")
+s = kop + "</style>" + rest
 
 # kop van de app wordt nav + hero + tabbalk zoals op de site; Lesstof en Filmpjes staan nu in de leeromgeving
 LES = INFO.replace("&", "&amp;") + pars[0]["id"]  # leeromgeving, eerste paragraaf
@@ -139,14 +146,31 @@ s = rex(s, r'<div class="top">.*?</nav>\s*</div>',
 s = rep(s, "</main>", '</main>\n<footer class="ofoot"><div class="owrap"><span>Meneer Boersen · Vellesan College · %s</span><span>Je voortgang wordt op dit apparaat bewaard, in deze browser.</span></div></footer>' % C["eyebrow"])
 # de uitleg onder de tabbladen staat alleen op het overzicht; in het oefenlab en bij de toetsen is de balk compact en blijft hij staan
 s = rep(s, "<body>", '<body class="ostart">')
+# voortgang uit de leeromgeving (alleen qs/known, nog geen goals) werd niet ingelezen en daarna overschreven: elk object telt
+s = rep(s, "if(s&&s.goals)S=Object.assign(S,s);", 'if(s&&typeof s==="object")S=Object.assign(S,s);')
 
 # startpagina: teksten voor een oefenomgeving
-s = rex(s, r'(<div class="card intro">\s*<div class="eyebrow">)[^<]*(</div>\s*<h2>)[^<]*<br>[^<]*</h2>',
-        r"\g<1>Oefenomgeving\g<2>Ga aan de slag.<br>Begin hier.</h2>", groepen=True)
-s = rex(s, r'(<div class="card intro">.*?<p>)[^<]*(</p>)',
-        r"\g<1>Train de begrippen en rekensommen, maak quizvragen uit de vraagbank, speel de games en maak de oefentoets met nakijkblad. Lees eerst de lesstof in de leeromgeving.\g<2>", groepen=True)
+# "jouw volgende stap": de kop, tekst en knop vult renderNext() op basis van de voortgang (begrippen, quizfouten, checklist)
+s = rex(s, r'(<div class="card intro">\s*<div class="eyebrow">)[^<]*</div>\s*<h2>[^<]*<br>[^<]*</h2>',
+        r'\g<1>Jouw volgende stap</div><h2 id="onextH">Ga aan de slag.</h2>', groepen=True)
+s = rex(s, r'(<div class="card intro">.*?<p)>[^<]*(</p>)',
+        r'\g<1> id="onextP">Kies hieronder wat je gaat doen.\g<2>', groepen=True)
 s = rex(s, r'<button class="btn" data-go="les"(?: data-par="[\d.]+")?>(<svg.*?</svg>)Begin met [\d.]+</button>',
-        r'<button class="btn" data-go="lab">Start met oefenen</button><button class="btn ghost" data-go="les" data-par="%s">\g<1>Lees %s</button>' % (pars[0]["id"], pars[0]["id"]), groepen=True)
+        r'<span id="onext"></span><button class="btn ghost" data-go="lab">Alle oefeningen</button><button class="btn ghost" data-go="les" data-par="%s">\g<1>Lees %s</button>' % (pars[0]["id"], pars[0]["id"]), groepen=True)
+s = rep(s, '<button class="btn ghost" data-go="toets">Naar de oefentoets</button>', "")
+s = rep(s, "function renderProgress(){", '''function renderNext(){var el=document.getElementById("onext");if(!el)return;
+var nk=Object.keys(S.known||{}).length,nq=Object.keys(S.qwrong||{}).filter(function(i){return BANK[i];}).length,x=totals(),chk=typeof CHK==="undefined"?[]:CHK.map(function(c,i){return [c,i];}).filter(function(a){return !(S.check||{})[a[1]];}),h,p,b,p0=PARS[0].id;
+if(!x[0]&&!nk){h="Begin met de begrippen van "+p0+".";p="Lees eerst de lesstof in de leeromgeving. Oefen daarna hier de woorden van "+p0+".";b='<button class="btn" data-golab="begrippen" data-cpar="'+p0+'">Begrippen '+p0+' →</button>';}
+else if(nk<CARDS.length*0.6){h="Oefen de begrippen.";p="Je kent "+nk+" van de "+CARDS.length+" begrippen. Draai de kaarten om en vink af wat je weet.";b='<button class="btn" data-golab="begrippen" data-cpar="oefenen">Naar de begrippen →</button>';}
+else if(nq){h="Oefen je fouten.";p="Je had "+nq+" quizvra"+(nq>1?"gen":"ag")+" fout. Probeer "+(nq>1?"ze":"hem")+" nog een keer.";b='<button class="btn" data-golab="quiz" data-qmode="fouten">Oefen mijn fouten ('+nq+') →</button>';}
+else if(chk.length){var c=chk[0][0];h="Oefen: "+c[0].charAt(0).toLowerCase()+c[0].slice(1)+".";p="Nog "+chk.length+" van de "+CHK.length+" onderdelen van de checklist.";b='<button class="btn"'+(c[2]==="reken"?' data-golab="reken" data-mode="'+c[3]+'"':' data-golab="quiz" data-qpar="'+c[1]+'"')+'>Oefen '+c[1]+' →</button>';}
+else{h="Maak een oefentoets.";p="Je hebt alles geoefend. Test jezelf met de klok.";b='<button class="btn" data-go="toets">Naar de oefentoetsen →</button>';}
+document.getElementById("onextH").textContent=h;document.getElementById("onextP").textContent=p;el.innerHTML=b;
+var lv=function(k,t){var e=document.querySelector('[data-olive="'+k+'"]');if(e)e.textContent=t;},ns=Object.keys(S.qseen||{}).length;
+lv("begrippen",nk?nk+" van "+CARDS.length+" gekend":"");lv("quiz",nq?nq+" fout"+(nq>1?"en":"")+" om te oefenen":ns?ns+" vragen gezien":"");}
+function renderProgress(){renderNext();''')
+s = rep(s, 'var l=e.target.closest("[data-golab]");if(l){show("lab");showLab(l.dataset.golab);',
+        'var l=e.target.closest("[data-golab]");if(l){show("lab");showLab(l.dataset.golab);if(l.dataset.cpar){cardFilter=l.dataset.cpar;renderFlash();}if(l.dataset.qmode){startQuiz(l.dataset.qmode);}')
 s = rex(s, r'(<button class="step" data-go="les">.*?<span>)[^<]*', r"\g<1>De lesstof per paragraaf, in de leeromgeving", groepen=True)
 
 # voortgang telt de kernvragen die in de leeromgeving zijn afgevinkt (S.qs), niet meer de leerdoelen
@@ -175,7 +199,7 @@ KL = ["var(--berry)", "var(--p6)", "var(--p4)", "var(--p3)"]
 s = rep(s, '<button data-lab="begrippen" aria-selected="true">', '<button data-lab="home" aria-selected="false">← Alle oefeningen</button><button data-lab="begrippen" aria-selected="false">')
 s = rep(s, '<div class="lab" id="lab-begrippen">',
         '<div class="lab" id="lab-home"><p class="olabtx">Kies hieronder wat je wilt oefenen. Begin met de begrippen en ga daarna rekenen of een quiz maken. Met <b>← Alle oefeningen</b> kom je altijd terug op deze pagina.</p><div class="olab">%s</div></div>\n<div class="lab" id="lab-begrippen" hidden>'
-        % "".join('<button class="otile" data-golab="%s" style="--c:%s"><span class="ok">%s</span><h3>%s</h3><p>%s</p><span class="ogo">Start →</span></button>' % (k, KL[i % 4], e, t, d) for i, (k, e, t, d) in enumerate(LAB)))
+        % "".join('<button class="otile" data-golab="%s" style="--c:%s"><span class="ok">%s</span><h3>%s</h3><p>%s</p><span class="olive" data-olive="%s"></span><span class="ogo">Start →</span></button>' % (k, KL[i % 4], e, t, d, k) for i, (k, e, t, d) in enumerate(LAB)))
 s = rep(s, "function showLab(name){", 'function showLab(name){\ndocument.getElementById("labNav").hidden=name==="home";')
 
 # naar "les" = naar de leeromgeving; deep links #lab, #lab/reken/<mode>, #lab/quiz/<par>, #lab/begrippen/<par>, #toets
@@ -190,7 +214,7 @@ function route(){var h=location.hash.slice(1).split("/");
 if(h[0]==="toets")show("toets");
 else if(h[0]==="lab"){show("lab");
   if(h[1]==="reken"){showLab("reken");if(h[2]){mode=h[2];newR();}}
-  else if(h[1]==="quiz"){showLab("quiz");if(h[2]){quizPar=h[2];quizHome();}}
+  else if(h[1]==="quiz"){showLab("quiz");if(h[2]==="fouten")startQuiz("fouten");else if(h[2]){quizPar=h[2];quizHome();}}
   else if(h[1]==="begrippen"){showLab("begrippen");if(h[2]){cardFilter=h[2];renderFlash();}}
   else if(h[1])showLab(h[1]);}
 else return;
@@ -224,7 +248,17 @@ s = rep(s, "</style>", """
 /* ---------- huisstijl van de site (bouw-oefen.py) ---------- */
 :root{--plum:#1f5f4e;--plum-2:#123a30;--berry:#c2484d;--berry-soft:#ffe6e4;--bg:#f6f0e6;--card:#fffdf9;--ink:#201a14;--muted:#6f6556;--line:#e6dac4;
   --p1:#c2484d;--p2:#2f8f86;--p3:#1f5f4e;--p4:#b97a1f;--p5:#c2484d;--p6:#2f8f86;--coral:#ff8d90;--teal:#2f8f86;--ochre:#b97a1f;--green:#1f5f4e;--green-fg:#f3efe0;--green-mu:#b9d6cb;
-  --shadow:0 1px 2px rgba(31,95,78,.06),0 10px 28px rgba(31,95,78,.08);--r:20px;--ease-out:cubic-bezier(.23,1,.32,1);color-scheme:light}
+  --soft:#f4ecdf;--shadow:0 1px 2px rgba(31,95,78,.06),0 10px 28px rgba(31,95,78,.08);--r:20px;--ease-out:cubic-bezier(.23,1,.32,1);color-scheme:light}
+/* donkere modus: dezelfde kleuren als economie.css */
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15120d;--card:#1f1a13;--soft:#2a2319;--ink:#f3ecdd;--muted:#b2a68d;--line:#352c20;--berry:#ff9a9d;--berry-soft:#3b2322;--plum:#8fd3bd;--green:#8fd3bd;--ok-soft:#183a2b;--bad-soft:#44201c;--warn-soft:#3d2f10;--shadow:0 1px 2px rgba(0,0,0,.3),0 10px 28px rgba(0,0,0,.35);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#15120d;--card:#1f1a13;--soft:#2a2319;--ink:#f3ecdd;--muted:#b2a68d;--line:#352c20;--berry:#ff9a9d;--berry-soft:#3b2322;--plum:#8fd3bd;--green:#8fd3bd;--ok-soft:#183a2b;--bad-soft:#44201c;--warn-soft:#3d2f10;--shadow:0 1px 2px rgba(0,0,0,.3),0 10px 28px rgba(0,0,0,.35);color-scheme:dark}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .fb.ok,:root:not([data-theme="light"]) .lubox.goed{color:#bfe9d3}:root:not([data-theme="light"]) .fb.no,:root:not([data-theme="light"]) .lubox.nognietgoed{color:#ffb3a7}:root:not([data-theme="light"]) .fb.mid,:root:not([data-theme="light"]) .lubox.bijna{color:#f6d78a}
+  :root:not([data-theme="light"]) .olinks a.cta,:root:not([data-theme="light"]) .btn:not(.ghost):not(.soft){color:#3a1412}}
+/* zachte overgang als een tabblad of oefening verschijnt */
+.panel:not([hidden]),.lab:not([hidden]),#qCard>*,#rCard>*,#fCard>*,#luCard>*{animation:ofade .4s var(--ease-out)}
+@keyframes ofade{from{opacity:0;transform:translateY(8px)}}
+.olive{display:inline-block;font-size:12.5px;font-weight:700;padding:4px 10px;border-radius:999px;background:var(--berry-soft);color:var(--berry);margin-bottom:8px}.olive:empty{display:none}
+#onext:empty+.btn{margin-left:0}
 html,body{height:auto;font-family:Inter,system-ui,-apple-system,sans-serif}
 h1,h2,h3,.chh,.vbtn b{font-family:Fraunces,Georgia,serif;letter-spacing:-.015em;color:var(--ink)}
 h2{font-size:clamp(24px,2.8vw,32px);font-weight:700;line-height:1.08}
@@ -258,7 +292,9 @@ main{overflow:visible;max-width:1180px;margin:0 auto;padding:28px max(16px,env(s
 .ogal{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .ogal img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:20px;box-shadow:0 14px 40px -24px rgba(18,58,48,.6)}
 .ogal img:first-child{grid-column:1/-1;aspect-ratio:16/10}
-@media (max-width:860px){.otop-in{grid-template-columns:1fr}}
+@media (max-width:860px){.otop-in{grid-template-columns:1fr;gap:18px;margin-top:14px}.otop{padding-bottom:22px}.onum{font-size:clamp(56px,14vw,80px)}.otop p{font-size:16px;margin-bottom:14px}
+  .ogal{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -16px;padding:0 16px 4px}.ogal::-webkit-scrollbar{display:none}
+  .ogal img,.ogal img:first-child{flex:0 0 min(60%,240px);width:auto;min-width:0;aspect-ratio:4/3;scroll-snap-align:start;grid-column:auto}}
 /* tabbladen: grote knoppen; op het overzicht met uitleg en even breed, elders compact en vast onder de nav */
 .otabs{position:sticky;top:calc(62px + env(safe-area-inset-top,0px));z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:12px 0}
 .ostart .otabs{position:static;padding:22px 0}

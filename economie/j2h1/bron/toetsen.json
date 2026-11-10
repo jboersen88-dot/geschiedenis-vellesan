@@ -4,10 +4,10 @@
    {
     "v": "Lisa heeft €50. Ze wil kleding, een game én een avondje uit, maar samen kost dat €120. Wat is de juiste conclusie?",
     "o": [
-     "Haar behoeften verdwijnen vanzelf.",
-     "Ze kan alles kopen, want behoeften kosten geen geld.",
+     "Haar behoeften verdwijnen vanzelf, want ze heeft toch geen geld.",
+     "Ze kan alles kopen, want behoeften kosten geen geld, dus ze hoeft niet te kiezen.",
      "Ze moet kiezen, want ze kan met haar geld niet al haar behoeften vervullen.",
-     "Ze moet wachten tot de prijzen dalen."
+     "Ze moet wachten tot de prijzen dalen, dan kan ze alles kopen."
     ],
     "j": 2,
     "u": "Behoeften heb je meestal genoeg, maar geld en tijd zijn beperkt. Daarom moet je kiezen wat voor jou het belangrijkst is; daar gaat het vak economie over. A is fout: behoeften verdwijnen niet vanzelf. B is fout: consumeren kost juist geld. D is fout: Lisa kan zelf kiezen, ze hoeft niet op lagere prijzen te wachten."
@@ -26,8 +26,8 @@
    {
     "v": "Lena laat haar haar knippen bij de kapper en betaalt daarvoor. Welke uitspraak is juist?",
     "o": [
-     "Lena is producent en de kapper is consument.",
-     "De kapper levert een goed, want Lena kan het resultaat zien.",
+     "Lena is de producent en de kapper is de consument van de dienst.",
+     "De kapper levert een goed, want Lena kan het resultaat zien en aanraken.",
      "Lena doet aan zelfvoorziening, want het gaat om haar eigen haar.",
      "Lena is consument en de kapper is producent; de kapper levert haar een dienst."
     ],
@@ -59,10 +59,10 @@
    {
     "v": "Vroeger gaven geldwisselaars reizigers wisselbrieven mee in plaats van gouden en zilveren munten. Wat was de belangrijkste reden?",
     "o": [
-     "Mensen wilden terug naar directe ruil zonder geld.",
+     "Mensen wilden terug naar directe ruil, want met geld ruilen vonden ze lastig.",
      "Gouden en zilveren munten zijn zwaar, lastig mee te nemen en aantrekkelijk voor overvallers.",
-     "Goud en zilver kon je niet in stukjes opdelen.",
-     "De overheid verbood het reizen met munten."
+     "Goud en zilver kon je niet in stukjes opdelen, dus ze waren onhandig als geld.",
+     "De overheid verbood het reizen met munten, omdat het land anders te weinig geld overhield."
     ],
     "j": 1,
     "u": "Munten van goud en zilver zijn zwaar, lastig mee te nemen op reis en aantrekkelijk voor overvallers. Met een wisselbrief reisde je veiliger en kon je die ruilen voor muntgeld. Later werden dat bankbiljetten. Goud en zilver waren juist goed te verdelen, daarom werden er munten van gemaakt."
@@ -81,10 +81,10 @@
    {
     "v": "Welke rij bevat alleen primaire behoeften?",
     "o": [
-     "Eten, een nieuwe telefoon en een vakantie",
+     "Eten, een telefoon en vakantie",
      "Make-up, drinken en onderdak",
      "Eten, drinken en onderdak",
-     "Een game, kleding van een duur merk en uitgaan"
+     "Een game, dure kleding en uitgaan"
     ],
     "j": 2,
     "u": "Primaire behoeften (basisbehoeften) heb je nodig om te kunnen leven: eten, drinken, onderdak. Een telefoon, vakantie, make-up, game, duur merk en uitgaan maken je leven leuker of gemakkelijker, maar je kunt ze missen. Dat zijn secundaire behoeften."
@@ -115,9 +115,9 @@
     "v": "Welk voorbeeld is zelfvoorziening?",
     "o": [
      "Je bakt zelf een taart in plaats van er een te kopen.",
-     "Je koopt een taart bij de bakker.",
+     "Je koopt een taart bij de bakker in je buurt.",
      "Je laat een taart bezorgen door een webshop.",
-     "Je geeft je buurman een boek en krijgt daarvoor een taart van hem."
+     "Je geeft je buurman een boek en krijgt daarvoor een taart."
     ],
     "j": 0,
     "u": "Bij zelfvoorziening voorzie je in je eigen behoeften door zelf iets te maken of te doen, in plaats van het te kopen. Een taart kopen of laten bezorgen is consumeren, en een boek voor een taart ruilen is directe ruil."
@@ -125,10 +125,10 @@
    {
     "v": "Waarom wordt de Consumentenbond gezien als een betrouwbare bron van productinformatie?",
     "o": [
-     "Hij krijgt sponsorgeld van producenten voor goede testresultaten.",
-     "Hij verkoopt zelf de producten die hij test.",
+     "Hij krijgt sponsorgeld van producenten en geeft hun producten daarom altijd goede testresultaten.",
+     "Hij verkoopt zelf de producten die hij test en verdient daar geld aan.",
      "Hij wordt betaald door zijn leden en neemt geen geld aan van bedrijven, dus hij is onafhankelijk.",
-     "Hij bepaalt de prijs van de producten in de winkel."
+     "Hij bepaalt welke prijs de winkels vragen voor de producten die hij test."
     ],
     "j": 2,
     "u": "De Consumentenbond leeft van de contributie van leden en neemt geen geld aan van bedrijven. Daardoor is de informatie onafhankelijk en eerlijk. Bij sponsoring of eigen verkoop zou de informatie beïnvloed kunnen worden."
@@ -147,9 +147,9 @@
    {
     "v": "De tv van Mira gaat na 18 maanden kapot, terwijl ze hem normaal gebruikte. De verkoper zegt dat de garantie na één jaar is verlopen. Wat klopt?",
     "o": [
-     "De verkoper heeft gelijk: na één jaar is er geen garantie meer.",
-     "Mira heeft alleen recht als ze het eerst meldt bij de Consumentenbond.",
-     "Mira heeft recht op reparatie, maar moet die zelf betalen.",
+     "De verkoper heeft gelijk: na één jaar is er geen garantie meer op een tv.",
+     "Mira heeft alleen recht als ze eerst een klacht indient bij de Consumentenbond.",
+     "Mira heeft recht op reparatie, maar ze moet de kosten daarvan zelf betalen, want de garantie is verlopen.",
      "Mira heeft recht op reparatie of vervanging: op elektronica heb je in de EU minstens twee jaar garantie."
     ],
     "j": 3,
@@ -171,10 +171,10 @@
    {
     "v": "Waarom moeten mensen in de economie keuzes maken?",
     "o": [
-     "Omdat winkels niet alles verkopen wat mensen willen.",
+     "Omdat winkels niet alles verkopen wat mensen graag willen hebben.",
      "Omdat ze door gebrek aan geld en tijd niet al hun behoeften kunnen vervullen.",
-     "Omdat behoeften na een paar dagen vanzelf verdwijnen.",
-     "Omdat de overheid bepaalt wat je mag kopen."
+     "Omdat behoeften na een paar dagen vanzelf verdwijnen, dus kiezen hoeft niet.",
+     "Omdat de overheid bepaalt wat je mag kopen en wat niet."
     ],
     "j": 1,
     "u": "Behoeften heb je meestal genoeg, maar geld en tijd zijn beperkt. Je kunt dus niet alles hebben en moet kiezen wat voor jou het belangrijkst is. Daar gaat het vak economie over."
@@ -182,13 +182,13 @@
    {
     "v": "Welke uitspraak over zelfvoorziening is juist?",
     "o": [
-     "Je koopt altijd het goedkoopste product dat je kunt vinden.",
-     "Je ruilt iets met een buurman zonder geld te gebruiken.",
-     "Je laat iemand anders voor jou iets doen en betaalt daarvoor.",
+     "Je koopt altijd het goedkoopste product dat je kunt vinden, zodat je geld bespaart.",
+     "Je ruilt iets met je buurman en je gebruikt daarbij helemaal geen geld.",
+     "Je laat iemand anders voor jou iets doen en je betaalt daarvoor een bedrag.",
      "Je voorziet in je eigen behoefte door zelf iets te maken of te doen, in plaats van het te kopen."
     ],
     "j": 3,
-    "u": "Bij zelfvoorziening maak of doe je iets zelf, zoals je band plakken of een moestuin onderhouden. Dat kan geld besparen of je vindt het gewoon leuk. A is geen zelfvoorziening maar een kwestie van prijs. B is directe ruil. D is een dienst kopen."
+    "u": "Bij zelfvoorziening maak of doe je iets zelf, zoals je band plakken of een moestuin onderhouden. Dat kan geld besparen of je vindt het gewoon leuk. A is geen zelfvoorziening maar een kwestie van prijs. B is directe ruil. C is een dienst kopen."
    },
    {
     "v": "Een berekening geeft als uitkomst €17,8349. Hoe noteer je dit bedrag op de juiste manier?",
@@ -226,9 +226,9 @@
    {
     "v": "Waarom zijn euromunten en bankbiljetten chartaal geld?",
     "o": [
-     "Omdat je ze kunt pinnen met je bankpas.",
-     "Omdat ze op je bankrekening staan.",
-     "Omdat ze van goud en zilver gemaakt zijn.",
+     "Omdat je ze kunt pinnen met je bankpas of telefoon.",
+     "Omdat ze op je bankrekening bijgeschreven staan.",
+     "Omdat ze van echt goud en zilver gemaakt zijn.",
      "Omdat in de wet is vastgelegd dat het onze betaalmiddelen zijn."
     ],
     "j": 3,
@@ -248,9 +248,9 @@
    {
     "v": "Eva neemt €40 op bij een geldautomaat. Wat gebeurt er?",
     "o": [
-     "Ze zet chartaal geld om in giraal geld.",
-     "Ze ruilt geld direct voor een product.",
-     "Ze zet giraal geld om in chartaal geld.",
+     "Ze zet chartaal geld op haar rekening om in giraal geld.",
+     "Ze ruilt haar geld direct voor een product bij de automaat.",
+     "Ze zet giraal geld van haar rekening om in chartaal geld.",
      "Haar saldo verandert niet, want contant geld telt niet mee."
     ],
     "j": 2,
@@ -271,8 +271,8 @@
     "v": "Een gezin heeft grote geldproblemen. In welke behoeften proberen ze dan in elk geval te voorzien?",
     "o": [
      "Hun primaire behoeften, zoals eten, drinken, kleding en onderdak.",
-     "Hun secundaire behoeften, zoals een nieuwe telefoon.",
-     "De behoeften van hun vrienden en kennissen.",
+     "Hun secundaire behoeften, zoals een nieuwe telefoon of een vakantie.",
+     "De behoeften van hun vrienden en hun kennissen.",
      "Dat hoeft niet, want ze hoeven niets te kiezen."
     ],
     "j": 0,
@@ -292,7 +292,7 @@
    {
     "v": "Je twijfelt tussen twee telefoons. Welke bron is het meest betrouwbaar om te kiezen?",
     "o": [
-     "De reclame van de fabrikant.",
+     "De reclame die de fabrikant van de telefoon maakt.",
      "De mening van de verkoper in de winkel.",
      "Een vergelijkend warenonderzoek van de Consumentenbond.",
      "Een positieve review op de website van de fabrikant zelf."
@@ -303,10 +303,10 @@
    {
     "v": "In de wet staat dat een product ‘deugdelijk’ moet zijn. Wat betekent dat?",
     "o": [
-     "Het moet minstens vijf jaar meegaan.",
+     "Het moet minstens vijf jaar goed blijven werken.",
      "Het moet bij normaal gebruik een redelijke tijd meegaan.",
      "Het moet het goedkoopste product van het merk zijn.",
-     "Het moet eerst door de Consumentenbond zijn goedgekeurd."
+     "Het moet eerst door de Consumentenbond zijn goedgekeurd voor de verkoop."
     ],
     "j": 1,
     "u": "Een deugdelijk product gaat bij normaal gebruik een redelijke tijd mee. Is dat niet zo, dan moet de verkoper het repareren of omruilen, en anders krijg je je geld terug. Er staat geen vast aantal jaren in de wet en de Consumentenbond hoeft niets goed te keuren."

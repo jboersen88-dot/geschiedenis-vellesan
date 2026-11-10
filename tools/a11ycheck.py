@@ -14,6 +14,19 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SKIP_DIRS = {".git", "node_modules", "materiaal"}
 
 
+def git_ignored():
+    """bestanden die git negeert (.gitignore en .git/info/exclude): lokale werkbestanden, niet voor de site"""
+    import subprocess
+    try:
+        out = subprocess.run(["git", "ls-files", "-o", "-i", "--exclude-standard"], cwd=ROOT, capture_output=True, text=True).stdout
+        return {os.path.normpath(os.path.join(ROOT, p)) for p in out.splitlines() if p}
+    except Exception:
+        return set()
+
+
+IGNORED = git_ignored()
+
+
 class Page(HTMLParser):
     def __init__(self):
         super().__init__(convert_charrefs=True)
@@ -98,6 +111,8 @@ def main():
             if not f.endswith(".html"):
                 continue
             path = os.path.join(d, f)
+            if os.path.normpath(path) in IGNORED:
+                continue
             errs, warns = check(path)
             if errs or warns:
                 print(os.path.relpath(path, ROOT))

@@ -317,3 +317,57 @@ html:has(body.rijk){scroll-behavior:smooth}
 .sdeck:fullscreen .deck-stage{aspect-ratio:auto;flex:1}
 .sdeck:fullscreen .deck-thumbs{display:none}
 @media (prefers-reduced-motion:reduce){.deck-stage img{transition:opacity .01ms}}
+
+/* ---------- fase 1 (2026-11-10): sneller bij de inhoud, voortgang in beeld, stap voor stap leren ----------
+   hoofdstukpagina: korter hero op iPad en telefoon, paragraafknoppen in de hero, ring met de stand op elke kaart, "Ga verder waar je was".
+   leeromgeving: stappenbalk, galerij als strook op kleine schermen, begrippenkaarten per paragraaf, check jezelf één vraag tegelijk. */
+@media (max-width:900px){.rhero{min-height:min(84svh,720px)}.rhero-in{padding-block:110px 70px}.rhero h1{font-size:clamp(42px,11vw,72px)}.rhero p{margin:16px 0 22px}}
+.rhero-pars{display:flex;gap:8px;flex-wrap:wrap;margin-top:26px}
+.rhero-pars a{position:relative;display:inline-flex;align-items:center;gap:8px;padding:8px 14px 8px 10px;border-radius:999px;border:1.5px solid rgba(255,255,255,.28);color:var(--green-fg);text-decoration:none;font-size:14px;font-weight:600;background:rgba(255,255,255,.06);backdrop-filter:blur(6px);transition:background .2s var(--ease-out),border-color .2s var(--ease-out)}
+.rhero-pars a:hover{background:rgba(255,255,255,.14)}.rhero-pars a[aria-current]{border-color:var(--k)}
+.rhero-pars b{display:grid;place-items:center;min-width:30px;height:30px;padding:0 6px;border-radius:999px;background:var(--k);color:#13221d;font-weight:800;font-size:13px}
+.rhero-pars i{width:12px;height:12px;border-radius:50%;background:conic-gradient(var(--k) calc(var(--v)*1%),rgba(255,255,255,.22) 0)}
+@media (max-width:640px){.rhero-pars a span{display:none}.rhero-pars a{padding-right:10px}}
+.rchap .rring{position:absolute;top:18px;right:18px;width:50px;height:50px;border-radius:50%;background:conic-gradient(var(--c) calc(var(--v)*1%),rgba(255,255,255,.22) 0);display:grid;place-items:center;transform:translateZ(30px)}
+.rchap .rring i{width:40px;height:40px;border-radius:50%;background:rgba(12,30,25,.78);display:grid;place-items:center;font:800 12px Inter,system-ui,sans-serif;font-style:normal;color:#fff}
+.roef .rlive{display:inline-block;align-self:flex-start;font-size:12.5px;font-weight:700;padding:5px 10px;border-radius:999px;background:var(--coral);color:#3a1412;margin-top:4px}
+/* stappenbalk onder de kop van de paragraaf: blijft onder de nav staan */
+.rsteps{position:sticky;top:calc(62px + env(safe-area-inset-top,0px));z-index:19;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.rsteps ol{list-style:none;margin:0;padding:10px 0;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.rsteps ol::-webkit-scrollbar{display:none}
+.rsteps li{flex:none}
+.rsteps a{display:inline-flex;align-items:center;gap:8px;padding:7px 14px 7px 7px;border-radius:999px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);text-decoration:none;font-size:14px;font-weight:700;transition:border-color .2s var(--ease-out),background .2s var(--ease-out)}
+.rsteps b{display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:color-mix(in srgb,var(--line) 70%,transparent);font-size:12px;font-weight:800;transition:background .2s var(--ease-out),color .2s var(--ease-out)}
+.rsteps a[aria-current]{border-color:var(--teal)}.rsteps a[aria-current] b{background:var(--teal);color:#fff}
+.rsteps li.af b{background:var(--green);color:#fff}.rsteps li.af b:before{content:"✓"}.rsteps li.af b{font-size:0}.rsteps li.af b:before{font-size:12px}
+.rsteps li.oef a{background:var(--coral);border-color:var(--coral);color:#3a1412}.rsteps li.oef b{background:rgba(0,0,0,.14);color:#3a1412}
+/* galerij op telefoon en iPad: een strook in plaats van drie grote foto's */
+@media (max-width:860px){.rgal,.rgal.n3,.rgal.n2{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -16px;padding:0 16px 6px}.rgal::-webkit-scrollbar{display:none}
+  .rgal a,.rgal.n3 a:first-child,.rgal.n2 a{flex:0 0 min(72%,300px);min-width:0;aspect-ratio:4/3;scroll-snap-align:start;grid-column:auto}}
+/* begrippenkaarten in de leeromgeving (zelfde opslag "gekend" als de oefenomgeving) */
+.rflips{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,230px),1fr));gap:12px}
+.rflip{perspective:1000px;min-height:170px;cursor:pointer;outline:none}
+.rflip:focus-visible .rflip-in{box-shadow:0 0 0 3px var(--teal)}
+.rflip-in{position:relative;width:100%;height:100%;min-height:170px;transition:transform .5s var(--ease-out);transform-style:preserve-3d;border-radius:18px}
+.rflip.open .rflip-in{transform:rotateY(180deg)}
+.rflip-f,.rflip-b{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:18px;padding:16px 18px;display:flex;flex-direction:column;gap:6px;background:var(--card);border:1px solid var(--line);box-shadow:0 1px 2px rgba(31,95,78,.05),0 8px 24px rgba(31,95,78,.06)}
+.rflip-f{justify-content:center;align-items:flex-start}
+.rflip-f strong{font:700 21px/1.15 Fraunces,Georgia,serif;letter-spacing:-.01em}
+.rflip-f small{color:var(--muted);font-size:12.5px;margin-top:auto}
+.rflip-b{transform:rotateY(180deg);font-size:14.5px;line-height:1.45;overflow:auto}
+.rflip-b p{margin:0}.rflip-b em{display:block;color:var(--muted);font-style:normal;font-size:13px}
+.rknow{margin-top:auto;align-self:flex-start;border:0;border-radius:999px;padding:7px 13px;font:700 13px Inter,system-ui,sans-serif;background:var(--teal);color:#fff;cursor:pointer}
+.rknow.on{background:var(--muted)}
+.rflip.known .rflip-f{border-color:var(--teal);box-shadow:inset 0 0 0 1.5px var(--teal)}
+.rchk{position:absolute;top:12px;right:14px;font-size:12px;font-weight:800;color:var(--teal)}
+@media (max-width:860px){.rflips{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -16px;padding:4px 16px 10px}.rflips::-webkit-scrollbar{display:none}.rflip{flex:0 0 min(78%,260px);scroll-snap-align:start}}
+/* check jezelf: één vraag tegelijk */
+.rone-k{font-size:12.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--teal);margin:14px 0 6px}
+.rone-q{font:700 clamp(20px,2.6vw,26px)/1.3 Fraunces,Georgia,serif;margin:0 0 18px;animation:rv .4s var(--ease-out)}
+.rone .rbtns .rbtn{padding:13px 20px}
+.rone-tip{font-size:14px;color:var(--muted);margin:14px 0 0}.rone-tip a{color:var(--ink)}
+.rone-klaar{padding:8px 0}.rone-klaar b{font:700 22px Fraunces,Georgia,serif}.rone-klaar p{color:var(--muted);margin:6px 0 14px}
+.rlink-btn{border:0;background:none;padding:0;font:600 14px Inter,system-ui,sans-serif;color:var(--berry);text-decoration:underline;cursor:pointer}
+@media (prefers-reduced-motion:reduce){.rflip-in{transition:none}.rone-q{animation:none}}
+.rvragen[hidden],.rone[hidden]{display:none}
+.rsteps .wrap{position:relative}.rsteps .wrap:after{content:"";position:absolute;top:0;bottom:0;right:0;width:40px;background:linear-gradient(90deg,transparent,var(--bg));pointer-events:none}

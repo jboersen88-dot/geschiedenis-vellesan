@@ -36,7 +36,7 @@ svg.i{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke
 nav.tabs{display:flex;gap:6px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);padding:5px;border-radius:14px;flex:1 1 100%;flex-wrap:wrap}
 nav.tabs button{flex:1 1 auto;display:flex;align-items:center;justify-content:center;gap:8px;border:0;background:transparent;color:rgba(255,255,255,.85);padding:10px 12px;border-radius:10px;font-weight:700;font-size:14.5px;white-space:nowrap;transition:background .15s}
 nav.tabs button:hover{background:rgba(255,255,255,.12);color:#fff}
-nav.tabs button[aria-selected=true]{background:#fff;color:var(--plum);box-shadow:0 2px 8px rgba(0,0,0,.15)}
+nav.tabs button[aria-selected=true]{background:var(--card);color:var(--plum);box-shadow:0 2px 8px rgba(0,0,0,.15)}
 
 /* ---------- main ---------- */
 main{flex:1;overflow:auto;padding:16px 2px 20px;scroll-behavior:smooth}
@@ -49,7 +49,7 @@ h3{font-size:16.5px;margin:0 0 6px;color:var(--plum);letter-spacing:-.01em}
 .eyebrow{font-size:12px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--berry)}
 .btn{display:inline-flex;align-items:center;gap:8px;border:0;border-radius:12px;padding:10px 16px;font-weight:700;background:var(--berry);color:#fff;text-decoration:none;font-size:14.5px}
 .btn:hover{filter:brightness(1.07)}
-.btn.ghost{background:#fff;color:var(--plum);border:1.5px solid var(--line)}
+.btn.ghost{background:var(--card);color:var(--plum);border:1.5px solid var(--line)}
 .btn.ghost:hover{border-color:var(--berry)}
 .btn.soft{background:var(--berry-soft);color:var(--berry)}
 .btn:disabled{opacity:.45;cursor:default;filter:none}
@@ -65,14 +65,14 @@ h3{font-size:16.5px;margin:0 0 6px;color:var(--plum);letter-spacing:-.01em}
 .coins{position:absolute;right:30px;bottom:26px;display:flex;gap:6px;align-items:flex-end}
 .coins i{display:block;width:30px;border-radius:7px;background:linear-gradient(180deg,#f2b134,#d99412);box-shadow:inset 0 -3px 0 rgba(0,0,0,.12)}
 .route{padding:20px;display:flex;flex-direction:column;gap:10px}
-.step{display:flex;gap:12px;align-items:center;border:1.5px solid var(--line);border-radius:14px;padding:12px 14px;background:#fff;text-align:left;width:100%}
+.step{display:flex;gap:12px;align-items:center;border:1.5px solid var(--line);border-radius:14px;padding:12px 14px;background:var(--card);text-align:left;width:100%}
 .step:hover{border-color:var(--berry);transform:translateY(-1px)}
 .step .n{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;font-weight:800;color:#fff;flex:none}
 .step b{display:block}
 .step span{font-size:13px;color:var(--muted)}
 .step svg{margin-left:auto;color:var(--muted)}
 .pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.pcard{padding:0;overflow:hidden;display:flex;flex-direction:column;text-align:left;border:1px solid var(--line);background:#fff;border-radius:var(--r);box-shadow:var(--shadow);transition:transform .15s}
+.pcard{padding:0;overflow:hidden;display:flex;flex-direction:column;text-align:left;border:1px solid var(--line);background:var(--card);border-radius:var(--r);box-shadow:var(--shadow);transition:transform .15s}
 .pcard:hover{transform:translateY(-3px)}
 .pcard .band{height:84px;position:relative;display:flex;align-items:flex-end;padding:12px 14px;color:#fff}
 .pcard .band b{font-size:34px;font-weight:800;letter-spacing:-.03em;line-height:1}
@@ -80,7 +80,7 @@ h3{font-size:16.5px;margin:0 0 6px;color:var(--plum);letter-spacing:-.01em}
 .pcard .body{padding:14px;display:flex;flex-direction:column;gap:8px;flex:1}
 .pcard .body h3{margin:0}
 .pcard .body p{margin:0;font-size:13.5px;color:var(--muted);flex:1}
-.bar{height:7px;background:#efe6d6;border-radius:9px;overflow:hidden}
+.bar{height:7px;background:var(--soft);border-radius:9px;overflow:hidden}
 .bar i{display:block;height:100%;width:0;border-radius:9px;transition:width .3s}
 .pcard .meta{display:flex;justify-content:space-between;font-size:12.5px;color:var(--muted)}
 .tip{margin-top:14px;font-size:13px;color:var(--muted);display:flex;gap:8px;align-items:center}
@@ -91,7 +91,7 @@ h3{font-size:16.5px;margin:0 0 6px;color:var(--plum);letter-spacing:-.01em}
 .rail button{display:flex;gap:10px;align-items:center;border:0;background:transparent;border-radius:12px;padding:10px;text-align:left;font-weight:700;font-size:14px;color:var(--ink)}
 .rail button .dot{width:30px;height:30px;border-radius:9px;color:#fff;display:grid;place-items:center;font-size:12px;font-weight:800;flex:none}
 .rail button[aria-current=true]{background:var(--berry-soft)}
-.rail button:hover{background:#f6efe4}
+.rail button:hover{background:var(--soft)}
 .rail .mini{font-size:11.5px;color:var(--muted);font-weight:600;display:block}
 .viewer{position:relative;width:100%;aspect-ratio:16/9;background:#1d1220;border-radius:14px;overflow:hidden}
 .viewer iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
@@ -99,7 +99,7 @@ h3{font-size:16.5px;margin:0 0 6px;color:var(--plum);letter-spacing:-.01em}
 .lhead{display:flex;justify-content:space-between;align-items:flex-end;gap:10px;flex-wrap:wrap;margin-bottom:12px}
 .two{display:grid;grid-template-columns:1.3fr 1fr;gap:14px;margin-top:14px}
 .qlist{display:flex;flex-direction:column;gap:8px}
-.q{display:flex;gap:10px;align-items:flex-start;border:1.5px solid var(--line);border-radius:12px;padding:10px 12px;background:#fff;text-align:left;font-size:14px}
+.q{display:flex;gap:10px;align-items:flex-start;border:1.5px solid var(--line);border-radius:12px;padding:10px 12px;background:var(--card);text-align:left;font-size:14px}
 .q .tick{width:22px;height:22px;border-radius:7px;border:2px solid #d8cbb5;display:grid;place-items:center;flex:none;margin-top:1px;color:#fff}
 .q.on{border-color:var(--ok);background:var(--ok-soft)}
 .q.on .tick{background:var(--ok);border-color:var(--ok)}
@@ -111,7 +111,7 @@ h3{font-size:16.5px;margin:0 0 6px;color:var(--plum);letter-spacing:-.01em}
 
 /* ---------- oefenlab ---------- */
 .sub{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
-.sub button,.filters button{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:7px 14px;font-weight:700;font-size:13.5px;color:var(--muted)}
+.sub button,.filters button{border:1.5px solid var(--line);background:var(--card);border-radius:999px;padding:7px 14px;font-weight:700;font-size:13.5px;color:var(--muted)}
 .sub button[aria-selected=true],.filters button.on{background:var(--plum);border-color:var(--plum);color:#fff}
 .lab[hidden]{display:none}
 .filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
@@ -119,18 +119,18 @@ h3{font-size:16.5px;margin:0 0 6px;color:var(--plum);letter-spacing:-.01em}
 .flip{perspective:900px;height:168px;cursor:pointer}
 .flip .in{position:relative;width:100%;height:100%;transition:transform .45s;transform-style:preserve-3d}
 .flip.open .in{transform:rotateY(180deg)}
-.flip .f,.flip .b{position:absolute;inset:0;backface-visibility:hidden;border-radius:16px;padding:14px 16px;display:flex;flex-direction:column;border:1px solid var(--line);background:#fff;box-shadow:var(--shadow)}
+.flip .f,.flip .b{position:absolute;inset:0;backface-visibility:hidden;border-radius:16px;padding:14px 16px;display:flex;flex-direction:column;border:1px solid var(--line);background:var(--card);box-shadow:var(--shadow)}
 .flip .f{justify-content:center}
 .flip .f strong{font-size:18px;color:var(--plum);margin-top:6px;letter-spacing:-.01em}
 .flip .f small{color:var(--muted);margin-top:auto;font-size:12px}
-.flip .b{transform:rotateY(180deg);background:#fffdf9;font-size:14px;overflow:auto}
+.flip .b{transform:rotateY(180deg);background:var(--soft);font-size:14px;overflow:auto}
 .flip .b em{display:block;margin-top:6px;color:var(--muted);font-style:normal;font-size:13px}
 .flip.known .f{border-color:var(--ok);box-shadow:inset 0 0 0 1.5px var(--ok)}
 .flip .chk{position:absolute;top:10px;right:12px;font-size:12px;font-weight:800;color:var(--ok)}
 .ex{max-width:780px}
 .qq{font-size:18px;font-weight:700;margin:2px 0 14px;letter-spacing:-.01em}
 .opts{display:grid;gap:8px}
-.opt{border:2px solid var(--line);background:#fff;border-radius:12px;padding:12px 14px;text-align:left;font-weight:700}
+.opt{border:2px solid var(--line);background:var(--card);border-radius:12px;padding:12px 14px;text-align:left;font-weight:700}
 .opt:hover:not(:disabled){border-color:var(--berry)}
 .opt.f{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:14.5px}
 .opt.right{border-color:var(--ok);background:var(--ok-soft)}
@@ -140,13 +140,13 @@ h3{font-size:16.5px;margin:0 0 6px;color:var(--plum);letter-spacing:-.01em}
 .fb.ok{background:var(--ok-soft);color:#135c3c}.fb.no{background:var(--bad-soft);color:#7d2219}.fb.mid{background:var(--warn-soft);color:#6b4500}
 code,.calc{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:14px}
 .calc{display:block;margin-top:6px;white-space:pre-wrap}
-.inp{display:flex;align-items:center;border:2px solid var(--line);border-radius:12px;background:#fff;padding:0 12px}
+.inp{display:flex;align-items:center;border:2px solid var(--line);border-radius:12px;background:var(--card);padding:0 12px}
 .inp:focus-within{border-color:var(--berry)}
 .inp b{color:var(--muted)}
 .inp input{border:0;outline:0;font:inherit;font-size:18px;padding:9px 6px;width:140px;background:transparent}
 .score{display:flex;gap:14px;color:var(--muted);font-size:13.5px;margin-bottom:10px;flex-wrap:wrap}
 .score b{color:var(--ink)}
-.steps{background:#f9f3ea;border-radius:14px;padding:12px 16px;font-size:14px;margin-bottom:14px}
+.steps{background:var(--soft);border-radius:14px;padding:12px 16px;font-size:14px;margin-bottom:14px}
 .steps ol{margin:6px 0 0;padding-left:20px}
 .statement{border-collapse:collapse;margin:4px 0 6px;font-size:15px;min-width:280px}
 .statement td{padding:7px 12px;border-bottom:1px solid var(--line)}
@@ -162,14 +162,14 @@ code,.calc{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:14px}
 .qhome h3{font-size:22px;margin:8px 0 4px}
 .qhome p{max-width:460px;margin:0 auto 14px}
 .qtop{display:flex;align-items:center;gap:12px}
-.qprog{flex:1;height:8px;background:#efe6d6;border-radius:9px;overflow:hidden}
+.qprog{flex:1;height:8px;background:var(--soft);border-radius:9px;overflow:hidden}
 .qprog i{display:block;height:100%;background:linear-gradient(90deg,var(--berry),#ff8d90);border-radius:9px}
 .opt{display:flex;gap:12px;align-items:center;min-height:52px;touch-action:manipulation}
-.ol{width:30px;height:30px;border-radius:9px;background:#f4ecdf;color:var(--plum);display:grid;place-items:center;font-weight:800;font-size:13px;flex:none}
+.ol{width:30px;height:30px;border-radius:9px;background:var(--soft);color:var(--plum);display:grid;place-items:center;font-weight:800;font-size:13px;flex:none}
 .opt.right .ol{background:var(--ok);color:#fff}.opt.wrong .ol{background:var(--bad);color:#fff}
 .review{margin-top:16px;text-align:left}
 .review h3{margin-bottom:8px}
-.rv{border:1.5px solid var(--line);border-radius:12px;padding:10px 12px;margin-bottom:8px;font-size:14px;background:#fff}
+.rv{border:1.5px solid var(--line);border-radius:12px;padding:10px 12px;margin-bottom:8px;font-size:14px;background:var(--card)}
 .confetti{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:50}
 .confetti i{position:absolute;top:-20px;width:10px;height:16px;border-radius:3px;animation:fall linear forwards}
 @keyframes fall{to{transform:translateY(1300px) rotate(720deg);opacity:.6}}
@@ -208,14 +208,14 @@ code,.calc{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:14px}
 .zone.bad{background:rgba(192,57,43,.55);border-color:#ff9a8f;animation:shake .3s}
 @keyframes shake{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
 .deck{display:grid;place-items:center;position:relative}
-.scard{width:100%;max-width:320px;aspect-ratio:4/3.2;background:#fff;color:var(--ink);border-radius:24px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;box-shadow:0 18px 40px rgba(0,0,0,.35);cursor:grab;touch-action:none;padding:16px;text-align:center}
+.scard{width:100%;max-width:320px;aspect-ratio:4/3.2;background:var(--card);color:var(--ink);border-radius:24px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;box-shadow:0 18px 40px rgba(0,0,0,.35);cursor:grab;touch-action:none;padding:16px;text-align:center}
 .scard.enter{animation:pop .22s ease-out}
 @keyframes pop{from{transform:scale(.85);opacity:0}}
 .scard .emo{font-size:64px;line-height:1}
 .scard b{font-size:22px;letter-spacing:-.01em}
 .scard.ok{box-shadow:0 0 0 6px #7be0b0}.scard.no{box-shadow:0 0 0 6px #ff9a8f}
 .ghint{text-align:center;opacity:.7;font-size:13px;margin-top:12px}
-.toast{position:absolute;left:50%;bottom:58px;transform:translateX(-50%);background:#fff;color:var(--bad);font-weight:800;padding:8px 16px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.3);animation:pop .2s}
+.toast{position:absolute;left:50%;bottom:58px;transform:translateX(-50%);background:var(--card);color:var(--bad);font-weight:800;padding:8px 16px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.3);animation:pop .2s}
 .gend{text-align:center;padding:20px}
 .gend .big{font-size:52px;font-weight:800;color:var(--plum)}
 .mhud{display:flex;gap:16px;align-items:center;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap}
@@ -223,7 +223,7 @@ code,.calc{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:14px}
 .mtile{position:relative;height:138px;border:0;border-radius:16px;padding:0;background:transparent;perspective:800px;touch-action:manipulation}
 .mtile .back,.mtile .front{position:absolute;inset:0;border-radius:16px;display:grid;place-items:center;padding:10px;backface-visibility:hidden;transition:transform .35s}
 .mtile .back{background:linear-gradient(135deg,#1f5f4e,#23866a);color:#fff;font-size:34px;font-weight:800}
-.mtile .front{background:#fff;border:2px solid var(--line);transform:rotateY(180deg);font-size:13px;line-height:1.35;color:var(--ink)}
+.mtile .front{background:var(--card);border:2px solid var(--line);transform:rotateY(180deg);font-size:13px;line-height:1.35;color:var(--ink)}
 .mtile.term .front b{font-size:17px;color:var(--plum)}
 .mtile.open .back,.mtile.done .back{transform:rotateY(180deg)}
 .mtile.open .front,.mtile.done .front{transform:rotateY(360deg)}
@@ -241,14 +241,14 @@ code,.calc{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:14px}
 .tgrid{display:grid;grid-template-columns:1.25fr 1fr;gap:16px;align-items:start}
 .timer{display:flex;align-items:center;gap:16px}
 .clock{--v:100;width:110px;height:110px;border-radius:50%;background:conic-gradient(var(--berry) calc(var(--v)*1%),#efe6d6 0);display:grid;place-items:center;flex:none}
-.clock span{width:90px;height:90px;border-radius:50%;background:#fff;display:grid;place-items:center;font-weight:800;font-size:22px;color:var(--plum);font-variant-numeric:tabular-nums}
+.clock span{width:90px;height:90px;border-radius:50%;background:var(--card);display:grid;place-items:center;font-weight:800;font-size:22px;color:var(--plum);font-variant-numeric:tabular-nums}
 .doc{position:relative;width:100%;height:560px;border-radius:14px;overflow:hidden;background:#eee;border:1px solid var(--line)}
 .doc iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .locked{height:220px;border-radius:14px;border:2px dashed #e0d2bc;display:grid;place-items:center;text-align:center;padding:20px;color:var(--muted);background:repeating-linear-gradient(45deg,#fff,#fff 10px,#fbf6ee 10px,#fbf6ee 20px)}
 .locked svg{width:28px;height:28px;color:var(--berry)}
 .grade{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
 .grade .out{font-size:34px;font-weight:800;color:var(--plum);min-width:70px}
-details{border:1px solid var(--line);border-radius:14px;padding:12px 16px;background:#fff}
+details{border:1px solid var(--line);border-radius:14px;padding:12px 16px;background:var(--card)}
 summary{cursor:pointer;font-weight:700;color:var(--plum)}
 .links{display:flex;flex-direction:column;gap:8px;margin-top:10px}
 .links a{display:flex;align-items:center;gap:10px;padding:10px 12px;border:1.5px solid var(--line);border-radius:12px;text-decoration:none;font-weight:600}
@@ -282,7 +282,7 @@ summary{cursor:pointer;font-weight:700;color:var(--plum)}
 @media (max-width:900px){.hero .intro p{max-width:none}.coins{opacity:.35}}
 
 /* ---------- leg uit ---------- */
-.lu textarea{width:100%;min-height:110px;border:2px solid var(--line);border-radius:12px;padding:12px 14px;font:inherit;font-size:15.5px;resize:vertical;background:#fff;color:var(--ink)}
+.lu textarea{width:100%;min-height:110px;border:2px solid var(--line);border-radius:12px;padding:12px 14px;font:inherit;font-size:15.5px;resize:vertical;background:var(--card);color:var(--ink)}
 .lu textarea:focus{outline:0;border-color:var(--berry)}
 .lu .lubox{border-radius:14px;padding:14px 16px;margin-top:12px;font-size:14.5px}
 .lu .lubox p{margin:6px 0 0}
@@ -296,7 +296,17 @@ summary{cursor:pointer;font-weight:700;color:var(--plum)}
 /* ---------- huisstijl van de site (bouw-oefen.py) ---------- */
 :root{--plum:#1f5f4e;--plum-2:#123a30;--berry:#c2484d;--berry-soft:#ffe6e4;--bg:#f6f0e6;--card:#fffdf9;--ink:#201a14;--muted:#6f6556;--line:#e6dac4;
   --p1:#c2484d;--p2:#2f8f86;--p3:#1f5f4e;--p4:#b97a1f;--p5:#c2484d;--p6:#2f8f86;--coral:#ff8d90;--teal:#2f8f86;--ochre:#b97a1f;--green:#1f5f4e;--green-fg:#f3efe0;--green-mu:#b9d6cb;
-  --shadow:0 1px 2px rgba(31,95,78,.06),0 10px 28px rgba(31,95,78,.08);--r:20px;--ease-out:cubic-bezier(.23,1,.32,1);color-scheme:light}
+  --soft:#f4ecdf;--shadow:0 1px 2px rgba(31,95,78,.06),0 10px 28px rgba(31,95,78,.08);--r:20px;--ease-out:cubic-bezier(.23,1,.32,1);color-scheme:light}
+/* donkere modus: dezelfde kleuren als economie.css */
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15120d;--card:#1f1a13;--soft:#2a2319;--ink:#f3ecdd;--muted:#b2a68d;--line:#352c20;--berry:#ff9a9d;--berry-soft:#3b2322;--plum:#8fd3bd;--green:#8fd3bd;--ok-soft:#183a2b;--bad-soft:#44201c;--warn-soft:#3d2f10;--shadow:0 1px 2px rgba(0,0,0,.3),0 10px 28px rgba(0,0,0,.35);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#15120d;--card:#1f1a13;--soft:#2a2319;--ink:#f3ecdd;--muted:#b2a68d;--line:#352c20;--berry:#ff9a9d;--berry-soft:#3b2322;--plum:#8fd3bd;--green:#8fd3bd;--ok-soft:#183a2b;--bad-soft:#44201c;--warn-soft:#3d2f10;--shadow:0 1px 2px rgba(0,0,0,.3),0 10px 28px rgba(0,0,0,.35);color-scheme:dark}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .fb.ok,:root:not([data-theme="light"]) .lubox.goed{color:#bfe9d3}:root:not([data-theme="light"]) .fb.no,:root:not([data-theme="light"]) .lubox.nognietgoed{color:#ffb3a7}:root:not([data-theme="light"]) .fb.mid,:root:not([data-theme="light"]) .lubox.bijna{color:#f6d78a}
+  :root:not([data-theme="light"]) .olinks a.cta,:root:not([data-theme="light"]) .btn:not(.ghost):not(.soft){color:#3a1412}}
+/* zachte overgang als een tabblad of oefening verschijnt */
+.panel:not([hidden]),.lab:not([hidden]),#qCard>*,#rCard>*,#fCard>*,#luCard>*{animation:ofade .4s var(--ease-out)}
+@keyframes ofade{from{opacity:0;transform:translateY(8px)}}
+.olive{display:inline-block;font-size:12.5px;font-weight:700;padding:4px 10px;border-radius:999px;background:var(--berry-soft);color:var(--berry);margin-bottom:8px}.olive:empty{display:none}
+#onext:empty+.btn{margin-left:0}
 html,body{height:auto;font-family:Inter,system-ui,-apple-system,sans-serif}
 h1,h2,h3,.chh,.vbtn b{font-family:Fraunces,Georgia,serif;letter-spacing:-.015em;color:var(--ink)}
 h2{font-size:clamp(24px,2.8vw,32px);font-weight:700;line-height:1.08}
@@ -330,7 +340,9 @@ main{overflow:visible;max-width:1180px;margin:0 auto;padding:28px max(16px,env(s
 .ogal{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .ogal img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:20px;box-shadow:0 14px 40px -24px rgba(18,58,48,.6)}
 .ogal img:first-child{grid-column:1/-1;aspect-ratio:16/10}
-@media (max-width:860px){.otop-in{grid-template-columns:1fr}}
+@media (max-width:860px){.otop-in{grid-template-columns:1fr;gap:18px;margin-top:14px}.otop{padding-bottom:22px}.onum{font-size:clamp(56px,14vw,80px)}.otop p{font-size:16px;margin-bottom:14px}
+  .ogal{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -16px;padding:0 16px 4px}.ogal::-webkit-scrollbar{display:none}
+  .ogal img,.ogal img:first-child{flex:0 0 min(60%,240px);width:auto;min-width:0;aspect-ratio:4/3;scroll-snap-align:start;grid-column:auto}}
 /* tabbladen: grote knoppen; op het overzicht met uitleg en even breed, elders compact en vast onder de nav */
 .otabs{position:sticky;top:calc(62px + env(safe-area-inset-top,0px));z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:12px 0}
 .ostart .otabs{position:static;padding:22px 0}
@@ -391,10 +403,9 @@ nav.tabs button span{display:flex!important;flex-direction:column;line-height:1.
     <section class="panel" id="start">
       <div class="hero">
         <div class="card intro">
-          <div class="eyebrow">Oefenomgeving</div>
-          <h2>Ga aan de slag.<br>Begin hier.</h2>
-          <p>Train de begrippen en rekensommen, maak quizvragen uit de vraagbank, speel de games en maak de oefentoets met nakijkblad. Lees eerst de lesstof in de leeromgeving.</p>
-          <div class="row"><button class="btn" data-go="lab">Start met oefenen</button><button class="btn ghost" data-go="les" data-par="1.1"><svg class="i" viewBox="0 0 24 24"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2z"/><path d="M22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg>Lees 1.1</button><button class="btn ghost" data-go="toets">Naar de oefentoets</button></div>
+          <div class="eyebrow">Jouw volgende stap</div><h2 id="onextH">Ga aan de slag.</h2>
+          <p id="onextP">Kies hieronder wat je gaat doen.</p>
+          <div class="row"><span id="onext"></span><button class="btn ghost" data-go="lab">Alle oefeningen</button><button class="btn ghost" data-go="les" data-par="1.1"><svg class="i" viewBox="0 0 24 24"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2z"/><path d="M22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg>Lees 1.1</button></div>
           <div class="blob"></div>
           <div class="coins"><i style="height:22px"></i><i style="height:36px"></i><i style="height:52px"></i><i style="height:70px;background:linear-gradient(180deg,#ff8d90,#c2484d)"></i></div>
         </div>
@@ -441,7 +452,7 @@ nav.tabs button span{display:flex!important;flex-direction:column;line-height:1.
           <button data-lab="quiz" aria-selected="false">⚡ Quiz</button>
           <button data-lab="games" aria-selected="false">🎮 Games</button>
         </div>
-        <div class="lab" id="lab-home"><p class="olabtx">Kies hieronder wat je wilt oefenen. Begin met de begrippen en ga daarna rekenen of een quiz maken. Met <b>← Alle oefeningen</b> kom je altijd terug op deze pagina.</p><div class="olab"><button class="otile" data-golab="begrippen" style="--c:var(--berry)"><span class="ok">Flashcards</span><h3>Begrippen</h3><p>Lees het begrip, bedenk wat het betekent en draai de kaart om. 35 begrippen.</p><span class="ogo">Start →</span></button><button class="otile" data-golab="leguit" style="--c:var(--p6)"><span class="ok">Met AI-feedback</span><h3>Leg uit</h3><p>Leg een begrip uit in je eigen woorden. Je hoort wat goed is en wat er nog mist.</p><span class="ogo">Start →</span></button><button class="otile" data-golab="formule" style="--c:var(--p4)"><span class="ok">Rekenen</span><h3>Welke formule?</h3><p>Lees de rekenvraag en kies de formule die je nodig hebt.</p><span class="ogo">Start →</span></button><button class="otile" data-golab="reken" style="--c:var(--p3)"><span class="ok">Rekenen</span><h3>Rekentrainer</h3><p>Oefen de sommen van dit hoofdstuk, steeds met nieuwe getallen.</p><span class="ogo">Start →</span></button><button class="otile" data-golab="quiz" style="--c:var(--berry)"><span class="ok">Vraagbank</span><h3>Quiz</h3><p>Meerkeuzevragen per paragraaf. Je ziet meteen of je antwoord goed is.</p><span class="ogo">Start →</span></button><button class="otile" data-golab="games" style="--c:var(--p6)"><span class="ok">Spelen</span><h3>Games</h3><p>Speel met de begrippen en vragen van dit hoofdstuk.</p><span class="ogo">Start →</span></button></div></div>
+        <div class="lab" id="lab-home"><p class="olabtx">Kies hieronder wat je wilt oefenen. Begin met de begrippen en ga daarna rekenen of een quiz maken. Met <b>← Alle oefeningen</b> kom je altijd terug op deze pagina.</p><div class="olab"><button class="otile" data-golab="begrippen" style="--c:var(--berry)"><span class="ok">Flashcards</span><h3>Begrippen</h3><p>Lees het begrip, bedenk wat het betekent en draai de kaart om. 35 begrippen.</p><span class="olive" data-olive="begrippen"></span><span class="ogo">Start →</span></button><button class="otile" data-golab="leguit" style="--c:var(--p6)"><span class="ok">Met AI-feedback</span><h3>Leg uit</h3><p>Leg een begrip uit in je eigen woorden. Je hoort wat goed is en wat er nog mist.</p><span class="olive" data-olive="leguit"></span><span class="ogo">Start →</span></button><button class="otile" data-golab="formule" style="--c:var(--p4)"><span class="ok">Rekenen</span><h3>Welke formule?</h3><p>Lees de rekenvraag en kies de formule die je nodig hebt.</p><span class="olive" data-olive="formule"></span><span class="ogo">Start →</span></button><button class="otile" data-golab="reken" style="--c:var(--p3)"><span class="ok">Rekenen</span><h3>Rekentrainer</h3><p>Oefen de sommen van dit hoofdstuk, steeds met nieuwe getallen.</p><span class="olive" data-olive="reken"></span><span class="ogo">Start →</span></button><button class="otile" data-golab="quiz" style="--c:var(--berry)"><span class="ok">Vraagbank</span><h3>Quiz</h3><p>Meerkeuzevragen per paragraaf. Je ziet meteen of je antwoord goed is.</p><span class="olive" data-olive="quiz"></span><span class="ogo">Start →</span></button><button class="otile" data-golab="games" style="--c:var(--p6)"><span class="ok">Spelen</span><h3>Games</h3><p>Speel met de begrippen en vragen van dit hoofdstuk.</p><span class="olive" data-olive="games"></span><span class="ogo">Start →</span></button></div></div>
 <div class="lab" id="lab-begrippen" hidden>
           <div class="filters" id="cardFilters"></div>
           <div class="cgrid" id="cardGrid"></div>
@@ -543,7 +554,7 @@ function tag(id){return '<span class="chip" style="background:'+P(id).c+'">'+id+
 
 /* ---------- opslag ---------- */
 var KEY="h1-app-v1",S={goals:{},qs:{},known:{},unlock:false};
-try{var s=JSON.parse(localStorage.getItem(KEY));if(s&&s.goals)S=Object.assign(S,s);}catch(e){}
+try{var s=JSON.parse(localStorage.getItem(KEY));if(s&&typeof s==="object")S=Object.assign(S,s);}catch(e){}
 function save(){try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}
 
 /* ---------- tabs ---------- */
@@ -561,13 +572,23 @@ document.body.classList.toggle("ostart",name==="start");if(name==="lab")showLab(
 tabs.forEach(function(b){b.addEventListener("click",function(){show(b.dataset.tab);});});
 document.addEventListener("click",function(e){
   var g=e.target.closest("[data-go]");if(g){if(g.dataset.par)cur=g.dataset.par;if(g.dataset.go==="les"){location.href="../h.html?p=jaar-2%2Fmavo%2Fhoofdstuk-1&par="+encodeURIComponent(cur);return;}show(g.dataset.go);}
-  var l=e.target.closest("[data-golab]");if(l){show("lab");showLab(l.dataset.golab);if(l.dataset.mode){mode=l.dataset.mode;newR();}}
+  var l=e.target.closest("[data-golab]");if(l){show("lab");showLab(l.dataset.golab);if(l.dataset.cpar){cardFilter=l.dataset.cpar;renderFlash();}if(l.dataset.qmode){startQuiz(l.dataset.qmode);}if(l.dataset.mode){mode=l.dataset.mode;newR();}}
 });
 
 /* ---------- voortgang ---------- */
 function goalCount(id){var p=P(id),d=0;p.q.forEach(function(_,i){if(S.qs[id+"-"+i])d++;});return d;}
 function totals(){var t=0,d=0;PARS.forEach(function(p){t+=p.q.length;d+=goalCount(p.id);});return [d,t];}
-function renderProgress(){
+function renderNext(){var el=document.getElementById("onext");if(!el)return;
+var nk=Object.keys(S.known||{}).length,nq=Object.keys(S.qwrong||{}).filter(function(i){return BANK[i];}).length,x=totals(),chk=typeof CHK==="undefined"?[]:CHK.map(function(c,i){return [c,i];}).filter(function(a){return !(S.check||{})[a[1]];}),h,p,b,p0=PARS[0].id;
+if(!x[0]&&!nk){h="Begin met de begrippen van "+p0+".";p="Lees eerst de lesstof in de leeromgeving. Oefen daarna hier de woorden van "+p0+".";b='<button class="btn" data-golab="begrippen" data-cpar="'+p0+'">Begrippen '+p0+' →</button>';}
+else if(nk<CARDS.length*0.6){h="Oefen de begrippen.";p="Je kent "+nk+" van de "+CARDS.length+" begrippen. Draai de kaarten om en vink af wat je weet.";b='<button class="btn" data-golab="begrippen" data-cpar="oefenen">Naar de begrippen →</button>';}
+else if(nq){h="Oefen je fouten.";p="Je had "+nq+" quizvra"+(nq>1?"gen":"ag")+" fout. Probeer "+(nq>1?"ze":"hem")+" nog een keer.";b='<button class="btn" data-golab="quiz" data-qmode="fouten">Oefen mijn fouten ('+nq+') →</button>';}
+else if(chk.length){var c=chk[0][0];h="Oefen: "+c[0].charAt(0).toLowerCase()+c[0].slice(1)+".";p="Nog "+chk.length+" van de "+CHK.length+" onderdelen van de checklist.";b='<button class="btn"'+(c[2]==="reken"?' data-golab="reken" data-mode="'+c[3]+'"':' data-golab="quiz" data-qpar="'+c[1]+'"')+'>Oefen '+c[1]+' →</button>';}
+else{h="Maak een oefentoets.";p="Je hebt alles geoefend. Test jezelf met de klok.";b='<button class="btn" data-go="toets">Naar de oefentoetsen →</button>';}
+document.getElementById("onextH").textContent=h;document.getElementById("onextP").textContent=p;el.innerHTML=b;
+var lv=function(k,t){var e=document.querySelector('[data-olive="'+k+'"]');if(e)e.textContent=t;},ns=Object.keys(S.qseen||{}).length;
+lv("begrippen",nk?nk+" van "+CARDS.length+" gekend":"");lv("quiz",nq?nq+" fout"+(nq>1?"en":"")+" om te oefenen":ns?ns+" vragen gezien":"");}
+function renderProgress(){renderNext();
   var x=totals(),pct=Math.round(x[0]/x[1]*100);
   document.getElementById("ring").style.setProperty("--v",pct);
   document.getElementById("ringTxt").textContent=pct+"%";
@@ -1206,7 +1227,7 @@ function route(){var h=location.hash.slice(1).split("/");
 if(h[0]==="toets")show("toets");
 else if(h[0]==="lab"){show("lab");
   if(h[1]==="reken"){showLab("reken");if(h[2]){mode=h[2];newR();}}
-  else if(h[1]==="quiz"){showLab("quiz");if(h[2]){quizPar=h[2];quizHome();}}
+  else if(h[1]==="quiz"){showLab("quiz");if(h[2]==="fouten")startQuiz("fouten");else if(h[2]){quizPar=h[2];quizHome();}}
   else if(h[1]==="begrippen"){showLab("begrippen");if(h[2]){cardFilter=h[2];renderFlash();}}
   else if(h[1])showLab(h[1]);}
 else return;

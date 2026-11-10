@@ -25,6 +25,19 @@ import json, os, re, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SKIP_DIRS = {".git", "node_modules", "materiaal", "tools"}
+
+
+def git_ignored():
+    """bestanden die git negeert (.gitignore en .git/info/exclude): lokale werkbestanden, niet voor de site"""
+    import subprocess
+    try:
+        out = subprocess.run(["git", "ls-files", "-o", "-i", "--exclude-standard"], cwd=ROOT, capture_output=True, text=True).stdout
+        return {os.path.normpath(os.path.join(ROOT, p)) for p in out.splitlines() if p}
+    except Exception:
+        return set()
+
+
+IGNORED = git_ignored()
 STR = r'"(?:[^"\\\n]|\\.)*"'
 ARR = r'\[\s*' + STR + r'(?:\s*,\s*' + STR + r')*\s*\]'
 LANGSTE_DREMPEL = 0.25
@@ -87,6 +100,8 @@ def main():
             if not f.endswith((".html", ".js")):
                 continue
             path = os.path.join(d, f)
+            if os.path.normpath(path) in IGNORED:
+                continue
             text = open(path, encoding="utf-8", errors="replace").read()
             qs = find_questions(text)
             if not qs:

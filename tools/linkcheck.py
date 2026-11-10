@@ -13,8 +13,21 @@ import os, re, sys, urllib.request, urllib.error
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SKIP_DIRS = {".git", "node_modules", "materiaal"}
+
+
+def git_ignored():
+    """bestanden die git negeert (.gitignore en .git/info/exclude): lokale werkbestanden, niet voor de site"""
+    import subprocess
+    try:
+        out = subprocess.run(["git", "ls-files", "-o", "-i", "--exclude-standard"], cwd=ROOT, capture_output=True, text=True).stdout
+        return {os.path.normpath(os.path.join(ROOT, p)) for p in out.splitlines() if p}
+    except Exception:
+        return set()
+
+
+IGNORED = git_ignored()
 ATTR = re.compile(r'(?:href|src)\s*=\s*"([^"]+)"')
-CSSURL = re.compile(r'url\(\s*["\']?([^"\')]+)["\']?\s*\)')
+CSSURL = re.compile(r'(?<![\w+])url\(\s*["\']?([^"\')]+)["\']?\s*\)')  # niet rUrl(p)
 JSPATH = re.compile(r'["\']((?:\.\./)*(?:img|slides|data|economie|boekje-\d)/[^"\'\s+]+\.(?:jpe?g|png|webp|svg|gif|js|json|html))["\']')
 
 
@@ -22,7 +35,7 @@ def files(exts):
     for d, dirs, fs in os.walk(ROOT):
         dirs[:] = [x for x in dirs if x not in SKIP_DIRS]
         for f in fs:
-            if f.endswith(exts):
+            if f.endswith(exts) and os.path.normpath(os.path.join(d, f)) not in IGNORED:
                 yield os.path.join(d, f)
 
 
