@@ -14,7 +14,7 @@ table{border-collapse:collapse;width:100%;font-size:14px}th,td{text-align:left;p
 code{font-size:12.5px;overflow-wrap:anywhere}.bar{display:inline-block;height:8px;background:var(--berry);border-radius:4px;vertical-align:middle}
 </style></head><body><main>
 <h1>Voortgangscodes lezen</h1>
-<p class="muted">Alleen voor de docent, lokaal. Niets wordt opgeslagen of verstuurd. Plak de codes uit Teams of Magister, één per regel. Er staan geen namen in de codes: koppel zelf code en leerling.</p>
+<p class="muted">Alleen voor de docent, lokaal. Niets wordt opgeslagen of verstuurd. Plak de codes uit Teams of Magister, één per regel. Codes van Geschiedenis beginnen met GS; codes van de persoonlijke oefenroute (Economie) met RT en laten per leerdoel het niveau zien. Er staan geen namen in de codes: koppel zelf code en leerling.</p>
 <div id="bron" class="muted"></div>
 <div class="card"><label for="inv"><b>Codes (één per regel)</b></label><textarea id="inv" spellcheck="false" autocomplete="off"></textarea>
 <p><button id="go" type="button">Lees codes</button></p></div>
@@ -24,6 +24,10 @@ code{font-size:12.5px;overflow-wrap:anywhere}.bar{display:inline-block;height:8p
 function codeCheck(t){var h=2166136261;for(var i=0;i<t.length;i++){h^=t.charCodeAt(i);h=Math.imul(h,16777619)>>>0;}return ("0"+(h%1296).toString(36)).slice(-2).toUpperCase();}
 function decodeCode(txt){
   var p=String(txt).replace(/\s+/g,"").toUpperCase().split("-");
+  /* RT-<MAP>-<datum>-<niveau per leerdoel 0..3>-<controle>: de persoonlijke oefenroute (economie/route.js) */
+  if(p[0]==="RT"){if(p.length!==5||!/^\d{6}$/.test(p[2])||!/^[0-3]+$/.test(p[3]))return {fout:"geen voortgangscode van de oefenroute"};
+    if(codeCheck(p.slice(0,-1).join("-"))!==p[4])return {fout:"typefout: controlesom klopt niet"};
+    return {rt:p[1].toLowerCase(),datum:"20"+p[2].slice(0,2)+"-"+p[2].slice(2,4)+"-"+p[2].slice(4),lvl:p[3].split("").map(Number)};}
   if(p.length<5||!/^GS\d$/.test(p[0])||!/^\d{6}$/.test(p[1]))return {fout:"geen voortgangscode"};
   if(codeCheck(p.slice(0,-1).join("-"))!==p[p.length-1])return {fout:"typefout: controlesom klopt niet"};
   var n=p.length-4,ch=[],i;
@@ -47,9 +51,27 @@ function laad(b){
     return q;
   }).catch(function(){return null;});
 }
+var ROUTES={};
+function laadRoute(m){if(ROUTES[m])return ROUTES[m];return ROUTES[m]=fetch("../economie/"+m+"/route.json").then(function(r){if(!r.ok)throw 0;return r.json();}).catch(function(){return null;});}
+var STER=["nog niet gestart","★☆☆","★★☆","★★★"];
+function toonRT(dec,u,klaar){
+  var rts=dec.filter(function(x){return x.d.rt;}),maps=[];rts.forEach(function(x){if(maps.indexOf(x.d.rt)<0)maps.push(x.d.rt);});
+  if(!rts.length){klaar("");return;}
+  Promise.all(maps.map(laadRoute)).then(function(R){var D={};maps.forEach(function(m,i){D[m]=R[i];});var h="",som={};
+    rts.forEach(function(x){var n=dec.indexOf(x)+1,d=x.d,r=D[d.rt],doelen=r?r.doelen:null;
+      if(doelen&&doelen.length!==d.lvl.length){h+='<div class="card"><b>Code '+n+'</b>: <span class="bad">aantal leerdoelen ('+d.lvl.length+') klopt niet met '+esc(d.rt)+' ('+doelen.length+')</span></div>';return;}
+      var s=som[d.rt]=som[d.rt]||{n:0,t:new Array(d.lvl.length).fill(0),drie:new Array(d.lvl.length).fill(0)};s.n++;d.lvl.forEach(function(l,i){s.t[i]+=l;if(l===3)s.drie[i]++;});
+      var op3=d.lvl.filter(function(l){return l===3;}).length,nul=d.lvl.filter(function(l){return !l;}).length;
+      h+='<div class="card"><h2>Code '+n+' · oefenroute '+esc(d.rt.toUpperCase())+' · '+d.datum+' · <span class="ok">controle klopt</span></h2><p>'+op3+' van '+d.lvl.length+' leerdoelen op drie sterren'+(nul?' · '+nul+' nog niet gestart':'')+'</p><table><tr><th>Niveau</th><th>Leerdoel</th></tr>'
+        +d.lvl.map(function(l,i){return '<tr><td>'+STER[l]+'</td><td>'+esc(doelen?doelen[i].par+" · "+doelen[i].t:"leerdoel "+(i+1))+'</td></tr>';}).join("")+'</table></div>';});
+    maps.forEach(function(m){var s=som[m];if(!s)return;var doelen=D[m]?D[m].doelen:null,r=s.t.map(function(_,i){return i;}).sort(function(a,b){return s.t[a]-s.t[b];});
+      h+='<div class="card"><h2>Samenvatting oefenroute '+esc(m.toUpperCase())+' ('+s.n+' codes) · laagste niveau bovenaan</h2><table><tr><th>Gemiddeld niveau</th><th>Op drie sterren</th><th>Leerdoel</th></tr>'
+        +r.map(function(i){return '<tr><td>'+(s.t[i]/s.n).toFixed(1).replace(".",",")+' <span class="bar" style="width:'+Math.round(s.t[i]/s.n/3*80)+'px"></span></td><td>'+s.drie[i]+' van '+s.n+'</td><td>'+esc(doelen?doelen[i].par+" · "+doelen[i].t:"leerdoel "+(i+1))+'</td></tr>';}).join("")+'</table></div>';});
+    klaar(h+(maps.some(function(m){return !D[m];})?'<p class="bad">Leerdoelen niet geladen: open deze pagina via python3 -m http.server in de repo-map.</p>':""));});}
 document.getElementById("go").addEventListener("click",function(){
   var regels=document.getElementById("inv").value.split(/\n/).map(function(x){return x.trim();}).filter(Boolean),u=document.getElementById("uit");
   var dec=regels.map(function(r){return {r:r,d:decodeCode(r)};});
+  var rtHtml="";
   var boeken=[],stat={};
   dec.forEach(function(x){if(!x.d.fout&&boeken.indexOf(x.d.boekje)<0)boeken.push(x.d.boekje);});
   Promise.all(boeken.map(laad)).then(function(vr){
@@ -57,6 +79,7 @@ document.getElementById("go").addEventListener("click",function(){
     var h="",geen=boeken.filter(function(b){return !q[b];});
     document.getElementById("bron").innerHTML=geen.length?'<span class="bad">Vraagteksten van boekje '+geen.join(", ")+' niet geladen: open deze pagina via <code>python3 -m http.server</code> in de repo-map en ga naar <code>/tools/voortgang-lezen.html</code>. Je ziet nu alleen vraagnummers.</span>':"";
     dec.forEach(function(x,n){
+      if(x.d.rt)return;
       if(x.d.fout){h+='<div class="card"><b>Code '+(n+1)+'</b>: <span class="bad">'+esc(x.d.fout)+'</span><br><code>'+esc(x.r)+'</code></div>';return;}
       var d=x.d,vq=q[d.boekje],o=0,b=stat[d.boekje]=stat[d.boekje]||{n:0,c:new Array(d.bits.length).fill(0)};
       if(b.c.length!==d.bits.length){h+='<div class="card"><b>Code '+(n+1)+'</b>: <span class="bad">aantal vragen wijkt af van andere codes van boekje '+d.boekje+'</span></div>';return;}
@@ -69,7 +92,8 @@ document.getElementById("go").addEventListener("click",function(){
       h+='<div class="card"><h2>Samenvatting boekje '+bk+' ('+b.n+' codes) · slechtst beheerst bovenaan</h2><table><tr><th>Beheerst</th><th>Vraag</th></tr>';
       r.forEach(function(i){h+='<tr><td>'+b.c[i]+' van '+b.n+' <span class="bar" style="width:'+Math.round(b.c[i]/b.n*80)+'px"></span></td><td>'+esc(vq?vq[i].h+": "+vq[i].t:"vraag "+(i+1))+'</td></tr>';});
       h+='</table></div>';});
-    u.innerHTML=h||'<p class="muted">Nog geen codes ingevoerd.</p>';
+    var zet=function(){u.innerHTML=(h+rtHtml)||'<p class="muted">Nog geen codes ingevoerd.</p>';};
+    if(dec.some(function(x){return x.d.rt;}))toonRT(dec,u,function(x){rtHtml=x;zet();});else zet();
   });
 });
 </script></main></body></html>

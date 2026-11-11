@@ -352,7 +352,7 @@ html,body{height:auto;font-family:Inter,system-ui,-apple-system,sans-serif}
 h1,h2,h3,.chh,.vbtn b{font-family:Fraunces,Georgia,serif;letter-spacing:-.015em;color:var(--ink)}
 h2{font-size:clamp(24px,2.8vw,32px);font-weight:700;line-height:1.08}
 /* panelen zonder witte kaders, net als de leeromgeving: grote zwarte koppen op de beige achtergrond */
-#lab>.card,#toets>.card,.hero .intro,.checkcard{background:transparent;border:0;box-shadow:none;padding-left:0;padding-right:0}
+#lab>.card,#toets>.card,#route>.card,.hero .intro,.checkcard{background:transparent;border:0;box-shadow:none;padding-left:0;padding-right:0}
 #lab>.card>.row h2,#toets>.card h2,.hero .intro h2,.checkcard h2{font-size:clamp(30px,4.4vw,50px);font-weight:700;line-height:1.02;margin-top:8px}
 .blob,.coins{display:none}
 .sub button,.filters button{background:var(--card);color:var(--ink);padding:8px 15px;font-size:14px}
@@ -428,7 +428,7 @@ nav.tabs button span{display:flex!important;flex-direction:column;line-height:1.
 .ofoot .owrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
 @media (max-width:760px){.ostart .otabs small{display:none}.ostart .otabs nav.tabs button{padding:10px 12px 10px 10px}}
 @media (max-width:560px){.ofull,.olinks a:not(.cta):first-child{display:none}.oshort{display:inline}.olinks a{padding:8px 8px;font-size:13px}
-  .otabs nav.tabs{gap:6px}.otabs nav.tabs button,.ostart .otabs nav.tabs button{flex:1 1 0;justify-content:center;padding:8px 6px;font-size:14.5px;gap:6px;border-radius:14px}
+  .otabs nav.tabs{gap:6px;overflow-x:auto;scrollbar-width:none;margin:0 -16px;padding:0 16px}.otabs nav.tabs::-webkit-scrollbar{display:none}.otabs nav.tabs button,.ostart .otabs nav.tabs button{flex:1 0 auto;justify-content:center;padding:8px 10px;font-size:14px;gap:6px;border-radius:14px}
   .otabs nav.tabs button .i{width:30px;height:30px;padding:6px;border-radius:9px}}
 @media (max-width:400px){.otabs nav.tabs button .i{display:none}}
 </style>
@@ -437,7 +437,7 @@ nav.tabs button span{display:flex!important;flex-direction:column;line-height:1.
 <div class="app">
 <header class="onav"><div class="owrap"><a class="brand" href="../h.html?p=jaar-2%2Fmavo%2Fhoofdstuk-2" aria-label="Meneer Boersen, terug naar het hoofdstuk"><b class="ofull">Meneer <span>Boersen</span></b><b class="oshort" aria-hidden="true">M<span>B</span></b></a><nav class="olinks" aria-label="Menu"><a href="../h.html?p=jaar-2%2Fmavo%2Fhoofdstuk-2">Hoofdstuk 2</a><a href="../h.html?p=jaar-2%2Fmavo%2Fhoofdstuk-2&amp;par=2.1">Leeromgeving</a><a class="cta" href="#" aria-current="page">Oefenomgeving</a></nav></div></header>
 <section class="otop"><div class="owrap"><div class="oeyebrow">Oefenomgeving · Economie · jaar 2 mavo · hoofdstuk 2</div><div class="otop-in"><div><div class="onum">H2</div><h1>Jij en je <em>geld</em></h1><p>Begrippen, rekenen, quiz, games en oefentoetsen met nakijkblad. De PowerPoints en filmpjes staan in de <a href="../h.html?p=jaar-2%2Fmavo%2Fhoofdstuk-2&amp;par=2.1">leeromgeving</a>.</p><div class="prog"><div class="ring" id="ring"><span id="ringTxt">0%</span></div><div>jouw voortgang<br><b id="progTxt">0 vragen</b></div></div></div><div class="ogal"><img src="../img/j2h2/boodschappen.jpg" alt="" loading="lazy"><img src="../img/j2h2/lenen-vergelijken.jpg" alt="" loading="lazy"><img src="../img/j2h2/polis-tekenen.jpg" alt="" loading="lazy"></div></div></div></section>
-<div class="otabs"><div class="owrap"><nav class="tabs" role="tablist"><button role="tab" data-tab="start" aria-selected="true"><svg class="i" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg><span><b>Overzicht</b><small>Je voortgang en de 4 paragrafen</small></span></button><button role="tab" data-tab="lab" aria-selected="false"><svg class="i" viewBox="0 0 24 24"><path d="M9 3h6"/><path d="M10 3v6L4.5 19a1.5 1.5 0 0 0 1.3 2h12.4a1.5 1.5 0 0 0 1.3-2L14 9V3"/><path d="M7 15h10"/></svg><span><b>Oefenlab</b><small>Begrippen, rekenen, quiz en games</small></span></button><button role="tab" data-tab="toets" aria-selected="false"><svg class="i" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg><span><b>Oefentoetsen</b><small>Met klok, direct nagekeken</small></span></button></nav></div></div>
+<div class="otabs"><div class="owrap"><nav class="tabs" role="tablist"><button role="tab" data-tab="start" aria-selected="true"><svg class="i" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg><span><b>Overzicht</b><small>Je voortgang en de 4 paragrafen</small></span></button><button role="tab" data-tab="route" aria-selected="false"><svg class="i" viewBox="0 0 24 24"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.9z"/></svg><span><b>Mijn route</b><small>Oefenen op jouw niveau</small></span></button><button role="tab" data-tab="lab" aria-selected="false"><svg class="i" viewBox="0 0 24 24"><path d="M9 3h6"/><path d="M10 3v6L4.5 19a1.5 1.5 0 0 0 1.3 2h12.4a1.5 1.5 0 0 0 1.3-2L14 9V3"/><path d="M7 15h10"/></svg><span><b>Oefenlab</b><small>Begrippen, rekenen, quiz en games</small></span></button><button role="tab" data-tab="toets" aria-selected="false"><svg class="i" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg><span><b>Oefentoetsen</b><small>Met klok, direct nagekeken</small></span></button></nav></div></div>
 
 <main id="main">
 <!-- START -->
@@ -528,6 +528,7 @@ nav.tabs button span{display:flex!important;flex-direction:column;line-height:1.
 </section>
 
 <!-- TOETS -->
+<section class="panel" id="route" hidden><div class="card pad"><div id="routeApp"><p class="muted">De oefenroute laadt…</p></div></div></section>
 <section class="panel" id="toets" hidden>
 <div class="card pad otoets"><div class="eyebrow">Oefentoetsen</div><h2>Maak de toets hier, met klok en automatisch nakijken</h2><p class="muted">Maak de toets zonder boek en zonder hulp, je rekenmachine mag. Bedragen, procenten en keuzes worden direct nagekeken met het nakijkblad van je docent; bij de uitlegvragen kijkt de AI mee. Kies je niveau: 1, 2 of 3 sterren. Werkt ook op de iPad. De toetsen gaan over §2.1 en §2.2.</p><div class="ovgrid"><a class="ovcard" href="toets.html?t=t1"><span class="ster">★</span><h3>1-ster oefentoets</h3><p>61 punten · 15 vragen · 50 minuten</p><span class="btn">Maak de toets →</span></a><a class="ovcard" href="toets.html?t=t2"><span class="ster">★★</span><h3>2-ster oefentoets</h3><p>63 punten · 13 vragen · 50 minuten</p><span class="btn">Maak de toets →</span></a><a class="ovcard" href="toets.html?t=t3"><span class="ster">★★★</span><h3>3-ster oefentoets</h3><p>59 punten · 11 vragen · 50 minuten</p><span class="btn">Maak de toets →</span></a></div><p class="muted opapier">Liever op papier? <a href="../oefentoetsen/oefentoets-h2-1-ster.docx" download="Oefentoets H2 1-ster.docx">1-ster (Word)</a> · <a href="../oefentoetsen/oefentoets-h2-2-ster.docx" download="Oefentoets H2 2-ster.docx">2-ster (Word)</a> · <a href="../oefentoetsen/oefentoets-h2-3-ster.docx" download="Oefentoets H2 3-ster.docx">3-ster (Word)</a> · <a target="_blank" rel="noopener" href="https://drive.google.com/file/d/1SJ5D9RY5QdPxuw3SZEalhZQtC95k4TBY/view">Oefentoets hoofdstuk 2 (PDF)</a> met <a target="_blank" rel="noopener" href="https://drive.google.com/file/d/1YrvM0B0AYI-nW4jDPBys8S6nY1SxCEJL/view">nakijkblad</a> · <a target="_blank" rel="noopener" href="https://drive.google.com/file/d/1wyK79e1WARJpqTi-rX-ST1TSiLjND6O7/view">Oefenvragen hoofdstuk 2 (PDF)</a> met <a target="_blank" rel="noopener" href="https://drive.google.com/file/d/1IpYR0QM_e3XGvSA2lELfkXEu1CUFZjz2/view">nakijkblad</a></p></div>
 <div hidden>
@@ -620,15 +621,18 @@ if(l.dataset.qpar){quizPar=l.dataset.qpar;quizHome();}}
 function goalCount(id){var p=P(id),d=0;p.q.forEach(function(_,i){if(S.qs[id+"-"+i])d++;});return d;}
 function totals(ch){var t=0,d=0;PARS.forEach(function(p){if(ch&&p.ch!==ch)return;t+=p.q.length;d+=goalCount(p.id);});return [d,t];}
 function renderNext(){var el=document.getElementById("onext");if(!el)return;
-var nk=Object.keys(S.known||{}).length,nq=Object.keys(S.qwrong||{}).filter(function(i){return BANK[i];}).length,x=totals(),chk=typeof CHK==="undefined"?[]:CHK.map(function(c,i){return [c,i];}).filter(function(a){return !(S.check||{})[a[1]];}),h,p,b,p0=PARS[0].id;
-if(!x[0]&&!nk){h="Begin met de begrippen van "+p0+".";p="Lees eerst de lesstof in de leeromgeving. Oefen daarna hier de woorden van "+p0+".";b='<button class="btn" data-golab="begrippen" data-cpar="'+p0+'">Begrippen '+p0+' →</button>';}
+var nk=Object.keys(S.known||{}).length,nq=Object.keys(S.qwrong||{}).filter(function(i){return BANK[i];}).length,x=totals(),chk=typeof CHK==="undefined"?[]:CHK.map(function(c,i){return [c,i];}).filter(function(a){return !(S.check||{})[a[1]];}),h,p,b,p0=PARS[0].id,RS=window.EcoRouteApp?EcoRouteApp.stand():null;
+if(RS&&!RS.gedaan){h="Start je oefenroute.";p="Een korte instaptoets kijkt wat jij al kunt. Daarna krijg je vragen op jouw niveau: van één naar drie sterren.";b='<button class="btn" data-go="route">Naar mijn route →</button>';}
+else if(!x[0]&&!nk){h="Begin met de begrippen van "+p0+".";p="Lees eerst de lesstof in de leeromgeving. Oefen daarna hier de woorden van "+p0+".";b='<button class="btn" data-golab="begrippen" data-cpar="'+p0+'">Begrippen '+p0+' →</button>';}
 else if(nk<CARDS.length*0.6){h="Oefen de begrippen.";p="Je kent "+nk+" van de "+CARDS.length+" begrippen. Draai de kaarten om en vink af wat je weet.";b='<button class="btn" data-golab="begrippen" data-cpar="oefenen">Naar de begrippen →</button>';}
 else if(nq){h="Oefen je fouten.";p="Je had "+nq+" quizvra"+(nq>1?"gen":"ag")+" fout. Probeer "+(nq>1?"ze":"hem")+" nog een keer.";b='<button class="btn" data-golab="quiz" data-qmode="fouten">Oefen mijn fouten ('+nq+') →</button>';}
+else if(RS&&RS.klaar<RS.n){h="Ga verder met je route.";p=RS.klaar+" van "+RS.n+" leerdoelen staan op drie sterren. Elke vraag is op jouw niveau.";b='<button class="btn" data-go="route">Verder met mijn route →</button>';}
 else if(chk.length){var c=chk[0][0];h="Oefen: "+c[0].charAt(0).toLowerCase()+c[0].slice(1)+".";p="Nog "+chk.length+" van de "+CHK.length+" onderdelen van de checklist.";b='<button class="btn"'+(c[2]==="reken"?' data-golab="reken" data-mode="'+c[3]+'"':' data-golab="quiz" data-qpar="'+c[1]+'"')+'>Oefen '+c[1]+' →</button>';}
 else{h="Maak een oefentoets.";p="Je hebt alles geoefend. Test jezelf met de klok.";b='<button class="btn" data-go="toets">Naar de oefentoetsen →</button>';}
 document.getElementById("onextH").textContent=h;document.getElementById("onextP").textContent=p;el.innerHTML=b;
 var lv=function(k,t){var e=document.querySelector('[data-olive="'+k+'"]');if(e)e.textContent=t;},ns=Object.keys(S.qseen||{}).length;
 lv("begrippen",nk?nk+" van "+CARDS.length+" gekend":"");lv("quiz",nq?nq+" fout"+(nq>1?"en":"")+" om te oefenen":ns?ns+" vragen gezien":"");}
+window.ecoRenderNext=renderNext;
 function renderProgress(){renderNext();
 var x=totals(),pct=x[1]?Math.round(x[0]/x[1]*100):0;
 document.getElementById("ring").style.setProperty("--v",pct);
@@ -839,8 +843,8 @@ week:"maandbedrag × 12 : 52",
 saldo:"oud saldo + bij − af",
 pct:"(nieuw − oud) : oud × 100",
 procvan:"(percentage : 100) × totaal",
-perc:"deel : geheel × 100",
-rente:"rentepercentage : 100 × spaarbedrag",
+perc:"(deel : geheel) × 100",
+rente:"(rentepercentage : 100) × spaarbedrag",
 totaal:"maandtermijn × aantal maanden",
 lening:"totaal terugbetaald − geleend bedrag",
 schade:"schade − eigen risico",
@@ -885,10 +889,10 @@ function(){var t=pick([250,500,800,1200,2000,4500]),d=r(t*pick([4.5,5.2,6.5,7.1,
 function(){var t=money(40,120),d=r(t*rnd(15,60)/100,2);return ["Je krijgt "+eur(t)+" zakgeld per maand. Daarvan geef je "+eur(d)+" uit aan snoep en drinken.",d,t,"Hoeveel procent van je zakgeld geef je uit aan snoep en drinken?"];},
 function(){var t=rnd(30,140)*10,d=t-pick([50,75,100,150,250]);return ["De schade aan je spullen is "+eur(t)+". Je krijgt "+eur(d)+" vergoed van de verzekeraar.",d,t,"Hoeveel procent van je schade krijg je vergoed?"];}
 ])(),a=r(v[1]/v[2]*100,1);
-return{f:"perc",h:v[3]+" (1 decimaal)",body:qp(v[0]),a:a,d:1,u:"%",calc:"Percentage = deel : geheel × 100\n"+num(v[1])+" : "+num(v[2])+" × 100 = "+pc(a)};},
+return{f:"perc",h:v[3]+" (1 decimaal)",body:qp(v[0]),a:a,d:1,u:"%",calc:"Percentage = (deel : geheel) × 100\n"+num(v[1])+" : "+num(v[2])+" × 100 = "+pc(a)};},
 rente:function(){var k=rnd(1,6);
 if(k<=3){var b=pick([240,450,600,850,1200,2500,3400,5000,8267]),p=pick([0.5,0.75,1.1,1.2,1.4,1.5,1.6,1.8,2.1,2.3]),a=r(p/100*b,2);
-return{f:"rente",h:"Hoeveel rente krijg je na een jaar? (2 decimalen)",body:qp("Op je spaarrekening staat "+eur(b)+". Je krijgt "+pc(p)+" rente per jaar."),a:a,d:2,u:"€",calc:"Rentebedrag per jaar = rentepercentage : 100 × spaarbedrag\n"+i1(p)+" : 100 = "+num(p/100)+"\n"+num(p/100)+" × "+num(b)+" = "+eur(a)};}
+return{f:"rente",h:"Hoeveel rente krijg je na een jaar? (2 decimalen)",body:qp("Op je spaarrekening staat "+eur(b)+". Je krijgt "+pc(p)+" rente per jaar."),a:a,d:2,u:"€",calc:"Rentebedrag per jaar = (rentepercentage : 100) × spaarbedrag\n"+i1(p)+" : 100 = "+num(p/100)+"\n"+num(p/100)+" × "+num(b)+" = "+eur(a)};}
 if(k<=5){var b2=pick([2000,5000,8500,12000,15000]),p1=pick([0.5,0.75,0.9,1.1]),p2=r(p1+pick([0.3,0.45,0.6,0.8]),2),x1=r(p1/100*b2,2),x2=r(p2/100*b2,2),a2=r(x2-x1,2);
 return{f:"rente",h:"Hoeveel euro rente krijgt Bas per jaar méér dan Ryan? (2 decimalen)",body:qp("Ryan en Bas hebben allebei "+eur(b2)+" op een spaarrekening. Ryan krijgt "+pc(p1)+" rente, Bas krijgt "+pc(p2)+" rente."),a:a2,d:2,u:"€",calc:"Ryan: "+i1(p1)+" : 100 × "+num(b2)+" = "+eur(x1)+"\nBas: "+i1(p2)+" : 100 × "+num(b2)+" = "+eur(x2)+"\nVerschil: "+eur(x2)+" − "+eur(x1)+" = "+eur(a2)};}
 var b3=pick([480,600,900,1200,2400]),p3=pick([1.2,1.5,1.8,2,2.4]),m=pick([3,4,6,8,9]),jr=r(p3/100*b3,2),a3=r(jr/12*m,2);
@@ -1201,6 +1205,7 @@ luNew();
 renderFlash();renderProgress();renderCheck();
 function route(){var h=location.hash.slice(1).split("/");
 if(h[0]==="toets")show("toets");
+else if(h[0]==="route"){show("route");if(window.EcoRouteApp){if(h[1]==="doel"&&h[2])EcoRouteApp.focus(h[2]);else EcoRouteApp.home();}}
 else if(h[0]==="lab"){show("lab");
   if(h[1]==="reken"){showLab("reken");if(h[2]){mode=h[2];newR();}}
   else if(h[1]==="quiz"){showLab("quiz");if(h[2]==="fouten")startQuiz("fouten");else if(h[2]){quizPar=h[2];quizHome();}}
@@ -1211,5 +1216,8 @@ toMain(true);}
 route();addEventListener("hashchange",route);
 })();
 </script>
+<script src="../../nakijker.js"></script>
+<script src="../route.js"></script>
+<script>EcoRoute.mount({el:document.getElementById("routeApp"),map:"j2h2",url:"route.json",nk:window.GV_NK,onchange:function(){if(window.ecoRenderNext)ecoRenderNext();}});</script>
 </body>
 </html>

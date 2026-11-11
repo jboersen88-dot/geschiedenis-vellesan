@@ -102,7 +102,8 @@ if not films:  # oudere app: de filmpjes staan alleen als kaarten in het tabblad
 # dia's als klikbare presentatie: slides/deck.json ({"2.1": aantal dia's}) en slides/steps.json (klikstappen), zie tools/dias/README.md
 sl = lambda f: json.load(open(os.path.join(OUT, "slides", f), encoding="utf-8")) if os.path.exists(os.path.join(OUT, "slides", f)) else {}
 cards = grab("CARDS")
-data = dict(key=key, oefen=name + "/oefen.html", pars=pars, cards=cards, films=films, mat=grab("MAT", {}), deck=sl("deck.json"), steps=sl("steps.json"))
+data = dict(key=key, oefen=name + "/oefen.html", pars=pars, cards=cards, films=films, mat=grab("MAT", {}), deck=sl("deck.json"), steps=sl("steps.json"),
+            route=os.path.exists(os.path.join(OUT, "route.json")))  # persoonlijke oefenroute (bouw-route.py eerst draaien)
 os.makedirs(OUT, exist_ok=True)
 json.dump(data, open(os.path.join(OUT, "data.json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
 
@@ -111,6 +112,10 @@ FONT = "https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..14
 s = re.sub(r"https://fonts\.googleapis\.com/css2\?family=Plus\+Jakarta\+Sans[^\"]*", FONT, s)
 s = rex(s, r"<title>[^<]*</title>", "<title>Oefenomgeving · %s · Economie</title>" % "".join(C["kop"]))
 
+# formules altijd met haakjes, zoals de docent ze schrijft: (deel : geheel) × 100, (rentepercentage : 100) × spaarbedrag
+for oud, nieuw in [('perc:"deel : geheel × 100"', 'perc:"(deel : geheel) × 100"'), ('rente:"rentepercentage : 100 × spaarbedrag"', 'rente:"(rentepercentage : 100) × spaarbedrag"'),
+                   ("Percentage = deel : geheel × 100", "Percentage = (deel : geheel) × 100"), ("Rentebedrag per jaar = rentepercentage : 100 × spaarbedrag", "Rentebedrag per jaar = (rentepercentage : 100) × spaarbedrag")]:
+    s = s.replace(oud, nieuw)
 # oude paars/roze kleuren -> groen, koraal en beige van de site (ook de vaste kleuren in games, munten en verloop)
 KLEUR = {"#3b1534": "#123a30", "#5a1f4f": "#1f5f4e", "#6a2559": "#174a3d", "#2a0f26": "#0c241d", "#a01a58": "#c2484d", "#e2457f": "#ff8d90",
          "#ffd6e8": "#ffc9c8", "#fbe8f0": "#ffe6e4", "#f1e8ec": "#efe6d6", "#fcf6f9": "#fbf6ee", "#fff9fc": "#fffdf9", "#f8f1f5": "#f9f3ea",
@@ -132,7 +137,10 @@ LES = INFO.replace("&", "&amp;") + pars[0]["id"]  # leeromgeving, eerste paragra
 TABS = {"start": ("Overzicht", "Je voortgang en de %d paragrafen" % len(pars)), "lab": ("Oefenlab", "Begrippen, rekenen, quiz en games"),
         "toets": ("Oefentoetsen", "Met klok, direct nagekeken")}
 tab = lambda t: re.search(r'<button role="tab" data-tab="%s".*?</button>' % t, s, re.S).group(0)
+ROUTE = os.path.exists(os.path.join(OUT, "route.json"))  # persoonlijke oefenroute (bouw-route.py, route.js)
 tabs = "".join(re.sub(r"<span>[^<]*</span>", "<span><b>%s</b><small>%s</small></span>" % TABS[t], tab(t)) for t in TABS)
+if ROUTE:
+    tabs = tabs.replace("</button>", '</button><button role="tab" data-tab="route" aria-selected="false"><svg class="i" viewBox="0 0 24 24"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.9z"/></svg><span><b>Mijn route</b><small>Oefenen op jouw niveau</small></span></button>', 1)
 s = rex(s, r'<div class="top">.*?</nav>\s*</div>',
         '<header class="onav"><div class="owrap"><a class="brand" href="%s" aria-label="Meneer Boersen, terug naar het hoofdstuk"><b class="ofull">Meneer <span>Boersen</span></b><b class="oshort" aria-hidden="true">M<span>B</span></b></a>'
         '<nav class="olinks" aria-label="Menu"><a href="%s">%s</a><a href="%s">Leeromgeving</a><a class="cta" href="#" aria-current="page">Oefenomgeving</a></nav></div></header>\n'
@@ -159,15 +167,18 @@ s = rex(s, r'<button class="btn" data-go="les"(?: data-par="[\d.]+")?>(<svg.*?</
         r'<span id="onext"></span><button class="btn ghost" data-go="lab">Alle oefeningen</button><button class="btn ghost" data-go="les" data-par="%s">\g<1>Lees %s</button>' % (pars[0]["id"], pars[0]["id"]), groepen=True)
 s = rep(s, '<button class="btn ghost" data-go="toets">Naar de oefentoets</button>', "")
 s = rep(s, "function renderProgress(){", '''function renderNext(){var el=document.getElementById("onext");if(!el)return;
-var nk=Object.keys(S.known||{}).length,nq=Object.keys(S.qwrong||{}).filter(function(i){return BANK[i];}).length,x=totals(),chk=typeof CHK==="undefined"?[]:CHK.map(function(c,i){return [c,i];}).filter(function(a){return !(S.check||{})[a[1]];}),h,p,b,p0=PARS[0].id;
-if(!x[0]&&!nk){h="Begin met de begrippen van "+p0+".";p="Lees eerst de lesstof in de leeromgeving. Oefen daarna hier de woorden van "+p0+".";b='<button class="btn" data-golab="begrippen" data-cpar="'+p0+'">Begrippen '+p0+' →</button>';}
+var nk=Object.keys(S.known||{}).length,nq=Object.keys(S.qwrong||{}).filter(function(i){return BANK[i];}).length,x=totals(),chk=typeof CHK==="undefined"?[]:CHK.map(function(c,i){return [c,i];}).filter(function(a){return !(S.check||{})[a[1]];}),h,p,b,p0=PARS[0].id,RS=window.EcoRouteApp?EcoRouteApp.stand():null;
+if(RS&&!RS.gedaan){h="Start je oefenroute.";p="Een korte instaptoets kijkt wat jij al kunt. Daarna krijg je vragen op jouw niveau: van één naar drie sterren.";b='<button class="btn" data-go="route">Naar mijn route →</button>';}
+else if(!x[0]&&!nk){h="Begin met de begrippen van "+p0+".";p="Lees eerst de lesstof in de leeromgeving. Oefen daarna hier de woorden van "+p0+".";b='<button class="btn" data-golab="begrippen" data-cpar="'+p0+'">Begrippen '+p0+' →</button>';}
 else if(nk<CARDS.length*0.6){h="Oefen de begrippen.";p="Je kent "+nk+" van de "+CARDS.length+" begrippen. Draai de kaarten om en vink af wat je weet.";b='<button class="btn" data-golab="begrippen" data-cpar="oefenen">Naar de begrippen →</button>';}
 else if(nq){h="Oefen je fouten.";p="Je had "+nq+" quizvra"+(nq>1?"gen":"ag")+" fout. Probeer "+(nq>1?"ze":"hem")+" nog een keer.";b='<button class="btn" data-golab="quiz" data-qmode="fouten">Oefen mijn fouten ('+nq+') →</button>';}
+else if(RS&&RS.klaar<RS.n){h="Ga verder met je route.";p=RS.klaar+" van "+RS.n+" leerdoelen staan op drie sterren. Elke vraag is op jouw niveau.";b='<button class="btn" data-go="route">Verder met mijn route →</button>';}
 else if(chk.length){var c=chk[0][0];h="Oefen: "+c[0].charAt(0).toLowerCase()+c[0].slice(1)+".";p="Nog "+chk.length+" van de "+CHK.length+" onderdelen van de checklist.";b='<button class="btn"'+(c[2]==="reken"?' data-golab="reken" data-mode="'+c[3]+'"':' data-golab="quiz" data-qpar="'+c[1]+'"')+'>Oefen '+c[1]+' →</button>';}
 else{h="Maak een oefentoets.";p="Je hebt alles geoefend. Test jezelf met de klok.";b='<button class="btn" data-go="toets">Naar de oefentoetsen →</button>';}
 document.getElementById("onextH").textContent=h;document.getElementById("onextP").textContent=p;el.innerHTML=b;
 var lv=function(k,t){var e=document.querySelector('[data-olive="'+k+'"]');if(e)e.textContent=t;},ns=Object.keys(S.qseen||{}).length;
 lv("begrippen",nk?nk+" van "+CARDS.length+" gekend":"");lv("quiz",nq?nq+" fout"+(nq>1?"en":"")+" om te oefenen":ns?ns+" vragen gezien":"");}
+window.ecoRenderNext=renderNext;
 function renderProgress(){renderNext();''')
 s = rep(s, 'var l=e.target.closest("[data-golab]");if(l){show("lab");showLab(l.dataset.golab);',
         'var l=e.target.closest("[data-golab]");if(l){show("lab");showLab(l.dataset.golab);if(l.dataset.cpar){cardFilter=l.dataset.cpar;renderFlash();}if(l.dataset.qmode){startQuiz(l.dataset.qmode);}')
@@ -212,6 +223,7 @@ s = rep(s, "function show(name){", 'function toMain(altijd){var y=main.getBoundi
 s = rex(s, r"(renderFlash\(\);renderProgress\(\);(?:renderCheck\(\);)?)\n\}\)\(\);", r"""\g<1>
 function route(){var h=location.hash.slice(1).split("/");
 if(h[0]==="toets")show("toets");
+else if(h[0]==="route"){show("route");if(window.EcoRouteApp){if(h[1]==="doel"&&h[2])EcoRouteApp.focus(h[2]);else EcoRouteApp.home();}}
 else if(h[0]==="lab"){show("lab");
   if(h[1]==="reken"){showLab("reken");if(h[2]){mode=h[2];newR();}}
   else if(h[1]==="quiz"){showLab("quiz");if(h[2]==="fouten")startQuiz("fouten");else if(h[2]){quizPar=h[2];quizHome();}}
@@ -235,6 +247,9 @@ if isinstance(docx, str):
     papier += "".join(' · <a target="_blank" rel="noopener" href="https://drive.google.com/file/d/%s/view">%s (PDF)</a> met <a target="_blank" rel="noopener" href="https://drive.google.com/file/d/%s/view">nakijkblad</a>' % (v["toets"], v["t"], v["nk"]) for v in grab("VERS") if v.get("nk"))
 else:  # lijst van (bestand in oefentoetsen/, tekst)
     papier = " · ".join('<a href="../oefentoetsen/%s" download>%s</a>' % d for d in docx)
+if ROUTE:
+    s = rep(s, '<section class="panel" id="toets" hidden>', '<section class="panel" id="route" hidden><div class="card pad"><div id="routeApp"><p class="muted">De oefenroute laadt…</p></div></div></section>\n<section class="panel" id="toets" hidden>')
+    s = rep(s, "</body>", '<script src="../../nakijker.js"></script>\n<script src="../route.js"></script>\n<script>EcoRoute.mount({el:document.getElementById("routeApp"),map:%s,url:"route.json",nk:window.GV_NK,onchange:function(){if(window.ecoRenderNext)ecoRenderNext();}});</script>\n</body>' % json.dumps(name))
 s = rep(s, '<section class="panel" id="toets" hidden>',
         '<section class="panel" id="toets" hidden>\n<div class="card pad otoets"><div class="eyebrow">Oefentoetsen</div><h2>Maak de toets hier, met klok en automatisch nakijken</h2>'
         '<p class="muted">Maak de toets zonder boek en zonder hulp, je rekenmachine mag. Bedragen, procenten en keuzes worden direct nagekeken met het nakijkblad van je docent; bij de uitlegvragen kijkt de AI mee. %s Werkt ook op de iPad. De toetsen gaan over %s.</p>'
@@ -263,7 +278,7 @@ html,body{height:auto;font-family:Inter,system-ui,-apple-system,sans-serif}
 h1,h2,h3,.chh,.vbtn b{font-family:Fraunces,Georgia,serif;letter-spacing:-.015em;color:var(--ink)}
 h2{font-size:clamp(24px,2.8vw,32px);font-weight:700;line-height:1.08}
 /* panelen zonder witte kaders, net als de leeromgeving: grote zwarte koppen op de beige achtergrond */
-#lab>.card,#toets>.card,.hero .intro,.checkcard{background:transparent;border:0;box-shadow:none;padding-left:0;padding-right:0}
+#lab>.card,#toets>.card,#route>.card,.hero .intro,.checkcard{background:transparent;border:0;box-shadow:none;padding-left:0;padding-right:0}
 #lab>.card>.row h2,#toets>.card h2,.hero .intro h2,.checkcard h2{font-size:clamp(30px,4.4vw,50px);font-weight:700;line-height:1.02;margin-top:8px}
 .blob,.coins{display:none}
 .sub button,.filters button{background:var(--card);color:var(--ink);padding:8px 15px;font-size:14px}
@@ -339,7 +354,7 @@ nav.tabs button span{display:flex!important;flex-direction:column;line-height:1.
 .ofoot .owrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
 @media (max-width:760px){.ostart .otabs small{display:none}.ostart .otabs nav.tabs button{padding:10px 12px 10px 10px}}
 @media (max-width:560px){.ofull,.olinks a:not(.cta):first-child{display:none}.oshort{display:inline}.olinks a{padding:8px 8px;font-size:13px}
-  .otabs nav.tabs{gap:6px}.otabs nav.tabs button,.ostart .otabs nav.tabs button{flex:1 1 0;justify-content:center;padding:8px 6px;font-size:14.5px;gap:6px;border-radius:14px}
+  .otabs nav.tabs{gap:6px;overflow-x:auto;scrollbar-width:none;margin:0 -16px;padding:0 16px}.otabs nav.tabs::-webkit-scrollbar{display:none}.otabs nav.tabs button,.ostart .otabs nav.tabs button{flex:1 0 auto;justify-content:center;padding:8px 10px;font-size:14px;gap:6px;border-radius:14px}
   .otabs nav.tabs button .i{width:30px;height:30px;padding:6px;border-radius:9px}}
 @media (max-width:400px){.otabs nav.tabs button .i{display:none}}
 </style>""")
