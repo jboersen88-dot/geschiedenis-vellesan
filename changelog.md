@@ -9,6 +9,7 @@ Eerste hoofdstuk van jaar 3 havo/vwo (tot nu toe "Volgt binnenkort"). Opzet als 
 - **Digitale oefentoets** (`j3vh2/bron/toetsen.json`, `bouw-toets.py j3vh2`): 8 meerkeuze + 7 opgaven, 30 punten, 45 minuten, gemaakt uit de wisbordvragen en rekenvoorbeelden van de PowerPoints.
 - **Beelden**: de 32 beelden van de docent (`img/j3vh2/`, verkleind naar 1200 px).
 - **Dia's** (`j3vh2/slides/`, 12 + 33 + 23 dia's met klikstappen): bij de wisbord-dia's eerst de vraag, dan het antwoord, zonder aftelklok; 2.2 dia "Aan de slag" (huiswerk) weggelaten. De drie YouTube-filmpjes uit de KIJKEN-dia's staan bij Filmpjes.
+- **Boekafbeeldingen uit de dia's** (later op de dag, op verzoek van de docent): de Noordhoff-afbeeldingen zijn vervangen in de dia-JPG's en klikstappen. 2.1: munten → tijdlijn, wisselbrief → eigen wisselbrief, de twee krantenknipsels → eigen tekst met dezelfde cijfers (bron vermeld, "in eigen woorden"). 2.2 dia 7: staafgrafiek toonbankbetalingen zelf opnieuw getekend met dezelfde cijfers (Rabobank) en dezelfde staafposities, zodat spotjes en labels blijven kloppen. 2.2 dia 13: biljetten → munt op weegschaal. 2.3 dia 5: inflatiegrafiek zelf opnieuw getekend (CBS). Bijschriften "uit Noordhoff" weg. De PowerPoints zelf zijn niet aangepast.
 - Niet gedaan: Mijn route (persoonlijke oefenroute) voor dit hoofdstuk; de nieuwe rekensoorten staan nog niet in `route.js`.
 
 ## 2026-11-11 · Economie jaar 2 H1 en H2: persoonlijke oefenroute (fase 2)
