@@ -1,3 +1,16 @@
+## 2026-11-13 · Economie 3 vwo H2 "De rol van geld": hoofdstukpagina, leeromgeving, oefenomgeving en digitale oefentoets
+
+Eerste hoofdstuk van jaar 3 havo/vwo (tot nu toe "Volgt binnenkort"). Opzet als jaar 3 mavo H2 (hoofdstukpagina en leeromgeving) en jaar 2 H2 (oefenomgeving).
+
+- **Site**: niveau Havo/vwo bij jaar 3 heeft nu inhoud (`pre:"jaar-3/havo-vwo/"` in `economie.js`), nieuwe pagina `jaar-3/havo-vwo/hoofdstuk-2-de-rol-van-geld` in `data/paginas.json` (geen oude Google-pagina) en een RIJK-regel (map `j3vh2`). Een paragraaf zonder Drive-bestand toont geen knop "Open in Google Drive" meer.
+- **Inhoud** (`economie/j3vh2/bron/lesapp.json`), geschreven uit de PowerPoints van de docent (2.1 ontstaan van geld, 2.2 de waarde van geld, 2.3 koopkracht), geen boektekst letterlijk: kernvragen en leerdoelen per paragraaf, 30 begrippen, 49 quizvragen, checklist en 6 rondes Swipe & Scoor.
+- **Rekentrainer** (`economie/j3vh2/bron/reken.js`): geldhoeveelheid, procentuele verandering, intrinsieke waarde in procenten, indexcijfer, RIC (ook in drie stappen vanuit lonen), koopkrachtverandering en reële rente; ook in "Welke formule?".
+- **Oefenomgeving zonder oude lesapp**: nieuw `economie/maak-lesapp.py` maakt `apps/jaar-3_havo-vwo_hoofdstuk-2.html` uit de lesapp van jaar 2 H2 met de nieuwe inhoud (zonder Edu-Racer, die heeft eigen vragen); daarna gewoon `bouw-oefen.py j3vh2`. `bouw-oefen.py` kan nu ook zonder filmpjes en zonder papieren toets.
+- **Digitale oefentoets** (`j3vh2/bron/toetsen.json`, `bouw-toets.py j3vh2`): 8 meerkeuze + 7 opgaven, 30 punten, 45 minuten, gemaakt uit de wisbordvragen en rekenvoorbeelden van de PowerPoints.
+- **Beelden**: de 32 beelden van de docent (`img/j3vh2/`, verkleind naar 1200 px).
+- **Dia's** (`j3vh2/slides/`, 12 + 33 + 23 dia's met klikstappen): bij de wisbord-dia's eerst de vraag, dan het antwoord, zonder aftelklok; 2.2 dia "Aan de slag" (huiswerk) weggelaten. De drie YouTube-filmpjes uit de KIJKEN-dia's staan bij Filmpjes.
+- Niet gedaan: Mijn route (persoonlijke oefenroute) voor dit hoofdstuk; de nieuwe rekensoorten staan nog niet in `route.js`.
+
 ## 2026-11-11 · Economie jaar 2 H1 en H2: persoonlijke oefenroute (fase 2)
 
 Nieuw tabblad **Mijn route** in de oefenomgeving van H2 en H1 (`economie/route.js`, gegevens in `economie/<map>/route.json`, gebouwd door `economie/bouw-route.py`; het tabblad en de koppeling zet `bouw-oefen.py` erin). Ook een tegel op de hoofdstukpagina en "Jouw volgende stap" verwijst er als eerste naar.

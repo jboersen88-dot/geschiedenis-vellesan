@@ -1,0 +1,1275 @@
+{
+"KEY": "eco-j3vh2-v1",
+"PARS": [
+{
+"id": "2.1",
+"ch": 2,
+"t": "Ontstaan van geld",
+"c": "var(--p5)",
+"file": "",
+"x": [],
+"sum": "Directe en indirecte ruil, de geschiedenis van het geld, de gouden standaard, fiduciair geld en de drie geldfuncties.",
+"imgs": [
+[
+"ruilhandel",
+"Ruilhandel op de markt: product tegen product"
+],
+[
+"boer-ruil",
+"Een kalf tegen kippen: hoeveel is wat waard?"
+],
+[
+"tijdlijn",
+"De geschiedenis van het geld"
+],
+[
+"wisselbrief",
+"Een wisselbrief: de eerste vorm van briefgeld"
+],
+[
+"goudstandaard",
+"De gouden standaard: geld gekoppeld aan goud"
+],
+[
+"geldfuncties",
+"Ruilmiddel, rekenmiddel en spaarmiddel"
+],
+[
+"kassa-vroeger",
+"Betalen aan de kassa, vroeger"
+],
+[
+"kassa-nu",
+"Betalen aan de kassa, nu"
+]
+],
+"q": [
+"Wat is directe ruil (ruilhandel)? Geef een voorbeeld.",
+"Wat was het grootste probleem van ruilhandel?",
+"Wat is indirecte ruil? Noem twee van de eerste vormen van geld.",
+"Waarom gingen mensen goud en zilver gebruiken als geld?",
+"Wat is een wisselbrief en waarom was dat een veiligere vorm van handel?",
+"Wat was de gouden standaard en wanneer is die losgelaten?",
+"Wat is fiduciair geld?",
+"Noem de drie geldfuncties en geef bij elke functie een voorbeeld.",
+"Leg uit dat pinnen en contactloos betalen geld makkelijker maken als ruilmiddel."
+]
+},
+{
+"id": "2.2",
+"ch": 2,
+"t": "De waarde van geld",
+"c": "var(--p6)",
+"file": "",
+"x": [],
+"sum": "Chartaal en giraal geld, de maatschappelijke geldhoeveelheid, extrinsieke en intrinsieke waarde, vertrouwen en echt of vals geld.",
+"imgs": [
+[
+"cash-digitaal",
+"Chartaal of giraal geld?"
+],
+[
+"geldhoeveelheid",
+"De maatschappelijke geldhoeveelheid"
+],
+[
+"munt-weegschaal",
+"Wat is een munt zelf waard?"
+],
+[
+"munten-knippen",
+"Munten knippen: slecht geld verdringt goed geld"
+],
+[
+"water-venezuela",
+"Een fles water voor een stapel geld"
+],
+[
+"kruiwagen",
+"Hyperinflatie: geld in een kruiwagen"
+],
+[
+"eisen-geld",
+"Waar moet geld aan voldoen?"
+],
+[
+"biljet-checken",
+"Voelen, kijken, kantelen"
+],
+[
+"vals-geld",
+"Is dit biljet wel echt?"
+]
+],
+"q": [
+"Wat is het verschil tussen chartaal en giraal geld?",
+"Waaruit bestaat de maatschappelijke geldhoeveelheid? Noem ook wat er niet bij hoort.",
+"Waarom telt geld op een spaarrekening niet mee in de geldhoeveelheid?",
+"Hoe reken je uit met hoeveel procent de geldhoeveelheid is gestegen?",
+"Wat is het verschil tussen de extrinsieke en de intrinsieke waarde van geld?",
+"Waarom heet ons geld fiduciair geld?",
+"Wat betekent 'slecht geld verdringt goed geld'?",
+"Wat gebeurt er met de waarde van geld als het vertrouwen verdwijnt? Gebruik het voorbeeld van Venezuela.",
+"Noem de vijf eisen waaraan geld moet voldoen.",
+"Hoe controleer je of een biljet echt is?"
+]
+},
+{
+"id": "2.3",
+"ch": 2,
+"t": "Koopkracht",
+"c": "var(--p4)",
+"file": "",
+"x": [],
+"sum": "Inflatie, kosten- en bestedingsinflatie, koopkracht, rekenen met indexcijfers, nominaal en reëel inkomen en reële rente.",
+"imgs": [
+[
+"prijsstijging",
+"Alles wordt duurder: de prijs stijgt"
+],
+[
+"cbs-prijzen",
+"Het CBS houdt de prijzen bij"
+],
+[
+"kosten-bestedingsinflatie",
+"Kosteninflatie en bestedingsinflatie"
+],
+[
+"inflatie-uitleg",
+"Twee oorzaken van inflatie"
+],
+[
+"koopkracht-weegschaal",
+"Hoe werkt koopkracht?"
+],
+[
+"koopkracht-info",
+"Koopkracht: inkomen en prijzen op de weegschaal"
+],
+[
+"prijsindex",
+"Rekenen met indexcijfers"
+],
+[
+"koopkracht-rekenen",
+"Koopkracht uitrekenen"
+],
+[
+"spaarvarken",
+"Spaargeld smelt weg door inflatie"
+],
+[
+"centrale-bank",
+"De centrale bank en de inflatie"
+]
+],
+"q": [
+"Wat is inflatie en hoe meet het CBS die?",
+"Wat is het verschil tussen kosteninflatie en bestedingsinflatie? Geef bij allebei een voorbeeld.",
+"Wat is koopkracht?",
+"Wanneer stijgt je koopkracht, wanneer daalt hij en wanneer blijft hij gelijk?",
+"Waarom is koopkracht niet voor iedereen gelijk?",
+"Hoe bereken je een indexcijfer? Wat betekent een indexcijfer boven of onder 100?",
+"Wat is het verschil tussen nominaal en reëel inkomen?",
+"Hoe bereken je het indexcijfer van het reële inkomen (RIC)?",
+"Wat is reële rente en wanneer verliest je spaargeld koopkracht?"
+]
+}
+],
+"GOALS": {
+"2.1": [
+"Ik kan uitleggen hoe mensen handelden voordat er geld bestond.",
+"Ik kan het verschil uitleggen tussen directe en indirecte ruil.",
+"Ik kan uitleggen wat het probleem van ruilhandel was.",
+"Ik kan vertellen hoe geld is ontstaan: van zout en schelpen naar munten, wisselbrieven en bankbiljetten.",
+"Ik kan uitleggen wat de gouden standaard was en wat fiduciair geld is.",
+"Ik kan de drie geldfuncties noemen en bij een voorbeeld herkennen."
+],
+"2.2": [
+"Ik kan uitleggen dat de geldhoeveelheid bestaat uit chartaal en giraal geld.",
+"Ik kan uitleggen welk geld niet meetelt in de geldhoeveelheid.",
+"Ik kan de geldhoeveelheid en de procentuele verandering ervan uitrekenen.",
+"Ik kan het verschil uitleggen tussen extrinsieke en intrinsieke waarde.",
+"Ik kan uitleggen dat geld draait om vertrouwen.",
+"Ik kan de vijf eisen aan geld noemen.",
+"Ik kan voorbeelden noemen van echtheidskenmerken van een biljet."
+],
+"2.3": [
+"Ik kan uitleggen wat inflatie is.",
+"Ik kan twee oorzaken van inflatie noemen: kosteninflatie en bestedingsinflatie.",
+"Ik kan uitleggen dat inflatie je koopkracht beïnvloedt.",
+"Ik kan een indexcijfer uitrekenen.",
+"Ik kan het verschil uitleggen tussen nominaal en reëel inkomen.",
+"Ik kan het indexcijfer van het reële inkomen uitrekenen.",
+"Ik kan de reële rente uitrekenen en uitleggen wat die betekent voor je spaargeld."
+]
+},
+"CHK": [
+[
+"Het verschil uitleggen tussen directe en indirecte ruil",
+"2.1",
+"quiz"
+],
+[
+"De geschiedenis van het geld vertellen, tot en met fiduciair geld",
+"2.1",
+"quiz"
+],
+[
+"De drie geldfuncties herkennen in een voorbeeld",
+"2.1",
+"quiz"
+],
+[
+"Uitleggen wat wel en niet meetelt in de geldhoeveelheid",
+"2.2",
+"quiz"
+],
+[
+"De geldhoeveelheid uitrekenen",
+"2.2",
+"reken",
+"geldh"
+],
+[
+"Uitrekenen met hoeveel procent iets stijgt of daalt",
+"2.2",
+"reken",
+"pct"
+],
+[
+"Uitrekenen hoeveel procent de intrinsieke waarde is",
+"2.2",
+"reken",
+"intr"
+],
+[
+"De vijf eisen aan geld en de echtheidskenmerken noemen",
+"2.2",
+"quiz"
+],
+[
+"Kosteninflatie en bestedingsinflatie uit elkaar houden",
+"2.3",
+"quiz"
+],
+[
+"Een indexcijfer uitrekenen",
+"2.3",
+"reken",
+"index"
+],
+[
+"Het indexcijfer van het reële inkomen uitrekenen",
+"2.3",
+"reken",
+"ric"
+],
+[
+"De reële rente uitrekenen",
+"2.3",
+"reken",
+"reeel"
+]
+],
+"MAT": {},
+"VERS": [],
+"FILMS": [
+{
+"par": "2.2",
+"yt": "eJOmsG182cQ",
+"k": "Introfilm",
+"t": "Als geld niets meer waard is",
+"d": "Hoe ontstaat hyperinflatie en wie heeft er het meeste last van?",
+"lab": "quiz",
+"qpar": "2.2",
+"btn": "Oefen: quiz 2.2"
+},
+{
+"par": "2.2",
+"yt": "f4gI8aYsQJU",
+"k": "Introfilm",
+"t": "Echt of vals?",
+"d": "Voelen, kijken, kantelen: welke echtheidskenmerken worden genoemd?",
+"lab": "quiz",
+"qpar": "2.2",
+"btn": "Oefen: quiz 2.2"
+},
+{
+"par": "2.3",
+"yt": "dUTJoW_8guc",
+"k": "Introfilm",
+"t": "Koopkracht in beeld",
+"d": "Waar hangt koopkracht van af en wat kan de overheid doen?",
+"lab": "reken",
+"mode": "koopk",
+"btn": "Oefen: koopkracht"
+}
+],
+"CARDS": [
+[
+"2.1",
+"Directe ruil (ruilhandel)",
+"Een product of dienst ruilen tegen een ander product of dienst, zonder geld.",
+"Je ruilt je oude fiets tegen een gitaar."
+],
+[
+"2.1",
+"Indirecte ruil",
+"Ruilen met geld als tussenstap: je verkoopt iets voor geld en koopt met dat geld iets anders.",
+"Je krijgt loon en koopt daarmee boodschappen."
+],
+[
+"2.1",
+"Waardebepaling",
+"Het grootste probleem van ruilhandel: hoeveel is het ene product waard in het andere?",
+"Hoeveel kippen is één kalf waard?"
+],
+[
+"2.1",
+"Wisselbrief",
+"Een bewijs dat je geld hebt ingeleverd; op een andere plek kreeg je er het geld voor terug. De eerste vorm van briefgeld.",
+"Een koopman reist zonder goud, alleen met een wisselbrief."
+],
+[
+"2.1",
+"Gouden standaard",
+"Geld was gekoppeld aan de goudvoorraad: je kon geld in principe inwisselen voor goud. In 1971 losgelaten.",
+"Een bank mocht niet meer geld uitgeven dan er goud tegenover stond."
+],
+[
+"2.1",
+"Fiduciair geld",
+"Geld dat zijn waarde alleen heeft door vertrouwen: het materiaal is veel minder waard dan wat erop staat.",
+"Een biljet van €50 is papier van een paar cent."
+],
+[
+"2.1",
+"Ruilmiddel",
+"Geldfunctie: je ruilt geld tegen producten en diensten.",
+"Je betaalt een broodje met je pas."
+],
+[
+"2.1",
+"Rekenmiddel",
+"Geldfunctie: met geld druk je de waarde uit, zodat je kunt vergelijken en rekenen.",
+"Je vergelijkt de prijzen van twee spijkerbroeken."
+],
+[
+"2.1",
+"Spaarmiddel",
+"Geldfunctie: je bewaart geld om het later uit te geven.",
+"Je zet de helft van je loon op een spaarrekening."
+],
+[
+"2.2",
+"Chartaal geld",
+"Munten en biljetten: tastbaar geld en wettig betaalmiddel.",
+"Het kleingeld in je portemonnee."
+],
+[
+"2.2",
+"Giraal geld",
+"Het tegoed op een betaalrekening: niet tastbaar, je betaalt ermee door te pinnen of online.",
+"Je zakgeld wordt overgemaakt op je rekening."
+],
+[
+"2.2",
+"Maatschappelijke geldhoeveelheid",
+"Al het chartale geld bij gezinnen, bedrijven en overheid plus het girale geld op betaalrekeningen.",
+"€60 mld chartaal + €340 mld giraal = €400 mld."
+],
+[
+"2.2",
+"Extrinsieke waarde",
+"De waarde die op het geld staat: de nominale waarde.",
+"Op een biljet staat €500."
+],
+[
+"2.2",
+"Intrinsieke waarde",
+"De waarde van het materiaal waarvan het geld gemaakt is.",
+"Het papier van een biljet van €500 is ongeveer €0,01 waard."
+],
+[
+"2.2",
+"Slecht geld verdringt goed geld",
+"Mensen bewaren de goede, zware munten en geven de geknipte munten uit, dus het slechte geld blijft in omloop.",
+"Iemand knipt een randje van een gouden munt."
+],
+[
+"2.2",
+"Hyperinflatie",
+"Een extreem snelle stijging van de prijzen, waardoor geld bijna niets meer waard is.",
+"In Venezuela kostte een fles water miljoenen bolivar."
+],
+[
+"2.2",
+"Algemeen aanvaard",
+"Eis aan geld: iedereen moet het accepteren als betaalmiddel.",
+"Bitcoin wordt niet overal aangenomen."
+],
+[
+"2.2",
+"Deelbaar",
+"Eis aan geld: je moet er precies mee kunnen betalen, dus er zijn verschillende waarden.",
+"Biljetten van €5, €10, €20 en €50."
+],
+[
+"2.2",
+"Hanteerbaar",
+"Eis aan geld: je kunt het makkelijk meenemen en gebruiken.",
+"Een biljet past in je portemonnee, een zak zout niet."
+],
+[
+"2.2",
+"Duurzaam",
+"Eis aan geld: het gaat lang mee en valt niet snel kapot.",
+"Een biljet overleeft de wasmachine meestal."
+],
+[
+"2.2",
+"Echtheidskenmerken",
+"Kenmerken waarmee je controleert of een biljet echt is: voelen, kijken en kantelen.",
+"Het watermerk zie je als je het biljet tegen het licht houdt."
+],
+[
+"2.3",
+"Inflatie",
+"De stijging van het gemiddelde prijspeil, gemeten als procent ten opzichte van een jaar eerder.",
+"In 2022 was alles gemiddeld 10% duurder."
+],
+[
+"2.3",
+"Kosteninflatie",
+"Inflatie doordat bedrijven hogere kosten krijgen en die doorrekenen in hun prijs.",
+"Energie wordt duurder, dus de bakker verhoogt de broodprijs."
+],
+[
+"2.3",
+"Bestedingsinflatie",
+"Inflatie doordat consumenten meer willen kopen dan bedrijven kunnen maken.",
+"Iedereen wil een spelcomputer, dus de prijs gaat omhoog."
+],
+[
+"2.3",
+"Koopkracht",
+"Hoeveel goederen en diensten je kunt kopen met je inkomen.",
+"Je loon stijgt 2%, de prijzen 4%: je koopkracht daalt."
+],
+[
+"2.3",
+"Indexcijfer",
+"Getal in het gevraagde jaar gedeeld door het getal in het basisjaar, keer 100.",
+"Een ijsje van €2,00 naar €2,30: indexcijfer 115."
+],
+[
+"2.3",
+"Basisjaar",
+"Het jaar waarmee je vergelijkt; het indexcijfer is daar 100.",
+"Basisjaar 2025 = 100."
+],
+[
+"2.3",
+"Nominaal inkomen",
+"Wat je verdient in euro's, zonder rekening te houden met de prijzen.",
+"Je verdient €2.585 per maand."
+],
+[
+"2.3",
+"Reëel inkomen",
+"Het nominale inkomen gecorrigeerd voor inflatie: wat je er echt mee kunt kopen.",
+"RIC 100,8: je kunt 0,8% meer kopen."
+],
+[
+"2.3",
+"Reële rente",
+"De rente min de inflatie: hoeveel je spaargeld echt meer waard wordt.",
+"Rente 1,25% en inflatie 3,1%: reële rente −1,85%."
+]
+],
+"BANK": [
+[
+"2.1",
+"Je ruilt je oude fiets tegen een gitaar van je buurjongen. Wat voor ruil is dit?",
+[
+"Directe ruil",
+"Indirecte ruil",
+"Girale ruil",
+"Chartale ruil"
+],
+"Product tegen product, zonder geld ertussen: dat is directe ruil of ruilhandel."
+],
+[
+"2.1",
+"Wat was het grootste probleem van ruilhandel?",
+[
+"Het was lastig om te bepalen wat iets waard was",
+"Er waren nog te weinig producten om te ruilen",
+"Je moest belasting betalen over elke ruil",
+"De bank rekende rente over elke ruil"
+],
+"Hoeveel kippen is één kalf waard? Die waardebepaling maakte ruilhandel lastig."
+],
+[
+"2.1",
+"Wat is indirecte ruil?",
+[
+"Ruilen met geld als tussenstap",
+"Ruilen van product tegen product",
+"Ruilen via een wisselbrief van de bank",
+"Ruilen van munten tegen biljetten"
+],
+"Bij indirecte ruil verkoop je iets voor geld en koop je met dat geld iets anders."
+],
+[
+"2.1",
+"Welke spullen werden als eerste gebruikt als geld?",
+[
+"Zout en schelpen",
+"Bankbiljetten en munten",
+"Wisselbrieven en cheques",
+"Pinpassen en creditcards"
+],
+"Voordat er munten waren, gebruikten mensen onder andere zout en schelpen als geld."
+],
+[
+"2.1",
+"Waarom werden goud en zilver populair als geld?",
+[
+"Ze waren schaars, waardevol en gingen lang mee",
+"Ze waren goedkoop en overal makkelijk te vinden",
+"De overheid verbood het gebruik van zout als geld",
+"Je kon er direct mee pinnen bij een winkel"
+],
+"Edelmetalen zijn schaars en waardevol, en ze vergaan niet."
+],
+[
+"2.1",
+"Wat was een wisselbrief?",
+[
+"Een bewijs waarmee je elders je ingeleverde geld terugkreeg",
+"Een brief waarin de overheid de prijs van goud vastlegde",
+"Een lening van de bank aan een koopman voor een schip",
+"Een brief met de wisselkoers tussen twee munten"
+],
+"Op plek A leverde je geld in en kreeg je een bewijs; op plek B kreeg je daarvoor geld uit de voorraad."
+],
+[
+"2.1",
+"Waarom was handelen met wisselbrieven veiliger?",
+[
+"Je hoefde geen goud of geld mee te nemen op reis",
+"Wisselbrieven waren meer waard dan goud",
+"Je kreeg rente over het geld op je wisselbrief",
+"Met een wisselbrief hoefde je niet te betalen"
+],
+"Een koopman reisde met een papiertje in plaats van met een kist goud: minder kans op beroving."
+],
+[
+"2.1",
+"Wat was de gouden standaard?",
+[
+"Geld was gekoppeld aan de goudvoorraad",
+"Goud was het enige wettige betaalmiddel",
+"Elke munt moest voor de helft uit goud bestaan",
+"Banken mochten alleen goud uitlenen"
+],
+"Tegenover het geld stond een goudvoorraad. In 1971 is dit losgelaten."
+],
+[
+"2.1",
+"Wanneer is de gouden standaard losgelaten?",
+[
+"In 1971",
+"In 1945",
+"In 2002",
+"In 1602"
+],
+"Sinds 1971 is geld niet meer gekoppeld aan goud. Het is fiduciair geld."
+],
+[
+"2.1",
+"Wat is fiduciair geld?",
+[
+"Geld dat zijn waarde heeft door vertrouwen",
+"Geld dat gekoppeld is aan de goudvoorraad",
+"Geld dat alleen op een spaarrekening staat",
+"Geld dat je alleen digitaal kunt gebruiken"
+],
+"Fiduciair komt van 'vertrouwen'. Het materiaal is bijna niets waard; we vertrouwen erop dat het geld waarde heeft."
+],
+[
+"2.1",
+"Je vergelijkt de prijzen van twee spijkerbroeken. Welke geldfunctie gebruik je?",
+[
+"Rekenmiddel",
+"Ruilmiddel",
+"Spaarmiddel",
+"Leenmiddel"
+],
+"Met geld druk je de waarde uit. Zo kun je vergelijken: geld als rekenmiddel."
+],
+[
+"2.1",
+"Je zet de helft van je salaris apart op een spaarrekening. Welke geldfunctie is dit?",
+[
+"Spaarmiddel",
+"Ruilmiddel",
+"Rekenmiddel",
+"Betaalmiddel"
+],
+"Je bewaart geld om het later uit te geven: geld als spaarmiddel."
+],
+[
+"2.1",
+"Een schilder rekent de prijs voor een klus uit op basis van het aantal uren. Welke geldfunctie?",
+[
+"Alleen rekenmiddel",
+"Alleen ruilmiddel",
+"Ruilmiddel en spaarmiddel",
+"Rekenmiddel en spaarmiddel"
+],
+"Er wordt nog niet betaald, alleen een waarde berekend: rekenmiddel."
+],
+[
+"2.1",
+"Welke van deze is géén geldfunctie?",
+[
+"Leenmiddel",
+"Ruilmiddel",
+"Rekenmiddel",
+"Spaarmiddel"
+],
+"De drie geldfuncties zijn ruilmiddel, rekenmiddel en spaarmiddel."
+],
+[
+"2.1",
+"Waarom maakt contactloos betalen geld makkelijker als ruilmiddel?",
+[
+"Je betaalt direct met het geld op je rekening",
+"Je krijgt korting als je contactloos betaalt",
+"Je hoeft het geld later niet terug te betalen",
+"Je geld wordt er meer waard door"
+],
+"Je hoeft eerst niets te pinnen bij een automaat: je ruilt meteen met het geld op je rekening."
+],
+[
+"2.2",
+"Wat is chartaal geld?",
+[
+"Munten en biljetten",
+"Het saldo op je betaalrekening",
+"Geld op een spaarrekening",
+"Geld dat je hebt geleend"
+],
+"Chartaal geld is tastbaar: munten en biljetten."
+],
+[
+"2.2",
+"Je zakgeld wordt overgemaakt op je rekening. Wat voor geld is dat?",
+[
+"Giraal geld",
+"Chartaal geld",
+"Fiduciair geld niet, wel goud",
+"Spaargeld van de bank"
+],
+"Geld op een betaalrekening is giraal geld."
+],
+[
+"2.2",
+"Wat telt wél mee in de maatschappelijke geldhoeveelheid?",
+[
+"Het saldo op een betaalrekening",
+"Het geld op een spaarrekening",
+"Geld op een spaardeposito",
+"Chartaal geld in de kluis van de bank"
+],
+"Alleen geld dat je direct kunt gebruiken telt mee: chartaal geld buiten de bank en giraal geld op betaalrekeningen."
+],
+[
+"2.2",
+"Waarom telt spaargeld niet mee in de geldhoeveelheid?",
+[
+"Je kunt het niet direct gebruiken om te betalen",
+"Spaargeld is eigendom van de bank zelf",
+"Over spaargeld betaal je geen belasting",
+"Spaargeld bestaat alleen uit munten"
+],
+"De geldhoeveelheid gaat over geld dat direct te besteden is. Spaargeld moet je eerst overboeken."
+],
+[
+"2.2",
+"Er is €60 mld chartaal geld, €340 mld giraal geld en €500 mld spaargeld. Hoe groot is de geldhoeveelheid?",
+[
+"€400 mld",
+"€900 mld",
+"€840 mld",
+"€560 mld"
+],
+"60 + 340 = €400 mld. Spaargeld telt niet mee."
+],
+[
+"2.2",
+"Wat is de extrinsieke waarde van een munt van €1?",
+[
+"€1, de waarde die erop staat",
+"De waarde van het metaal in de munt",
+"Wat de munt kost om te maken",
+"Wat een verzamelaar ervoor betaalt"
+],
+"Extrinsiek = de nominale waarde, dus wat erop staat."
+],
+[
+"2.2",
+"Wat is de intrinsieke waarde van geld?",
+[
+"De waarde van het materiaal",
+"De waarde die erop gedrukt staat",
+"De waarde na aftrek van inflatie",
+"De waarde volgens de wisselkoers"
+],
+"Intrinsiek = wat het materiaal zelf waard is, bij een biljet maar een paar cent."
+],
+[
+"2.2",
+"Een munt van €1 bevat voor €0,10 aan metaal. Wat klopt?",
+[
+"De extrinsieke waarde is €1",
+"De intrinsieke waarde is €1",
+"De extrinsieke waarde is €0,10",
+"Het is geen fiduciair geld"
+],
+"Wat erop staat (€1) is de extrinsieke waarde; het metaal (€0,10) is de intrinsieke waarde."
+],
+[
+"2.2",
+"Wanneer noem je geld fiduciair geld?",
+[
+"Als de extrinsieke waarde hoger is dan de intrinsieke",
+"Als de intrinsieke waarde hoger is dan de extrinsieke",
+"Als extrinsieke en intrinsieke waarde gelijk zijn",
+"Als het geld van goud of zilver gemaakt is"
+],
+"Bij fiduciair geld staat er veel meer op dan het materiaal waard is. Het draait om vertrouwen."
+],
+[
+"2.2",
+"Wat gebeurt er als iemand een randje van een gouden munt knipt?",
+[
+"De intrinsieke waarde daalt, de nominale niet",
+"De nominale waarde daalt, de intrinsieke niet",
+"Beide waarden blijven precies gelijk",
+"De munt wordt meer waard voor verzamelaars"
+],
+"Er gaat goud af, dus het materiaal is minder waard. Wat erop staat verandert niet."
+],
+[
+"2.2",
+"Wat betekent 'slecht geld verdringt goed geld'?",
+[
+"Mensen bewaren goede munten en geven slechte uit",
+"Vals geld wordt sneller gevonden dan echt geld",
+"Oude biljetten worden vervangen door nieuwe",
+"Banken nemen geen beschadigde munten meer aan"
+],
+"De zware, goede munten worden gespaard; de geknipte munten blijven rondgaan."
+],
+[
+"2.2",
+"Wat gebeurt er met de waarde van geld als niemand het meer vertrouwt?",
+[
+"De waarde verdwijnt en prijzen schieten omhoog",
+"De waarde stijgt omdat geld schaarser wordt",
+"De waarde blijft gelijk, want erop staat hetzelfde",
+"De overheid koppelt het geld weer aan goud"
+],
+"Fiduciair geld draait om vertrouwen. Zonder vertrouwen krijg je hyperinflatie, zoals in Venezuela."
+],
+[
+"2.2",
+"Biljetten van €5, €10, €20 en €50 horen bij welke eis aan geld?",
+[
+"Deelbaar",
+"Algemeen aanvaard",
+"Hanteerbaar",
+"Duurzaam"
+],
+"Met verschillende waarden kun je precies betalen: geld is deelbaar."
+],
+[
+"2.2",
+"Een bedrijf betaalt zijn medewerkers in bitcoins. Welke eis is hier het minst vervuld?",
+[
+"Algemeen aanvaard",
+"Deelbaar",
+"Hanteerbaar",
+"Duurzaam"
+],
+"Niet iedereen neemt bitcoin aan als betaalmiddel."
+],
+[
+"2.2",
+"Een biljet dat na één keer gebruiken kapot is, voldoet niet aan welke eis?",
+[
+"Duurzaam",
+"Deelbaar",
+"Hanteerbaar",
+"Algemeen aanvaard"
+],
+"Geld moet lang meegaan: het moet duurzaam zijn."
+],
+[
+"2.2",
+"Hoe zie je het watermerk van een biljet?",
+[
+"Je houdt het biljet tegen het licht",
+"Je voelt aan de inkt op het biljet",
+"Je kantelt het biljet een beetje",
+"Je legt het biljet onder water"
+],
+"Kijken: houd het biljet tegen het licht, dan zie je het watermerk."
+],
+[
+"2.2",
+"Hoe controleer je het hologram op een biljet?",
+[
+"Door het biljet te kantelen",
+"Door aan het biljet te voelen",
+"Door het tegen het licht te houden",
+"Door het biljet te laten knisperen"
+],
+"Kantelen: het hologram en de zilverstreep bewegen mee."
+],
+[
+"2.2",
+"Het girale geld stijgt van €400 mld naar €432 mld. Met hoeveel procent is het gestegen?",
+[
+"8%",
+"32%",
+"7,4%",
+"108%"
+],
+"(432 − 400) : 400 × 100 = 8%."
+],
+[
+"2.3",
+"Wat is inflatie?",
+[
+"Een stijging van het gemiddelde prijspeil",
+"Een daling van het gemiddelde prijspeil",
+"Een stijging van de lonen van werknemers",
+"Een daling van de waarde van goud"
+],
+"Inflatie is een stijging van het gemiddelde prijspeil, meestal vergeleken met een jaar eerder."
+],
+[
+"2.3",
+"Wie houdt in Nederland bij hoe hoog de inflatie is?",
+[
+"Het CBS",
+"De Nederlandsche Bank",
+"Het Nibud",
+"De Consumentenbond"
+],
+"Het CBS volgt de prijzen van heel veel producten en berekent het inflatiecijfer."
+],
+[
+"2.3",
+"Energie wordt duurder. Bakkers verhogen daarom hun broodprijs. Welke inflatie is dit?",
+[
+"Kosteninflatie",
+"Bestedingsinflatie",
+"Hyperinflatie",
+"Reële inflatie"
+],
+"De kosten van de bakker stijgen en hij rekent ze door in de prijs: kosteninflatie."
+],
+[
+"2.3",
+"Consumenten willen meer kopen dan bedrijven kunnen maken. Welke inflatie ontstaat?",
+[
+"Bestedingsinflatie",
+"Kosteninflatie",
+"Loonsinflatie",
+"Geldinflatie"
+],
+"De vraag is groter dan het aanbod, dus producenten vragen meer geld: bestedingsinflatie."
+],
+[
+"2.3",
+"Wat is koopkracht?",
+[
+"Wat je kunt kopen met je inkomen",
+"Hoeveel geld je per maand verdient",
+"Hoeveel geld er in een land is",
+"Hoeveel je spaart van je inkomen"
+],
+"Koopkracht = de hoeveelheid goederen en diensten die je met je inkomen kunt kopen."
+],
+[
+"2.3",
+"De prijzen stijgen 3% en je inkomen stijgt 5%. Wat gebeurt er met je koopkracht?",
+[
+"Die stijgt",
+"Die daalt",
+"Die blijft gelijk",
+"Dat kun je niet weten"
+],
+"Je inkomen stijgt meer dan de prijzen, dus je kunt meer kopen."
+],
+[
+"2.3",
+"Prijzen en inkomen stijgen allebei 4%. Wat gebeurt er met je koopkracht?",
+[
+"Die blijft gelijk",
+"Die stijgt met 4%",
+"Die daalt met 4%",
+"Die stijgt met 8%"
+],
+"Als prijzen en inkomen even veel veranderen, kun je precies evenveel kopen."
+],
+[
+"2.3",
+"Je inkomen daalt en de prijzen blijven gelijk. Wat gebeurt er met je koopkracht?",
+[
+"Die daalt",
+"Die stijgt",
+"Die blijft gelijk",
+"Die wordt negatief"
+],
+"Met minder inkomen en dezelfde prijzen kun je minder kopen."
+],
+[
+"2.3",
+"Waarom raakt inflatie jongeren onder de 18 vaak minder?",
+[
+"Ze wonen thuis en hebben weinig vaste lasten",
+"Ze krijgen elk jaar meer zakgeld van school",
+"Ze betalen geen btw over wat ze kopen",
+"Ze sparen al hun geld op een deposito"
+],
+"Wie thuis woont, betaalt geen huur of energie zelf. Prijsstijgingen daarvan raken je minder."
+],
+[
+"2.3",
+"Een ijsje kost in het basisjaar €2,00 en nu €2,30. Wat is het indexcijfer?",
+[
+"115",
+"130",
+"87",
+"123"
+],
+"2,30 : 2,00 × 100 = 115. Het ijsje is 15% duurder."
+],
+[
+"2.3",
+"Wat betekent een indexcijfer van 94?",
+[
+"Een daling van 6% ten opzichte van het basisjaar",
+"Een stijging van 94% ten opzichte van het basisjaar",
+"Een stijging van 6% ten opzichte van het basisjaar",
+"Een daling van 94% ten opzichte van het basisjaar"
+],
+"Het basisjaar is 100. 94 is 6 onder 100, dus 6% lager."
+],
+[
+"2.3",
+"Wat is het verschil tussen nominaal en reëel inkomen?",
+[
+"Reëel inkomen is gecorrigeerd voor inflatie",
+"Nominaal inkomen is gecorrigeerd voor inflatie",
+"Reëel inkomen is je inkomen na belasting",
+"Nominaal inkomen is je inkomen plus toeslagen"
+],
+"Nominaal = wat je verdient in euro's. Reëel = wat je daar echt mee kunt kopen."
+],
+[
+"2.3",
+"Met welke formule bereken je het indexcijfer van het reële inkomen?",
+[
+"RIC = NIC : PIC × 100",
+"RIC = PIC : NIC × 100",
+"RIC = NIC − PIC × 100",
+"RIC = NIC × PIC : 100"
+],
+"Deel het indexcijfer van het nominale inkomen door dat van de prijzen, keer 100."
+],
+[
+"2.3",
+"NIC = 106,8 en PIC = 108,3. Wat gebeurt er met de koopkracht?",
+[
+"Die daalt met 1,4%",
+"Die stijgt met 1,4%",
+"Die daalt met 8,3%",
+"Die stijgt met 6,8%"
+],
+"106,8 : 108,3 × 100 = 98,6. Dat is 1,4% onder 100."
+],
+[
+"2.3",
+"Je spaarrente is 1,25% en de inflatie is 3,1%. Wat is de reële rente?",
+[
+"−1,85%",
+"4,35%",
+"1,85%",
+"−4,35%"
+],
+"Reële rente ≈ rente − inflatie = 1,25 − 3,1 = −1,85%. Je spaargeld kan minder kopen."
+],
+[
+"2.3",
+"Wanneer verliest je spaargeld koopkracht?",
+[
+"Als de inflatie hoger is dan de spaarrente",
+"Als de spaarrente hoger is dan de inflatie",
+"Als de spaarrente en de inflatie gelijk zijn",
+"Als je spaargeld op een deposito staat"
+],
+"Bij een negatieve reële rente stijgen de prijzen harder dan je spaargeld groeit."
+]
+],
+"SORT": [
+{
+"a": "Chartaal geld",
+"b": "Giraal geld",
+"A": [
+[
+"🪙",
+"Munten in je portemonnee"
+],
+[
+"💶",
+"Een briefje van €20"
+],
+[
+"🚌",
+"Kleingeld voor de bus"
+],
+[
+"🧧",
+"Contant verjaardagsgeld"
+]
+],
+"B": [
+[
+"💳",
+"Pinnen bij de supermarkt"
+],
+[
+"📲",
+"Een Tikkie betalen"
+],
+[
+"🏦",
+"Saldo op je betaalrekening"
+],
+[
+"🛒",
+"Online betalen met iDEAL"
+]
+]
+},
+{
+"a": "Telt mee",
+"b": "Telt niet mee",
+"A": [
+[
+"💳",
+"Saldo op een betaalrekening"
+],
+[
+"💶",
+"Contant geld bij gezinnen"
+],
+[
+"🏪",
+"Geld in de kassa van een winkel"
+],
+[
+"🏛️",
+"Contant geld van de overheid"
+]
+],
+"B": [
+[
+"🐷",
+"Geld op een spaarrekening"
+],
+[
+"📅",
+"Een spaardeposito"
+],
+[
+"🔐",
+"Geld in de kluis van de bank"
+],
+[
+"🔒",
+"Spaargeld dat vaststaat"
+]
+]
+},
+{
+"a": "Kosteninflatie",
+"b": "Bestedingsinflatie",
+"A": [
+[
+"⚡",
+"Energie wordt duurder"
+],
+[
+"👷",
+"Lonen in de fabriek stijgen"
+],
+[
+"🌾",
+"Graan wordt duurder voor de bakker"
+],
+[
+"⛽",
+"Hogere brandstofkosten"
+]
+],
+"B": [
+[
+"🎮",
+"Iedereen wil dezelfde spelcomputer"
+],
+[
+"🏖️",
+"Vakantiehuisjes overal volgeboekt"
+],
+[
+"🛍️",
+"Consumenten geven veel meer uit"
+],
+[
+"📈",
+"Vraag groter dan het aanbod"
+]
+]
+},
+{
+"a": "Koopkracht stijgt",
+"b": "Koopkracht daalt",
+"A": [
+[
+"📈",
+"Loon +5%, prijzen +3%"
+],
+[
+"🛒",
+"Prijzen dalen, loon gelijk"
+],
+[
+"💼",
+"RIC is 101,6"
+],
+[
+"🎉",
+"Loon +4%, prijzen +1%"
+]
+],
+"B": [
+[
+"📉",
+"Loon +2%, prijzen +4%"
+],
+[
+"🔥",
+"Inflatie hoger dan je loonstijging"
+],
+[
+"🧾",
+"RIC is 98,6"
+],
+[
+"✂️",
+"Loon daalt, prijzen gelijk"
+]
+]
+},
+{
+"a": "Directe ruil",
+"b": "Indirecte ruil",
+"A": [
+[
+"🚲",
+"Fiets ruilen tegen een gitaar"
+],
+[
+"🐄",
+"Een kalf tegen kippen"
+],
+[
+"🃏",
+"Voetbalplaatjes ruilen"
+],
+[
+"🎮",
+"Game ruilen tegen een game"
+]
+],
+"B": [
+[
+"🥖",
+"Brood kopen met je pas"
+],
+[
+"💼",
+"Loon krijgen en boodschappen doen"
+],
+[
+"🧂",
+"Betalen met zout als geld"
+],
+[
+"💶",
+"Je fiets verkopen voor €80"
+]
+]
+},
+{
+"a": "Extrinsieke waarde",
+"b": "Intrinsieke waarde",
+"A": [
+[
+"💶",
+"€50 die op een biljet staat"
+],
+[
+"🪙",
+"€2 die op de munt staat"
+],
+[
+"🏷️",
+"De nominale waarde"
+],
+[
+"🔢",
+"Wat erop gedrukt staat"
+]
+],
+"B": [
+[
+"📄",
+"Het papier van een biljet"
+],
+[
+"⚙️",
+"Het metaal in een munt"
+],
+[
+"🥇",
+"Het goud in een oude munt"
+],
+[
+"⚖️",
+"Wat het materiaal waard is"
+]
+]
+}
+]
+}

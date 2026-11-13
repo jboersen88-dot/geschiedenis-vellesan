@@ -35,6 +35,17 @@ CONFIG = {
         beelden=["boodschappen", "lenen-vergelijken", "polis-tekenen"],
         toetsen=("§2.1 en §2.2", "h2"),     # oefentoetsen/oefentoets-<h2>-<n>-ster.docx
     ),
+    # 3 vwo H2: geen oude lesapp; maak-lesapp.py maakt er een uit j3vh2/bron (lesapp.json, reken.js)
+    "j3vh2": dict(
+        bron="apps/jaar-3_havo-vwo_hoofdstuk-2.html",
+        pad="jaar-3/havo-vwo/hoofdstuk-2-de-rol-van-geld",
+        hoofdstuk="Hoofdstuk 2",
+        eyebrow="Economie · jaar 3 vwo · hoofdstuk 2",
+        kop=["De rol van ", "geld"],
+        nr="H2",
+        beelden=["ruilhandel", "water-venezuela", "prijsstijging"],
+        toetsen=("§2.1 t/m §2.3", []),     # alleen de digitale toets, geen Word-versie
+    ),
 }
 
 if len(sys.argv) != 2 or sys.argv[1] not in CONFIG:
@@ -95,7 +106,7 @@ for p in PARS:
     imgs = [[os.path.basename(i[0])[:-4], i[1]] for i in p["imgs"]] if p.get("imgs") else C["imgs"][p["id"]]
     pars.append(dict(id=p["id"], t=p["t"], sum=p["sum"], file=p["file"], x=p.get("x", []), q=p["q"], imgs=imgs, g=[goals[i] for i in gi], gi=gi))
 films = grab("FILMS", [])
-if not films:  # oudere app: de filmpjes staan alleen als kaarten in het tabblad Filmpjes
+if not films and "filmpar" in C:  # oudere app: de filmpjes staan alleen als kaarten in het tabblad Filmpjes
     for f in re.finditer(r'data-film="([^"]+)".*?<div class="eyebrow">([^<]*)</div><h3>([^<]*)</h3><p[^>]*>([^<]*)</p>.*?data-golab="(\w+)"(?: data-mode="(\w+)")?>([^<]*)</button>', s):
         films.append(dict(par=C["filmpar"][f.group(1)], film=f.group(1), k=f.group(2), t=f.group(3), d=f.group(4), lab=f.group(5), btn=f.group(7), **({"mode": f.group(6)} if f.group(6) else {})))
     assert len(films) == len(C["filmpar"]), len(films)
@@ -247,13 +258,14 @@ if isinstance(docx, str):
     papier += "".join(' · <a target="_blank" rel="noopener" href="https://drive.google.com/file/d/%s/view">%s (PDF)</a> met <a target="_blank" rel="noopener" href="https://drive.google.com/file/d/%s/view">nakijkblad</a>' % (v["toets"], v["t"], v["nk"]) for v in grab("VERS") if v.get("nk"))
 else:  # lijst van (bestand in oefentoetsen/, tekst)
     papier = " · ".join('<a href="../oefentoetsen/%s" download>%s</a>' % d for d in docx)
+papier = '<p class="muted opapier">Liever op papier? %s</p>' % papier if papier else ""
 if ROUTE:
     s = rep(s, '<section class="panel" id="toets" hidden>', '<section class="panel" id="route" hidden><div class="card pad"><div id="routeApp"><p class="muted">De oefenroute laadt…</p></div></div></section>\n<section class="panel" id="toets" hidden>')
     s = rep(s, "</body>", '<script src="../../nakijker.js"></script>\n<script src="../route.js"></script>\n<script>EcoRoute.mount({el:document.getElementById("routeApp"),map:%s,url:"route.json",nk:window.GV_NK,onchange:function(){if(window.ecoRenderNext)ecoRenderNext();}});</script>\n</body>' % json.dumps(name))
 s = rep(s, '<section class="panel" id="toets" hidden>',
         '<section class="panel" id="toets" hidden>\n<div class="card pad otoets"><div class="eyebrow">Oefentoetsen</div><h2>Maak de toets hier, met klok en automatisch nakijken</h2>'
         '<p class="muted">Maak de toets zonder boek en zonder hulp, je rekenmachine mag. Bedragen, procenten en keuzes worden direct nagekeken met het nakijkblad van je docent; bij de uitlegvragen kijkt de AI mee. %s Werkt ook op de iPad. De toetsen gaan over %s.</p>'
-        '<div class="ovgrid">%s</div><p class="muted opapier">Liever op papier? %s</p></div>\n<div hidden>'
+        '<div class="ovgrid">%s</div>%s</div>\n<div hidden>'
         % ("Kies je niveau: 1, 2 of 3 sterren." if isinstance(docx, str) else "Er zijn %d versies, met andere vragen." % len(TJ["toetsen"]), ov, "".join(kaart(k, x) for k, x in TJ["toetsen"].items()), papier))
 s = rex(s, r"</section>(\s*<!-- FILMPJES -->)", r"</div></section>\g<1>", groepen=True)
 s = rep(s, 'if(name==="toets")loadToets();', "")

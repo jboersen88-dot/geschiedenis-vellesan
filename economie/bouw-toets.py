@@ -33,6 +33,14 @@ CONFIG = {
         data="j2h2/bron/toetsen.json",       # VERS staat in hetzelfde bestand
         lab="oefen.html#lab", opg="Vraag", terug=("oefen.html#toets", "Terug naar de oefenomgeving"),
     ),
+    # 3 vwo H2: één oefentoets, gemaakt uit de wisbordvragen en rekenvoorbeelden van de PowerPoints van de docent (2026-11-13)
+    "j3vh2": dict(
+        titel="Online oefentoets · Economie 3 vwo · hoofdstuk 2",
+        key="eco-j3vh2-toets-v1",
+        bron="j3vh2/bron",
+        data="j3vh2/bron/toetsen.json",
+        lab="oefen.html#lab", opg="Opgave", rek="Opgaven", terug=("oefen.html#toets", "Terug naar de oefenomgeving"),
+    ),
 }
 
 if len(sys.argv) != 2 or sys.argv[1] not in CONFIG:

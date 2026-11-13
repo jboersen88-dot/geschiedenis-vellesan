@@ -1,0 +1,477 @@
+{
+ "blokken": {
+  "mc_a": [
+   {
+    "v": "Wat telt wél mee in de maatschappelijke geldhoeveelheid?",
+    "o": [
+     "Geld op een spaarrekening",
+     "Saldo op een betaalrekening",
+     "Een spaardeposito",
+     "Chartaal geld in de kluis van een bank"
+    ],
+    "j": 1,
+    "u": "Een betaalrekening is direct te gebruiken, de rest niet."
+   },
+   {
+    "v": "Een munt van €1 bevat voor €0,10 aan metaal. Wat klopt?",
+    "o": [
+     "Het is geen fiduciair geld",
+     "De intrinsieke waarde is €1",
+     "De extrinsieke waarde is €1",
+     "De extrinsieke waarde is €0,10"
+    ],
+    "j": 2,
+    "u": "Wat erop staat (€1) is de extrinsieke waarde."
+   },
+   {
+    "v": "Bij welke eis aan geld horen biljetten van €5, €10, €20 en €50?",
+    "o": [
+     "Algemeen aanvaard",
+     "Hanteerbaar",
+     "Duurzaam",
+     "Deelbaar"
+    ],
+    "j": 3,
+    "u": "Met verschillende waarden kun je precies betalen: deelbaar."
+   },
+   {
+    "v": "Een bedrijf betaalt zijn medewerkers in bitcoins. Welke technische vereiste is hier het minst vervuld?",
+    "o": [
+     "Deelbaar",
+     "Algemeen aanvaard",
+     "Hanteerbaar",
+     "Duurzaam"
+    ],
+    "j": 1,
+    "u": "Niet iedereen accepteert bitcoin als betaalmiddel."
+   },
+   {
+    "v": "Energie wordt duurder. Bakkers verhogen daarom hun broodprijs. Welke inflatie is dit?",
+    "o": [
+     "Kosteninflatie",
+     "Bestedingsinflatie",
+     "Reëel inkomen",
+     "Nominaal inkomen"
+    ],
+    "j": 0,
+    "u": "Hogere kosten worden doorberekend in de prijs."
+   },
+   {
+    "v": "Sinds 1971 is geld niet meer gekoppeld aan goud. Hoe heet geld dat zijn waarde alleen aan vertrouwen ontleent?",
+    "o": [
+     "Giraal geld",
+     "Chartaal geld",
+     "Fiduciair geld",
+     "Wettig geld"
+    ],
+    "j": 2,
+    "u": "Fiduciair geld: de waarde draait om vertrouwen."
+   },
+   {
+    "v": "Een schilder rekent de prijs voor het schilderen van een huis uit op basis van het aantal uren werk. Welke geldfunctie zie je hier?",
+    "o": [
+     "Alleen ruilmiddel",
+     "Alleen rekenmiddel",
+     "Ruilmiddel en spaarmiddel",
+     "Spaarmiddel en rekenmiddel"
+    ],
+    "j": 1,
+    "u": "Er wordt alleen een waarde berekend: rekenmiddel."
+   },
+   {
+    "v": "Je kantelt een biljet van €50 een beetje. Welk echtheidskenmerk controleer je zo?",
+    "o": [
+     "Het watermerk",
+     "De voelbare inkt",
+     "Het hologram",
+     "Het knisperende papier"
+    ],
+    "j": 2,
+    "u": "Kantelen: het hologram en de zilverstreep bewegen mee."
+   }
+  ],
+  "rek_a": [
+   {
+    "nr": 1,
+    "titel": "Ontstaan van geld",
+    "tekst": "",
+    "p": 3,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Leg uit wat het verschil is tussen directe en indirecte ruil. Geef bij directe ruil een voorbeeld.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "1a",
+        "p": 2,
+        "label": "Directe en indirecte ruil",
+        "model": "Directe ruil: je ruilt een product tegen een ander product, zonder geld (bijvoorbeeld een kalf tegen kippen). Indirecte ruil: je gebruikt geld als ruilmiddel tussen de twee ruilen in.",
+        "g": [
+         {
+          "t": "directe ruil: product tegen product, zonder geld, met een passend voorbeeld",
+          "p": 1
+         },
+         {
+          "t": "indirecte ruil: met geld als ruilmiddel ertussen",
+          "p": 1
+         }
+        ],
+        "v": "Leg uit wat het verschil is tussen directe en indirecte ruil. Geef bij directe ruil een voorbeeld.",
+        "h": []
+       }
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Wat was het grootste probleem van ruilhandel?",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "1b",
+        "p": 1,
+        "label": "Probleem van ruilhandel",
+        "model": "De waardebepaling: het is lastig om te bepalen hoeveel het ene product waard is in het andere.",
+        "g": [
+         {
+          "t": "waardebepaling: lastig te bepalen wat iets waard is",
+          "p": 1
+         }
+        ],
+        "v": "Wat was het grootste probleem van ruilhandel?",
+        "h": []
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 2,
+    "titel": "Geldhoeveelheid",
+    "tekst": "",
+    "p": 3,
+    "delen": [
+     {
+      "id": "a",
+      "v": "In een land is €60 mld chartaal geld, €340 mld giraal geld en €500 mld spaargeld. Bereken de maatschappelijke geldhoeveelheid in miljard euro.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         400
+        ],
+        "p": 1,
+        "eenh": "",
+        "tol": 0.5,
+        "label": "Geldhoeveelheid (mld euro)"
+       }
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Leg uit waarom het spaargeld niet meetelt.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "2b",
+        "p": 1,
+        "label": "Spaargeld telt niet mee",
+        "model": "Spaargeld kun je niet direct gebruiken om mee te betalen; je moet het eerst overboeken naar je betaalrekening.",
+        "g": [
+         {
+          "t": "spaargeld is niet direct te gebruiken om te betalen",
+          "p": 1
+         }
+        ],
+        "v": "Leg uit waarom het spaargeld niet meetelt.",
+        "h": []
+       }
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Een jaar later is het girale geld gestegen van €400 mld naar €432 mld. Met hoeveel procent is het girale geld gestegen?",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         8
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.05,
+        "label": "Stijging in procenten"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 3,
+    "titel": "De waarde van geld",
+    "tekst": "",
+    "p": 4,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Op een munt staat 20 cent. Het metaal is 1 cent waard. Hoeveel procent van de nominale waarde is de intrinsieke waarde?",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         5
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.05,
+        "label": "Intrinsieke waarde in procenten"
+       }
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Waar of onwaar?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Waar",
+         "Onwaar"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Een biljet van €20 heeft een intrinsieke waarde van €20."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Waar",
+         "Onwaar"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Bij fiduciair geld is de extrinsieke waarde hoger dan de intrinsieke."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Waar",
+         "Onwaar"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Door het knippen van een munt daalt de nominale waarde."
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 4,
+    "titel": "Echt of vals?",
+    "tekst": "",
+    "p": 3,
+    "delen": [
+     {
+      "id": "",
+      "v": "Je krijgt een biljet van €50 in handen. Noem drie handelingen om te controleren of het echt is en zeg bij elke handeling waar je op let.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "4",
+        "p": 3,
+        "label": "Drie handelingen",
+        "model": "Voelen: voelbare inkt en stevig papier dat knispert. Kijken: houd het biljet tegen het licht, dan zie je het watermerk. Kantelen: het hologram en de zilverstreep bewegen mee.",
+        "g": [
+         {
+          "t": "voelen (inkt of papier)",
+          "p": 1
+         },
+         {
+          "t": "kijken, tegen het licht (watermerk)",
+          "p": 1
+         },
+         {
+          "t": "kantelen (hologram of zilverstreep)",
+          "p": 1
+         }
+        ],
+        "v": "Je krijgt een biljet van €50 in handen. Noem drie handelingen om te controleren of het echt is en zeg bij elke handeling waar je op let.",
+        "h": []
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 5,
+    "titel": "Inflatie",
+    "tekst": "",
+    "p": 2,
+    "delen": [
+     {
+      "id": "",
+      "v": "Leg het verschil uit tussen kosteninflatie en bestedingsinflatie.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "5",
+        "p": 2,
+        "label": "Kosten- en bestedingsinflatie",
+        "model": "Kosteninflatie: bedrijven krijgen hogere kosten (bijvoorbeeld energie of lonen) en rekenen die door in hun prijs. Bestedingsinflatie: consumenten willen meer kopen dan bedrijven kunnen maken, waardoor producenten meer geld vragen.",
+        "g": [
+         {
+          "t": "kosteninflatie: hogere kosten worden doorberekend in de prijs",
+          "p": 1
+         },
+         {
+          "t": "bestedingsinflatie: de vraag is groter dan wat bedrijven kunnen maken, dus prijzen stijgen",
+          "p": 1
+         }
+        ],
+        "v": "Leg het verschil uit tussen kosteninflatie en bestedingsinflatie.",
+        "h": []
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 6,
+    "titel": "Indexcijfers en koopkracht",
+    "tekst": "",
+    "p": 5,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Een ijsje kost in het basisjaar €2,00 en nu €2,30. Bereken het indexcijfer.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         115
+        ],
+        "p": 1,
+        "eenh": "",
+        "tol": 0.05,
+        "label": "Indexcijfer"
+       }
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Eva verdient in 2025 €2.500 en in 2026 €2.585. De prijzen stijgen met 2,6%. Bereken het indexcijfer van haar nominale inkomen (NIC), het indexcijfer van de prijzen (PIC) en het indexcijfer van haar reële inkomen (RIC). Rond af op één decimaal.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         103.4
+        ],
+        "p": 1,
+        "eenh": "",
+        "tol": 0.05,
+        "label": "NIC"
+       },
+       {
+        "type": "num",
+        "ans": [
+         102.6
+        ],
+        "p": 1,
+        "eenh": "",
+        "tol": 0.05,
+        "label": "PIC"
+       },
+       {
+        "type": "num",
+        "ans": [
+         100.8
+        ],
+        "p": 1,
+        "eenh": "",
+        "tol": 0.05,
+        "label": "RIC"
+       }
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Wat gebeurt er met de koopkracht van Eva?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Stijgt",
+         "Daalt",
+         "Blijft gelijk"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Koopkracht van Eva"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 7,
+    "titel": "Reële rente",
+    "tekst": "",
+    "p": 2,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Je spaarrente is 1,25% en de inflatie is 3,1%. Bereken de reële rente.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         -1.85
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.005,
+        "label": "Reële rente"
+       }
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Wat gebeurt er met de koopkracht van je spaargeld?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Stijgt",
+         "Daalt",
+         "Blijft gelijk"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Koopkracht van je spaargeld"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "toetsen": {
+  "t1": {
+   "n": 1,
+   "t": "oefentoets hoofdstuk 2",
+   "sub": "Hoofdstuk 2",
+   "min": 45,
+   "mc": "mc_a",
+   "open": null,
+   "rek": "rek_a"
+  }
+ },
+ "VERS": [
+  {
+   "n": 1,
+   "min": 45,
+   "pts": 30
+  }
+ ]
+}
