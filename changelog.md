@@ -1,3 +1,10 @@
+## 2026-11-18 · Economie 3 vwo H2: tweede oefentoets (verdieping)
+
+- **Oefentoets 2 · verdieping** (`economie/j3vh2/bron/toetsen.json`, blokken `mc_b` en `rek_b`; `toets.html?t=t2`): 10 meerkeuze + 8 opgaven, 46 punten, 60 minuten. Zelfde soort vragen als oefentoets 1, maar andere invalshoeken en extra onderwerpen: wisselbrief, gouden standaard, slecht geld verdringt goed geld, wat een storting of overboeking met de geldhoeveelheid doet, aandeel giraal geld, een daling in procenten, een munt waarvan het metaal meer waard is dan het bedrag, vertrouwen en hyperinflatie, loonstijging als oorzaak van beide soorten inflatie, indexcijfers in een tabel met terugrekenen naar de prijs, koopkracht van twee personen vergelijken, en terugrekenen van reële rente naar spaarrente. Alleen stof uit de PowerPoints en de lesapp; **niet gebaseerd op het proefwerk** (dat was niet beschikbaar), dus nog naast het proefwerk leggen.
+- Oefentoets 1 heet nu "Oefentoets 1 · de basis" en heeft bij elke deelvraag een korte uitwerking gekregen.
+- `bouw-toets.py`: geen dubbele punt meer achter een stelling die op een punt eindigt in het nakijkscherm; een deelvraag zonder uitwerking geeft geen fout meer. Alle vier de toetspagina's opnieuw gebouwd.
+- Getest in de browser (1100 en 390 px): alle goede antwoorden worden goed gerekend, geen horizontaal scrollen. De AI-nakijker is in de test niet aangeroepen.
+
 ## 2026-11-13 · Economie 3 vwo H2 "De rol van geld": hoofdstukpagina, leeromgeving, oefenomgeving en digitale oefentoets
 
 Eerste hoofdstuk van jaar 3 havo/vwo (tot nu toe "Volgt binnenkort"). Opzet als jaar 3 mavo H2 (hoofdstukpagina en leeromgeving) en jaar 2 H2 (oefenomgeving).
