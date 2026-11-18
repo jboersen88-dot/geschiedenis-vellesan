@@ -1,3 +1,11 @@
+## 2026-11-18 · Economie 3 vwo H2: oefentoets A en B
+
+- De twee digitale oefentoetsen heten nu **Oefentoets A** en **Oefentoets B** (was "1 · de basis" en "2 · verdieping") en zijn ongeveer even zwaar: A 42 punten, B 46 punten, allebei 60 minuten. De adressen `toets.html?t=t1` en `?t=t2` zijn gelijk gebleven.
+- Oefentoets A heeft drie opgaven erbij (8 geldfuncties en contactloos betalen, 9 slecht geld verdringt goed geld en de gouden standaard, 10 koopkracht en waarom een thuiswonende jongere minder van inflatie merkt). De meerkeuze van A is niet veranderd, zodat een toets die een leerling al begonnen was blijft werken; die leerling ziet de drie nieuwe opgaven als nog niet gemaakt.
+- Meerkeuze, bedragen, procenten en keuzes kijkt de pagina zelf na. De uitlegvragen (A: 9, B: 7) gaan naar de AI-nakijker, met zelf nakijken als terugval.
+- Nog steeds niet naast het proefwerk gelegd ("Toets ECO 3 havo H2, Pincode 2.1 t/m 2.3"): dat staat niet in de repo, de projectbestanden of Google Drive. **Te controleren door de docent:** dekken A en B de onderwerpen van het proefwerk?
+- Getest in de browser op 820 en 375 px (375 in donker): alle goede antwoorden worden goed gerekend, geen horizontaal scrollen. De AI-nakijker is in de test geblokkeerd en dus niet getest.
+
 ## 2026-11-18 · Economie 3 havo/vwo: leren en oefenen als twee delen, leerdoelen, beelden groot, Mijn route
 
 Opdracht van de docent: de pagina van 3V perfectioneren, met de opzet van jaar 2 mavo H2 als voorbeeld: een leerdeel (informatie en leerdoelen) en een oefendeel (verwerken en oefenen), duidelijk gescheiden. De wijzigingen in `economie.js` en `economie.css` gelden voor alle hoofdstukken met een eigen pagina (`RIJK`), dus ook voor jaar 2 H1/H2 en jaar 3 mavo H1/H2.
