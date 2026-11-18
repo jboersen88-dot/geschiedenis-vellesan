@@ -424,3 +424,6 @@ html:has(body.rijk){scroll-behavior:smooth}
 .rlb-p,.rlb-v{position:absolute;top:50%;transform:translateY(-50%);width:46px;height:46px;font-size:26px!important;line-height:1;background:rgba(15,31,26,.7)!important}
 .rlb-p{left:10px}.rlb-v{right:10px}
 .rlb-c{margin:0;padding:14px 18px 18px;font:600 clamp(17px,2.2vw,21px)/1.3 Fraunces,Georgia,serif;text-align:center}
+/* drie paragraafkaarten blijven ook op een iPad (820 px) naast elkaar; pas op een telefoon onder elkaar */
+@media (min-width:681px) and (max-width:900px){.rchaps.drie{grid-template-columns:repeat(3,1fr);gap:14px}.rchaps.drie .rchap{aspect-ratio:3/4}.rchaps.drie .rchap p{display:none}.rchaps.drie .rchap h3{font-size:21px}}
+@media (max-width:680px){.rchaps.drie{grid-template-columns:1fr}.rchaps.drie .rchap{aspect-ratio:5/4}}
