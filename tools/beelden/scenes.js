@@ -167,5 +167,16 @@ module.exports = (K, g, P) => {
       uwv: { bg: TE, d: [g(400, 440, 1.6, P.overheid()), g(880, 440, 1.5, P.mens(K.coral))] },
       robot: { bg: OC, d: [g(600, 430, 2.2, P.robot())] },
     },
+    j3h6: {
+      productie: { hero: 1, bg: GR, d: [g(380, 440, 1.7, P.fabriek()), g(700, 480, 1.2, P.doos()), g(960, 440, 1.4, P.winkel())] },
+      keten: { bg: TE, d: [g(300, 450, 1.4, P.plant()), g(600, 440, 1.5, P.fabriek()), g(900, 440, 1.4, P.winkel())] },
+      machine: { bg: IN, d: [g(420, 430, 1.8, P.robot()), g(880, 470, 1.3, P.doos())] },
+      winst: { bg: OC, d: [g(400, 440, 1.7, P.munten()), g(860, 430, 1.6, P.reken())] },
+      prijs: { bg: BE, d: [g(400, 430, 1.7, P.label()), g(860, 430, 1.6, P.bon())] },
+      markt: { bg: GR, d: [g(380, 440, 1.6, P.kar()), g(860, 420, 1.6, P.weegschaal())] },
+      aandeel: { bg: IN, d: [g(600, 420, 2.2, P.taart())] },
+      kosten: { bg: TE, d: [g(600, 430, 2.2, P.staven([110, 110, 60, 85, 110], K.cream, K.coral))] },
+      mvo: { bg: GR, d: [g(400, 440, 1.7, P.plant()), g(860, 420, 1.6, P.wereld())] },
+    },
   };
 };

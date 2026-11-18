@@ -1,0 +1,890 @@
+{
+ "blokken": {
+  "mc_a": [
+   {
+    "v": "Een visser gebruikt een boot om vis te vangen. Bij welke productiefactor hoort de boot?",
+    "o": [
+     "Natuur",
+     "Ondernemerschap",
+     "Kapitaal",
+     "Arbeid"
+    ],
+    "j": 2,
+    "u": "Een hulpmiddel waarmee je produceert."
+   },
+   {
+    "v": "Welke beloning hoort bij de productiefactor natuur?",
+    "o": [
+     "Loon",
+     "Winst",
+     "Pacht",
+     "Rente"
+    ],
+    "j": 2,
+    "u": "Voor het gebruik van grond betaal je pacht."
+   },
+   {
+    "v": "Een kaasmaker koopt melk van de boer en verkoopt kaas aan de winkel. Hoe heet deze rij bedrijven?",
+    "o": [
+     "Een productiefactor",
+     "Een marktaandeel",
+     "Een bedrijfskolom",
+     "Een abstracte markt"
+    ],
+    "j": 2,
+    "u": "Van grondstof tot eindproduct."
+   },
+   {
+    "v": "Een tandartspraktijk heeft vooral kosten aan personeel. Wat voor bedrijf is dat?",
+    "o": [
+     "Arbeidsintensief",
+     "Een bedrijfskolom",
+     "Kapitaalintensief",
+     "Een concrete markt"
+    ],
+    "j": 0,
+    "u": "De productie hangt vooral af van mensen."
+   },
+   {
+    "v": "Waarom schrijft een bedrijf af op een machine?",
+    "o": [
+     "De machine kost elk jaar minder energie",
+     "De machine wordt elk jaar meer waard",
+     "De machine levert elk jaar meer btw op",
+     "De machine wordt elk jaar minder waard"
+    ],
+    "j": 3,
+    "u": "Kapitaalgoederen slijten en verouderen."
+   },
+   {
+    "v": "Wat houdt een winkel over als van de omzet alleen de inkoopwaarde af is?",
+    "o": [
+     "De brutowinst",
+     "De bedrijfskosten",
+     "Het nettoresultaat",
+     "De consumentenprijs"
+    ],
+    "j": 0,
+    "u": "Daarna gaan de bedrijfskosten er nog af."
+   },
+   {
+    "v": "Welke prijs staat op het prijskaartje in de winkel?",
+    "o": [
+     "De kostprijs",
+     "De inkoopprijs",
+     "De consumentenprijs",
+     "De evenwichtsprijs"
+    ],
+    "j": 2,
+    "u": "De prijs met btw."
+   },
+   {
+    "v": "Wat is een voorbeeld van een abstracte markt?",
+    "o": [
+     "De kerstmarkt in het centrum",
+     "De vlooienmarkt in de sporthal",
+     "De markt voor spelcomputers",
+     "De bloemenmarkt op het plein"
+    ],
+    "j": 2,
+    "u": "Alle vraag en aanbod van een product bij elkaar."
+   },
+   {
+    "v": "Door een hittegolf willen veel meer mensen een ventilator kopen. Het aanbod blijft gelijk. Wat gebeurt er met de prijs?",
+    "o": [
+     "De prijs stijgt",
+     "De prijs halveert",
+     "De prijs blijft gelijk",
+     "De prijs daalt"
+    ],
+    "j": 0,
+    "u": "Meer vraag bij hetzelfde aanbod: een hogere prijs."
+   },
+   {
+    "v": "Welke kosten van een pizzeria zijn variabel?",
+    "o": [
+     "De ingrediënten",
+     "De verzekering",
+     "De afschrijving",
+     "De huur"
+    ],
+    "j": 0,
+    "u": "Meer pizza's maken kost meer ingrediënten."
+   },
+   {
+    "v": "Een bedrijf krijgt meer bestellingen dan het kan maken. Hoe heet dat?",
+    "o": [
+     "Mechanisatie",
+     "Afschrijving",
+     "Overbezetting",
+     "Onderbezetting"
+    ],
+    "j": 2,
+    "u": "Er is te weinig personeel of te weinig kapitaal."
+   },
+   {
+    "v": "Een fabriek plaatst zonnepanelen en gebruikt minder verpakking. Hoe heet dat?",
+    "o": [
+     "Maatschappelijke kosten veroorzaken",
+     "Kapitaalintensief gaan produceren",
+     "Maatschappelijk verantwoord ondernemen",
+     "De productiecapaciteit verhogen"
+    ],
+    "j": 2,
+    "u": "Ondernemen met oog voor mens en milieu."
+   }
+  ],
+  "rek_a": [
+   {
+    "nr": 1,
+    "titel": "Goed of fout?",
+    "tekst": "",
+    "p": 5,
+    "delen": [
+     {
+      "id": "",
+      "v": "Goed of fout?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "De beloning voor ondernemerschap is winst."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "De afzet is een bedrag in euro's."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "In de verkoopprijs zit de btw."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Bij de evenwichtsprijs zijn vraag en aanbod even groot."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Vaste kosten stijgen als een bedrijf meer produceert."
+       }
+      ],
+      "uitw": [
+       "De afzet is het aantal verkochte producten.",
+       "De btw zit in de consumentenprijs.",
+       "Vaste kosten blijven gelijk. De variabele kosten stijgen."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 2,
+    "titel": "Welke productiefactor?",
+    "tekst": "",
+    "p": 5,
+    "delen": [
+     {
+      "id": "",
+      "v": "Kies bij elk voorbeeld de productiefactor.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Natuur",
+         "Arbeid",
+         "Kapitaal",
+         "Ondernemerschap"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "De kok in een restaurant"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Natuur",
+         "Arbeid",
+         "Kapitaal",
+         "Ondernemerschap"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "De grond van een akkerbouwer"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Natuur",
+         "Arbeid",
+         "Kapitaal",
+         "Ondernemerschap"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "De kassa in een winkel"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Natuur",
+         "Arbeid",
+         "Kapitaal",
+         "Ondernemerschap"
+        ],
+        "j": 3,
+        "p": 1,
+        "label": "De eigenaar besluit een tweede winkel te openen"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Natuur",
+         "Arbeid",
+         "Kapitaal",
+         "Ondernemerschap"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "De vrachtwagen van een transportbedrijf"
+       }
+      ],
+      "uitw": [
+       "Natuur: wat de natuur levert. Arbeid: het werk van mensen. Kapitaal: hulpmiddelen. Ondernemerschap: beslissen en risico nemen."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 3,
+    "titel": "Van katoen tot spijkerbroek",
+    "tekst": "Een katoenboer verkoopt katoen voor €4,00 aan een weverij. De weverij verkoopt de stof voor €11,00 aan een kledingfabriek. De fabriek verkoopt de spijkerbroek voor €32,00 aan een winkel. De winkel verkoopt de broek voor €70,00, zonder btw.",
+    "p": 4,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken de toegevoegde waarde van de kledingfabriek.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         21
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Toegevoegde waarde fabriek"
+       }
+      ],
+      "uitw": [
+       "verkoopwaarde − inkoopwaarde = 32 − 11 = €21,00"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken de toegevoegde waarde van de winkel.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         38
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Toegevoegde waarde winkel"
+       }
+      ],
+      "uitw": [
+       "70 − 32 = €38,00"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "De klant betaalt 21% btw over de verkoopprijs van de winkel. Bereken de consumentenprijs.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         84.7
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Consumentenprijs"
+       }
+      ],
+      "uitw": [
+       "verkoopprijs + ((btw-percentage : 100) × verkoopprijs) = 70 + (21 : 100) × 70 = 70 + 14,70 = €84,70"
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Leg uit waarom de klant geen waarde toevoegt.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "3d",
+        "p": 1,
+        "label": "De klant",
+        "model": "De klant produceert niet. Hij koopt de broek om te gebruiken en verkoopt hem niet bewerkt door.",
+        "g": [
+         {
+          "t": "de klant (consument) produceert niet / bewerkt het product niet",
+          "p": 1
+         }
+        ],
+        "v": "Leg uit waarom de klant geen waarde toevoegt.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "De consument produceert niet."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 4,
+    "titel": "De koffiemachine",
+    "tekst": "Een koffiebar koopt een koffiemachine voor €9.600,00. De machine gaat 5 jaar mee. Daarna is de restwaarde €1.600,00.",
+    "p": 3,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken de afschrijving per jaar.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         1600
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Afschrijving per jaar"
+       }
+      ],
+      "uitw": [
+       "(aanschafprijs − restwaarde) : aantal gebruiksjaren = (9.600 − 1.600) : 5 = €1.600,00"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken de waarde van de machine na 3 jaar.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         4800
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Waarde na 3 jaar"
+       }
+      ],
+      "uitw": [
+       "3 × 1.600 = 4.800. 9.600 − 4.800 = €4.800,00"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Bereken de afschrijving per maand.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         133.33
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Afschrijving per maand"
+       }
+      ],
+      "uitw": [
+       "1.600 : 12 = €133,33"
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 5,
+    "titel": "De rugzakken van De Sportzaak",
+    "tekst": "De Sportzaak koopt rugzakken in voor €16,00 per stuk. De brutowinstopslag is 125% van de inkoopprijs. De winkel verkoopt 450 rugzakken per maand. De bedrijfskosten zijn €6.350,00 per maand.",
+    "p": 5,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken de verkoopprijs van een rugzak.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         36
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Verkoopprijs"
+       }
+      ],
+      "uitw": [
+       "inkoopprijs + ((opslagpercentage : 100) × inkoopprijs) = 16 + (125 : 100) × 16 = 16 + 20 = €36,00"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken de consumentenprijs van een rugzak. De btw is 21%.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         43.56
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Consumentenprijs"
+       }
+      ],
+      "uitw": [
+       "36 + (21 : 100) × 36 = 36 + 7,56 = €43,56"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Bereken de omzet per maand.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         16200
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Omzet"
+       }
+      ],
+      "uitw": [
+       "afzet × verkoopprijs = 450 × 36 = €16.200,00"
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Bereken de brutowinst per maand.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         9000
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Brutowinst"
+       }
+      ],
+      "uitw": [
+       "Inkoopwaarde: 450 × 16 = 7.200. omzet − inkoopwaarde = 16.200 − 7.200 = €9.000,00"
+      ]
+     },
+     {
+      "id": "e",
+      "v": "Bereken het nettoresultaat per maand.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         2650
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Nettoresultaat"
+       }
+      ],
+      "uitw": [
+       "brutowinst − bedrijfskosten = 9.000 − 6.350 = €2.650,00"
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 6,
+    "titel": "De markt voor aardbeien",
+    "tekst": "Op een markt worden aardbeien verkocht. In de tabel staan de vraag en het aanbod bij vier prijzen.",
+    "p": 4,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Lees de evenwichtsprijs af.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         3
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Evenwichtsprijs"
+       }
+      ],
+      "uitw": [
+       "Bij €3,00 zijn de vraag en het aanbod gelijk: allebei 600 kg."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken de omzet op deze markt bij de evenwichtsprijs.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         1800
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Omzet"
+       }
+      ],
+      "uitw": [
+       "evenwichtshoeveelheid × evenwichtsprijs = 600 × 3,00 = €1.800,00"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Kweker Van Dam verkoopt 150 kg van de 600 kg. Bereken zijn marktaandeel.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         25
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.05,
+        "label": "Marktaandeel"
+       }
+      ],
+      "uitw": [
+       "(afzet van het bedrijf : totale afzet) × 100 = (150 : 600) × 100 = 25,0%"
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Door veel regen mislukt een deel van de oogst. De vraag blijft gelijk. Wat gebeurt er met de evenwichtsprijs?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Stijgt",
+         "Daalt",
+         "Blijft gelijk"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "De evenwichtsprijs"
+       }
+      ],
+      "uitw": [
+       "Minder aanbod bij dezelfde vraag: de prijs stijgt."
+      ]
+     }
+    ],
+    "tabel": [
+     [
+      "Prijs per kg",
+      "Vraag",
+      "Aanbod"
+     ],
+     [
+      "€2,00",
+      "900 kg",
+      "300 kg"
+     ],
+     [
+      "€2,50",
+      "700 kg",
+      "500 kg"
+     ],
+     [
+      "€3,00",
+      "600 kg",
+      "600 kg"
+     ],
+     [
+      "€3,50",
+      "400 kg",
+      "800 kg"
+     ]
+    ]
+   },
+   {
+    "nr": 7,
+    "titel": "De lampenfabriek",
+    "tekst": "Een fabriek maakt 40.000 lampen per jaar. De vaste kosten zijn €180.000,00 per jaar. De variabele kosten zijn €6,50 per lamp.",
+    "p": 9,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Kies bij elke kostensoort: vaste of variabele kosten.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Vaste kosten",
+         "Variabele kosten"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "De huur van de fabriekshal"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Vaste kosten",
+         "Variabele kosten"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Het glas voor de lampen"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Vaste kosten",
+         "Variabele kosten"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "De afschrijving van de machines"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Vaste kosten",
+         "Variabele kosten"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "De stroom voor de machines"
+       }
+      ],
+      "uitw": [
+       "Vaste kosten blijven gelijk. Variabele kosten stijgen als je meer maakt."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken de kostprijs van één lamp.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         11
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Kostprijs"
+       }
+      ],
+      "uitw": [
+       "Variabele kosten: 40.000 × 6,50 = 260.000. (vaste kosten + variabele kosten) : productie = (180.000 + 260.000) : 40.000 = €11,00"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "De fabriek gaat 60.000 lampen per jaar maken. Bereken de nieuwe kostprijs van één lamp.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         9.5
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Nieuwe kostprijs"
+       }
+      ],
+      "uitw": [
+       "Variabele kosten: 60.000 × 6,50 = 390.000. (180.000 + 390.000) : 60.000 = €9,50"
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Leg uit waarom de kostprijs daalt als de fabriek meer lampen maakt.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "7d",
+        "p": 2,
+        "label": "Kostprijs",
+        "model": "De vaste kosten blijven gelijk. Ze worden over meer lampen verdeeld. Per lamp zijn de vaste kosten dus lager.",
+        "g": [
+         {
+          "t": "de vaste kosten blijven gelijk",
+          "p": 1
+         },
+         {
+          "t": "ze worden over meer lampen verdeeld / de vaste kosten per lamp dalen",
+          "p": 1
+         }
+        ],
+        "v": "Leg uit waarom de kostprijs daalt als de fabriek meer lampen maakt.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "De vaste kosten worden over meer lampen verdeeld."
+      ]
+     },
+     {
+      "id": "e",
+      "v": "In de fabriek werken 25 mensen. Zij maken samen 40.000 lampen per jaar. Bereken de arbeidsproductiviteit per werknemer per jaar.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         1600
+        ],
+        "p": 1,
+        "eenh": "lampen",
+        "tol": 0.5,
+        "label": "Arbeidsproductiviteit"
+       }
+      ],
+      "uitw": [
+       "productie : aantal werknemers = 40.000 : 25 = 1.600 lampen"
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 8,
+    "titel": "Goed voor de samenleving?",
+    "tekst": "",
+    "p": 5,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Kies bij elk gevolg: maatschappelijke kosten of maatschappelijke opbrengsten.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Maatschappelijke kosten",
+         "Maatschappelijke opbrengsten"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "De buurt heeft last van het lawaai van de fabriek"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Maatschappelijke kosten",
+         "Maatschappelijke opbrengsten"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "De fabriek zorgt voor 200 banen in de regio"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Maatschappelijke kosten",
+         "Maatschappelijke opbrengsten"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "De rivier raakt vervuild door afvalwater"
+       }
+      ],
+      "uitw": [
+       "Kosten zijn nadelen voor de samenleving, opbrengsten zijn voordelen."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Noem twee manieren waarop een fabriek maatschappelijk verantwoord kan ondernemen.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "8b",
+        "p": 2,
+        "label": "Mvo",
+        "model": "Bijvoorbeeld: zelf stroom opwekken met zonnepanelen, afval recyclen, minder verpakking gebruiken of zorgen voor goede arbeidsomstandigheden.",
+        "g": [
+         {
+          "t": "eerste manier die past bij mens of milieu (bijvoorbeeld zonnepanelen, recyclen, minder verpakking)",
+          "p": 1
+         },
+         {
+          "t": "tweede manier die past bij mens of milieu",
+          "p": 1
+         }
+        ],
+        "v": "Noem twee manieren waarop een fabriek maatschappelijk verantwoord kan ondernemen.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Denk aan het milieu en aan de mensen die er werken."
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "toetsen": {
+  "t1": {
+   "n": 1,
+   "t": "oefentoets A",
+   "sub": "Hoofdstuk 6",
+   "min": 60,
+   "mc": "mc_a",
+   "open": null,
+   "rek": "rek_a"
+  }
+ },
+ "VERS": [
+  {
+   "n": 1,
+   "min": 60,
+   "pts": 52
+  }
+ ]
+}

@@ -26,6 +26,7 @@ CONFIG = {
     "j3h3": dict(uit="apps/j3h3.html", jaar=3, nr=3, titel="De bank en jouw geld"),
     "j3h4": dict(uit="apps/j3h4.html", jaar=3, nr=4, titel="Kies je voor zekerheid?"),
     "j3h5": dict(uit="apps/j3h5.html", jaar=3, nr=5, titel="Is er werk voor jou?"),
+    "j3h6": dict(uit="apps/j3h6.html", jaar=3, nr=6, titel="Productie en markt"),
     # jaar 2 mavo H5 en H6 (18 nov 2026): geschreven uit de PowerPoints, de leerdoelen en de boektekst (eigen woorden)
     "j2h5": dict(uit="apps/j2h5.html", jaar=2, nr=5, titel="Is handel iets voor jou?"),
     "j2h6": dict(uit="apps/j2h6.html", jaar=2, nr=6, titel="Wat doet de overheid?"),
