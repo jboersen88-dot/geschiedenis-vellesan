@@ -248,13 +248,13 @@
      },
      {
       "id": "b",
-      "v": "Waar of onwaar?",
+      "v": "Goed of fout?",
       "velden": [
        {
         "type": "keuze",
         "opties": [
-         "Waar",
-         "Onwaar"
+         "Goed",
+         "Fout"
         ],
         "j": 1,
         "p": 1,
@@ -263,8 +263,8 @@
        {
         "type": "keuze",
         "opties": [
-         "Waar",
-         "Onwaar"
+         "Goed",
+         "Fout"
         ],
         "j": 0,
         "p": 1,
@@ -273,8 +273,8 @@
        {
         "type": "keuze",
         "opties": [
-         "Waar",
-         "Onwaar"
+         "Goed",
+         "Fout"
         ],
         "j": 1,
         "p": 1,

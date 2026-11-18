@@ -268,7 +268,7 @@ function fieldGoed(f){if(f.type==="keuze")return f.opties[f.j];var e=f.eenh||"",
 function rekRes(r){var a=st[cur],h='<div class="card q"><div class="n">'+OPG+' '+r.nr+' · '+r.p+' punten</div><p>'+esc(r.titel)+'</p>'+rekBron(r);
   r.delen.forEach(function(dl){var q=deelPts(r,dl),key=r.nr+dl.id;h+='<div class="rk">'+(dl.tabel?rekBron(dl):"")+'<div class="rl">'+(dl.id?dl.id+') ':'')+esc(dl.v)+' <span class="muted">('+dp(dl)+' p)</span></div>';
     dl.velden.forEach(function(f,i){if(f.type==="open"){h+=openRes(f);return;}
-      var ok=fieldOk(f,q.ok[i]);h+='<div class="rr '+(ok?"ok":"bad")+'"><b>'+(ok?"✓":"✗")+'</b> '+(f.label?esc(f.label)+(/[.?!]$/.test(f.label)?' ':': '):'')+'Jouw antwoord: <b>'+esc(fieldShow(f,q.ok[i]))+'</b>'+(ok?'':' · Goed: <b>'+esc(fieldGoed(f))+'</b>')+' <span class="muted">('+(ok?f.p:0)+'/'+f.p+' p)</span></div>';});
+      var ok=fieldOk(f,q.ok[i]);h+='<div class="rr '+(ok?"ok":"bad")+'"><b>'+(ok?"✓":"✗")+'</b> '+(f.label?esc(f.label)+(/[.?!]$/.test(f.label)?' ':': '):'')+'Jouw antwoord: <b>'+esc(fieldShow(f,q.ok[i]))+'</b>'+(ok?'':' · Juiste antwoord: <b>'+esc(fieldGoed(f))+'</b>')+' <span class="muted">('+(ok?f.p:0)+'/'+f.p+' p)</span></div>';});
     if(dl.uitw&&dl.uitw.length)h+='<div class="fb">'+dl.uitw.map(esc).join("<br>")+'</div>';
     if(q.max>0)h+='<div class="stepper" role="group" aria-label="Punten voor je berekening bij '+r.nr+dl.id+'"><span class="muted">Klopt je berekening? Punten voor je berekening:</span>'+Array.apply(null,Array(q.max+1)).map(function(_,p){return '<button data-xk="'+key+'" data-xp="'+p+'" aria-pressed="'+(q.ex===p)+'">'+p+'</button>';}).join("")+'</div>';
     h+='</div>';});

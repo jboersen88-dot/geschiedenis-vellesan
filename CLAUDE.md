@@ -34,6 +34,10 @@ Houd leren en oefenen gescheiden. Geen lesstof in de oefenomgeving, geen oefenin
 - Geen "alle antwoorden zijn goed".
 - Herschrijven: alleen de foute antwoorden, geen nieuwe feiten.
 
+**Stellingen**
+- Bij een stelling kiest de leerling "Goed" of "Fout", en de vraag heet "Goed of fout?". Niet "Waar of onwaar".
+- Bij het nakijken staat er "Juiste antwoord:", niet "Goed:".
+
 **Open vragen**
 - In de vraag staat precies wat de leerling moet beantwoorden. Alles waarop nagekeken wordt, wordt gevraagd.
 
