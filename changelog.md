@@ -9,6 +9,17 @@ Opdracht van de docent: de pagina van 3V perfectioneren, met de opzet van jaar 2
 - **Dubbelingen weg**: bij 2.3 stonden vier beelden bijna dubbel (twee keer het ijsje, twee weegschalen, twee keer kosten- en bestedingsinflatie): 10 beelden zijn er 7 geworden (`j3vh2/bron/lesapp.json`). De kaart van 2.2 heeft een beeld zonder tekst erin (`kaart` in `RIJK`).
 - Te controleren door de docent: de indeling van de quizvragen in leerdoelen en niveaus (`bouw-route.py`, SPEC j3vh2) en de nieuwe rekenvragen (`route.js`, vanaf `geldh`).
 - Getest in de browser op 390 en 1280 px (jaarpagina, hoofdstukpagina, paragraaf, viewer, instaptoets van de route). vragencheck en linkcheck op 0; a11ycheck meldt alleen `rondleiding/qr/posters.html` (geen viewport, bestond al).
+## 2026-11-18 · Overzicht en richtlijnen op één plek
+
+- **`docs/OVERZICHT.md`** (nieuw): de kaart van alles. Hoe de site is opgebouwd, wat er is (met aantallen), hoe de games werken, hoe het systeem voor opdrachten, oefenroute, toetsen en de AI-nakijker werkt, wat er sinds 17 oktober gebouwd en verbeterd is, waar alles staat (ook de repo's en mappen buiten deze repo: racers, speurtochten, Worker) en wat nog open staat.
+- **`CLAUDE.md`** (nieuw, in de root): de richtlijnen kort en bindend, zodat elk nieuw gesprek ze vanzelf volgt. Kernregel: de opzet van Economie jaar 2 mavo hoofdstuk 2, met leren en oefenen gescheiden. Nieuw vastgelegd: een oefentoets is geen kopie van het proefwerk.
+- Alleen documentatie; aan de site is niets veranderd. `vragencheck` en `linkcheck` op 0. `a11ycheck` meldt 1 fout die er al was: `rondleiding/qr/posters.html` (printpagina) heeft geen viewport-meta.
+## 2026-11-18 · Economie 3 vwo H2: tweede oefentoets (verdieping)
+
+- **Oefentoets 2 · verdieping** (`economie/j3vh2/bron/toetsen.json`, blokken `mc_b` en `rek_b`; `toets.html?t=t2`): 10 meerkeuze + 8 opgaven, 46 punten, 60 minuten. Zelfde soort vragen als oefentoets 1, maar andere invalshoeken en extra onderwerpen: wisselbrief, gouden standaard, slecht geld verdringt goed geld, wat een storting of overboeking met de geldhoeveelheid doet, aandeel giraal geld, een daling in procenten, een munt waarvan het metaal meer waard is dan het bedrag, vertrouwen en hyperinflatie, loonstijging als oorzaak van beide soorten inflatie, indexcijfers in een tabel met terugrekenen naar de prijs, koopkracht van twee personen vergelijken, en terugrekenen van reële rente naar spaarrente. Alleen stof uit de PowerPoints en de lesapp; **niet gebaseerd op het proefwerk** (dat was niet beschikbaar), dus nog naast het proefwerk leggen.
+- Oefentoets 1 heet nu "Oefentoets 1 · de basis" en heeft bij elke deelvraag een korte uitwerking gekregen.
+- `bouw-toets.py`: geen dubbele punt meer achter een stelling die op een punt eindigt in het nakijkscherm; een deelvraag zonder uitwerking geeft geen fout meer. Alle vier de toetspagina's opnieuw gebouwd.
+- Getest in de browser (1100 en 390 px): alle goede antwoorden worden goed gerekend, geen horizontaal scrollen. De AI-nakijker is in de test niet aangeroepen.
 
 ## 2026-11-13 · Economie 3 vwo H2 "De rol van geld": hoofdstukpagina, leeromgeving, oefenomgeving en digitale oefentoets
 
