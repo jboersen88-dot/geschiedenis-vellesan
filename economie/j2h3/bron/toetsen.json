@@ -1,0 +1,628 @@
+{
+ "blokken": {
+  "mc_a": [
+   {
+    "v": "Ali heeft een eigen fietsenwinkel. Hoe heet het inkomen dat hij daarmee verdient?",
+    "o": [
+     "Loon",
+     "Zakgeld",
+     "Winst",
+     "Uitkering"
+    ],
+    "j": 2,
+    "u": "Het inkomen van iemand met een eigen bedrijf is winst."
+   },
+   {
+    "v": "Noor heeft een nieuwe baan. Na drie weken stopt haar baas de arbeidsovereenkomst. Waarom mag dat meteen?",
+    "o": [
+     "Zij zit nog in haar proeftijd",
+     "Zij werkt nog in deeltijd",
+     "Zij heeft al een vaste baan",
+     "Zij valt onder een andere cao"
+    ],
+    "j": 0,
+    "u": "In de proeftijd mogen werkgever en werknemer meteen stoppen."
+   },
+   {
+    "v": "In de horeca gelden voor alle koks dezelfde afspraken over loon en vakantiedagen. Waar staan die afspraken?",
+    "o": [
+     "In de Arbowet",
+     "In de WW",
+     "In de cao",
+     "In de vacature"
+    ],
+    "j": 2,
+    "u": "Een cao geldt voor een hele bedrijfstak."
+   },
+   {
+    "v": "Kim werkt 20 uur per week in een kledingwinkel. Een volledige werkweek is daar 38 uur. Wat voor baan heeft Kim?",
+    "o": [
+     "Een proeftijd",
+     "Een deeltijdbaan",
+     "Een voltijdbaan",
+     "Een eigen bedrijf"
+    ],
+    "j": 1,
+    "u": "Bij een deeltijdbaan werk je minder uren dan een volledige werkweek."
+   },
+   {
+    "v": "Een bedrijf kweekt tomaten in kassen. Bij welk soort bedrijven hoort dat?",
+    "o": [
+     "Agrarische bedrijven",
+     "Technologische bedrijven",
+     "Dienstverlenende bedrijven",
+     "Industriële bedrijven"
+    ],
+    "j": 0,
+    "u": "Tuinbouw heeft de natuur nodig: agrarisch."
+   },
+   {
+    "v": "In een pizzeria maakt één persoon het deeg, één belegt de pizza en één bakt. Hoe heet dat?",
+    "o": [
+     "Bijscholing",
+     "Flexibel werk",
+     "Proeftijd",
+     "Arbeidsverdeling"
+    ],
+    "j": 3,
+    "u": "Het werk is verdeeld in taken."
+   },
+   {
+    "v": "Welke wet regelt hoe lang een jongere van 15 jaar op een dag mag werken?",
+    "o": [
+     "De Werkloosheidswet",
+     "De Arbeidstijdenwet",
+     "De Arbowet",
+     "De cao"
+    ],
+    "j": 1,
+    "u": "De Arbeidstijdenwet gaat over werk- en rusttijden."
+   },
+   {
+    "v": "Een schilder volgt een cursus over nieuwe verf. Hij blijft gewoon werken. Hoe heet dat?",
+    "o": [
+     "Ontslag",
+     "Bijscholing",
+     "Solliciteren",
+     "Ongeschoold werk"
+    ],
+    "j": 1,
+    "u": "Bijscholing is een cursus volgen terwijl je al werkt."
+   },
+   {
+    "v": "Daan is 17 jaar en Eva is 19 jaar. Ze krijgen allebei het minimumjeugdloon. Wie verdient per uur het meest?",
+    "o": [
+     "Ze verdienen evenveel",
+     "Dat bepaalt het UWV",
+     "Eva, want zij is ouder",
+     "Daan, want hij is jonger"
+    ],
+    "j": 2,
+    "u": "Hoe jonger je bent, hoe lager het minimumjeugdloon."
+   },
+   {
+    "v": "Sara neemt zelf ontslag, omdat ze haar werk saai vindt. Krijgt zij een WW-uitkering?",
+    "o": [
+     "Nee, want zij is jonger dan 21",
+     "Nee, het ontslag is haar eigen keus",
+     "Ja, maar alleen de eerste maand",
+     "Ja, want zij heeft nu geen loon meer"
+    ],
+    "j": 1,
+    "u": "Het ontslag mag niet je eigen schuld zijn."
+   },
+   {
+    "v": "Tom heeft geen baan. Hij zoekt ook geen werk. Is Tom officieel werkloos?",
+    "o": [
+     "Nee, want hij zoekt geen werk",
+     "Ja, want hij heeft geen baan",
+     "Nee, want hij is te jong",
+     "Ja, want hij krijgt geen loon"
+    ],
+    "j": 0,
+    "u": "Je bent pas werkloos als je actief werk zoekt."
+   },
+   {
+    "v": "Je wilt laten zien hoe het aantal werklozen in tien jaar is veranderd. Welk diagram kies je?",
+    "o": [
+     "Een lijndiagram",
+     "Een cirkeldiagram",
+     "Een cao",
+     "Een legenda"
+    ],
+    "j": 0,
+    "u": "Een lijndiagram laat zien hoe iets stijgt of daalt in de tijd."
+   }
+  ],
+  "rek_a": [
+   {
+    "nr": 1,
+    "titel": "Goed of fout?",
+    "tekst": "",
+    "p": 5,
+    "delen": [
+     {
+      "id": "",
+      "v": "Goed of fout?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Een proeftijd mag maximaal twee maanden duren."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Je nettoloon is hoger dan je brutoloon."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Een bakkerij die brood maakt, hoort bij de dienstverlenende bedrijven."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Het minimumloon staat in de wet."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Na de eerste twee maanden is de WW-uitkering 70% van je laatste brutoloon."
+       }
+      ],
+      "uitw": [
+       "Nettoloon = brutoloon − inhoudingen. Het nettoloon is dus lager.",
+       "Een bakkerij maakt een product van grondstoffen. Dat is een industrieel bedrijf."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 2,
+    "titel": "De loonstrook van Yara",
+    "tekst": "Yara werkt in een bloemenwinkel. Haar brutoloon is €2.150 per maand. Er wordt €258 loonbelasting en €129 aan sociale premies ingehouden.",
+    "p": 5,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken hoeveel er in totaal wordt ingehouden.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         387
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.05,
+        "label": "Inhoudingen"
+       }
+      ],
+      "uitw": [
+       "€258 + €129 = €387."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken het nettoloon van Yara.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         1763
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.05,
+        "label": "Nettoloon"
+       }
+      ],
+      "uitw": [
+       "Nettoloon = brutoloon − inhoudingen = €2.150 − €387 = €1.763."
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Bereken hoeveel procent van het brutoloon wordt ingehouden. Rond af op 1 decimaal.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         18
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.05,
+        "label": "Ingehouden"
+       }
+      ],
+      "uitw": [
+       "(deel : geheel) × 100 = (387 : 2.150) × 100 = 18,0%."
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Wie betaalt de inhoudingen aan de overheid? En waarvoor gebruikt de overheid dit geld? Noem één voorbeeld.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "2d",
+        "p": 2,
+        "label": "Inhoudingen",
+        "model": "De werkgever betaalt de inhoudingen aan de overheid. De overheid gebruikt het geld onder andere voor uitkeringen, bijvoorbeeld bij werkloosheid of arbeidsongeschiktheid.",
+        "g": [
+         {
+          "t": "de werkgever betaalt de inhoudingen",
+          "p": 1
+         },
+         {
+          "t": "een juist voorbeeld, zoals uitkeringen bij werkloosheid of arbeidsongeschiktheid",
+          "p": 1
+         }
+        ],
+        "v": "Wie betaalt de inhoudingen aan de overheid? En waarvoor gebruikt de overheid dit geld? Noem één voorbeeld.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "De werkgever houdt loonbelasting en sociale premies in en betaalt die aan de overheid."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 3,
+    "titel": "De bijbaan van Mees",
+    "tekst": "Mees is 16 jaar. Hij werkt 9 uur per week in een supermarkt. Hij verdient €6,40 per uur.",
+    "p": 4,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken het loon van Mees per week.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         57.6
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.05,
+        "label": "Loon per week"
+       }
+      ],
+      "uitw": [
+       "Loon = uurloon × aantal uren = €6,40 × 9 = €57,60."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken het loon van Mees per maand.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         249.6
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.05,
+        "label": "Loon per maand"
+       }
+      ],
+      "uitw": [
+       "(weekbedrag × 52) : 12 = (€57,60 × 52) : 12 = €249,60. Niet × 4!"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Stel: het minimumloon is €14,00 per uur. Een 18-jarige krijgt 50% daarvan. Bereken het minimumjeugdloon per uur voor een 18-jarige.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         7
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.05,
+        "label": "Minimumjeugdloon"
+       }
+      ],
+      "uitw": [
+       "(percentage : 100) × minimumloon = (50 : 100) × €14,00 = €7,00."
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Leg uit waarom de overheid een minimumloon heeft.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "3d",
+        "p": 1,
+        "label": "Minimumloon",
+        "model": "Zo verdienen werknemers genoeg om van te kunnen leven. Een werkgever mag niet minder betalen.",
+        "g": [
+         {
+          "t": "werknemers verdienen dan genoeg om van te leven (of: een werkgever mag niet te weinig betalen)",
+          "p": 1
+         }
+        ],
+        "v": "Leg uit waarom de overheid een minimumloon heeft.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Het minimumloon beschermt werknemers tegen een te laag loon."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 4,
+    "titel": "Werk in de stad",
+    "tekst": "In een stad werken 12.000 mensen. In een cirkeldiagram staat: 4% werkt bij een agrarisch bedrijf en 17% bij een industrieel bedrijf. De rest werkt bij een dienstverlenend bedrijf.",
+    "p": 6,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken hoeveel procent van de mensen bij een dienstverlenend bedrijf werkt.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         79
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.05,
+        "label": "Dienstverlenend"
+       }
+      ],
+      "uitw": [
+       "De hele cirkel is 100%. 100% − 4% − 17% = 79%."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken hoeveel mensen bij een industrieel bedrijf werken.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         2040
+        ],
+        "p": 1,
+        "eenh": "",
+        "tol": 0.5,
+        "label": "Aantal mensen"
+       }
+      ],
+      "uitw": [
+       "(percentage : 100) × totaal = (17 : 100) × 12.000 = 2.040 mensen."
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Kies bij elk bedrijf de juiste soort.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Agrarisch",
+         "Industrieel",
+         "Dienstverlenend"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Een melkveehouderij"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Agrarisch",
+         "Industrieel",
+         "Dienstverlenend"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Een fietsenfabriek"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Agrarisch",
+         "Industrieel",
+         "Dienstverlenend"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "Een kapperszaak"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Agrarisch",
+         "Industrieel",
+         "Dienstverlenend"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "Een supermarkt"
+       }
+      ],
+      "uitw": [
+       "Agrarisch: grondstoffen met hulp van de natuur. Industrieel: goederen maken. Dienstverlenend: diensten leveren."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 5,
+    "titel": "Bram zoekt werk",
+    "tekst": "Bram werkte drie jaar bij een meubelzaak. De zaak heeft geen werk meer voor hem. Bram wordt ontslagen. Zijn laatste brutoloon was €2.600 per maand.",
+    "p": 7,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken de WW-uitkering van Bram per maand in de eerste twee maanden.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         1950
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.05,
+        "label": "WW eerste twee maanden"
+       }
+      ],
+      "uitw": [
+       "(percentage : 100) × laatste brutoloon = (75 : 100) × €2.600 = €1.950."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken de WW-uitkering van Bram per maand na de eerste twee maanden.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         1820
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.05,
+        "label": "WW daarna"
+       }
+      ],
+      "uitw": [
+       "(70 : 100) × €2.600 = €1.820."
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Het ontslag is niet de schuld van Bram. Noem nog twee regels waaraan Bram moet voldoen om WW te krijgen.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "5c",
+        "p": 2,
+        "label": "Regels voor de WW",
+        "model": "Hij heeft minstens 26 weken gewerkt. Hij schrijft zich binnen een week in bij het UWV. Hij kan direct beginnen met nieuw werk.",
+        "g": [
+         {
+          "t": "een eerste juiste regel (minstens 26 weken gewerkt, binnen een week ingeschreven bij het UWV, direct kunnen beginnen)",
+          "p": 1
+         },
+         {
+          "t": "een tweede juiste regel",
+          "p": 1
+         }
+        ],
+        "v": "Het ontslag is niet de schuld van Bram. Noem nog twee regels waaraan Bram moet voldoen om WW te krijgen.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Drie regels: minstens 26 weken gewerkt, binnen een week inschrijven bij het UWV en direct kunnen beginnen."
+      ]
+     },
+     {
+      "id": "d",
+      "v": "In de stad van Bram daalt het aantal werklozen van 1.250 naar 1.175. Bereken met hoeveel procent het aantal werklozen is gedaald. Rond af op 1 decimaal.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         6
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.05,
+        "label": "Daling"
+       }
+      ],
+      "uitw": [
+       "(nieuw − oud) : oud × 100 = (1.175 − 1.250) : 1.250 × 100 = −6,0%. Een daling van 6,0%."
+      ]
+     },
+     {
+      "id": "e",
+      "v": "Leg uit waarom de werkloosheid vaak stijgt bij een economische crisis.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "5e",
+        "p": 2,
+        "label": "Crisis en werkloosheid",
+        "model": "Bij een crisis gaan bedrijven bezuinigen. Ze ontslaan personeel. Daardoor zijn er minder banen.",
+        "g": [
+         {
+          "t": "bedrijven bezuinigen of hebben minder werk",
+          "p": 1
+         },
+         {
+          "t": "zij ontslaan personeel, dus zijn er minder banen",
+          "p": 1
+         }
+        ],
+        "v": "Leg uit waarom de werkloosheid vaak stijgt bij een economische crisis.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Bedrijven bezuinigen bij een crisis en ontslaan personeel."
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "toetsen": {
+  "t1": {
+   "n": 1,
+   "t": "oefentoets A",
+   "sub": "Hoofdstuk 3",
+   "min": 45,
+   "mc": "mc_a",
+   "open": null,
+   "rek": "rek_a"
+  }
+ },
+ "VERS": [
+  {
+   "n": 1,
+   "min": 45,
+   "pts": 39
+  }
+ ]
+}
