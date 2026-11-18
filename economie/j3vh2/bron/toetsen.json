@@ -243,7 +243,7 @@
        }
       ],
       "uitw": [
-       "(intrinsieke waarde : nominale waarde) × 100 = 1 : 20 × 100 = 5%."
+       "(intrinsieke waarde : nominale waarde) × 100 = (1 : 20) × 100 = 5%."
       ]
      },
      {
@@ -387,7 +387,7 @@
        }
       ],
       "uitw": [
-       "2,30 : 2,00 × 100 = 115."
+       "(2,30 : 2,00) × 100 = 115."
       ]
      },
      {
@@ -426,9 +426,9 @@
        }
       ],
       "uitw": [
-       "NIC: 2.585 : 2.500 × 100 = 103,4.",
+       "NIC: (2.585 : 2.500) × 100 = 103,4.",
        "PIC: de prijzen stijgen 2,6%, dus 102,6.",
-       "RIC: 103,4 : 102,6 × 100 = 100,8."
+       "RIC: (103,4 : 102,6) × 100 = 100,8."
       ]
      },
      {
@@ -720,7 +720,7 @@
        }
       ],
       "uitw": [
-       "418 : 490 × 100 = 85,3%. Verreweg het meeste geld is dus geld op een rekening."
+       "(418 : 490) × 100 = 85,3%. Verreweg het meeste geld is dus geld op een rekening."
       ]
      },
      {
@@ -836,7 +836,7 @@
        }
       ],
       "uitw": [
-       "(intrinsieke waarde : nominale waarde) × 100 = 0,15 : 2 × 100 = 7,5%."
+       "(intrinsieke waarde : nominale waarde) × 100 = (0,15 : 2) × 100 = 7,5%."
       ]
      },
      {
@@ -1023,7 +1023,7 @@
        }
       ],
       "uitw": [
-       "12,60 : 12,00 × 100 = 105."
+       "(12,60 : 12,00) × 100 = 105."
       ]
      },
      {
@@ -1042,7 +1042,7 @@
        }
       ],
       "uitw": [
-       "11,40 : 12,00 × 100 = 95. Onder de 100: het kaartje was toen 5% goedkoper dan in het basisjaar."
+       "(11,40 : 12,00) × 100 = 95. Onder de 100: het kaartje was toen 5% goedkoper dan in het basisjaar."
       ]
      },
      {
@@ -1061,7 +1061,7 @@
        }
       ],
       "uitw": [
-       "Nu reken je terug: prijs = indexcijfer : 100 × prijs in het basisjaar = 110 : 100 × 12,00 = €13,20."
+       "Nu reken je terug: prijs = indexcijfer : 100 × prijs in het basisjaar = (110 : 100) × 12,00 = €13,20."
       ]
      },
      {
@@ -1141,9 +1141,9 @@
        }
       ],
       "uitw": [
-       "NIC: 2.926 : 2.800 × 100 = 104,5.",
+       "NIC: (2.926 : 2.800) × 100 = 104,5.",
        "PIC: de prijzen stijgen 3,5%, dus 103,5.",
-       "RIC: 104,5 : 103,5 × 100 = 101,0."
+       "RIC: (104,5 : 103,5) × 100 = 101,0."
       ]
      },
      {
@@ -1172,8 +1172,8 @@
        }
       ],
       "uitw": [
-       "NIC: 1.632 : 1.600 × 100 = 102,0.",
-       "RIC: 102,0 : 103,5 × 100 = 98,6."
+       "NIC: (1.632 : 1.600) × 100 = 102,0.",
+       "RIC: (102,0 : 103,5) × 100 = 98,6."
       ]
      },
      {
