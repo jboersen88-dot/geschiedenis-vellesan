@@ -2,7 +2,7 @@ window.RONDLEIDING = {
   basisUrl: "https://jboersen88-dot.github.io/geschiedenis-vellesan/rondleiding/",
   qrVerplicht: true,
   titel: "Ontdek het Vellesan",
-  welkom: "Welkom op het Vellesan College! Volg de kaart van stop naar stop en kijk bij elke stop het filmpje. Kies zelf welke opdrachten je wilt doen. Kun jij alle 15 stops verzamelen?",
+  welkom: "Welkom op het Vellesan College! Volg de kaart van stop naar stop en kijk bij elke stop het filmpje. Kies zelf welke opdrachten je wilt doen. Kun jij alle 17 stops verzamelen?",
   etages: [
     { naam: "Begane grond", kaart: "img/kaart-0.jpg", w: 1100, h: 700 },
     { naam: "1e etage", kaart: "img/kaart-1.jpg", w: 1233, h: 800 },
@@ -109,10 +109,32 @@ window.RONDLEIDING = {
       ]
     },
     {
+      id: "s16", code: "KROON", naam: "Natuur- en scheikunde (B06 en B07)", etage: 0, x: 77, y: 15,
+      clip: "media/s16.mp4", poster: "media/s16.jpg",
+      uitleg: "Om de hoek liggen de lokalen B06 en B07. Hier krijg je natuurkunde en scheikunde. Bij die vakken doe je vaak zelf proefjes. In de gang staan glazen kasten met spullen om naar te kijken. Aan het eind is een trap naar boven en een deur naar de binnentuin.",
+      loop: "Loop vanaf het biologielokaal de hoek om. Je komt langs de glazen kasten in de gang.",
+      opdrachten: [
+        { type: "mc", vraag: "Welke vakken krijg je in B06 en B07?", opties: ["Tekenen en muziek", "Natuurkunde en scheikunde", "Gym"], goed: 1, uitleg: "Goed. Hier doe je ook proefjes." },
+        { type: "zoek", vraag: "Zoek de glazen kasten in de gang. Wat vind jij het gekste ding dat erin staat? Gevonden? Tik op de knop!" },
+        { type: "open", vraag: "Welk proefje zou jij weleens willen doen? Schrijf het op." }
+      ]
+    },
+    {
+      id: "s17", code: "WOLK", naam: "De nieuwbouw beneden (B08 tot B11)", etage: 0, x: 78, y: 46,
+      clip: "media/s17.mp4", poster: "media/s17.jpg",
+      uitleg: "Dit is de begane grond van het nieuwe gebouw. In deze gang liggen de lokalen B08 tot en met B11. Door de grote ramen kijk je uit op de binnentuin. Daar kun je in de pauze zitten als het mooi weer is.",
+      loop: "Loop naar het nieuwe gebouw aan de andere kant van de binnentuin. Je herkent het aan de gladde vloer en de gele deuren.",
+      opdrachten: [
+        { type: "zoek", vraag: "Zoek de lokalen B08, B09, B10 en B11. Alle vier gevonden? Tik op de knop!" },
+        { type: "mc", vraag: "Wat zie je door de grote ramen in deze gang?", opties: ["De gymzaal", "De binnentuin", "De fietsenstalling"], goed: 1, uitleg: "Klopt. De binnentuin ligt midden tussen het oude en het nieuwe gebouw." },
+        { type: "tel", vraag: "Tel de bankjes in de binnentuin. Hoeveel zie je er?" }
+      ]
+    },
+    {
       id: "s10", code: "SOEP", naam: "Eerste etage: de talen", etage: 1, x: 53, y: 30,
       clip: "media/s10.mp4", poster: "media/s10.jpg",
       uitleg: "Op de eerste etage vind je veel talen: Engels, Frans en Duits. Ook geschiedenis, natuurkunde, wiskunde, Nederlands en aardrijkskunde hebben hier lokalen. Jassen blijven in de gang aan de kapstokken, niet in het lokaal.",
-      loop: "Loop terug naar de hal en ga de trap op naar de eerste etage. Volg de gang met de oranje deuren.",
+      loop: "Ga de trap op naar de eerste etage en loop naar het oude gebouw. Volg de gang met de oranje deuren.",
       opdrachten: [
         { type: "mc", vraag: "Welke taal krijg je in lokaal B18?", opties: ["Frans", "Duits", "Engels"], goed: 1, uitleg: "Goed. B18 is een Duits lokaal." },
         { type: "tel", vraag: "Tel de kapstokken in de gang. Hoeveel zijn het er?" },
@@ -166,7 +188,7 @@ window.RONDLEIDING = {
     {
       id: "s13", code: "GOUD", naam: "Bibliotheek en studiezaal (B31)", etage: 2, x: 73, y: 20,
       clip: "media/s13.mp4", poster: "media/s13.jpg",
-      uitleg: "Dit is de bibliotheek, onder houten dakbalken. Je kunt hier boeken en tijdschriften lenen. In de huiswerkklas kun je je huiswerk maken. Hier krijg je ook extra hulp, zoals bij dyslexie, begeleiding, mentoraat en decanaat. Gefeliciteerd, je hebt alle 15 stops gehaald!",
+      uitleg: "Dit is de bibliotheek, onder houten dakbalken. Je kunt hier boeken en tijdschriften lenen. In de huiswerkklas kun je je huiswerk maken. Hier krijg je ook extra hulp, zoals bij dyslexie, begeleiding, mentoraat en decanaat. Gefeliciteerd, je hebt alle 17 stops gehaald!",
       loop: "Blijf op de tweede etage en loop naar de bibliotheek en studiezaal, lokaal B31.",
       opdrachten: [
         { type: "mc", vraag: "Wat kun je in de bibliotheek doen?", opties: ["Een auto lenen", "Een kluisje huren", "Boeken en tijdschriften lenen"], goed: 2, uitleg: "Klopt. Lezen kan hier prima." },
