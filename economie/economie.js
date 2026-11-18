@@ -160,6 +160,19 @@ var SE={"jaar-4/se-h1-h2-h8":{naam:"SE hoofdstuk 1 en 2",kort:"H1 + H2",kop:["SE
   intro:"Alles voor het schoolexamen over de overheid: hoofdstuk 5 en 6 van dit jaar en hoofdstuk 7 uit 3 mavo. Leer eerst per hoofdstuk, oefen daarna en maak als laatste het oefen-SE.",
   delen:["jaar-4/hoofdstuk-5-kan-de-overheid-dat-regelen","jaar-4/hoofdstuk-6-de-overheid-en-ons-inkomen","jaar-3/mavo/hoofdstuk-7-de-overheid-voor-ons-allemaal"],
   toets:["se56/toets.html","Oefen-SE","Eén toets over alle drie de hoofdstukken, met klok. Meerkeuze en rekenen kijkt de site na."],beeld:"Beelden: gemaakt voor deze site"},
+  "jaar-3/mavo/se-3-h5-h6":{naam:"SE hoofdstuk 5 en 6",kort:"H5 + H6",kop:["SE hoofdstuk 5 ","en 6"],hero:"j3h5/werk-h",
+  intro:"Alles voor het schoolexamen over werk en over productie en markt: hoofdstuk 5 en 6. Leer eerst per hoofdstuk, oefen daarna en maak als laatste het oefen-SE.",
+  delen:["jaar-3/mavo/hoofdstuk-5-werkt-dat-zo","jaar-3/mavo/hoofdstuk-6-productie-en-markt"],
+  toets:["j3se56/toets.html","Oefen-SE","Eén toets over beide hoofdstukken, met klok. Meerkeuze en rekenen kijkt de site na."],
+  extra:[["https://drive.google.com/file/d/1-BKaRXhjs3JvOoLsVkwQLMLEIpU9M3Dz/view","Oefentoets hoofdstuk 5 op papier","De oefentoets uit de les.",""],
+    ["https://drive.google.com/file/d/1W6wxtmSujC5hWigu-W7rYzpNB8XZt-0X/view","Nakijkblad oefentoets hoofdstuk 5","Kijk je oefentoets zelf na.",""]],beeld:"Beelden: gemaakt voor deze site"},
+  "jaar-3/mavo/se4-h7-h8":{naam:"SE hoofdstuk 7 en 8",kort:"H7 + H8",kop:["SE hoofdstuk 7 ","en 8"],hero:"j4h7/handel-h",
+  intro:"Alles voor het schoolexamen over handel en welvaart in de wereld: hoofdstuk 7 en 8 uit het boek van 4 mavo. Leer eerst per hoofdstuk, oefen daarna en maak als laatste het oefen-SE.",
+  delen:["jaar-4/hoofdstuk-7","jaar-4/hoofdstuk-8"],
+  toets:["j3se78/toets.html","Oefen-SE","Eén toets over beide hoofdstukken, met klok. Meerkeuze en rekenen kijkt de site na."],
+  extra:[["h.html?p=jaar-3%2Fmavo%2Fhoofdstuk-8-over-economische-grenzen","Over de grens (3 mavo)","Hetzelfde onderwerp uit het boek van 3 mavo: handig als herhaling.",""],
+    ["https://drive.google.com/file/d/15gUDjc97ZMMTT7raxKN2oJ9kNJJaPat8/view","Oefentoets hoofdstuk 7 op papier","De oefentoets uit de les.",""],
+    ["https://drive.google.com/file/d/12-pTNqw8ov_xtKFu-Y0vsO6U33mLZyqZ/view","Oefentoets hoofdstuk 7 met antwoorden","Kijk je oefentoets zelf na.",""]],beeld:"Beelden: gemaakt voor deze site"},
   "jaar-3/mavo/se-1":{naam:"SE hoofdstuk 1 en 3",kort:"H1 + H3",kop:["SE hoofdstuk 1 ","en 3"],hero:"j3h3/bank-h",
   intro:"Alles voor het schoolexamen over welvaart en de bank: hoofdstuk 1 en 3. Leer eerst per hoofdstuk, oefen daarna en maak als laatste het oefen-SE.",
   delen:["jaar-3/mavo/hoofdstuk-1-hoe-groot-is-jouw-welvaart","jaar-3/mavo/hoofdstuk-3-de-bank-en-jouw-geld"],
@@ -170,7 +183,7 @@ var SE={"jaar-4/se-h1-h2-h8":{naam:"SE hoofdstuk 1 en 2",kort:"H1 + H2",kop:["SE
   intro:"Alles voor het schoolexamen over bedrijven en werk: hoofdstuk 3 en 4. Leer eerst per hoofdstuk, oefen daarna en maak als laatste het oefen-SE.",
   delen:["jaar-4/hoofdstuk-3","jaar-4/hoofdstuk-4-aan-het-werk"],
   toets:["se34/toets.html","Oefen-SE","Eén toets over beide hoofdstukken, met klok. Meerkeuze en rekenen kijkt de site na."],beeld:"Beelden: gemaakt voor deze site"}};
-var NAAM={"jaar-3/mavo/hoofdstuk-8-over-economische-grenzen":"Hoofdstuk 8: Over de grens","jaar-3/mavo/hoofdstuk-6-productie-en-markt":"Hoofdstuk 6: Productie en markt","jaar-3/mavo/hoofdstuk-5-werkt-dat-zo":"Hoofdstuk 5: Is er werk voor jou?","jaar-3/mavo/hoofdstuk-4-ben-je-verzekerd":"Hoofdstuk 4: Kies je voor zekerheid?","jaar-3/mavo/se-1":"SE H1 + H3","jaar-3/mavo/hoofdstuk-1-hoe-groot-is-jouw-welvaart":"Hoofdstuk 1: Hoe welvarend ben jij?","jaar-4/se4":"SE H3 + H4","jaar-4/se-h1-h2-h8":"SE H1 + H2","jaar-4/se-h5-en-h6":"SE H5 + H6 + H7 (3 mavo)","jaar-2/mavo/kopie-van-hoofdstuk-1":"Hoofdstuk 1 · lesstof en PowerPoints"};
+var NAAM={"jaar-3/mavo/se-3-h5-h6":"SE H5 + H6","jaar-3/mavo/se4-h7-h8":"SE H7 + H8","jaar-3/mavo/hoofdstuk-8-over-economische-grenzen":"Hoofdstuk 8: Over de grens","jaar-3/mavo/hoofdstuk-6-productie-en-markt":"Hoofdstuk 6: Productie en markt","jaar-3/mavo/hoofdstuk-5-werkt-dat-zo":"Hoofdstuk 5: Is er werk voor jou?","jaar-3/mavo/hoofdstuk-4-ben-je-verzekerd":"Hoofdstuk 4: Kies je voor zekerheid?","jaar-3/mavo/se-1":"SE H1 + H3","jaar-3/mavo/hoofdstuk-1-hoe-groot-is-jouw-welvaart":"Hoofdstuk 1: Hoe welvarend ben jij?","jaar-4/se4":"SE H3 + H4","jaar-4/se-h1-h2-h8":"SE H1 + H2","jaar-4/se-h5-en-h6":"SE H5 + H6 + H7 (3 mavo)","jaar-2/mavo/kopie-van-hoofdstuk-1":"Hoofdstuk 1 · lesstof en PowerPoints"};
 
 var esc=function(t){return String(t).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});};
 var $=function(id){return document.getElementById(id);};

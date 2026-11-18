@@ -93,7 +93,12 @@ Alles wordt gestuurd vanuit `economie/economie.js` en `economie/data/paginas.jso
 | Jaar 3 mavo H2 "Wat voor consument ben jij?" | `j3h2` | ja | ja | nee | 1 |
 | Jaar 3 mavo H3 "De bank en jouw geld" | `j3h3` | ja | ja | nee | 1 |
 | Jaar 3 mavo H4 "Kies je voor zekerheid?" | `j3h4` | ja (4.2 zonder PowerPoint) | ja | nee | 1 |
+| Jaar 3 mavo H5 "Is er werk voor jou?" | `j3h5` | ja | ja | nee | 1 |
+| Jaar 3 mavo H6 "Productie en markt" | `j3h6` | ja | ja | nee | 1 |
+| Jaar 3 mavo H8 "Over de grens" | `j3h8` | ja (8.3 zonder PowerPoint) | ja | nee | 1 |
 | Jaar 3 mavo SE H1 + H3 (SE-pagina `jaar-3/mavo/se-1`) | `se13` | n.v.t. | n.v.t. | nee | 1 (oefen-SE) |
+| Jaar 3 mavo SE H5 + H6 (SE-pagina `jaar-3/mavo/se-3-h5-h6`) | `j3se56` | n.v.t. | n.v.t. | nee | 1 (oefen-SE) |
+| Jaar 3 mavo SE H7 + H8 (SE-pagina `jaar-3/mavo/se4-h7-h8`, stof van 4 mavo H7 en H8) | `j3se78` | n.v.t. | n.v.t. | nee | 1 (oefen-SE) |
 | Jaar 3 havo/vwo H2 "De rol van geld" | `j3vh2` | ja | ja | ja | 2 |
 | Jaar 4 mavo H1 "Verdien je genoeg?" | `j4h1` | ja | ja | nee | 1 |
 | Jaar 4 mavo H2 "Geld moet rollen" | `j4h2` | ja | ja | nee | 1 |

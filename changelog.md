@@ -1,3 +1,38 @@
+## 2026-11-18 · Economie 3 mavo: H5, H6, H8 en de SE-pagina's H5 + H6 en H7 + H8
+
+Derde en laatste ronde van de opdracht "bouw nu ook de hoofdstukken voor jaar 3 economie voor de mavo". Alle hoofdstukken van 3 mavo staan nu in de nieuwe opzet.
+
+- **Jaar 3 H5 "Is er werk voor jou?"** (`j3h5`, nieuw): hoofdstukpagina, leeromgeving per paragraaf (dia's met klikstappen, de uitlegfilm over rechtsvormen, begrippen, leerdoelen, Check jezelf) en oefenomgeving. 49 begrippen, 48 quizvragen, 6 sorteersets, 8 rekensoorten (van bruto naar netto, netto met procenten, maandloon naar weekloon, uurloon, deeltijd, arbeidsparticipatie, werkloosheid, WW-uitkering) en oefentoets A (56 punten, 60 minuten). De oefentoets van de docent op papier staat erbij, met nakijkblad.
+- **Jaar 3 H6 "Productie en markt"** (`j3h6`, nieuw): zelfde opzet, met drie films. 42 begrippen, 47 quizvragen, 6 sorteersets, 10 rekensoorten (toegevoegde waarde, afschrijving, verkoopprijs, consumentenprijs, omzet, brutowinst, nettoresultaat, marktaandeel, kostprijs, arbeidsproductiviteit) en oefentoets A (52 punten, 60 minuten).
+- **Jaar 3 H8 "Over de grens"** (`j3h8`, nieuw): zelfde opzet. 37 begrippen, 43 quizvragen, 5 sorteersets, 4 rekensoorten (export- en importquote, handelssaldo, invoerrechten, inkomen per hoofd) en oefentoets A (49 punten, 50 minuten).
+- **SE H5 + H6** (`jaar-3/mavo/se-3-h5-h6`): SE-pagina met de twee hoofdstukken en een nieuw oefen-SE (`j3se56`, 53 punten, 75 minuten).
+- **SE H7 + H8** (`jaar-3/mavo/se4-h7-h8`): SE-pagina met een nieuw oefen-SE (`j3se78`, 53 punten, 75 minuten). Op de oude pagina stond bij dit SE de stof van 4 mavo H7 en H8. Daarom verwijst de pagina naar die twee hoofdstukken, die al in de nieuwe opzet stonden. H8 van 3 mavo staat erbij als herhaling.
+- **Geen beelden van anderen in de dia's**: alle afbeeldingen (boek, CBS, kranten, foto's) zijn uit de PowerPoints gehaald voordat er dia's van zijn gemaakt. De tekst en de eigen schema's van de docent blijven staan.
+- **Beelden**: eigen illustraties voor H5, H6 en H8 (`tools/beelden/scenes.js`).
+
+**Keuzes**
+- De paragraaftitels en de volgorde volgen editie 7.1 van het boek. H5: 5.1 "Wat levert werken op?", 5.2 "Wat voor ondernemingen?", 5.3 "Doe jij mee op de arbeidsmarkt?", 5.4 "Als je zonder werk zit". H6: 6.1 "Produceren maar!", 6.2 "Tel uit je winst!", 6.3 "Op de markt", 6.4 "Meer of minder productie?". H8: 8.1 "Waarom de grens over?", 8.2 "Wereldwijde handel", 8.3 "Samenwerken is slimmer", 8.4 "Is de welvaart eerlijk verdeeld?". De links naar de pagina's zijn niet veranderd.
+- H8 had op de oude site de volgorde van de vorige editie. De PowerPoint "Vrijhandel of niet" (oud 8.3) staat nu bij 8.2 en de EU bij 8.3. Op de titeldia van 8.2 staat daarom de nieuwe titel.
+- Twee PowerPoints zijn groter dan 10 MB en konden niet worden opgehaald: 6.2 "Tel uit je winst" en 8.2 "Nederland en de EU". Bij 6.2 staat daarom de oudere PowerPoint "Winst of verlies" (met de nieuwe titel op de eerste dia). 8.3 heeft geen dia's.
+- In de PowerPoint van 6.4 stonden de dia's over productiecapaciteit en arbeidsproductiviteit op verborgen. Die zijn wel opgenomen, want het zijn leerdoelen van de paragraaf.
+- Weggelaten dia's: herhalingsvragen en vragen (5.2, 5.3, 8.1), dia's met alleen een beeld uit het boek of van een website (5.1, 5.3, 5.4, 6.1, 6.3, 6.4, 8.1, 8.4) en de videodia (8.2). Bij 6.3 zijn de twee dia's met de grafiek van de woningmarkt weg, omdat de grafiek uit het boek kwam.
+- Grijs werk is hier onbetaald werk dat wel is toegestaan (vrijwilligerswerk, huishouden), zoals op de dia van 5.1.
+- De WW-uitkering is gerekend als 75% in de eerste twee maanden en daarna 70%. De percentages staan steeds in de vraag.
+- De brutowinstopslag is een percentage van de inkoopprijs, zoals in editie 7.1. De PowerPoint spreekt van brutowinstmarge.
+- Het nettoresultaat (boek) heet in de PowerPoint nettowinst. Beide woorden staan bij het begrip.
+- De rekensoorten quote, handelssaldo en invoerrechten van H8 zijn dezelfde als bij 4 mavo H7.
+- Uit het boek komen de begrippen die niet in de PowerPoints staan, in eigen woorden: onder andere regionale werkloosheid, marktaandeel, wet van vraag en aanbod, globalisering, noodhulp, structurele hulp en Fairtrade.
+
+**Controleren door de docent**
+- Kloppen de titels en de nieuwe volgorde van H8?
+- De nieuwe PowerPoints van 6.2 en van de EU (8.3) kleiner opslaan (onder 10 MB), dan komen die er alsnog in.
+- De dia's nalopen: mist er iets nu alle beelden weg zijn? Vooral 6.3 (geen grafiek van vraag en aanbod meer) en 5.4.
+- SE H7 + H8: klopt het dat dit SE over de stof van 4 mavo H7 en H8 gaat? Zo niet, dan zet ik H8 van 3 mavo (en H7 "De overheid voor ons allemaal") eronder.
+- De rekenregels: WW 75% en 70%, het weekloon als (maandloon × 12) : 52, de brutowinstopslag over de inkoopprijs.
+- De oefentoetsen en de twee oefen-SE's naast de eigen toetsen leggen.
+
+**Getest**: vragencheck (5238 vragen) en linkcheck op 0; a11ycheck meldt alleen `rondleiding/qr/posters.html` (stond al zo). Browsertest op 375 en 820 px, licht en donker, zonder consolefouten of horizontaal scrollen: hoofdstukpagina's, paragrafen, oefenomgevingen en toetsen van H5, H6 en H8, de twee SE-pagina's, de twee oefen-SE's en het jaaroverzicht. Alle 22 rekengeneratoren zijn 400 keer doorgerekend. **Niet getest**: echte iPad, AI-nakijker, filmpjes en Drive-links (YouTube, Drive en de Worker waren in de test geblokkeerd).
+
 ## 2026-11-18 · Economie 3 mavo: H2 en H4 in de nieuwe opzet, dia's van H3 opgeschoond
 
 Tweede ronde van de opdracht "bouw nu ook de hoofdstukken voor jaar 3 economie voor de mavo".

@@ -1,0 +1,833 @@
+{
+ "blokken": {
+  "mc_a": [
+   {
+    "v": "Een Nederlands bedrijf verkoopt chipmachines aan Zuid-Korea. Wat is dat voor Nederland?",
+    "o": [
+     "Wederuitvoer",
+     "Contingentering",
+     "Export",
+     "Import"
+    ],
+    "j": 2,
+    "u": "Verkopen aan het buitenland."
+   },
+   {
+    "v": "Ananassen uit Costa Rica krijgen in Rotterdam een nieuwe sticker en gaan door naar Zweden. Hoe heet dat?",
+    "o": [
+     "Wederuitvoer",
+     "Harmonisatie",
+     "Vrijhandel",
+     "Globalisering"
+    ],
+    "j": 0,
+    "u": "Invoeren en bijna onbewerkt weer uitvoeren."
+   },
+   {
+    "v": "Wat staat er op de betalingsbalans?",
+    "o": [
+     "De inkomsten en uitgaven van de rijksoverheid",
+     "De spaartegoeden en schulden van gezinnen",
+     "De winst en het verlies van alle bedrijven",
+     "Ontvangsten uit en betalingen aan het buitenland"
+    ],
+    "j": 3,
+    "u": "Geld dat de grens over gaat."
+   },
+   {
+    "v": "De koers van de euro stijgt ten opzichte van de dollar. Wat gebeurt er met onze producten in Amerika?",
+    "o": [
+     "Die worden daar goedkoper",
+     "Die worden daar duurder",
+     "Die blijven daar even duur",
+     "Die worden daar verboden"
+    ],
+    "j": 1,
+    "u": "Amerikanen moeten meer dollars betalen voor dezelfde euro's."
+   },
+   {
+    "v": "Elk land maakt de producten die het het beste en goedkoopste kan maken. Hoe heet dat?",
+    "o": [
+     "Europese Monetaire Unie",
+     "Internationale arbeidsverdeling",
+     "Internationale concurrentiepositie",
+     "Maatschappelijk ondernemen"
+    ],
+    "j": 1,
+    "u": "Daardoor stijgt de welvaart."
+   },
+   {
+    "v": "Wat is het doel van protectiemaatregelen?",
+    "o": [
+     "De export van andere landen vergroten",
+     "De eigen productie en banen beschermen",
+     "De handel tussen landen vrijer maken",
+     "De prijzen voor consumenten verlagen"
+    ],
+    "j": 1,
+    "u": "Ze beschermen tegen concurrentie uit andere landen."
+   },
+   {
+    "v": "Welke organisatie controleert of landen zich aan handelsafspraken houden?",
+    "o": [
+     "De WTO",
+     "De EMU",
+     "De ECB",
+     "Het IMF"
+    ],
+    "j": 0,
+    "u": "De Wereldhandelsorganisatie."
+   },
+   {
+    "v": "In alle EU-landen gelden dezelfde veiligheidseisen voor speelgoed. Hoe heet dat?",
+    "o": [
+     "Contingentering",
+     "Harmonisatie",
+     "Globalisering",
+     "Monocultuur"
+    ],
+    "j": 1,
+    "u": "Regels op elkaar afstemmen."
+   },
+   {
+    "v": "Wat is prijsstabiliteit?",
+    "o": [
+     "De prijzen stijgen niet te veel",
+     "De prijzen dalen elk jaar een beetje",
+     "De prijzen worden door de EU bepaald",
+     "De prijzen zijn in elk land gelijk"
+    ],
+    "j": 0,
+    "u": "De euro houdt zo zijn koopkracht."
+   },
+   {
+    "v": "Een schoenenfabriek verhuist van Nederland naar een land met lage lonen. Welk gevolg van globalisering zie je?",
+    "o": [
+     "Hier stijgen de lonen in de fabriek",
+     "Hier worden schoenen veel duurder",
+     "Hier komen meer fabrieken bij",
+     "Hier verdwijnen banen in de productie"
+    ],
+    "j": 3,
+    "u": "Productie verhuist naar lagelonenlanden."
+   },
+   {
+    "v": "Waarom zegt het inkomen per hoofd niet alles over de welvaart?",
+    "o": [
+     "Het telt de inkomens van rijken niet mee",
+     "Het is in elk land ongeveer even hoog",
+     "Je ziet niet hoe het inkomen verdeeld is",
+     "Het wordt alleen in rijke landen gemeten"
+    ],
+    "j": 2,
+    "u": "Het is een gemiddelde."
+   },
+   {
+    "v": "Een land is voor zijn export afhankelijk van alleen katoen. Hoe heet dat?",
+    "o": [
+     "Wederuitvoer",
+     "Ruilvoet",
+     "Monocultuur",
+     "Harmonisatie"
+    ],
+    "j": 2,
+    "u": "Daalt de prijs van katoen, dan daalt het inkomen van het hele land."
+   },
+   {
+    "v": "De prijs van koffie daalt en de prijs van machines stijgt. Wat gebeurt er met de ruilvoet van een koffieland?",
+    "o": [
+     "Die verslechtert",
+     "Die verdwijnt",
+     "Die blijft gelijk",
+     "Die verbetert"
+    ],
+    "j": 0,
+    "u": "Het land moet meer koffie exporteren voor dezelfde machines."
+   },
+   {
+    "v": "Een vrouw in Kenia leent een klein bedrag om een naaimachine te kopen. Hoe heet zo'n lening?",
+    "o": [
+     "Noodhulp",
+     "Exportsubsidie",
+     "Gebonden hulp",
+     "Microkrediet"
+    ],
+    "j": 3,
+    "u": "Een kleine lening voor kleine ondernemers."
+   },
+   {
+    "v": "Uit welke twee delen bestaat de fairtradeprijs?",
+    "o": [
+     "Een subsidie en een heffing",
+     "Een lening en de rente",
+     "Een inkoopprijs en de btw",
+     "Een minimumprijs en een premie"
+    ],
+    "j": 3,
+    "u": "Zo krijgt de boer een gegarandeerde prijs."
+   },
+   {
+    "v": "Wat is een vicieuze cirkel?",
+    "o": [
+     "Een afspraak over de prijs van grondstoffen",
+     "Het ene probleem veroorzaakt steeds het andere",
+     "Een lening die nooit terugbetaald wordt",
+     "Een groep landen die samen handel drijft"
+    ],
+    "j": 1,
+    "u": "Daardoor blijft een arm land arm."
+   }
+  ],
+  "rek_a": [
+   {
+    "nr": 1,
+    "titel": "Goed of fout?",
+    "tekst": "",
+    "p": 6,
+    "delen": [
+     {
+      "id": "",
+      "v": "Goed of fout?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Nederland heeft een open economie."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Bij een handelsoverschot is de import groter dan de export."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Invoerrechten maken producten uit het buitenland duurder."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "De ECB int de belasting in de eurolanden."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Bij gebonden hulp bepaalt het land zelf waaraan het geld opgaat."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Structurele hulp is erop gericht dat een land zelfstandiger wordt."
+       }
+      ],
+      "uitw": [
+       "Bij een handelsoverschot is de export groter.",
+       "Belasting innen doet elk land zelf.",
+       "Bij gebonden hulp moet het geld besteed worden in het land dat de hulp geeft."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 2,
+    "titel": "De handel van Oostland",
+    "tekst": "Het nationaal inkomen van Oostland is €750 miljard. De exportwaarde is €480 miljard. De importwaarde is €435 miljard.",
+    "p": 6,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken de exportquote van Oostland.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         64
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.05,
+        "label": "Exportquote"
+       }
+      ],
+      "uitw": [
+       "(exportwaarde : nationaal inkomen) × 100 = (480 : 750) × 100 = 64,0%"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken de importquote van Oostland.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         58
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.05,
+        "label": "Importquote"
+       }
+      ],
+      "uitw": [
+       "(importwaarde : nationaal inkomen) × 100 = (435 : 750) × 100 = 58,0%"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Bereken het handelssaldo van Oostland, in miljard euro.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         45
+        ],
+        "p": 1,
+        "eenh": "miljard euro",
+        "tol": 0.5,
+        "label": "Handelssaldo"
+       }
+      ],
+      "uitw": [
+       "exportwaarde − importwaarde = 480 − 435 = 45 miljard euro: een handelsoverschot"
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Een jaar later is de export €504 miljard. Bereken met hoeveel procent de export is gestegen.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         5
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.05,
+        "label": "Stijging"
+       }
+      ],
+      "uitw": [
+       "(nieuw − oud) : oud × 100 = (504 − 480) : 480 × 100 = 5,0%"
+      ]
+     },
+     {
+      "id": "e",
+      "v": "Leg uit waarom export belangrijk is voor de werkgelegenheid in een land.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "2e",
+        "p": 2,
+        "label": "Export en banen",
+        "model": "Door te exporteren verkopen bedrijven meer. Ze moeten dan meer produceren en hebben meer personeel nodig. Dat levert banen op.",
+        "g": [
+         {
+          "t": "bedrijven verkopen/produceren meer door export",
+          "p": 1
+         },
+         {
+          "t": "daarvoor is meer personeel nodig / dat levert banen op",
+          "p": 1
+         }
+        ],
+        "v": "Leg uit waarom export belangrijk is voor de werkgelegenheid in een land.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Meer verkopen betekent meer productie en meer banen."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 3,
+    "titel": "Vrij handelen of beschermen?",
+    "tekst": "",
+    "p": 7,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Kies bij elk voorbeeld de protectiemaatregel.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Invoerrechten",
+         "Contingentering",
+         "Invoerverbod",
+         "Exportsubsidie"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Op staal van buiten de EU komt 25% belasting"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Invoerrechten",
+         "Contingentering",
+         "Invoerverbod",
+         "Exportsubsidie"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Er mogen hoogstens 50.000 auto's per jaar worden ingevoerd"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Invoerrechten",
+         "Contingentering",
+         "Invoerverbod",
+         "Exportsubsidie"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "Hout uit beschermde bossen mag het land niet in"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Invoerrechten",
+         "Contingentering",
+         "Invoerverbod",
+         "Exportsubsidie"
+        ],
+        "j": 3,
+        "p": 1,
+        "label": "Boeren krijgen geld voor elke ton melkpoeder die zij uitvoeren"
+       }
+      ],
+      "uitw": [
+       "Invoerrechten: belasting. Contingentering: een maximum. Invoerverbod: helemaal niet. Exportsubsidie: geld voor export."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Een winkelier koopt een partij fietsen van buiten de EU voor €40.000,00. De invoerrechten zijn 14%. Bereken de invoerrechten.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         5600
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Invoerrechten"
+       }
+      ],
+      "uitw": [
+       "(percentage : 100) × totaal = (14 : 100) × 40.000 = €5.600,00"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Bereken wat de partij fietsen de winkelier kost met de invoerrechten.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         45600
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Totaal"
+       }
+      ],
+      "uitw": [
+       "40.000 + 5.600 = €45.600,00"
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Leg uit wat het nadeel van invoerrechten is voor de consument.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "3d",
+        "p": 1,
+        "label": "Nadeel van protectie",
+        "model": "Producten uit het buitenland worden duurder. De consument betaalt een hogere prijs of heeft minder keuze.",
+        "g": [
+         {
+          "t": "producten worden duurder / de consument betaalt meer (of heeft minder keuze)",
+          "p": 1
+         }
+        ],
+        "v": "Leg uit wat het nadeel van invoerrechten is voor de consument.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "De consument betaalt een hogere prijs."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 4,
+    "titel": "Nederland en de EU",
+    "tekst": "",
+    "p": 6,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Kies bij elk voorbeeld het soort vrij verkeer.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Goederen en diensten",
+         "Personen",
+         "Kapitaal"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Een Nederlandse student gaat in Italië studeren"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goederen en diensten",
+         "Personen",
+         "Kapitaal"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Een Franse kaasmaker verkoopt kaas in Nederland zonder invoerrechten"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goederen en diensten",
+         "Personen",
+         "Kapitaal"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "Je belegt in aandelen van een Duits bedrijf"
+       }
+      ],
+      "uitw": [
+       "Wonen, werken en studeren: personen. Handel: goederen en diensten. Sparen en beleggen: kapitaal."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Noem twee voordelen van de euro voor bedrijven die handelen met andere eurolanden.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "4b",
+        "p": 2,
+        "label": "De euro",
+        "model": "Bedrijven hebben geen kosten voor het omwisselen van geld. Ze lopen geen risico dat de wisselkoers verandert. Prijzen zijn ook makkelijk te vergelijken.",
+        "g": [
+         {
+          "t": "geen kosten voor het wisselen van geld",
+          "p": 1
+         },
+         {
+          "t": "geen wisselkoersrisico / prijzen makkelijk vergelijken",
+          "p": 1
+         }
+        ],
+        "v": "Noem twee voordelen van de euro voor bedrijven die handelen met andere eurolanden.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Geen wisselkosten, geen wisselkoersrisico, prijzen makkelijk vergelijken."
+      ]
+     },
+     {
+      "id": "c",
+      "v": "De ECB verlaagt de rente. Wat doen consumenten dan meestal?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Meer lenen en meer kopen",
+         "Meer sparen en minder kopen"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Consumenten gaan"
+       }
+      ],
+      "uitw": [
+       "Lenen wordt goedkoper en sparen levert minder op."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 5,
+    "titel": "Welvaart in de wereld",
+    "tekst": "Bergland heeft een nationaal inkomen van €36 miljard en 9 miljoen inwoners. Rijkland heeft een nationaal inkomen van €800 miljard.",
+    "p": 8,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken het inkomen per hoofd van de bevolking in Bergland.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         4000
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.5,
+        "label": "Inkomen per hoofd"
+       }
+      ],
+      "uitw": [
+       "nationaal inkomen : aantal inwoners = 36.000.000.000 : 9.000.000 = €4.000"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Rijkland besteedt 0,7% van het nationaal inkomen aan ontwikkelingssamenwerking. Bereken hoeveel miljard euro dat is.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         5.6
+        ],
+        "p": 1,
+        "eenh": "miljard euro",
+        "tol": 0.005,
+        "label": "Ontwikkelingssamenwerking"
+       }
+      ],
+      "uitw": [
+       "(percentage : 100) × totaal = (0,7 : 100) × 800 = 5,6 miljard euro"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Kies bij elk voorbeeld het soort hulp.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Noodhulp",
+         "Structurele hulp",
+         "Gebonden hulp"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Dekens en tenten na een orkaan"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Noodhulp",
+         "Structurele hulp",
+         "Gebonden hulp"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Geld voor de bouw van scholen"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Noodhulp",
+         "Structurele hulp",
+         "Gebonden hulp"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "Hulpgeld dat besteed moet worden bij bedrijven uit het land dat de hulp geeft"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Noodhulp",
+         "Structurele hulp",
+         "Gebonden hulp"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Voedsel bij een hongersnood door droogte"
+       }
+      ],
+      "uitw": [
+       "Noodhulp: snel na een ramp. Structurele hulp: voor de lange termijn. Gebonden hulp: met een voorwaarde over de besteding."
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Leg uit waarom een monocultuur riskant is voor een land.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "5d",
+        "p": 2,
+        "label": "Monocultuur",
+        "model": "Het land is afhankelijk van één of enkele exportproducten. Als de prijs daarvan daalt of de oogst mislukt, dalen de inkomsten van het hele land.",
+        "g": [
+         {
+          "t": "afhankelijk van één of enkele (export)producten",
+          "p": 1
+         },
+         {
+          "t": "bij een lagere prijs of een mislukte oogst dalen de inkomsten van het land sterk",
+          "p": 1
+         }
+        ],
+        "v": "Leg uit waarom een monocultuur riskant is voor een land.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Eén product: bij een lage prijs of slechte oogst daalt het inkomen sterk."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 6,
+    "titel": "Eerlijke cacao",
+    "tekst": "Een coöperatie van cacaoboeren verkoopt via Fairtrade. De minimumprijs is €2.400 per ton. De fairtradepremie is €240 per ton.",
+    "p": 4,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken de fairtradeprijs per ton cacao.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         2640
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.5,
+        "label": "Prijs per ton"
+       }
+      ],
+      "uitw": [
+       "minimumprijs + fairtradepremie = 2.400 + 240 = €2.640"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "De coöperatie verkoopt 15 ton cacao. Bereken hoeveel de coöperatie in totaal krijgt.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         39600
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.5,
+        "label": "Totaal"
+       }
+      ],
+      "uitw": [
+       "15 × 2.640 = €39.600"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Op de wereldmarkt is de prijs €2.150 per ton. Bereken hoeveel de boeren per ton meer krijgen via Fairtrade.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         490
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.5,
+        "label": "Verschil per ton"
+       }
+      ],
+      "uitw": [
+       "2.640 − 2.150 = €490"
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Hoe kan een consument in Nederland deze boeren helpen?",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "6d",
+        "p": 1,
+        "label": "De consument",
+        "model": "Door producten te kopen met een eerlijke prijs voor de boer, bijvoorbeeld chocolade van Fairtrade.",
+        "g": [
+         {
+          "t": "producten kopen waarvoor de boer een eerlijke prijs krijgt (Fairtrade)",
+          "p": 1
+         }
+        ],
+        "v": "Hoe kan een consument in Nederland deze boeren helpen?",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Kies producten met een eerlijke prijs voor de boer."
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "toetsen": {
+  "t1": {
+   "n": 1,
+   "t": "oefen-SE",
+   "sub": "H7 en H8",
+   "min": 75,
+   "mc": "mc_a",
+   "open": null,
+   "rek": "rek_a"
+  }
+ },
+ "VERS": [
+  {
+   "n": 1,
+   "min": 75,
+   "pts": 53
+  }
+ ]
+}

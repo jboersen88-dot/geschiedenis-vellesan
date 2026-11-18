@@ -58,6 +58,10 @@ CONFIG["se56"] = dict(titel="Oefen-SE · Economie jaar 4 mavo · H5, H6 en H7", 
                       lab="../h.html?p=jaar-4%2Fse-h5-en-h6#oefenen", opg="Opgave", rek="Opgaven", terug=("../h.html?p=jaar-4%2Fse-h5-en-h6", "Terug naar het SE"))
 CONFIG["se13"] = dict(titel="Oefen-SE · Economie jaar 3 mavo · H1 en H3", key="eco-se13-toets-v1", bron="se13/bron", data="se13/bron/toetsen.json",
                       lab="../h.html?p=jaar-3%2Fmavo%2Fse-1#oefenen", opg="Opgave", rek="Opgaven", terug=("../h.html?p=jaar-3%2Fmavo%2Fse-1", "Terug naar het SE"))
+CONFIG["j3se56"] = dict(titel="Oefen-SE · Economie jaar 3 mavo · H5 en H6", key="eco-j3se56-toets-v1", bron="j3se56/bron", data="j3se56/bron/toetsen.json",
+                      lab="../h.html?p=jaar-3%2Fmavo%2Fse-3-h5-h6#oefenen", opg="Opgave", rek="Opgaven", terug=("../h.html?p=jaar-3%2Fmavo%2Fse-3-h5-h6", "Terug naar het SE"))
+CONFIG["j3se78"] = dict(titel="Oefen-SE · Economie jaar 3 mavo · H7 en H8", key="eco-j3se78-toets-v1", bron="j3se78/bron", data="j3se78/bron/toetsen.json",
+                      lab="../h.html?p=jaar-3%2Fmavo%2Fse4-h7-h8#oefenen", opg="Opgave", rek="Opgaven", terug=("../h.html?p=jaar-3%2Fmavo%2Fse4-h7-h8", "Terug naar het SE"))
 CONFIG["se34"] = dict(titel="Oefen-SE · Economie jaar 4 mavo · H3 en H4", key="eco-se34-toets-v1", bron="se34/bron", data="se34/bron/toetsen.json",
                       lab="../h.html?p=jaar-4%2Fse4#oefenen", opg="Opgave", rek="Opgaven", terug=("../h.html?p=jaar-4%2Fse4", "Terug naar het SE"))
 
