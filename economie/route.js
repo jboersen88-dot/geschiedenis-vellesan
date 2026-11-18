@@ -50,7 +50,14 @@ var FORMULES={
   schade:{t:"schade − eigen risico",must:[["schade"],["eigen","risico"]]},
   premie:{t:"premie per maand × 12",must:[["premie"],["12"]]},
   gem:{t:"alle getallen optellen : het aantal",must:[["optel","+","som","samen"],["aantal","delen",":","/"]]},
-  afronden:{t:"geld: 2 cijfers achter de komma, procenten: 1 cijfer",must:[["2","twee"],["1","één","een"]]}
+  afronden:{t:"geld: 2 cijfers achter de komma, procenten: 1 cijfer",must:[["2","twee"],["1","één","een"]]},
+  /* jaar 3 havo/vwo H2 */
+  geldh:{t:"chartaal geld + giraal geld",must:[["chartaal","chartale"],["giraal","girale"]]},
+  intr:{t:"(intrinsieke waarde : nominale waarde) × 100",must:[["intrinsiek"],["nominal","extrinsiek"],["100"]]},
+  index:{t:"(getal gevraagd jaar : getal basisjaar) × 100",must:[["basis"],["100"]]},
+  ric:{t:"(NIC : PIC) × 100",must:[["nic","nominal"],["pic","prijs"],["100"]]},
+  koopk:{t:"RIC − 100",must:[["ric","reëel","reeel"],["100"]]},
+  reeel:{t:"rente − inflatie",must:[["rente"],["inflatie"]]}
 };
 function normF(s){return String(s).toLowerCase().replace(/[xX*]|keer|maal/g,"×").replace(/÷|\/|gedeeld door|delen door/g,":").replace(/[–—]/g,"−").replace(/\bmin\b/g,"−").replace(/\bplus\b/g,"+");}
 function formuleOk(key,ans){var f=FORMULES[key],a=normF(ans);if(!f||a.replace(/\s/g,"").length<3)return false;
@@ -132,6 +139,34 @@ afronden:function(L){
   if(L===1){var x=rnd(1,250)+rnd(1,9999)/10000,a=r(x,2);return {f:"afronden",h:"Noteer dit als geldbedrag.",body:"Uitkomst op je rekenmachine: <code>"+num(x).replace(/\./g,"")+"</code>",a:a,d:2,u:"€",calc:"Geld: twee cijfers achter de komma. Kijk naar het derde cijfer.\n"+num(x).replace(/\./g,"")+" → "+eur(a)};}
   if(L===2){var y=rnd(1,95)+rnd(1,999)/1000,b=r(y,1);return {f:"afronden",h:"Noteer dit als percentage.",body:"Uitkomst op je rekenmachine: <code>"+num(y)+"</code>",a:b,d:1,u:"%",calc:"Procenten: één cijfer achter de komma. Kijk naar het tweede cijfer.\n"+num(y)+" → "+pc(b)};}
   var t=pick([1250,2400,3600,4800]),q=pick([3,6,7,9]),w=t/q,a3=r(w,2);return {f:"afronden",h:"Hoeveel krijgt ieder? Reken uit en noteer het netjes als geldbedrag.",body:"Een prijs van "+eur(t)+" wordt eerlijk verdeeld over "+q+" personen.",a:a3,d:2,u:"€",calc:num(t)+" : "+q+" = "+num(r(w,4))+"…\nAfronden op 2 cijfers achter de komma: "+eur(a3)};},
+/* ---- jaar 3 havo/vwo H2 "De rol van geld" (18 nov 2026): zelfde rekensoorten als de rekentrainer (j3vh2/bron/reken.js), per niveau ---- */
+geldh:function(L){var c=rnd(45,90),g=rnd(28,52)*10,sp=rnd(35,70)*10,dp=rnd(6,18)*10,kl=rnd(5,25),a=c+g,M=function(x){return "€"+num(x)+" mld";},
+  uit="\nSpaargeld, deposito's en geld in de kluis van de bank tellen niet mee: daarmee kun je niet direct betalen.";
+  if(L===1)return {f:"geldh",h:"Hoe groot is de maatschappelijke geldhoeveelheid? Antwoord in miljard euro.",body:stmt([["Chartaal geld bij gezinnen en bedrijven",M(c)],["Giraal geld op betaalrekeningen",M(g)],["Geld op spaarrekeningen",M(sp)]]),a:a,d:0,u:"",calc:"chartaal geld + giraal geld\n"+c+" + "+g+" = "+M(a)+uit};
+  if(L===2)return {f:"geldh",h:"Hoe groot is de maatschappelijke geldhoeveelheid? Antwoord in miljard euro.",body:stmt(shuffle([["Chartaal geld bij gezinnen, bedrijven en overheid",M(c)],["Giraal geld op betaalrekeningen",M(g)],["Geld op spaarrekeningen",M(sp)],["Spaardeposito's",M(dp)],["Chartaal geld in de kluizen van banken",M(kl)]])),a:a,d:0,u:"",calc:"chartaal geld (buiten de banken) + giraal geld\n"+c+" + "+g+" = "+M(a)+uit};
+  var c2=c+rnd(-6,4),g2=g+rnd(1,6)*8,sp2=sp+rnd(2,8)*10,n=c2+g2,a3=r((n-a)/a*100,1);
+  return {f:"pct",h:"Met hoeveel procent is de maatschappelijke geldhoeveelheid veranderd? Bereken eerst de geldhoeveelheid van beide jaren. Rond af op 1 decimaal.",body:'<table class="rt-tbl"><tr><td></td><td>2025 · 2026</td></tr><tr><td>Chartaal geld in omloop</td><td>'+M(c)+' · '+M(c2)+'</td></tr><tr><td>Giraal geld op betaalrekeningen</td><td>'+M(g)+' · '+M(g2)+'</td></tr><tr><td>Geld op spaarrekeningen</td><td>'+M(sp)+' · '+M(sp2)+'</td></tr></table>',a:a3,d:1,u:"%",calc:"Stap 1, 2025: "+c+" + "+g+" = "+M(a)+"\nStap 2, 2026: "+c2+" + "+g2+" = "+M(n)+"\nStap 3: ("+n+" − "+a+") : "+a+" × 100 = "+pc(a3)+"\nHet spaargeld telt in geen van beide jaren mee."};},
+intr:function(L){
+  if(L===1){var v=pick([["een munt van €2",2,pick([0.1,0.2,0.3])],["een munt van €1",1,pick([0.05,0.1,0.2])],["een munt van 50 cent",0.5,pick([0.02,0.05,0.1])]]),a=r(v[2]/v[1]*100,1);return {f:"intr",h:"Hoeveel procent van de nominale waarde is de intrinsieke waarde? Rond af op 1 decimaal.",body:"Op "+v[0]+" staat "+eur(v[1])+". Het metaal van de munt is "+eur(v[2])+" waard.",a:a,d:1,u:"%",calc:"(intrinsieke waarde : nominale waarde) × 100\n("+num(v[2])+" : "+num(v[1])+") × 100 = "+pc(a)};}
+  if(L===2){var w=pick([["een munt van 20 cent",0.2,pick([0.01,0.02,0.03])],["een munt van €2",2,pick([0.08,0.12,0.15,0.17])],["een munt van €1",1,pick([0.06,0.07,0.08,0.09])],["een biljet van €50",50,pick([0.05,0.08,0.11])],["een biljet van €20",20,pick([0.04,0.06,0.07])]]),a2=r(w[2]/w[1]*100,1);return {f:"intr",h:"Hoeveel procent van de nominale waarde is de intrinsieke waarde? Rond af op 1 decimaal.",body:"Op "+w[0]+" staat "+eur(w[1])+". Het materiaal is "+eur(w[2])+" waard.",a:a2,d:1,u:"%",calc:"(intrinsieke waarde : nominale waarde) × 100\n("+num(w[2])+" : "+num(w[1])+") × 100 = "+pc(a2)+"\nDe waarde die erop staat is veel hoger dan de waarde van het materiaal: fiduciair geld."};}
+  var m=pick([["€2",2,8.5],["€1",1,7.5],["50 cent",0.5,7.8]]),pg=pick([0.006,0.008,0.009,0.011,0.012]),iw=r(m[2]*pg,4),a3=r(iw/m[1]*100,1);
+  return {f:"intr",h:"Hoeveel procent van de nominale waarde is de intrinsieke waarde? Bereken eerst wat het metaal waard is. Rond af op 1 decimaal.",body:"Een munt van "+m[0]+" weegt "+num(m[2])+" gram. Het metaal kost €"+num(pg)+" per gram.",a:a3,d:1,u:"%",calc:"Stap 1, intrinsieke waarde: "+num(m[2])+" × "+num(pg)+" = €"+num(iw)+"\nStap 2: ("+num(iw)+" : "+num(m[1])+") × 100 = "+pc(a3)};},
+index:function(L){var i1=function(x){return nf1.format(x);};
+  if(L===1){var b=pick([2,4,5,8,10,20]),p=pick([5,10,15,20,25]),n=r(b*(1+p/100),2),a=r(n/b*100,1);return {f:"index",h:"Wat is het indexcijfer van de prijs? Rond af op 1 decimaal.",body:pick(["Een ijsje","Een broodje","Een tijdschrift","Een bioscoopkaartje"])+" kostte in het basisjaar "+eur(b)+". Nu is de prijs "+eur(n)+".",a:a,d:1,u:"",calc:"(getal gevraagd jaar : getal basisjaar) × 100\n("+num(n)+" : "+num(b)+") × 100 = "+i1(a)+"\nDat is "+pc(r(a-100,1))+" duurder dan in het basisjaar."};}
+  if(L===2){var v=pick([["Een liter benzine",money(1.6,2.1),[-9,14]],["Een bioscoopkaartje",money(9,13),[2,18]],["Een zak chips",money(1.1,2.2),[4,30]],["De huur van een studio",rnd(55,85)*10,[2,9]],["Een spelcomputer",rnd(38,52)*10,[-15,-3]]]),b2=v[1],n2=r(b2*(1+rnd(v[2][0],v[2][1])/100),2);if(n2===b2)n2=r(b2+0.1,2);var a2=r(n2/b2*100,1);
+    return {f:"index",h:"Wat is het indexcijfer van de prijs? Rond af op 1 decimaal.",body:v[0]+" kostte in het basisjaar "+eur(b2)+". Nu is de prijs "+eur(n2)+".",a:a2,d:1,u:"",calc:"(getal gevraagd jaar : getal basisjaar) × 100\n("+num(n2)+" : "+num(b2)+") × 100 = "+i1(a2)+"\n"+(a2>=100?"Dat is "+pc(r(a2-100,1))+" duurder dan in het basisjaar.":"Onder de 100: "+pc(r(100-a2,1))+" goedkoper dan in het basisjaar.")};}
+  var b3=pick([640,720,780,850,920]),ix=r(100+rnd(21,96)/10,1),a3=r(b3*ix/100,2);
+  return {f:"index",h:"Wat is de huur nu? Reken terug vanuit het indexcijfer. Rond af op 2 decimalen.",body:"In het basisjaar was de huur van een appartement "+eur(b3)+" per maand. Het indexcijfer van de huur is nu "+i1(ix)+".",a:a3,d:2,u:"€",calc:"Indexcijfer = (getal gevraagd jaar : getal basisjaar) × 100\nAndersom: getal gevraagd jaar = (indexcijfer : 100) × getal basisjaar\n("+i1(ix)+" : 100) × "+num(b3)+" = "+eur(a3)};},
+ric:function(L){var i1=function(x){return nf1.format(x);},kk=function(x){return "De koopkracht "+(x>100?"stijgt met "+pc(r(x-100,1)):x<100?"daalt met "+pc(r(100-x,1)):"blijft gelijk")+".";};
+  if(L===1){var N=r(100+rnd(10,90)/10,1),P=r(100+rnd(10,90)/10,1),a=r(N/P*100,1);return {f:"ric",h:"Bereken het indexcijfer van het reële inkomen (RIC). Rond af op 1 decimaal.",body:"Het indexcijfer van het nominale inkomen (NIC) is "+i1(N)+". Het indexcijfer van de prijzen (PIC) is "+i1(P)+".",a:a,d:1,u:"",calc:"(NIC : PIC) × 100\n("+i1(N)+" : "+i1(P)+") × 100 = "+i1(a)+"\n"+kk(a)};}
+  if(L===2){var l=pick([0.5,1,1.5,2,2.5,3,3.5,4,4.5,5]),p=pick([1.2,1.8,2.2,2.6,3.3,3.8,4.4,5.1]),N2=r(100+l,1),P2=r(100+p,1),a2=r(N2/P2*100,1);return {f:"ric",h:"Bereken het indexcijfer van het reële inkomen (RIC). Maak eerst van de procenten indexcijfers. Rond af op 1 decimaal.",body:"De lonen stijgen dit jaar met "+pc(l)+". De prijzen stijgen met "+pc(p)+".",a:a2,d:1,u:"",calc:"NIC = 100 + "+nf1.format(l)+" = "+i1(N2)+" en PIC = 100 + "+nf1.format(p)+" = "+i1(P2)+"\n("+i1(N2)+" : "+i1(P2)+") × 100 = "+i1(a2)+"\n"+kk(a2)};}
+  var nm=pick(NAMEN),o=rnd(22,32)*100,n=o+rnd(2,14)*10+5,q=pick([1.5,2.4,2.6,3.3,3.8,4.2]),N3=r(n/o*100,1),P3=r(100+q,1),ric=r(N3/P3*100,1),a3=r(ric-100,1);
+  return {f:"ric",h:"Met hoeveel procent verandert de koopkracht van "+nm+"? Bereken eerst het NIC en het RIC. Rond af op 1 decimaal en typ een min-teken bij een daling.",body:nm+" verdiende vorig jaar "+eur(o)+" per maand en dit jaar "+eur(n)+". De prijzen zijn in dat jaar met "+pc(q)+" gestegen.",a:a3,d:1,u:"%",calc:"Stap 1, NIC: ("+num(n)+" : "+num(o)+") × 100 = "+i1(N3)+"\nStap 2, PIC: 100 + "+nf1.format(q)+" = "+i1(P3)+"\nStap 3, RIC: ("+i1(N3)+" : "+i1(P3)+") × 100 = "+i1(ric)+"\nStap 4, koopkracht: "+i1(ric)+" − 100 = "+pc(a3)};},
+reeel:function(L){var p2=function(x){return (x<0?"−":"")+nf2.format(Math.abs(x))+"%";};
+  if(L===1){var rt=pick([2,2.5,3,3.5,4]),inf=pick([1,1.5,2]),a=r(rt-inf,2);if(a===0)return RG.reeel(1);return {f:"reeel",h:"Wat is de reële rente? Rond af op 2 decimalen.",body:"De spaarrente is "+pc(rt)+". De inflatie is "+pc(inf)+".",a:a,d:2,u:"%",calc:"rente − inflatie\n"+nf1.format(rt)+" − "+nf1.format(inf)+" = "+p2(a)+"\nPositief: je spaargeld wordt echt meer waard."};}
+  if(L===2){var r2=pick([0.5,0.75,1,1.25,1.5,1.8,2.35]),i2=pick([1.2,1.8,2.1,2.6,3.1,3.3,3.6,4.2]),a2=r(r2-i2,2);if(a2===0)return RG.reeel(2);return {f:"reeel",h:"Wat is de reële rente? Rond af op 2 decimalen en typ een min-teken als hij negatief is.",body:"De spaarrente is "+p2(r2)+". De inflatie is "+p2(i2)+".",a:a2,d:2,u:"%",calc:"rente − inflatie\n"+nf2.format(r2)+" − "+nf2.format(i2)+" = "+p2(a2)+"\n"+(a2<0?"Negatief: je spaargeld verliest koopkracht.":"Positief: je spaargeld wordt echt meer waard.")};}
+  var b=pick([800,1200,1500,2400,4000,6500]),r3=pick([1.25,1.5,1.75,2.1]),i3=pick([2.6,3.1,3.4,3.9]),rr=r(r3-i3,2),a3=r(rr/100*b,2);
+  return {f:"reeel",h:"Hoeveel euro koopkracht verliest dit spaargeld ongeveer in een jaar? Bereken eerst de reële rente. Rond af op 2 decimalen.",body:"Op een spaarrekening staat "+eur(b)+". De spaarrente is "+p2(r3)+" en de inflatie is "+p2(i3)+".",a:-a3,d:2,u:"€",abs:true,calc:"Stap 1, reële rente: "+nf2.format(r3)+" − "+nf2.format(i3)+" = "+p2(rr)+"\nStap 2: ("+nf2.format(-rr)+" : 100) × "+num(b)+" = "+eur(-a3)+" verlies aan koopkracht\nJe krijgt wel rente, maar de prijzen stijgen harder."};},
 gem:function(L){
   if(L===1){var xs=[rnd(5,9),rnd(5,9),rnd(5,9)],s=xs[0]+xs[1]+xs[2],a=r(s/3,1);return {f:"gem",h:"Wat is het gemiddelde cijfer? Rond af op 1 decimaal.",body:"Je haalt voor economie een "+xs.join(", een ")+".",a:a,d:1,u:"",calc:"Optellen en delen door het aantal:\n("+xs.join(" + ")+") : 3 = "+s+" : 3 = "+nf1.format(a)};}
   if(L===2){var n=rnd(4,6),ys=[],t=0;for(var i=0;i<n;i++){var v=rnd(8,20)/2;ys.push(v);t+=v;}var a2=r(t/n,1);return {f:"gem",h:"Wat is het gemiddelde cijfer? Rond af op 1 decimaal.",body:"Een speaker krijgt van de Consumentenbond deze cijfers: "+ys.map(function(v){return nf1.format(v);}).join(" · "),a:a2,d:1,u:"",calc:"("+ys.map(num).join(" + ")+") : "+n+" = "+num(t)+" : "+n+" = "+nf1.format(a2)};}
@@ -166,10 +201,10 @@ function mount(opt){
     if(mode==="instap"){var open=D.doelen.filter(function(x){return !ST.ins[x.id];});if(!open.length){mode="route";rondeKlaar(true);return;}d=open[0];l=2;ins=true;}
     cur=vraag(d,l||1,ins);
     /* verdieping: op drie sterren en drie keer goed op rij een nieuwe vraag van de Worker */
-    if(!ins&&L(d)===3&&(ST.str[d.id]||0)>=3&&NK&&NK.enabled&&cur.t!=="gen"&&!cur.worker){toonWacht();maakWorker(d).then(function(q){if(q)cur={t:"mc",doel:d,l:3,q:q,worker:true};toon();});return;}
+    if(!ins&&L(d)===3&&(ST.str[d.id]||0)>=3&&NK&&NK.enabled&&(D.vak||/^j2/.test(MAP))&&cur.t!=="gen"&&!cur.worker){toonWacht();maakWorker(d).then(function(q){if(q)cur={t:"mc",doel:d,l:3,q:q,worker:true};toon();});return;}
     toon();}
   function maakWorker(d){
-    return NK.maak({vak:"eco2",onderwerpen:[d.t+" ("+HCODE+" "+d.par+")"],mc:1,open:0,niveau:3,fouten:(ST.hist||[]).filter(function(h){return h.d===d.id&&!h.ok;}).length}).then(function(f){
+    return NK.maak({vak:D.vak||"eco2",onderwerpen:[d.t+" ("+HCODE+" "+d.par+")"],mc:1,open:0,niveau:3,fouten:(ST.hist||[]).filter(function(h){return h.d===d.id&&!h.ok;}).length}).then(function(f){
       var q=f&&f.status==="ok"&&f.mc&&f.mc[0];if(!q||!q.j||!q.f||q.f.length<3)return null;
       return {t:"mc",v:q.v||q.vraag||"",o:[q.j].concat(q.f.slice(0,3)),u:q.u||q.uitleg||""};}).catch(function(){return null;});}
   /* ---------- weergave ---------- */
@@ -187,7 +222,7 @@ function mount(opt){
     el.innerHTML=h+'</div>';var f=el.querySelector("input,textarea");if(f&&!RM)setTimeout(function(){try{f.focus({preventScroll:true});}catch(e){}},50);}
   function kaart(){var keys={};D.doelen.forEach(function(d){if(d.gen)(FORMKEYS[d.gen]||[]).forEach(function(k){keys[k]=1;});});
     return '<div class="rt-kaart-in"><b>Formulekaart</b>'+Object.keys(keys).map(function(k){return '<button class="rt-fk" data-fk="'+k+'">'+esc(FORMULES[k].t)+'</button>';}).join("")+'</div>';}
-  var FORMKEYS={maand:["maand","week","budget"],budget:["budget","maand"],saldo:["saldo","terug"],pct:["pct","procvan","perc"],procvan:["procvan","pct","perc"],perc:["perc","procvan","pct"],rente:["rente","procvan"],lening:["totaal","lening","perc"],schade:["schade","premie","perc"],afronden:["afronden"],gem:["gem"]};
+  var FORMKEYS={maand:["maand","week","budget"],budget:["budget","maand"],saldo:["saldo","terug"],pct:["pct","procvan","perc"],procvan:["procvan","pct","perc"],perc:["perc","procvan","pct"],rente:["rente","procvan"],lening:["totaal","lening","perc"],schade:["schade","premie","perc"],afronden:["afronden"],gem:["gem"],geldh:["geldh","pct"],intr:["intr","perc"],index:["index","pct"],ric:["ric","koopk","index"],reeel:["reeel","procvan"]};
   /* ---------- nakijken en bijwerken ---------- */
   function klaar(ok,fbHtml,half){
     var d=cur.doel,id=d.id,was=L(d)||0,msg="";
@@ -215,7 +250,7 @@ function mount(opt){
     btn.disabled=true;btn.textContent="Bezig met nakijken…";ta.disabled=true;
     var zelf=function(melding){el.querySelector("#rtFb").innerHTML='<div class="rt-fb mid">'+(melding?esc(melding)+" ":"")+'Kijk zelf na met het antwoordmodel.</div><div class="rt-model"><b>Antwoordmodel</b><p>'+esc(q.model)+'</p><ul>'+q.g.map(function(x){return '<li>'+esc(x.t)+' ('+x.p+' p)</li>';}).join("")+'</ul></div><p class="rt-h">Had jij dit?</p><div class="rt-btns"><button class="rt-btn" data-zelf="1">Ja, alles</button><button class="rt-btn ghost" data-zelf="2">Een deel</button><button class="rt-btn ghost" data-zelf="0">Nee</button></div>';};
     if(!NK||!NK.enabled){zelf("");return;}
-    NK.check({h:[HCODE],vak:"economie",vraag:q.v,punten:q.g.map(function(x){return {t:x.t,p:x.p};}),bron:"ANTWOORDMODEL VAN DE DOCENT:\n"+q.model,antwoord:ans.slice(0,2000)}).then(function(f){
+    NK.check({h:D.h||[HCODE],vak:"economie",vraag:q.v,punten:q.g.map(function(x){return {t:x.t,p:x.p};}),bron:"ANTWOORDMODEL VAN DE DOCENT:\n"+q.model,antwoord:ans.slice(0,2000)}).then(function(f){
       if(f.status!=="ok"){zelf(f.melding||"De AI kon nu niet nakijken.");return;}
       var ok=f.punten>=f.max,half=!ok&&f.punten>0;klaar(ok,NK.render(f)+'<div class="rt-model"><b>Antwoordmodel</b><p>'+esc(q.model)+'</p></div>',half);});}
   el.addEventListener("click",function(e){
