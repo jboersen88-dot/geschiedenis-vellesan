@@ -13,7 +13,7 @@ Eerste ronde van de opdracht "bouw nu ook de hoofdstukken voor jaar 3 economie v
 - De hoofdstuk- en paragraaftitels volgen editie 7.1 van het boek, net als het leerdoelenblad van de docent: H1 heet nu "Hoe welvarend ben jij?" met 1.1 "Kun jij kopen wat je wilt?", 1.2 "Hoe word je beïnvloed?", 1.3 "Je inkomsten en uitgaven" en 1.4 "Wordt alles duurder?". De PowerPoints zelf hebben nog de oude titels. De links naar de pagina's zijn niet veranderd.
 - Het eerste SE is opgezet als H1 + H3, omdat in Drive een "Oefentoets voor het SE hoofdstuk 1 en 3" van oktober 2026 staat. De oude pagina heette "SE 1" en ging alleen over H1.
 - Uit de PowerPoint van 3.4 zijn twee dia's weggelaten: een grafiek uit het boek en een grafiek van een krant.
-- De formule voor reserveren is (benodigd bedrag − al gespaard) : aantal maanden. De samengestelde rente is beginbedrag × (groeifactor ^ aantal jaren), zoals in de instructiefilm.
+- De formule voor reserveren is (benodigd bedrag − al gespaard) : aantal maanden. De samengestelde rente is beginbedrag × (groeifactor ^ aantal jaren).
 - De oefentoets H1 op papier staat nu als oefenstof bij paragraaf 1.4.
 - H3 heeft geen persoonlijke route (Mijn route); dat heeft alleen jaar 2 H2.
 
