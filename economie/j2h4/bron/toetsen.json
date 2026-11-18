@@ -1,0 +1,668 @@
+{
+ "blokken": {
+  "mc_a": [
+   {
+    "v": "Een zagerij verkoopt planken aan een meubelfabriek. De fabriek verkoopt tafels aan een winkel. Hoe heet deze rij bedrijven?",
+    "o": [
+     "De kringloopeconomie",
+     "De bedrijfskolom",
+     "De arbeidsverdeling",
+     "De productiefactoren"
+    ],
+    "j": 1,
+    "u": "Alle bedrijven die na elkaar aan een product werken."
+   },
+   {
+    "v": "Welk bedrijf staat bovenaan in de bedrijfskolom van een houten tafel?",
+    "o": [
+     "De klant die de tafel koopt",
+     "De fabriek die de tafel maakt",
+     "Het bedrijf dat de bomen kapt",
+     "De winkel die de tafel verkoopt"
+    ],
+    "j": 2,
+    "u": "Bovenaan staat het bedrijf dat de grondstof uit de natuur haalt."
+   },
+   {
+    "v": "Een pizzabakker gebruikt een oven. Bij welke productiefactor hoort de oven?",
+    "o": [
+     "Winst",
+     "Kapitaal",
+     "Natuur",
+     "Arbeid"
+    ],
+    "j": 1,
+    "u": "Een oven is een kapitaalgoed."
+   },
+   {
+    "v": "Een fabriek loost afval in een rivier. De gemeente maakt het water schoon met belastinggeld. Hoe heten deze kosten?",
+    "o": [
+     "Maatschappelijke kosten",
+     "Scholingskosten",
+     "Afschrijvingskosten",
+     "Bedrijfskosten"
+    ],
+    "j": 0,
+    "u": "De samenleving betaalt, niet het bedrijf."
+   },
+   {
+    "v": "Welk voorbeeld past bij een lineaire economie?",
+    "o": [
+     "Een jas die je tweedehands koopt in een winkel",
+     "Een telefoon die je laat repareren en weer gebruikt",
+     "Een oud shirt waar een nieuw shirt van wordt gemaakt",
+     "Een wegwerpbeker die na gebruik in de afvalbak gaat"
+    ],
+    "j": 3,
+    "u": "Lineair: grondstof, product, weggooien."
+   },
+   {
+    "v": "Een bedrijf koopt een nieuwe bestelbus om sneller te bezorgen. Hoe heet dat?",
+    "o": [
+     "Afschrijven",
+     "Recycling",
+     "Specialiseren",
+     "Investeren"
+    ],
+    "j": 3,
+    "u": "Investeren is kapitaalgoederen kopen."
+   },
+   {
+    "v": "In een magazijn rijden robots die zelf de pakketten pakken. Waar is dit een voorbeeld van?",
+    "o": [
+     "Robotisering",
+     "Mechanisering",
+     "Arbeidsintensief werk",
+     "Een lineaire economie"
+    ],
+    "j": 0,
+    "u": "Robots doen het werk: robotisering."
+   },
+   {
+    "v": "Een bakkerij maakt met dezelfde vijf bakkers meer broden dan vorig jaar. Wat is er gebeurd?",
+    "o": [
+     "De afzet is gedaald",
+     "De arbeidsproductiviteit is gestegen",
+     "De arbeidsproductiviteit is gedaald",
+     "De restwaarde is nu gestegen"
+    ],
+    "j": 1,
+    "u": "Elke bakker maakt nu meer broden."
+   },
+   {
+    "v": "In een autofabriek doen machines bijna al het werk. Hoe noem je deze manier van produceren?",
+    "o": [
+     "Arbeidsintensief",
+     "Kapitaalintensief",
+     "Agrarisch",
+     "Dienstverlenend"
+    ],
+    "j": 1,
+    "u": "Naar verhouding meer machines dan mensen."
+   },
+   {
+    "v": "Een ijssalon verkoopt op een dag 300 ijsjes. Wat is die 300?",
+    "o": [
+     "De kostprijs",
+     "De afzet",
+     "De omzet",
+     "De winst"
+    ],
+    "j": 1,
+    "u": "De afzet is het aantal verkochte producten."
+   },
+   {
+    "v": "De kosten van een winkel zijn hoger dan de omzet. Wat maakt de winkel?",
+    "o": [
+     "Winst",
+     "Verlies",
+     "Afzet",
+     "Omzet"
+    ],
+    "j": 1,
+    "u": "Kosten hoger dan de omzet is verlies."
+   },
+   {
+    "v": "Wat is een nadeel van een eigen bedrijf, vergeleken met loondienst?",
+    "o": [
+     "Je hebt geen zeker inkomen",
+     "Je hebt altijd een baas",
+     "Je mag geen winst maken",
+     "Je hebt een vast loon"
+    ],
+    "j": 0,
+    "u": "Een ondernemer heeft geen vast inkomen en loopt risico."
+   }
+  ],
+  "rek_a": [
+   {
+    "nr": 1,
+    "titel": "Goed of fout?",
+    "tekst": "",
+    "p": 5,
+    "delen": [
+     {
+      "id": "",
+      "v": "Goed of fout?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "De consument hoort bij de bedrijfskolom."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Natuur, arbeid en kapitaal zijn de drie productiefactoren."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Recycling is van afval nieuwe materialen maken."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "De zelfscankassa is een voorbeeld van mechanisering."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Een hoge omzet betekent altijd een hoge winst."
+       }
+      ],
+      "uitw": [
+       "De consument is geen bedrijf en bewerkt het product niet.",
+       "De zelfscankassa is automatisering: een computer stuurt het werk aan.",
+       "Van de omzet gaan eerst alle kosten af."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 2,
+    "titel": "Een houten kast",
+    "tekst": "Een zagerij verkoopt hout voor €45 aan een meubelmaker. De meubelmaker maakt er een kast van en verkoopt die voor €180 aan een winkel. De winkel verkoopt de kast voor €260.",
+    "p": 5,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken de toegevoegde waarde van de meubelmaker.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         135
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.05,
+        "label": "Toegevoegde waarde meubelmaker"
+       }
+      ],
+      "uitw": [
+       "Toegevoegde waarde = verkoopprijs − inkoopprijs = €180 − €45 = €135."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken de toegevoegde waarde van de winkel.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         80
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.05,
+        "label": "Toegevoegde waarde winkel"
+       }
+      ],
+      "uitw": [
+       "€260 − €180 = €80."
+      ]
+     },
+     {
+      "id": "c",
+      "v": "De meubelmaker maakt in een maand 25 kasten. De totale productiekosten zijn €3.250. Bereken de kostprijs per kast.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         130
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.05,
+        "label": "Kostprijs per kast"
+       }
+      ],
+      "uitw": [
+       "Kostprijs per product = totale productiekosten : aantal producten = €3.250 : 25 = €130."
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Uit welke twee onderdelen bestaat de toegevoegde waarde?",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "2d",
+        "p": 2,
+        "label": "Toegevoegde waarde",
+        "model": "De kosten van de bewerking en de winst.",
+        "g": [
+         {
+          "t": "de kosten van de bewerking",
+          "p": 1
+         },
+         {
+          "t": "de winst",
+          "p": 1
+         }
+        ],
+        "v": "Uit welke twee onderdelen bestaat de toegevoegde waarde?",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "De toegevoegde waarde bestaat uit de kosten van de bewerking en de winst."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 3,
+    "titel": "De nieuwe oven",
+    "tekst": "Bakker Jamal koopt een nieuwe oven voor €18.400. De oven gaat 8 jaar mee. Daarna is de restwaarde €2.400.",
+    "p": 5,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken de afschrijving per jaar.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         2000
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.05,
+        "label": "Afschrijving per jaar"
+       }
+      ],
+      "uitw": [
+       "(aanschafprijs − restwaarde) : aantal gebruiksjaren = (€18.400 − €2.400) : 8 = €2.000."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Wat voor kosten zijn afschrijvingskosten?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Bedrijfskosten",
+         "Maatschappelijke kosten"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Afschrijvingskosten zijn"
+       }
+      ],
+      "uitw": [
+       "Het bedrijf betaalt ze zelf: bedrijfskosten."
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Leg uit waarom een bedrijf investeert.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "3c",
+        "p": 1,
+        "label": "Investeren",
+        "model": "Om meer, beter of goedkoper te kunnen produceren.",
+        "g": [
+         {
+          "t": "om meer, beter of goedkoper te produceren (één van de drie is genoeg)",
+          "p": 1
+         }
+        ],
+        "v": "Leg uit waarom een bedrijf investeert.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Een bedrijf investeert om meer, beter of goedkoper te produceren."
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Met de oude oven bakten 4 bakkers samen 2.400 broden per week. Bereken de arbeidsproductiviteit.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         600
+        ],
+        "p": 1,
+        "eenh": "",
+        "tol": 0.5,
+        "label": "Broden per bakker"
+       }
+      ],
+      "uitw": [
+       "Arbeidsproductiviteit = totale productie : aantal werknemers = 2.400 : 4 = 600 broden per bakker."
+      ]
+     },
+     {
+      "id": "e",
+      "v": "Met de nieuwe oven bakken de 4 bakkers 3.000 broden per week. Bereken met hoeveel procent de arbeidsproductiviteit is gestegen. Rond af op 1 decimaal.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         25
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.05,
+        "label": "Stijging"
+       }
+      ],
+      "uitw": [
+       "Nieuw: 3.000 : 4 = 750 broden. (nieuw − oud) : oud × 100 = (750 − 600) : 600 × 100 = 25,0%."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 4,
+    "titel": "Schoon produceren",
+    "tekst": "Een frisdrankfabriek gebruikt veel energie. Daarbij komt CO₂ vrij.",
+    "p": 5,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Leg uit wat 'de vervuiler betaalt' betekent.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "4a",
+        "p": 1,
+        "label": "De vervuiler betaalt",
+        "model": "Wie milieuschade veroorzaakt, moet die zelf oplossen en betalen.",
+        "g": [
+         {
+          "t": "wie de schade veroorzaakt, betaalt (of lost het op)",
+          "p": 1
+         }
+        ],
+        "v": "Leg uit wat 'de vervuiler betaalt' betekent.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Wie milieuschade veroorzaakt, moet het zelf oplossen en betalen."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "De buren hebben last van de vieze lucht van de fabriek. Wat is dat?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Een negatief extern effect",
+         "Een toegevoegde waarde",
+         "Een restwaarde"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "De vieze lucht is"
+       }
+      ],
+      "uitw": [
+       "Een nadelig gevolg van productie voor anderen."
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Noem twee dingen die de fabriek kan doen om duurzamer te produceren.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "4c",
+        "p": 2,
+        "label": "Duurzaam produceren",
+        "model": "Bijvoorbeeld: groene stroom gebruiken, minder afval maken, afval recyclen of bomen laten planten.",
+        "g": [
+         {
+          "t": "een eerste juist voorbeeld (groene stroom, minder afval, recycling, bomen planten)",
+          "p": 1
+         },
+         {
+          "t": "een tweede juist voorbeeld",
+          "p": 1
+         }
+        ],
+        "v": "Noem twee dingen die de fabriek kan doen om duurzamer te produceren.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Duurzaam produceren is produceren met geen of minder schade voor mens en milieu."
+      ]
+     },
+     {
+      "id": "d",
+      "v": "De fabriek maakt nieuwe flessen van ingeleverde flessen. Bij welke economie past dat?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Kringloopeconomie",
+         "Lineaire economie"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Dat past bij een"
+       }
+      ],
+      "uitw": [
+       "Afval is de grondstof voor nieuwe producten."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 5,
+    "titel": "De saladebar van Lotte",
+    "tekst": "Lotte heeft een saladebar. Deze week verkoopt zij 420 salades voor €7,50 per stuk. Haar kosten: inkoop €1.300, huur €450, loon €600 en energie €150.",
+    "p": 8,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken de omzet van deze week.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         3150
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.05,
+        "label": "Omzet"
+       }
+      ],
+      "uitw": [
+       "Omzet = afzet × verkoopprijs = 420 × €7,50 = €3.150."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken de totale kosten.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         2500
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.05,
+        "label": "Totale kosten"
+       }
+      ],
+      "uitw": [
+       "€1.300 + €450 + €600 + €150 = €2.500."
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Bereken de winst.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         650
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.05,
+        "label": "Winst"
+       }
+      ],
+      "uitw": [
+       "Winst = omzet − kosten = €3.150 − €2.500 = €650."
+      ]
+     },
+     {
+      "id": "d",
+      "v": "De week erna is de omzet €2.250. De kosten blijven €2.500. Maakt Lotte winst of verlies? Hoeveel?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Verlies",
+         "Winst"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Lotte maakt"
+       },
+       {
+        "type": "num",
+        "ans": [
+         250
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.05,
+        "label": "Bedrag"
+       }
+      ],
+      "uitw": [
+       "€2.250 − €2.500 = −€250. Dat is €250 verlies."
+      ]
+     },
+     {
+      "id": "e",
+      "v": "Bereken de afzet in die tweede week.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         300
+        ],
+        "p": 1,
+        "eenh": "",
+        "tol": 0.5,
+        "label": "Afzet"
+       }
+      ],
+      "uitw": [
+       "Afzet = omzet : verkoopprijs = €2.250 : €7,50 = 300 salades."
+      ]
+     },
+     {
+      "id": "f",
+      "v": "Wanneer gaat een bedrijf failliet?",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "5f",
+        "p": 2,
+        "label": "Failliet",
+        "model": "Als het bedrijf lange tijd verlies maakt en zijn schulden niet meer kan betalen.",
+        "g": [
+         {
+          "t": "lange tijd verlies",
+          "p": 1
+         },
+         {
+          "t": "de schulden niet meer kunnen betalen",
+          "p": 1
+         }
+        ],
+        "v": "Wanneer gaat een bedrijf failliet?",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Een bedrijf dat lang verlies lijdt en zijn schulden niet kan betalen, gaat failliet."
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "toetsen": {
+  "t1": {
+   "n": 1,
+   "t": "oefentoets A",
+   "sub": "Hoofdstuk 4",
+   "min": 45,
+   "mc": "mc_a",
+   "open": null,
+   "rek": "rek_a"
+  }
+ },
+ "VERS": [
+  {
+   "n": 1,
+   "min": 45,
+   "pts": 40
+  }
+ ]
+}

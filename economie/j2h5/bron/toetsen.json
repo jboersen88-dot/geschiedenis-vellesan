@@ -1,0 +1,674 @@
+{
+ "blokken": {
+  "mc_a": [
+   {
+    "v": "Er zijn dit jaar veel meer aardbeien geoogst dan mensen willen kopen. Wat gebeurt er met de prijs?",
+    "o": [
+     "De prijs stijgt",
+     "De prijs blijft gelijk",
+     "De prijs daalt",
+     "De prijs verdubbelt"
+    ],
+    "j": 2,
+    "u": "Bij een overschot daalt de prijs."
+   },
+   {
+    "v": "Welke markt is een abstracte markt?",
+    "o": [
+     "De arbeidsmarkt",
+     "De weekmarkt",
+     "De bouwmarkt",
+     "De supermarkt"
+    ],
+    "j": 0,
+    "u": "Een abstracte markt kun je niet bezoeken."
+   },
+   {
+    "v": "Je neef vertelt dat zijn nieuwe schoenen heel fijn lopen. Daarom koop jij ze ook. Welke invloed is dat?",
+    "o": [
+     "Invloed van reclame",
+     "Invloed van de prijs",
+     "Commerciële invloed",
+     "Sociale invloed"
+    ],
+    "j": 3,
+    "u": "Je neef wil niets aan jou verdienen."
+   },
+   {
+    "v": "Een bakker verhuist naar een drukke winkelstraat. Bij welke P van marketing hoort dat?",
+    "o": [
+     "Plaats",
+     "Prijs",
+     "Promotie",
+     "Product"
+    ],
+    "j": 0,
+    "u": "Plaats gaat over waar je het product verkoopt."
+   },
+   {
+    "v": "Een bedrijf koopt duizenden pakken koffie bij fabrieken en verkoopt die door aan supermarkten. Wat is dit bedrijf?",
+    "o": [
+     "Een detailhandel",
+     "Een webwinkel",
+     "Een consument",
+     "Een groothandel"
+    ],
+    "j": 3,
+    "u": "De groothandel koopt groot in en verkoopt aan winkels."
+   },
+   {
+    "v": "Wat betaalt een winkelier met de brutowinstopslag?",
+    "o": [
+     "Zijn kosten en zijn winst",
+     "De prijs van de fabriek",
+     "De btw voor de overheid",
+     "Alleen zijn inkoopprijs"
+    ],
+    "j": 0,
+    "u": "Met de opslag betaalt hij zijn kosten. Wat overblijft is winst."
+   },
+   {
+    "v": "Welke kosten heeft een webwinkel wel en een gewone winkel bijna niet?",
+    "o": [
+     "Verzendkosten",
+     "Energiekosten",
+     "Loonkosten",
+     "Inkoopkosten"
+    ],
+    "j": 0,
+    "u": "Een webwinkel verstuurt pakketten en krijgt retouren."
+   },
+   {
+    "v": "Welk btw-tarief geldt voor een brood?",
+    "o": [
+     "21%",
+     "9%",
+     "0%",
+     "19%"
+    ],
+    "j": 1,
+    "u": "Eten en drinken valt onder het lage tarief van 9%."
+   },
+   {
+    "v": "Voor wie is de btw die een klant in de winkel betaalt?",
+    "o": [
+     "Voor de groothandel",
+     "Voor de winkelier",
+     "Voor de fabriek",
+     "Voor de overheid"
+    ],
+    "j": 3,
+    "u": "De winkelier draagt de btw af aan de Belastingdienst."
+   },
+   {
+    "v": "Op een bon staat: 'totaal inclusief btw'. Hoe heet deze prijs?",
+    "o": [
+     "De inkoopprijs",
+     "De consumentenprijs",
+     "De verkoopprijs",
+     "De inkoopwaarde"
+    ],
+    "j": 1,
+    "u": "De consumentenprijs is de verkoopprijs plus btw."
+   },
+   {
+    "v": "Een winkel verkoopt 80 jassen. Wat is die 80?",
+    "o": [
+     "De afzet",
+     "De nettowinst",
+     "De brutowinst",
+     "De omzet"
+    ],
+    "j": 0,
+    "u": "De afzet is het aantal verkochte producten."
+   },
+   {
+    "v": "Welke kosten horen bij de bedrijfskosten van een winkel?",
+    "o": [
+     "De btw op de kassabon",
+     "De inkoop van de producten",
+     "De winst van de eigenaar",
+     "De huur van het pand"
+    ],
+    "j": 3,
+    "u": "Huur, loon, energie en reclame zijn bedrijfskosten."
+   }
+  ],
+  "rek_a": [
+   {
+    "nr": 1,
+    "titel": "Goed of fout?",
+    "tekst": "",
+    "p": 5,
+    "delen": [
+     {
+      "id": "",
+      "v": "Goed of fout?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Bij een tekort stijgt de prijs."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Een webshop is een concrete markt."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "De verkoopprijs is de prijs inclusief btw."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "De omzet is het aantal producten dat je verkoopt."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "De nettowinst is het inkomen van de ondernemer."
+       }
+      ],
+      "uitw": [
+       "De verkoopprijs is zonder btw. Met btw heet het de consumentenprijs.",
+       "Het aantal producten is de afzet. De omzet is het geld dat je ontvangt."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 2,
+    "titel": "De stepwinkel",
+    "tekst": "Sem heeft een winkel in steps. Hij koopt een step in voor €90. Zijn brutowinstopslag is 60% van de inkoopprijs.",
+    "p": 6,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken de brutowinstopslag in euro's.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         54
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.05,
+        "label": "Brutowinstopslag"
+       }
+      ],
+      "uitw": [
+       "(percentage : 100) × inkoopprijs = (60 : 100) × €90 = €54."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken de verkoopprijs.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         144
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.05,
+        "label": "Verkoopprijs"
+       }
+      ],
+      "uitw": [
+       "Verkoopprijs = inkoopprijs + brutowinstopslag = €90 + €54 = €144."
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Bereken het btw-bedrag. Het btw-tarief is 21%.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         30.24
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.05,
+        "label": "Btw"
+       }
+      ],
+      "uitw": [
+       "(percentage : 100) × verkoopprijs = (21 : 100) × €144 = €30,24."
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Bereken de consumentenprijs.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         174.24
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.05,
+        "label": "Consumentenprijs"
+       }
+      ],
+      "uitw": [
+       "Consumentenprijs = verkoopprijs + btw = €144 + €30,24 = €174,24."
+      ]
+     },
+     {
+      "id": "e",
+      "v": "Een andere winkel in de straat verkoopt dezelfde step goedkoper. Hoe noem je zo'n winkel? En wat kan Sem doen om toch klanten te houden? Noem één ding.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "2e",
+        "p": 2,
+        "label": "Concurrentie",
+        "model": "Dat is een concurrent. Sem kan bijvoorbeeld zijn prijs verlagen, reclame maken of betere service geven.",
+        "g": [
+         {
+          "t": "een concurrent",
+          "p": 1
+         },
+         {
+          "t": "een juist voorbeeld (prijs verlagen, reclame maken, betere service of kwaliteit)",
+          "p": 1
+         }
+        ],
+        "v": "Een andere winkel in de straat verkoopt dezelfde step goedkoper. Hoe noem je zo'n winkel? En wat kan Sem doen om toch klanten te houden? Noem één ding.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Een concurrent biedt dezelfde soort producten aan. Met de vier P's kun je klanten trekken."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 3,
+    "titel": "Terug naar de verkoopprijs",
+    "tekst": "Een tablet kost in de winkel €363. Dat is inclusief 21% btw.",
+    "p": 5,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Hoeveel procent is de verkoopprijs en hoeveel procent is de consumentenprijs?",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         100
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.05,
+        "label": "Verkoopprijs"
+       },
+       {
+        "type": "num",
+        "ans": [
+         121
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.05,
+        "label": "Consumentenprijs"
+       }
+      ],
+      "uitw": [
+       "De verkoopprijs is altijd 100%. Met 21% btw is de consumentenprijs 121%."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken de verkoopprijs van de tablet.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         300
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.05,
+        "label": "Verkoopprijs"
+       }
+      ],
+      "uitw": [
+       "(consumentenprijs : 121) × 100 = (€363 : 121) × 100 = €300."
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Bereken hoeveel btw er in de prijs van de tablet zit.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         63
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.05,
+        "label": "Btw"
+       }
+      ],
+      "uitw": [
+       "Btw = consumentenprijs − verkoopprijs = €363 − €300 = €63."
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Een kookboek kost in de winkel €21,80. Dat is inclusief 9% btw. Bereken de verkoopprijs.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         20
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.05,
+        "label": "Verkoopprijs"
+       }
+      ],
+      "uitw": [
+       "(consumentenprijs : 109) × 100 = (€21,80 : 109) × 100 = €20,00."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 4,
+    "titel": "Kopen en verkopen",
+    "tekst": "",
+    "p": 9,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Kies bij elk voorbeeld de juiste invloed.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Sociale invloed",
+         "Commerciële invloed"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Een influencer laat een drankje zien"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Sociale invloed",
+         "Commerciële invloed"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Je zus raadt een serie aan"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Sociale invloed",
+         "Commerciële invloed"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Een poster in het bushokje"
+       }
+      ],
+      "uitw": [
+       "Bij commerciële invloed wil iemand aan je verdienen. Bij sociale invloed niet."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Noem de vier P's van marketing.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "4b",
+        "p": 4,
+        "label": "De vier P's",
+        "model": "Prijs, product, plaats en promotie.",
+        "g": [
+         {
+          "t": "prijs",
+          "p": 1
+         },
+         {
+          "t": "product",
+          "p": 1
+         },
+         {
+          "t": "plaats",
+          "p": 1
+         },
+         {
+          "t": "promotie",
+          "p": 1
+         }
+        ],
+        "v": "Noem de vier P's van marketing.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Prijs, product, plaats en promotie."
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Er komt een nieuwe spelcomputer uit. Veel mensen willen hem, maar er zijn er weinig. Wat gebeurt er met de prijs? Leg uit.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "4c",
+        "p": 2,
+        "label": "Vraag en aanbod",
+        "model": "De prijs stijgt. De vraag is groter dan het aanbod: er is een tekort.",
+        "g": [
+         {
+          "t": "de prijs stijgt",
+          "p": 1
+         },
+         {
+          "t": "de vraag is groter dan het aanbod (een tekort)",
+          "p": 1
+         }
+        ],
+        "v": "Er komt een nieuwe spelcomputer uit. Veel mensen willen hem, maar er zijn er weinig. Wat gebeurt er met de prijs? Leg uit.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Bij een tekort stijgt de prijs. Dat is marktwerking."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 5,
+    "titel": "De boekhouding van Esra",
+    "tekst": "Esra verkoopt tassen. Deze maand verkoopt zij 240 tassen voor €40 per stuk (zonder btw). Zij koopt de tassen in voor €18 per stuk. Haar bedrijfskosten: huur €1.400, loon €1.650 en reclame €400.",
+    "p": 7,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken de omzet.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         9600
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.05,
+        "label": "Omzet"
+       }
+      ],
+      "uitw": [
+       "Omzet = afzet × verkoopprijs = 240 × €40 = €9.600."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken de inkoopwaarde.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         4320
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.05,
+        "label": "Inkoopwaarde"
+       }
+      ],
+      "uitw": [
+       "Inkoopwaarde = aantal × inkoopprijs = 240 × €18 = €4.320."
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Bereken de brutowinst.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         5280
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.05,
+        "label": "Brutowinst"
+       }
+      ],
+      "uitw": [
+       "Brutowinst = omzet − inkoopwaarde = €9.600 − €4.320 = €5.280."
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Bereken de nettowinst.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         1830
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.05,
+        "label": "Nettowinst"
+       }
+      ],
+      "uitw": [
+       "Bedrijfskosten: €1.400 + €1.650 + €400 = €3.450. Nettowinst = brutowinst − bedrijfskosten = €5.280 − €3.450 = €1.830."
+      ]
+     },
+     {
+      "id": "e",
+      "v": "De maand erna is de omzet €7.200. De verkoopprijs blijft €40. Bereken de afzet.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         180
+        ],
+        "p": 1,
+        "eenh": "",
+        "tol": 0.5,
+        "label": "Afzet"
+       }
+      ],
+      "uitw": [
+       "Afzet = omzet : verkoopprijs = €7.200 : €40 = 180 tassen."
+      ]
+     },
+     {
+      "id": "f",
+      "v": "Leg uit wat het verschil is tussen brutowinst en nettowinst.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "5f",
+        "p": 2,
+        "label": "Bruto en netto",
+        "model": "Bij de brutowinst is alleen de inkoopwaarde van de omzet af. Bij de nettowinst zijn ook de bedrijfskosten eraf.",
+        "g": [
+         {
+          "t": "brutowinst = omzet − inkoopwaarde",
+          "p": 1
+         },
+         {
+          "t": "nettowinst = brutowinst − bedrijfskosten (wat de ondernemer echt overhoudt)",
+          "p": 1
+         }
+        ],
+        "v": "Leg uit wat het verschil is tussen brutowinst en nettowinst.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Van de brutowinst moeten de bedrijfskosten nog af. Wat overblijft is de nettowinst."
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "toetsen": {
+  "t1": {
+   "n": 1,
+   "t": "oefentoets A",
+   "sub": "Hoofdstuk 5",
+   "min": 45,
+   "mc": "mc_a",
+   "open": null,
+   "rek": "rek_a"
+  }
+ },
+ "VERS": [
+  {
+   "n": 1,
+   "min": 45,
+   "pts": 44
+  }
+ ]
+}

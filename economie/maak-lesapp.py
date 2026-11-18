@@ -20,6 +20,9 @@ CONFIG = {
     "j4h7": dict(uit="apps/j4h7.html", jaar=4, nr=7, titel="Nederland handelsland"),
     "j4h8": dict(uit="apps/j4h8.html", jaar=4, nr=8, titel="Welvaart wereldwijd"),
     "j3h7": dict(uit="apps/j3h7.html", jaar=3, nr=7, titel="De overheid voor ons allemaal"),
+    # jaar 2 mavo H5 en H6 (18 nov 2026): geschreven uit de PowerPoints, de leerdoelen en de boektekst (eigen woorden)
+    "j2h5": dict(uit="apps/j2h5.html", jaar=2, nr=5, titel="Is handel iets voor jou?"),
+    "j2h6": dict(uit="apps/j2h6.html", jaar=2, nr=6, titel="Wat doet de overheid?"),
 }
 
 name = sys.argv[1] if len(sys.argv) == 2 else ""

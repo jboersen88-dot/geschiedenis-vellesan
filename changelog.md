@@ -1,3 +1,32 @@
+## 2026-11-18 · Economie 2 mavo: H3, H4, H5 en H6 in de nieuwe opzet
+
+Opdracht: "de overige hoofdstukken voor jaar 2 mavo". H3 tot en met H6 hebben nu dezelfde opzet als H2: hoofdstukpagina, leeromgeving per paragraaf en een oefenomgeving.
+
+- **H3 "Aan het werk?"** (`j2h3`) en **H4 "Hoe maken we het?"** (`j2h4`): gebouwd uit de bestaande lesapps van de docent (begrippen, vragenbank, rekentrainer, filmpjes). Titels en inhoud zijn niet veranderd.
+- **H5 "Is handel iets voor jou?"** (`j2h5`): nieuw geschreven uit de PowerPoints, de leerdoelen, de herhalingsvragen en de filmpjes van de docent. 38 begrippen, 75 quizvragen, 6 sorteersets, 10 filmpjes en een rekentrainer (verkoopprijs, consumentenprijs, terugrekenen, omzet en afzet, bruto- en nettowinst).
+- **H6 "Wat doet de overheid?"** (`j2h6`): nieuw geschreven. 36 begrippen, 52 quizvragen, 6 sorteersets en een rekentrainer (consumentenprijs, terugrekenen, saldo van de begroting, miljoenen en miljarden, deel van de uitgaven).
+- **Oefentoets A** bij elk hoofdstuk (45 minuten, 12 meerkeuzevragen en 5 opgaven, zelf nakijken). Nieuw geschreven: zelfde soort vragen, andere situaties. Stellingen heten "Goed of fout?". Bij H3, H4 en H5 staan de oefentoetsen van de docent op papier (Drive) eronder.
+- **Beelden**: eigen illustraties per paragraaf (`tools/beelden/scenes.js`, nieuwe vormen robot, bon en doos).
+- **Bouwscripts**: `bouw-oefen.py` kan nu ook de lesapps van H3 en H4 lezen en zet rekenformules met haakjes; de optie `pdf` toont de papieren toetsen van de docent.
+
+**Keuzes**
+- H5 en H6 volgen de titels en paragrafen van de 7e editie. H3 en H4 houden de titels uit de lesapps van de docent.
+- H6: begrippen en leerdoelen volgen de 7e editie, in eigen woorden. De voorbeelden komen uit de PowerPoints van de docent. Die PowerPoints zijn uit 2019 en hebben oude belastingschijven. Daarom staan ze niet in de leeromgeving en rekent H6 niet met schijven. H6 heeft geen filmpjes: er stonden er geen in het materiaal.
+- De 7e editie heeft ook een H7 "Hoe groot is jouw wereld?". Daar is geen materiaal van, dus die is niet gebouwd.
+- De oude lesapps van H3 en H4 staan nog onderaan de hoofdstukpagina, net als bij H2.
+
+**Nog niet af**
+- **Dia's met klikstappen ontbreken bij alle vier de hoofdstukken.** De PowerPoint-bestanden kon ik niet ophalen (Drive geeft alleen tekst, de Mac was niet gekoppeld). Bij H3, H4 en H5 opent de paragraaf nu de PowerPoint in Google Drive. Bij H6 begint de paragraaf met de begrippen. De tekst "Kijk nog eens naar de dia's" staat er daar nog wel.
+- Geen "Mijn route" en geen tweede en derde oefentoets, zoals H2 die wel heeft.
+
+**Controleren door de docent**
+- H6 helemaal: klopt de stof met wat je in de les behandelt? Is AOW "vanaf 67 jaar" goed zo?
+- Zijn er nieuwe PowerPoints voor H6? Dan komen die erbij.
+- De vier oefentoetsen naast de eigen proefwerken leggen.
+- H5: klopt bij elk filmpje de paragraaf?
+
+**Getest**: vragencheck (4452 vragen) en linkcheck op 0; a11ycheck meldt alleen `rondleiding/qr/posters.html` (stond al zo). Browsertest op 375 en 820 px, licht en donker: hoofdstukpagina, eerste paragraaf, oefenomgeving en oefentoets van H3 tot en met H6, zonder consolefouten of horizontaal scrollen. Alle rekensommen 500 keer gegenereerd zonder fouten. **Niet getest**: op een echte iPad, de filmpjes en Drive-bestanden (de testomgeving kan YouTube en Drive niet bereiken), en het doorklikken van een hele oefentoets.
+
 ## 2026-11-18 · Economie 4 mavo: H4, H7, H8 en het SE H3 + H4 in de nieuwe opzet
 
 Derde ronde van de opdracht "4 mavo zoals 3V". Hiermee staan H1 tot en met H8 en de drie SE-pagina's van 4 mavo in de nieuwe opzet.
