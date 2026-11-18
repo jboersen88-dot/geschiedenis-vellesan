@@ -61,7 +61,29 @@ for _m, _pad, _jr, _nr, _kop, _beelden in [
         ("j3h1", "jaar-3/mavo/hoofdstuk-1-hoe-groot-is-jouw-welvaart", "jaar 3 mavo", 1, ["Hoe welvarend ", "ben jij?"], ["wensen", "vlogger", "begroting"]),
         ("j3h3", "jaar-3/mavo/hoofdstuk-3-de-bank-en-jouw-geld", "jaar 3 mavo", 3, ["De bank en jouw ", "geld"], ["bank", "sparen", "lenen"])]:
     CONFIG[_m] = dict(bron="apps/%s.html" % _m, pad=_pad, hoofdstuk="Hoofdstuk %d" % _nr, eyebrow="Economie · %s · hoofdstuk %d" % (_jr, _nr), kop=_kop, nr="H%d" % _nr,
-                      beelden=_beelden, toetsen=("§%d.1 t/m §%d.4" % (_nr, _nr), []))
+                      beelden=_beelden, toetsen=("§%d.1 t/m §%d.4" % (_nr, _nr), []), pdf=(_nr == 5))
+
+# jaar 2 mavo H3 t/m H6 (18 nov 2026). H3 en H4: de lesapps van de docent (apps/jaar-2_mavo_hoofdstuk-3/4), met eigen illustraties
+# per paragraaf (imgs) en de oefentoetsen van de docent op papier (pdf=True: de Drive-bestanden uit VERS van de lesapp).
+# H5 en H6: geen oude lesapp; maak-lesapp.py maakt de app uit <map>/bron.
+CONFIG["j2h3"] = dict(bron="apps/jaar-2_mavo_hoofdstuk-3-aan-het-werk.html", pad="jaar-2/mavo/hoofdstuk-3-aan-het-werk", hoofdstuk="Hoofdstuk 3",
+                      eyebrow="Economie · jaar 2 mavo · hoofdstuk 3", kop=["Aan het ", "werk?"], nr="H3", beelden=["contract", "sectoren", "veilig"],
+                      imgs={"3.1": [["contract", "Werkgever en werknemer spreken af wat er in het contract staat"], ["loon", "Van brutoloon naar nettoloon"]],
+                            "3.2": [["sectoren", "Drie sectoren: agrarisch, industrieel en dienstverlenend"], ["verdeling", "Arbeidsverdeling: ieder een eigen taak"]],
+                            "3.3": [["veilig", "Veilig werken: de Arbowet"], ["robot", "Techniek verandert het werk"]],
+                            "3.4": [["ontslag", "Ontslag: op zoek naar ander werk"], ["uitkering", "De WW-uitkering: een deel van je laatste loon"]]},
+                      toetsen=("§3.1 t/m §3.4", []), pdf=True)
+CONFIG["j2h4"] = dict(bron="apps/jaar-2_mavo_hoofdstuk-4.html", pad="jaar-2/mavo/hoofdstuk-4", hoofdstuk="Hoofdstuk 4",
+                      eyebrow="Economie · jaar 2 mavo · hoofdstuk 4", kop=["Hoe maken we ", "het?"], nr="H4", beelden=["kolom", "kringloop", "winst"],
+                      imgs={"4.1": [["kolom", "Van grondstof tot eindproduct: de bedrijfskolom"], ["factoren", "Natuur, arbeid en kapitaal"]],
+                            "4.2": [["milieu", "Produceren kost ook iets voor het milieu"], ["kringloop", "Kringloopeconomie: afval wordt grondstof"]],
+                            "4.3": [["investeren", "Investeren in kapitaalgoederen"], ["productiviteit", "Meer maken met dezelfde mensen"]],
+                            "4.4": [["winst", "Omzet min kosten is winst"], ["ondernemer", "Je eigen bedrijf: zelf het risico"]]},
+                      toetsen=("§4.1 t/m §4.4", []), pdf=True)
+for _m, _nr, _kop, _beelden in [("j2h5", 5, ["Is handel iets voor ", "jou?"], ["markt", "prijs", "bon"]),
+                                ("j2h6", 6, ["Wat doet de ", "overheid?"], ["bestuur", "zekerheid", "begroting"])]:
+    CONFIG[_m] = dict(bron="apps/%s.html" % _m, pad="jaar-2/mavo/hoofdstuk-%d" % _nr, hoofdstuk="Hoofdstuk %d" % _nr, eyebrow="Economie · jaar 2 mavo · hoofdstuk %d" % _nr,
+                      kop=_kop, nr="H%d" % _nr, beelden=_beelden, toetsen=("§%d.1 t/m §%d.4" % (_nr, _nr), []), pdf=(_nr == 5))
 
 if len(sys.argv) != 2 or sys.argv[1] not in CONFIG:
     sys.exit("Gebruik: python3 -I economie/bouw-oefen.py <" + "|".join(CONFIG) + ">")
@@ -112,7 +134,7 @@ assert R["map"] == name, R["map"]
 
 # ---------- data voor de leeromgeving ----------
 PARS = grab("PARS")
-GOALS, SEL = grab("GOALS", {}), grab("SEL", {})
+GOALS, SEL = grab("GOALS", {}), grab("SEL", {}) or {}  # H3: SEL=null
 key = re.search(r'var KEY="([^"]+)"', s).group(1)
 pars = []
 for p in PARS:
@@ -140,7 +162,10 @@ s = rex(s, r"<title>[^<]*</title>", "<title>Oefenomgeving · %s · Economie</tit
 
 # formules altijd met haakjes, zoals de docent ze schrijft: (deel : geheel) × 100, (rentepercentage : 100) × spaarbedrag
 for oud, nieuw in [('perc:"deel : geheel × 100"', 'perc:"(deel : geheel) × 100"'), ('rente:"rentepercentage : 100 × spaarbedrag"', 'rente:"(rentepercentage : 100) × spaarbedrag"'),
-                   ("Percentage = deel : geheel × 100", "Percentage = (deel : geheel) × 100"), ("Rentebedrag per jaar = rentepercentage : 100 × spaarbedrag", "Rentebedrag per jaar = (rentepercentage : 100) × spaarbedrag")]:
+                   ("Percentage = deel : geheel × 100", "Percentage = (deel : geheel) × 100"),
+                   ('maand:"weekbedrag × 52 : 12"', 'maand:"(weekbedrag × 52) : 12"'), ('week:"maandbedrag × 12 : 52"', 'week:"(maandbedrag × 12) : 52"'),
+                   ('jeugd:"percentage : 100 × minimumloon"', 'jeugd:"(percentage : 100) × minimumloon"'), ('ww:"percentage : 100 × laatste brutoloon"', 'ww:"(percentage : 100) × laatste brutoloon"'),
+                   ("Week → maand: × 52 : 12", "Week → maand: (weekbedrag × 52) : 12"), ("Maand → week: × 12 : 52", "Maand → week: (maandbedrag × 12) : 52"), ("Rentebedrag per jaar = rentepercentage : 100 × spaarbedrag", "Rentebedrag per jaar = (rentepercentage : 100) × spaarbedrag")]:
     s = s.replace(oud, nieuw)
 # oude paars/roze kleuren -> groen, koraal en beige van de site (ook de vaste kleuren in games, munten en verloop)
 KLEUR = {"#3b1534": "#123a30", "#5a1f4f": "#1f5f4e", "#6a2559": "#174a3d", "#2a0f26": "#0c241d", "#a01a58": "#c2484d", "#e2457f": "#ff8d90",
@@ -191,7 +216,7 @@ s = rex(s, r'(<div class="card intro">.*?<p)>[^<]*(</p>)',
         r'\g<1> id="onextP">Kies hieronder wat je gaat doen.\g<2>', groepen=True)
 s = rex(s, r'<button class="btn" data-go="les"(?: data-par="[\d.]+")?>(<svg.*?</svg>)Begin met [\d.]+</button>',
         r'<span id="onext"></span><button class="btn ghost" data-go="lab">Alle oefeningen</button><button class="btn ghost" data-go="les" data-par="%s">\g<1>Lees %s</button>' % (pars[0]["id"], pars[0]["id"]), groepen=True)
-s = rep(s, '<button class="btn ghost" data-go="toets">Naar de oefentoets</button>', "")
+s = rex(s, r'<button class="btn ghost" data-go="toets">Naar de oefentoets(en)?</button>', "")  # H3 en H4: meervoud
 s = rep(s, "function renderProgress(){", '''function renderNext(){var el=document.getElementById("onext");if(!el)return;
 var nk=Object.keys(S.known||{}).length,nq=Object.keys(S.qwrong||{}).filter(function(i){return BANK[i];}).length,x=totals(),chk=typeof CHK==="undefined"?[]:CHK.map(function(c,i){return [c,i];}).filter(function(a){return !(S.check||{})[a[1]];}),h,p,b,p0=PARS[0].id,RS=window.EcoRouteApp?EcoRouteApp.stand():null;
 if(RS&&!RS.gedaan){h="Start je oefenroute.";p="Een korte instaptoets kijkt wat jij al kunt. Daarna krijg je vragen op jouw niveau: van één naar drie sterren.";b='<button class="btn" data-go="route">Naar mijn route →</button>';}
@@ -273,6 +298,8 @@ if isinstance(docx, str):
     papier += "".join(' · <a target="_blank" rel="noopener" href="https://drive.google.com/file/d/%s/view">%s (PDF)</a> met <a target="_blank" rel="noopener" href="https://drive.google.com/file/d/%s/view">nakijkblad</a>' % (v["toets"], v["t"], v["nk"]) for v in grab("VERS") if v.get("nk"))
 else:  # lijst van (bestand in oefentoetsen/, tekst)
     papier = " · ".join('<a href="../oefentoetsen/%s" download>%s</a>' % d for d in docx)
+    if C.get("pdf"):  # de oefentoetsen van de docent op Drive, met nakijkblad
+        papier = " · ".join('<a target="_blank" rel="noopener" href="https://drive.google.com/file/d/%s/view">%s</a> met <a target="_blank" rel="noopener" href="https://drive.google.com/file/d/%s/view">nakijkblad</a>' % (v["toets"], v["t"], v["nk"]) for v in grab("VERS") if v.get("nk"))
 papier = '<p class="muted opapier">Liever op papier? %s</p>' % papier if papier else ""
 if ROUTE:
     s = rep(s, '<section class="panel" id="toets" hidden>', '<section class="panel" id="route" hidden><div class="card pad"><div id="routeApp"><p class="muted">De oefenroute laadt…</p></div></div></section>\n<section class="panel" id="toets" hidden>')

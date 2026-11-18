@@ -84,8 +84,15 @@ Alles wordt gestuurd vanuit `economie/economie.js` en `economie/data/paginas.jso
 | Jaar 2 mavo H1 "Wat heb je nodig?" | `j2h1` | ja | ja, met Edu-Racer | ja | 2 (A en B) |
 | Jaar 2 mavo H1, GL-versie | `j2h1gl` | ja | nee | nee | nee |
 | **Jaar 2 mavo H2 "Jij en je geld"** (het voorbeeld) | `j2h2` | ja | ja, met Edu-Racer | ja | 3 (1-, 2- en 3-ster) |
+| Jaar 2 mavo H3 "Aan het werk?" | `j2h3` | nog niet (PowerPoint via Drive) | ja | nee | 1 |
+| Jaar 2 mavo H4 "Hoe maken we het?" | `j2h4` | nog niet (PowerPoint via Drive) | ja | nee | 1 |
+| Jaar 2 mavo H5 "Is handel iets voor jou?" | `j2h5` | nog niet (PowerPoint via Drive) | ja | nee | 1 |
+| Jaar 2 mavo H6 "Wat doet de overheid?" | `j2h6` | nee (geen bruikbare PowerPoints) | ja | nee | 1 |
 | Jaar 3 mavo H0 rekenvaardigheden | `j3h0` | formulepagina | nee | nee | nee |
-| Jaar 3 mavo H1 en H2 | `j3h1`, `j3h2` | ja | nee (oefenstof als band) | nee | nee |
+| Jaar 3 mavo H1 "Hoe welvarend ben jij?" | `j3h1` | ja | ja | nee | 1 |
+| Jaar 3 mavo H2 | `j3h2` | ja | nee (oefenstof als band) | nee | nee |
+| Jaar 3 mavo H3 "De bank en jouw geld" | `j3h3` | ja | ja | nee | 1 |
+| Jaar 3 mavo SE H1 + H3 (SE-pagina `jaar-3/mavo/se-1`) | `se13` | n.v.t. | n.v.t. | nee | 1 (oefen-SE) |
 | Jaar 3 havo/vwo H2 "De rol van geld" | `j3vh2` | ja | ja | ja | 2 |
 | Jaar 4 mavo H1 "Verdien je genoeg?" | `j4h1` | ja | ja | nee | 1 |
 | Jaar 4 mavo H2 "Geld moet rollen" | `j4h2` | ja | ja | nee | 1 |
@@ -321,6 +328,7 @@ Niet van de website: `app cijfercontrole/`, de drie `n8n …`-mappen, `generals/
 
 **Bouwen**
 
+- Economie jaar 3 mavo: H2 oefenomgeving, H4, H5, H6 en H8 en de SE-pagina's H5 + H6 en H7 + H8 (H1, H3 en het SE H1 + H3 staan er sinds 18 nov 2026).
 - Economie jaar 3 mavo H3 "De bank en jouw geld" (fase 3) en jaar 4 H5 "Kan de overheid dat regelen?" (fase 4) in de nieuwe opzet.
 - Fase 5: alle overige Economie-hoofdstukken uit de oude Google-opzet halen (jaar 2 H3 tot H6, jaar 3 mavo H4 tot H8, jaar 4 H1 tot H8).
 - Mijn route voor 3 havo/vwo H2 staat er sinds 18 nov (13 leerdoelen, zes rekensoorten in `route.js`); de docent moet de indeling in niveaus en de nieuwe rekenvragen nog nakijken. Geen AI-verdiepingsvraag: de Worker heeft geen lesstof van dit hoofdstuk.
