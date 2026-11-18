@@ -1,3 +1,9 @@
+## 2026-11-18 · Overzicht en richtlijnen op één plek
+
+- **`docs/OVERZICHT.md`** (nieuw): de kaart van alles. Hoe de site is opgebouwd, wat er is (met aantallen), hoe de games werken, hoe het systeem voor opdrachten, oefenroute, toetsen en de AI-nakijker werkt, wat er sinds 17 oktober gebouwd en verbeterd is, waar alles staat (ook de repo's en mappen buiten deze repo: racers, speurtochten, Worker) en wat nog open staat.
+- **`CLAUDE.md`** (nieuw, in de root): de richtlijnen kort en bindend, zodat elk nieuw gesprek ze vanzelf volgt. Kernregel: de opzet van Economie jaar 2 mavo hoofdstuk 2, met leren en oefenen gescheiden. Nieuw vastgelegd: een oefentoets is geen kopie van het proefwerk.
+- Alleen documentatie; aan de site is niets veranderd. `vragencheck` en `linkcheck` op 0. `a11ycheck` meldt 1 fout die er al was: `rondleiding/qr/posters.html` (printpagina) heeft geen viewport-meta.
+
 ## 2026-11-13 · Economie 3 vwo H2 "De rol van geld": hoofdstukpagina, leeromgeving, oefenomgeving en digitale oefentoets
 
 Eerste hoofdstuk van jaar 3 havo/vwo (tot nu toe "Volgt binnenkort"). Opzet als jaar 3 mavo H2 (hoofdstukpagina en leeromgeving) en jaar 2 H2 (oefenomgeving).
