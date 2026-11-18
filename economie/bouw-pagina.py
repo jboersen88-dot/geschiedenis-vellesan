@@ -2,53 +2,13 @@
 # als bouw-oefen.py, zodat economie.js er de hoofdstukpagina en per paragraaf een leeromgeving van maakt (RIJK in economie.js).
 # Zonder oefenomgeving: "oefen" is leeg en de oefenstof (opgaven, nakijkbladen, oefentoets) staat in "extra".
 # De kernvragen per paragraaf staan hier; bij jaar 3 H2 had de oude pagina er geen, die zijn geschreven uit de PowerPoints.
-# Gebruik: python3 -I economie/bouw-pagina.py j3h1   (vanuit de root van de repo)
+# Jaar 3 H1 staat sinds 18 nov 2026 in de nieuwe opzet (j3h1/bron/lesapp.py + bouw-oefen.py) en is hier weggehaald.
+# Gebruik: python3 -I economie/bouw-pagina.py j3h2   (vanuit de root van de repo)
 import json, os, sys
 
 ECO = os.path.dirname(os.path.abspath(__file__))
 
 CONFIG = {
-    "j3h1": dict(
-        key="eco-j3h1-v1",
-        pars=[
-            dict(id="1.1", t="Waar heb jij behoefte aan?", file="16dvcf2LugMrDrctNJqPoh3OxQfwAfA7A", x=["pr"],
-                 sum="Behoeften, middelen en schaarste, vrije goederen, welvaart en rekenen met procenten.",
-                 imgs=[["eten", "Samen eten: een primaire behoefte"], ["wensen", "Een lijstje met wensen: secundaire behoeften"]],
-                 q=["Wat zijn behoeften?", "Je hebt twee soorten behoeften. Noem ze allebei en geef van allebei minimaal twee voorbeelden.",
-                    "Geef drie redenen waarom mensen verschillende behoeften hebben.", "Leg uit dat technologische ontwikkelingen invloed hebben op onze behoeften.",
-                    "Wat wordt er bedoeld met e-commerce?", "Welke invloed heeft e-commerce op onze economie? Leg je antwoord uit.",
-                    "Wat wordt er bedoeld met middelen?", "Wat zijn de twee belangrijkste middelen?", "Bij economie heeft het begrip schaars twee betekenissen. Geef ze allebei.",
-                    "Leg uit dat brood in Nederland ook een schaars product is, ook al hebben wij er genoeg van.", "Wat wordt er bedoeld met vrije goederen?",
-                    "Leg het belangrijkste verschil uit tussen vrije goederen en schaarse goederen.", "Wat wordt er bedoeld met welvaart?",
-                    "Leg uit dat de welvaart in Nederland hoog is in vergelijking met andere landen.", "Hoe reken je met procenten? Oefen met de opgaven bij de oefenstof."]),
-            dict(id="1.2", t="Hoe word jij beïnvloed?", file="1RJJ_d47_8eG1rauDGDNuFjaYyPQy7mKw", x=[],
-                 sum="Consumenten, sociale en commerciële beïnvloeding, de marketingmix, reclame, A- en B-merken en jongeren als doelgroep.",
-                 imgs=[["vlogger", "Een vlogger filmt zichzelf: commerciële beïnvloeding via social media"], ["reclamebord", "Een reclamebord langs de weg"]],
-                 q=["Wanneer ben je een consument?", "Op welke twee manieren worden consumenten beïnvloed? Geef van beide manieren twee voorbeelden.",
-                    "Wat is de marketingmix?", "Welke onderdelen van de marketingmix zie je vaak terug in commerciële reclames?", "Wat wordt er bedoeld met ideële reclame?",
-                    "Wat is het grootste verschil tussen commerciële en ideële reclame?", "Wat is het verschil tussen A-merken en B-merken?",
-                    "Welk onderdeel van de marketingmix past bij de keuze voor een A- of B-merk?", "Waarom zijn jongeren een goede doelgroep?"]),
-            dict(id="1.3", t="Budgetteren moet je leren", file="12JU4_E6djDz6Br_iLhLfIjp3vokRTTNL", x=[],
-                 sum="Het Nibud, budgetteren en een begroting, soorten inkomsten en uitgaven, en geld reserveren.",
-                 imgs=[["begroting", "Rekeningen en een rekenmachine: een begroting maken"], ["spaarvarken", "Sparen: geld reserveren voor later"]],
-                 q=["Wat doet het Nibud?", "Wat wordt er bedoeld met budgetteren?", "Wat staat er in een begroting?",
-                    "Welke drie soorten inkomsten kan een mens hebben? Geef van alle drie een voorbeeld.", "Welke drie soorten uitgaven hebben wij?",
-                    "Op welke van de drie soorten uitgaven heb jij het minste invloed? Leg je antwoord uit.", "Wat wordt er bedoeld met geld reserveren?",
-                    "Welke redenen kun je hebben om geld te reserveren?"]),
-            dict(id="1.4", t="Alles wordt duurder", file="1_9io8UfS1lePjo6u7FOefjZoTIAEAnex", x=["ix"],
-                 sum="Koopkracht, inflatie en deflatie, het CBS en rekenen met indexcijfers.",
-                 imgs=[["prijzen", "Boodschappen doen: wat kun je kopen voor je geld?"], ["munten", "Muntjes stapelen: hoeveel is je geld waard?"]],
-                 q=["Wat wordt er bedoeld met koopkracht?", "Welke twee factoren hebben invloed op de koopkracht?", "Wat wordt er bedoeld met inflatie?",
-                    "Wat is het nut van het CBS?", "Wat is het tegenovergestelde van inflatie?", "Hoe bereken je een indexcijfer? Welke formule gebruik je daarvoor?"]),
-        ],
-        # mat: [titel, [[soort, Drive-id of https-link]], uitleg]
-        mat={"pr": ["Rekenen met procenten", [["Oefenvragen", "1x5AiahR3ovH7sj5Ume42EMAA7d9lj5X_"], ["Antwoorden", "1E-y3vuU1vIHXJGsgpvN9-jnVWk1_8sjA"]]],
-             "ix": ["Werken met indexcijfers", [["Oefenopgave", "1-ndk4XI1u81UTS__S4YRTdlLuwgA6AGc"], ["Antwoorden", "1bFGFbUIm1crzj0t0CT7SxlEgQf52kD2B"]]],
-             "ot": ["Oefentoets hoofdstuk 1", [["Oefentoets", "1RbgXqWzkvSJ3p8GJAM-oa8tF5yNyvvZn"], ["Antwoorden", "1a77esOSHANf3IoLhKFsxW566aVe_5LPg"]]]},
-        extra=["pr", "ix", "ot"],
-        # dia's die alleen over de les gingen (planning, regels, huiswerk met oude data) staan niet in de presentatie
-        weg={"1.1": [1, 2, 3], "1.2": [7, 11], "1.3": [1]},
-    ),
     "j3h2": dict(
         key="eco-j3h2-v1",
         pars=[

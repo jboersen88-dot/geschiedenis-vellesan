@@ -21,6 +21,7 @@ CONFIG = {
     "j4h8": dict(uit="apps/j4h8.html", jaar=4, nr=8, titel="Welvaart wereldwijd"),
     "j3h7": dict(uit="apps/j3h7.html", jaar=3, nr=7, titel="De overheid voor ons allemaal"),
     # jaar 3 mavo (18 nov 2026): nieuw geschreven uit de PowerPoints van de docent, afbakening volgens het boek (editie 7.1)
+    "j3h1": dict(uit="apps/j3h1.html", jaar=3, nr=1, titel="Hoe welvarend ben jij?"),
     "j3h3": dict(uit="apps/j3h3.html", jaar=3, nr=3, titel="De bank en jouw geld"),
 }
 

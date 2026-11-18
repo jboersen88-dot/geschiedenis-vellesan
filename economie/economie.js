@@ -24,7 +24,7 @@ var RIJK={"jaar-3/mavo/hoofdstuk-0-rekenvaardigheden":{map:"j3h0",soort:"reken",
   alt:"Een agenda, een rekenmachine en een pen op een houten tafel",
   intro:"Alle formules van jaar 3 op één plek: procenten, btw, je eigen bedrijf en je saldo, met instructiefilms en oefenstof.",
   beeld:"Foto: Unsplash (gratis licentie)"},
-  "jaar-3/mavo/hoofdstuk-1-hoe-groot-is-jouw-welvaart":{map:"j3h1",kop:["Hoe groot is jouw ","welvaart?"],hero:"../welvaart",
+  "jaar-3/mavo/hoofdstuk-1-hoe-groot-is-jouw-welvaart":{map:"j3h1",kop:["Hoe ","welvarend"," ben jij?"],hero:"../welvaart",
   alt:"Grachtenpanden met fietsen langs het water in Amsterdam",
   intro:"Behoeften en schaarste, beïnvloeding en reclame, budgetteren en inflatie: vier paragrafen over wat jij met je geld kunt.",
   par:"Vier paragrafen over jouw welvaart.",beeld:"Foto's: Unsplash (gratis licentie)",
@@ -119,11 +119,17 @@ var SE={"jaar-4/se-h1-h2-h8":{naam:"SE hoofdstuk 1 en 2",kort:"H1 + H2",kop:["SE
   intro:"Alles voor het schoolexamen over de overheid: hoofdstuk 5 en 6 van dit jaar en hoofdstuk 7 uit 3 mavo. Leer eerst per hoofdstuk, oefen daarna en maak als laatste het oefen-SE.",
   delen:["jaar-4/hoofdstuk-5-kan-de-overheid-dat-regelen","jaar-4/hoofdstuk-6-de-overheid-en-ons-inkomen","jaar-3/mavo/hoofdstuk-7-de-overheid-voor-ons-allemaal"],
   toets:["se56/toets.html","Oefen-SE","Eén toets over alle drie de hoofdstukken, met klok. Meerkeuze en rekenen kijkt de site na."],beeld:"Beelden: gemaakt voor deze site"},
+  "jaar-3/mavo/se-1":{naam:"SE hoofdstuk 1 en 3",kort:"H1 + H3",kop:["SE hoofdstuk 1 ","en 3"],hero:"j3h3/bank-h",
+  intro:"Alles voor het schoolexamen over welvaart en de bank: hoofdstuk 1 en 3. Leer eerst per hoofdstuk, oefen daarna en maak als laatste het oefen-SE.",
+  delen:["jaar-3/mavo/hoofdstuk-1-hoe-groot-is-jouw-welvaart","jaar-3/mavo/hoofdstuk-3-de-bank-en-jouw-geld"],
+  toets:["se13/toets.html","Oefen-SE","Eén toets over beide hoofdstukken, met klok. Meerkeuze en rekenen kijkt de site na."],
+  extra:[["https://drive.google.com/file/d/1MyiM_9hov8xVy91OMxwA7AkZEdVA5qT1/view","Oefentoets hoofdstuk 1 op papier","De oefentoets uit de les. Het nakijkblad staat onderaan het document.",""],
+    ["https://drive.google.com/file/d/1z6ric2rTNplNUFT2kDkqbGNQav-ixfCs/view","Herhalingsvragen hoofdstuk 1","Het nakijkblad bij de herhalingsvragen uit de les.",""]],beeld:"Foto's: Unsplash (gratis licentie) · beelden gemaakt voor deze site"},
   "jaar-4/se4":{naam:"SE hoofdstuk 3 en 4",kort:"H3 + H4",kop:["SE hoofdstuk 3 ","en 4"],hero:"j4h3/winst-h",
   intro:"Alles voor het schoolexamen over bedrijven en werk: hoofdstuk 3 en 4. Leer eerst per hoofdstuk, oefen daarna en maak als laatste het oefen-SE.",
   delen:["jaar-4/hoofdstuk-3","jaar-4/hoofdstuk-4-aan-het-werk"],
   toets:["se34/toets.html","Oefen-SE","Eén toets over beide hoofdstukken, met klok. Meerkeuze en rekenen kijkt de site na."],beeld:"Beelden: gemaakt voor deze site"}};
-var NAAM={"jaar-4/se4":"SE H3 + H4","jaar-4/se-h1-h2-h8":"SE H1 + H2","jaar-4/se-h5-en-h6":"SE H5 + H6 + H7 (3 mavo)","jaar-2/mavo/kopie-van-hoofdstuk-1":"Hoofdstuk 1 · lesstof en PowerPoints"};
+var NAAM={"jaar-3/mavo/se-1":"SE H1 + H3","jaar-3/mavo/hoofdstuk-1-hoe-groot-is-jouw-welvaart":"Hoofdstuk 1: Hoe welvarend ben jij?","jaar-4/se4":"SE H3 + H4","jaar-4/se-h1-h2-h8":"SE H1 + H2","jaar-4/se-h5-en-h6":"SE H5 + H6 + H7 (3 mavo)","jaar-2/mavo/kopie-van-hoofdstuk-1":"Hoofdstuk 1 · lesstof en PowerPoints"};
 
 var esc=function(t){return String(t).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});};
 var $=function(id){return document.getElementById(id);};

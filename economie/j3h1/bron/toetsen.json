@@ -1,0 +1,897 @@
+{
+ "blokken": {
+  "mc_a": [
+   {
+    "v": "Na de training koopt Bram een flesje water en een nieuw voetbalshirt van zijn club. Wat klopt?",
+    "o": [
+     "Beide zijn een primaire behoefte",
+     "Beide zijn een secundaire behoefte",
+     "Alleen het shirt is een primaire behoefte",
+     "Alleen het water is een primaire behoefte"
+    ],
+    "j": 3,
+    "u": "Drinken heb je nodig om te leven. Een clubshirt is luxe."
+   },
+   {
+    "v": "Regenwater dat op je hoofd valt, is een vrij goed. Waarom?",
+    "o": [
+     "Er is heel veel van in Nederland",
+     "Het is voor iedereen heel gezond",
+     "Er zijn geen middelen voor nodig",
+     "Je mag het niet verkopen"
+    ],
+    "j": 2,
+    "u": "Het is er vanzelf: niemand hoeft er iets voor te doen."
+   },
+   {
+    "v": "Een schilderij van een beroemde schilder is er maar één keer. Hoe noem je dat?",
+    "o": [
+     "Ideëel",
+     "Primair",
+     "Zeldzaam",
+     "Vrij"
+    ],
+    "j": 2,
+    "u": "Er is weinig van: zeldzaam. Het is ook schaars, want er zijn middelen voor gebruikt."
+   },
+   {
+    "v": "Familie Smit krijgt een hoger inkomen. De prijzen blijven gelijk. Wat gebeurt er met hun welvaart?",
+    "o": [
+     "Die verdwijnt",
+     "Die blijft gelijk",
+     "Die stijgt",
+     "Die daalt"
+    ],
+    "j": 2,
+    "u": "Zij kunnen in meer behoeften voorzien."
+   },
+   {
+    "v": "Zoë bestelt een trui omdat een bekende vlogger er geld voor krijgt om hem te dragen. Wat is dit?",
+    "o": [
+     "Sociale beïnvloeding",
+     "Ideële reclame",
+     "Inkomen in natura",
+     "Commerciële beïnvloeding"
+    ],
+    "j": 3,
+    "u": "Een bedrijf betaalt de vlogger om meer te verkopen."
+   },
+   {
+    "v": "Een supermarkt verkoopt cola met de eigen naam erop. Hoe heet zo'n merk?",
+    "o": [
+     "Een huismerk",
+     "Een A-merk",
+     "Een B-merk",
+     "Een keurmerk"
+    ],
+    "j": 0,
+    "u": "Het eigen merk van de winkel."
+   },
+   {
+    "v": "Een winkel neemt alleen verkopers aan die alles van laptops weten. Welke P is dat?",
+    "o": [
+     "Product",
+     "Personeel",
+     "Promotie",
+     "Presentatie"
+    ],
+    "j": 1,
+    "u": "Het gaat om de mensen die er werken."
+   },
+   {
+    "v": "De huur, de zorgverzekering en het abonnement op de sportschool. Wat zijn dit?",
+    "o": [
+     "Incidentele uitgaven",
+     "Dagelijkse uitgaven",
+     "Overdrachtsinkomens",
+     "Vaste lasten"
+    ],
+    "j": 3,
+    "u": "Ze komen op een vast moment terug."
+   },
+   {
+    "v": "Opa krijgt elke maand AOW. Welk inkomen is dat?",
+    "o": [
+     "Inkomen uit arbeid",
+     "Inkomen in natura",
+     "Overdrachtsinkomen",
+     "Inkomen uit bezit"
+    ],
+    "j": 2,
+    "u": "Hij hoeft er nu niets voor terug te doen."
+   },
+   {
+    "v": "Waarom reserveer je geld?",
+    "o": [
+     "Voor grote of onverwachte uitgaven",
+     "Om minder loon te krijgen",
+     "Voor de dagelijkse boodschappen",
+     "Om meer belasting te betalen"
+    ],
+    "j": 0,
+    "u": "Bijvoorbeeld voor een reparatie of een doel."
+   },
+   {
+    "v": "De prijzen dalen een jaar lang gemiddeld. Hoe heet dat?",
+    "o": [
+     "Schaarste",
+     "Koopkracht",
+     "Deflatie",
+     "Inflatie"
+    ],
+    "j": 2,
+    "u": "Deflatie is het tegenovergestelde van inflatie."
+   },
+   {
+    "v": "Het indexcijfer van de huur is 107. Wat betekent dat?",
+    "o": [
+     "De huur is €7 hoger dan in het basisjaar",
+     "De huur is 7% hoger dan in het basisjaar",
+     "De huur is 107% hoger dan in het basisjaar",
+     "De huur is 7% lager dan in het basisjaar"
+    ],
+    "j": 1,
+    "u": "107 − 100 = 7% stijging."
+   }
+  ],
+  "rek_a": [
+   {
+    "nr": 1,
+    "titel": "Goed of fout?",
+    "tekst": "",
+    "p": 5,
+    "delen": [
+     {
+      "id": "",
+      "v": "Goed of fout?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Een schaars goed is altijd zeldzaam."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Zonlicht is een vrij goed."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Ideële reclame is bedoeld om winst te maken."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Zakgeld is een overdrachtsinkomen."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Bij inflatie kun je met hetzelfde geld meer kopen."
+       }
+      ],
+      "uitw": [
+       "Schaars betekent dat er middelen voor nodig zijn. Brood is schaars, maar niet zeldzaam.",
+       "Ideële reclame wil het gedrag van mensen verbeteren.",
+       "Bij inflatie stijgen de prijzen: je kunt minder kopen."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 2,
+    "titel": "Behoeften en schaarste",
+    "tekst": "",
+    "p": 6,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Kies bij elk voorbeeld de juiste soort behoefte.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Primaire behoefte",
+         "Secundaire behoefte"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Een warme maaltijd"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Primaire behoefte",
+         "Secundaire behoefte"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Een kaartje voor een concert"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Primaire behoefte",
+         "Secundaire behoefte"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Een slaapplek"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Primaire behoefte",
+         "Secundaire behoefte"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Een smartwatch"
+       }
+      ],
+      "uitw": [
+       "Primair: nodig om te leven. Secundair: luxe."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Een fiets is schaars, maar niet zeldzaam. Leg uit waarom een fiets schaars is en waarom een fiets niet zeldzaam is.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "2b",
+        "p": 2,
+        "label": "Schaars en zeldzaam",
+        "model": "Een fiets is schaars, want er zijn middelen nodig om hem te maken (werk, machines, materiaal). Een fiets is niet zeldzaam, want er zijn er heel veel van.",
+        "g": [
+         {
+          "t": "schaars: er zijn middelen nodig om een fiets te maken",
+          "p": 1
+         },
+         {
+          "t": "niet zeldzaam: er zijn veel fietsen",
+          "p": 1
+         }
+        ],
+        "v": "Een fiets is schaars, maar niet zeldzaam. Leg uit waarom een fiets schaars is en waarom een fiets niet zeldzaam is.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Schaars zegt iets over de middelen die nodig zijn. Zeldzaam zegt iets over de hoeveelheid."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 3,
+    "titel": "Een nieuwe sportwinkel",
+    "tekst": "In het centrum opent een nieuwe sportwinkel. De eigenaar denkt na over de marketingmix.",
+    "p": 9,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Kies bij elke keuze van de eigenaar de juiste P van de marketingmix.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Product",
+         "Prijs",
+         "Plaats",
+         "Promotie",
+         "Personeel",
+         "Presentatie"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "De winkel komt naast het station"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Product",
+         "Prijs",
+         "Plaats",
+         "Promotie",
+         "Personeel",
+         "Presentatie"
+        ],
+        "j": 3,
+        "p": 1,
+        "label": "De winkel deelt flyers uit op het schoolplein"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Product",
+         "Prijs",
+         "Plaats",
+         "Promotie",
+         "Personeel",
+         "Presentatie"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "De winkel verkoopt alleen bekende merken"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Product",
+         "Prijs",
+         "Plaats",
+         "Promotie",
+         "Personeel",
+         "Presentatie"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "De winkel is altijd iets goedkoper dan de rest"
+       }
+      ],
+      "uitw": [
+       "Plaats: waar. Promotie: aandacht trekken. Product: wat. Prijs: hoe duur."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Kies bij elke reclame de juiste soort.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Informatieve reclame",
+         "Merkreclame",
+         "Ideële reclame"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Een poster met alleen het logo van een schoenenmerk"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Informatieve reclame",
+         "Merkreclame",
+         "Ideële reclame"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Een folder met de maten en prijzen van voetbalschoenen"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Informatieve reclame",
+         "Merkreclame",
+         "Ideële reclame"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "Een spotje dat je oproept om meer te bewegen"
+       }
+      ],
+      "uitw": [
+       "Merkreclame: naamsbekendheid. Informatief: eigenschappen en prijs. Ideëel: beter gedrag."
+      ]
+     },
+     {
+      "id": "c",
+      "v": "De winkel richt zich op jongeren. Geef twee redenen waarom jongeren een interessante doelgroep zijn.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "3c",
+        "p": 2,
+        "label": "Jongeren als doelgroep",
+        "model": "Jongeren zijn makkelijk te beïnvloeden. Zij hebben geld te besteden. Wie jong een merk kiest, blijft dat merk vaak kopen. Zij willen graag nieuwe dingen.",
+        "g": [
+         {
+          "t": "eerste goede reden (bijvoorbeeld: makkelijk te beïnvloeden of geld te besteden)",
+          "p": 1
+         },
+         {
+          "t": "tweede goede reden (bijvoorbeeld: blijven een merk lang trouw of willen nieuwe dingen)",
+          "p": 1
+         }
+        ],
+        "v": "De winkel richt zich op jongeren. Geef twee redenen waarom jongeren een interessante doelgroep zijn.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Makkelijk te beïnvloeden, geld te besteden, lang trouw aan een merk, gek op nieuwe dingen."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 4,
+    "titel": "Opruiming",
+    "tekst": "De sportwinkel houdt opruiming. Hardloopschoenen van €120,00 krijgen 35% korting.",
+    "p": 3,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken hoeveel euro korting je krijgt op de hardloopschoenen.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         42
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Korting"
+       }
+      ],
+      "uitw": [
+       "(35 : 100) × 120 = €42,00"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken de prijs van de hardloopschoenen na de korting.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         78
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Nieuwe prijs"
+       }
+      ],
+      "uitw": [
+       "120 − 42 = €78,00"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Een trainingspak kostte €80,00. Je krijgt €20,00 korting. Bereken hoeveel procent korting dat is.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         25
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.05,
+        "label": "Korting"
+       }
+      ],
+      "uitw": [
+       "(deel : geheel) × 100 = (20 : 80) × 100 = 25,0%"
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 5,
+    "titel": "De begroting van familie De Vries",
+    "tekst": "Dit is de begroting van familie De Vries voor één maand.",
+    "p": 8,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken het totaal van de inkomsten.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         2430
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Inkomsten"
+       }
+      ],
+      "uitw": [
+       "2.150,00 + 95,50 + 184,50 = €2.430,00"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken het totaal van de uitgaven.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         1874.5
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Uitgaven"
+       }
+      ],
+      "uitw": [
+       "765,00 + 185,00 + 520,00 + 210,00 + 74,50 + 120,00 = €1.874,50"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Bereken hoeveel de familie per maand kan reserveren.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         555.5
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Reserveren"
+       }
+      ],
+      "uitw": [
+       "Inkomsten − uitgaven = 2.430,00 − 1.874,50 = €555,50"
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Kies bij elke uitgave de juiste soort.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Dagelijkse uitgave",
+         "Vaste last",
+         "Incidentele uitgave"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Huur"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Dagelijkse uitgave",
+         "Vaste last",
+         "Incidentele uitgave"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Boodschappen"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Dagelijkse uitgave",
+         "Vaste last",
+         "Incidentele uitgave"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "De koelkast gaat stuk: een nieuwe kopen"
+       }
+      ],
+      "uitw": [
+       "Huur komt vast terug. Boodschappen doe je steeds. Een nieuwe koelkast is onverwacht."
+      ]
+     },
+     {
+      "id": "e",
+      "v": "Kies bij elk inkomen de juiste soort.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Inkomen uit arbeid",
+         "Inkomen uit bezit",
+         "Overdrachtsinkomen"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Loon"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Inkomen uit arbeid",
+         "Inkomen uit bezit",
+         "Overdrachtsinkomen"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "Kinderbijslag"
+       }
+      ],
+      "uitw": [
+       "Loon is een beloning voor werk. Voor kinderbijslag lever je geen tegenprestatie."
+      ]
+     }
+    ],
+    "tabel": [
+     [
+      "Inkomsten",
+      "",
+      "Uitgaven",
+      ""
+     ],
+     [
+      "Loon",
+      "€2.150,00",
+      "Huur",
+      "€765,00"
+     ],
+     [
+      "Kinderbijslag",
+      "€95,50",
+      "Energie en water",
+      "€185,00"
+     ],
+     [
+      "Huurtoeslag",
+      "€184,50",
+      "Boodschappen",
+      "€520,00"
+     ],
+     [
+      "",
+      "",
+      "Verzekeringen",
+      "€210,00"
+     ],
+     [
+      "",
+      "",
+      "Abonnementen",
+      "€74,50"
+     ],
+     [
+      "",
+      "",
+      "Kleding",
+      "€120,00"
+     ]
+    ]
+   },
+   {
+    "nr": 6,
+    "titel": "De bijbaan van Sanne",
+    "tekst": "Sanne werkt bij een bakker. Zij verdient €52,50 per week.",
+    "p": 3,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken hoeveel Sanne per maand verdient.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         227.5
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Per maand"
+       }
+      ],
+      "uitw": [
+       "(weekbedrag × 52) : 12 = (52,50 × 52) : 12 = €227,50"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Sanne wil over 2 jaar een scooter van €1.850,00 kopen. Zij heeft al €650,00 gespaard. Bereken hoeveel zij per maand moet reserveren.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         50
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Per maand"
+       }
+      ],
+      "uitw": [
+       "2 jaar = 24 maanden. (1.850 − 650) : 24 = €50,00"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "De broer van Sanne verdient €240,00 per maand. Bereken hoeveel hij per week verdient.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         55.38
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.01,
+        "label": "Per week"
+       }
+      ],
+      "uitw": [
+       "(maandbedrag × 12) : 52 = (240 × 12) : 52 = €55,38"
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 7,
+    "titel": "Prijzen en koopkracht",
+    "tekst": "De tabel laat de prijs van een pizza bij dezelfde pizzeria zien. Jaar 1 is het basisjaar.",
+    "p": 6,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken het indexcijfer van de prijs in jaar 3.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         115
+        ],
+        "p": 1,
+        "eenh": "",
+        "tol": 0.05,
+        "label": "Indexcijfer jaar 3"
+       }
+      ],
+      "uitw": [
+       "(nieuw getal : getal basisjaar) × 100 = (9,20 : 8,00) × 100 = 115,0"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken het indexcijfer van de prijs in jaar 5.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         122.5
+        ],
+        "p": 1,
+        "eenh": "",
+        "tol": 0.05,
+        "label": "Indexcijfer jaar 5"
+       }
+      ],
+      "uitw": [
+       "(9,80 : 8,00) × 100 = 122,5"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Bereken met hoeveel procent de prijs is gestegen van jaar 3 naar jaar 5.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         6.5
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.05,
+        "label": "Stijging"
+       }
+      ],
+      "uitw": [
+       "(nieuw − oud) : oud × 100 = (9,80 − 9,20) : 9,20 × 100 = 6,5%"
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Een bioscoopkaartje kostte in het basisjaar €11,00. Het indexcijfer is nu 108. Bereken de prijs van nu.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         11.88
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Prijs nu"
+       }
+      ],
+      "uitw": [
+       "(indexcijfer : 100) × bedrag basisjaar = (108 : 100) × 11,00 = €11,88"
+      ]
+     },
+     {
+      "id": "e",
+      "v": "Het loon van Kees stijgt met 3%. De prijzen stijgen met 5%. Leg uit wat er gebeurt met de koopkracht van Kees.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "7e",
+        "p": 2,
+        "label": "Koopkracht",
+        "model": "De koopkracht van Kees daalt. De prijzen stijgen harder dan zijn loon, dus hij kan minder kopen.",
+        "g": [
+         {
+          "t": "de koopkracht daalt",
+          "p": 1
+         },
+         {
+          "t": "de prijzen stijgen harder dan het loon",
+          "p": 1
+         }
+        ],
+        "v": "Het loon van Kees stijgt met 3%. De prijzen stijgen met 5%. Leg uit wat er gebeurt met de koopkracht van Kees.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "De prijzen stijgen harder dan het loon: Kees kan minder kopen."
+      ]
+     }
+    ],
+    "tabel": [
+     [
+      "Jaar",
+      "Prijs van een pizza"
+     ],
+     [
+      "Jaar 1 (basisjaar)",
+      "€8,00"
+     ],
+     [
+      "Jaar 3",
+      "€9,20"
+     ],
+     [
+      "Jaar 5",
+      "€9,80"
+     ]
+    ]
+   }
+  ]
+ },
+ "toetsen": {
+  "t1": {
+   "n": 1,
+   "t": "oefentoets A",
+   "sub": "Hoofdstuk 1",
+   "min": 60,
+   "mc": "mc_a",
+   "open": null,
+   "rek": "rek_a"
+  }
+ },
+ "VERS": [
+  {
+   "n": 1,
+   "min": 60,
+   "pts": 52
+  }
+ ]
+}
