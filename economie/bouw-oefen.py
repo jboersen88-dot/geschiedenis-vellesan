@@ -59,6 +59,7 @@ for _m, _pad, _jr, _nr, _kop, _beelden in [
         ("j4h8", "jaar-4/hoofdstuk-8", "jaar 4 mavo", 8, ["Welvaart ", "wereldwijd"], ["welvaart", "ruilvoet", "fairtrade"]),
         ("j3h7", "jaar-3/mavo/hoofdstuk-7-de-overheid-voor-ons-allemaal", "jaar 3 mavo", 7, ["De overheid voor ons ", "allemaal"], ["bestuur", "zekerheid", "begroting"]),
         ("j3h1", "jaar-3/mavo/hoofdstuk-1-hoe-groot-is-jouw-welvaart", "jaar 3 mavo", 1, ["Hoe welvarend ", "ben jij?"], ["wensen", "vlogger", "begroting"]),
+        ("j3h2", "jaar-3/mavo/hoofdstuk-2-wat-voor-consument-ben-jij", "jaar 3 mavo", 2, ["Wat voor consument ", "ben jij?"], ["winkel", "sleutels", "plantje"]),
         ("j3h3", "jaar-3/mavo/hoofdstuk-3-de-bank-en-jouw-geld", "jaar 3 mavo", 3, ["De bank en jouw ", "geld"], ["bank", "sparen", "lenen"])]:
     CONFIG[_m] = dict(bron="apps/%s.html" % _m, pad=_pad, hoofdstuk="Hoofdstuk %d" % _nr, eyebrow="Economie · %s · hoofdstuk %d" % (_jr, _nr), kop=_kop, nr="H%d" % _nr,
                       beelden=_beelden, toetsen=("§%d.1 t/m §%d.4" % (_nr, _nr), []), pdf=(_nr == 5))

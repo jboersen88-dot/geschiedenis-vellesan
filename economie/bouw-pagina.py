@@ -2,59 +2,13 @@
 # als bouw-oefen.py, zodat economie.js er de hoofdstukpagina en per paragraaf een leeromgeving van maakt (RIJK in economie.js).
 # Zonder oefenomgeving: "oefen" is leeg en de oefenstof (opgaven, nakijkbladen, oefentoets) staat in "extra".
 # De kernvragen per paragraaf staan hier; bij jaar 3 H2 had de oude pagina er geen, die zijn geschreven uit de PowerPoints.
-# Jaar 3 H1 staat sinds 18 nov 2026 in de nieuwe opzet (j3h1/bron/lesapp.py + bouw-oefen.py) en is hier weggehaald.
-# Gebruik: python3 -I economie/bouw-pagina.py j3h2   (vanuit de root van de repo)
+# Jaar 3 H1 en H2 staan sinds 18 nov 2026 in de nieuwe opzet (bron/lesapp.py + bouw-oefen.py) en zijn hier weggehaald.
+# Gebruik: python3 -I economie/bouw-pagina.py j2h1gl   (vanuit de root van de repo)
 import json, os, sys
 
 ECO = os.path.dirname(os.path.abspath(__file__))
 
 CONFIG = {
-    "j3h2": dict(
-        key="eco-j3h2-v1",
-        pars=[
-            dict(id="2.1", t="Kijk en vergelijk!", file="1Cgw--aLJ9HJpz1gc5LagrZBagGMBB8TG", x=["n21", "p21"],
-                 sum="Consumentenorganisaties, vergelijkend warenonderzoek, de prijs per eenheid, consumer power en keurmerken.",
-                 imgs=[["winkel", "Een supermarkt vol producten om te vergelijken"], ["keurmerk", "Potten met een label: let op het keurmerk"]],
-                 q=["Wat doet een consumentenorganisatie, zoals de Consumentenbond? Noem drie taken.", "Waarom staan consumentenorganisaties vaak tegenover producenten?",
-                    "Wat is een vergelijkend warenonderzoek?", "Wat is het verschil tussen 'beste uit de test' en 'beste koop'?",
-                    "Hoe reken je uit wat 100 gram van een product kost, als je de prijs en het gewicht weet?",
-                    "Waarom moet je oppassen met onderzoeken en reviews waar een bedrijf zelf achter zit?",
-                    "Hoe kunnen consumenten samen invloed uitoefenen op producenten (consumer power)?", "Wat is een keurmerk? Noem drie soorten keurmerken."]),
-            dict(id="2.2", t="Sta je in je recht?", file="1lziMBvIENMM7vHUmgTmj0WzkegUqoaIK", x=["n22", "p22"],
-                 sum="Garantie, wetten die consumenten beschermen (Warenwet, koop op afstand, colportage, productaansprakelijkheid) en de Geschillencommissie.",
-                 imgs=[["kapot", "Een kapot scherm: heb je nog garantie?"], ["bon", "Bewaar je kassabon"]],
-                 q=["Hoe lang heb je garantie op een product? Wat betekent het dat een product deugdelijk moet zijn?",
-                    "Noem twee uitzonderingen waarvoor je bij een mobiel geen garantie krijgt.",
-                    "Waarom gelden de consumentenwetten niet als je iets van een particulier koopt, bijvoorbeeld op Marktplaats?",
-                    "Wat regelt de Warenwet en wat doet de NVWA?", "Wat regelt de Wet koop op afstand? Hoe lang is de bedenktijd?",
-                    "Wat regelt de Colportagewet?", "Wat betekent de Wet productaansprakelijkheid? Geef een voorbeeld.",
-                    "Wat doet de Geschillencommissie en wat betekent het dat de uitspraak bindend is?"]),
-            dict(id="2.3", t="Een huur- of koopwoning?", file="1IfrcDoFrXBkpXm4WGYGrtfUsBF3Tmeu7", x=["n23", "p23"],
-                 sum="De woningmarkt, sociale huur en de vrije sector, de makelaar, de stappen van het kopen van een huis en de kosten die erbij horen.",
-                 imgs=[["sleutels", "De sleutels van je nieuwe huis"], ["huizen", "Een straat met rijtjeshuizen"]],
-                 q=["Wat is de woningmarkt?", "Wat is het verschil tussen een huurwoning in de vrije sector en een sociale huurwoning?",
-                    "Voor wie zijn sociale huurwoningen bedoeld? Wat is huurtoeslag?", "Hoe wordt de huurprijs van een sociale huurwoning bepaald?",
-                    "Wat doet een makelaar?", "Noem de stappen van het kopen van een huis, van bezichtiging tot eigenaar.", "Wat zijn ontbindende voorwaarden?",
-                    "Wat zijn de kosten koper? Noem twee onderdelen.", "Wat doet de notaris en wat is het kadaster?",
-                    "Welke belastingen betaal je als eigenaar van een huis, zoals de ozb?"]),
-            dict(id="2.4", t="Consumeren of consuminderen?", file="15-6_thBru4Fa1cVRATYr41X3p82P3-DE", x=["n24"],
-                 sum="Milieuschade, energielabels en keurmerken, en de maatschappelijke kosten van consumeren.",
-                 imgs=[["afval", "Afval scheiden"], ["plantje", "Zorgen voor het milieu"]],
-                 q=["Wat is het verschil tussen consumeren en consuminderen?", "Wat is milieuschade? Geef drie voorbeelden.",
-                    "Welke doelen zijn er om milieuschade tegen te gaan?", "Wat is een energielabel en voor welke producten is het verplicht?",
-                    "Noem drie andere keurmerken die over het milieu of over dierenwelzijn gaan.", "Wat zijn maatschappelijke kosten? Geef twee voorbeelden."]),
-        ],
-        mat={"n21": ["Nakijkblad 2.1", [["Nakijkblad", "1e3V0aQv9F2Fi3qrHJLlhhTATTalcRbaI"]]],
-             "n22": ["Nakijkblad 2.2", [["Nakijkblad", "1zrXg-iPy6o4YEinLA-r7oFHPlcDPjwAF"]]],
-             "n23": ["Nakijkblad 2.3", [["Nakijkblad", "1xcUX0d8cgDCjxwAdx-pSRWV54bJ1xi7F"]]],
-             "n24": ["Nakijkblad 2.4", [["Nakijkblad", "1GoP9IKiTMW2VNS5JFlnvi16Jfu15-WiO"]]],
-             "p21": ["Nearpod-les 2.1", [["Nearpod", "https://app.nearpod.com/?pin=6LJ2P"]]],
-             "p22": ["Nearpod-les 2.2", [["Nearpod", "https://app.nearpod.com/?pin=HKPEG"]]],
-             "p23": ["Nearpod-les 2.3", [["Nearpod", "https://app.nearpod.com/?pin=SMZJB"]]],
-             "ot": ["Oefentoets hoofdstuk 2", [["Socrative", "https://b.socrative.com/login/student/"]], "Kamernaam: 771044. Vul je eigen naam in."]},
-        extra=["ot", "n21", "n22", "n23", "n24"],
-        weg={"2.1": [1], "2.2": [1], "2.3": [1, 5]},
-    ),
     # jaar 2 H1, de GL-versie (pagina "kopie-van-hoofdstuk-1"); foto's van jaar 3 hergebruikt
     "j2h1gl": dict(
         key="eco-j2h1gl-v1",

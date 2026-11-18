@@ -1,0 +1,687 @@
+{
+ "blokken": {
+  "mc_a": [
+   {
+    "v": "De Consumentenbond test twintig fietssloten van verschillende merken. Hoe heet zo'n test?",
+    "o": [
+     "Productaansprakelijkheid",
+     "Colportage",
+     "Consumer power",
+     "Vergelijkend warenonderzoek"
+    ],
+    "j": 3,
+    "u": "Verschillende merken van hetzelfde product worden vergeleken."
+   },
+   {
+    "v": "In een test staat bij een fietsslot: 'goed slot voor een lage prijs'. Welk oordeel past daarbij?",
+    "o": [
+     "Beste uit de test",
+     "Beste koop",
+     "Energielabel",
+     "Keurmerk"
+    ],
+    "j": 1,
+    "u": "Beste koop: de beste verhouding tussen prijs en kwaliteit."
+   },
+   {
+    "v": "Een pot van 400 gram kost €1,60. Wat kost 100 gram?",
+    "o": [
+     "€0,25",
+     "€0,64",
+     "€0,40",
+     "€4,00"
+    ],
+    "j": 2,
+    "u": "(1,60 : 400) × 100 = €0,40."
+   },
+   {
+    "v": "Op een doos eieren staat een logo voor dierenwelzijn. Wat is dat logo?",
+    "o": [
+     "Een koopcontract",
+     "Een garantiebewijs",
+     "Een energielabel",
+     "Een keurmerk"
+    ],
+    "j": 3,
+    "u": "Een keurmerk laat zien dat een product aan eisen voldoet."
+   },
+   {
+    "v": "Noah koopt online een jas. Na 10 dagen wil hij de jas terugsturen. Mag dat?",
+    "o": [
+     "Nee, dat mag alleen in een winkel",
+     "Nee, de koop is definitief",
+     "Ja, maar alleen als de jas stuk is",
+     "Ja, binnen 14 dagen mag dat"
+    ],
+    "j": 3,
+    "u": "Bij een koop op afstand heb je 14 dagen bedenktijd."
+   },
+   {
+    "v": "Wie controleert of het eten in een snackbar veilig is?",
+    "o": [
+     "De ACM",
+     "De NVWA",
+     "De notaris",
+     "Het kadaster"
+    ],
+    "j": 1,
+    "u": "De NVWA houdt toezicht op voedsel en producten."
+   },
+   {
+    "v": "Welke organisatie let erop dat bedrijven consumenten eerlijk behandelen?",
+    "o": [
+     "Het kadaster",
+     "De ACM",
+     "Het CBS",
+     "Het Nibud"
+    ],
+    "j": 1,
+    "u": "ACM: Autoriteit Consument & Markt."
+   },
+   {
+    "v": "Een gezin met een laag inkomen huurt bij een woningcorporatie. Welke woning is dat?",
+    "o": [
+     "Een woning in de vrije sector",
+     "Een sociale huurwoning",
+     "Een koopwoning",
+     "Een vakantiewoning"
+    ],
+    "j": 1,
+    "u": "Sociale huurwoningen zijn bedoeld voor mensen met een lager inkomen."
+   },
+   {
+    "v": "Koper en verkoper zijn het eens over de prijs van een huis. Wat tekenen zij eerst?",
+    "o": [
+     "De aanvraag voor huurtoeslag",
+     "De akte bij de notaris",
+     "Het voorlopig koopcontract",
+     "De inschrijving bij het kadaster"
+    ],
+    "j": 2,
+    "u": "Daarna volgt de bedenktijd en later de notaris."
+   },
+   {
+    "v": "Welke belasting betaalt alleen de eigenaar van een woning?",
+    "o": [
+     "Rioolheffing",
+     "Hondenbelasting",
+     "Afvalstoffenheffing",
+     "Onroerendezaakbelasting"
+    ],
+    "j": 3,
+    "u": "Huurders betalen geen ozb."
+   },
+   {
+    "v": "Door de uitstoot van CO₂ warmt de aarde op. Hoe heet schade zoals deze?",
+    "o": [
+     "Gevolgschade",
+     "Schermschade",
+     "Waterschade",
+     "Milieuschade"
+    ],
+    "j": 3,
+    "u": "Ons gedrag heeft nadelige gevolgen voor het milieu."
+   },
+   {
+    "v": "De gemeente betaalt het opruimen van zwerfafval met belastinggeld. Wat zijn dit?",
+    "o": [
+     "Vaste lasten",
+     "Maatschappelijke kosten",
+     "Kredietkosten",
+     "Kosten koper"
+    ],
+    "j": 1,
+    "u": "De hele samenleving betaalt mee."
+   }
+  ],
+  "rek_a": [
+   {
+    "nr": 1,
+    "titel": "Goed of fout?",
+    "tekst": "",
+    "p": 5,
+    "delen": [
+     {
+      "id": "",
+      "v": "Goed of fout?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Een consumentenorganisatie komt op voor de producenten."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "De 'beste koop' is altijd het duurste product uit de test."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "De uitspraak van de Geschillencommissie is bindend."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Een huurder betaalt onroerendezaakbelasting."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Een energielabel is verplicht voor woningen."
+       }
+      ],
+      "uitw": [
+       "Een consumentenorganisatie komt op voor de consumenten.",
+       "De 'beste koop' heeft de beste verhouding tussen prijs en kwaliteit.",
+       "Alleen de eigenaar van een woning betaalt ozb."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 2,
+    "titel": "Sta je in je recht?",
+    "tekst": "",
+    "p": 6,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Kies bij elke situatie de wet die de consument beschermt.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Warenwet",
+         "Wet koop op afstand",
+         "Colportagewet",
+         "Wet productaansprakelijkheid"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "In een pak koekjes zit een stukje glas"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Warenwet",
+         "Wet koop op afstand",
+         "Colportagewet",
+         "Wet productaansprakelijkheid"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "Een verkoper aan de deur verkoopt je een krantenabonnement"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Warenwet",
+         "Wet koop op afstand",
+         "Colportagewet",
+         "Wet productaansprakelijkheid"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Je bestelt een spel in een webshop en stuurt het terug"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Warenwet",
+         "Wet koop op afstand",
+         "Colportagewet",
+         "Wet productaansprakelijkheid"
+        ],
+        "j": 3,
+        "p": 1,
+        "label": "De accu van een nieuwe e-bike ontploft en je schuur brandt af"
+       }
+      ],
+      "uitw": [
+       "Warenwet: veilige producten. Colportagewet: verkoop aan de deur. Koop op afstand: internet en telefoon. Productaansprakelijkheid: schade door een fout in het product."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Sam koopt in een winkel nieuwe oortjes. Na twee maanden doen ze het niet meer. Sam heeft ze normaal gebruikt. De winkel zegt: 'Pech gehad.' Leg uit of de winkel gelijk heeft.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "2b",
+        "p": 2,
+        "label": "Garantie",
+        "model": "De winkel heeft geen gelijk. Een product moet deugdelijk zijn: bij normaal gebruik moet het een redelijke tijd meegaan. Sam heeft recht op garantie, dus de winkel moet het oplossen.",
+        "g": [
+         {
+          "t": "de winkel heeft geen gelijk: Sam heeft recht op garantie",
+          "p": 1
+         },
+         {
+          "t": "een product moet bij normaal gebruik een redelijke tijd meegaan (deugdelijk)",
+          "p": 1
+         }
+        ],
+        "v": "Sam koopt in een winkel nieuwe oortjes. Na twee maanden doen ze het niet meer. Sam heeft ze normaal gebruikt. De winkel zegt: 'Pech gehad.' Leg uit of de winkel gelijk heeft.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Een product moet deugdelijk zijn. De verkoper moet het oplossen."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 3,
+    "titel": "Rijst vergelijken",
+    "tekst": "In de supermarkt ligt rijst in twee maten. Het kleine pak van 400 gram kost €1,48. Het grote pak van 1.000 gram kost €3,20.",
+    "p": 4,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken wat 100 gram kost van het kleine pak.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         0.37
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Klein pak, per 100 gram"
+       }
+      ],
+      "uitw": [
+       "(prijs : aantal gram) × 100 = (1,48 : 400) × 100 = €0,37"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken wat 100 gram kost van het grote pak.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         0.32
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Groot pak, per 100 gram"
+       }
+      ],
+      "uitw": [
+       "(3,20 : 1.000) × 100 = €0,32"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Welk pak is per 100 gram het goedkoopst?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Het kleine pak",
+         "Het grote pak"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Het goedkoopst is"
+       }
+      ],
+      "uitw": [
+       "€0,32 is minder dan €0,37."
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Een gids test twee merken rijst. Merk A krijgt een 8,9 en kost €3,90. Merk B krijgt een 8,1 en kost €1,60. Welk merk is 'beste uit de test'?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Merk A",
+         "Merk B"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Beste uit de test"
+       }
+      ],
+      "uitw": [
+       "Beste uit de test is het merk met de hoogste kwaliteit."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 4,
+    "titel": "De huur van Emma",
+    "tekst": "Emma huurt een sociale huurwoning van een woningcorporatie. De huur is €648,00 per maand. Zij krijgt €192,00 huurtoeslag per maand.",
+    "p": 3,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken hoeveel huur Emma zelf betaalt.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         456
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Zelf betalen"
+       }
+      ],
+      "uitw": [
+       "648 − 192 = €456,00"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "De huur stijgt van €648,00 naar €673,92. Bereken met hoeveel procent de huur stijgt.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         4
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.05,
+        "label": "Stijging"
+       }
+      ],
+      "uitw": [
+       "(nieuw − oud) : oud × 100 = (673,92 − 648) : 648 × 100 = 4,0%"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Hoe wordt de huur van een sociale huurwoning bepaald?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Met een puntensysteem",
+         "Door de makelaar",
+         "Door de notaris"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "De huur wordt bepaald"
+       }
+      ],
+      "uitw": [
+       "Punten voor onder andere de oppervlakte en het energielabel."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 5,
+    "titel": "Een huis kopen",
+    "tekst": "Familie Jansen koopt een huis voor €285.000. De kosten koper zijn 4% van de koopprijs.",
+    "p": 5,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken de kosten koper.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         11400
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Kosten koper"
+       }
+      ],
+      "uitw": [
+       "(percentage : 100) × koopprijs = (4 : 100) × 285.000 = €11.400,00"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken wat de familie in totaal betaalt (koopprijs + kosten koper).",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         296400
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Totaal"
+       }
+      ],
+      "uitw": [
+       "285.000 + 11.400 = €296.400,00"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "De makelaar van de verkoper krijgt 1,5% van de verkoopprijs. Bereken hoeveel de makelaar krijgt.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         4275
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Makelaar"
+       }
+      ],
+      "uitw": [
+       "(1,5 : 100) × 285.000 = €4.275,00"
+      ]
+     },
+     {
+      "id": "d",
+      "v": "De WOZ-waarde van het huis is €270.000. De gemeente rekent 0,11% ozb per jaar. Bereken de ozb.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         297
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Ozb"
+       }
+      ],
+      "uitw": [
+       "(0,11 : 100) × 270.000 = €297,00"
+      ]
+     },
+     {
+      "id": "e",
+      "v": "Welke stap komt het laatst?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Een bod uitbrengen",
+         "Het voorlopig koopcontract tekenen",
+         "De inschrijving bij het kadaster"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "De laatste stap"
+       }
+      ],
+      "uitw": [
+       "Eerst bieden, dan het contract, dan de notaris en het kadaster."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 6,
+    "titel": "Zuinig met energie",
+    "tekst": "Een oude droger verbruikt 420 kWh per jaar. Een nieuwe droger met een beter energielabel verbruikt 250 kWh per jaar. Stroom kost €0,30 per kWh.",
+    "p": 7,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Kies bij elke keuze: consumeren of consuminderen.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Consumeren",
+         "Consuminderen"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Een kapotte rits laten maken"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Consumeren",
+         "Consuminderen"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Elk seizoen een nieuwe jas kopen"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Consumeren",
+         "Consuminderen"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Een tweedehands fiets kopen in plaats van een nieuwe"
+       }
+      ],
+      "uitw": [
+       "Consuminderen: bewust minder nieuw kopen en langer gebruiken."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken hoeveel euro de nieuwe droger per jaar bespaart.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         51
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Besparing per jaar"
+       }
+      ],
+      "uitw": [
+       "(verbruik oud − verbruik nieuw) × prijs per kWh = (420 − 250) × 0,30 = €51,00"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "De nieuwe droger kost €459,00. Bereken na hoeveel jaar de droger is terugverdiend.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         9
+        ],
+        "p": 1,
+        "eenh": "jaar",
+        "tol": 0.05,
+        "label": "Aantal jaren"
+       }
+      ],
+      "uitw": [
+       "459 : 51 = 9 jaar"
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Leg uit wat maatschappelijke kosten zijn. Geef ook een voorbeeld.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "6d",
+        "p": 2,
+        "label": "Maatschappelijke kosten",
+        "model": "Maatschappelijke kosten zijn nadelen waar de hele samenleving last van heeft en aan meebetaalt. Bijvoorbeeld de kosten van het opruimen van afval of het beschermen van de natuur.",
+        "g": [
+         {
+          "t": "nadelen of kosten voor de hele samenleving",
+          "p": 1
+         },
+         {
+          "t": "een goed voorbeeld (afval opruimen, natuur beschermen, vervuiling herstellen)",
+          "p": 1
+         }
+        ],
+        "v": "Leg uit wat maatschappelijke kosten zijn. Geef ook een voorbeeld.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Nadelen voor de hele samenleving, zoals de kosten van afval opruimen."
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "toetsen": {
+  "t1": {
+   "n": 1,
+   "t": "oefentoets A",
+   "sub": "Hoofdstuk 2",
+   "min": 50,
+   "mc": "mc_a",
+   "open": null,
+   "rek": "rek_a"
+  }
+ },
+ "VERS": [
+  {
+   "n": 1,
+   "min": 50,
+   "pts": 42
+  }
+ ]
+}
