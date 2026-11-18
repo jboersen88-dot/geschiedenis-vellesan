@@ -2,6 +2,28 @@
 module.exports = (K, g, P) => {
   const GR = [K.green, K.deep], TE = [K.teal, "#1b5c56"], BE = ["#c2484d", "#7d2b33"], OC = ["#c9952f", "#8a6212"], IN = ["#2c5f7a", "#173848"];
   return {
+    j4h2: {
+      geld: { hero: 1, bg: GR, d: [g(400, 440, 1.8, P.munten(K.ochre, 5)), g(840, 430, 1.7, P.euro())] },
+      budget: { bg: TE, d: [g(360, 430, 1.7, P.papier()), g(850, 430, 1.7, P.taart())] },
+      uitgeven: { bg: BE, d: [g(400, 440, 1.8, P.kar()), g(860, 430, 1.4, P.label(K.cream))] },
+      sparen: { bg: GR, d: [g(400, 430, 1.8, P.varken(K.coral, K.cream)), g(870, 450, 1.5, P.munten(K.ochre, 5))] },
+      beleggen: { bg: IN, d: [g(430, 430, 2.0, P.staven([45, 70, 58, 100], K.cream, K.coral)), g(900, 440, 1.3, P.euro())] },
+      lenen: { bg: OC, d: [g(300, 440, 1.5, P.kaart()), g(600, 430, 1.1, P.pijl(K.cream)), g(900, 440, 1.5, P.auto())] },
+      hypotheek: { bg: TE, d: [g(380, 440, 1.8, P.huis(K.cream, K.coral)), g(860, 430, 1.5, P.papier())] },
+      betalen: { bg: IN, d: [g(380, 430, 1.8, P.kaart()), g(860, 440, 1.5, P.munten(K.ochre, 4))] },
+      kringloop: { bg: GR, d: [g(260, 440, 1.5, P.mens(K.cream)), g(600, 400, 1.2, P.pijl(K.ochre, 190)), g(600, 530, 0.5, P.euro()), g(940, 450, 1.4, P.winkel())] },
+    },
+    j4h3: {
+      winst: { hero: 1, bg: GR, d: [g(400, 430, 1.8, P.fabriek()), g(870, 450, 1.6, P.munten(K.ochre, 5))] },
+      kosten: { bg: BE, d: [g(380, 430, 1.7, P.fabriek()), g(860, 430, 1.5, P.papier())] },
+      kostprijs: { bg: TE, d: [g(360, 430, 1.5, P.label(K.coral)), g(840, 440, 1.4, P.reken())] },
+      omzet: { bg: GR, d: [g(380, 440, 1.6, P.winkel()), g(860, 430, 1.8, P.staven([50, 72, 100], K.cream, K.coral))] },
+      productie: { bg: OC, d: [g(380, 430, 1.7, P.helm()), g(860, 430, 1.6, P.fabriek())] },
+      markt: { bg: IN, d: [g(600, 420, 2.2, P.weegschaal())] },
+      prijs: { bg: TE, d: [g(380, 440, 1.7, P.kar()), g(860, 430, 1.5, P.label(K.cream))] },
+      macht: { bg: BE, d: [g(420, 420, 2.0, P.winkel()), g(920, 500, 0.9, P.winkel())] },
+      toezicht: { bg: IN, d: [g(380, 430, 1.7, P.hamer()), g(860, 440, 1.5, P.winkel())] },
+    },
     j4h5: {
       overheid: { hero: 1, bg: GR, d: [g(600, 420, 2.1, P.overheid())] },
       sectoren: { bg: GR, d: [g(330, 430, 1.55, P.overheid()), g(870, 450, 1.55, P.winkel())] },

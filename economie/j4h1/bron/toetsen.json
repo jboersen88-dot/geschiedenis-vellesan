@@ -1,0 +1,592 @@
+{
+ "blokken": {
+  "mc_a": [
+   {
+    "v": "Daan heeft aandelen en krijgt daarover elk jaar dividend. Wat voor inkomen is dat?",
+    "o": [
+     "Inkomen uit bezit",
+     "Inkomen uit arbeid",
+     "Overdrachtsinkomen",
+     "Besteedbaar inkomen"
+    ],
+    "j": 0,
+    "u": "Je krijgt dividend omdat je aandelen bezit."
+   },
+   {
+    "v": "Een sportmerk laat een bekende voetballer zijn schoenen dragen. Bij welke P hoort dat?",
+    "o": [
+     "Plaats",
+     "Promotie",
+     "Prijs",
+     "Personeel"
+    ],
+    "j": 1,
+    "u": "Reclame en sponsoring horen bij promotie."
+   },
+   {
+    "v": "Een campagne roept op om bloed te geven. Wat voor reclame is dit?",
+    "o": [
+     "Ideële reclame",
+     "Winkelreclame",
+     "Sluikreclame",
+     "Merkreclame"
+    ],
+    "j": 0,
+    "u": "Reclame voor een goed doel of idee, zonder winstdoel."
+   },
+   {
+    "v": "Een fabriek loost afval in de rivier. De schoonmaak betaalt de gemeente. Hoe heten deze kosten?",
+    "o": [
+     "Collectieve voorzieningen",
+     "Incidentele uitgaven",
+     "Maatschappelijke kosten",
+     "Verplichte bestedingen"
+    ],
+    "j": 2,
+    "u": "De kosten zijn voor de samenleving en zitten niet in de prijs."
+   },
+   {
+    "v": "Wat houd je over als je van het brutoloon de loonbelasting en premies aftrekt?",
+    "o": [
+     "Het modaal inkomen",
+     "Het primair inkomen",
+     "Het nettoloon",
+     "Het reële inkomen"
+    ],
+    "j": 2,
+    "u": "Bruto min belasting en premies is netto."
+   },
+   {
+    "v": "In land A ligt de Lorenzcurve dicht bij de diagonaal. In land B ligt hij er ver vanaf. Wat weet je nu?",
+    "o": [
+     "In land B is het inkomen per inwoner lager",
+     "In land B zijn de inkomens gelijker verdeeld",
+     "In land B is het inkomen per inwoner hoger",
+     "In land B zijn de inkomens ongelijker verdeeld"
+    ],
+    "j": 3,
+    "u": "Hoe verder van de diagonaal, hoe ongelijker de verdeling."
+   },
+   {
+    "v": "Een bedrag stijgt met 4%. Met welke groeifactor reken je?",
+    "o": [
+     "0,96",
+     "1,04",
+     "1,4",
+     "0,04"
+    ],
+    "j": 1,
+    "u": "Groeifactor = 1 + (4 : 100) = 1,04."
+   },
+   {
+    "v": "Waarom is een gratis krant een schaars goed?",
+    "o": [
+     "Er worden er elke dag te weinig van gedrukt",
+     "De overheid betaalt alle kosten van de krant",
+     "Je kunt hem alleen op het station meenemen",
+     "Er zijn productiemiddelen nodig om hem te maken"
+    ],
+    "j": 3,
+    "u": "Schaars betekent: er zijn arbeid, kapitaal of natuur voor nodig."
+   },
+   {
+    "v": "Welk voorbeeld hoort bij welzijn en niet bij welvaart?",
+    "o": [
+     "Een hoger loon krijgen",
+     "Een nieuwe scooter kopen",
+     "Meer zakgeld ontvangen",
+     "Je veilig voelen in je buurt"
+    ],
+    "j": 3,
+    "u": "Welzijn gaat over de kwaliteit van je leven, niet over geld."
+   },
+   {
+    "v": "Het indexcijfer van de huur is 108 (2015 = 100). Wat betekent dat?",
+    "o": [
+     "De huur is 108 euro per maand",
+     "De huur is 8% hoger dan in 2015",
+     "De huur is 8 euro hoger dan in 2015",
+     "De huur is 108% hoger dan in 2015"
+    ],
+    "j": 1,
+    "u": "108 − 100 = 8% hoger dan in het basisjaar."
+   },
+   {
+    "v": "De prijzen dalen een jaar lang. Waarom is dat slecht voor de economie?",
+    "o": [
+     "Mensen stellen aankopen uit",
+     "De lonen stijgen te snel",
+     "Mensen gaan meer lenen",
+     "Het geld wordt minder waard"
+    ],
+    "j": 0,
+    "u": "Bij deflatie wachten mensen tot het nog goedkoper is."
+   },
+   {
+    "v": "Wie berekent in Nederland het consumentenprijsindexcijfer?",
+    "o": [
+     "De gemeente",
+     "Het CBS",
+     "Het Nibud",
+     "De vakbond"
+    ],
+    "j": 1,
+    "u": "Het Centraal Bureau voor de Statistiek berekent het CPI."
+   }
+  ],
+  "rek_a": [
+   {
+    "nr": 1,
+    "titel": "Goed of fout?",
+    "tekst": "",
+    "p": 5,
+    "delen": [
+     {
+      "id": "",
+      "v": "Goed of fout?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Kinderbijslag is een overdrachtsinkomen."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Het modaal inkomen is het hoogste inkomen van Nederland."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Zonlicht is een vrij goed."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Bij inflatie kun je met hetzelfde geld meer kopen."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Een indexcijfer van 95 betekent een daling van 5% sinds het basisjaar."
+       }
+      ],
+      "uitw": [
+       "Het modaal inkomen is het inkomen dat het meest voorkomt.",
+       "Bij inflatie stijgen de prijzen: je kunt minder kopen."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 2,
+    "titel": "Het inkomen van Noor",
+    "tekst": "Noor (16) verdient €48 per week met haar bijbaan in de supermarkt.",
+    "p": 6,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Kies bij elk inkomen de juiste soort.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Inkomen uit arbeid",
+         "Inkomen uit bezit",
+         "Overdrachtsinkomen"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Loon van de bijbaan"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Inkomen uit arbeid",
+         "Inkomen uit bezit",
+         "Overdrachtsinkomen"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Rente op spaargeld"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Inkomen uit arbeid",
+         "Inkomen uit bezit",
+         "Overdrachtsinkomen"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "Zakgeld"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Inkomen uit arbeid",
+         "Inkomen uit bezit",
+         "Overdrachtsinkomen"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Huur van een garagebox"
+       }
+      ],
+      "uitw": [
+       "Loon is inkomen uit arbeid. Rente en huur krijg je uit bezit. Zakgeld is een overdracht."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken hoeveel Noor per maand verdient met haar bijbaan. Rond af op 2 decimalen.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         208.0
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.05,
+        "label": "Loon per maand"
+       }
+      ],
+      "uitw": [
+       "(weekbedrag × 52) : 12 = (48 × 52) : 12 = €208,00. Niet keer 4."
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Het loon van Noor stijgt met 5%. Bereken haar nieuwe weekloon.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         50.4
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.05,
+        "label": "Nieuw weekloon"
+       }
+      ],
+      "uitw": [
+       "Groeifactor = 1 + (5 : 100) = 1,05. 48 × 1,05 = €50,40."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 3,
+    "titel": "De inkomensverdeling in land X",
+    "tekst": "De tabel laat zien welk deel van het totale inkomen de bevolking verdient, opgeteld van arm naar rijk.",
+    "p": 5,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Hoeveel procent van het inkomen verdient de rijkste 20%?",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         42
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.5,
+        "label": "Rijkste 20%"
+       }
+      ],
+      "uitw": [
+       "100% − 58% = 42%."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Hoeveel procent van het inkomen verdient de groep van 40% tot 60%?",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         16
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.5,
+        "label": "Middelste 20%"
+       }
+      ],
+      "uitw": [
+       "cumulatief − vorig cumulatief = 34% − 18% = 16%."
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Het BBP van land X is €450 miljard. Er wonen 9 miljoen mensen. Bereken het BBP per inwoner.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         50000
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.5,
+        "label": "BBP per inwoner"
+       }
+      ],
+      "uitw": [
+       "BBP : aantal inwoners = 450.000.000.000 : 9.000.000 = €50.000."
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Noem twee oorzaken van inkomensverschillen tussen mensen.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "3d",
+        "p": 2,
+        "label": "Inkomensverschillen",
+        "model": "Bijvoorbeeld: verschil in opleiding, het soort werk, de verantwoordelijkheid die je draagt, en vraag en aanbod op de arbeidsmarkt.",
+        "g": [
+         {
+          "t": "een eerste juiste oorzaak (opleiding, soort werk, verantwoordelijkheid, vraag en aanbod)",
+          "p": 1
+         },
+         {
+          "t": "een tweede juiste oorzaak",
+          "p": 1
+         }
+        ],
+        "v": "Noem twee oorzaken van inkomensverschillen tussen mensen.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Opleiding, soort werk, verantwoordelijkheid, vraag en aanbod."
+      ]
+     }
+    ],
+    "tabel": [
+     [
+      "Bevolking",
+      "Cumulatief % van het inkomen"
+     ],
+     [
+      "armste 20%",
+      "6%"
+     ],
+     [
+      "armste 40%",
+      "18%"
+     ],
+     [
+      "armste 60%",
+      "34%"
+     ],
+     [
+      "armste 80%",
+      "58%"
+     ],
+     [
+      "alle 100%",
+      "100%"
+     ]
+    ]
+   },
+   {
+    "nr": 4,
+    "titel": "Rekenen met indexcijfers",
+    "tekst": "Een brood kostte in het basisjaar 2015 €2,40. Nu kost hetzelfde brood €3,00.",
+    "p": 3,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken het indexcijfer van de prijs van nu. Rond af op 1 decimaal.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         125.0
+        ],
+        "p": 1,
+        "eenh": "",
+        "tol": 0.05,
+        "label": "Indexcijfer"
+       }
+      ],
+      "uitw": [
+       "(nieuw getal : getal basisjaar) × 100 = (3,00 : 2,40) × 100 = 125,0."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Met hoeveel procent is de prijs gestegen sinds het basisjaar?",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         25
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.05,
+        "label": "Stijging"
+       }
+      ],
+      "uitw": [
+       "125 − 100 = 25%."
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Een pizza kost nu €11,50. Het indexcijfer is 115 (2015 = 100). Bereken de prijs in 2015.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         10.0
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.05,
+        "label": "Prijs in 2015"
+       }
+      ],
+      "uitw": [
+       "(prijs : indexcijfer) × 100 = (11,50 : 115) × 100 = €10,00."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 5,
+    "titel": "Help, de prijzen stijgen",
+    "tekst": "De lonen stijgen dit jaar met 2,5%. De inflatie is 4%.",
+    "p": 5,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken met hoeveel procent de koopkracht verandert. Typ een min-teken bij een daling.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         -1.5
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.05,
+        "label": "Verandering koopkracht"
+       }
+      ],
+      "uitw": [
+       "nominale verandering − inflatie = 2,5% − 4% = −1,5%. De koopkracht daalt."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "De vakbond eist prijscompensatie. Leg uit wat prijscompensatie is.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "5b",
+        "p": 2,
+        "label": "Prijscompensatie",
+        "model": "Een loonsverhoging die even groot is als de prijsstijging, zodat de koopkracht gelijk blijft.",
+        "g": [
+         {
+          "t": "een loonsverhoging",
+          "p": 1
+         },
+         {
+          "t": "om de prijsstijging (inflatie) goed te maken",
+          "p": 1
+         }
+        ],
+        "v": "De vakbond eist prijscompensatie. Leg uit wat prijscompensatie is.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "De lonen stijgen mee met de prijzen."
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Leg uit hoe hogere lonen kunnen zorgen voor nog hogere prijzen. Gebruik het woord kosten.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "5c",
+        "p": 2,
+        "label": "Loon-prijsspiraal",
+        "model": "Door hogere lonen stijgen de kosten van bedrijven. Bedrijven rekenen die kosten door in hogere prijzen. Daarna vragen werknemers weer meer loon: de loon-prijsspiraal.",
+        "g": [
+         {
+          "t": "hogere lonen betekenen hogere kosten voor bedrijven",
+          "p": 1
+         },
+         {
+          "t": "bedrijven verhogen daardoor hun prijzen",
+          "p": 1
+         }
+        ],
+        "v": "Leg uit hoe hogere lonen kunnen zorgen voor nog hogere prijzen. Gebruik het woord kosten.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Lonen omhoog, kosten omhoog, prijzen omhoog."
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "toetsen": {
+  "t1": {
+   "n": 1,
+   "t": "oefentoets A",
+   "sub": "Hoofdstuk 1",
+   "min": 45,
+   "mc": "mc_a",
+   "open": null,
+   "rek": "rek_a"
+  }
+ },
+ "VERS": [
+  {
+   "n": 1,
+   "min": 45,
+   "pts": 36
+  }
+ ]
+}

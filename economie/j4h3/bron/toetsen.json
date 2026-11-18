@@ -1,0 +1,594 @@
+{
+ "blokken": {
+  "mc_a": [
+   {
+    "v": "Een meubelmaker koopt hout voor €80 en verkoopt de tafel voor €300. Hoe heet het verschil van €220?",
+    "o": [
+     "Nettoresultaat",
+     "Consumentenprijs",
+     "Brutowinstopslag",
+     "Toegevoegde waarde"
+    ],
+    "j": 3,
+    "u": "De extra waarde die ontstaat door het hout te bewerken."
+   },
+   {
+    "v": "Welke beloning hoort bij de productiefactor natuur?",
+    "o": [
+     "Loon",
+     "Rente",
+     "Pacht",
+     "Winst"
+    ],
+    "j": 2,
+    "u": "Natuur: pacht. Arbeid: loon. Kapitaal: huur en rente. Ondernemerschap: winst."
+   },
+   {
+    "v": "Een bakker bakt deze maand twee keer zoveel brood. Welke kosten stijgen mee?",
+    "o": [
+     "De verzekering",
+     "De rente op de lening",
+     "De kosten van meel",
+     "De huur van de winkel"
+    ],
+    "j": 2,
+    "u": "Meel is een variabele kost: meer productie, meer kosten."
+   },
+   {
+    "v": "Hoe heet het aantal producten dat een bedrijf verkoopt?",
+    "o": [
+     "De marge",
+     "De winst",
+     "De afzet",
+     "De omzet"
+    ],
+    "j": 2,
+    "u": "Afzet is een aantal. Omzet is een bedrag."
+   },
+   {
+    "v": "Een bedrijf geeft werknemers een bonus als ze meer produceren. Wat wil het bedrijf verhogen?",
+    "o": [
+     "De productiecapaciteit",
+     "De brutowinstopslag",
+     "De maatschappelijke kosten",
+     "De arbeidsproductiviteit"
+    ],
+    "j": 3,
+    "u": "Prestatiebeloning kan de productie per werknemer verhogen."
+   },
+   {
+    "v": "Waar staan de drie P's van maatschappelijk verantwoord ondernemen voor?",
+    "o": [
+     "People, planet, profit",
+     "Prijs, product, plaats",
+     "Pacht, premie, productie",
+     "Personeel, promotie, prijs"
+    ],
+    "j": 0,
+    "u": "Rekening houden met mensen, het milieu en de winst."
+   },
+   {
+    "v": "De oogst van aardappelen mislukt. Wat gebeurt er op de markt voor aardappelen?",
+    "o": [
+     "De vraag stijgt en de prijs daalt",
+     "Het aanbod daalt en de prijs stijgt",
+     "De vraag daalt en de prijs daalt",
+     "Het aanbod stijgt en de prijs daalt"
+    ],
+    "j": 1,
+    "u": "Minder aanbod: de aanbodlijn schuift naar links en de prijs stijgt."
+   },
+   {
+    "v": "De overheid stelt een maximumprijs in onder de evenwichtsprijs. Wat is het gevolg?",
+    "o": [
+     "Een kartel",
+     "Een overschot",
+     "Een fusie",
+     "Een tekort"
+    ],
+    "j": 3,
+    "u": "Bij een lagere prijs is de vraag groter dan het aanbod."
+   },
+   {
+    "v": "Op een markt zijn veel aanbieders. Hun producten lijken op elkaar, maar verschillen in merk en smaak. Welke marktvorm is dit?",
+    "o": [
+     "Volkomen concurrentie",
+     "Monopolie",
+     "Monopolistische concurrentie",
+     "Oligopolie"
+    ],
+    "j": 2,
+    "u": "Veel aanbieders met heterogene producten."
+   },
+   {
+    "v": "Vier bedrijven spreken stiekem af om dezelfde hoge prijs te vragen. Hoe heet zo'n afspraak?",
+    "o": [
+     "Een kartel",
+     "Een aanbesteding",
+     "Een fusie",
+     "Een monopolie"
+    ],
+    "j": 0,
+    "u": "Een kartel is verboden. De ACM kan boetes geven."
+   },
+   {
+    "v": "Wat is een voordeel van een fusie voor de bedrijven?",
+    "o": [
+     "Ze hoeven niet meer af te schrijven",
+     "Ze krijgen meer concurrenten",
+     "Ze besparen op de vaste kosten",
+     "Ze betalen geen btw meer"
+    ],
+    "j": 2,
+    "u": "Samen heb je bijvoorbeeld maar één kantoor en één directie nodig."
+   },
+   {
+    "v": "Wanneer is een markt transparant?",
+    "o": [
+     "Als er maar één aanbieder van het product is",
+     "Als je prijzen en producten goed kunt vergelijken",
+     "Als de overheid de prijs van het product bepaalt",
+     "Als alle aanbieders precies dezelfde prijs vragen"
+    ],
+    "j": 1,
+    "u": "Transparant betekent doorzichtig: je kunt alles vergelijken."
+   }
+  ],
+  "rek_a": [
+   {
+    "nr": 1,
+    "titel": "Goed of fout?",
+    "tekst": "",
+    "p": 5,
+    "delen": [
+     {
+      "id": "",
+      "v": "Goed of fout?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "De consumentenprijs is de verkoopprijs inclusief btw."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Vaste kosten stijgen als een bedrijf meer produceert."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Brutowinst is omzet min inkoopwaarde."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Bij een monopolie zijn er veel aanbieders."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Een minimumprijs beschermt de producenten."
+       }
+      ],
+      "uitw": [
+       "Vaste kosten veranderen niet meteen als de productie verandert.",
+       "Bij een monopolie is er maar één aanbieder."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 2,
+    "titel": "De fietsenwinkel van Sanne",
+    "tekst": "",
+    "p": 8,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Kies bij elk voorbeeld de juiste productiefactor.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Natuur",
+         "Arbeid",
+         "Kapitaal",
+         "Ondernemerschap"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "De monteur in de werkplaats"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Natuur",
+         "Arbeid",
+         "Kapitaal",
+         "Ondernemerschap"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "De kassa en het gereedschap"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Natuur",
+         "Arbeid",
+         "Kapitaal",
+         "Ondernemerschap"
+        ],
+        "j": 3,
+        "p": 1,
+        "label": "Sanne bedenkt een nieuwe actie"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Natuur",
+         "Arbeid",
+         "Kapitaal",
+         "Ondernemerschap"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "De grond onder de winkel"
+       }
+      ],
+      "uitw": [
+       "Mensen: arbeid. Hulpmiddelen: kapitaal. Leiden en organiseren: ondernemerschap. Grond: natuur."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Kies bij elke kostenpost de juiste soort.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Vaste kosten",
+         "Variabele kosten"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Huur van het pand"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Vaste kosten",
+         "Variabele kosten"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Inkoop van fietsbanden"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Vaste kosten",
+         "Variabele kosten"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Afschrijving op de kassa"
+       }
+      ],
+      "uitw": [
+       "Huur en afschrijving blijven gelijk. De inkoop hangt af van de verkoop."
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Sanne koopt een bestelbus van €28.000. Na 6 jaar is de restwaarde €4.000. Bereken de afschrijving per jaar.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         4000.0
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.05,
+        "label": "Afschrijving per jaar"
+       }
+      ],
+      "uitw": [
+       "(aanschafprijs − restwaarde) : aantal gebruiksjaren = (28.000 − 4.000) : 6 = €4.000,00."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 3,
+    "titel": "Van inkoopprijs naar consumentenprijs",
+    "tekst": "Sanne koopt een fietshelm in voor €20. Haar brutowinstopslag is 75%.",
+    "p": 3,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken de verkoopprijs van de fietshelm (exclusief btw).",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         35.0
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.05,
+        "label": "Verkoopprijs"
+       }
+      ],
+      "uitw": [
+       "(inkoopprijs : 100) × (100 + opslag) = (20 : 100) × 175 = €35,00."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken de consumentenprijs (inclusief 21% btw).",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         42.35
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.05,
+        "label": "Consumentenprijs"
+       }
+      ],
+      "uitw": [
+       "(verkoopprijs : 100) × (100 + btw) = (35 : 100) × 121 = €42,35."
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Een fietstas kost in de winkel €60,50 inclusief 21% btw. Bereken de prijs exclusief btw.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         50.0
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.05,
+        "label": "Prijs exclusief btw"
+       }
+      ],
+      "uitw": [
+       "(prijs inclusief btw : 121) × 100 = (60,50 : 121) × 100 = €50,00."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 4,
+    "titel": "Omzet en winst",
+    "tekst": "Sanne verkoopt in een maand 400 fietssloten voor €45 per stuk (exclusief btw). De inkoopprijs is €25 per stuk. De bedrijfskosten zijn €6.500.",
+    "p": 4,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken de omzet.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         18000.0
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.05,
+        "label": "Omzet"
+       }
+      ],
+      "uitw": [
+       "afzet × verkoopprijs = 400 × 45 = €18.000,00."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken de brutowinst.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         8000.0
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.05,
+        "label": "Brutowinst"
+       }
+      ],
+      "uitw": [
+       "omzet − inkoopwaarde = 18.000 − (400 × 25) = 18.000 − 10.000 = €8.000,00."
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Bereken het nettoresultaat. Typ een min-teken bij een verlies.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         1500.0
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.05,
+        "label": "Nettoresultaat"
+       }
+      ],
+      "uitw": [
+       "brutowinst − bedrijfskosten = 8.000 − 6.500 = €1.500,00 nettowinst."
+      ]
+     },
+     {
+      "id": "d",
+      "v": "In de regio worden 2.500 fietssloten per maand verkocht. Bereken het marktaandeel van Sanne.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         16.0
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.05,
+        "label": "Marktaandeel"
+       }
+      ],
+      "uitw": [
+       "(eigen afzet : totale afzet) × 100 = (400 : 2.500) × 100 = 16,0%."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 5,
+    "titel": "De markt voor aardbeien",
+    "tekst": "De tabel laat de vraag naar en het aanbod van aardbeien op een markt zien.",
+    "p": 4,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Wat is de evenwichtsprijs?",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         3.0
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.05,
+        "label": "Evenwichtsprijs"
+       }
+      ],
+      "uitw": [
+       "Bij €3,00 zijn de vraag en het aanbod gelijk: 500 bakjes."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "De overheid stelt een minimumprijs in van €4,00. Bereken het overschot in bakjes.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         400
+        ],
+        "p": 1,
+        "eenh": "",
+        "tol": 0.5,
+        "label": "Overschot (bakjes)"
+       }
+      ],
+      "uitw": [
+       "Bij €4,00: aangeboden 700, gevraagd 300. 700 − 300 = 400 bakjes overschot."
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Het wordt mooi weer en veel mensen willen aardbeien. Leg uit wat er gebeurt met de vraaglijn en met de prijs.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "5c",
+        "p": 2,
+        "label": "Verschuiving van de vraaglijn",
+        "model": "De vraag neemt toe, dus de vraaglijn schuift naar rechts. Daardoor stijgt de evenwichtsprijs.",
+        "g": [
+         {
+          "t": "de vraaglijn schuift naar rechts (meer vraag)",
+          "p": 1
+         },
+         {
+          "t": "de prijs stijgt",
+          "p": 1
+         }
+        ],
+        "v": "Het wordt mooi weer en veel mensen willen aardbeien. Leg uit wat er gebeurt met de vraaglijn en met de prijs.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Meer vraag: lijn naar rechts, prijs omhoog."
+      ]
+     }
+    ],
+    "tabel": [
+     [
+      "Prijs per bakje",
+      "Gevraagd",
+      "Aangeboden"
+     ],
+     [
+      "€2,00",
+      "700",
+      "300"
+     ],
+     [
+      "€3,00",
+      "500",
+      "500"
+     ],
+     [
+      "€4,00",
+      "300",
+      "700"
+     ]
+    ]
+   }
+  ]
+ },
+ "toetsen": {
+  "t1": {
+   "n": 1,
+   "t": "oefentoets A",
+   "sub": "Hoofdstuk 3",
+   "min": 50,
+   "mc": "mc_a",
+   "open": null,
+   "rek": "rek_a"
+  }
+ },
+ "VERS": [
+  {
+   "n": 1,
+   "min": 50,
+   "pts": 36
+  }
+ ]
+}
