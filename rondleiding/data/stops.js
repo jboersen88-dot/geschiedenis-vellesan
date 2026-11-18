@@ -2,7 +2,7 @@ window.RONDLEIDING = {
   basisUrl: "https://jboersen88-dot.github.io/geschiedenis-vellesan/rondleiding/",
   qrVerplicht: true,
   titel: "Ontdek het Vellesan",
-  welkom: "Welkom op het Vellesan College! Volg de kaart van stop naar stop en kijk bij elke stop het filmpje. Kies zelf welke opdrachten je wilt doen. Kun jij alle 13 stops verzamelen?",
+  welkom: "Welkom op het Vellesan College! Volg de kaart van stop naar stop en kijk bij elke stop het filmpje. Kies zelf welke opdrachten je wilt doen. Kun jij alle 15 stops verzamelen?",
   etages: [
     { naam: "Begane grond", kaart: "img/kaart-0.jpg", w: 1100, h: 700 },
     { naam: "1e etage", kaart: "img/kaart-1.jpg", w: 1233, h: 800 },
@@ -131,6 +131,28 @@ window.RONDLEIDING = {
       ]
     },
     {
+      id: "s14", code: "VIS", naam: "De nieuwbouw (B22 tot B25)", etage: 1, x: 67, y: 47,
+      clip: "media/s14.mp4", poster: "media/s14.jpg",
+      uitleg: "Nu ben je in het nieuwe deel van de school. Alles ziet er hier anders uit: een gladde vloer, grote ramen en gele deuren. In deze gang liggen de lokalen B22 tot en met B25. Hier krijg je onder andere wiskunde, Engels en Nederlands.",
+      loop: "Loop door de gang van het oude gebouw naar de overgang met het nieuwe gebouw. Je merkt het aan de vloer: die wordt glad en grijs.",
+      opdrachten: [
+        { type: "mc", vraag: "Welke kleur hebben de deuren in de nieuwbouw?", opties: ["Blauw", "Geel", "Groen"], goed: 1, uitleg: "Klopt. In de nieuwbouw zijn de deuren geel." },
+        { type: "zoek", vraag: "Zoek lokaal B24. Gevonden? Tik op de knop!" },
+        { type: "open", vraag: "Wat is het grootste verschil tussen het oude en het nieuwe gebouw? Schrijf één ding op." }
+      ]
+    },
+    {
+      id: "s15", code: "UIL", naam: "De lift, B26 en B27", etage: 1, x: 49, y: 60,
+      clip: "media/s15.mp4", poster: "media/s15.jpg",
+      uitleg: "Aan het eind van de gang is de lift. Die is er voor leerlingen die niet goed kunnen traplopen. Hier vind je ook de lokalen B26 en B27. Door het grote raam kijk je naar buiten.",
+      loop: "Loop de gang van de nieuwbouw helemaal uit, langs B25. Aan het eind zie je een grijze liftdeur.",
+      opdrachten: [
+        { type: "mc", vraag: "Voor wie is de lift bedoeld?", opties: ["Voor iedereen die haast heeft", "Voor leerlingen die niet goed kunnen traplopen", "Alleen voor docenten"], goed: 1, uitleg: "Goed. Zo kan iedereen overal in de school komen." },
+        { type: "zoek", vraag: "Zoek de lokalen B26 en B27. Allebei gevonden? Tik op de knop!" },
+        { type: "tel", vraag: "Tel de gele deuren die je vanaf de lift kunt zien. Hoeveel zijn het er?" }
+      ]
+    },
+    {
       id: "s12", code: "TAS", naam: "De tekenzolder (B29)", etage: 2, x: 47, y: 33,
       clip: "media/s12.mp4", poster: "media/s12.jpg",
       uitleg: "Dit lokaal ligt onder het dak. Je ziet oranjerode balken en dakramen. Hier krijg je tekenen en CKV. Er staan ezels om op te werken.",
@@ -144,7 +166,7 @@ window.RONDLEIDING = {
     {
       id: "s13", code: "GOUD", naam: "Bibliotheek en studiezaal (B31)", etage: 2, x: 73, y: 20,
       clip: "media/s13.mp4", poster: "media/s13.jpg",
-      uitleg: "Dit is de bibliotheek, onder houten dakbalken. Je kunt hier boeken en tijdschriften lenen. In de huiswerkklas kun je je huiswerk maken. Hier krijg je ook extra hulp, zoals bij dyslexie, begeleiding, mentoraat en decanaat. Gefeliciteerd, je hebt alle 13 stops gehaald!",
+      uitleg: "Dit is de bibliotheek, onder houten dakbalken. Je kunt hier boeken en tijdschriften lenen. In de huiswerkklas kun je je huiswerk maken. Hier krijg je ook extra hulp, zoals bij dyslexie, begeleiding, mentoraat en decanaat. Gefeliciteerd, je hebt alle 15 stops gehaald!",
       loop: "Blijf op de tweede etage en loop naar de bibliotheek en studiezaal, lokaal B31.",
       opdrachten: [
         { type: "mc", vraag: "Wat kun je in de bibliotheek doen?", opties: ["Een auto lenen", "Een kluisje huren", "Boeken en tijdschriften lenen"], goed: 2, uitleg: "Klopt. Lezen kan hier prima." },
