@@ -499,6 +499,221 @@
       ]
      }
     ]
+   },
+   {
+    "nr": 8,
+    "titel": "Geldfuncties bij de fietsenmaker",
+    "tekst": "Sem werkt op zaterdag bij een fietsenmaker.",
+    "p": 4,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Welke geldfunctie zie je in elke situatie?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Ruilmiddel",
+         "Rekenmiddel",
+         "Spaarmiddel"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "De fietsenmaker rekent uit dat een reparatie €35 kost."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Ruilmiddel",
+         "Rekenmiddel",
+         "Spaarmiddel"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "De klant betaalt de reparatie met zijn pas."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Ruilmiddel",
+         "Rekenmiddel",
+         "Spaarmiddel"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "Sem zet €40 van zijn loon opzij voor een nieuwe telefoon."
+       }
+      ],
+      "uitw": [
+       "Een prijs uitrekenen is rekenmiddel: er wordt nog niet betaald.",
+       "Betalen is ruilen van geld tegen een dienst: ruilmiddel.",
+       "Geld bewaren voor later is spaarmiddel."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Leg uit waarom contactloos betalen geld makkelijker maakt als ruilmiddel.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "8b",
+        "p": 1,
+        "label": "Contactloos betalen",
+        "model": "Je betaalt direct met het geld op je rekening. Je hoeft niet eerst contant geld te halen bij een automaat.",
+        "g": [
+         {
+          "t": "je betaalt direct met het geld op je rekening, zonder eerst contant geld te halen",
+          "p": 1
+         }
+        ],
+        "v": "Leg uit waarom contactloos betalen geld makkelijker maakt als ruilmiddel.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Hoe makkelijker je kunt betalen, hoe beter geld werkt als ruilmiddel."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 9,
+    "titel": "Goud, geknipte munten en vertrouwen",
+    "tekst": "",
+    "p": 4,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Leg uit wat 'slecht geld verdringt goed geld' betekent.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "9a",
+        "p": 2,
+        "label": "Slecht geld verdringt goed geld",
+        "model": "Mensen bewaren de goede, zware munten en betalen met de geknipte munten. Daardoor blijft alleen het slechte geld in omloop.",
+        "g": [
+         {
+          "t": "mensen bewaren de goede munten en geven de slechte (geknipte) munten uit",
+          "p": 1
+         },
+         {
+          "t": "daardoor blijft het slechte geld in omloop en verdwijnt het goede geld",
+          "p": 1
+         }
+        ],
+        "v": "Leg uit wat 'slecht geld verdringt goed geld' betekent.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Een geknipte munt bevat minder goud. Op beide munten staat hetzelfde bedrag, dus je geeft liever de slechte uit."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Leg uit wat de gouden standaard was en waarom ons geld nu fiduciair geld heet.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "9b",
+        "p": 2,
+        "label": "Gouden standaard en fiduciair geld",
+        "model": "Bij de gouden standaard was geld gekoppeld aan de goudvoorraad: tegenover het geld stond goud. Sinds 1971 is dat losgelaten. Ons geld heeft nu alleen waarde doordat we erop vertrouwen: fiduciair geld.",
+        "g": [
+         {
+          "t": "gouden standaard: geld was gekoppeld aan de goudvoorraad",
+          "p": 1
+         },
+         {
+          "t": "fiduciair geld: de waarde berust alleen op vertrouwen (het materiaal is bijna niets waard)",
+          "p": 1
+         }
+        ],
+        "v": "Leg uit wat de gouden standaard was en waarom ons geld nu fiduciair geld heet.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Fiduciair komt van vertrouwen."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 10,
+    "titel": "Koopkracht van Ayoub",
+    "tekst": "Het loon van Ayoub stijgt met 2%. De prijzen stijgen met 4,5%.",
+    "p": 4,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken het indexcijfer van het reële inkomen (RIC) van Ayoub. Rond af op één decimaal.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         97.6
+        ],
+        "p": 1,
+        "eenh": "",
+        "tol": 0.05,
+        "label": "RIC"
+       }
+      ],
+      "uitw": [
+       "NIC = 102 en PIC = 104,5.",
+       "RIC = (NIC : PIC) × 100 = (102 : 104,5) × 100 = 97,6."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Met hoeveel procent verandert de koopkracht van Ayoub? Typ een min-teken bij een daling.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         -2.4
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.05,
+        "label": "Koopkracht"
+       }
+      ],
+      "uitw": [
+       "Koopkracht = RIC − 100 = 97,6 − 100 = −2,4%."
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Ayoub is 16 en woont nog thuis. Leg uit waarom hij minder merkt van de inflatie dan zijn ouders.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "10c",
+        "p": 2,
+        "label": "Thuiswonend en inflatie",
+        "model": "Ayoub heeft weinig vaste lasten: hij betaalt zelf geen huur en geen energie. Als die duurder worden, betalen zijn ouders dat en niet hij.",
+        "g": [
+         {
+          "t": "hij woont thuis en heeft weinig vaste lasten (betaalt zelf geen huur of energie)",
+          "p": 1
+         },
+         {
+          "t": "de prijsstijgingen daarvan komen bij zijn ouders terecht, niet bij hem",
+          "p": 1
+         }
+        ],
+        "v": "Ayoub is 16 en woont nog thuis. Leg uit waarom hij minder merkt van de inflatie dan zijn ouders.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Koopkracht is niet voor iedereen gelijk: het hangt af van waar je je geld aan uitgeeft."
+      ]
+     }
+    ]
    }
   ],
   "mc_b": [
@@ -1321,16 +1536,16 @@
  "toetsen": {
   "t1": {
    "n": 1,
-   "t": "oefentoets 1 · de basis",
+   "t": "oefentoets A",
    "sub": "Hoofdstuk 2",
-   "min": 45,
+   "min": 60,
    "mc": "mc_a",
    "open": null,
    "rek": "rek_a"
   },
   "t2": {
    "n": 2,
-   "t": "oefentoets 2 · verdieping",
+   "t": "oefentoets B",
    "sub": "Hoofdstuk 2",
    "min": 60,
    "mc": "mc_b",
@@ -1341,8 +1556,8 @@
  "VERS": [
   {
    "n": 1,
-   "min": 45,
-   "pts": 30
+   "min": 60,
+   "pts": 42
   },
   {
    "n": 2,
