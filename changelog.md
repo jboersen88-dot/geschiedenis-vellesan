@@ -1,3 +1,32 @@
+## 2026-11-18 · Economie 3 mavo: H2 en H4 in de nieuwe opzet, dia's van H3 opgeschoond
+
+Tweede ronde van de opdracht "bouw nu ook de hoofdstukken voor jaar 3 economie voor de mavo".
+
+- **Jaar 3 H2 "Wat voor consument ben jij?"** (`j3h2`): had al een hoofdstukpagina en leeromgeving, nu ook leerdoelen, begrippen en een oefenomgeving. 42 begrippen, 45 quizvragen, 6 sorteersets, 7 rekensoorten (prijs per 100 gram, verpakkingen vergelijken, loon van de makelaar, kosten koper, ozb, procentuele verandering, besparing van een zuinig apparaat) en oefentoets A (42 punten, 50 minuten). De voortgang van leerlingen blijft staan: zelfde opslagsleutel en dezelfde kernvragen in dezelfde volgorde.
+- **Jaar 3 H4 "Kies je voor zekerheid?"** (`j3h4`, nieuw): hoofdstukpagina, leeromgeving per paragraaf (dia's met klikstappen bij 4.1, 4.3 en 4.4, vijf films, begrippen, leerdoelen, Check jezelf) en oefenomgeving. 38 begrippen, 44 quizvragen, 5 sorteersets, 7 rekensoorten (premie uit een tabel, verzekeringskosten, kans op schade, premie opstalverzekering, onderverzekerd, bonus-malusladder, zorgkosten per jaar) en oefentoets A (48 punten, 60 minuten). De nakijkbladen van de oefenopgaven staan bij de paragrafen.
+- **Geen beelden van anderen in de dia's**: tabellen en grafieken uit het boek en schermafbeeldingen van websites zijn uit de PowerPoints gehaald voordat er dia's van zijn gemaakt (`tools/dias/strip.py`, nieuw). De tekst van de docent blijft staan. Dit is ook gedaan bij H3: 3.1 dia 5, 3.2 dia 3, 3.4 dia 3 en dia 6. De drie beelden die in de vorige ronde nog open stonden, zijn daarmee weg.
+- **Beelden**: eigen illustraties voor H4 (`tools/beelden/scenes.js`).
+- `bouw-pagina.py`: H2 is daar weggehaald, want het hoofdstuk komt nu uit `j3h2/bron/` en `bouw-oefen.py`.
+
+**Keuzes**
+- De paragraaftitels volgen editie 7.1 van het boek. H2: 2.1 "Samen sta je sterker", 2.2 "Waar heb je recht op?", 2.3 "Hoe wil je wonen?", 2.4 "Wat doe jij voor het milieu?". H4 heet "Kies je voor zekerheid?" met 4.1 "Waarom verzeker je dat?", 4.2 "Wat is er thuis verzekerd?", 4.3 "Rij schadevrij!" en 4.4 "Zorg voor een zorgverzekering!". De links naar de pagina's zijn niet veranderd.
+- De AVP staat bij 4.1, zoals in de PowerPoint en de kernvragen van de docent. In editie 7.1 staat de AVP bij 4.2.
+- 4.2 heeft geen PowerPoint (niet gevonden op de oude site of in Drive). De paragraaf begint met de film.
+- Uit de PowerPoints van H4 zijn weggelaten: de dia met de premietabel uit het boek (4.1), de grafiek van een website (4.4) en de dia "Deze les" (4.4). De tabellen in de rekenvragen en in de oefentoets (fietsverzekering, bonus-malusladder) zijn eigen voorbeelden met verzonnen bedragen.
+- Rekenen H4: verzekeringskosten = (premie + poliskosten) + assurantiebelasting, met 21% zoals op de dia. Onderverzekerd: uitkering = (verzekerd bedrag : werkelijke waarde) × schade. De premie van de opstalverzekering is gerekend als percentage van het verzekerde bedrag.
+- Rekenen H2: de percentages voor kosten koper, makelaar en ozb staan steeds in de vraag, omdat ze in het echt per jaar en per gemeente verschillen. De som over het zuinige apparaat is een eigen toepassing bij het energielabel.
+- Uit het boek komen drie begrippen die niet in de PowerPoints staan: ACM, ecologische voetafdruk en subsidie (H2), en indexering (H4). In eigen woorden.
+- De Socrative-oefentoets van H2 staat nu als oefenstof bij paragraaf 2.4.
+
+**Controleren door de docent**
+- Kloppen de titels en de plek van de AVP (4.1 of 4.2)?
+- Is er een PowerPoint voor 4.2? Dan komt die er alsnog bij.
+- De dia's van H3 en H4 nalopen: mist er iets nu de beelden uit het boek weg zijn? Bij 3.4 dia 6 (wisselkoersen) is ook het voorbeeld met Deense kronen weg, omdat het bij de tabel uit het boek hoorde.
+- De formules van H4 (verzekeringskosten, onderverzekerd, opstalpremie): rekent de klas het zo?
+- De oefentoetsen van H2 en H4 naast de eigen toetsen leggen.
+
+**Getest**: vragencheck (4894 vragen) en linkcheck op 0; a11ycheck meldt alleen `rondleiding/qr/posters.html` (stond al zo). Browsertest op 375 en 820 px, licht en donker, zonder consolefouten of horizontaal scrollen: hoofdstukpagina's, paragrafen (ook 4.2 zonder dia's), oefenomgevingen en toetsen van H2, H3 en H4. Alle 14 nieuwe rekengeneratoren zijn 400 keer doorgerekend. **Niet getest**: echte iPad, AI-nakijker, filmpjes en Drive-links (YouTube, Drive en de Worker waren in de test geblokkeerd).
+
 ## 2026-11-18 · Economie 3 mavo: H1, H3 en het SE H1 + H3 in de nieuwe opzet
 
 Eerste ronde van de opdracht "bouw nu ook de hoofdstukken voor jaar 3 economie voor de mavo". Begonnen met H1 en H3, omdat het eerste SE van 3 mavo daarover gaat.

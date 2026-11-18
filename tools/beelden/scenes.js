@@ -146,5 +146,15 @@ module.exports = (K, g, P) => {
       beleggen: { bg: IN, d: [g(600, 410, 2.2, P.lijn([[-100, 30], [-55, -30], [-10, 10], [40, -50], [100, -20]]))] },
       valuta: { bg: GR, d: [g(380, 410, 1.7, P.wereld()), g(860, 440, 1.5, P.euro())] },
     },
+    j3h4: {
+      verzekeren: { hero: 1, bg: GR, d: [g(430, 400, 1.9, P.paraplu()), g(900, 470, 1.4, P.huis(K.cream, K.coral))] },
+      polis: { bg: IN, d: [g(380, 430, 1.8, P.papier()), g(860, 420, 1.4, P.paraplu())] },
+      inboedel: { bg: TE, d: [g(380, 440, 1.6, P.doos()), g(860, 440, 1.6, P.huis(K.cream, K.coral))] },
+      opstal: { bg: OC, d: [g(600, 440, 2.2, P.huis(K.cream, K.coral))] },
+      auto: { bg: BE, d: [g(420, 450, 1.9, P.auto(K.cream, K.ochre)), g(900, 400, 1.2, P.paraplu(K.cream, K.ochre))] },
+      ladder: { bg: IN, d: [g(600, 430, 2.2, P.staven([30, 50, 70, 90, 110], K.cream, K.coral))] },
+      zorg: { bg: TE, d: [g(400, 420, 1.7, P.hart()), g(860, 440, 1.6, P.mens(K.cream))] },
+      samen: { bg: GR, d: [g(330, 440, 1.5, P.mens(K.cream)), g(600, 440, 1.5, P.mens(K.coral)), g(870, 440, 1.5, P.mens(K.ochre))] },
+    },
   };
 };
