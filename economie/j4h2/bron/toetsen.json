@@ -1,0 +1,585 @@
+{
+ "blokken": {
+  "mc_a": [
+   {
+    "v": "Je wilt weten hoeveel andere jongeren uitgeven aan kleding. Welke organisatie geeft daar voorlichting over?",
+    "o": [
+     "Het Nibud",
+     "Het CBS",
+     "De ACM",
+     "De ECB"
+    ],
+    "j": 0,
+    "u": "Het Nibud geeft voorlichting over omgaan met geld."
+   },
+   {
+    "v": "Mila zet elke maand €40 opzij voor als haar telefoon stukgaat. Welk spaarmotief is dat?",
+    "o": [
+     "Sparen voor dividend",
+     "Sparen uit voorzorg",
+     "Sparen voor de rente",
+     "Sparen voor een doel"
+    ],
+    "j": 1,
+    "u": "Een buffer voor onverwachte uitgaven."
+   },
+   {
+    "v": "Bij welke spaarvorm krijg je rente over je rente?",
+    "o": [
+     "Enkelvoudige rente",
+     "Samengestelde rente",
+     "Nominale rente",
+     "Variabele rente"
+    ],
+    "j": 1,
+    "u": "De rente wordt bijgeschreven en levert daarna zelf ook rente op."
+   },
+   {
+    "v": "De bank geeft 1,5% rente. De inflatie is 3%. Wat gebeurt er met de koopkracht van je spaargeld?",
+    "o": [
+     "Die verdubbelt",
+     "Die blijft gelijk",
+     "Die daalt",
+     "Die stijgt"
+    ],
+    "j": 2,
+    "u": "Reële rente = 1,5% − 3% = −1,5%."
+   },
+   {
+    "v": "Wat is een nadeel van beleggen in aandelen?",
+    "o": [
+     "De koers kan dalen, dus je kunt geld verliezen",
+     "De rente staat vast, dus je verdient nooit meer",
+     "Je betaalt elke maand een termijn aan de bank",
+     "Je moet het geld altijd dertig jaar laten staan"
+    ],
+    "j": 0,
+    "u": "Beleggen geeft kans op meer rendement, maar ook meer risico."
+   },
+   {
+    "v": "Welke lening heeft een vaste looptijd, een vaste rente en vaste termijnen?",
+    "o": [
+     "Doorlopend krediet",
+     "Salariskrediet",
+     "Creditcard",
+     "Persoonlijke lening"
+    ],
+    "j": 3,
+    "u": "Bij een persoonlijke lening ligt alles vooraf vast."
+   },
+   {
+    "v": "Je koopt een bank op afbetaling. Bij huurkoop was dat anders gegaan. Wat is het verschil?",
+    "o": [
+     "Bij huurkoop wordt de bank nooit jouw eigendom",
+     "Bij huurkoop ben je pas eigenaar na de laatste termijn",
+     "Bij huurkoop betaal je alles in één keer vooraf",
+     "Bij huurkoop betaal je nooit rente over het bedrag"
+    ],
+    "j": 1,
+    "u": "Bij koop op afbetaling ben je meteen eigenaar."
+   },
+   {
+    "v": "Waarom is de rente op een hypotheek lager dan op een persoonlijke lening?",
+    "o": [
+     "Het huis is het onderpand voor de bank",
+     "De overheid betaalt de helft van de rente",
+     "Een hypotheek los je sneller helemaal af",
+     "De bank mag op huizen geen winst maken"
+    ],
+    "j": 0,
+    "u": "Met een onderpand loopt de bank minder risico."
+   },
+   {
+    "v": "Je vergelijkt de prijzen van twee laptops. Welke functie van geld gebruik je?",
+    "o": [
+     "Spaarmiddel",
+     "Ruilmiddel",
+     "Rekenmiddel",
+     "Leenmiddel"
+    ],
+    "j": 2,
+    "u": "Je drukt de waarde van iets uit in geld."
+   },
+   {
+    "v": "Je betaalt met je telefoon in de kantine. Met wat voor geld betaal je?",
+    "o": [
+     "Chartaal geld",
+     "Giraal geld",
+     "Contant geld",
+     "Geleend geld"
+    ],
+    "j": 1,
+    "u": "Geld op je bankrekening is giraal geld."
+   },
+   {
+    "v": "Hoe verdient een bank geld aan sparen en lenen?",
+    "o": [
+     "De rente op spaargeld is hoger dan op leningen",
+     "De bank houdt een deel van het spaargeld zelf",
+     "De rente op leningen is hoger dan op spaargeld",
+     "De bank krijgt subsidie voor elke spaarrekening"
+    ],
+    "j": 2,
+    "u": "Het renteverschil is de winst van de bank."
+   },
+   {
+    "v": "De inflatie is te hoog. Wat doet de ECB met de rente?",
+    "o": [
+     "De ECB verlaagt de rente",
+     "De ECB schaft de rente af",
+     "De ECB bevriest de rente",
+     "De ECB verhoogt de rente"
+    ],
+    "j": 3,
+    "u": "Bij een hogere rente lenen mensen minder en sparen ze meer. Er wordt minder gekocht."
+   }
+  ],
+  "rek_a": [
+   {
+    "nr": 1,
+    "titel": "Goed of fout?",
+    "tekst": "",
+    "p": 5,
+    "delen": [
+     {
+      "id": "",
+      "v": "Goed of fout?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Een begroting is in balans als de inkomsten en de uitgaven gelijk zijn."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Bij een debetsaldo heb je geld tegoed van de bank."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Dividend is een deel van de winst voor de aandeelhouders."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Bij private lease wordt de auto na de laatste termijn van jou."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Kredietkosten zijn alles wat je meer terugbetaalt dan je hebt geleend."
+       }
+      ],
+      "uitw": [
+       "Bij een debetsaldo sta je rood.",
+       "Bij private lease huur je de auto. Hij wordt nooit van jou."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 2,
+    "titel": "Het budget van Sem",
+    "tekst": "Sem (19) woont op kamers. Hij verdient netto €300 per week.",
+    "p": 7,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Kies bij elke uitgave de juiste soort.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Dagelijkse uitgave",
+         "Vaste last",
+         "Incidentele uitgave"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Huur van zijn kamer"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Dagelijkse uitgave",
+         "Vaste last",
+         "Incidentele uitgave"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Boodschappen"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Dagelijkse uitgave",
+         "Vaste last",
+         "Incidentele uitgave"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "Een nieuwe fiets"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Dagelijkse uitgave",
+         "Vaste last",
+         "Incidentele uitgave"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Sportschoolabonnement"
+       }
+      ],
+      "uitw": [
+       "Vaste lasten komen met vaste regelmaat terug. Een fiets koop je af en toe."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken het loon van Sem per maand. Rond af op 2 decimalen.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         1300.0
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.05,
+        "label": "Loon per maand"
+       }
+      ],
+      "uitw": [
+       "(weekbedrag × 52) : 12 = (300 × 52) : 12 = €1.300,00."
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Sem geeft per maand €1.215 uit. Bereken zijn overschot of tekort. Typ een min-teken bij een tekort.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         85.0
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.05,
+        "label": "Overschot of tekort"
+       }
+      ],
+      "uitw": [
+       "inkomsten − uitgaven = 1.300 − 1.215 = €85,00 overschot."
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Over 8 maanden wil Sem een fiets van €760 kopen. Hij heeft al €120. Bereken wat hij per maand moet reserveren.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         80.0
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.05,
+        "label": "Reserveren per maand"
+       }
+      ],
+      "uitw": [
+       "(benodigd bedrag − al gespaard) : aantal maanden = (760 − 120) : 8 = €80,00."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 3,
+    "titel": "Sparen en beleggen",
+    "tekst": "",
+    "p": 5,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Oma zet €2.000 voor 3 jaar vast tegen 2,5% enkelvoudige rente. Bereken de rente die zij in totaal krijgt.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         150.0
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.05,
+        "label": "Rente in totaal"
+       }
+      ],
+      "uitw": [
+       "(percentage : 100) × bedrag × aantal jaren = (2,5 : 100) × 2.000 × 3 = €150,00."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Noor zet €1.000 op een spaarrekening met 3% samengestelde rente. Bereken het bedrag na 2 jaar.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         1060.9
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.05,
+        "label": "Bedrag na 2 jaar"
+       }
+      ],
+      "uitw": [
+       "Groeifactor = 1 + (3 : 100) = 1,03. 1.000 × 1,03 × 1,03 = €1.060,90."
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Tom koopt 50 aandelen voor €20 per stuk. Hij verkoopt ze voor €23 per stuk. Hij kreeg €0,60 dividend per aandeel. Bereken zijn rendement in euro's.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         180.0
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.05,
+        "label": "Rendement"
+       }
+      ],
+      "uitw": [
+       "Koerswinst: (23 − 20) × 50 = €150. Dividend: 0,60 × 50 = €30. Samen €180,00."
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Leg uit waarom sparen minder risico geeft dan beleggen.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "3d",
+        "p": 2,
+        "label": "Sparen of beleggen",
+        "model": "Bij sparen blijft je bedrag staan en krijg je rente. Bij beleggen kan de koers dalen, dus je kunt een deel van je geld verliezen.",
+        "g": [
+         {
+          "t": "bij sparen houd je je bedrag en krijg je rente",
+          "p": 1
+         },
+         {
+          "t": "bij beleggen kan de waarde (koers) dalen",
+          "p": 1
+         }
+        ],
+        "v": "Leg uit waarom sparen minder risico geeft dan beleggen.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Spaargeld daalt niet in bedrag, een koers wel."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 4,
+    "titel": "Een lening voor een scooter",
+    "tekst": "Yara leent €3.600 met een persoonlijke lening. Ze betaalt 36 termijnen van €112.",
+    "p": 4,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken de kredietkosten.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         432.0
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.05,
+        "label": "Kredietkosten"
+       }
+      ],
+      "uitw": [
+       "(termijn × aantal termijnen) − krediet = (112 × 36) − 3.600 = 4.032 − 3.600 = €432,00."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken de kredietkosten in procenten van het geleende bedrag. Rond af op 1 decimaal.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         12.0
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.05,
+        "label": "Kredietkosten"
+       }
+      ],
+      "uitw": [
+       "(kredietkosten : krediet) × 100 = (432 : 3.600) × 100 = 12,0%."
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Noem twee risico's van lenen.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "4c",
+        "p": 2,
+        "label": "Risico's van lenen",
+        "model": "Bijvoorbeeld: je betaalt meer terug dan je leent (kredietkosten), je kunt de termijnen niet meer betalen als je inkomen daalt, en je kunt in de schulden komen.",
+        "g": [
+         {
+          "t": "een eerste juist risico (kredietkosten, termijnen niet kunnen betalen, schulden)",
+          "p": 1
+         },
+         {
+          "t": "een tweede juist risico",
+          "p": 1
+         }
+        ],
+        "v": "Noem twee risico's van lenen.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Lenen kost geld en je zit vast aan de termijnen."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 5,
+    "titel": "De betaalrekening van Jens",
+    "tekst": "Jens heeft €140 op zijn rekening. Hij ontvangt €85 loon en betaalt €250 voor een jas.",
+    "p": 4,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken het nieuwe saldo. Typ een min-teken als Jens rood staat.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         -25.0
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.05,
+        "label": "Nieuw saldo"
+       }
+      ],
+      "uitw": [
+       "oud saldo + ontvangsten − betalingen = 140 + 85 − 250 = −€25,00."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Heeft Jens nu een creditsaldo of een debetsaldo?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Creditsaldo",
+         "Debetsaldo"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Jens heeft een"
+       }
+      ],
+      "uitw": [
+       "Een negatief saldo is een debetsaldo: hij staat rood."
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Leg uit waarom rood staan duur is.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "5c",
+        "p": 2,
+        "label": "Rood staan",
+        "model": "Als je rood staat, leen je geld van de bank. Over dat bedrag betaal je een hoge rente.",
+        "g": [
+         {
+          "t": "je leent dan geld van de bank",
+          "p": 1
+         },
+         {
+          "t": "je betaalt daarover een hoge rente",
+          "p": 1
+         }
+        ],
+        "v": "Leg uit waarom rood staan duur is.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Rood staan is lenen tegen een hoge rente."
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "toetsen": {
+  "t1": {
+   "n": 1,
+   "t": "oefentoets A",
+   "sub": "Hoofdstuk 2",
+   "min": 50,
+   "mc": "mc_a",
+   "open": null,
+   "rek": "rek_a"
+  }
+ },
+ "VERS": [
+  {
+   "n": 1,
+   "min": 50,
+   "pts": 37
+  }
+ ]
+}

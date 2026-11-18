@@ -1,3 +1,26 @@
+## 2026-11-18 · Economie 4 mavo: H1, H2, H3 en het SE H1 + H2 in de nieuwe opzet
+
+Tweede ronde van de opdracht "4 mavo zoals 3V". H4, H7, H8 en het SE H3 + H4 volgen.
+
+- **Jaar 4 H1 "Verdien je genoeg?"** (`j4h1`), **H2 "Geld moet rollen"** (`j4h2`) en **H3 "We gaan voor winst"** (`j4h3`): hoofdstukpagina, leeromgeving per paragraaf (dia's met klikstappen, begrippen, leerdoelen, Check jezelf) en oefenomgeving (begrippen, rekentrainer, quiz, games, oefentoets). De inhoud (begrippen, vragenbank, leerdoelen, rekengeneratoren, filmpjes) komt uit de lesapps van de docent (`apps/jaar-4_hoofdstuk-*.html`); die oude lesapps blijven staan, met dezelfde opslagsleutels.
+- **SE-pagina** `h.html?p=jaar-4/se-h1-h2-h8`: deel 1 de twee hoofdstukken, deel 2 oefenen per hoofdstuk, het oefen-SE (`se3/toets.html`, bestond al) en het oefenlab van SE3 (`se3/app.html`, bestond al). De deep link is dezelfde gebleven.
+- **Oefentoetsen A** voor H1 (36 punten), H2 (37 punten) en H3 (36 punten): nieuw geschreven met andere situaties dan in de vragenbank. Stellingen als "Goed of fout?". Niets overgenomen uit een echt SE of proefwerk.
+- **Rekenen**: alle formules in de rekentrainer, de begrippen en de uitleg bij de vragen staan nu met haakjes, bijvoorbeeld (deel : geheel) × 100, (weekbedrag × 52) : 12 en (prijs inclusief btw : 121) × 100. Alleen de schrijfwijze is veranderd, niet de getallen.
+- **Beelden**: H1 houdt de Unsplash-foto's van de lesapp. H2 en H3 krijgen eigen illustraties (`tools/beelden/scenes.js`).
+- **Dia's**: omgezet met LibreOffice (`tools/dias/lo.py`), zoals bij H5 en H6.
+- **Bouwstraat**: `bouw-oefen.py` las `RIJK` niet meer goed sinds er een commentaarregel achter stond; hersteld. SE-pagina's kunnen nu extra tegels krijgen (`extra` in `SE`).
+
+**Keuzes**
+- De paragraaftitels van H1 tot en met H3 zijn die van de lesapps van de docent. De titel van H3 ("We gaan voor winst") komt uit de PowerPoint van 3.1.
+- De link "Open in Google Drive" onder de dia's is gebleven, omdat de lesapps die al hadden.
+
+**Controleren door de docent**
+- De dia's van 1.1 tot en met 3.4: lettertype en opbouw kunnen afwijken van PowerPoint.
+- De drie oefentoetsen naast de eigen toetsen leggen.
+- H1 heeft 21 tot 23 leerdoelen per paragraaf. Dat is veel tekst; inkorten kan als de docent zegt welke mogen vervallen.
+
+**Getest**: vragencheck (3567 vragen) en linkcheck op 0; a11ycheck meldt alleen `rondleiding/qr/posters.html` (stond al zo). Browsertest op 375 en 820 px, licht en donker, zonder consolefouten of horizontaal scrollen: hoofdstukpagina's, een paragraaf per hoofdstuk, oefenomgevingen, toetsen, SE-pagina en jaarpagina. Alle rekengeneratoren van H1 tot en met H3 zijn 300 keer doorgerekend; bij het gewogen CPI (H1) ontbrak de formule en die is toegevoegd. **Niet getest**: echte iPad, AI-nakijker, films.
+
 ## 2026-11-18 · Economie 4 mavo: H5, H6, 3 mavo H7 en het SE H5 + H6 + H7 in de nieuwe opzet
 
 Opdracht van de docent: de pagina's van 4 mavo maken zoals 3V (H1 t/m H8, SE H1+2, SE H3+4, SE H5+6 + H7 van 3 mavo). Dit is de eerste ronde: de stof van het eerstvolgende SE (januari). H1 t/m H4, H7, H8 en de andere twee SE-pagina's volgen.

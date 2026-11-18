@@ -1,0 +1,2116 @@
+{
+ "KEY": "h3v4-app-v1",
+ "PARS": [
+  {
+   "id": "3.1",
+   "ch": 3,
+   "t": "Wat zijn de kosten?",
+   "c": "var(--p5)",
+   "file": "1ese2cpWZXu-xzY8mjNRdxdgCQ1EyAUAb",
+   "x": [
+    "ux",
+    "rv"
+   ],
+   "sum": "Productiefactoren, vaste en variabele kosten, afschrijving, kostprijs en de consumentenprijs met btw.",
+   "q": [
+    "Wat is de toegevoegde waarde?",
+    "Welke productiefactoren zijn er en wat wordt ermee bedoeld?",
+    "Welke beloningen horen bij de verschillende productiefactoren?",
+    "Wat wordt er bedoeld met variabele kosten en met vaste kosten?",
+    "Wat is het grootste verschil tussen beide kosten?",
+    "Wat zijn investeringen en waarom gaat een bedrijf investeren?",
+    "Wat zijn afschrijvingen en hoe hebben ze te maken met investeringen?",
+    "Hoe bereken je de kostprijs per product?",
+    "Waarom is het voor een bedrijf belangrijk om de kostprijs van een product te weten?",
+    "Wat is de consumentenprijs?",
+    "Wat is het verschil tussen de consumentenprijs en de verkoopprijs?",
+    "Waarom is de verkoopprijs altijd lager dan de consumentenprijs?"
+   ],
+   "imgs": [
+    [
+     "kosten",
+     "De kosten van een bedrijf"
+    ],
+    [
+     "kostprijs",
+     "Van kostprijs naar verkoopprijs"
+    ]
+   ]
+  },
+  {
+   "id": "3.2",
+   "ch": 3,
+   "t": "Wat levert het op?",
+   "c": "var(--p6)",
+   "file": "1UgjjAc0uXnSn4vD0T3eGMp1_EU2sKxda",
+   "x": [
+    "ux",
+    "rv"
+   ],
+   "sum": "Omzet, brutowinst en nettoresultaat, arbeidsproductiviteit, productiecapaciteit en mvo.",
+   "q": [
+    "Wat wordt er bedoeld met de omzet en de afzet?",
+    "Wat is de brutowinst?",
+    "Waarom zegt de brutowinst niet zoveel voor een bedrijf?",
+    "Wat is de brutowinstmarge?",
+    "Welke onderdelen vallen onder bedrijfskosten? Noem er minimaal drie.",
+    "Hoe bereken je de nettowinst?",
+    "Waarom rekent een ondernemer met bedragen exclusief btw?",
+    "Wat is arbeidsproductiviteit en hoe kan die stijgen?",
+    "Wat is productiecapaciteit en waar hangt die van af?",
+    "Wat heeft de arbeidsproductiviteit te maken met mvo?",
+    "Wat is maatschappelijk verantwoord ondernemen?"
+   ],
+   "imgs": [
+    [
+     "omzet",
+     "Omzet: afzet keer verkoopprijs"
+    ],
+    [
+     "productie",
+     "Arbeidsproductiviteit: hoeveel maakt één werknemer?"
+    ]
+   ]
+  },
+  {
+   "id": "3.3",
+   "ch": 3,
+   "t": "Vraag en aanbod",
+   "c": "var(--p8)",
+   "file": "1G-BJCs6EDz2tV6EFIJnr4lOoXZkDXtPv",
+   "x": [],
+   "sum": "Evenwichtsprijs en -hoeveelheid, verschuivingen van vraag en aanbod, maximum- en minimumprijzen en transparantie.",
+   "q": [
+    "Wat is het verschil tussen een concrete en een abstracte markt?",
+    "Wat is de evenwichtsprijs en de evenwichtshoeveelheid?",
+    "Wat gebeurt er met de prijs als de vraag toeneemt? En als het aanbod toeneemt?",
+    "Waardoor kan de aanbodlijn verschuiven? En de vraaglijn?",
+    "Wat is vrije marktwerking en wat is het nadeel ervan?",
+    "Waarom stelt de overheid soms een maximumprijs of een minimumprijs in?",
+    "Waarom ontstaat er bij een maximum- of minimumprijs geen evenwicht?",
+    "Wanneer is een markt transparant?"
+   ],
+   "imgs": [
+    [
+     "markt",
+     "Vraag en aanbod in evenwicht"
+    ],
+    [
+     "prijs",
+     "De prijs bepaalt hoeveel er gekocht wordt"
+    ]
+   ]
+  },
+  {
+   "id": "3.4",
+   "ch": 3,
+   "t": "Macht op de markt?",
+   "c": "var(--p4)",
+   "file": "159L-Cpi5Yz6CYAEds4B92Mn3q7fEofy-",
+   "x": [],
+   "sum": "Marktaandeel, fusie, monopolie, volkomen en monopolistische concurrentie, oligopolie en kartels.",
+   "q": [
+    "Wat is marktaandeel en hoe bereken je het?",
+    "Hoe kan een bedrijf zijn marktaandeel vergroten?",
+    "Wat is een fusie?",
+    "Wat is een monopolie?",
+    "Wat is het verschil tussen homogene en heterogene goederen?",
+    "Wat is het verschil tussen volkomen concurrentie en monopolistische concurrentie?",
+    "Wat is een oligopolie en hoe kan een prijzenoorlog ontstaan?",
+    "Wat is een kartel en wat doet de ACM?"
+   ],
+   "imgs": [
+    [
+     "macht",
+     "Grote en kleine aanbieders op de markt"
+    ],
+    [
+     "toezicht",
+     "De ACM houdt toezicht op eerlijke concurrentie"
+    ]
+   ]
+  }
+ ],
+ "GOALS": {
+  "3.1": [
+   "Ik kan uitleggen wat toegevoegde waarde is.",
+   "Ik kan de vier productiefactoren noemen.",
+   "Ik kan bij elke productiefactor een voorbeeld geven.",
+   "Ik kan bij elke productiefactor de beloning noemen.",
+   "Ik kan uitleggen waarom ondernemerschap nodig is.",
+   "Ik kan het verschil uitleggen tussen variabele kosten en vaste kosten en van allebei voorbeelden geven.",
+   "Ik kan uitleggen wat investeren is en waarom bedrijven investeren.",
+   "Ik kan uitleggen wat afschrijving is en waarom je de aanschafprijs over de gebruiksjaren verdeelt.",
+   "Ik kan de afschrijving per jaar berekenen.",
+   "Ik kan met de afschrijving terugrekenen naar de aanschafprijs of de restwaarde.",
+   "Ik kan uitleggen wat de kostprijs per product is.",
+   "Ik kan de kostprijs per product berekenen.",
+   "Ik kan uitleggen waarom de kostprijs daalt als je meer produceert.",
+   "Ik kan uitleggen waaruit de verkoopprijs van een producent bestaat.",
+   "Ik kan uitleggen hoe een detaillist de verkoopprijs bepaalt.",
+   "Ik kan de verkoopprijs berekenen met een brutowinstopslag in procenten van de inkoopprijs.",
+   "Ik kan uitleggen wat de consumentenprijs is.",
+   "Ik kan het verschil tussen het btw-tarief van 9% en 21% uitleggen en voorbeelden van producten noemen.",
+   "Ik kan de consumentenprijs berekenen vanuit de inkoopprijs, de brutowinstopslag en de btw.",
+   "Ik kan terugrekenen van een prijs inclusief btw naar de prijs exclusief btw.",
+   "Ik kan uitleggen waarom je de brutowinstopslag en de btw niet bij elkaar mag optellen."
+  ],
+  "3.2": [
+   "Ik kan uitleggen wat omzet is en de omzet berekenen.",
+   "Ik kan uitleggen wat de inkoopwaarde is.",
+   "Ik kan de brutowinst berekenen.",
+   "Ik kan drie voorbeelden van bedrijfskosten noemen.",
+   "Ik kan het nettoresultaat berekenen.",
+   "Ik kan uitleggen welke twee uitkomsten het nettoresultaat kan hebben.",
+   "Ik kan uitleggen waarom de brutowinst nog niet zoveel zegt over hoe goed een bedrijf het doet.",
+   "Ik kan uitleggen wat btw een ondernemer kost en oplevert en waarom je met bedragen exclusief btw rekent.",
+   "Ik kan berekenen hoeveel btw een ondernemer aan de Belastingdienst afdraagt.",
+   "Ik kan de brutowinstmarge in procenten van de inkoopprijs berekenen.",
+   "Ik kan twee manieren noemen om meer winst te maken.",
+   "Ik kan uitleggen wat arbeidsproductiviteit is.",
+   "Ik kan de arbeidsproductiviteit berekenen.",
+   "Ik kan uitleggen wat een hogere arbeidsproductiviteit doet met de kostprijs per product.",
+   "Ik kan vier manieren noemen waarop de arbeidsproductiviteit kan stijgen.",
+   "Ik kan uitleggen wat productiecapaciteit is en waar die van afhangt.",
+   "Ik kan uitleggen wat het betekent als de productiecapaciteit voor 100% benut is.",
+   "Ik kan maatschappelijke opbrengsten en maatschappelijke kosten van productie noemen.",
+   "Ik kan uitleggen wat maatschappelijk verantwoord ondernemen (mvo) is."
+  ],
+  "3.3": [
+   "Ik kan het verschil uitleggen tussen een concrete markt en een abstracte markt.",
+   "Ik kan uitleggen van wie het aanbod komt en van wie de vraag.",
+   "Ik kan uitleggen wat de evenwichtsprijs is.",
+   "Ik kan uitleggen wat de evenwichtshoeveelheid is.",
+   "Ik kan de evenwichtsprijs en evenwichtshoeveelheid aflezen in een grafiek of tabel.",
+   "Ik kan uitleggen wat er met de prijs gebeurt als de vraag toeneemt en het aanbod gelijk blijft.",
+   "Ik kan uitleggen wat er met de prijs gebeurt als het aanbod toeneemt en de vraag gelijk blijft.",
+   "Ik kan uitleggen wat er bij een hogere prijs gebeurt met de gevraagde en de aangeboden hoeveelheid.",
+   "Ik kan twee oorzaken noemen waardoor de aanbodlijn verschuift.",
+   "Ik kan twee oorzaken noemen waardoor de vraaglijn verschuift.",
+   "Ik kan uitleggen in welke richting een lijn verschuift bij meer of minder vraag of aanbod.",
+   "Ik kan uitleggen wat vrije marktwerking is en wat het nadeel ervan kan zijn.",
+   "Ik kan uitleggen wat een maximumprijs is, waarom de overheid die instelt en een voorbeeld geven.",
+   "Ik kan uitleggen wat een minimumprijs is en waarom de overheid die instelt.",
+   "Ik kan uitleggen wat er op de markt ontstaat bij een maximumprijs en bij een minimumprijs.",
+   "Ik kan uitleggen hoe de overheid mensen met een laag inkomen helpt.",
+   "Ik kan uitleggen wat een transparante markt is en waarom de markt dan beter werkt."
+  ],
+  "3.4": [
+   "Ik kan uitleggen wat marktaandeel is.",
+   "Ik kan het marktaandeel berekenen.",
+   "Ik kan drie manieren noemen waarop bedrijven hun marktaandeel vergroten.",
+   "Ik kan uitleggen wat een fusie is en waarom bedrijven fuseren.",
+   "Ik kan uitleggen wat een monopolie is en twee voorbeelden noemen van overheidsmonopolies.",
+   "Ik kan uitleggen waarom een monopolist veel macht op de markt heeft.",
+   "Ik kan het verschil uitleggen tussen homogene en heterogene goederen.",
+   "Ik kan uitleggen wat volkomen concurrentie is.",
+   "Ik kan uitleggen wat monopolistische concurrentie is.",
+   "Ik kan uitleggen wat een oligopolie is.",
+   "Ik kan het verschil uitleggen tussen een oligopolie met een homogeen en met een heterogeen product.",
+   "Ik kan uitleggen hoe een prijzenoorlog ontstaat.",
+   "Ik kan uitleggen waarom nieuwe aanbieders moeilijk een oligopolie binnenkomen.",
+   "Ik kan bij een voorbeeld de juiste marktvorm noemen.",
+   "Ik kan uitleggen wat een kartel is en of kartels zijn toegestaan.",
+   "Ik kan uitleggen wat de ACM doet."
+  ]
+ },
+ "CHK": [
+  [
+   "De vier productiefactoren en hun beloningen noemen",
+   "3.1",
+   "quiz"
+  ],
+  [
+   "Vaste en variabele kosten onderscheiden",
+   "3.1",
+   "quiz"
+  ],
+  [
+   "De afschrijving per jaar berekenen",
+   "3.1",
+   "reken",
+   "afschr"
+  ],
+  [
+   "De kostprijs per product berekenen",
+   "3.1",
+   "reken",
+   "kostprijs"
+  ],
+  [
+   "Van inkoopprijs via verkoopprijs naar consumentenprijs rekenen (en terug)",
+   "3.1",
+   "reken",
+   "prijs"
+  ],
+  [
+   "Omzet, brutowinst en nettoresultaat berekenen",
+   "3.2",
+   "reken",
+   "winst"
+  ],
+  [
+   "De brutowinstmarge in procenten berekenen",
+   "3.2",
+   "reken",
+   "marge"
+  ],
+  [
+   "Uitrekenen hoeveel btw een ondernemer afdraagt",
+   "3.2",
+   "reken",
+   "btw"
+  ],
+  [
+   "De arbeidsproductiviteit berekenen en uitleggen hoe die stijgt",
+   "3.2",
+   "reken",
+   "arbprod"
+  ],
+  [
+   "Productiecapaciteit en mvo uitleggen",
+   "3.2",
+   "quiz"
+  ],
+  [
+   "De evenwichtsprijs en -hoeveelheid aflezen",
+   "3.3",
+   "reken",
+   "markt"
+  ],
+  [
+   "Uitleggen wanneer de vraag- of aanbodlijn verschuift",
+   "3.3",
+   "quiz"
+  ],
+  [
+   "Maximum- en minimumprijzen uitleggen (tekort en overschot)",
+   "3.3",
+   "quiz"
+  ],
+  [
+   "Het marktaandeel berekenen",
+   "3.4",
+   "reken",
+   "aandeel"
+  ],
+  [
+   "De marktvormen herkennen: monopolie, volkomen en monopolistische concurrentie, oligopolie",
+   "3.4",
+   "quiz"
+  ],
+  [
+   "Uitleggen wat een fusie en een kartel zijn en wat de ACM doet",
+   "3.4",
+   "quiz"
+  ]
+ ],
+ "MAT": {
+  "ux": [
+   "Uitleg hoofdstuk 3: brutowinstmarge, kostprijs en btw (PowerPoint)",
+   [
+    [
+     "PowerPoint",
+     "1qxpJHaO_38u9JsDPawGtUzwePFET_Dyz"
+    ]
+   ]
+  ],
+  "rv": [
+   "Rekenvragen hoofdstuk 3 met uitwerkingen (PowerPoint)",
+   [
+    [
+     "PowerPoint",
+     "19bB2Okq0pThtd-yTdMJq7W4qsivClgih"
+    ]
+   ]
+  ],
+  "sv": [
+   "Samenvatting hoofdstuk 3",
+   [
+    [
+     "Document",
+     "16abiv_2NvyksPbHjScANeRiyTBWb-3mF"
+    ]
+   ]
+  ],
+  "f4": [
+   "Belangrijkste formules van economie (PowerPoint)",
+   [
+    [
+     "PowerPoint",
+     "1_1UlBrRLF7RsCyYUeTBrKTyOuL0d10TO"
+    ]
+   ]
+  ]
+ },
+ "VERS": [
+  {
+   "n": 1,
+   "t": "Oefentoets theorie hoofdstuk 3",
+   "tags": [
+    "3.1 + 3.2",
+    "30 meerkeuze + 10 open"
+   ],
+   "min": 0,
+   "toets": "1eiS0fDG9V6mS2hZ5uXCKb_y4xUppnNGi",
+   "nk": "1Q_CBluZ-f-ZKSw0xXA0C4waszSwzlfcV",
+   "meta": "Kosten, kostprijs, winst, arbeidsproductiviteit en mvo"
+  },
+  {
+   "n": 2,
+   "t": "Rekenopgave hoofdstuk 3 (versie B)",
+   "tags": [
+    "rekenen",
+    "btw + brutowinstmarge"
+   ],
+   "min": 0,
+   "toets": "1c4-jkJvoE6SItg4jBsJ9jpdxYugcQuXC",
+   "nk": "1MDYPEHivkvV0iIzC6ga4RFyHYYlBnK5B",
+   "meta": "Verkoopprijs, brutowinstmarge, btw afdragen en arbeidsproductiviteit"
+  }
+ ],
+ "FILMS": [
+  {
+   "par": "alle",
+   "film": "1EN_S_SEca6zPTW3gp4XepzGCes8qs4-y",
+   "k": "Instructiefilm",
+   "t": "Welke formule gebruik je?",
+   "d": "Stappenplan om de juiste formule te kiezen bij procenten en prijzen.",
+   "lab": "formule",
+   "btn": "Oefen: welke formule?"
+  }
+ ],
+ "CARDS": [
+  [
+   "3.1",
+   "Toegevoegde waarde",
+   "De extra waarde die ontstaat doordat een bedrijf een product bewerkt.",
+   "Van meel naar brood."
+  ],
+  [
+   "3.1",
+   "Productiefactoren",
+   "Natuur, arbeid, kapitaal en ondernemerschap: wat je nodig hebt om te produceren.",
+   "Grond, personeel, machines en de ondernemer."
+  ],
+  [
+   "3.1",
+   "Natuur",
+   "Grond, grondstoffen, aardolie en aardgas. Beloning: pacht.",
+   "Een boer pacht grond."
+  ],
+  [
+   "3.1",
+   "Arbeid",
+   "De inspanningen van mensen bij de productie. Beloning: loon.",
+   "Een monteur in een fabriek."
+  ],
+  [
+   "3.1",
+   "Kapitaal",
+   "Kapitaalgoederen die je langere tijd gebruikt. Beloning: huur en rente.",
+   "Machines, gebouwen, vrachtwagens."
+  ],
+  [
+   "3.1",
+   "Ondernemerschap",
+   "De ondernemer organiseert en leidt het productieproces. Beloning: winst.",
+   "De eigenaar van een bakkerij."
+  ],
+  [
+   "3.1",
+   "Variabele kosten",
+   "Kosten die veranderen als je meer of minder produceert.",
+   "Grondstoffen, verpakkingen."
+  ],
+  [
+   "3.1",
+   "Vaste kosten",
+   "Kosten die niet meteen veranderen als je meer of minder produceert.",
+   "Huur van het gebouw."
+  ],
+  [
+   "3.1",
+   "Investeren",
+   "Geld besteden aan productiemiddelen, zoals nieuwe machines.",
+   "Een nieuwe, snellere oven kopen."
+  ],
+  [
+   "3.1",
+   "Afschrijving",
+   "Hoeveel een kapitaalgoed per jaar in waarde vermindert: (aanschafprijs − restwaarde) : gebruiksjaren.",
+   "(95.750 − 24.500) : 5 = € 14.250."
+  ],
+  [
+   "3.1",
+   "Kostprijs",
+   "De gemiddelde kosten om één product te maken: (vaste + variabele kosten) : aantal.",
+   "€ 14,3 miljoen : 26.000 = € 550 per scooter."
+  ],
+  [
+   "3.1",
+   "Brutowinstopslag",
+   "Het percentage dat een winkelier bij de inkoopprijs optelt om de verkoopprijs te krijgen.",
+   "€ 528 + 25% = € 660."
+  ],
+  [
+   "3.1",
+   "Verkoopprijs",
+   "De prijs exclusief btw: inkoopprijs + brutowinstopslag (of kostprijs + winstopslag).",
+   "€ 660 voor een tv."
+  ],
+  [
+   "3.1",
+   "Consumentenprijs",
+   "De verkoopprijs inclusief btw: wat de klant betaalt.",
+   "€ 660 × 1,21 = € 798,60."
+  ],
+  [
+   "3.1",
+   "Btw",
+   "Belasting over de toegevoegde waarde: 9% (levensmiddelen, boeken) of 21% (de meeste andere producten).",
+   "Exclusief = (inclusief : 121) × 100."
+  ],
+  [
+   "3.2",
+   "Omzet",
+   "Het totaalbedrag dat je door de verkoop ontvangt: afzet × verkoopprijs.",
+   "25.600 × € 3,50 = € 89.600."
+  ],
+  [
+   "3.2",
+   "Afzet",
+   "Het aantal verkochte producten.",
+   "25.600 broden."
+  ],
+  [
+   "3.2",
+   "Brutowinst",
+   "Omzet − inkoopwaarde.",
+   "€ 89.600 − € 22.500 = € 67.100."
+  ],
+  [
+   "3.2",
+   "Bedrijfskosten",
+   "Kosten zoals huur, loon, energie, afschrijving, verzekering en promotie.",
+   "€ 55.200 per jaar."
+  ],
+  [
+   "3.2",
+   "Nettoresultaat",
+   "Brutowinst − bedrijfskosten: nettowinst of nettoverlies.",
+   "€ 67.100 − € 55.200 = € 11.900."
+  ],
+  [
+   "3.2",
+   "Brutowinstmarge",
+   "De brutowinst per product in procenten van de inkoopprijs.",
+   "(1,79 − 1,10) : 1,10 × 100 = 62,7%."
+  ],
+  [
+   "3.2",
+   "Arbeidsproductiviteit",
+   "De productie per persoon in een bepaalde tijd: totale productie : aantal werkenden.",
+   "48 trampolines per dag : 6 = 8."
+  ],
+  [
+   "3.2",
+   "Prestatiebeloning",
+   "Wie goed werkt, krijgt beter betaald. Kan de arbeidsproductiviteit verhogen.",
+   "Een bonus."
+  ],
+  [
+   "3.2",
+   "Productiecapaciteit",
+   "De maximale hoeveelheid producten die een bedrijf kan maken. Hangt af van mensuren en kapitaalgoederen.",
+   "100% benut = alles en iedereen werkt."
+  ],
+  [
+   "3.2",
+   "Maatschappelijke kosten",
+   "Negatieve gevolgen van productie voor de samenleving.",
+   "Milieuvervuiling, geluidsoverlast."
+  ],
+  [
+   "3.2",
+   "Mvo",
+   "Maatschappelijk verantwoord ondernemen: rekening houden met people, planet, profit.",
+   "Groene stroom en eerlijke lonen."
+  ],
+  [
+   "3.3",
+   "Abstracte markt",
+   "Alle vraag naar en alle aanbod van een product.",
+   "De huizenmarkt, de arbeidsmarkt."
+  ],
+  [
+   "3.3",
+   "Evenwichtsprijs",
+   "De prijs waarbij vraag en aanbod gelijk zijn.",
+   "Het snijpunt van de vraag- en aanbodlijn."
+  ],
+  [
+   "3.3",
+   "Evenwichtshoeveelheid",
+   "De hoeveelheid die bij de evenwichtsprijs wordt gevraagd en aangeboden.",
+   "Afgelezen op de horizontale as."
+  ],
+  [
+   "3.3",
+   "Verschuiving aanbodlijn",
+   "Minder aanbod (bijv. tekort aan grondstoffen) → naar links. Meer aanbod → naar rechts.",
+   "Nieuwe producenten: lijn naar rechts."
+  ],
+  [
+   "3.3",
+   "Verschuiving vraaglijn",
+   "Meer vraag (bijv. hoger inkomen) → naar rechts. Minder vraag → naar links.",
+   "Overstappen op een beter product: naar links."
+  ],
+  [
+   "3.3",
+   "Vrije marktwerking",
+   "De prijs wordt alleen door vraag en aanbod bepaald.",
+   "Nadeel: voor sommigen te duur."
+  ],
+  [
+   "3.3",
+   "Maximumprijs",
+   "De prijs mag niet hoger zijn dan de overheid vaststelt. Gevolg: een tekort.",
+   "Maximumhuur voor sociale huurwoningen."
+  ],
+  [
+   "3.3",
+   "Minimumprijs",
+   "De prijs mag niet lager zijn: beschermt producenten. Gevolg: een overschot.",
+   "Vroeger bij brood en melk."
+  ],
+  [
+   "3.3",
+   "Transparante markt",
+   "Je kunt producten en prijzen goed met elkaar vergelijken.",
+   "Vergelijkingssites."
+  ],
+  [
+   "3.4",
+   "Marktaandeel",
+   "Eigen afzet (of omzet) in procenten van de totale afzet (of omzet).",
+   "(1.200 : 8.000) × 100 = 15%."
+  ],
+  [
+   "3.4",
+   "Fusie",
+   "Twee bedrijven vormen samen één nieuw bedrijf. Besparing vooral op vaste kosten.",
+   "Twee supermarktketens gaan samen."
+  ],
+  [
+   "3.4",
+   "Monopolie",
+   "Een marktvorm met maar één aanbieder.",
+   "Het hoogspanningsnet, bankbiljetten."
+  ],
+  [
+   "3.4",
+   "Homogene goederen",
+   "Producten die voor klanten niet van elkaar verschillen.",
+   "Graan, stroom."
+  ],
+  [
+   "3.4",
+   "Heterogene goederen",
+   "Soortgelijke producten die wel van elkaar verschillen (merk, smaak).",
+   "Kleding, restaurants."
+  ],
+  [
+   "3.4",
+   "Volkomen concurrentie",
+   "Veel aanbieders met homogene producten. Komt weinig voor.",
+   "Graanmarkt."
+  ],
+  [
+   "3.4",
+   "Monopolistische concurrentie",
+   "Veel aanbieders met heterogene producten. Komt veel voor.",
+   "Kledingwinkels."
+  ],
+  [
+   "3.4",
+   "Oligopolie",
+   "Een markt met weinig aanbieders, met een homogeen of heterogeen product.",
+   "Energie (homogeen), smartphones (heterogeen)."
+  ],
+  [
+   "3.4",
+   "Kartel",
+   "Verboden afspraak tussen bedrijven om concurrentie te beperken. De ACM geeft boetes.",
+   "Samen één prijs afspreken."
+  ]
+ ],
+ "BANK": [
+  [
+   "3.1",
+   "Wat is toegevoegde waarde?",
+   [
+    "De extra waarde die ontstaat doordat een bedrijf een product bewerkt",
+    "De btw die de overheid bovenop de prijs van een product zet",
+    "Het verschil tussen de omzet en de nettowinst van een bedrijf",
+    "De waarde van alle machines en gebouwen die een bedrijf bezit"
+   ],
+   "Bijvoorbeeld: van meel naar brood."
+  ],
+  [
+   "3.1",
+   "Welke vier productiefactoren zijn er?",
+   [
+    "Natuur, arbeid, kapitaal en ondernemerschap",
+    "Loon, rente, pacht en de winst",
+    "Omzet, kosten, winst en de btw",
+    "Grond, geld, mensen en machines"
+   ],
+   "Loon, rente, pacht en winst zijn de beloningen."
+  ],
+  [
+   "3.1",
+   "Wat is de beloning voor de productiefactor natuur?",
+   [
+    "Pacht",
+    "Loon",
+    "Winst",
+    "Dividend"
+   ],
+   "Voor het gebruik van grond betaal je pacht."
+  ],
+  [
+   "3.1",
+   "Wat is de beloning voor de productiefactor arbeid?",
+   [
+    "Loon",
+    "Pacht",
+    "Rente",
+    "Winst"
+   ],
+   "Werknemers krijgen loon."
+  ],
+  [
+   "3.1",
+   "Wat is de beloning voor de productiefactor ondernemerschap?",
+   [
+    "Winst",
+    "Loon",
+    "Pacht",
+    "Huur"
+   ],
+   "De ondernemer krijgt winst."
+  ],
+  [
+   "3.1",
+   "Wat zijn de beloningen voor kapitaal?",
+   [
+    "Huur (gebouw) en rente (geld)",
+    "Pacht (grond) en loon (arbeid)",
+    "Winst en dividend voor eigenaren",
+    "Btw en premie voor de overheid"
+   ],
+   "Kapitaalgoederen en geld leveren huur en rente op."
+  ],
+  [
+   "3.1",
+   "Welke hoort bij de productiefactor kapitaal?",
+   [
+    "Een vrachtwagen",
+    "Een buschauffeur",
+    "Aardgas",
+    "De directeur"
+   ],
+   "Kapitaalgoederen gebruik je langere tijd bij de productie."
+  ],
+  [
+   "3.1",
+   "Lasrobots in een autofabriek horen bij de productiefactor ...",
+   [
+    "kapitaal",
+    "arbeid",
+    "natuur",
+    "ondernemerschap"
+   ],
+   "Het zijn kapitaalgoederen."
+  ],
+  [
+   "3.1",
+   "Bomen voor papierfabricage horen bij de productiefactor ...",
+   [
+    "natuur",
+    "kapitaal",
+    "arbeid",
+    "ondernemerschap"
+   ],
+   "Grondstoffen uit de natuur."
+  ],
+  [
+   "3.1",
+   "Waarom is ondernemerschap een onmisbare productiefactor?",
+   [
+    "De ondernemer brengt de andere productiefactoren bij elkaar en leidt het productieproces",
+    "De ondernemer doet in elk bedrijf het meeste lichamelijke werk zelf",
+    "De ondernemer bepaalt hoeveel btw er over de producten wordt gerekend",
+    "Zonder ondernemer is er geen natuur, dus geen grondstoffen om te gebruiken"
+   ],
+   "De ondernemer organiseert de productie."
+  ],
+  [
+   "3.1",
+   "Wat zijn variabele kosten?",
+   [
+    "Kosten die veranderen als je meer of minder produceert",
+    "Kosten die altijd gelijk blijven, hoeveel je ook maakt",
+    "De kosten van de btw die je over je verkoop afdraagt",
+    "De kosten van de huur van het bedrijfsgebouw per maand"
+   ],
+   "Bijvoorbeeld grondstoffen."
+  ],
+  [
+   "3.1",
+   "Wat zijn vaste kosten?",
+   [
+    "Kosten die niet meteen veranderen als je meer of minder produceert",
+    "Kosten van de grondstoffen die je voor elk product nodig hebt",
+    "De btw die je betaalt over de inkoop van je goederen",
+    "Kosten die je alleen betaalt in een jaar waarin je verlies maakt"
+   ],
+   "Bijvoorbeeld de huur van een gebouw."
+  ],
+  [
+   "3.1",
+   "Welke kosten zijn vaste kosten?",
+   [
+    "Huur van het pand",
+    "Grondstoffen",
+    "Energie voor de machines bij productie",
+    "Verpakkingsmateriaal per product"
+   ],
+   "De huur verandert niet als je meer produceert."
+  ],
+  [
+   "3.1",
+   "Welke kosten zijn variabele kosten?",
+   [
+    "Grondstoffen",
+    "Huur van het pand",
+    "Afschrijving op het gebouw",
+    "Rente op een lening"
+   ],
+   "Meer productie = meer grondstoffen."
+  ],
+  [
+   "3.1",
+   "Wat betekent investeren?",
+   [
+    "Geld besteden aan productiemiddelen, zoals nieuwe machines",
+    "Geld lenen bij de bank om de lonen te kunnen betalen",
+    "Producten in de uitverkoop doen om de voorraad kwijt te raken",
+    "De btw die je hebt ontvangen afdragen aan de Belastingdienst"
+   ],
+   "Bijvoorbeeld oude machines vervangen door nieuwe."
+  ],
+  [
+   "3.1",
+   "Waarom gaat een bedrijf investeren in nieuwe machines?",
+   [
+    "Om sneller en schoner te produceren",
+    "Om meer btw aan de overheid te betalen",
+    "Om de vaste kosten zo hoog mogelijk te maken",
+    "Om minder producten te hoeven verkopen"
+   ],
+   "Nieuwe machines verhogen vaak de arbeidsproductiviteit."
+  ],
+  [
+   "3.1",
+   "Wat is afschrijving?",
+   [
+    "Hoeveel een kapitaalgoed jaarlijks in waarde vermindert",
+    "De korting die je krijgt als je veel tegelijk inkoopt",
+    "De btw die je aan het eind van het jaar terugkrijgt",
+    "Het loon dat de ondernemer zichzelf elke maand betaalt"
+   ],
+   "De aanschafprijs verdeel je over de gebruiksjaren."
+  ],
+  [
+   "3.1",
+   "Wat is de formule voor afschrijving per jaar?",
+   [
+    "(aanschafprijs − restwaarde) : aantal gebruiksjaren",
+    "(aanschafprijs : restwaarde) × 100 × aantal jaren",
+    "(aanschafprijs + restwaarde) : aantal gebruiksjaren",
+    "restwaarde × aantal gebruiksjaren − aanschafprijs"
+   ],
+   "De restwaarde trek je eerst af."
+  ],
+  [
+   "3.1",
+   "Een machine kost € 95.750. Restwaarde € 24.500 na 5 jaar. Hoeveel is de afschrijving per jaar?",
+   [
+    "€ 14.250",
+    "€ 19.150",
+    "€ 24.050",
+    "€ 4.900"
+   ],
+   "(95.750 − 24.500) : 5 = € 14.250."
+  ],
+  [
+   "3.1",
+   "Waarom mag een bedrijf de aanschafprijs van een machine niet in één keer als kosten tellen?",
+   [
+    "Omdat je de machine meerdere jaren gebruikt",
+    "Omdat de btw-regels dat altijd verbieden",
+    "Omdat machines eigenlijk helemaal geen kosten zijn",
+    "Omdat de restwaarde van een machine altijd nul is"
+   ],
+   "De kosten spreid je over de gebruiksjaren."
+  ],
+  [
+   "3.1",
+   "Wat is de kostprijs per product?",
+   [
+    "De gemiddelde kosten voor het maken van één product",
+    "De prijs die de consument in de winkel betaalt",
+    "De inkoopprijs van het product plus de btw",
+    "De winst die je op één product maakt na verkoop"
+   ],
+   "Kostprijs = (vaste + variabele kosten) : aantal producten."
+  ],
+  [
+   "3.1",
+   "Een fabriek maakt 26.000 scooters. Vaste kosten € 9 miljoen, variabele kosten € 5,3 miljoen. Wat is de kostprijs?",
+   [
+    "€ 550",
+    "€ 346",
+    "€ 204",
+    "€ 14.300"
+   ],
+   "14,3 miljoen : 26.000 = € 550."
+  ],
+  [
+   "3.1",
+   "Bakkerij Stoet maakt 40.000 taarten. Vaste kosten € 225.000, variabele kosten € 105.000. Wat is de kostprijs per taart?",
+   [
+    "€ 8,25",
+    "€ 5,63",
+    "€ 2,63",
+    "€ 3,00"
+   ],
+   "330.000 : 40.000 = € 8,25."
+  ],
+  [
+   "3.1",
+   "Wat gebeurt er met de vaste kosten per product als een fabriek meer produceert?",
+   [
+    "Die dalen",
+    "Die stijgen",
+    "Die blijven per product gelijk",
+    "Die verdwijnen"
+   ],
+   "De vaste kosten worden over meer producten verdeeld."
+  ],
+  [
+   "3.1",
+   "Hoe bepaalt een producent de verkoopprijs?",
+   [
+    "Kostprijs + winstopslag",
+    "Inkoopprijs + btw",
+    "Kostprijs − btw",
+    "Consumentenprijs + winst"
+   ],
+   "De winstopslag hangt af van wat klanten willen betalen en de prijs bij concurrenten."
+  ],
+  [
+   "3.1",
+   "Hoe bepaalt een winkelier (detaillist) de verkoopprijs?",
+   [
+    "Inkoopprijs + brutowinstopslag",
+    "Kostprijs + btw",
+    "Consumentenprijs − btw",
+    "Inkoopprijs − bedrijfskosten"
+   ],
+   "De brutowinstopslag is een percentage van de inkoopprijs."
+  ],
+  [
+   "3.1",
+   "Wat is de consumentenprijs?",
+   [
+    "De verkoopprijs inclusief btw",
+    "De verkoopprijs exclusief btw",
+    "De inkoopprijs",
+    "De kostprijs plus winst"
+   ],
+   "Dit betaalt de klant in de winkel."
+  ],
+  [
+   "3.1",
+   "De inkoopprijs van een tv is € 528. Brutowinstopslag 25%, btw 21%. Wat is de consumentenprijs?",
+   [
+    "€ 798,60",
+    "€ 765,60",
+    "€ 660,00",
+    "€ 776,16"
+   ],
+   "528 + 132 = 660; 660 × 1,21 = € 798,60."
+  ],
+  [
+   "3.1",
+   "Waarom mag je de brutowinstopslag en de btw niet bij elkaar optellen?",
+   [
+    "De btw wordt berekend over de verkoopprijs, niet over de inkoopprijs",
+    "Omdat de btw altijd 9% is, wat het product ook is",
+    "Omdat de brutowinstopslag eigenlijk geen percentage is",
+    "Dat mag wel: je telt beide percentages gewoon bij elkaar op"
+   ],
+   "Eerst de verkoopprijs, daarna de btw daarover."
+  ],
+  [
+   "3.1",
+   "Een jas kost € 59,95 inclusief 21% btw. Wat is de prijs exclusief btw?",
+   [
+    "€ 49,55",
+    "€ 47,36",
+    "€ 72,54",
+    "€ 50,04"
+   ],
+   "(59,95 : 121) × 100 = € 49,55."
+  ],
+  [
+   "3.1",
+   "Rozen kosten € 1,95 inclusief 9% btw. Wat is de prijs exclusief btw?",
+   [
+    "€ 1,79",
+    "€ 1,77",
+    "€ 1,61",
+    "€ 2,13"
+   ],
+   "(1,95 : 109) × 100 = € 1,79."
+  ],
+  [
+   "3.1",
+   "Welk btw-tarief geldt voor levensmiddelen?",
+   [
+    "9%",
+    "21%",
+    "0%",
+    "25%"
+   ],
+   "Ook voor bloemen en boeken geldt 9%."
+  ],
+  [
+   "3.1",
+   "Welk btw-tarief geldt voor bijvoorbeeld schoenen en elektronica?",
+   [
+    "21%",
+    "9%",
+    "6%",
+    "0%"
+   ],
+   "Dat is het hoge btw-tarief."
+  ],
+  [
+   "3.1",
+   "Tablets worden ingekocht voor € 175. Brutowinstmarge 42%. Wat is de verkoopprijs?",
+   [
+    "€ 248,50",
+    "€ 211,75",
+    "€ 300,69",
+    "€ 217,00"
+   ],
+   "(175 : 100) × 142 = € 248,50."
+  ],
+  [
+   "3.2",
+   "Wat is omzet?",
+   [
+    "Het totaalbedrag dat je door de verkoop ontvangt",
+    "De winst die overblijft na aftrek van alle kosten",
+    "De inkoopwaarde van de goederen die je verkocht",
+    "De btw die je elk kwartaal aan de overheid afdraagt"
+   ],
+   "Omzet heet ook verkoopopbrengst."
+  ],
+  [
+   "3.2",
+   "Hoe bereken je de omzet?",
+   [
+    "Afzet × verkoopprijs",
+    "Afzet × inkoopprijs",
+    "Brutowinst − kosten",
+    "Verkoopprijs − inkoopprijs"
+   ],
+   "Afzet = het aantal verkochte producten."
+  ],
+  [
+   "3.2",
+   "Wat is de afzet?",
+   [
+    "Het aantal verkochte producten",
+    "Het totale verkoopbedrag in euro's",
+    "De winst na aftrek van kosten",
+    "De kosten van alle verkochte producten"
+   ],
+   "Afzet × verkoopprijs = omzet."
+  ],
+  [
+   "3.2",
+   "Een bedrijf verkoopt 25.600 producten van € 3,50. Wat is de omzet?",
+   [
+    "€ 89.600",
+    "€ 7.314",
+    "€ 25.603,50",
+    "€ 8.960"
+   ],
+   "25.600 × 3,50 = € 89.600."
+  ],
+  [
+   "3.2",
+   "Hoe bereken je de brutowinst?",
+   [
+    "Omzet − inkoopwaarde",
+    "Omzet − bedrijfskosten",
+    "Brutowinst − btw",
+    "Afzet × verkoopprijs"
+   ],
+   "Daarna gaan de bedrijfskosten er nog af."
+  ],
+  [
+   "3.2",
+   "Hoe bereken je het nettoresultaat?",
+   [
+    "Brutowinst − bedrijfskosten",
+    "Omzet − inkoopwaarde",
+    "Omzet + bedrijfskosten",
+    "Brutowinst + btw"
+   ],
+   "Dat kan een nettowinst of een nettoverlies zijn."
+  ],
+  [
+   "3.2",
+   "Omzet € 89.600, inkoopwaarde € 22.500, bedrijfskosten € 55.200. Wat is de nettowinst?",
+   [
+    "€ 11.900",
+    "€ 67.100",
+    "€ 34.400",
+    "€ 12.900"
+   ],
+   "89.600 − 22.500 = 67.100; 67.100 − 55.200 = € 11.900."
+  ],
+  [
+   "3.2",
+   "Welke hoort NIET bij de bedrijfskosten?",
+   [
+    "De inkoopwaarde van de verkochte goederen",
+    "De huur van het winkelpand per maand",
+    "Het loon van het personeel in de winkel",
+    "De energiekosten van de winkel per jaar"
+   ],
+   "De inkoopwaarde trek je al af om de brutowinst te berekenen."
+  ],
+  [
+   "3.2",
+   "Waarom zegt de brutowinst nog niet zoveel over een bedrijf?",
+   [
+    "De bedrijfskosten zijn er nog niet afgetrokken",
+    "De btw zit er nog in en moet nog worden afgedragen",
+    "De omzet is er al vanaf, dus het bedrag is te laag",
+    "Het is altijd een verlies, ook als het bedrijf goed draait"
+   ],
+   "Pas het nettoresultaat laat zien of je winst maakt."
+  ],
+  [
+   "3.2",
+   "Wat kost de btw een ondernemer?",
+   [
+    "Niets: ontvangen btw gaat naar de Belastingdienst en betaalde btw krijgt hij terug",
+    "21% van zijn totale omzet, want die btw moet hij zelf aan de Belastingdienst betalen",
+    "9% van zijn winst, omdat de btw alleen over de winst van het bedrijf wordt berekend",
+    "Het hele verschil tussen inkoop en verkoop, omdat de btw daarover wordt geheven"
+   ],
+   "Daarom reken je met bedragen exclusief btw."
+  ],
+  [
+   "3.2",
+   "Een hovenier heeft € 11.600 omzet per maand (excl. 21% btw). Hoeveel btw ontvangt hij per maand?",
+   [
+    "€ 2.436",
+    "€ 2.013",
+    "€ 1.044",
+    "€ 14.036"
+   ],
+   "0,21 × 11.600 = € 2.436."
+  ],
+  [
+   "3.2",
+   "Hoe vaak draagt een ondernemer vaak btw af, zoals de hovenier in de opgave?",
+   [
+    "Eens per kwartaal",
+    "Eens per tien jaar",
+    "Elke dag",
+    "Nooit"
+   ],
+   "Per kwartaal = elke drie maanden."
+  ],
+  [
+   "3.2",
+   "Inkoopprijs € 40, verkoopprijs € 50. Wat is de brutowinstmarge in procenten van de inkoopprijs?",
+   [
+    "25%",
+    "20%",
+    "80%",
+    "10%"
+   ],
+   "(50 − 40) : 40 × 100 = 25%."
+  ],
+  [
+   "3.2",
+   "Rozen worden ingekocht voor € 1,10 en verkocht voor € 1,79 (excl. btw). Wat is de brutowinstmarge?",
+   [
+    "62,7%",
+    "38,5%",
+    "69,0%",
+    "162,7%"
+   ],
+   "(0,69 : 1,10) × 100 = 62,7%."
+  ],
+  [
+   "3.2",
+   "Wat zijn twee manieren om meer winst te maken?",
+   [
+    "De omzet vergroten of de kosten verlagen",
+    "Meer btw rekenen of minder afschrijven",
+    "Minder verkopen of meer personeel aannemen",
+    "De restwaarde verhogen of de afzet verlagen"
+   ],
+   "Lagere kosten bereik je bijvoorbeeld met een hogere arbeidsproductiviteit."
+  ],
+  [
+   "3.2",
+   "Wat is arbeidsproductiviteit?",
+   [
+    "De productie per persoon in een bepaalde tijd",
+    "Het loon dat een werknemer per uur verdient",
+    "Het aantal werknemers dat een bedrijf heeft",
+    "De maximale productie van een heel bedrijf"
+   ],
+   "Formule: totale productie : aantal werkenden."
+  ],
+  [
+   "3.2",
+   "Een bedrijf maakt 1.200 producten per dag met 15 werknemers. Wat is de arbeidsproductiviteit per dag?",
+   [
+    "80 producten",
+    "18.000 producten",
+    "1.215 producten",
+    "12,5 producten"
+   ],
+   "1.200 : 15 = 80."
+  ],
+  [
+   "3.2",
+   "Een bedrijf met 6 medewerkers (5 dagen per week) maakt 12.480 trampolines per jaar. Hoeveel per werknemer per dag?",
+   [
+    "8",
+    "48",
+    "240",
+    "40"
+   ],
+   "12.480 : 52 = 240 per week; : 5 = 48 per dag; : 6 = 8."
+  ],
+  [
+   "3.2",
+   "Wat is een gevolg van een hogere arbeidsproductiviteit?",
+   [
+    "De kostprijs per product daalt",
+    "De verkoopprijs stijgt automatisch",
+    "Er zijn meer werknemers nodig",
+    "De btw daalt"
+   ],
+   "Je maakt meer met evenveel mensen."
+  ],
+  [
+   "3.2",
+   "Waardoor kan de arbeidsproductiviteit NIET stijgen?",
+   [
+    "Meer pauzes zonder andere veranderingen",
+    "Automatisering van de productie",
+    "Scholing en cursussen voor personeel",
+    "Prestatiebeloning met een bonus"
+   ],
+   "Technologie, arbeidsverdeling, scholing en prestatiebeloning helpen wel."
+  ],
+  [
+   "3.2",
+   "Wat is prestatiebeloning?",
+   [
+    "Wie goed werkt, krijgt beter betaald, bijvoorbeeld een bonus",
+    "Iedereen krijgt precies hetzelfde loon, hoe hard hij ook werkt",
+    "De ondernemer krijgt de winst die aan het eind van het jaar overblijft",
+    "Een uitkering die je van het UWV krijgt als je werkloos bent"
+   ],
+   "Dat kan de arbeidsproductiviteit verhogen."
+  ],
+  [
+   "3.2",
+   "Wat is productiecapaciteit?",
+   [
+    "De maximale hoeveelheid producten die een bedrijf kan maken",
+    "De productie per persoon in een bepaalde tijd, zoals per uur",
+    "Het aantal producten dat een bedrijf in een jaar heeft verkocht",
+    "De omzet die een bedrijf in een jaar met zijn producten haalt"
+   ],
+   "Die hangt af van de mensuren en de kapitaalgoederen."
+  ],
+  [
+   "3.2",
+   "Waar hangt de productiecapaciteit van af?",
+   [
+    "Het aantal mensuren en de kapitaalgoederen",
+    "De btw en de afzet van het bedrijf",
+    "De omzet en de winst van vorig jaar",
+    "De vraag van consumenten in de winkel"
+   ],
+   "Meer machines of meer uren = meer capaciteit."
+  ],
+  [
+   "3.2",
+   "Wanneer is de productiecapaciteit voor 100% benut?",
+   [
+    "Als alle werknemers volledig werken en alle machines worden gebruikt",
+    "Als er helemaal geen vraag naar de producten is en alles stilstaat",
+    "Als de winst van het bedrijf 100% van de omzet is geworden",
+    "Als de helft van de machines draait en de rest in onderhoud is"
+   ],
+   "Dan kan het bedrijf niet meer produceren."
+  ],
+  [
+   "3.2",
+   "Wat is een maatschappelijke opbrengst van productie?",
+   [
+    "Meer werkgelegenheid",
+    "Milieuvervuiling",
+    "Geluidsoverlast",
+    "Files"
+   ],
+   "Ook meer keuze en meer welvaart."
+  ],
+  [
+   "3.2",
+   "Wat is een maatschappelijke kost van productie?",
+   [
+    "Milieuvervuiling",
+    "Meer keuze voor consumenten",
+    "Meer werkgelegenheid",
+    "Meer welvaart"
+   ],
+   "Negatieve gevolgen voor mens en milieu."
+  ],
+  [
+   "3.2",
+   "Wat is maatschappelijk verantwoord ondernemen (mvo)?",
+   [
+    "Bij productie en winst ook rekening houden met de gevolgen voor mens en milieu",
+    "Zoveel mogelijk winst maken, ook als dat schade geeft aan mens en milieu",
+    "Alleen opdrachten aannemen van de overheid en niet van gewone klanten",
+    "Geen belasting betalen, zodat er meer geld overblijft voor goede doelen"
+   ],
+   "People, planet, profit."
+  ],
+  [
+   "3.2",
+   "Waar staan de drie P's van mvo voor?",
+   [
+    "People, planet, profit",
+    "Prijs, product, promotie",
+    "Personeel, plaats, prijs",
+    "Pacht, productie, premie"
+   ],
+   "Mens, milieu en winst."
+  ],
+  [
+   "3.2",
+   "Een bedrijf schakelt over op groene stroom en duurzame grondstoffen. Dit is een voorbeeld van ...",
+   [
+    "maatschappelijk verantwoord ondernemen",
+    "een kartel met andere bedrijven",
+    "een fusie tussen twee bedrijven",
+    "een monopolie op groene stroom"
+   ],
+   "Het bedrijf houdt rekening met het milieu."
+  ],
+  [
+   "3.3",
+   "Wat is een abstracte markt?",
+   [
+    "Alle vraag naar en alle aanbod van een product, bijvoorbeeld de huizenmarkt",
+    "Een weekmarkt met kraampjes op het plein in het centrum van de stad",
+    "Een supermarkt waar je alle boodschappen voor de week kunt halen",
+    "Een webwinkel waar je online producten bestelt en laat bezorgen"
+   ],
+   "Bij economie gaat het meestal over een abstracte markt."
+  ],
+  [
+   "3.3",
+   "Wat is een voorbeeld van een concrete markt?",
+   [
+    "Een weekmarkt",
+    "De arbeidsmarkt",
+    "De huizenmarkt",
+    "De woningmarkt in Nederland"
+   ],
+   "Een plek waar je echt naartoe gaat."
+  ],
+  [
+   "3.3",
+   "Van wie komt het aanbod op de markt?",
+   [
+    "Van producenten",
+    "Van consumenten",
+    "Van de overheid",
+    "Van de ACM"
+   ],
+   "De vraag komt van consumenten."
+  ],
+  [
+   "3.3",
+   "Wat is de evenwichtsprijs?",
+   [
+    "De prijs waarbij vraag en aanbod gelijk zijn",
+    "De hoogste prijs die op de markt wordt gevraagd",
+    "De prijs die de overheid voor een product vaststelt",
+    "De kostprijs die een bedrijf voor één product maakt"
+   ],
+   "Dan wordt alles verkocht wat wordt aangeboden."
+  ],
+  [
+   "3.3",
+   "Wat is de evenwichtshoeveelheid?",
+   [
+    "De hoeveelheid die bij de evenwichtsprijs wordt gevraagd en aangeboden",
+    "De maximale productie die alle bedrijven samen kunnen maken",
+    "Het tekort dat ontstaat als de vraag groter is dan het aanbod",
+    "De hoeveelheid die wordt verkocht als er een maximumprijs geldt"
+   ],
+   "Lees je af in het snijpunt van de vraag- en aanbodlijn."
+  ],
+  [
+   "3.3",
+   "Wat gebeurt er met de prijs als de vraag toeneemt en het aanbod gelijk blijft?",
+   [
+    "De prijs stijgt",
+    "De prijs daalt",
+    "De prijs blijft gelijk",
+    "De prijs wordt nul"
+   ],
+   "Meer vraag = hogere prijs."
+  ],
+  [
+   "3.3",
+   "Wat gebeurt er met de prijs als het aanbod toeneemt en de vraag gelijk blijft?",
+   [
+    "De prijs daalt",
+    "De prijs stijgt",
+    "De prijs blijft gelijk",
+    "Er komt een maximumprijs"
+   ],
+   "Meer aanbod = lagere prijs."
+  ],
+  [
+   "3.3",
+   "Wat gebeurt er met de gevraagde hoeveelheid als de prijs stijgt?",
+   [
+    "Die daalt",
+    "Die stijgt",
+    "Die blijft gelijk",
+    "Die wordt oneindig"
+   ],
+   "Klanten willen of kunnen minder betalen."
+  ],
+  [
+   "3.3",
+   "Wat gebeurt er met de aangeboden hoeveelheid als de prijs stijgt?",
+   [
+    "Die stijgt",
+    "Die daalt",
+    "Die blijft gelijk",
+    "Die wordt nul"
+   ],
+   "Meer producenten willen verkopen voor een hogere prijs."
+  ],
+  [
+   "3.3",
+   "Er is een tekort aan grondstoffen. Wat gebeurt er met de aanbodlijn?",
+   [
+    "Die verschuift naar links",
+    "Die verschuift naar rechts",
+    "De vraaglijn verschuift naar links",
+    "Er verandert niets"
+   ],
+   "Het aanbod neemt af."
+  ],
+  [
+   "3.3",
+   "Er komen veel nieuwe producenten bij. Wat gebeurt er met de aanbodlijn?",
+   [
+    "Die verschuift naar rechts",
+    "Die verschuift naar links",
+    "Die verdwijnt",
+    "De vraaglijn verschuift"
+   ],
+   "Het aanbod neemt toe."
+  ],
+  [
+   "3.3",
+   "Het inkomen van consumenten stijgt. Wat gebeurt er meestal met de vraag?",
+   [
+    "De vraag neemt toe: de vraaglijn verschuift naar rechts",
+    "De vraag neemt af: de vraaglijn verschuift naar links",
+    "Het aanbod neemt toe: de aanbodlijn verschuift naar rechts",
+    "Er verandert niets, want inkomen heeft geen invloed"
+   ],
+   "Met meer inkomen kopen mensen meer."
+  ],
+  [
+   "3.3",
+   "Wat is vrije marktwerking?",
+   [
+    "De prijs wordt volledig door vraag en aanbod bepaald",
+    "De overheid bepaalt alle prijzen van producten op de markt",
+    "Bedrijven maken samen afspraken over de prijzen die ze vragen",
+    "Er is maar één aanbieder die de prijs zelf kan bepalen"
+   ],
+   "De overheid bemoeit zich er niet mee."
+  ],
+  [
+   "3.3",
+   "Wat is het nadeel van een volledig vrije markt?",
+   [
+    "De evenwichtsprijs kan voor sommige mensen te hoog zijn",
+    "Er zijn te veel aanbieders, zodat niemand nog winst maakt",
+    "De prijzen zijn altijd te laag voor bedrijven om rond te komen",
+    "Er is helemaal geen concurrentie tussen de aanbieders"
+   ],
+   "Vooral bij basisbehoeften zoals wonen."
+  ],
+  [
+   "3.3",
+   "Wat is een maximumprijs?",
+   [
+    "Een prijs die niet hoger mag zijn dan de overheid vaststelt",
+    "De hoogste prijs die een winkel voor een product vraagt",
+    "De evenwichtsprijs waarbij vraag en aanbod gelijk zijn",
+    "De prijs die bedrijven in een kartel samen afspreken"
+   ],
+   "Bijvoorbeeld een maximumhuur voor sociale huurwoningen."
+  ],
+  [
+   "3.3",
+   "Waarom stelt de overheid een minimumprijs in?",
+   [
+    "Om producenten te beschermen tegen een te lage prijs",
+    "Om consumenten te beschermen tegen een te hoge prijs",
+    "Om de btw te verhogen",
+    "Om kartels te maken"
+   ],
+   "Vroeger bijvoorbeeld bij brood en melk."
+  ],
+  [
+   "3.3",
+   "Wat ontstaat er bij een maximumprijs onder de evenwichtsprijs?",
+   [
+    "Een tekort: de vraag is groter dan het aanbod",
+    "Een overschot: het aanbod is groter dan de vraag",
+    "Evenwicht: vraag en aanbod zijn dan precies gelijk",
+    "Een kartel: aanbieders maken samen prijsafspraken"
+   ],
+   "Er wordt meer gevraagd dan aangeboden."
+  ],
+  [
+   "3.3",
+   "Wat ontstaat er bij een minimumprijs boven de evenwichtsprijs?",
+   [
+    "Een overschot: het aanbod is groter dan de vraag",
+    "Een tekort: de vraag is groter dan het aanbod",
+    "Evenwicht: vraag en aanbod zijn dan precies gelijk",
+    "Een monopolie: er blijft maar één aanbieder over"
+   ],
+   "Er wordt meer aangeboden dan gevraagd."
+  ],
+  [
+   "3.3",
+   "Hoe helpt de overheid mensen met een laag inkomen bij een te hoge evenwichtsprijs?",
+   [
+    "Met subsidies of toeslagen",
+    "Met een kartel van aanbieders",
+    "Met een fusie van twee bedrijven",
+    "Met een hogere btw op producten"
+   ],
+   "Bijvoorbeeld huurtoeslag."
+  ],
+  [
+   "3.3",
+   "Wat is een transparante markt?",
+   [
+    "Een markt waarop je producten en prijzen goed met elkaar kunt vergelijken",
+    "Een markt met maar één aanbieder die alle prijzen zelf bepaalt",
+    "Een markt waarop helemaal geen prijzen worden gevraagd",
+    "Een markt waarop de overheid een maximumprijs heeft ingesteld"
+   ],
+   "Transparant betekent doorzichtig."
+  ],
+  [
+   "3.3",
+   "Wanneer werkt het samenspel van vraag, aanbod en prijs het best?",
+   [
+    "Bij veel aanbieders, veel vragers en een transparante markt",
+    "Bij één aanbieder die precies weet wat de klanten willen",
+    "Als de overheid voor alle producten de prijzen bepaalt",
+    "Als bedrijven onderling afspraken over de prijzen maken"
+   ],
+   "Dan is er echte concurrentie."
+  ],
+  [
+   "3.3",
+   "Bij € 5,00 is de gevraagde hoeveelheid 8 en bij € 4,50 is die 12. Met hoeveel procent stijgt de gevraagde hoeveelheid?",
+   [
+    "50%",
+    "4%",
+    "33,3%",
+    "150%"
+   ],
+   "(12 − 8) : 8 × 100 = 50%."
+  ],
+  [
+   "3.4",
+   "Wat is marktaandeel?",
+   [
+    "Je eigen afzet (of omzet) in procenten van de totale afzet (of omzet) op de markt",
+    "Je winst in procenten van je omzet, nadat alle kosten zijn betaald",
+    "Het aantal concurrenten dat op dezelfde markt actief is",
+    "Je omzet min je kosten, gedeeld door het aantal producten dat je verkocht"
+   ],
+   "Zo zie je hoe goed je het doet ten opzichte van concurrenten."
+  ],
+  [
+   "3.4",
+   "Een bedrijf verkoopt 1.200 van de 8.000 verkochte producten op de markt. Wat is het marktaandeel?",
+   [
+    "15%",
+    "6,7%",
+    "12%",
+    "85%"
+   ],
+   "(1.200 : 8.000) × 100 = 15%."
+  ],
+  [
+   "3.4",
+   "Wanneer groeit je marktaandeel?",
+   [
+    "Als je afzet of omzet harder stijgt dan die van je concurrenten",
+    "Als je prijzen stijgen en je daardoor meer verdient per product",
+    "Als je minder verkoopt dan vorig jaar, maar met meer winst",
+    "Als de totale markt groter wordt en jouw afzet gelijk blijft"
+   ],
+   "Je moet harder groeien dan de rest."
+  ],
+  [
+   "3.4",
+   "Hoe kan een bedrijf zijn marktaandeel vergroten?",
+   [
+    "Met de marketinginstrumenten, een overname of een fusie",
+    "Met een maximumprijs die de overheid vaststelt",
+    "Door minder te produceren dan de concurrent",
+    "Door de btw op zijn producten te verhogen"
+   ],
+   "De 6 P's helpen daarbij."
+  ],
+  [
+   "3.4",
+   "Wat is een fusie?",
+   [
+    "Twee bedrijven vormen samen één nieuw bedrijf",
+    "Een bedrijf gaat failliet en stopt ermee",
+    "Bedrijven maken geheime prijsafspraken",
+    "De overheid neemt een bedrijf helemaal over"
+   ],
+   "Het nieuwe bedrijf bespaart vooral op vaste kosten."
+  ],
+  [
+   "3.4",
+   "Waarop bespaart een bedrijf na een fusie vooral?",
+   [
+    "Op vaste kosten",
+    "Op btw",
+    "Op de afzet",
+    "Op variabele kosten per product"
+   ],
+   "Bijvoorbeeld één hoofdkantoor in plaats van twee."
+  ],
+  [
+   "3.4",
+   "Wat is een monopolie?",
+   [
+    "Een marktvorm met maar één aanbieder",
+    "Een markt met veel aanbieders",
+    "Een markt met een paar aanbieders",
+    "Een verboden prijsafspraak"
+   ],
+   "De monopolist heeft veel macht."
+  ],
+  [
+   "3.4",
+   "Waarom kan een monopolist zijn prijs verhogen?",
+   [
+    "Er zijn geen concurrenten waar klanten naartoe kunnen",
+    "De overheid verplicht hem om elk jaar duurder te worden",
+    "Omdat de btw op zijn producten elk jaar stijgt",
+    "Omdat de vraag naar zijn product altijd stijgt"
+   ],
+   "Alleen als klanten niet meer willen of kunnen betalen, haken ze af."
+  ],
+  [
+   "3.4",
+   "Welke is een voorbeeld van een overheidsmonopolie?",
+   [
+    "De uitgifte van bankbiljetten",
+    "De verkoop van smartphones",
+    "Restaurants",
+    "Kledingwinkels"
+   ],
+   "Ook het hoogspanningsnet."
+  ],
+  [
+   "3.4",
+   "Wat zijn homogene goederen?",
+   [
+    "Producten die voor klanten niet van elkaar verschillen",
+    "Producten van verschillende merken die klanten goed uit elkaar houden",
+    "Luxe producten die maar weinig mensen kunnen betalen",
+    "Producten waarvoor de overheid een maximumprijs heeft ingesteld"
+   ],
+   "Bijvoorbeeld graan of stroom."
+  ],
+  [
+   "3.4",
+   "Wat zijn heterogene goederen?",
+   [
+    "Soortgelijke producten die wel van elkaar verschillen, zoals merkkleding",
+    "Producten die voor klanten precies hetzelfde zijn, zoals stroom",
+    "Grondstoffen die uit de natuur komen, zoals hout en erts",
+    "Producten zonder prijs, omdat ze vrij beschikbaar zijn"
+   ],
+   "Klanten hebben smaak- of merkvoorkeuren."
+  ],
+  [
+   "3.4",
+   "Welke marktvorm heeft veel aanbieders met homogene producten?",
+   [
+    "Volkomen concurrentie",
+    "Monopolistische concurrentie",
+    "Oligopolie",
+    "Monopolie"
+   ],
+   "Komt weinig voor."
+  ],
+  [
+   "3.4",
+   "Welke marktvorm heeft veel aanbieders met heterogene producten?",
+   [
+    "Monopolistische concurrentie",
+    "Volkomen concurrentie",
+    "Oligopolie",
+    "Monopolie"
+   ],
+   "Komt veel voor, bijvoorbeeld bij kleding en restaurants."
+  ],
+  [
+   "3.4",
+   "Wat is een oligopolie?",
+   [
+    "Een markt met een klein aantal aanbieders",
+    "Een markt met maar één aanbieder",
+    "Een markt met heel veel kleine aanbieders",
+    "Een verboden afspraak tussen bedrijven"
+   ],
+   "Bijvoorbeeld smartphones of energie."
+  ],
+  [
+   "3.4",
+   "De smartphonemarkt is een voorbeeld van ...",
+   [
+    "een oligopolie met een heterogeen product",
+    "volkomen concurrentie",
+    "een monopolie",
+    "een oligopolie met een homogeen product"
+   ],
+   "Weinig aanbieders die concurreren op eigenschappen."
+  ],
+  [
+   "3.4",
+   "De elektriciteitsmarkt is een voorbeeld van ...",
+   [
+    "een oligopolie met een homogeen product",
+    "monopolistische concurrentie met merken",
+    "volkomen concurrentie met veel aanbieders",
+    "een monopolie van één bedrijf"
+   ],
+   "Stroom is overal hetzelfde: concurreren op prijs."
+  ],
+  [
+   "3.4",
+   "Hoe ontstaat een prijzenoorlog?",
+   [
+    "Als één aanbieder de prijs verlaagt en de anderen volgen",
+    "Als de overheid een maximumprijs voor het product instelt",
+    "Als twee grote bedrijven samen fuseren tot één bedrijf",
+    "Als de vraag naar het product door de crisis daalt"
+   ],
+   "Dit gebeurt vooral bij een oligopolie met een homogeen product."
+  ],
+  [
+   "3.4",
+   "Waarom komen er in een oligopolie niet snel nieuwe aanbieders bij?",
+   [
+    "Een nieuw bedrijf moet veel investeren en vertrouwen opbouwen",
+    "Nieuwe aanbieders zijn in een oligopolie door de wet verboden",
+    "Er is in een oligopolie geen vraag naar extra producten",
+    "De ACM laat in een oligopolie geen nieuwe bedrijven toe"
+   ],
+   "Investeringen terugverdienen is moeilijk."
+  ],
+  [
+   "3.4",
+   "Wat is een kartel?",
+   [
+    "Een afspraak tussen bedrijven om de onderlinge concurrentie te beperken",
+    "Een fusie waarbij twee bedrijven samen één nieuw bedrijf vormen",
+    "Een monopolie dat de overheid zelf in handen heeft",
+    "Een marketinginstrument om meer klanten te trekken"
+   ],
+   "Bijvoorbeeld afspraken over prijzen of hoeveelheden."
+  ],
+  [
+   "3.4",
+   "Is een kartel toegestaan in Nederland?",
+   [
+    "Nee, een kartel is verboden",
+    "Ja, altijd",
+    "Alleen bij een oligopolie",
+    "Alleen voor kleine bedrijven"
+   ],
+   "De ACM kan hoge boetes geven."
+  ],
+  [
+   "3.4",
+   "Wat doet de ACM?",
+   [
+    "Kartels onderzoeken en boetes geven",
+    "De btw innen bij bedrijven",
+    "Minimumprijzen vaststellen",
+    "Bedrijven laten samengaan"
+   ],
+   "ACM = Autoriteit Consument & Markt."
+  ],
+  [
+   "3.4",
+   "Op welke markt komen kartels het vaakst voor?",
+   [
+    "Op een markt met weinig aanbieders (oligopolie)",
+    "Bij volkomen concurrentie",
+    "Op een weekmarkt",
+    "Bij monopolistische concurrentie met duizenden winkels"
+   ],
+   "Met weinig bedrijven zijn afspraken makkelijker te maken."
+  ],
+  [
+   "3.4",
+   "Bij welke marktvorm maakt het voor klanten niet uit wie het product levert?",
+   [
+    "Volkomen concurrentie",
+    "Monopolistische concurrentie",
+    "Oligopolie met heterogeen product",
+    "Monopolie"
+   ],
+   "De producten zijn homogeen."
+  ],
+  [
+   "3.4",
+   "Een restaurantketen heeft veel concurrenten, maar klanten kiezen op smaak en merk. Welke marktvorm?",
+   [
+    "Monopolistische concurrentie",
+    "Volkomen concurrentie",
+    "Monopolie",
+    "Oligopolie"
+   ],
+   "Veel aanbieders, heterogeen product."
+  ]
+ ],
+ "SORT": [
+  {
+   "a": "Vaste kosten",
+   "b": "Variabele kosten",
+   "A": [
+    [
+     "🏢",
+     "Huur van het pand"
+    ],
+    [
+     "🏦",
+     "Rente op een lening"
+    ],
+    [
+     "📉",
+     "Afschrijving op machines"
+    ],
+    [
+     "🛡️",
+     "Verzekering van het gebouw"
+    ]
+   ],
+   "B": [
+    [
+     "🌾",
+     "Grondstoffen"
+    ],
+    [
+     "📦",
+     "Verpakkingen"
+    ],
+    [
+     "⚡",
+     "Energie voor de productie"
+    ],
+    [
+     "🧵",
+     "Stof voor kleding"
+    ]
+   ]
+  },
+  {
+   "a": "Kapitaal",
+   "b": "Arbeid",
+   "A": [
+    [
+     "🚚",
+     "Vrachtwagen"
+    ],
+    [
+     "🤖",
+     "Lasrobot"
+    ],
+    [
+     "🏭",
+     "Fabrieksgebouw"
+    ]
+   ],
+   "B": [
+    [
+     "👷",
+     "Bouwvakker"
+    ],
+    [
+     "👩‍🏫",
+     "Docent"
+    ],
+    [
+     "🧑‍🍳",
+     "Kok"
+    ]
+   ]
+  },
+  {
+   "a": "Natuur",
+   "b": "Ondernemerschap",
+   "A": [
+    [
+     "🌳",
+     "Bomen voor papier"
+    ],
+    [
+     "🛢️",
+     "Aardolie"
+    ],
+    [
+     "🌱",
+     "Landbouwgrond"
+    ]
+   ],
+   "B": [
+    [
+     "📋",
+     "Productie plannen"
+    ],
+    [
+     "🧭",
+     "Leiding geven"
+    ],
+    [
+     "💡",
+     "Een bedrijf starten"
+    ]
+   ]
+  },
+  {
+   "a": "Maatschappelijke opbrengst",
+   "b": "Maatschappelijke kosten",
+   "A": [
+    [
+     "👩‍💼",
+     "Meer werkgelegenheid"
+    ],
+    [
+     "🛍️",
+     "Meer keuze"
+    ],
+    [
+     "📈",
+     "Meer welvaart"
+    ]
+   ],
+   "B": [
+    [
+     "🏭",
+     "Milieuvervuiling"
+    ],
+    [
+     "🔊",
+     "Geluidsoverlast"
+    ],
+    [
+     "🚛",
+     "Drukte op de weg"
+    ]
+   ]
+  },
+  {
+   "a": "Prijs stijgt",
+   "b": "Prijs daalt",
+   "A": [
+    [
+     "📈",
+     "Vraag neemt toe"
+    ],
+    [
+     "🌾",
+     "Tekort aan grondstoffen"
+    ],
+    [
+     "💶",
+     "Inkomens stijgen"
+    ]
+   ],
+   "B": [
+    [
+     "🏭",
+     "Meer producenten"
+    ],
+    [
+     "📉",
+     "Vraag neemt af"
+    ],
+    [
+     "🔁",
+     "Klanten stappen over op ander product"
+    ]
+   ]
+  },
+  {
+   "a": "Maximumprijs",
+   "b": "Minimumprijs",
+   "A": [
+    [
+     "🏠",
+     "Maximumhuur"
+    ],
+    [
+     "📉",
+     "Leidt tot een tekort"
+    ],
+    [
+     "🧑‍🤝‍🧑",
+     "Beschermt consumenten"
+    ]
+   ],
+   "B": [
+    [
+     "🥛",
+     "Vroeger bij melk en brood"
+    ],
+    [
+     "📦",
+     "Leidt tot een overschot"
+    ],
+    [
+     "🧑‍🌾",
+     "Beschermt producenten"
+    ]
+   ]
+  },
+  {
+   "a": "Homogeen product",
+   "b": "Heterogeen product",
+   "A": [
+    [
+     "🌾",
+     "Graan"
+    ],
+    [
+     "⚡",
+     "Stroom"
+    ],
+    [
+     "⛽",
+     "Benzine"
+    ]
+   ],
+   "B": [
+    [
+     "👟",
+     "Merksneakers"
+    ],
+    [
+     "📱",
+     "Smartphones"
+    ],
+    [
+     "🍔",
+     "Restaurants"
+    ]
+   ]
+  },
+  {
+   "a": "Oligopolie",
+   "b": "Monopolistische concurrentie",
+   "A": [
+    [
+     "📱",
+     "Smartphonemerken"
+    ],
+    [
+     "⚡",
+     "Energiebedrijven"
+    ],
+    [
+     "✈️",
+     "Een paar luchtvaartmaatschappijen"
+    ]
+   ],
+   "B": [
+    [
+     "👗",
+     "Kledingwinkels"
+    ],
+    [
+     "🍕",
+     "Restaurants"
+    ],
+    [
+     "💇",
+     "Kappers"
+    ]
+   ]
+  }
+ ]
+}

@@ -56,7 +56,22 @@ var RIJK={"jaar-3/mavo/hoofdstuk-0-rekenvaardigheden":{map:"j3h0",soort:"reken",
   par:"Vier paragrafen over jouw geld.",reken:"Begroting, saldo, rente, lening en procenten, met de juiste formule.",games:"Een snelle quiz, Swipe & Scoor en begrippen-memory.",
   kaart:{"2.2":"bankapp"},/* sparen.jpg is een drieluik */
   kleur:{"2.1":["var(--coral)","var(--berry)"],"2.2":["#7fd4c9","var(--teal)"],"2.3":["#f2c46b","var(--ochre)"],"2.4":["#b9d6cb","var(--green)"]}},
-  /* jaar 4 mavo (18 nov 2026): H5 en H6 in de opzet van jaar 2 H2; H1 t/m H4, H7 en H8 volgen */
+  /* jaar 4 mavo (18 nov 2026): H1, H2, H3, H5 en H6 in de opzet van jaar 2 H2; H4, H7 en H8 volgen */
+  "jaar-4/hoofdstuk-1-verdien-je-genoeg":{map:"j4h1",kop:["Verdien je ","genoeg?"],hero:"inkomen",
+  alt:"Een stapel eurobiljetten van 20, 100 en 200 euro",
+  intro:"Waar komt je inkomen vandaan, hoe is het verdeeld en wat kun je ervan kopen? Vier paragrafen over inkomen, welvaart en stijgende prijzen.",
+  par:"Vier paragrafen over je inkomen.",beeld:"Foto's: Unsplash (gratis licentie)",reken:"Procenten, indexcijfers, koopkracht, BBP per inwoner en de Lorenzcurve.",games:"Een snelle quiz, Swipe & Scoor en begrippen-memory.",
+  kleur:{"1.1":["var(--coral)","var(--berry)"],"1.2":["#7fd4c9","var(--teal)"],"1.3":["#f2c46b","var(--ochre)"],"1.4":["#b9d6cb","var(--green)"]}},
+  "jaar-4/hoofdstuk-2-geld-moet-rollen":{map:"j4h2",kop:["Geld moet ","rollen"],hero:"geld-h",kaart:{"2.1":"budget-k","2.2":"sparen-k","2.3":"lenen-k","2.4":"betalen-k"},
+  alt:"Illustratie van een stapel munten en een euromunt",
+  intro:"Hoe geef je je geld uit, wat levert sparen op en wat kost lenen? Vier paragrafen over budgetteren, sparen, beleggen, lenen en de bank.",
+  par:"Vier paragrafen over jouw geld.",beeld:"Beelden: gemaakt voor deze site",reken:"Budgetplan, week en maand, rente, rendement, kredietkosten en saldo.",games:"Een snelle quiz, Swipe & Scoor en begrippen-memory.",
+  kleur:{"2.1":["var(--coral)","var(--berry)"],"2.2":["#7fd4c9","var(--teal)"],"2.3":["#f2c46b","var(--ochre)"],"2.4":["#b9d6cb","var(--green)"]}},
+  "jaar-4/hoofdstuk-3":{map:"j4h3",kop:["We gaan voor ","winst"],hero:"winst-h",kaart:{"3.1":"kosten-k","3.2":"omzet-k","3.3":"markt-k","3.4":"macht-k"},
+  alt:"Illustratie van een fabriek en een stapel munten",
+  intro:"Wat kost het om iets te maken, wat levert het op en wie bepaalt de prijs? Vier paragrafen over kosten, winst, vraag en aanbod en macht op de markt.",
+  par:"Vier paragrafen over bedrijven en de markt.",beeld:"Beelden: gemaakt voor deze site",reken:"Kostprijs, afschrijving, verkoopprijs en btw, omzet en winst, marktaandeel.",games:"Een snelle quiz, Swipe & Scoor en begrippen-memory.",
+  kleur:{"3.1":["var(--coral)","var(--berry)"],"3.2":["#7fd4c9","var(--teal)"],"3.3":["#f2c46b","var(--ochre)"],"3.4":["#b9d6cb","var(--green)"]}},
   "jaar-4/hoofdstuk-5-kan-de-overheid-dat-regelen":{map:"j4h5",kop:["Kan de overheid dat ","regelen?"],hero:"overheid-h",kaart:{"5.1":"sectoren-k","5.2":"systemen-k","5.3":"zekerheid-k","5.4":"begroting-k"},
   alt:"Illustratie van een overheidsgebouw met zuilen en een vlag",
   intro:"Wat regelt de overheid, hoe stuurt ze de economie, wie krijgt een uitkering en waar komt het geld vandaan? Vier paragrafen over de overheid.",
@@ -74,11 +89,16 @@ var RIJK={"jaar-3/mavo/hoofdstuk-0-rekenvaardigheden":{map:"j3h0",soort:"reken",
   par:"Vier paragrafen over de overheid.",beeld:"Beelden: gemaakt voor deze site",reken:"Procenten, WW-uitkering, belasting in een prijs en het begrotingssaldo.",games:"Een snelle quiz, Swipe & Scoor en begrippen-memory.",
   kleur:{"7.1":["var(--coral)","var(--berry)"],"7.2":["#7fd4c9","var(--teal)"],"7.3":["#f2c46b","var(--ochre)"],"7.4":["#b9d6cb","var(--green)"]}}};
 /* SE-pagina's in de nieuwe opzet: de hoofdstukken van het SE (leren) en de oefenstof (oefenen) op één plek */
-var SE={"jaar-4/se-h5-en-h6":{naam:"SE hoofdstuk 5, 6 en 7",kort:"H5 + H6 + H7 (3 mavo)",kop:["SE hoofdstuk 5, 6 ","en 7"],hero:"j4h5/overheid-h",
+var SE={"jaar-4/se-h1-h2-h8":{naam:"SE hoofdstuk 1 en 2",kort:"H1 + H2",kop:["SE hoofdstuk 1 ","en 2"],hero:"j4h1/inkomen",
+  intro:"Alles voor het schoolexamen over inkomen en geld: hoofdstuk 1 en 2. Leer eerst per hoofdstuk, oefen daarna en maak als laatste het oefen-SE.",
+  delen:["jaar-4/hoofdstuk-1-verdien-je-genoeg","jaar-4/hoofdstuk-2-geld-moet-rollen"],
+  toets:["se3/toets.html","Oefen-SE","Eén toets over beide hoofdstukken, met klok. Meerkeuze en rekenen kijkt de site na."],
+  extra:[["se3/app.html","Oefenlab SE","Quiz, games, rekenen en een toets op maat over hoofdstuk 1 en 2 samen.",""]],beeld:"Foto's: Unsplash (gratis licentie) · beelden gemaakt voor deze site"},
+  "jaar-4/se-h5-en-h6":{naam:"SE hoofdstuk 5, 6 en 7",kort:"H5 + H6 + H7 (3 mavo)",kop:["SE hoofdstuk 5, 6 ","en 7"],hero:"j4h5/overheid-h",
   intro:"Alles voor het schoolexamen over de overheid: hoofdstuk 5 en 6 van dit jaar en hoofdstuk 7 uit 3 mavo. Leer eerst per hoofdstuk, oefen daarna en maak als laatste het oefen-SE.",
   delen:["jaar-4/hoofdstuk-5-kan-de-overheid-dat-regelen","jaar-4/hoofdstuk-6-de-overheid-en-ons-inkomen","jaar-3/mavo/hoofdstuk-7-de-overheid-voor-ons-allemaal"],
   toets:["se56/toets.html","Oefen-SE","Eén toets over alle drie de hoofdstukken, met klok. Meerkeuze en rekenen kijkt de site na."],beeld:"Beelden: gemaakt voor deze site"}};
-var NAAM={"jaar-4/se-h5-en-h6":"SE H5 + H6 + H7 (3 mavo)","jaar-2/mavo/kopie-van-hoofdstuk-1":"Hoofdstuk 1 · lesstof en PowerPoints"};
+var NAAM={"jaar-4/se-h1-h2-h8":"SE H1 + H2","jaar-4/se-h5-en-h6":"SE H5 + H6 + H7 (3 mavo)","jaar-2/mavo/kopie-van-hoofdstuk-1":"Hoofdstuk 1 · lesstof en PowerPoints"};
 
 var esc=function(t){return String(t).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});};
 var $=function(id){return document.getElementById(id);};
@@ -409,7 +429,7 @@ function sePagina(p,j,n,s){
   var bn=jaarUrl(j,n),D=s.delen.map(function(pad){var c=RIJK[pad],q=P.filter(function(x){return x.pad===pad;})[0],jn=jaarVan(pad);return {pad:pad,c:c,nr:hNum(q)[0],uit:jn[0]!==j?" · "+naam(jn[0],jn[1]):""};});
   document.title=s.naam+" · Economie "+naam(j,n);document.body.className="rijk";
   var kaart=function(d,i){return '<a class="rchap io" style="--c:'+KLEUREN[i%4]+';--d:'+i+'" href="h.html?p='+encodeURIComponent(d.pad)+'"><img src="'+rSrc(d.c,d.c.hero)+'" alt="" loading="lazy"><span class="glare"></span><span class="num">'+d.nr+'</span><div class="body"><span class="tag">Hoofdstuk '+d.nr+esc(d.uit)+'</span><h3>'+esc(d.c.kop.join(""))+'</h3><p>'+esc(d.c.intro)+'</p><div class="links" id="separs'+i+'"></div></div></a>';};
-  var tegels=[[s.toets[0],s.toets[1],s.toets[2],"Start hier als je alles geleerd hebt"]].concat(D.map(function(d){return [d.c.map+"/oefen.html","Oefenen hoofdstuk "+d.nr,"Begrippen, rekenen, quiz en games"+(d.uit?" van hoofdstuk "+d.nr+" uit 3 mavo.":" van hoofdstuk "+d.nr+"."),""];}),D.map(function(d){return [d.c.map+"/toets.html","Oefentoets hoofdstuk "+d.nr,"Een oefentoets over alleen dit hoofdstuk.",""];}));
+  var tegels=[[s.toets[0],s.toets[1],s.toets[2],"Start hier als je alles geleerd hebt"]].concat(D.map(function(d){return [d.c.map+"/oefen.html","Oefenen hoofdstuk "+d.nr,"Begrippen, rekenen, quiz en games"+(d.uit?" van hoofdstuk "+d.nr+" uit 3 mavo.":" van hoofdstuk "+d.nr+"."),""];}),D.map(function(d){return [d.c.map+"/toets.html","Oefentoets hoofdstuk "+d.nr,"Een oefentoets over alleen dit hoofdstuk.",""];}),s.extra||[]);
   document.body.innerHTML=rNav([["index.html","Economie"],[bn,j.titel]],"#oefenen","Oefenen")
   +rHero("img/"+s.hero+".jpg","","Economie · "+naam(j,n)+" · schoolexamen",s.kop[0],s.kop[1],s.intro,'<a class="rbtn primary" href="#leren">Naar de hoofdstukken <span class="arr">→</span></a><a class="rbtn ghost" href="'+s.toets[0]+'">'+esc(s.toets[1])+'</a>')
   +'<nav class="rsteps rdelen" id="rsteps" aria-label="De twee delen van dit SE"><div class="wrap"><ol><li><a href="#leren"><b>1</b>Leren<span> · '+D.length+' hoofdstukken</span></a></li><li><a href="#oefenen"><b>2</b>Oefenen<span> · oefenlab en oefen-SE</span></a></li></ol></div></nav>'

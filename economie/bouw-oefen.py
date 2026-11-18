@@ -51,7 +51,7 @@ CONFIG = {
 for _m, _pad, _jr, _nr, _kop, _beelden in [
         ("j4h1", "jaar-4/hoofdstuk-1-verdien-je-genoeg", "jaar 4 mavo", 1, ["Verdien je ", "genoeg?"], ["inkomen", "welvaart", "prijzen"]),
         ("j4h2", "jaar-4/hoofdstuk-2-geld-moet-rollen", "jaar 4 mavo", 2, ["Geld moet ", "rollen"], ["budget", "sparen", "lenen"]),
-        ("j4h3", "jaar-4/hoofdstuk-3", "jaar 4 mavo", 3, ["We gaan voor ", "winst"], ["bakker", "productie", "markt"]),
+        ("j4h3", "jaar-4/hoofdstuk-3", "jaar 4 mavo", 3, ["We gaan voor ", "winst"], ["winst", "productie", "markt"]),
         ("j4h4", "jaar-4/hoofdstuk-4-aan-het-werk", "jaar 4 mavo", 4, ["Aan het ", "werk"], ["bouw", "kantoor", "zoeken"]),
         ("j4h5", "jaar-4/hoofdstuk-5-kan-de-overheid-dat-regelen", "jaar 4 mavo", 5, ["Kan de overheid dat ", "regelen?"], ["overheid", "zekerheid", "begroting"]),
         ("j4h6", "jaar-4/hoofdstuk-6-de-overheid-en-ons-inkomen", "jaar 4 mavo", 6, ["De overheid en ons ", "inkomen"], ["belasting", "vermogen", "draagkracht"]),
@@ -104,7 +104,7 @@ def rex(t, pat, new, groepen=False):
 
 # kleuren en kaartfoto's per paragraaf staan in RIJK in economie.js (één bron voor leer- en oefenomgeving)
 js = open(os.path.join(ECO, "economie.js"), encoding="utf-8").read()
-m = re.search(r"^var RIJK=(.*?);\n(?=var )", js, re.M | re.S)
+m = re.search(r"^var RIJK=(.*?);\n(?=var |/\*)", js, re.M | re.S)
 R = jsobj(re.sub(r"/\*.*?\*/", "", m.group(1), flags=re.S))[C["pad"]]
 assert R["map"] == name, R["map"]
 
