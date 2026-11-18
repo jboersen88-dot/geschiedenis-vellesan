@@ -134,7 +134,12 @@ var RIJK={"jaar-3/mavo/hoofdstuk-0-rekenvaardigheden":{map:"j3h0",soort:"reken",
   alt:"Illustratie van een paraplu boven een huis",
   intro:"Verzekeren, je huis en je spullen, de auto en de zorg: waarvoor verzeker je je, en wat kost dat? Vier paragrafen met veel rekenwerk.",
   par:"Vier paragrafen over verzekeren.",beeld:"Beelden: gemaakt voor deze site",reken:"Premie uit een tabel, verzekeringskosten, kans op schade, onderverzekering, de bonus-malusladder en zorgkosten.",games:"Een snelle quiz, Swipe & Scoor en begrippen-memory.",
-  kleur:{"4.1":["var(--coral)","var(--berry)"],"4.2":["#7fd4c9","var(--teal)"],"4.3":["#f2c46b","var(--ochre)"],"4.4":["#b9d6cb","var(--green)"]}}};
+  kleur:{"4.1":["var(--coral)","var(--berry)"],"4.2":["#7fd4c9","var(--teal)"],"4.3":["#f2c46b","var(--ochre)"],"4.4":["#b9d6cb","var(--green)"]}},
+  "jaar-3/mavo/hoofdstuk-5-werkt-dat-zo":{map:"j3h5",kop:["Is er werk ","voor jou?"],hero:"werk-h",kaart:{"5.1":"loon-k","5.2":"bedrijf-k","5.3":"markt-k","5.4":"robot-k"},
+  alt:"Illustratie van een werknemer met een helm naast een fabriek",
+  intro:"Waarom werken mensen, wat houd je over van je loon, bij wat voor bedrijf kun je werken en wat als er geen werk is? Vier paragrafen over werk.",
+  par:"Vier paragrafen over werk en de arbeidsmarkt.",beeld:"Beelden: gemaakt voor deze site",reken:"Van bruto naar netto, loon omrekenen, deeltijd, arbeidsparticipatie, werkloosheid en de WW-uitkering.",games:"Een snelle quiz, Swipe & Scoor en begrippen-memory.",
+  kleur:{"5.1":["var(--coral)","var(--berry)"],"5.2":["#7fd4c9","var(--teal)"],"5.3":["#f2c46b","var(--ochre)"],"5.4":["#b9d6cb","var(--green)"]}}};
 /* SE-pagina's in de nieuwe opzet: de hoofdstukken van het SE (leren) en de oefenstof (oefenen) op één plek */
 var SE={"jaar-4/se-h1-h2-h8":{naam:"SE hoofdstuk 1 en 2",kort:"H1 + H2",kop:["SE hoofdstuk 1 ","en 2"],hero:"j4h1/inkomen",
   intro:"Alles voor het schoolexamen over inkomen en geld: hoofdstuk 1 en 2. Leer eerst per hoofdstuk, oefen daarna en maak als laatste het oefen-SE.",
@@ -155,7 +160,7 @@ var SE={"jaar-4/se-h1-h2-h8":{naam:"SE hoofdstuk 1 en 2",kort:"H1 + H2",kop:["SE
   intro:"Alles voor het schoolexamen over bedrijven en werk: hoofdstuk 3 en 4. Leer eerst per hoofdstuk, oefen daarna en maak als laatste het oefen-SE.",
   delen:["jaar-4/hoofdstuk-3","jaar-4/hoofdstuk-4-aan-het-werk"],
   toets:["se34/toets.html","Oefen-SE","Eén toets over beide hoofdstukken, met klok. Meerkeuze en rekenen kijkt de site na."],beeld:"Beelden: gemaakt voor deze site"}};
-var NAAM={"jaar-3/mavo/hoofdstuk-4-ben-je-verzekerd":"Hoofdstuk 4: Kies je voor zekerheid?","jaar-3/mavo/se-1":"SE H1 + H3","jaar-3/mavo/hoofdstuk-1-hoe-groot-is-jouw-welvaart":"Hoofdstuk 1: Hoe welvarend ben jij?","jaar-4/se4":"SE H3 + H4","jaar-4/se-h1-h2-h8":"SE H1 + H2","jaar-4/se-h5-en-h6":"SE H5 + H6 + H7 (3 mavo)","jaar-2/mavo/kopie-van-hoofdstuk-1":"Hoofdstuk 1 · lesstof en PowerPoints"};
+var NAAM={"jaar-3/mavo/hoofdstuk-5-werkt-dat-zo":"Hoofdstuk 5: Is er werk voor jou?","jaar-3/mavo/hoofdstuk-4-ben-je-verzekerd":"Hoofdstuk 4: Kies je voor zekerheid?","jaar-3/mavo/se-1":"SE H1 + H3","jaar-3/mavo/hoofdstuk-1-hoe-groot-is-jouw-welvaart":"Hoofdstuk 1: Hoe welvarend ben jij?","jaar-4/se4":"SE H3 + H4","jaar-4/se-h1-h2-h8":"SE H1 + H2","jaar-4/se-h5-en-h6":"SE H5 + H6 + H7 (3 mavo)","jaar-2/mavo/kopie-van-hoofdstuk-1":"Hoofdstuk 1 · lesstof en PowerPoints"};
 
 var esc=function(t){return String(t).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});};
 var $=function(id){return document.getElementById(id);};

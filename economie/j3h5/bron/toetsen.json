@@ -1,0 +1,884 @@
+{
+ "blokken": {
+  "mc_a": [
+   {
+    "v": "Jesse werkt op zaterdag in een fietsenwinkel. Hij vindt het vooral leuk om klanten te helpen. Welk arbeidsmotief is dat?",
+    "o": [
+     "Een hoger minimumloon",
+     "Regelmaat in je leven",
+     "Contact met andere mensen",
+     "Sparen voor een scooter"
+    ],
+    "j": 2,
+    "u": "Werken is meer dan geld verdienen."
+   },
+   {
+    "v": "In de cao van de bouw staat een loonsverhoging. Voor wie geldt die?",
+    "o": [
+     "Voor iedereen in de bouw",
+     "Voor één bouwbedrijf",
+     "Voor alle werknemers",
+     "Voor alle vakbondsleden"
+    ],
+    "j": 0,
+    "u": "Een cao geldt voor een hele bedrijfstak."
+   },
+   {
+    "v": "Wat gaat er van het brutoloon af?",
+    "o": [
+     "Vakantiegeld en dividend",
+     "Loonbelasting en premies",
+     "De kosten van de vakbond",
+     "De winst van de werkgever"
+    ],
+    "j": 1,
+    "u": "Wat overblijft is het nettoloon."
+   },
+   {
+    "v": "Aan welke uitkering betaal je mee met de sociale premies?",
+    "o": [
+     "De AOW",
+     "De zorgtoeslag",
+     "De huurtoeslag",
+     "Het dividend"
+    ],
+    "j": 0,
+    "u": "Ook uitkeringen bij werkloosheid en ziekte."
+   },
+   {
+    "v": "Een loodgieter repareert een kraan en vraagt contant geld zonder bon. Wat voor werk is dat?",
+    "o": [
+     "Wit werk",
+     "Flexibel werk",
+     "Grijs werk",
+     "Zwart werk"
+    ],
+    "j": 3,
+    "u": "Er wordt geen belasting en premie betaald."
+   },
+   {
+    "v": "Een bedrijf verdeelt het werk: de een verkoopt, de ander doet de administratie. Hoe heet dat?",
+    "o": [
+     "Werkgelegenheid",
+     "Arbeidsparticipatie",
+     "Loondienst",
+     "Arbeidsverdeling"
+    ],
+    "j": 3,
+    "u": "Door de verdeling specialiseert iedereen zich."
+   },
+   {
+    "v": "Noah en Lina beginnen samen een bloemenwinkel. Zij zijn allebei eigenaar en hebben geen aandelen. Welke vorm is dat?",
+    "o": [
+     "Eenmanszaak",
+     "Vof",
+     "Nv",
+     "Bv"
+    ],
+    "j": 1,
+    "u": "Een vof heeft twee of meer eigenaren, de vennoten."
+   },
+   {
+    "v": "Van welk bedrijf kun je aandelen kopen op de beurs?",
+    "o": [
+     "Een nv",
+     "Een bv",
+     "Een eenmanszaak",
+     "Een vof"
+    ],
+    "j": 0,
+    "u": "Aandelen van een nv zijn vrij te koop."
+   },
+   {
+    "v": "Een bouwbedrijf plaatst tien vacatures. Waar hoort dat bij?",
+    "o": [
+     "Het aanbod van arbeid",
+     "De beroepsbevolking",
+     "De werkloosheid",
+     "De vraag naar arbeid"
+    ],
+    "j": 3,
+    "u": "Werkgevers vragen arbeid."
+   },
+   {
+    "v": "Wie hoort níét bij de beroepsbevolking?",
+    "o": [
+     "Een kok van 30 met een vaste baan",
+     "Een zzp'er van 45 met weinig klussen",
+     "Een scholier van 16 die geen werk zoekt",
+     "Een werkloze van 50 die solliciteert"
+    ],
+    "j": 2,
+    "u": "Je moet werken of werk zoeken."
+   },
+   {
+    "v": "Een oproepkracht wordt in een rustige maand niet opgeroepen. Welk nadeel van flexibel werk zie je hier?",
+    "o": [
+     "Geen recht op gelijke behandeling",
+     "Geen contact met de werkgever",
+     "Geen zekerheid over het inkomen",
+     "Geen kans op een andere baan"
+    ],
+    "j": 2,
+    "u": "Geen uren betekent geen loon."
+   },
+   {
+    "v": "Wat is een taak van het UWV?",
+    "o": [
+     "Bepalen wie er bij een bedrijf ontslagen wordt",
+     "Beoordelen of iemand een WW-uitkering krijgt",
+     "Afspraken maken over de lonen in een cao",
+     "Aandelen uitgeven voor startende bedrijven"
+    ],
+    "j": 1,
+    "u": "Het UWV helpt ook bij het zoeken naar werk."
+   }
+  ],
+  "rek_a": [
+   {
+    "nr": 1,
+    "titel": "Goed of fout?",
+    "tekst": "",
+    "p": 5,
+    "delen": [
+     {
+      "id": "",
+      "v": "Goed of fout?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Het nettoloon is hoger dan het brutoloon."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Vrijwilligerswerk is grijs werk."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "De eigenaar van een eenmanszaak mag personeel hebben."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "De werkgelegenheid is het aanbod van arbeid."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Bij structurele werkloosheid komen de banen niet terug."
+       }
+      ],
+      "uitw": [
+       "Het nettoloon is lager: de belasting en premies zijn eraf.",
+       "De werkgelegenheid is de vraag naar arbeid."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 2,
+    "titel": "Wit, grijs of zwart?",
+    "tekst": "",
+    "p": 5,
+    "delen": [
+     {
+      "id": "",
+      "v": "Kies bij elk voorbeeld het soort werk.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Wit werk",
+         "Grijs werk",
+         "Zwart werk"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Amira werkt met een contract in een bakkerij"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Wit werk",
+         "Grijs werk",
+         "Zwart werk"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Tom traint gratis de jeugd van de hockeyclub"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Wit werk",
+         "Grijs werk",
+         "Zwart werk"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "Een tuinman krijgt contant geld en geeft dat niet op"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Wit werk",
+         "Grijs werk",
+         "Zwart werk"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Sanne doet thuis de was voor het gezin"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Wit werk",
+         "Grijs werk",
+         "Zwart werk"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "Een kapster knipt thuis klanten en betaalt geen belasting"
+       }
+      ],
+      "uitw": [
+       "Wit: geregistreerd en betaald. Grijs: onbetaald en toegestaan. Zwart: betaald zonder belasting en premies, dus verboden."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 3,
+    "titel": "Het loon van Nora",
+    "tekst": "Nora is verkoper. Haar brutoloon is €2.650,00 per maand. Zij werkt 38 uur per week. Aan loonbelasting en premies wordt samen 32% van het brutoloon ingehouden.",
+    "p": 5,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken hoeveel euro er per maand wordt ingehouden.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         848
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Inhoudingen"
+       }
+      ],
+      "uitw": [
+       "(percentage : 100) × brutoloon = (32 : 100) × 2.650 = €848,00"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken het nettoloon per maand.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         1802
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Nettoloon"
+       }
+      ],
+      "uitw": [
+       "brutoloon − inhoudingen = 2.650 − 848 = €1.802,00"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Bereken het brutoloon per week.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         611.54
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Weekloon"
+       }
+      ],
+      "uitw": [
+       "(maandloon × 12) : 52 = (2.650 × 12) : 52 = €611,54"
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Bereken het bruto-uurloon. Reken verder met je antwoord bij c.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         16.09
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.011,
+        "label": "Uurloon"
+       }
+      ],
+      "uitw": [
+       "weekloon : aantal uren per week = 611,54 : 38 = €16,09"
+      ]
+     },
+     {
+      "id": "e",
+      "v": "Nora gaat 24 uur per week werken. Bereken haar nieuwe brutoloon per maand.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         1673.68
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.011,
+        "label": "Loon bij deeltijd"
+       }
+      ],
+      "uitw": [
+       "(voltijdloon : uren voltijd) × uren deeltijd = (2.650 : 38) × 24 = €1.673,68"
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 4,
+    "titel": "Welke sector?",
+    "tekst": "",
+    "p": 6,
+    "delen": [
+     {
+      "id": "",
+      "v": "Kies bij elk bedrijf de sector.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Primaire sector",
+         "Secundaire sector",
+         "Tertiaire sector",
+         "Quartaire sector"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Een tulpenkweker"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Primaire sector",
+         "Secundaire sector",
+         "Tertiaire sector",
+         "Quartaire sector"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Een fietsenfabriek"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Primaire sector",
+         "Secundaire sector",
+         "Tertiaire sector",
+         "Quartaire sector"
+        ],
+        "j": 3,
+        "p": 1,
+        "label": "Een gemeentehuis"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Primaire sector",
+         "Secundaire sector",
+         "Tertiaire sector",
+         "Quartaire sector"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "Een reisbureau"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Primaire sector",
+         "Secundaire sector",
+         "Tertiaire sector",
+         "Quartaire sector"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Een zoutwinning"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Primaire sector",
+         "Secundaire sector",
+         "Tertiaire sector",
+         "Quartaire sector"
+        ],
+        "j": 3,
+        "p": 1,
+        "label": "Een huisartsenpraktijk"
+       }
+      ],
+      "uitw": [
+       "Primair: landbouw, visserij en delfstoffen. Secundair: industrie. Tertiair: commerciële diensten. Quartair: diensten zonder winstdoel."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 5,
+    "titel": "Een eigen bedrijf",
+    "tekst": "",
+    "p": 7,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Kies bij elke zin de ondernemingsvorm.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Eenmanszaak",
+         "Vof",
+         "Bv",
+         "Nv"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Altijd één eigenaar"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Eenmanszaak",
+         "Vof",
+         "Bv",
+         "Nv"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "De eigenaren heten vennoten"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Eenmanszaak",
+         "Vof",
+         "Bv",
+         "Nv"
+        ],
+        "j": 3,
+        "p": 1,
+        "label": "Iedereen kan aandelen kopen op de beurs"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Eenmanszaak",
+         "Vof",
+         "Bv",
+         "Nv"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "Aandeelhouders, maar de aandelen zijn niet vrij te koop"
+       }
+      ],
+      "uitw": [
+       "Eenmanszaak: één eigenaar. Vof: vennoten. Bv: aandelen niet vrij te koop. Nv: aandelen op de beurs."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Yara en Daan hebben een vof. Zij denken erover om er een bv van te maken. Leg uit welk risico zij in een vof lopen en in een bv niet.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "5b",
+        "p": 2,
+        "label": "Vof of bv",
+        "model": "In een vof moeten zij de schulden van het bedrijf ook met hun privégeld betalen. In een bv hoeft dat niet: daar kunnen zij alleen het geld verliezen dat in hun aandelen zit.",
+        "g": [
+         {
+          "t": "in een vof betaal je schulden van het bedrijf (ook) met privégeld",
+          "p": 1
+         },
+         {
+          "t": "in een bv loopt je privégeld geen risico / je verliest hoogstens je aandelen",
+          "p": 1
+         }
+        ],
+        "v": "Yara en Daan hebben een vof. Zij denken erover om er een bv van te maken. Leg uit welk risico zij in een vof lopen en in een bv niet.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "In een vof ben je met je privégeld aansprakelijk, in een bv niet."
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Een nv keert €0,35 dividend per aandeel uit. Mees heeft 240 aandelen. Bereken hoeveel dividend Mees krijgt.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         84
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Dividend"
+       }
+      ],
+      "uitw": [
+       "aantal aandelen × dividend per aandeel = 240 × 0,35 = €84,00"
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 6,
+    "titel": "De arbeidsmarkt van Waterstad",
+    "tekst": "In Waterstad wonen 64.000 mensen van 15 jaar tot de pensioenleeftijd. Daarvan werken er 44.800. Nog eens 3.200 mensen hebben geen baan en zoeken werk. De rest werkt niet en zoekt geen werk.",
+    "p": 4,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken de beroepsbevolking van Waterstad.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         48000
+        ],
+        "p": 1,
+        "eenh": "mensen",
+        "tol": 0.5,
+        "label": "Beroepsbevolking"
+       }
+      ],
+      "uitw": [
+       "werkenden + werklozen = 44.800 + 3.200 = 48.000 mensen"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken de arbeidsparticipatie.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         75
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.05,
+        "label": "Arbeidsparticipatie"
+       }
+      ],
+      "uitw": [
+       "(beroepsbevolking : bevolking van 15 jaar tot pensioenleeftijd) × 100 = (48.000 : 64.000) × 100 = 75,0%"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Bereken hoeveel procent van de beroepsbevolking werkloos is.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         6.7
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.05,
+        "label": "Werkloosheid"
+       }
+      ],
+      "uitw": [
+       "(werklozen : beroepsbevolking) × 100 = (3.200 : 48.000) × 100 = 6,7%"
+      ]
+     },
+     {
+      "id": "d",
+      "v": "In Waterstad opent een groot distributiecentrum. Wat gebeurt er met de werkgelegenheid?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Stijgt",
+         "Daalt",
+         "Blijft gelijk"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "De werkgelegenheid"
+       }
+      ],
+      "uitw": [
+       "Er komen banen bij: de vraag naar arbeid stijgt."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 7,
+    "titel": "Welke werkloosheid?",
+    "tekst": "",
+    "p": 8,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Kies bij elk voorbeeld de soort werkloosheid.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Conjunctureel",
+         "Structureel",
+         "Frictie",
+         "Seizoen",
+         "Regionaal"
+        ],
+        "j": 3,
+        "p": 1,
+        "label": "Een skileraar heeft in de zomer geen werk"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Conjunctureel",
+         "Structureel",
+         "Frictie",
+         "Seizoen",
+         "Regionaal"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Kaartjesverkopers op het station zijn vervangen door automaten"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Conjunctureel",
+         "Structureel",
+         "Frictie",
+         "Seizoen",
+         "Regionaal"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Door een crisis gaan mensen minder uit eten en ontslaat een restaurant personeel"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Conjunctureel",
+         "Structureel",
+         "Frictie",
+         "Seizoen",
+         "Regionaal"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "Lisa heeft ontslag genomen en begint over drie weken bij haar nieuwe baan"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Conjunctureel",
+         "Structureel",
+         "Frictie",
+         "Seizoen",
+         "Regionaal"
+        ],
+        "j": 4,
+        "p": 1,
+        "label": "In één streek sluit de grootste werkgever, daar is de werkloosheid nu het hoogst van het land"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Conjunctureel",
+         "Structureel",
+         "Frictie",
+         "Seizoen",
+         "Regionaal"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Een kledingfabriek verhuist naar een lagelonenland"
+       }
+      ],
+      "uitw": [
+       "Seizoen: werk in een deel van het jaar. Structureel: het werk verdwijnt blijvend. Conjunctureel: mensen kopen minder. Frictie: kort tussen twee banen. Regionaal: hoger in één gebied."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Leg het verschil uit tussen conjuncturele en structurele werkloosheid.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "7b",
+        "p": 2,
+        "label": "Conjunctureel en structureel",
+        "model": "Conjuncturele werkloosheid ontstaat doordat mensen minder kopen. Die is tijdelijk: als het beter gaat, komen de banen terug. Bij structurele werkloosheid verdwijnt of verandert het werk blijvend. Die banen komen niet terug.",
+        "g": [
+         {
+          "t": "conjunctureel: mensen kopen minder / tijdelijk, de banen komen terug",
+          "p": 1
+         },
+         {
+          "t": "structureel: het werk verdwijnt blijvend / de banen komen niet terug",
+          "p": 1
+         }
+        ],
+        "v": "Leg het verschil uit tussen conjuncturele en structurele werkloosheid.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Conjunctureel is tijdelijk, structureel is blijvend."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 8,
+    "titel": "Bram wordt werkloos",
+    "tekst": "Bram wordt ontslagen. Zijn laatste loon was €2.240,00 per maand. De WW-uitkering is de eerste twee maanden 75% van het laatste loon. Daarna is het 70%.",
+    "p": 4,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken de uitkering van Bram in de eerste maand.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         1680
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Uitkering eerste maand"
+       }
+      ],
+      "uitw": [
+       "(75 : 100) × 2.240 = €1.680,00"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken de uitkering van Bram in de derde maand.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         1568
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Uitkering derde maand"
+       }
+      ],
+      "uitw": [
+       "(70 : 100) × 2.240 = €1.568,00"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Noem de twee dingen die het UWV voor Bram doet.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "8c",
+        "p": 2,
+        "label": "Het UWV",
+        "model": "Het UWV helpt Bram bij het zoeken naar een nieuwe baan. Het UWV beoordeelt ook of Bram recht heeft op een WW-uitkering.",
+        "g": [
+         {
+          "t": "helpen bij het zoeken naar werk / een nieuwe baan",
+          "p": 1
+         },
+         {
+          "t": "beoordelen of hij recht heeft op een WW-uitkering",
+          "p": 1
+         }
+        ],
+        "v": "Noem de twee dingen die het UWV voor Bram doet.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Helpen zoeken naar werk en de WW-uitkering beoordelen."
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "toetsen": {
+  "t1": {
+   "n": 1,
+   "t": "oefentoets A",
+   "sub": "Hoofdstuk 5",
+   "min": 60,
+   "mc": "mc_a",
+   "open": null,
+   "rek": "rek_a"
+  }
+ },
+ "VERS": [
+  {
+   "n": 1,
+   "min": 60,
+   "pts": 56
+  }
+ ]
+}
