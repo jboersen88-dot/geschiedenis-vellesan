@@ -199,7 +199,10 @@
       card.appendChild(el("h2", { id: "nx", text: "Volgende stop: " + (ni + 1) + ". " + next.naam }));
       if (next.loop) card.appendChild(el("p", { text: next.loop }));
       if (isOpen(next)) card.appendChild(el("button", { class: "btn big block", type: "button", onclick: function () { go("#/stop/" + (ni + 1)); } }, "Ik ben er!"));
-      else card.appendChild(codeActions(ni));
+      else {
+        card.appendChild(el("button", { class: "btn alt block", type: "button", style: "margin-bottom:10px", onclick: function () { go("#/stop/" + (ni + 1)); } }, "▶ Bekijk het filmpje van deze plek"));
+        card.appendChild(codeActions(ni));
+      }
       nodes.push(card);
     } else if (stops.length) {
       nodes.push(el("section", { class: "card next-card" }, el("h2", { text: "Alle stops gedaan!" }),
@@ -219,7 +222,7 @@
       ul.appendChild(el("li", { class: isDone(s) ? "done" : idx === ni ? "nx" : "" },
         el("button", { type: "button", onclick: function () { go("#/stop/" + (idx + 1)); } },
           el("span", { class: "num", "aria-hidden": "true", text: isDone(s) ? "✓" : String(idx + 1) }),
-          el("span", { class: "txt" }, el("span", { text: (idx + 1) + ". " + s.naam }), el("span", { class: "meta", text: floorName(s.etage) + (isDone(s) ? " · klaar" : !isOpen(s) ? " · QR nog niet gevonden" : "") })))));
+          el("span", { class: "txt" }, el("span", { text: (idx + 1) + ". " + s.naam }), el("span", { class: "meta", text: floorName(s.etage) + (isDone(s) ? " · klaar" : !isOpen(s) ? " · opdrachten op slot" : "") })))));
     });
     nodes.push(el("h2", { text: "Alle stops" }), ul);
     if (bonus.length) {
@@ -258,15 +261,26 @@
   }
   function renderStop(idx) {
     var s = stops[idx];
-    if (!isOpen(s)) { renderLock(idx); return; }
+    var open = isOpen(s);
     var nodes = [bannerEl(takeBanner()),
       el("button", { class: "btn small back", type: "button", onclick: function () { go("#/kaart"); } }, "← Terug naar de kaart"),
       el("div", { class: "stophead" }, el("div", { class: "num", "aria-hidden": "true", text: String(idx + 1) }),
         el("h1", { text: s.naam }))
     ];
     if (s.clip) nodes.push(video(s.clip, s.poster, "Filmpje over " + s.naam));
+    if (!open && s.loop) nodes.push(el("p", { class: "hint", text: "Zo kom je er: " + s.loop }));
     if (s.uitleg) nodes.push(el("p", { text: s.uitleg }));
     var ops = s.opdrachten || [];
+    if (!open) {
+      nodes.push(el("div", { class: "card lockcard" },
+        el("div", { class: "lockicon", "aria-hidden": "true", text: "🔒" }),
+        el("h2", { text: "De opdrachten zitten nog op slot" }),
+        el("p", { text: "Loop naar deze plek en zoek de QR-poster. Scan hem, dan gaan de opdrachten open." }),
+        codeActions(idx)));
+      nodes.push(el("button", { class: "btn small back", type: "button", style: "margin-top:16px", onclick: function () { go("#/kaart"); } }, "← Terug naar de kaart"));
+      show(nodes);
+      return;
+    }
     if (ops.length) {
       nodes.push(el("h2", { text: "Kies je opdrachten" }), el("p", { class: "muted", text: "Je mag zelf kiezen welke je doet. Elke opdracht levert een ster op!" }));
       ops.forEach(function (o, i) { nodes.push(opdracht(s, o, i)); });
