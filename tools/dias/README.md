@@ -71,3 +71,13 @@ Zet de bestanden als `NN-S.jpg` in `slides/H4/` en print de regel voor `STEPS`. 
 **Economie jaar 3 H1 en H2** (`economie/j3h1/slides/1.x`, `economie/j3h2/slides/2.x`): bestandsnamen L11 … L24 in `slides-export`; alles exporteerde in één keer. Dia's over de lesplanning (Deze les, regels, huiswerk) zijn na `plaats` weggehaald en de rest is opnieuw genummerd (lijst `weg` in `economie/bouw-pagina.py`).
 
 **Economie jaar 2 H1, GL-versie** (`economie/j2h1gl/slides/1.x`): bestandsnamen M11 … M14s in `slides-export`; alles exporteerde in één keer. Dia 1 van 1.2 ("Deze les") is weggehaald.
+
+## Zonder PowerPoint: `lo.py` (LibreOffice)
+
+Voor economie jaar 4 mavo (H5, H6) en 3 mavo H7 (18 nov 2026) zijn de dia's in de cloud gemaakt, zonder Mac:
+
+```bash
+python3 -I tools/dias/lo.py "pad/naar/les.pptx" economie/j4h5/slides/5.4 weg=6,8
+```
+
+`lo.py` doet alles in één keer (stappen-pptx, PDF met `soffice`, JPG's met `pdftoppm`, plaatsen) en print het aantal dia's en de klikstappen voor `deck.json` en `steps.json`. `weg=` laat dia's weg. Nearpod-versies waarin dezelfde dia steeds terugkomt met een regel erbij worden één dia met stappen. LibreOffice vervangt lettertypen die het niet heeft (Century Gothic): de dia's zijn goed leesbaar, maar een export met PowerPoint op de Mac is exacter.

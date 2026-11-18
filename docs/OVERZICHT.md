@@ -87,6 +87,10 @@ Alles wordt gestuurd vanuit `economie/economie.js` en `economie/data/paginas.jso
 | Jaar 3 mavo H0 rekenvaardigheden | `j3h0` | formulepagina | nee | nee | nee |
 | Jaar 3 mavo H1 en H2 | `j3h1`, `j3h2` | ja | nee (oefenstof als band) | nee | nee |
 | Jaar 3 havo/vwo H2 "De rol van geld" | `j3vh2` | ja | ja | ja | 2 |
+| Jaar 4 mavo H5 "Kan de overheid dat regelen?" | `j4h5` | ja | ja | nee | 1 |
+| Jaar 4 mavo H6 "De overheid en ons inkomen" | `j4h6` | ja | ja | nee | 1 |
+| Jaar 3 mavo H7 "De overheid voor ons allemaal" | `j3h7` | ja | ja | nee | 1 |
+| Jaar 4 mavo SE H5 + H6 + H7 (SE-pagina, `SE` in `economie.js`) | `se56` | n.v.t. | n.v.t. | nee | 1 (oefen-SE) |
 | Jaar 4 SE3 (H1 en H2) | `se3` | eigen `app.html` zoals boekje 1 | in dezelfde app | nee | 4, plus toets op maat |
 
 Alle andere hoofdstukken (jaar 2 H3 tot en met H6, jaar 3 mavo H3 tot en met H8, jaar 4 H1 tot en met H8) staan er in de overgangsvorm: de inhoud van de oude Google-pagina in de nieuwe opmaak, soms met een oude lesapp uit `economie/apps/`. De docent wil de oude Google-opzet helemaal weg hebben (besluit van 10 november). Die hoofdstukken moeten dus nog naar de opzet van hoofdstuk 3.

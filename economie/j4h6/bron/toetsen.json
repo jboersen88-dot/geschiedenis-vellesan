@@ -1,0 +1,604 @@
+{
+ "blokken": {
+  "mc_a": [
+   {
+    "v": "Op de loonstrook van Kim staat €412 loonheffing. Aan wie draagt haar werkgever dat bedrag af?",
+    "o": [
+     "De gemeente",
+     "Het pensioenfonds",
+     "De Belastingdienst",
+     "De vakbond"
+    ],
+    "j": 2,
+    "u": "De werkgever draagt de loonheffing af aan de fiscus."
+   },
+   {
+    "v": "Welke premie zit niet in de loonheffing?",
+    "o": [
+     "Premie werknemersverzekeringen",
+     "Premie voor de AOW",
+     "Premie volksverzekeringen",
+     "Loonbelasting"
+    ],
+    "j": 0,
+    "u": "Die premie betaalt de werkgever zelf."
+   },
+   {
+    "v": "Daan krijgt een brief waarin staat hoeveel inkomstenbelasting hij moet betalen. Hoe heet die brief?",
+    "o": [
+     "Miljoenennota",
+     "Loonstrook",
+     "Aangifte",
+     "Aanslag"
+    ],
+    "j": 3,
+    "u": "Na je aangifte stuurt de Belastingdienst een aanslag."
+   },
+   {
+    "v": "Lotte koopt een huis. Wat verandert er in haar aangifte?",
+    "o": [
+     "Ze betaalt voortaan bpm",
+     "Ze telt een bijtelling op",
+     "Ze telt het eigenwoningforfait op",
+     "Ze krijgt een arbeidskorting"
+    ],
+    "j": 2,
+    "u": "Daar staat tegenover dat ze de hypotheekrente mag aftrekken."
+   },
+   {
+    "v": "Wat gebeurt er met de belasting als je meer aftrekposten hebt?",
+    "o": [
+     "Je betaalt evenveel belasting",
+     "Je betaalt minder belasting",
+     "Je betaalt meer belasting",
+     "Je betaalt geen belasting meer"
+    ],
+    "j": 1,
+    "u": "Aftrekposten maken je belastbaar inkomen lager."
+   },
+   {
+    "v": "Iemand verdient €40.000. Hij krijgt €1.000 loonsverhoging. In welke schijf valt die verhoging?",
+    "o": [
+     "Schijf 2",
+     "Schijf 1",
+     "In geen van beide",
+     "In beide schijven"
+    ],
+    "j": 1,
+    "u": "Schijf 1 loopt tot €68.508."
+   },
+   {
+    "v": "Waarom is het Nederlandse tarief progressief?",
+    "o": [
+     "Iedereen betaalt hetzelfde percentage",
+     "Hoge inkomens betalen geen belasting",
+     "Schijf 1 heeft een hoger percentage",
+     "Schijf 2 heeft een hoger percentage"
+    ],
+    "j": 3,
+    "u": "Hoe hoger het inkomen, hoe hoger het percentage."
+   },
+   {
+    "v": "Sara heeft €20.000 spaargeld. Het heffingsvrij vermogen is €50.000. Wat betaalt zij in box 3?",
+    "o": [
+     "31% van €50.000",
+     "1,9% van €20.000",
+     "Niets",
+     "31% van €20.000"
+    ],
+    "j": 2,
+    "u": "Haar vermogen is lager dan het heffingsvrij vermogen."
+   },
+   {
+    "v": "Wat gaat er als laatste van de berekende belasting af?",
+    "o": [
+     "Het eigenwoningforfait",
+     "De bijtelling",
+     "De heffingskortingen",
+     "De aftrekposten"
+    ],
+    "j": 2,
+    "u": "Box 1 + box 3 − heffingskortingen."
+   },
+   {
+    "v": "Het aantal AOW'ers stijgt sneller dan het aantal werkenden. Wat gebeurt er met de i/a-ratio?",
+    "o": [
+     "Die stijgt",
+     "Die wordt nul",
+     "Die daalt",
+     "Die blijft gelijk"
+    ],
+    "j": 0,
+    "u": "Meer inactieven per actieve."
+   },
+   {
+    "v": "De overheid verhoogt alleen het tarief van schijf 2. Wat is het gevolg?",
+    "o": [
+     "Nivellering",
+     "Vergrijzing",
+     "Denivellering",
+     "Privatisering"
+    ],
+    "j": 0,
+    "u": "Hoge inkomens gaan meer betalen: de verschillen worden kleiner."
+   },
+   {
+    "v": "Iemand verzwijgt met opzet inkomsten bij zijn aangifte. Hoe heet dat?",
+    "o": [
+     "Belastingontduiking",
+     "Naheffing",
+     "Heffingskorting",
+     "Belastingaftrek"
+    ],
+    "j": 0,
+    "u": "Dat is strafbaar."
+   }
+  ],
+  "rek_a": [
+   {
+    "nr": 1,
+    "titel": "Goed of fout?",
+    "tekst": "",
+    "p": 5,
+    "delen": [
+     {
+      "id": "",
+      "v": "Goed of fout?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Loonheffing is inkomstenbelasting die je vooruit betaalt."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "De bijtelling is een aftrekpost."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Bij een proportioneel tarief betaalt iedereen hetzelfde percentage."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Bij nivellering worden de verschillen tussen inkomens in verhouding groter."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "De motorrijtuigenbelasting betaal je voor het bezit van een auto."
+       }
+      ],
+      "uitw": [
+       "De bijtelling tel je bij je inkomen op.",
+       "Bij nivellering worden de verschillen kleiner."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 2,
+    "titel": "De aangifte van Yara",
+    "tekst": "Yara verdient €38.500 loon. Eigenwoningforfait: €1.300. Bijtelling auto van de zaak: €9.000. Hypotheekrente: €5.600. Studiekosten: €900.",
+    "p": 5,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Schrijf eerst de formule op. Bereken daarna het belastbaar inkomen van Yara.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         42300
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.5,
+        "label": "Belastbaar inkomen"
+       }
+      ],
+      "uitw": [
+       "Belastbaar inkomen = inkomsten + eigenwoningforfait + bijtelling − aftrekposten",
+       "38.500 + 1.300 + 9.000 = 48.800",
+       "Aftrekposten: 5.600 + 900 = 6.500",
+       "48.800 − 6.500 = €42.300"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken de belasting in box 1. Yara's hele inkomen valt in schijf 1 (37,1%). Rond naar beneden af op hele euro's.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         15693
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.5,
+        "label": "Belasting box 1"
+       }
+      ],
+      "uitw": [
+       "(37,1 : 100) × 42.300 = 15.693,30 → €15.693"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Yara heeft €2.900 aan heffingskortingen en betaalt niets in box 3. Bereken de verschuldigde inkomstenbelasting.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         12793
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.5,
+        "label": "Te betalen"
+       }
+      ],
+      "uitw": [
+       "15.693 + 0 − 2.900 = €12.793"
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Op het loon van Yara is dit jaar €13.400 loonheffing ingehouden. Krijgt ze geld terug of moet ze bijbetalen? Bereken ook het bedrag.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Krijgt geld terug",
+         "Moet bijbetalen"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Yara"
+       },
+       {
+        "type": "num",
+        "ans": [
+         607
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.5,
+        "label": "Bedrag"
+       }
+      ],
+      "uitw": [
+       "Ze heeft €13.400 betaald en moest €12.793 betalen. 13.400 − 12.793 = €607 terug."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 3,
+    "titel": "Een hoog inkomen",
+    "tekst": "Het belastbaar inkomen van meneer De Wit is €80.000. Schijf 1 loopt tot €68.508 (37,1%). Daarboven geldt schijf 2 (49,5%).",
+    "p": 4,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Hoeveel euro van het inkomen valt in schijf 2?",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         11492
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.5,
+        "label": "In schijf 2"
+       }
+      ],
+      "uitw": [
+       "80.000 − 68.508 = €11.492"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken de belasting in schijf 1 en in schijf 2. Rond elke schijf naar beneden af op hele euro's.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         25416
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.5,
+        "label": "Schijf 1"
+       },
+       {
+        "type": "num",
+        "ans": [
+         5688
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.5,
+        "label": "Schijf 2"
+       }
+      ],
+      "uitw": [
+       "(37,1 : 100) × 68.508 = 25.416,47 → €25.416",
+       "(49,5 : 100) × 11.492 = 5.688,54 → €5.688"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Bereken de totale belasting in box 1.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         31104
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.5,
+        "label": "Belasting box 1"
+       }
+      ],
+      "uitw": [
+       "25.416 + 5.688 = €31.104"
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 4,
+    "titel": "Spaargeld in box 3",
+    "tekst": "Mevrouw Bakker heeft een vermogen van €90.000. Het heffingsvrij vermogen is €50.000. Het fictief rendement is 1,9% en de belasting is 31%.",
+    "p": 3,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken het belastbaar vermogen.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         40000
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.5,
+        "label": "Belastbaar vermogen"
+       }
+      ],
+      "uitw": [
+       "90.000 − 50.000 = €40.000"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken het fictief rendement.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         760
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.5,
+        "label": "Fictief rendement"
+       }
+      ],
+      "uitw": [
+       "(1,9 : 100) × 40.000 = €760"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Bereken de belasting in box 3. Rond naar beneden af op hele euro's.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         235
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.5,
+        "label": "Belasting box 3"
+       }
+      ],
+      "uitw": [
+       "(31 : 100) × 760 = 235,60 → €235"
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 5,
+    "titel": "Eerlijk verdeeld?",
+    "tekst": "De overheid geeft iedereen €120 per maand extra. Een laag inkomen gaat van €2.000 naar €2.120. Een hoog inkomen gaat van €6.000 naar €6.120.",
+    "p": 9,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken met hoeveel procent elk inkomen stijgt. Rond af op 1 decimaal.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         6
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.05,
+        "label": "Laag inkomen"
+       },
+       {
+        "type": "num",
+        "ans": [
+         2
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.05,
+        "label": "Hoog inkomen"
+       }
+      ],
+      "uitw": [
+       "(nieuw − oud) : oud × 100",
+       "(2.120 − 2.000) : 2.000 × 100 = 6,0%",
+       "(6.120 − 6.000) : 6.000 × 100 = 2,0%"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Is deze maatregel nivellerend of denivellerend? Leg uit met de procenten.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Nivellerend",
+         "Denivellerend"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "De maatregel is"
+       },
+       {
+        "type": "open",
+        "nr": "5b",
+        "p": 1,
+        "label": "Uitleg",
+        "model": "Nivellerend: het lage inkomen stijgt in procenten meer (6%) dan het hoge inkomen (2%). De verschillen worden in verhouding kleiner.",
+        "g": [
+         {
+          "t": "het lage inkomen stijgt in procenten meer dan het hoge inkomen",
+          "p": 1
+         }
+        ],
+        "v": "Is deze maatregel nivellerend of denivellerend? Leg uit met de procenten.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Lage inkomens gaan er in procenten meer op vooruit: nivellering."
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Kies bij elke belasting het juiste beginsel.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Draagkrachtbeginsel",
+         "Profijtbeginsel"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Inkomstenbelasting met een progressief tarief"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Draagkrachtbeginsel",
+         "Profijtbeginsel"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Motorrijtuigenbelasting"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Draagkrachtbeginsel",
+         "Profijtbeginsel"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Extra heffingskorting voor AOW'ers"
+       }
+      ],
+      "uitw": [
+       "Draagkracht: wie meer kan betalen, betaalt meer. Profijt: je betaalt voor wat je gebruikt."
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Leg uit waarom de overheid de AOW-leeftijd heeft verhoogd. Gebruik het woord vergrijzing.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "5d",
+        "p": 2,
+        "label": "AOW-leeftijd",
+        "model": "Door de vergrijzing krijgen steeds meer mensen AOW, terwijl de actieven de premies betalen. Door de AOW-leeftijd te verhogen blijft de AOW betaalbaar.",
+        "g": [
+         {
+          "t": "door vergrijzing hebben steeds meer mensen recht op AOW",
+          "p": 1
+         },
+         {
+          "t": "een hogere AOW-leeftijd houdt de AOW betaalbaar",
+          "p": 1
+         }
+        ],
+        "v": "Leg uit waarom de overheid de AOW-leeftijd heeft verhoogd. Gebruik het woord vergrijzing.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Meer ouderen, dus meer uitkeringen. Later met pensioen houdt het betaalbaar."
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "toetsen": {
+  "t1": {
+   "n": 1,
+   "t": "oefentoets A",
+   "sub": "Hoofdstuk 6",
+   "min": 50,
+   "mc": "mc_a",
+   "open": null,
+   "rek": "rek_a"
+  }
+ },
+ "VERS": [
+  {
+   "n": 1,
+   "min": 50,
+   "pts": 38
+  }
+ ]
+}

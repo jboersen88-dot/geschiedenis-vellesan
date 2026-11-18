@@ -1,0 +1,1251 @@
+{
+ "KEY": "h7v3-app-v1",
+ "PARS": [
+  {
+   "id": "7.1",
+   "t": "Wat doet de overheid?",
+   "c": "var(--p1)",
+   "file": "",
+   "x": [],
+   "sum": "Het Rijk, de provincies, de gemeenten en de waterschappen, de regering en de Eerste en Tweede Kamer, en hoe de overheid ons gedrag stuurt.",
+   "imgs": [
+    [
+     "overheid",
+     "Het bestuur van ons land"
+    ],
+    [
+     "sturen",
+     "Subsidie of extra belasting: de overheid stuurt gedrag"
+    ]
+   ],
+   "q": [
+    "Er zijn drie niveaus van de overheid. Noem ze alle drie.",
+    "Noem bij elk niveau twee taken.",
+    "Wat wordt er bedoeld met de regering?",
+    "Wie bedenkt nieuwe wetten? En wie keurt ze goed?",
+    "Wat doet de Eerste Kamer?",
+    "Wat doen de waterschappen?",
+    "Hoe kan de overheid gedrag aanmoedigen? En hoe ontmoedigen?",
+    "Waarom gaat de overheid kartelvorming tegen?",
+    "Wat is infrastructuur? Geef drie voorbeelden."
+   ]
+  },
+  {
+   "id": "7.2",
+   "t": "Sociale zekerheid",
+   "c": "var(--p2)",
+   "file": "",
+   "x": [],
+   "sum": "Het sociaal minimum, sociale verzekeringen en sociale voorzieningen, de WW en de Ziektewet, en de verzorgingsstaat.",
+   "imgs": [
+    [
+     "zekerheid",
+     "De sociale zekerheid: een vangnet voor iedereen"
+    ],
+    [
+     "uitkering",
+     "Geen werk meer: hoeveel WW krijg je?"
+    ]
+   ],
+   "q": [
+    "Wat wordt er bedoeld met het sociaal minimum?",
+    "De sociale zekerheid bestaat uit drie groepen. Noem ze alle drie.",
+    "Geef van elke groep twee voorbeelden.",
+    "Hoeveel procent van je loon krijg je in de WW?",
+    "Hoe lang krijg je maximaal WW? En wat gebeurt er daarna?",
+    "Krijg je WW als je op staande voet ontslagen bent?",
+    "Wat is het verschil tussen de Ziektewet en de WIA?",
+    "Waarom is Nederland een verzorgingsstaat?",
+    "Op welke twee manieren wordt de sociale zekerheid betaald?"
+   ]
+  },
+  {
+   "id": "7.3",
+   "t": "Burgers, bedrijven en de overheid",
+   "c": "var(--p3)",
+   "file": "",
+   "x": [],
+   "sum": "Collectieve goederen, de collectieve en de particuliere sector, de inkomsten van de gemeente en privatisering.",
+   "imgs": [
+    [
+     "sectoren",
+     "De collectieve en de particuliere sector"
+    ],
+    [
+     "gemeente",
+     "Waar haalt de gemeente haar geld vandaan?"
+    ]
+   ],
+   "q": [
+    "Wat zijn collectieve goederen?",
+    "Wie horen er bij de collectieve sector?",
+    "Noem drie redenen waarom de overheid voor collectieve goederen zorgt. Geef bij elke reden een voorbeeld.",
+    "Welke inkomsten heeft de gemeente? Noem er drie.",
+    "Noem drie verschillen tussen de collectieve en de particuliere sector.",
+    "Waarom is er in de collectieve sector weinig marktwerking?",
+    "Wat is privatisering?"
+   ]
+  },
+  {
+   "id": "7.4",
+   "t": "Hoe komt het Rijk rond?",
+   "c": "var(--p4)",
+   "file": "",
+   "x": [],
+   "sum": "De begroting van het Rijk, vier soorten inkomsten, de grootste uitgaven, begrotingstekort en staatsschuld, het draagkrachtbeginsel en het profijtbeginsel.",
+   "imgs": [
+    [
+     "begroting",
+     "De begroting: inkomsten en uitgaven van het Rijk"
+    ],
+    [
+     "tanken",
+     "Aan de pomp betaal je vooral belasting"
+    ]
+   ],
+   "q": [
+    "Welke vier soorten inkomsten heeft het Rijk?",
+    "Wat is het verschil tussen directe en indirecte belasting?",
+    "Wat zijn twee grote uitgaven van de overheid?",
+    "Wanneer is er een begrotingstekort?",
+    "Wat gebeurt er met de staatsschuld bij een begrotingstekort?",
+    "Waarom kost een hoge staatsschuld de overheid extra geld?",
+    "Wat is het draagkrachtbeginsel?",
+    "Wat is het profijtbeginsel? Geef een voorbeeld."
+   ]
+  }
+ ],
+ "GOALS": {
+  "7.1": [
+   "Ik kan de drie niveaus van de overheid noemen, met bij elk niveau twee taken.",
+   "Ik kan uitleggen wat de regering, de Tweede Kamer en de Eerste Kamer doen.",
+   "Ik weet wat de waterschappen doen.",
+   "Ik kan uitleggen hoe de overheid gedrag stuurt met subsidies, heffingen en accijns."
+  ],
+  "7.2": [
+   "Ik kan uitleggen wat het sociaal minimum is.",
+   "Ik ken de drie groepen van de sociale zekerheid, met voorbeelden.",
+   "Ik weet wanneer je WW krijgt, hoeveel en hoe lang.",
+   "Ik kan uitleggen waarom Nederland een verzorgingsstaat is."
+  ],
+  "7.3": [
+   "Ik kan uitleggen wat collectieve goederen zijn en waarom de overheid ze regelt.",
+   "Ik kan drie verschillen noemen tussen de collectieve en de particuliere sector.",
+   "Ik kan drie inkomsten van de gemeente noemen.",
+   "Ik kan uitleggen wat privatisering is."
+  ],
+  "7.4": [
+   "Ik kan de vier soorten inkomsten van het Rijk noemen.",
+   "Ik ken het verschil tussen directe en indirecte belasting.",
+   "Ik kan uitleggen wat een begrotingstekort doet met de staatsschuld.",
+   "Ik kan het draagkrachtbeginsel en het profijtbeginsel uitleggen."
+  ]
+ },
+ "CHK": [
+  [
+   "De drie niveaus van de overheid noemen, met taken",
+   "7.1",
+   "quiz"
+  ],
+  [
+   "Uitleggen wat de regering en de twee Kamers doen",
+   "7.1",
+   "quiz"
+  ],
+  [
+   "Uitleggen hoe de overheid gedrag stuurt",
+   "7.1",
+   "quiz"
+  ],
+  [
+   "Uitrekenen met hoeveel procent iets stijgt of daalt",
+   "7.1",
+   "reken",
+   "pct"
+  ],
+  [
+   "Sociale verzekeringen en sociale voorzieningen uit elkaar houden",
+   "7.2",
+   "quiz"
+  ],
+  [
+   "Een WW-uitkering uitrekenen",
+   "7.2",
+   "reken",
+   "ww"
+  ],
+  [
+   "Uitleggen wat de verzorgingsstaat is",
+   "7.2",
+   "quiz"
+  ],
+  [
+   "Collectieve en particuliere sector uit elkaar houden",
+   "7.3",
+   "quiz"
+  ],
+  [
+   "Uitrekenen hoeveel een percentage van een bedrag is",
+   "7.3",
+   "reken",
+   "procentvan"
+  ],
+  [
+   "Directe en indirecte belasting uit elkaar houden",
+   "7.4",
+   "quiz"
+  ],
+  [
+   "Uitrekenen of er een tekort of een overschot is",
+   "7.4",
+   "reken",
+   "saldo"
+  ],
+  [
+   "Uitrekenen hoeveel procent van een prijs belasting is",
+   "7.4",
+   "reken",
+   "deel"
+  ],
+  [
+   "Draagkrachtbeginsel en profijtbeginsel herkennen",
+   "7.4",
+   "quiz"
+  ]
+ ],
+ "MAT": {},
+ "VERS": [],
+ "FILMS": [
+  {
+   "par": "7.1",
+   "yt": "t5H3X8-dP4c",
+   "k": "Introfilm",
+   "t": "Wat doet de overheid?",
+   "d": "Het Rijk, de provincie en de gemeente: wie doet wat?",
+   "lab": "quiz",
+   "qpar": "7.1",
+   "btn": "Oefen: quiz 7.1"
+  },
+  {
+   "par": "7.2",
+   "yt": "IDAdEgL-7g4",
+   "k": "Introfilm",
+   "t": "Sociale zekerheid",
+   "d": "Verzekeringen en voorzieningen uitgelegd.",
+   "lab": "quiz",
+   "qpar": "7.2",
+   "btn": "Oefen: quiz 7.2"
+  },
+  {
+   "par": "7.3",
+   "yt": "CgjB3zh75-Q",
+   "k": "Introfilm",
+   "t": "Collectieve en particuliere sector",
+   "d": "Wat is het verschil tussen de twee sectoren?",
+   "lab": "quiz",
+   "qpar": "7.3",
+   "btn": "Oefen: quiz 7.3"
+  }
+ ],
+ "CARDS": [
+  [
+   "7.1",
+   "Het Rijk",
+   "Het hoogste bestuur van Nederland.",
+   "Bestuurt het land en maakt nieuwe wetten."
+  ],
+  [
+   "7.1",
+   "Provincie",
+   "Het bestuur tussen het Rijk en de gemeenten in.",
+   "Wegen aanleggen, natuurbeheer, toezicht op gemeenten."
+  ],
+  [
+   "7.1",
+   "Gemeente",
+   "Het bestuur van je eigen stad of dorp.",
+   "Vuilnis ophalen, paspoorten, bestemmingsplannen."
+  ],
+  [
+   "7.1",
+   "Regering",
+   "De koning en de ministers samen.",
+   "De ministers bedenken nieuwe wetten."
+  ],
+  [
+   "7.1",
+   "Tweede Kamer",
+   "150 leden. Keurt wetsvoorstellen van de ministers goed en controleert de ministers.",
+   "Stemmen over een nieuwe wet."
+  ],
+  [
+   "7.1",
+   "Eerste Kamer",
+   "75 leden. Controleert de Tweede Kamer en stemt over de wetsvoorstellen.",
+   "De laatste controle op een wet."
+  ],
+  [
+   "7.1",
+   "Provinciale Staten",
+   "Het bestuur van de provincie.",
+   "Besluit over nieuwe provinciale wegen."
+  ],
+  [
+   "7.1",
+   "Waterschap",
+   "Beheert het water: beschermt tegen overstromingen en zuivert afvalwater.",
+   "Dijken controleren."
+  ],
+  [
+   "7.1",
+   "Subsidie",
+   "Geld van de overheid voor 'goede' projecten.",
+   "Duurzaamheid en groene energie."
+  ],
+  [
+   "7.1",
+   "Accijns",
+   "Extra belasting op producten die de overheid wil ontmoedigen.",
+   "Alcohol, tabak en benzine."
+  ],
+  [
+   "7.1",
+   "ACM",
+   "Autoriteit Consument en Markt. Houdt toezicht op bedrijven en gaat kartelvorming tegen.",
+   "Bedrijven mogen geen prijsafspraken maken."
+  ],
+  [
+   "7.1",
+   "Infrastructuur",
+   "Alle voorzieningen die nodig zijn voor vervoer en communicatie.",
+   "Wegen, havens, vliegvelden, internet."
+  ],
+  [
+   "7.2",
+   "Sociaal minimum",
+   "Het bedrag dat je in Nederland minimaal nodig hebt om van te leven. Ook wel bestaansminimum.",
+   "De bijstand vult aan tot dit bedrag."
+  ],
+  [
+   "7.2",
+   "Sociale verzekeringen",
+   "Verzekeringen van de overheid, betaald uit premies.",
+   "Volksverzekeringen en werknemersverzekeringen."
+  ],
+  [
+   "7.2",
+   "Volksverzekeringen",
+   "Verzekeringen waar iedereen recht op heeft. Betaald door premies van alle mensen met inkomen.",
+   "AOW en Anw."
+  ],
+  [
+   "7.2",
+   "Werknemersverzekeringen",
+   "Verzekeringen voor mensen die gewerkt hebben.",
+   "WW, Ziektewet en WIA."
+  ],
+  [
+   "7.2",
+   "Sociale voorzieningen",
+   "Uitkeringen die betaald worden uit het algemene belastinggeld.",
+   "Bijstand, kinderbijslag en Wajong."
+  ],
+  [
+   "7.2",
+   "WW",
+   "Werkloosheidswet: een uitkering als je buiten je schuld ontslagen bent.",
+   "Eerst 75% van je brutoloon, daarna 70%."
+  ],
+  [
+   "7.2",
+   "Ziektewet",
+   "Uitkering als je ziek bent. Maximaal 2 jaar.",
+   "Eerste jaar 100% van je brutoloon, tweede jaar 70%."
+  ],
+  [
+   "7.2",
+   "WIA",
+   "Wet werk en inkomen naar arbeidsvermogen. Volgt na twee jaar ziekte.",
+   "Je kunt blijvend minder of niet werken."
+  ],
+  [
+   "7.2",
+   "Bijstand",
+   "Het laatste vangnet: voor wie geen recht (meer) heeft op een sociale verzekering.",
+   "Na het einde van je WW."
+  ],
+  [
+   "7.2",
+   "Verzorgingsstaat",
+   "De overheid regelt zorg, huisvesting en onderwijs voor iedereen.",
+   "Nederland."
+  ],
+  [
+   "7.3",
+   "Collectieve goederen",
+   "Voorzieningen die de overheid regelt.",
+   "Dijken, straatverlichting, wegen."
+  ],
+  [
+   "7.3",
+   "Collectieve sector",
+   "De overheid en de instellingen voor de sociale zekerheid. Geen winstoogmerk.",
+   "Rijk, provincie en gemeente."
+  ],
+  [
+   "7.3",
+   "Particuliere sector",
+   "Zelfstandige bedrijven die winst willen maken.",
+   "Veel concurrentie en marktwerking."
+  ],
+  [
+   "7.3",
+   "Marktwerking",
+   "Bedrijven concurreren met elkaar om klanten.",
+   "In de collectieve sector is die er weinig."
+  ],
+  [
+   "7.3",
+   "Privatisering",
+   "Een taak gaat van de collectieve naar de particuliere sector.",
+   "Een overheidsbedrijf wordt verkocht."
+  ],
+  [
+   "7.3",
+   "Onroerendezaakbelasting",
+   "Belasting van de gemeente op een eigen woning. Alleen voor koopwoningen.",
+   "Ozb."
+  ],
+  [
+   "7.3",
+   "Leges",
+   "Wat je de gemeente betaalt voor een document of dienst.",
+   "Een paspoort of een huwelijk."
+  ],
+  [
+   "7.4",
+   "Begroting",
+   "Het plan van Nederland: de inkomsten en uitgaven van het Rijk.",
+   "Hoeveel gaat er naar de zorg?"
+  ],
+  [
+   "7.4",
+   "Directe belasting",
+   "Gaat rechtstreeks naar de overheid. Je hebt er geen invloed op.",
+   "Loon- en inkomstenbelasting."
+  ],
+  [
+   "7.4",
+   "Indirecte belasting",
+   "Je betaalt haar als je iets koopt. Het bedrijf brengt de belasting naar de overheid.",
+   "Btw en accijns."
+  ],
+  [
+   "7.4",
+   "Premies",
+   "Geld waarmee de sociale verzekeringen worden betaald.",
+   "De premie voor de AOW."
+  ],
+  [
+   "7.4",
+   "Niet-belastinginkomsten",
+   "Inkomsten van het Rijk die geen belasting of premie zijn.",
+   "Gas en winst uit bedrijven."
+  ],
+  [
+   "7.4",
+   "Begrotingstekort",
+   "De overheid geeft meer uit dan er binnenkomt.",
+   "De staatsschuld loopt op."
+  ],
+  [
+   "7.4",
+   "Staatsschuld",
+   "De schuld van de overheid. De overheid betaalt er rente over.",
+   "Extra kosten: de rentelasten."
+  ],
+  [
+   "7.4",
+   "Draagkrachtbeginsel",
+   "Hoe hoger je inkomen, hoe hoger je belasting.",
+   "Loon- en inkomstenbelasting."
+  ],
+  [
+   "7.4",
+   "Profijtbeginsel",
+   "Je betaalt als je ergens gebruik van maakt.",
+   "Bpm en accijns op benzine: je gebruikt de wegen."
+  ]
+ ],
+ "BANK": [
+  [
+   "7.1",
+   "Welke drie niveaus heeft de overheid?",
+   [
+    "Rijk, provincies en gemeenten",
+    "Rijk, bedrijven en burgers",
+    "Koning, banken en gemeenten",
+    "Europa, Rijk en de bedrijven"
+   ],
+   "Daarnaast zijn er de waterschappen."
+  ],
+  [
+   "7.1",
+   "Wie vormen samen de regering?",
+   [
+    "De koning en de ministers",
+    "De Eerste en Tweede Kamer",
+    "De burgemeesters",
+    "De provincies"
+   ],
+   "Regering = koning en ministers."
+  ],
+  [
+   "7.1",
+   "Hoeveel leden heeft de Tweede Kamer?",
+   [
+    "150",
+    "75",
+    "100",
+    "225"
+   ],
+   "De Eerste Kamer heeft er 75."
+  ],
+  [
+   "7.1",
+   "Wat doet de Tweede Kamer?",
+   [
+    "Wetsvoorstellen goedkeuren",
+    "Paspoorten uitgeven",
+    "Vuilnis ophalen",
+    "Dijken controleren"
+   ],
+   "En ze controleert de ministers."
+  ],
+  [
+   "7.1",
+   "Wat doet de Eerste Kamer?",
+   [
+    "De Tweede Kamer controleren",
+    "De gemeenten besturen",
+    "Nieuwe wetten bedenken",
+    "De belasting innen"
+   ],
+   "Ze stemt ook over de wetsvoorstellen."
+  ],
+  [
+   "7.1",
+   "Wie bedenken nieuwe wetten?",
+   [
+    "De ministers",
+    "De wethouders",
+    "De rechters",
+    "De waterschappen"
+   ],
+   "Elke minister maakt beleid voor zijn eigen onderdeel."
+  ],
+  [
+   "7.1",
+   "Welke taak hoort bij de gemeente?",
+   [
+    "Vuilnis ophalen",
+    "Het leger aansturen",
+    "Nieuwe wetten maken",
+    "Burgemeesters aanwijzen"
+   ],
+   "Ook paspoorten, trouwen en bestemmingsplannen."
+  ],
+  [
+   "7.1",
+   "Welke taak hoort bij de provincie?",
+   [
+    "Natuurbeheer",
+    "Paspoorten maken",
+    "Mensen laten trouwen",
+    "Het land besturen"
+   ],
+   "Ook wegen, drinkwater en toezicht op gemeenten."
+  ],
+  [
+   "7.1",
+   "Welke taak hoort bij het Rijk?",
+   [
+    "Veiligheid garanderen",
+    "Vuilnis ophalen",
+    "Afvalwater zuiveren",
+    "Paspoorten uitgeven"
+   ],
+   "Het Rijk bestuurt het land en maakt wetten."
+  ],
+  [
+   "7.1",
+   "Wat doet een waterschap?",
+   [
+    "Beschermen tegen overstromingen",
+    "Zorgen voor nieuwe wetten",
+    "Uitkeringen betalen",
+    "Toezicht op bedrijven houden"
+   ],
+   "En het zuivert afvalwater."
+  ],
+  [
+   "7.1",
+   "Wie besturen de gemeente?",
+   [
+    "Burgemeester, wethouders en gemeenteraad",
+    "Koning, ministers en de Tweede Kamer",
+    "Provinciale Staten en het waterschap",
+    "De Eerste Kamer en de minister-president"
+   ],
+   "Het college en de gemeenteraad."
+  ],
+  [
+   "7.1",
+   "Hoe moedigt de overheid groene energie aan?",
+   [
+    "Met subsidie",
+    "Met accijns",
+    "Met een heffing",
+    "Met een boete"
+   ],
+   "Subsidie is geld voor 'goede' projecten."
+  ],
+  [
+   "7.1",
+   "Op welk product zit accijns?",
+   [
+    "Tabak",
+    "Brood",
+    "Kleding",
+    "Boeken"
+   ],
+   "Ook op alcohol en benzine."
+  ],
+  [
+   "7.1",
+   "Wat doet de ACM?",
+   [
+    "Toezicht houden op bedrijven",
+    "Belasting innen bij bedrijven",
+    "Subsidie geven aan bedrijven",
+    "Wetten maken voor bedrijven"
+   ],
+   "De ACM gaat kartelvorming tegen."
+  ],
+  [
+   "7.1",
+   "Wat hoort bij de infrastructuur?",
+   [
+    "Wegen en havens",
+    "Scholen en kerken",
+    "Winkels en cafés",
+    "Lonen en prijzen"
+   ],
+   "Alles wat nodig is voor vervoer en communicatie."
+  ],
+  [
+   "7.2",
+   "Wat is het sociaal minimum?",
+   [
+    "Het bedrag dat je minimaal nodig hebt",
+    "Het laagste loon dat een baas betaalt",
+    "De laagste premie die je kunt betalen",
+    "Het minste aantal uren dat je werkt"
+   ],
+   "Ook wel het bestaansminimum."
+  ],
+  [
+   "7.2",
+   "Waaruit worden sociale voorzieningen betaald?",
+   [
+    "Uit belastinggeld",
+    "Uit premies",
+    "Uit leningen",
+    "Uit boetes"
+   ],
+   "Sociale verzekeringen worden uit premies betaald."
+  ],
+  [
+   "7.2",
+   "Welke uitkering is een volksverzekering?",
+   [
+    "AOW",
+    "WW",
+    "WIA",
+    "Bijstand"
+   ],
+   "Iedereen heeft er recht op."
+  ],
+  [
+   "7.2",
+   "Welke uitkering is een werknemersverzekering?",
+   [
+    "WW",
+    "AOW",
+    "Anw",
+    "Bijstand"
+   ],
+   "WW, Ziektewet en WIA zijn er voor mensen die gewerkt hebben."
+  ],
+  [
+   "7.2",
+   "Welke uitkering is een sociale voorziening?",
+   [
+    "Bijstand",
+    "WW",
+    "AOW",
+    "WIA"
+   ],
+   "Betaald uit het algemene belastinggeld."
+  ],
+  [
+   "7.2",
+   "Hoeveel procent van je brutoloon is de WW in de eerste twee maanden?",
+   [
+    "75%",
+    "70%",
+    "100%",
+    "50%"
+   ],
+   "Daarna 70%."
+  ],
+  [
+   "7.2",
+   "Hoeveel procent van je brutoloon is de WW vanaf de derde maand?",
+   [
+    "70%",
+    "75%",
+    "100%",
+    "60%"
+   ],
+   "De eerste twee maanden is het 75%."
+  ],
+  [
+   "7.2",
+   "Je hebt 6 jaar gewerkt. Hoeveel maanden WW krijg je?",
+   [
+    "6 maanden",
+    "12 maanden",
+    "3 maanden",
+    "24 maanden"
+   ],
+   "Elk gewerkt jaar geeft 1 maand WW."
+  ],
+  [
+   "7.2",
+   "Wat gebeurt er als je WW is afgelopen en je nog geen werk hebt?",
+   [
+    "Je kunt bijstand krijgen",
+    "Je krijgt de WIA",
+    "Je krijgt AOW",
+    "Je krijgt de WW opnieuw"
+   ],
+   "De bijstand is het laatste vangnet."
+  ],
+  [
+   "7.2",
+   "Krijg je WW als je op staande voet ontslagen bent?",
+   [
+    "Nee",
+    "Ja, 75%",
+    "Ja, 70%",
+    "Ja, 100%"
+   ],
+   "WW krijg je alleen als het ontslag buiten je schuld is."
+  ],
+  [
+   "7.2",
+   "Hoe lang duurt de Ziektewet maximaal?",
+   [
+    "2 jaar",
+    "1 jaar",
+    "6 maanden",
+    "5 jaar"
+   ],
+   "Daarna volgt de WIA."
+  ],
+  [
+   "7.2",
+   "Hoeveel krijg je in het eerste jaar van de Ziektewet?",
+   [
+    "100% van je brutoloon",
+    "70% van je brutoloon",
+    "75% van je brutoloon",
+    "50% van je brutoloon"
+   ],
+   "In het tweede jaar 70%."
+  ],
+  [
+   "7.2",
+   "Wat regelt de overheid in een verzorgingsstaat?",
+   [
+    "Zorg, huisvesting en onderwijs",
+    "Winst, omzet en concurrentie",
+    "Reclame, prijzen en aanbod",
+    "Aandelen, rente en dividend"
+   ],
+   "Ook met subsidies en extra voorzieningen."
+  ],
+  [
+   "7.3",
+   "Wat zijn collectieve goederen?",
+   [
+    "Voorzieningen die de overheid regelt",
+    "Producten die bedrijven verkopen",
+    "Spullen die burgers samen kopen",
+    "Goederen die uit het buitenland komen"
+   ],
+   "Rijk, provincie en gemeente regelen ze."
+  ],
+  [
+   "7.3",
+   "Waarom regelt de overheid dijken?",
+   [
+    "Om de kosten te delen",
+    "Om winst te maken",
+    "Om bedrijven te helpen",
+    "Om de prijs te verhogen"
+   ],
+   "Kosten delen: dijken, straatverlichting, wegen."
+  ],
+  [
+   "7.3",
+   "Waarom regelt de overheid de rechtspraak?",
+   [
+    "Om de kwaliteit te bewaken",
+    "Om de kosten te verhogen",
+    "Om winst te kunnen maken",
+    "Om te kunnen concurreren"
+   ],
+   "Kwaliteit bewaken."
+  ],
+  [
+   "7.3",
+   "Waarom regelt de overheid onderwijs en zorg?",
+   [
+    "Om ze betaalbaar te houden",
+    "Om ze duurder te maken",
+    "Om er winst op te maken",
+    "Om ze te privatiseren"
+   ],
+   "Iedereen moet ze kunnen betalen."
+  ],
+  [
+   "7.3",
+   "Wie werken er in de collectieve sector?",
+   [
+    "Ambtenaren",
+    "Ondernemers",
+    "Aandeelhouders",
+    "Winkeliers"
+   ],
+   "Iedereen die betaald wordt door de overheid."
+  ],
+  [
+   "7.3",
+   "Wat is een kenmerk van de collectieve sector?",
+   [
+    "Geen winstoogmerk",
+    "Veel concurrentie",
+    "Veel marktwerking",
+    "Hoge winsten"
+   ],
+   "De overheid hoeft en mag geen winst maken."
+  ],
+  [
+   "7.3",
+   "Wat is een kenmerk van de particuliere sector?",
+   [
+    "Veel concurrentie",
+    "Geen winstoogmerk",
+    "Veel baanzekerheid",
+    "Weinig marktwerking"
+   ],
+   "Bedrijven bestaan alleen als ze winst maken."
+  ],
+  [
+   "7.3",
+   "In welke sector is er meer baanzekerheid?",
+   [
+    "De collectieve sector",
+    "De particuliere sector",
+    "In beide evenveel",
+    "In geen van beide"
+   ],
+   "In de particuliere sector is ontslag makkelijker."
+  ],
+  [
+   "7.3",
+   "Welke inkomsten heeft de gemeente zelf?",
+   [
+    "Ozb, leges en rioolheffing",
+    "Btw, accijns en loonbelasting",
+    "Premies, gas en dividend",
+    "Bpm, btw en invoerrechten"
+   ],
+   "Daarnaast krijgt de gemeente geld van het Rijk."
+  ],
+  [
+   "7.3",
+   "Wie betaalt onroerendezaakbelasting?",
+   [
+    "Eigenaren van een koopwoning",
+    "Huurders van een woning",
+    "Iedereen met een auto",
+    "Alle inwoners boven de 18"
+   ],
+   "Alleen bij koopwoningen."
+  ],
+  [
+   "7.3",
+   "Waarvoor betaal je leges?",
+   [
+    "Voor een paspoort",
+    "Voor benzine",
+    "Voor je loon",
+    "Voor de riolering"
+   ],
+   "Ook voor een huwelijk bij de gemeente."
+  ],
+  [
+   "7.3",
+   "Wat is privatisering?",
+   [
+    "Van collectieve naar particuliere sector",
+    "Van particuliere naar collectieve sector",
+    "Van gemeente naar de provincie",
+    "Van directe naar indirecte belasting"
+   ],
+   "Een overheidstaak gaat naar een bedrijf."
+  ],
+  [
+   "7.4",
+   "Welke vier soorten inkomsten heeft het Rijk?",
+   [
+    "Directe en indirecte belasting, premies, overig",
+    "Lonen, winsten, huren en ook de rente",
+    "Subsidies, uitkeringen, toeslagen, leges",
+    "Ozb, leges, rioolheffing, hondenbelasting"
+   ],
+   "Overig: niet-belastinginkomsten zoals gas en winst uit bedrijven."
+  ],
+  [
+   "7.4",
+   "Welke belasting is een directe belasting?",
+   [
+    "Loonbelasting",
+    "Btw",
+    "Accijns",
+    "Bpm"
+   ],
+   "Gaat rechtstreeks naar de overheid."
+  ],
+  [
+   "7.4",
+   "Welke belasting is een indirecte belasting?",
+   [
+    "Btw",
+    "Loonbelasting",
+    "Inkomstenbelasting",
+    "Vennootschapsbelasting"
+   ],
+   "Je betaalt haar als je iets koopt."
+  ],
+  [
+   "7.4",
+   "Je tankt benzine. Via wie komt de belasting bij de overheid?",
+   [
+    "Via de pomphouder",
+    "Via je werkgever",
+    "Via de gemeente",
+    "Via je bank"
+   ],
+   "Daarom is het een indirecte belasting."
+  ],
+  [
+   "7.4",
+   "Wat hoort bij de niet-belastinginkomsten?",
+   [
+    "Winst uit bedrijven",
+    "Btw op boodschappen",
+    "Accijns op tabak",
+    "Loonbelasting"
+   ],
+   "Ook de inkomsten uit gas."
+  ],
+  [
+   "7.4",
+   "Wat zijn twee grote uitgaven van het Rijk?",
+   [
+    "Zorg en sociale zekerheid",
+    "Reclame en verpakking",
+    "Winst en dividend",
+    "Lonen van bedrijven"
+   ],
+   "Ziektekosten, ouderenzorg en uitkeringen."
+  ],
+  [
+   "7.4",
+   "Wanneer is er een begrotingstekort?",
+   [
+    "Meer uitgaven dan inkomsten",
+    "Meer inkomsten dan uitgaven",
+    "Evenveel inkomsten als uitgaven",
+    "Meer leningen dan aflossingen"
+   ],
+   "De overheid komt geld tekort."
+  ],
+  [
+   "7.4",
+   "Wat gebeurt er met de staatsschuld bij een tekort?",
+   [
+    "Die loopt op",
+    "Die daalt",
+    "Die blijft gelijk",
+    "Die verdwijnt"
+   ],
+   "De overheid moet het tekort lenen."
+  ],
+  [
+   "7.4",
+   "Waarom kost een hoge staatsschuld extra geld?",
+   [
+    "De overheid betaalt rente",
+    "De overheid betaalt btw",
+    "De overheid betaalt boetes",
+    "De overheid betaalt premies"
+   ],
+   "De rentelasten zijn miljarden per jaar."
+  ],
+  [
+   "7.4",
+   "Wat betekent het draagkrachtbeginsel?",
+   [
+    "Hoe hoger je inkomen, hoe meer belasting",
+    "Hoe meer je gebruikt, hoe meer belasting",
+    "Iedereen betaalt precies evenveel euro's",
+    "Wie veel werkt, betaalt minder belasting"
+   ],
+   "Het zorgt voor meer inkomensgelijkheid."
+  ],
+  [
+   "7.4",
+   "Welke belasting past bij het draagkrachtbeginsel?",
+   [
+    "Inkomstenbelasting",
+    "Bpm",
+    "Accijns op benzine",
+    "Leges"
+   ],
+   "Bij directe belastingen."
+  ],
+  [
+   "7.4",
+   "Welke belasting past bij het profijtbeginsel?",
+   [
+    "Accijns op benzine",
+    "Inkomstenbelasting",
+    "Loonbelasting",
+    "Vennootschapsbelasting"
+   ],
+   "Je gebruikt wegen, viaducten en verkeersvoorzieningen."
+  ],
+  [
+   "7.4",
+   "Welke andere reden dan geld heeft de overheid om accijns te verhogen?",
+   [
+    "Mensen kopen het product minder",
+    "Mensen kopen het product vaker",
+    "Winkels maken dan meer winst",
+    "Het product wordt dan gezonder"
+   ],
+   "Schadelijke producten worden zo ontmoedigd."
+  ]
+ ],
+ "SORT": [
+  {
+   "a": "Rijk",
+   "b": "Gemeente",
+   "A": [
+    [
+     "🏛️",
+     "Nieuwe wetten maken"
+    ],
+    [
+     "🛡️",
+     "Veiligheid garanderen"
+    ],
+    [
+     "🧑‍💼",
+     "Burgemeesters aanwijzen"
+    ],
+    [
+     "🔎",
+     "Provincies controleren"
+    ]
+   ],
+   "B": [
+    [
+     "🗑️",
+     "Vuilnis ophalen"
+    ],
+    [
+     "🛂",
+     "Paspoorten"
+    ],
+    [
+     "💍",
+     "Mensen laten trouwen"
+    ],
+    [
+     "🏗️",
+     "Bestemmingsplannen maken"
+    ]
+   ]
+  },
+  {
+   "a": "Sociale verzekering",
+   "b": "Sociale voorziening",
+   "A": [
+    [
+     "👵",
+     "AOW"
+    ],
+    [
+     "📄",
+     "WW"
+    ],
+    [
+     "🤒",
+     "Ziektewet"
+    ],
+    [
+     "🩹",
+     "WIA"
+    ],
+    [
+     "🕯️",
+     "Anw"
+    ]
+   ],
+   "B": [
+    [
+     "🧾",
+     "Bijstand"
+    ],
+    [
+     "👶",
+     "Kinderbijslag"
+    ],
+    [
+     "🧑‍🦽",
+     "Wajong"
+    ]
+   ]
+  },
+  {
+   "a": "Collectieve sector",
+   "b": "Particuliere sector",
+   "A": [
+    [
+     "🚫",
+     "Geen winstoogmerk"
+    ],
+    [
+     "🔒",
+     "Baanzekerheid"
+    ],
+    [
+     "🐢",
+     "Weinig concurrentie"
+    ],
+    [
+     "🏛️",
+     "Ambtenaren"
+    ]
+   ],
+   "B": [
+    [
+     "💰",
+     "Wil winst maken"
+    ],
+    [
+     "🏁",
+     "Veel concurrentie"
+    ],
+    [
+     "⚡",
+     "Vaak efficiënter"
+    ],
+    [
+     "📈",
+     "Hogere salarissen"
+    ]
+   ]
+  },
+  {
+   "a": "Directe belasting",
+   "b": "Indirecte belasting",
+   "A": [
+    [
+     "💶",
+     "Loonbelasting"
+    ],
+    [
+     "🧾",
+     "Inkomstenbelasting"
+    ],
+    [
+     "🏢",
+     "Vennootschapsbelasting"
+    ]
+   ],
+   "B": [
+    [
+     "🛍️",
+     "Btw"
+    ],
+    [
+     "⛽",
+     "Accijns op benzine"
+    ],
+    [
+     "🚬",
+     "Accijns op tabak"
+    ]
+   ]
+  },
+  {
+   "a": "Draagkrachtbeginsel",
+   "b": "Profijtbeginsel",
+   "A": [
+    [
+     "💶",
+     "Inkomstenbelasting"
+    ],
+    [
+     "📊",
+     "Hoger inkomen, meer belasting"
+    ],
+    [
+     "🏢",
+     "Meer winst, meer vennootschapsbelasting"
+    ]
+   ],
+   "B": [
+    [
+     "🚗",
+     "Bpm"
+    ],
+    [
+     "⛽",
+     "Accijns op diesel"
+    ],
+    [
+     "🛣️",
+     "Betalen voor het gebruik van wegen"
+    ]
+   ]
+  }
+ ]
+}

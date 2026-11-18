@@ -1,0 +1,584 @@
+{
+ "blokken": {
+  "mc_a": [
+   {
+    "v": "De gemeente laat het ophalen van afval doen door het bedrijf met het beste aanbod. Hoe heet deze manier van kiezen?",
+    "o": [
+     "Subsidie",
+     "Aanbesteding",
+     "Privatisering",
+     "Nationalisatie"
+    ],
+    "j": 1,
+    "u": "De overheid maakt de opdracht bekend en bedrijven doen een aanbod."
+   },
+   {
+    "v": "Waarom betaalt de overheid het leger?",
+    "o": [
+     "Bedrijven mogen geen wapens hebben",
+     "Soldaten willen ambtenaar zijn",
+     "Het leger is van belang voor iedereen",
+     "Het leger levert de overheid winst op"
+    ],
+    "j": 2,
+    "u": "Veiligheid is voor iedereen van belang: een collectief goed."
+   },
+   {
+    "v": "Een energiebedrijf was van de overheid en wordt verkocht aan een particulier bedrijf. Wat verwacht de overheid daarvan?",
+    "o": [
+     "Meer concurrentie en een lagere prijs",
+     "Minder concurrentie en een hogere prijs",
+     "Meer ambtenaren en meer regels",
+     "Minder klanten en minder winst"
+    ],
+    "j": 0,
+    "u": "Na privatisering moeten bedrijven concurreren."
+   },
+   {
+    "v": "In land X bepaalt de regering hoeveel brood er gebakken wordt en wat het kost. Wat voor economie is dit?",
+    "o": [
+     "Planeconomie",
+     "Vrijemarkteconomie",
+     "Verzorgingsstaat",
+     "Sociale markteconomie"
+    ],
+    "j": 0,
+    "u": "De overheid bepaalt wat, hoeveel en tegen welke prijs."
+   },
+   {
+    "v": "Welke instelling is geen overheidsinstelling?",
+    "o": [
+     "De SER",
+     "Het CPB",
+     "Het CBS",
+     "De Belastingdienst"
+    ],
+    "j": 0,
+    "u": "De SER is onafhankelijk: werkgevers, werknemers en deskundigen."
+   },
+   {
+    "v": "De economie krimpt. Wat gebeurt er met de uitgaven van de overheid aan uitkeringen?",
+    "o": [
+     "Die dalen",
+     "Die blijven gelijk",
+     "Die stoppen",
+     "Die stijgen"
+    ],
+    "j": 3,
+    "u": "Meer werklozen betekent meer uitkeringen."
+   },
+   {
+    "v": "Fatima is 70 jaar. Welke uitkering krijgt zij van de overheid?",
+    "o": [
+     "Bijstand",
+     "WW",
+     "AOW",
+     "WIA"
+    ],
+    "j": 2,
+    "u": "De AOW is de volksverzekering voor ouderen."
+   },
+   {
+    "v": "Wat is het verschil tussen een sociale verzekering en een sociale voorziening?",
+    "o": [
+     "Verzekering uit premies, voorziening uit belasting",
+     "Verzekering voor armen, voorziening voor rijken",
+     "Verzekering van de gemeente, voorziening van het Rijk",
+     "Verzekering uit belasting, voorziening uit premies"
+    ],
+    "j": 0,
+    "u": "Sociale voorzieningen betaalt de overheid met belastinggeld."
+   },
+   {
+    "v": "De regering legt uit waarom er volgend jaar meer geld naar defensie gaat. Waar staat die uitleg?",
+    "o": [
+     "In het cao-akkoord",
+     "In de miljoenennota",
+     "In de aangifte",
+     "In het Gemeentefonds"
+    ],
+    "j": 1,
+    "u": "De miljoenennota is de toelichting bij de rijksbegroting."
+   },
+   {
+    "v": "Welke belasting betaal je via de prijs van een product?",
+    "o": [
+     "Ozb",
+     "Inkomstenbelasting",
+     "Loonbelasting",
+     "Accijns"
+    ],
+    "j": 3,
+    "u": "Accijns en btw zijn indirecte belastingen."
+   },
+   {
+    "v": "De overheid heeft al jaren een begrotingstekort. Wat gebeurt er met de staatsschuld?",
+    "o": [
+     "Die wordt kleiner",
+     "Die blijft gelijk",
+     "Die wordt groter",
+     "Die verdwijnt"
+    ],
+    "j": 2,
+    "u": "Bij elk tekort moet de overheid lenen."
+   },
+   {
+    "v": "Welke heffing betalen alle inwoners van een gemeente?",
+    "o": [
+     "Toeristenbelasting",
+     "Parkeerbelasting",
+     "Hondenbelasting",
+     "Afvalstoffenheffing"
+    ],
+    "j": 3,
+    "u": "Alle inwoners betalen rioolheffing en afvalstoffenheffing."
+   }
+  ],
+  "rek_a": [
+   {
+    "nr": 1,
+    "titel": "Goed of fout?",
+    "tekst": "",
+    "p": 5,
+    "delen": [
+     {
+      "id": "",
+      "v": "Goed of fout?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "De collectieve sector probeert zo veel mogelijk winst te maken."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "In een sociale markteconomie bepalen vraag en aanbod de prijzen, maar grijpt de overheid in als dat nodig is."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "De WW is een volksverzekering."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Btw is een indirecte belasting."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Bij een begrotingsoverschot moet de overheid geld lenen."
+       }
+      ],
+      "uitw": [
+       "De collectieve sector streeft niet naar winst.",
+       "De WW is een werknemersverzekering.",
+       "Lenen moet bij een begrotingstekort."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 2,
+    "titel": "De begroting van het Rijk",
+    "tekst": "Het Rijk verwacht volgend jaar €372 miljard aan inkomsten en €391 miljard aan uitgaven.",
+    "p": 5,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken het begrotingssaldo in miljard euro. Typ een min-teken bij een tekort.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         -19
+        ],
+        "p": 1,
+        "eenh": "",
+        "tol": 0.5,
+        "label": "Begrotingssaldo (miljard euro)"
+       }
+      ],
+      "uitw": [
+       "Saldo = inkomsten − uitgaven = 372 − 391 = −19. Een tekort van €19 miljard."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Hoeveel miljoen euro is €19 miljard?",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         19000
+        ],
+        "p": 1,
+        "eenh": "",
+        "tol": 0.5,
+        "label": "Bedrag (miljoen euro)"
+       }
+      ],
+      "uitw": [
+       "1 miljard = 1.000 miljoen. 19 × 1.000 = 19.000 miljoen."
+      ]
+     },
+     {
+      "id": "c",
+      "v": "De staatsschuld is €480 miljard. De overheid betaalt €7,2 miljard rente. Bereken het rentepercentage. Rond af op 1 decimaal.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         1.5
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.05,
+        "label": "Rentepercentage"
+       }
+      ],
+      "uitw": [
+       "(deel : geheel) × 100 = (7,2 : 480) × 100 = 1,5%."
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Noem twee dingen die de overheid kan doen om een begrotingstekort te voorkomen.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "2d",
+        "p": 2,
+        "label": "Tekort voorkomen",
+        "model": "Bezuinigen op de uitgaven (bijvoorbeeld minder geld naar onderwijs of zorg) en de inkomsten verhogen (bijvoorbeeld hogere belastingen).",
+        "g": [
+         {
+          "t": "bezuinigen op de uitgaven",
+          "p": 1
+         },
+         {
+          "t": "de inkomsten verhogen, bijvoorbeeld hogere belastingen",
+          "p": 1
+         }
+        ],
+        "v": "Noem twee dingen die de overheid kan doen om een begrotingstekort te voorkomen.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Minder uitgeven of meer binnenhalen."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 3,
+    "titel": "Wie krijgt wat?",
+    "tekst": "",
+    "p": 8,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Kies bij elke uitkering de juiste soort.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Volksverzekering",
+         "Werknemersverzekering",
+         "Sociale voorziening"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "AOW"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Volksverzekering",
+         "Werknemersverzekering",
+         "Sociale voorziening"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "WW"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Volksverzekering",
+         "Werknemersverzekering",
+         "Sociale voorziening"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "Bijstand"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Volksverzekering",
+         "Werknemersverzekering",
+         "Sociale voorziening"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Wlz"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Volksverzekering",
+         "Werknemersverzekering",
+         "Sociale voorziening"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "WIA"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Volksverzekering",
+         "Werknemersverzekering",
+         "Sociale voorziening"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "Huurtoeslag"
+       }
+      ],
+      "uitw": [
+       "Volksverzekeringen: AOW, Anw, Wlz. Werknemersverzekeringen: WW, WIA. Sociale voorzieningen: bijstand, huurtoeslag, zorgtoeslag."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Leg uit wat het solidariteitsbeginsel is. Gebruik de woorden inkomen en afstaan.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "3b",
+        "p": 2,
+        "label": "Solidariteitsbeginsel",
+        "model": "Iedereen met een inkomen staat een deel daarvan af voor mensen zonder inkomen of met een laag inkomen.",
+        "g": [
+         {
+          "t": "mensen met een inkomen staan een deel af",
+          "p": 1
+         },
+         {
+          "t": "voor mensen zonder inkomen of met een laag inkomen",
+          "p": 1
+         }
+        ],
+        "v": "Leg uit wat het solidariteitsbeginsel is. Gebruik de woorden inkomen en afstaan.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "De sterken helpen de zwakkeren."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 4,
+    "titel": "Roken wordt duurder",
+    "tekst": "De accijns op een pakje sigaretten gaat van €8,00 naar €9,00.",
+    "p": 4,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken met hoeveel procent de accijns is gestegen. Rond af op 1 decimaal.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         12.5
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.05,
+        "label": "Stijging"
+       }
+      ],
+      "uitw": [
+       "(nieuw − oud) : oud × 100 = (9,00 − 8,00) : 8,00 × 100 = 12,5%."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Leg uit waarom de overheid de accijns op sigaretten verhoogt.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "4b",
+        "p": 2,
+        "label": "Doel van accijns",
+        "model": "Door de accijns worden sigaretten duurder. De overheid wil zo roken ontmoedigen, omdat ze wil dat mensen gezonder leven.",
+        "g": [
+         {
+          "t": "sigaretten worden duurder",
+          "p": 1
+         },
+         {
+          "t": "de overheid wil roken ontmoedigen / mensen gezonder laten leven",
+          "p": 1
+         }
+        ],
+        "v": "Leg uit waarom de overheid de accijns op sigaretten verhoogt.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Accijns ontmoedigt ongewenst gedrag."
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Is accijns een directe of een indirecte belasting?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Directe belasting",
+         "Indirecte belasting"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Accijns is een"
+       }
+      ],
+      "uitw": [
+       "Accijns zit in de prijs van het product: indirect."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 5,
+    "titel": "De economie groeit",
+    "tekst": "Vorig jaar was het bbp €800 miljard. Dit jaar groeit de economie met 2,5%.",
+    "p": 4,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken het bbp van dit jaar in miljard euro.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         820
+        ],
+        "p": 1,
+        "eenh": "",
+        "tol": 0.5,
+        "label": "Bbp dit jaar (miljard euro)"
+       }
+      ],
+      "uitw": [
+       "(2,5 : 100) × 800 = 20. Nieuw bbp = 800 + 20 = €820 miljard."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Leg uit waarom economische groei goed is voor de begroting van de overheid. Noem een gevolg voor de inkomsten en een gevolg voor de uitgaven.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "5b",
+        "p": 2,
+        "label": "Groei en de begroting",
+        "model": "De inkomsten stijgen: er komt meer belasting binnen (btw, inkomstenbelasting, vennootschapsbelasting). De uitgaven dalen: er zijn minder werklozen, dus minder uitkeringen.",
+        "g": [
+         {
+          "t": "inkomsten stijgen door meer belastingopbrengst",
+          "p": 1
+         },
+         {
+          "t": "uitgaven dalen doordat er minder uitkeringen nodig zijn",
+          "p": 1
+         }
+        ],
+        "v": "Leg uit waarom economische groei goed is voor de begroting van de overheid. Noem een gevolg voor de inkomsten en een gevolg voor de uitgaven.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Meer belasting erin, minder uitkeringen eruit."
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Een jaar later is er een recessie. Noem één maatregel waarmee de overheid de economie kan stimuleren.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "5c",
+        "p": 1,
+        "label": "Economie stimuleren",
+        "model": "Bijvoorbeeld: meer investeren in de infrastructuur, de inkomstenbelasting verlagen, subsidie geven aan bedrijven die investeren in vernieuwende producten, of investeren in beter onderwijs.",
+        "g": [
+         {
+          "t": "een juiste maatregel: investeren in infrastructuur of onderwijs, inkomstenbelasting verlagen of subsidie aan bedrijven",
+          "p": 1
+         }
+        ],
+        "v": "Een jaar later is er een recessie. Noem één maatregel waarmee de overheid de economie kan stimuleren.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Investeren, belasting verlagen of subsidie geven."
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "toetsen": {
+  "t1": {
+   "n": 1,
+   "t": "oefentoets A",
+   "sub": "Hoofdstuk 5",
+   "min": 45,
+   "mc": "mc_a",
+   "open": null,
+   "rek": "rek_a"
+  }
+ },
+ "VERS": [
+  {
+   "n": 1,
+   "min": 45,
+   "pts": 38
+  }
+ ]
+}
