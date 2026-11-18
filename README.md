@@ -4,6 +4,8 @@ Interactieve leeromgeving voor het Vellesan College (mavo), als opvolger van de 
 
 **Live:** https://jboersen88-dot.github.io/geschiedenis-vellesan/
 
+**Overzicht van alles en de richtlijnen:** [`docs/OVERZICHT.md`](docs/OVERZICHT.md) en [`CLAUDE.md`](CLAUDE.md).
+
 Statische HTML/CSS/JS, zonder build-stap of framework, gehost via GitHub Pages vanaf `main`. Nog niet gekoppeld aan meneerboersen.nl.
 
 ## Indeling
