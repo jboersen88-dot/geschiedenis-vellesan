@@ -86,7 +86,7 @@ Alles wordt gestuurd vanuit `economie/economie.js` en `economie/data/paginas.jso
 | **Jaar 2 mavo H2 "Jij en je geld"** (het voorbeeld) | `j2h2` | ja | ja, met Edu-Racer | ja | 3 (1-, 2- en 3-ster) |
 | Jaar 3 mavo H0 rekenvaardigheden | `j3h0` | formulepagina | nee | nee | nee |
 | Jaar 3 mavo H1 en H2 | `j3h1`, `j3h2` | ja | nee (oefenstof als band) | nee | nee |
-| Jaar 3 havo/vwo H2 "De rol van geld" | `j3vh2` | ja | ja | nee | 2 |
+| Jaar 3 havo/vwo H2 "De rol van geld" | `j3vh2` | ja | ja | ja | 2 |
 | Jaar 4 SE3 (H1 en H2) | `se3` | eigen `app.html` zoals boekje 1 | in dezelfde app | nee | 4, plus toets op maat |
 
 Alle andere hoofdstukken (jaar 2 H3 tot en met H6, jaar 3 mavo H3 tot en met H8, jaar 4 H1 tot en met H8) staan er in de overgangsvorm: de inhoud van de oude Google-pagina in de nieuwe opmaak, soms met een oude lesapp uit `economie/apps/`. De docent wil de oude Google-opzet helemaal weg hebben (besluit van 10 november). Die hoofdstukken moeten dus nog naar de opzet van hoofdstuk 3.
@@ -311,7 +311,7 @@ Niet van de website: `app cijfercontrole/`, de drie `n8n …`-mappen, `generals/
 
 - Economie jaar 3 mavo H3 "De bank en jouw geld" (fase 3) en jaar 4 H5 "Kan de overheid dat regelen?" (fase 4) in de nieuwe opzet.
 - Fase 5: alle overige Economie-hoofdstukken uit de oude Google-opzet halen (jaar 2 H3 tot H6, jaar 3 mavo H4 tot H8, jaar 4 H1 tot H8).
-- Mijn route voor 3 havo/vwo H2: de nieuwe rekensoorten staan nog niet in `route.js`.
+- Mijn route voor 3 havo/vwo H2 staat er sinds 18 nov (13 leerdoelen, zes rekensoorten in `route.js`); de docent moet de indeling in niveaus en de nieuwe rekenvragen nog nakijken. Geen AI-verdiepingsvraag: de Worker heeft geen lesstof van dit hoofdstuk.
 - Boekje 2: PowerPoints van hoofdstuk 3 en 4, bolletjes voor het plaatje van H3, oefentoetsen.
 - Boekje 3 en 4 van Geschiedenis.
 - De drie speurtochten een plek geven op de lessite.

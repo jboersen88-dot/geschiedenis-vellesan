@@ -46,6 +46,23 @@ SPEC = {
         dict(id="warenwet", par="1.4", t="De Warenwet en de NVWA", mc={1: [118, 119, 120], 2: [121, 122, 130]}),
         dict(id="gemiddelde", par="1.4", t="Een gemiddelde uitrekenen", gen="gem", mc={1: [123, 124], 2: [125], 3: [126, 127]}),
     ]),
+    # jaar 3 havo/vwo H2 (18 nov 2026): de 49 quizvragen van bron/lesapp.json, de open vragen van de oefentoets en zes rekensoorten.
+    # h=[]: de Worker heeft voor dit hoofdstuk geen lesstof; open vragen worden nagekeken met het antwoordmodel dat meegaat. Geen vak: geen AI-verdiepingsvraag.
+    "j3vh2": dict(app="apps/jaar-3_havo-vwo_hoofdstuk-2.html", toets="j3vh2/bron/toetsen.json", titel="De rol van geld", h=[], doelen=[
+        dict(id="ruil", par="2.1", t="Directe en indirecte ruil", mc={1: [0, 2], 2: [1, 14]}, open={3: [("rek_a", 1, "1a"), ("rek_a", 1, "1b")]}),
+        dict(id="geschiedenis", par="2.1", t="De geschiedenis van het geld", mc={1: [3, 5, 8, 9], 2: [4, 6, 7]}),
+        dict(id="geldfuncties", par="2.1", t="De drie geldfuncties", mc={1: [11, 13], 2: [10], 3: [12]}),
+        dict(id="meetellen", par="2.2", t="Wat wel en niet meetelt in de geldhoeveelheid", mc={1: [15, 16], 2: [17, 18]}, open={3: [("rek_a", 2, "2b")]}),
+        dict(id="geldh", par="2.2", t="De geldhoeveelheid uitrekenen", gen="geldh", mc={1: [19]}),
+        dict(id="pct", par="2.2", t="Procentuele verandering", gen="pct", mc={2: [32]}),
+        dict(id="intr", par="2.2", t="Intrinsieke en extrinsieke waarde", gen="intr", mc={1: [20, 21], 2: [22, 23], 3: [24, 25]}),
+        dict(id="eisen", par="2.2", t="Eisen aan geld en echtheidskenmerken", mc={1: [27, 30, 31], 2: [26, 29], 3: [28]}, open={3: [("rek_a", 4, "4")]}),
+        dict(id="inflatie", par="2.3", t="Inflatie en haar oorzaken", mc={1: [33, 34], 2: [35, 36]}, open={3: [("rek_a", 5, "5")]}),
+        dict(id="koopkracht", par="2.3", t="Wat er met je koopkracht gebeurt", mc={1: [37, 40], 2: [38, 39], 3: [41]}),
+        dict(id="index", par="2.3", t="Een indexcijfer uitrekenen", gen="index", mc={1: [42], 2: [43]}),
+        dict(id="ric", par="2.3", t="Het reële inkomen (RIC)", gen="ric", mc={1: [44, 45], 2: [46]}),
+        dict(id="reeel", par="2.3", t="De reële rente", gen="reeel", mc={1: [48], 2: [47]}),
+    ]),
 }
 
 
@@ -95,6 +112,9 @@ def bouw(name):
         assert out.get("gen") or per, d["id"]
         doelen.append(out)
     data = dict(map=name, titel=C["titel"], doelen=doelen)
+    for k in ("h", "vak"):
+        if k in C:
+            data[k] = C[k]
     json.dump(data, open(os.path.join(ECO, name, "route.json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
     nq = sum(len(v) for d in doelen for v in d["bank"].values())
     rest = [i for i in range(len(bank)) if i not in gebruikt]
