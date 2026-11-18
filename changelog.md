@@ -500,3 +500,8 @@ Aanleiding: de eerste versie was "een standaard website". Je bestaande Google Si
 - 20 okt: kaft **professioneler** gemaakt na feedback (te kinderlijk): spaarvarken, gekleurde tandwielen, munten en fabriek vervangen door fijne lijntekeningen: vraag-en-aanbodgrafiek waarvan het evenwichtspunt rustig meebeweegt (Economie) en blauwdruk-tandwielen met een tijdliniaal 1750–1950 en een lopend merkteken (Geschiedenis). Teller weg; foto in de panelen bovenin donkerder voor leesbaarheid.
 
 - 28 okt: **werklozen 1935 overal gelijk** (besluit docent, vervangt 640.000): gemiddeld ongeveer 430.000, winter 1935/36 bijna 580.000, schattingen verschillen. Aangepast: Schat het eerst (nu "Hoeveel mensen waren er gemiddeld werkloos in 1935?", schuif tot 700.000), quiz boekje 2 H2, examentraining, app.html (vraag en tijdlijn), EDU-Racer, beeldquiz, verhaal, kaart, spotprenten, oefentoets. Tabel 22/271/385 en doe-boek H2 vraag 42 bewust ongewijzigd.
+
+## 18 nov — Open dag: rondleiding met QR-speurtocht
+- Nieuwe losse map `rondleiding/` (raakt de lessite niet): rondleiding door het gebouw Briniostraat voor groep 7/8 op iPads. 13 stops op de plattegrond (3 etages) met per stop een kort filmpje, uitleg en 3 opdrachtjes; voortgang alleen op het apparaat.
+- QR-speurtocht: elke stop gaat open door de poster op die plek te scannen (of het codewoord te typen); 3 geheime bonuscodes. Posters: `rondleiding/qr/posters.pdf`, opnieuw te maken met `rondleiding/tools/maak-qr.js`.
+- Getest in een nagebootste iPad; nog niet op een echte iPad (camera).
