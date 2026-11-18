@@ -1,0 +1,595 @@
+{
+ "blokken": {
+  "mc_a": [
+   {
+    "v": "De minister van Financiën bedenkt een nieuwe belastingwet. Wie moet het voorstel als eerste goedkeuren?",
+    "o": [
+     "De gemeenteraad",
+     "De Tweede Kamer",
+     "Het waterschap",
+     "De Provinciale Staten"
+    ],
+    "j": 1,
+    "u": "Daarna stemt de Eerste Kamer er nog over."
+   },
+   {
+    "v": "Wie controleert de Tweede Kamer?",
+    "o": [
+     "De gemeenteraad",
+     "Het waterschap",
+     "De Eerste Kamer",
+     "De burgemeester"
+    ],
+    "j": 2,
+    "u": "De Eerste Kamer heeft 75 leden."
+   },
+   {
+    "v": "In jouw wijk komt een nieuw bestemmingsplan. Wie maakt dat?",
+    "o": [
+     "De provincie",
+     "Het waterschap",
+     "De gemeente",
+     "Het Rijk"
+    ],
+    "j": 2,
+    "u": "De gemeente bepaalt waar wat gebouwd wordt."
+   },
+   {
+    "v": "Drie bedrijven spreken stiekem af dezelfde hoge prijs te vragen. Wie houdt daar toezicht op?",
+    "o": [
+     "De SER",
+     "De ANWB",
+     "Het CBS",
+     "De ACM"
+    ],
+    "j": 3,
+    "u": "De ACM gaat kartelvorming tegen."
+   },
+   {
+    "v": "Waarom geeft de overheid subsidie op groene energie?",
+    "o": [
+     "Om de staatsschuld te verhogen",
+     "Om meer belasting op te halen",
+     "Om bedrijven te straffen",
+     "Om gewenst gedrag aan te moedigen"
+    ],
+    "j": 3,
+    "u": "Subsidie is positieve beïnvloeding."
+   },
+   {
+    "v": "Noor neemt zelf ontslag. Krijgt zij WW?",
+    "o": [
+     "Ja, maar alleen 70%",
+     "Ja, twee maanden lang 75%",
+     "Nee, het ontslag is haar eigen keuze",
+     "Ja, zolang zij wil"
+    ],
+    "j": 2,
+    "u": "WW is er voor ontslag buiten je schuld."
+   },
+   {
+    "v": "Ali is twee jaar ziek geweest en kan nog niet werken. Welke regeling volgt na de Ziektewet?",
+    "o": [
+     "AOW",
+     "Anw",
+     "WIA",
+     "WW"
+    ],
+    "j": 2,
+    "u": "De Ziektewet duurt maximaal 2 jaar."
+   },
+   {
+    "v": "Uit welk geld wordt de bijstand betaald?",
+    "o": [
+     "Winst van bedrijven",
+     "Leges van gemeenten",
+     "Premies van werknemers",
+     "Algemeen belastinggeld"
+    ],
+    "j": 3,
+    "u": "De bijstand is een sociale voorziening."
+   },
+   {
+    "v": "Waarom is er in de collectieve sector weinig marktwerking?",
+    "o": [
+     "Er is weinig concurrentie",
+     "Er zijn te veel bedrijven",
+     "Er zijn geen ambtenaren",
+     "Er is te veel winst"
+    ],
+    "j": 0,
+    "u": "De overheid heeft bijna geen concurrenten."
+   },
+   {
+    "v": "Een gemeente verkoopt haar zwembad aan een bedrijf. Hoe heet dat?",
+    "o": [
+     "Nationalisering",
+     "Subsidiëring",
+     "Privatisering",
+     "Kartelvorming"
+    ],
+    "j": 2,
+    "u": "Van de collectieve naar de particuliere sector."
+   },
+   {
+    "v": "Je koopt een spijkerbroek. Welke belasting betaal je via de winkel?",
+    "o": [
+     "Leges",
+     "Btw",
+     "Ozb",
+     "Loonbelasting"
+    ],
+    "j": 1,
+    "u": "Btw is een indirecte belasting."
+   },
+   {
+    "v": "De overheid lost een deel van de staatsschuld af. Wat betekent dat voor de uitgaven?",
+    "o": [
+     "Meer uitkeringen",
+     "Minder subsidies",
+     "Minder rentelasten",
+     "Meer rentelasten"
+    ],
+    "j": 2,
+    "u": "Over een kleinere schuld betaal je minder rente."
+   }
+  ],
+  "rek_a": [
+   {
+    "nr": 1,
+    "titel": "Goed of fout?",
+    "tekst": "",
+    "p": 5,
+    "delen": [
+     {
+      "id": "",
+      "v": "Goed of fout?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "De regering bestaat uit de koning en de ministers."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "De Eerste Kamer heeft 150 leden."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "De AOW is een sociale voorziening."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "In de particuliere sector willen bedrijven winst maken."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Accijns is een directe belasting."
+       }
+      ],
+      "uitw": [
+       "De Eerste Kamer heeft 75 leden, de Tweede Kamer 150.",
+       "De AOW is een volksverzekering.",
+       "Accijns is een indirecte belasting."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 2,
+    "titel": "Wie doet wat?",
+    "tekst": "",
+    "p": 9,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Kies bij elke taak het juiste niveau van de overheid.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Rijk",
+         "Provincie",
+         "Gemeente"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Nieuwe wetten maken"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Rijk",
+         "Provincie",
+         "Gemeente"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "Paspoorten uitgeven"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Rijk",
+         "Provincie",
+         "Gemeente"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Natuurbeheer"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Rijk",
+         "Provincie",
+         "Gemeente"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "Vuilnis ophalen"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Rijk",
+         "Provincie",
+         "Gemeente"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Toezicht houden op gemeenten"
+       }
+      ],
+      "uitw": [
+       "Rijk: wetten en veiligheid. Provincie: wegen, natuur, toezicht op gemeenten. Gemeente: vuilnis, paspoorten, trouwen."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Kies bij elk kenmerk de juiste sector.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Collectieve sector",
+         "Particuliere sector"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Geen winstoogmerk"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Collectieve sector",
+         "Particuliere sector"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Veel concurrentie"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Collectieve sector",
+         "Particuliere sector"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Veel baanzekerheid"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Collectieve sector",
+         "Particuliere sector"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Makkelijker ontslag"
+       }
+      ],
+      "uitw": [
+       "De collectieve sector maakt geen winst en heeft weinig concurrentie."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 3,
+    "titel": "Ontslagen",
+    "tekst": "Thomas heeft 8 jaar gewerkt. Hij verdiende €2.800 bruto per maand. Hij wordt buiten zijn schuld ontslagen. De eerste twee maanden is de WW 75% van het brutoloon, daarna 70%.",
+    "p": 5,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken de WW-uitkering van Thomas in de eerste maand.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         2100
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.5,
+        "label": "WW maand 1"
+       }
+      ],
+      "uitw": [
+       "(75 : 100) × 2.800 = €2.100"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken de WW-uitkering van Thomas in de vierde maand.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         1960
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.5,
+        "label": "WW maand 4"
+       }
+      ],
+      "uitw": [
+       "(70 : 100) × 2.800 = €1.960"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Hoeveel maanden heeft Thomas recht op WW?",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         8
+        ],
+        "p": 1,
+        "eenh": "",
+        "tol": 0.1,
+        "label": "Aantal maanden"
+       }
+      ],
+      "uitw": [
+       "Elk gewerkt jaar geeft 1 maand WW: 8 jaar = 8 maanden."
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Na die maanden heeft Thomas nog geen werk. Welke uitkering kan hij dan krijgen, en waaruit wordt die betaald?",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "3d",
+        "p": 2,
+        "label": "Na de WW",
+        "model": "De bijstand. Die wordt betaald uit het algemene belastinggeld.",
+        "g": [
+         {
+          "t": "bijstand",
+          "p": 1
+         },
+         {
+          "t": "betaald uit belastinggeld",
+          "p": 1
+         }
+        ],
+        "v": "Na die maanden heeft Thomas nog geen werk. Welke uitkering kan hij dan krijgen, en waaruit wordt die betaald?",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Na de WW volgt de bijstand, een sociale voorziening."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 4,
+    "titel": "Aan de pomp",
+    "tekst": "Een liter benzine kost €1,85. Daarin zit €0,55 kale prijs, €0,20 voor de pomphouder, €0,78 accijns en €0,32 btw.",
+    "p": 5,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken hoeveel euro belasting er in een liter benzine zit.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         1.1
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Belasting per liter"
+       }
+      ],
+      "uitw": [
+       "Accijns + btw = 0,78 + 0,32 = €1,10"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken hoeveel procent van de literprijs belasting is. Rond af op 1 decimaal.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         59.5
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.05,
+        "label": "Belasting"
+       }
+      ],
+      "uitw": [
+       "(deel : geheel) × 100 = (1,10 : 1,85) × 100 = 59,5%"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Is de belasting op benzine een directe of een indirecte belasting? Leg uit.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Direct",
+         "Indirect"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "De belasting is"
+       },
+       {
+        "type": "open",
+        "nr": "4c",
+        "p": 1,
+        "label": "Uitleg",
+        "model": "Indirect: je betaalt de belasting via de pomphouder. De pomphouder brengt de belasting naar de overheid.",
+        "g": [
+         {
+          "t": "je betaalt via de pomphouder, die de belasting afdraagt aan de overheid",
+          "p": 1
+         }
+        ],
+        "v": "Is de belasting op benzine een directe of een indirecte belasting? Leg uit.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Je betaalt haar bij de aankoop, via het bedrijf."
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Bij welk beginsel past accijns op benzine?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Draagkrachtbeginsel",
+         "Profijtbeginsel"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Accijns op benzine"
+       }
+      ],
+      "uitw": [
+       "Je betaalt omdat je de wegen gebruikt."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 5,
+    "titel": "De begroting van het Rijk",
+    "tekst": "Het Rijk heeft €395 miljard aan inkomsten en €418 miljard aan uitgaven.",
+    "p": 3,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken het begrotingssaldo in miljard euro. Typ een min-teken bij een tekort.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         -23
+        ],
+        "p": 1,
+        "eenh": "",
+        "tol": 0.5,
+        "label": "Saldo (miljard euro)"
+       }
+      ],
+      "uitw": [
+       "Inkomsten − uitgaven = 395 − 418 = −23: een tekort van €23 miljard."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Leg uit wat dit saldo betekent voor de staatsschuld en voor de rentelasten.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "5b",
+        "p": 2,
+        "label": "Gevolgen van het tekort",
+        "model": "Bij een tekort moet de overheid lenen, dus de staatsschuld loopt op. Over een hogere schuld betaalt de overheid meer rente.",
+        "g": [
+         {
+          "t": "de staatsschuld loopt op",
+          "p": 1
+         },
+         {
+          "t": "de rentelasten worden hoger",
+          "p": 1
+         }
+        ],
+        "v": "Leg uit wat dit saldo betekent voor de staatsschuld en voor de rentelasten.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Tekort → lenen → hogere schuld → meer rente."
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "toetsen": {
+  "t1": {
+   "n": 1,
+   "t": "oefentoets A",
+   "sub": "Hoofdstuk 7",
+   "min": 45,
+   "mc": "mc_a",
+   "open": null,
+   "rek": "rek_a"
+  }
+ },
+ "VERS": [
+  {
+   "n": 1,
+   "min": 45,
+   "pts": 39
+  }
+ ]
+}

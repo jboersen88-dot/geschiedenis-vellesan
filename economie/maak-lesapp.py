@@ -6,7 +6,21 @@
 import json, os, re, sys
 
 ECO = os.path.dirname(os.path.abspath(__file__))
-CONFIG = {"j3vh2": dict(uit="apps/jaar-3_havo-vwo_hoofdstuk-2.html", jaar=3, titel="De rol van geld")}
+# nr = het hoofdstuknummer dat de leerling ziet (de app van jaar 2 H2 rekent intern met hoofdstuk 2)
+CONFIG = {
+    "j3vh2": dict(uit="apps/jaar-3_havo-vwo_hoofdstuk-2.html", jaar=3, titel="De rol van geld"),
+    # jaar 4 mavo (18 nov 2026). H1 t/m H3: bron/lesapp.json en reken.js komen uit de lesapps van de docent
+    # (apps/jaar-4_hoofdstuk-*.html, die blijven staan als bron). H4 t/m H8 en 3 mavo H7 zijn nieuw geschreven.
+    "j4h1": dict(uit="apps/j4h1.html", jaar=4, nr=1, titel="Verdien je genoeg?"),
+    "j4h2": dict(uit="apps/j4h2.html", jaar=4, nr=2, titel="Geld moet rollen"),
+    "j4h3": dict(uit="apps/j4h3.html", jaar=4, nr=3, titel="We gaan voor winst"),
+    "j4h4": dict(uit="apps/j4h4.html", jaar=4, nr=4, titel="Aan het werk"),
+    "j4h5": dict(uit="apps/j4h5.html", jaar=4, nr=5, titel="Kan de overheid dat regelen?"),
+    "j4h6": dict(uit="apps/j4h6.html", jaar=4, nr=6, titel="De overheid en ons inkomen"),
+    "j4h7": dict(uit="apps/j4h7.html", jaar=4, nr=7, titel="Nederland handelsland"),
+    "j4h8": dict(uit="apps/j4h8.html", jaar=4, nr=8, titel="Welvaart wereldwijd"),
+    "j3h7": dict(uit="apps/j3h7.html", jaar=3, nr=7, titel="De overheid voor ons allemaal"),
+}
 
 name = sys.argv[1] if len(sys.argv) == 2 else ""
 if name not in CONFIG:
@@ -24,8 +38,10 @@ def sub(pat, new, n=1):
     assert k == n, (k, pat[:80])
 
 
+NR = C.get("nr", 2)
 for p in D["PARS"]:  # bouw-oefen.py leest de beeldnamen terug uit deze paden
     p["imgs"] = [["../img/%s/%s.jpg" % (name, b), t] for b, t in p["imgs"]]
+    p["ch"] = 2  # de app heeft één raster (pgrid2) voor het hoofdstuk
 for v in ["MAT", "PARS", "GOALS", "CHK", "VERS", "CARDS", "BANK", "SORT"]:
     sub(r"^var %s=.*?;$" % v, "var %s=%s;" % (v, J(D[v])))
 sub(r"^var NORIG=.*?;$", "var NORIG=%s;" % J({p: len(g) for p, g in D["GOALS"].items()}))
@@ -41,6 +57,10 @@ sub(r"^<script>/\* Edu-Racer[^\n]*\nwindow\.EDU_RACER_HTML=.*?</script>$\n", "")
 sub(r"^\s*'<button class=\"gtile\" data-game=\"racer\">.*?$\n", "")
 sub(r"LU_JAAR=2", "LU_JAAR=%d" % C["jaar"])
 sub(r"Jij en je geld<small", C["titel"] + "<small")
+if NR != 2:
+    sub(r'(?<=var\(--p5\)">)H2(?=</span>)', "H%d" % NR)
+    sub(r"Jouw route door hoofdstuk 2", "Jouw route door hoofdstuk %d" % NR)
+    sub(r"Dit moet je kunnen na hoofdstuk 2", "Dit moet je kunnen na hoofdstuk %d" % NR)
 sub(r'var cur="2\.1"',"var cur=%s" % J(D["PARS"][0]["id"]))
 out = os.path.join(ECO, C["uit"])
 open(out, "w", encoding="utf-8").write(s)

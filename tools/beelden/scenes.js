@@ -1,0 +1,39 @@
+// Scènes per hoofdstukmap: naam -> {bg:[kleur1,kleur2], d:[onderdelen]}. g(x, y, schaal, onderdeel) plaatst een onderdeel uit maak.js.
+module.exports = (K, g, P) => {
+  const GR = [K.green, K.deep], TE = [K.teal, "#1b5c56"], BE = ["#c2484d", "#7d2b33"], OC = ["#c9952f", "#8a6212"], IN = ["#2c5f7a", "#173848"];
+  return {
+    j4h5: {
+      overheid: { hero: 1, bg: GR, d: [g(600, 420, 2.1, P.overheid())] },
+      sectoren: { bg: GR, d: [g(330, 430, 1.55, P.overheid()), g(870, 450, 1.55, P.winkel())] },
+      sturen: { bg: TE, d: [g(330, 430, 1.5, P.label(K.coral)), g(600, 430, 1.2, P.pijl(K.cream)), g(880, 440, 1.5, P.munten(K.ochre, 5))] },
+      systemen: { bg: IN, d: [g(250, 450, 1.25, P.overheid()), g(600, 440, 1.3, P.weegschaal(0)), g(950, 460, 1.25, P.winkel())] },
+      groei: { bg: GR, d: [g(600, 410, 2.3, P.lijn([[-100, 50], [-55, 10], [-10, 34], [40, -20], [100, -72]]))] },
+      zekerheid: { bg: BE, d: [g(600, 330, 2.1, P.paraplu(K.cream, K.cream)), g(450, 560, 0.9, P.mens(K.ochre)), g(600, 560, 0.9, P.mens(K.aqua)), g(750, 560, 0.9, P.mens(K.coral))] },
+      solidair: { bg: TE, d: [g(300, 450, 1.5, P.mens(K.cream)), g(600, 400, 1.1, P.hart(K.coral)), g(900, 450, 1.5, P.mens(K.ochre))] },
+      begroting: { bg: OC, d: [g(360, 430, 1.7, P.papier()), g(830, 440, 1.6, P.staven([60, 85, 70, 100], K.cream, K.deep))] },
+      belastingen: { bg: GR, d: [g(320, 430, 1.6, P.kar()), g(610, 430, 1.1, P.pijl(K.ochre)), g(900, 430, 1.5, P.overheid())] },
+    },
+    j4h6: {
+      belasting: { hero: 1, bg: GR, d: [g(400, 420, 1.9, P.papier()), g(820, 440, 1.6, P.euro())] },
+      loonstrook: { bg: GR, d: [g(330, 420, 1.6, P.papier()), g(610, 430, 1.1, P.pijl(K.ochre)), g(890, 440, 1.5, P.munten(K.ochre, 4))] },
+      aangifte: { bg: IN, d: [g(320, 420, 1.6, P.papier()), g(610, 430, 1.1, P.pijl(K.coral)), g(900, 430, 1.5, P.overheid())] },
+      schijven: { bg: TE, d: [g(420, 430, 2.2, P.staven([52, 100], K.cream, K.coral)), g(880, 450, 1.3, P.reken())] },
+      vermogen: { bg: BE, d: [g(400, 430, 1.7, P.varken(K.cream, K.cream)), g(860, 450, 1.5, P.munten(K.ochre, 5))] },
+      verdelen: { bg: TE, d: [g(260, 440, 1.5, P.mens(K.cream)), g(600, 400, 1.2, P.pijl(K.ochre, 190)), g(600, 530, 0.5, P.euro()), g(940, 440, 1.5, P.mens(K.coral))] },
+      vergrijzing: { bg: IN, d: [g(600, 430, 2.2, P.staven([38, 56, 78, 100], K.cream, K.coral))] },
+      draagkracht: { bg: OC, d: [g(600, 420, 2.2, P.weegschaal(10, K.cream, K.deep))] },
+      profijt: { bg: GR, d: [g(600, 430, 2.2, P.auto())] },
+    },
+    j3h7: {
+      bestuur: { hero: 1, bg: IN, d: [g(600, 420, 2.1, P.overheid())] },
+      overheid: { bg: IN, d: [g(600, 400, 1.7, P.overheid()), g(280, 500, 0.9, P.huis()), g(920, 500, 0.9, P.huis(K.cream, K.ochre))] },
+      sturen: { bg: TE, d: [g(330, 430, 1.5, P.label(K.coral)), g(600, 430, 1.2, P.pijl(K.cream)), g(880, 440, 1.5, P.munten(K.ochre, 5))] },
+      zekerheid: { bg: BE, d: [g(600, 330, 2.1, P.paraplu(K.cream, K.cream)), g(450, 560, 0.9, P.mens(K.ochre)), g(600, 560, 0.9, P.mens(K.aqua)), g(750, 560, 0.9, P.mens(K.coral))] },
+      uitkering: { bg: GR, d: [g(300, 440, 1.5, P.tas()), g(600, 430, 1.1, P.pijl(K.ochre)), g(900, 430, 1.5, P.papier())] },
+      sectoren: { bg: GR, d: [g(330, 430, 1.55, P.overheid()), g(870, 450, 1.55, P.winkel())] },
+      gemeente: { bg: OC, d: [g(380, 440, 1.7, P.huis(K.cream, K.deep)), g(860, 450, 1.5, P.munten(K.cream, 5))] },
+      begroting: { bg: TE, d: [g(360, 430, 1.7, P.papier()), g(830, 440, 1.6, P.staven([60, 85, 70, 100], K.cream, K.coral))] },
+      tanken: { bg: GR, d: [g(420, 430, 1.9, P.auto()), g(900, 440, 1.3, P.euro())] },
+    },
+  };
+};

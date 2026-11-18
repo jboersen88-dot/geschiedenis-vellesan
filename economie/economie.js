@@ -55,8 +55,30 @@ var RIJK={"jaar-3/mavo/hoofdstuk-0-rekenvaardigheden":{map:"j3h0",soort:"reken",
   intro:"Inkomsten en uitgaven, sparen, lenen en verzekeren: vier paragrafen om slim met je geld om te gaan.",
   par:"Vier paragrafen over jouw geld.",reken:"Begroting, saldo, rente, lening en procenten, met de juiste formule.",games:"Een snelle quiz, Swipe & Scoor en begrippen-memory.",
   kaart:{"2.2":"bankapp"},/* sparen.jpg is een drieluik */
-  kleur:{"2.1":["var(--coral)","var(--berry)"],"2.2":["#7fd4c9","var(--teal)"],"2.3":["#f2c46b","var(--ochre)"],"2.4":["#b9d6cb","var(--green)"]}}};
-var NAAM={"jaar-2/mavo/kopie-van-hoofdstuk-1":"Hoofdstuk 1 · lesstof en PowerPoints"};
+  kleur:{"2.1":["var(--coral)","var(--berry)"],"2.2":["#7fd4c9","var(--teal)"],"2.3":["#f2c46b","var(--ochre)"],"2.4":["#b9d6cb","var(--green)"]}},
+  /* jaar 4 mavo (18 nov 2026): H5 en H6 in de opzet van jaar 2 H2; H1 t/m H4, H7 en H8 volgen */
+  "jaar-4/hoofdstuk-5-kan-de-overheid-dat-regelen":{map:"j4h5",kop:["Kan de overheid dat ","regelen?"],hero:"overheid-h",kaart:{"5.1":"sectoren-k","5.2":"systemen-k","5.3":"zekerheid-k","5.4":"begroting-k"},
+  alt:"Illustratie van een overheidsgebouw met zuilen en een vlag",
+  intro:"Wat regelt de overheid, hoe stuurt ze de economie, wie krijgt een uitkering en waar komt het geld vandaan? Vier paragrafen over de overheid.",
+  par:"Vier paragrafen over de overheid.",beeld:"Beelden: gemaakt voor deze site",reken:"Begrotingssaldo, miljoenen en miljarden, procenten, bbp en uitkeringen.",games:"Een snelle quiz, Swipe & Scoor en begrippen-memory.",
+  kleur:{"5.1":["var(--coral)","var(--berry)"],"5.2":["#7fd4c9","var(--teal)"],"5.3":["#f2c46b","var(--ochre)"],"5.4":["#b9d6cb","var(--green)"]}},
+  "jaar-4/hoofdstuk-6-de-overheid-en-ons-inkomen":{map:"j4h6",kop:["De overheid en ons ","inkomen"],hero:"belasting-h",kaart:{"6.1":"loonstrook-k","6.2":"schijven-k","6.3":"verdelen-k","6.4":"draagkracht-k"},
+  alt:"Illustratie van een aangifteformulier en een euromunt",
+  intro:"Hoeveel belasting betaal je over je loon en je spaargeld, en is dat eerlijk verdeeld? Vier paragrafen over belasting en inkomen.",
+  par:"Vier paragrafen over belasting.",beeld:"Beelden: gemaakt voor deze site",reken:"Nettoloon, belastbaar inkomen, box 1, box 3, heffingskorting en nivelleren.",games:"Een snelle quiz, Swipe & Scoor en begrippen-memory.",
+  kleur:{"6.1":["var(--coral)","var(--berry)"],"6.2":["#7fd4c9","var(--teal)"],"6.3":["#f2c46b","var(--ochre)"],"6.4":["#b9d6cb","var(--green)"]}},
+  /* 3 mavo H7: hoort bij het SE H5 + H6 van 4 mavo */
+  "jaar-3/mavo/hoofdstuk-7-de-overheid-voor-ons-allemaal":{map:"j3h7",kop:["De overheid voor ons ","allemaal"],hero:"bestuur-h",kaart:{"7.1":"overheid-k","7.2":"zekerheid-k","7.3":"sectoren-k","7.4":"begroting-k"},
+  alt:"Illustratie van een overheidsgebouw met zuilen en een vlag",
+  intro:"Wie bestuurt ons land, wie krijgt een uitkering en hoe komt het Rijk aan zijn geld? Vier paragrafen over de overheid.",
+  par:"Vier paragrafen over de overheid.",beeld:"Beelden: gemaakt voor deze site",reken:"Procenten, WW-uitkering, belasting in een prijs en het begrotingssaldo.",games:"Een snelle quiz, Swipe & Scoor en begrippen-memory.",
+  kleur:{"7.1":["var(--coral)","var(--berry)"],"7.2":["#7fd4c9","var(--teal)"],"7.3":["#f2c46b","var(--ochre)"],"7.4":["#b9d6cb","var(--green)"]}}};
+/* SE-pagina's in de nieuwe opzet: de hoofdstukken van het SE (leren) en de oefenstof (oefenen) op één plek */
+var SE={"jaar-4/se-h5-en-h6":{naam:"SE hoofdstuk 5, 6 en 7",kort:"H5 + H6 + H7 (3 mavo)",kop:["SE hoofdstuk 5, 6 ","en 7"],hero:"j4h5/overheid-h",
+  intro:"Alles voor het schoolexamen over de overheid: hoofdstuk 5 en 6 van dit jaar en hoofdstuk 7 uit 3 mavo. Leer eerst per hoofdstuk, oefen daarna en maak als laatste het oefen-SE.",
+  delen:["jaar-4/hoofdstuk-5-kan-de-overheid-dat-regelen","jaar-4/hoofdstuk-6-de-overheid-en-ons-inkomen","jaar-3/mavo/hoofdstuk-7-de-overheid-voor-ons-allemaal"],
+  toets:["se56/toets.html","Oefen-SE","Eén toets over alle drie de hoofdstukken, met klok. Meerkeuze en rekenen kijkt de site na."],beeld:"Beelden: gemaakt voor deze site"}};
+var NAAM={"jaar-4/se-h5-en-h6":"SE H5 + H6 + H7 (3 mavo)","jaar-2/mavo/kopie-van-hoofdstuk-1":"Hoofdstuk 1 · lesstof en PowerPoints"};
 
 var esc=function(t){return String(t).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});};
 var $=function(id){return document.getElementById(id);};
@@ -125,7 +147,7 @@ function jaar(){
   if(een)h+=rUitgelicht(een,j,n);
   else h+='<section class="rblk" id="hoofdstukken"><div class="wrap"><div class="rhead io"><div><div class="eyebrow">'+esc(naam(j,n))+'</div><h2>'+(hs.length===1?"Het hoofdstuk.":"De "+hs.length+" hoofdstukken.")+'</h2></div><p>Per hoofdstuk de PowerPoints, de uitleg, de filmpjes en de oefenstof. Kies het hoofdstuk waar je in de les mee bezig bent.</p></div><div class="rchaps vier">'+hs.map(kaart).join("")+'</div></div></section>';
   if(se.length)h+=rGolf(" top")+'<section class="rblk rapp" id="toetsen"><div class="wrap"><div class="rhead io"><div><div class="eyebrow">Toetsen en SE\'s</div><h2>Bereid je voor op de toets.</h2></div><p>Per SE de stof die je moet kennen, met oefentoetsen en nakijkbladen.</p></div><div class="roef'+(se.length===3?" n3":"")+'">'
-    +se.map(function(p,i){var t=titel(p),m=/\(([^)]*)\)|(H\s*\d+\s*\+\s*H?\s*\d+.*)$/i.exec(t);return '<a class="io" style="--d:'+i+'" href="'+url(p)+'"><b>'+esc((/SE\s*\d+/i.exec(t)||[t.split(" ")[0]])[0].replace(/\s+/,""))+'</b><small>'+esc(m?(m[1]||m[2]).replace(/\s+/g," "):"Toetsvoorbereiding")+'</small><h3>'+esc(/\d/.test(t)?"Schoolexamen "+(/SE\s*(\d+)/i.exec(t)||[,""])[1]:t)+'</h3><p>'+esc(telling(p)||"Toetsvoorbereiding")+'</p><span class="arr">→</span></a>';}).join("")+'</div></div></section>'+rGolf("");
+    +se.map(function(p,i){var z=SE[p.pad];if(z)return '<a class="io" style="--d:'+i+'" href="'+url(p)+'"><b>SE</b><small>'+esc(z.kort)+'</small><h3>'+esc(z.naam)+'</h3><p>Nieuw: leren per hoofdstuk, oefenen en een oefen-SE.</p><span class="arr">→</span></a>';var t=titel(p),m=/\(([^)]*)\)|(H\s*\d+\s*\+\s*H?\s*\d+.*)$/i.exec(t);return '<a class="io" style="--d:'+i+'" href="'+url(p)+'"><b>'+esc((/SE\s*\d+/i.exec(t)||[t.split(" ")[0]])[0].replace(/\s+/,""))+'</b><small>'+esc(m?(m[1]||m[2]).replace(/\s+/g," "):"Toetsvoorbereiding")+'</small><h3>'+esc(/\d/.test(t)?"Schoolexamen "+(/SE\s*(\d+)/i.exec(t)||[,""])[1]:t)+'</h3><p>'+esc(telling(p)||"Toetsvoorbereiding")+'</p><span class="arr">→</span></a>';}).join("")+'</div></div></section>'+rGolf("");
   h+='<section class="rblk rend"><div class="wrap"><div class="eyebrow" style="color:var(--coral)">Verkeerde plek?</div><h2>Ander jaar of niveau.</h2><p>Kies een ander jaar of ga terug naar het overzicht van Economie.</p><div class="rbtns">'+(j.niv.length>1?'<a class="rbtn primary" href="'+jaarUrl(j)+'">Ander niveau <span class="arr">→</span></a>':'')+'<a class="rbtn '+(j.niv.length>1?"ghost":"primary")+'" href="index.html">Ander jaar</a></div></div></section>'+rVoet(j.titel.toLowerCase()+" "+n.titel.toLowerCase(),n.beeld||"Foto's: Unsplash (gratis licentie)");
   document.body.innerHTML=h;rijkGedrag({},false);
   if(een)rUitgelichtVul(een);}
@@ -353,6 +375,7 @@ function hoofdstuk(){
   var p=P.filter(function(x){return x.pad===Q.get("p");})[0];if(!p){location.href="index.html";return;}
   var jn=jaarVan(p.pad),j=jn[0],n=jn[1],t=titel(p);document.title=t+" · Economie "+naam(j,n);
   if(RIJK[p.pad]){rijk(p,j,n,RIJK[p.pad]);return;}
+  if(SE[p.pad]){sePagina(p,j,n,SE[p.pad]);return;}
   var secs=p.secties.filter(function(s){return !s.every(function(b){return b.t==="kop"||(b.t==="p"&&b.tekst.length<3);});});
   if(secs.length&&secs[0].every(function(b){return b.t==="kop";}))secs.shift();
   /* Google Sites zet het bestand links en de kop ernaast: de kop komt hier boven het bestand */
@@ -381,6 +404,21 @@ function hoofdstuk(){
   document.body.innerHTML=h;rijkGedrag({},false);
   var lk=document.querySelector(".leerkaart");/* kaart pas tonen als de leeromgeving er echt is */
   if(lk){lk.hidden=true;fetch(lo[0],{method:"HEAD"}).then(function(r){if(r.ok)lk.hidden=false;}).catch(function(){});}}
+/* SE-pagina: deel 1 de hoofdstukken (leren), deel 2 oefenen per hoofdstuk en het oefen-SE */
+function sePagina(p,j,n,s){
+  var bn=jaarUrl(j,n),D=s.delen.map(function(pad){var c=RIJK[pad],q=P.filter(function(x){return x.pad===pad;})[0],jn=jaarVan(pad);return {pad:pad,c:c,nr:hNum(q)[0],uit:jn[0]!==j?" · "+naam(jn[0],jn[1]):""};});
+  document.title=s.naam+" · Economie "+naam(j,n);document.body.className="rijk";
+  var kaart=function(d,i){return '<a class="rchap io" style="--c:'+KLEUREN[i%4]+';--d:'+i+'" href="h.html?p='+encodeURIComponent(d.pad)+'"><img src="'+rSrc(d.c,d.c.hero)+'" alt="" loading="lazy"><span class="glare"></span><span class="num">'+d.nr+'</span><div class="body"><span class="tag">Hoofdstuk '+d.nr+esc(d.uit)+'</span><h3>'+esc(d.c.kop.join(""))+'</h3><p>'+esc(d.c.intro)+'</p><div class="links" id="separs'+i+'"></div></div></a>';};
+  var tegels=[[s.toets[0],s.toets[1],s.toets[2],"Start hier als je alles geleerd hebt"]].concat(D.map(function(d){return [d.c.map+"/oefen.html","Oefenen hoofdstuk "+d.nr,"Begrippen, rekenen, quiz en games"+(d.uit?" van hoofdstuk "+d.nr+" uit 3 mavo.":" van hoofdstuk "+d.nr+"."),""];}),D.map(function(d){return [d.c.map+"/toets.html","Oefentoets hoofdstuk "+d.nr,"Een oefentoets over alleen dit hoofdstuk.",""];}));
+  document.body.innerHTML=rNav([["index.html","Economie"],[bn,j.titel]],"#oefenen","Oefenen")
+  +rHero("img/"+s.hero+".jpg","","Economie · "+naam(j,n)+" · schoolexamen",s.kop[0],s.kop[1],s.intro,'<a class="rbtn primary" href="#leren">Naar de hoofdstukken <span class="arr">→</span></a><a class="rbtn ghost" href="'+s.toets[0]+'">'+esc(s.toets[1])+'</a>')
+  +'<nav class="rsteps rdelen" id="rsteps" aria-label="De twee delen van dit SE"><div class="wrap"><ol><li><a href="#leren"><b>1</b>Leren<span> · '+D.length+' hoofdstukken</span></a></li><li><a href="#oefenen"><b>2</b>Oefenen<span> · oefenlab en oefen-SE</span></a></li></ol></div></nav>'
+  +'<section class="rblk" id="leren"><div class="wrap"><div class="rhead io"><div><div class="eyebrow">Deel 1 · Leren</div><h2>'+(D.length===2?"Twee":D.length===3?"Drie":D.length)+' hoofdstukken voor dit SE.</h2></div><p>Open een hoofdstuk en loop de paragrafen na: de leerdoelen, de dia\'s uit de les, de filmpjes en de begrippen.</p></div><div class="rchaps'+(D.length===3?" drie":"")+'">'+D.map(kaart).join("")+'</div></div></section>'
+  +rGolf(" top")+'<section class="rblk rapp" id="oefenen"><div class="wrap"><div class="rhead io"><div><div class="eyebrow">Deel 2 · Oefenen</div><h2>Oefen tot je het kunt.</h2></div><p>Oefen eerst per hoofdstuk. Maak daarna het oefen-SE in één keer, zonder je boek. Je voortgang wordt op dit apparaat bewaard.</p></div><div class="roef">'
+  +tegels.map(function(g,i){return '<a class="io" style="--d:'+(i%4)+'" href="'+g[0]+'"><b>'+(i+1)+'</b><h3>'+esc(g[1])+'</h3><p>'+esc(g[2])+'</p>'+(g[3]?'<span class="rlive">'+esc(g[3])+'</span>':'')+'<span class="arr">→</span></a>';}).join("")+'</div></div></section>'+rGolf("")
+  +'<section class="rblk rend"><div class="wrap"><div class="eyebrow" style="color:var(--coral)">Klaar met dit SE?</div><h2>Verder met Economie.</h2><p>Kies een ander hoofdstuk van '+esc(naam(j,n))+' of ga terug naar het overzicht.</p><div class="rbtns"><a class="rbtn primary" href="'+bn+'">Alle hoofdstukken <span class="arr">→</span></a><a class="rbtn ghost" href="index.html">Ander jaar</a></div></div></section>'+rVoet(j.titel.toLowerCase()+" "+n.titel.toLowerCase(),s.beeld);
+  rijkGedrag({},false);
+  D.forEach(function(d,i){fetch(d.c.map+"/data.json").then(function(r){return r.json();}).then(function(X){var el=$("separs"+i);if(el)el.innerHTML=rSpans(X.pars.map(function(y){return y.id+" "+y.t;}));}).catch(function(){});});}
 /* Google Sites gebruikt koppen ook voor gewone zinnen: alleen korte koppen of paragraafkoppen tellen als kop */
 var PARKOP=/^((paragraaf|hoofdstuk|h)\s*\d|\d+(\.\d+)+|se\s*\d)/i;
 function echteKop(t){return PARKOP.test(t)||(t.length<=40&&!/[.!]$/.test(t)&&!/^(link|klik)/i.test(t)&&!/=/.test(t));}

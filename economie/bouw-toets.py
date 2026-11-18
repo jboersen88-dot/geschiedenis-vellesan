@@ -42,6 +42,15 @@ CONFIG = {
         lab="oefen.html#lab", opg="Opgave", rek="Opgaven", terug=("oefen.html#toets", "Terug naar de oefenomgeving"),
     ),
 }
+# jaar 4 mavo en 3 mavo H7 (18 nov 2026): nieuw geschreven oefentoetsen, zelfde soort vragen als de toetsen van de docent maar andere situaties
+for _m, _t in [("j4h1", "jaar 4 mavo · hoofdstuk 1"), ("j4h2", "jaar 4 mavo · hoofdstuk 2"), ("j4h3", "jaar 4 mavo · hoofdstuk 3"), ("j4h4", "jaar 4 mavo · hoofdstuk 4"),
+               ("j4h5", "jaar 4 mavo · hoofdstuk 5"), ("j4h6", "jaar 4 mavo · hoofdstuk 6"), ("j4h7", "jaar 4 mavo · hoofdstuk 7"), ("j4h8", "jaar 4 mavo · hoofdstuk 8"),
+               ("j3h7", "jaar 3 mavo · hoofdstuk 7")]:
+    CONFIG[_m] = dict(titel="Online oefentoets · Economie " + _t, key="eco-%s-toets-v1" % _m, bron=_m + "/bron", data=_m + "/bron/toetsen.json",
+                      lab="oefen.html#lab", opg="Opgave", rek="Opgaven", terug=("oefen.html#toets", "Terug naar de oefenomgeving"))
+# oefen-SE's van 4 mavo: één toets over alle hoofdstukken van het SE (se56 = H5 + H6 + H7 van 3 mavo)
+CONFIG["se56"] = dict(titel="Oefen-SE · Economie jaar 4 mavo · H5, H6 en H7", key="eco-se56-toets-v1", bron="se56/bron", data="se56/bron/toetsen.json",
+                      lab="../h.html?p=jaar-4%2Fse-h5-en-h6#oefenen", opg="Opgave", rek="Opgaven", terug=("../h.html?p=jaar-4%2Fse-h5-en-h6", "Terug naar het SE"))
 
 if len(sys.argv) != 2 or sys.argv[1] not in CONFIG:
     sys.exit("Gebruik: python3 -I economie/bouw-toets.py <" + "|".join(CONFIG) + ">")
