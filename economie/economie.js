@@ -144,7 +144,12 @@ var RIJK={"jaar-3/mavo/hoofdstuk-0-rekenvaardigheden":{map:"j3h0",soort:"reken",
   alt:"Illustratie van een fabriek met een doos en een winkel",
   intro:"Hoe wordt een product gemaakt, wat verdient een bedrijf eraan en hoe komt de prijs tot stand? Vier paragrafen met veel rekenwerk.",
   par:"Vier paragrafen over produceren, winst en de markt.",beeld:"Beelden: gemaakt voor deze site",reken:"Toegevoegde waarde, afschrijving, verkoopprijs en consumentenprijs, omzet en winst, marktaandeel, kostprijs en arbeidsproductiviteit.",games:"Een snelle quiz, Swipe & Scoor en begrippen-memory.",
-  kleur:{"6.1":["var(--coral)","var(--berry)"],"6.2":["#7fd4c9","var(--teal)"],"6.3":["#f2c46b","var(--ochre)"],"6.4":["#b9d6cb","var(--green)"]}}};
+  kleur:{"6.1":["var(--coral)","var(--berry)"],"6.2":["#7fd4c9","var(--teal)"],"6.3":["#f2c46b","var(--ochre)"],"6.4":["#b9d6cb","var(--green)"]}},
+  "jaar-3/mavo/hoofdstuk-8-over-economische-grenzen":{map:"j3h8",kop:["Over de ","grens"],hero:"grens-h",kaart:{"8.1":"haven-k","8.2":"protectie-k","8.3":"europa-k","8.4":"welvaart-k"},
+  alt:"Illustratie van een vrachtschip en een wereldbol",
+  intro:"Waarom handelen landen met elkaar, hoe beschermen ze hun eigen bedrijven, wat doet de EU en waarom zijn sommige landen arm? Vier paragrafen over de wereld.",
+  par:"Vier paragrafen over handel, de EU en welvaart in de wereld.",beeld:"Beelden: gemaakt voor deze site",reken:"De export- en importquote, het handelssaldo, invoerrechten en het inkomen per hoofd van de bevolking.",games:"Een snelle quiz, Swipe & Scoor en begrippen-memory.",
+  kleur:{"8.1":["var(--coral)","var(--berry)"],"8.2":["#7fd4c9","var(--teal)"],"8.3":["#f2c46b","var(--ochre)"],"8.4":["#b9d6cb","var(--green)"]}}};
 /* SE-pagina's in de nieuwe opzet: de hoofdstukken van het SE (leren) en de oefenstof (oefenen) op één plek */
 var SE={"jaar-4/se-h1-h2-h8":{naam:"SE hoofdstuk 1 en 2",kort:"H1 + H2",kop:["SE hoofdstuk 1 ","en 2"],hero:"j4h1/inkomen",
   intro:"Alles voor het schoolexamen over inkomen en geld: hoofdstuk 1 en 2. Leer eerst per hoofdstuk, oefen daarna en maak als laatste het oefen-SE.",
@@ -165,7 +170,7 @@ var SE={"jaar-4/se-h1-h2-h8":{naam:"SE hoofdstuk 1 en 2",kort:"H1 + H2",kop:["SE
   intro:"Alles voor het schoolexamen over bedrijven en werk: hoofdstuk 3 en 4. Leer eerst per hoofdstuk, oefen daarna en maak als laatste het oefen-SE.",
   delen:["jaar-4/hoofdstuk-3","jaar-4/hoofdstuk-4-aan-het-werk"],
   toets:["se34/toets.html","Oefen-SE","Eén toets over beide hoofdstukken, met klok. Meerkeuze en rekenen kijkt de site na."],beeld:"Beelden: gemaakt voor deze site"}};
-var NAAM={"jaar-3/mavo/hoofdstuk-6-productie-en-markt":"Hoofdstuk 6: Productie en markt","jaar-3/mavo/hoofdstuk-5-werkt-dat-zo":"Hoofdstuk 5: Is er werk voor jou?","jaar-3/mavo/hoofdstuk-4-ben-je-verzekerd":"Hoofdstuk 4: Kies je voor zekerheid?","jaar-3/mavo/se-1":"SE H1 + H3","jaar-3/mavo/hoofdstuk-1-hoe-groot-is-jouw-welvaart":"Hoofdstuk 1: Hoe welvarend ben jij?","jaar-4/se4":"SE H3 + H4","jaar-4/se-h1-h2-h8":"SE H1 + H2","jaar-4/se-h5-en-h6":"SE H5 + H6 + H7 (3 mavo)","jaar-2/mavo/kopie-van-hoofdstuk-1":"Hoofdstuk 1 · lesstof en PowerPoints"};
+var NAAM={"jaar-3/mavo/hoofdstuk-8-over-economische-grenzen":"Hoofdstuk 8: Over de grens","jaar-3/mavo/hoofdstuk-6-productie-en-markt":"Hoofdstuk 6: Productie en markt","jaar-3/mavo/hoofdstuk-5-werkt-dat-zo":"Hoofdstuk 5: Is er werk voor jou?","jaar-3/mavo/hoofdstuk-4-ben-je-verzekerd":"Hoofdstuk 4: Kies je voor zekerheid?","jaar-3/mavo/se-1":"SE H1 + H3","jaar-3/mavo/hoofdstuk-1-hoe-groot-is-jouw-welvaart":"Hoofdstuk 1: Hoe welvarend ben jij?","jaar-4/se4":"SE H3 + H4","jaar-4/se-h1-h2-h8":"SE H1 + H2","jaar-4/se-h5-en-h6":"SE H5 + H6 + H7 (3 mavo)","jaar-2/mavo/kopie-van-hoofdstuk-1":"Hoofdstuk 1 · lesstof en PowerPoints"};
 
 var esc=function(t){return String(t).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});};
 var $=function(id){return document.getElementById(id);};

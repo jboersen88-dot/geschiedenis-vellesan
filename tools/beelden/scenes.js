@@ -178,5 +178,16 @@ module.exports = (K, g, P) => {
       kosten: { bg: TE, d: [g(600, 430, 2.2, P.staven([110, 110, 60, 85, 110], K.cream, K.coral))] },
       mvo: { bg: GR, d: [g(400, 440, 1.7, P.plant()), g(860, 420, 1.6, P.wereld())] },
     },
+    j3h8: {
+      grens: { hero: 1, bg: GR, d: [g(420, 450, 1.8, P.schip()), g(900, 400, 1.5, P.wereld())] },
+      haven: { bg: TE, d: [g(420, 450, 1.8, P.schip()), g(900, 470, 1.3, P.doos())] },
+      handel: { bg: IN, d: [g(600, 420, 2.1, P.wereld())] },
+      protectie: { bg: OC, d: [g(400, 430, 1.7, P.hamer()), g(860, 460, 1.5, P.doos())] },
+      wereld: { bg: BE, d: [g(330, 450, 1.4, P.fabriek()), g(620, 420, 1.5, P.wereld()), g(900, 450, 1.4, P.plant())] },
+      europa: { bg: IN, d: [g(600, 420, 2.1, P.kring())] },
+      euro: { bg: GR, d: [g(600, 430, 2.2, P.euro())] },
+      welvaart: { bg: TE, d: [g(600, 420, 2.1, P.weegschaal())] },
+      hulp: { bg: OC, d: [g(400, 420, 1.7, P.hart()), g(860, 420, 1.6, P.wereld())] },
+    },
   };
 };

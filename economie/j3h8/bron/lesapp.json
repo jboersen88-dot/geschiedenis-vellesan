@@ -1,0 +1,1058 @@
+{
+ "KEY": "h8m3-app-v1",
+ "PARS": [
+  {
+   "id": "8.1",
+   "t": "Waarom de grens over?",
+   "c": "var(--p1)",
+   "file": "1PJhzkxzxn_2WXkbAtV_e9bQaRApYoCtQ",
+   "x": [],
+   "sum": "Import, export en wederuitvoer, waarom landen handelen, de export- en importquote en de betalingsbalans.",
+   "imgs": [
+    [
+     "haven",
+     "De haven: hier komt de handel binnen"
+    ],
+    [
+     "handel",
+     "Handel met de hele wereld"
+    ]
+   ],
+   "q": [
+    "Noem twee voordelen als een land veel exporteert.",
+    "Wat wordt er bedoeld met wederuitvoer?",
+    "Waarom heeft wederuitvoer een kleine toegevoegde waarde?",
+    "Noem drie redenen waarom een land producten importeert.",
+    "Wat wordt er bedoeld met een betalingsbalans?",
+    "Wat is het nationaal inkomen?",
+    "Hoe bereken je de exportquote?",
+    "Hoe bereken je de importquote?",
+    "Heeft Nederland een open of een gesloten economie? Leg je antwoord uit."
+   ]
+  },
+  {
+   "id": "8.2",
+   "t": "Wereldwijde handel",
+   "c": "var(--p2)",
+   "file": "1VrWBsuWCbFuB_sKyjtK-H2o1ymkAdT7u",
+   "x": [],
+   "sum": "De internationale concurrentiepositie, protectiemaatregelen, vrijhandel, de WTO en internationale arbeidsverdeling.",
+   "imgs": [
+    [
+     "protectie",
+     "Protectie: de eigen bedrijven beschermen"
+    ],
+    [
+     "wereld",
+     "Elk land maakt waar het goed in is"
+    ]
+   ],
+   "q": [
+    "Wat wordt er bedoeld met de internationale concurrentiepositie?",
+    "Bedenk twee manieren waarop Nederland zijn internationale concurrentiepositie kan versterken.",
+    "Wat wordt er bedoeld met protectiemaatregelen?",
+    "Geef twee voorbeelden van protectiemaatregelen en leg uit hoe ze werken.",
+    "Wat kan een nadeel zijn van protectiemaatregelen?",
+    "Wat wordt er bedoeld met internationale arbeidsverdeling?",
+    "Wat is de WTO en wat is het belangrijkste doel van de WTO?"
+   ]
+  },
+  {
+   "id": "8.3",
+   "t": "Samenwerken is slimmer",
+   "c": "var(--p3)",
+   "file": "",
+   "x": [],
+   "sum": "De Europese Unie en de interne markt, vrij verkeer, de EMU en de euro, en de taken van de ECB.",
+   "imgs": [
+    [
+     "europa",
+     "De Europese Unie: samen één markt"
+    ],
+    [
+     "euro",
+     "Eén munt: de euro"
+    ]
+   ],
+   "q": [
+    "Binnen de EU is er vrij verkeer van drie dingen. Welke?",
+    "Noem twee voordelen van de open grenzen in Europa.",
+    "Wat wordt er bedoeld met de EMU?",
+    "Noem twee belangrijke voordelen van de euro.",
+    "Wat zijn de belangrijkste taken van de ECB?",
+    "Het pond daalt ten opzichte van de euro. Wat betekent dat voor de import van Engeland? Leg dit uit."
+   ]
+  },
+  {
+   "id": "8.4",
+   "t": "Is de welvaart eerlijk verdeeld?",
+   "c": "var(--p4)",
+   "file": "143js0GMxeRWMfRqGXp0JpfTPlsKmoBcL",
+   "x": [],
+   "sum": "Het inkomen per hoofd van de bevolking, kenmerken van ontwikkelingslanden, de vicieuze cirkel, hulp en Fairtrade.",
+   "imgs": [
+    [
+     "welvaart",
+     "Niet overal is de welvaart even groot"
+    ],
+    [
+     "hulp",
+     "Hulp: bij een ramp en voor de lange termijn"
+    ]
+   ],
+   "q": [
+    "Hoe bereken je het inkomen (bbp) per hoofd van de bevolking?",
+    "Waarom zegt het inkomen per hoofd niet alles over de welvaart in een land?",
+    "Noem drie kenmerken van een ontwikkelingsland.",
+    "Leg uit hoe het ontbreken van goed onderwijs leidt tot economische problemen.",
+    "Wat is het verschil tussen noodhulp en structurele hulp?",
+    "Wat wordt er bedoeld met gebonden hulp?",
+    "Wat doet Fairtrade?"
+   ]
+  }
+ ],
+ "GOALS": {
+  "8.1": [
+   "Ik kan uitleggen wat import, export en wederuitvoer zijn.",
+   "Ik kan drie redenen noemen waarom een land importeert.",
+   "Ik kan uitleggen waarom export belangrijk is voor Nederland.",
+   "Ik kan de exportquote en de importquote uitrekenen.",
+   "Ik kan uitleggen wat een open economie en de betalingsbalans zijn."
+  ],
+  "8.2": [
+   "Ik kan uitleggen wat de internationale concurrentiepositie is.",
+   "Ik kan vier protectiemaatregelen noemen en uitleggen.",
+   "Ik kan een nadeel van protectie noemen.",
+   "Ik kan uitleggen wat vrijhandel is en wat de WTO doet.",
+   "Ik kan uitleggen wat internationale arbeidsverdeling en globalisering zijn."
+  ],
+  "8.3": [
+   "Ik kan uitleggen wat de interne markt van de EU is.",
+   "Ik kan de drie soorten vrij verkeer noemen.",
+   "Ik kan uitleggen wat de EMU is.",
+   "Ik kan twee voordelen van de euro noemen.",
+   "Ik kan uitleggen wat de ECB doet."
+  ],
+  "8.4": [
+   "Ik kan het inkomen per hoofd van de bevolking uitrekenen.",
+   "Ik kan drie kenmerken van een ontwikkelingsland noemen.",
+   "Ik kan uitleggen wat een vicieuze cirkel is.",
+   "Ik kan het verschil uitleggen tussen noodhulp en structurele hulp.",
+   "Ik kan uitleggen wat Fairtrade doet."
+  ]
+ },
+ "CHK": [
+  [
+   "Import, export en wederuitvoer uit elkaar houden",
+   "8.1",
+   "quiz"
+  ],
+  [
+   "De export- en importquote uitrekenen",
+   "8.1",
+   "reken",
+   "quote"
+  ],
+  [
+   "Het handelssaldo uitrekenen",
+   "8.1",
+   "reken",
+   "saldo"
+  ],
+  [
+   "De protectiemaatregelen herkennen",
+   "8.2",
+   "quiz"
+  ],
+  [
+   "Rekenen met invoerrechten",
+   "8.2",
+   "reken",
+   "invoer"
+  ],
+  [
+   "De EU, de EMU en de ECB uitleggen",
+   "8.3",
+   "quiz"
+  ],
+  [
+   "Kenmerken van ontwikkelingslanden en soorten hulp",
+   "8.4",
+   "quiz"
+  ],
+  [
+   "Het inkomen per hoofd uitrekenen",
+   "8.4",
+   "reken",
+   "hoofd"
+  ]
+ ],
+ "MAT": {},
+ "VERS": [],
+ "FILMS": [],
+ "CARDS": [
+  [
+   "8.1",
+   "Export",
+   "Goederen en diensten verkopen aan het buitenland. Ook wel uitvoer.",
+   "Nederlandse machines naar Duitsland."
+  ],
+  [
+   "8.1",
+   "Import",
+   "Goederen en diensten kopen uit het buitenland. Ook wel invoer.",
+   "Rijst, cacaobonen en kleding."
+  ],
+  [
+   "8.1",
+   "Wederuitvoer",
+   "Producten invoeren en daarna, bijna zonder bewerking, weer uitvoeren.",
+   "Via de haven van Rotterdam door naar andere landen."
+  ],
+  [
+   "8.1",
+   "Nationaal inkomen",
+   "Alles wat in een land in een jaar samen wordt verdiend. Ook wel bbp.",
+   "De som van alle inkomens in Nederland."
+  ],
+  [
+   "8.1",
+   "Exportquote",
+   "De waarde van de export in procenten van het nationaal inkomen.",
+   "(export : nationaal inkomen) × 100."
+  ],
+  [
+   "8.1",
+   "Importquote",
+   "De waarde van de import in procenten van het nationaal inkomen.",
+   "(import : nationaal inkomen) × 100."
+  ],
+  [
+   "8.1",
+   "Open economie",
+   "Een land met veel import en export in verhouding tot het nationaal inkomen.",
+   "Nederland is een handelsland."
+  ],
+  [
+   "8.1",
+   "Gesloten economie",
+   "Een land met weinig import en export.",
+   "Noord-Korea."
+  ],
+  [
+   "8.1",
+   "Betalingsbalans",
+   "Overzicht van alle ontvangsten uit en betalingen aan het buitenland in een jaar.",
+   "Export levert geld op, import kost geld."
+  ],
+  [
+   "8.1",
+   "Handelsbalans",
+   "Overzicht van de waarde van de export en de import van goederen.",
+   "Export 485 miljard, import 462 miljard: een overschot."
+  ],
+  [
+   "8.2",
+   "Internationale concurrentiepositie",
+   "Hoe goed bedrijven uit een land kunnen concurreren met bedrijven uit andere landen.",
+   "Goede kwaliteit voor een aantrekkelijke prijs."
+  ],
+  [
+   "8.2",
+   "Protectiemaatregelen",
+   "Maatregelen van de overheid om de eigen bedrijven te beschermen tegen buitenlandse concurrentie.",
+   "Ook wel handelsbelemmeringen."
+  ],
+  [
+   "8.2",
+   "Importheffingen",
+   "Belasting op producten uit het buitenland. Die worden daardoor duurder. Ook wel invoerrechten.",
+   "10% extra op een fiets van buiten de EU."
+  ],
+  [
+   "8.2",
+   "Contingentering",
+   "Er mag maar een maximale hoeveelheid van een product worden ingevoerd.",
+   "Hoogstens 10.000 ton staal per jaar."
+  ],
+  [
+   "8.2",
+   "Invoerverbod",
+   "Een product mag helemaal niet worden ingevoerd.",
+   "Vlees dat niet aan de regels voldoet."
+  ],
+  [
+   "8.2",
+   "Exportsubsidie",
+   "Geld van de overheid voor bedrijven die exporteren. Zij kunnen hun producten goedkoper aanbieden.",
+   "Een boer krijgt geld per ton die hij uitvoert."
+  ],
+  [
+   "8.2",
+   "Vrijhandel",
+   "Handel tussen landen zonder protectiemaatregelen.",
+   "Geen importheffingen en geen invoerverboden."
+  ],
+  [
+   "8.2",
+   "WTO",
+   "Wereldhandelsorganisatie. Wil vrijhandel en eerlijke concurrentie tussen landen.",
+   "Landen maken er afspraken over handel."
+  ],
+  [
+   "8.2",
+   "Internationale arbeidsverdeling",
+   "Elk land maakt de producten die het het beste en het goedkoopste kan maken.",
+   "Kleding uit Bangladesh, machines uit Nederland."
+  ],
+  [
+   "8.2",
+   "Globalisering",
+   "Landen over de hele wereld raken steeds meer met elkaar verbonden door handel.",
+   "Onderdelen van één telefoon komen uit veel landen."
+  ],
+  [
+   "8.3",
+   "Europese Unie (EU)",
+   "Samenwerking van Europese landen, onder andere op economisch gebied.",
+   "Nederland is lid."
+  ],
+  [
+   "8.3",
+   "Interne markt",
+   "Binnen de EU spelen de grenzen voor de handel geen rol.",
+   "Vrij verkeer van goederen en diensten, personen en kapitaal."
+  ],
+  [
+   "8.3",
+   "Vrij verkeer van personen",
+   "Inwoners van een EU-land mogen in elk ander EU-land wonen en werken.",
+   "Werken in België."
+  ],
+  [
+   "8.3",
+   "Vrij verkeer van kapitaal",
+   "Je mag sparen of investeren in een ander EU-land.",
+   "Een spaarrekening bij een Duitse bank."
+  ],
+  [
+   "8.3",
+   "EMU",
+   "Economische en Monetaire Unie: de EU-landen die samen de euro hebben.",
+   "Om mee te doen moet een land aan eisen voldoen."
+  ],
+  [
+   "8.3",
+   "Euro",
+   "De gezamenlijke munt van de EMU-landen.",
+   "Geen geld wisselen en prijzen makkelijk vergelijken."
+  ],
+  [
+   "8.3",
+   "ECB",
+   "Europese Centrale Bank: de centrale bank van de eurolanden. Bewaakt de waarde van de euro en bepaalt de rente.",
+   "De ECB geeft ook de bankbiljetten uit."
+  ],
+  [
+   "8.3",
+   "Wisselkoers",
+   "De waarde van een munt in een andere munt.",
+   "Hoeveel pond krijg je voor één euro?"
+  ],
+  [
+   "8.4",
+   "Inkomen per hoofd van de bevolking",
+   "Het gemiddelde inkomen per inwoner van een land.",
+   "nationaal inkomen : aantal inwoners."
+  ],
+  [
+   "8.4",
+   "Ontwikkelingsland",
+   "Een arm land met een laag inkomen per hoofd van de bevolking.",
+   "Ondervoeding, weinig schoon drinkwater en slechte zorg."
+  ],
+  [
+   "8.4",
+   "Collectieve voorzieningen",
+   "Voorzieningen van de overheid waar iedereen gebruik van kan maken.",
+   "Onderwijs, zorg en wegen."
+  ],
+  [
+   "8.4",
+   "Monocultuur",
+   "Een land is afhankelijk van de export van één of enkele producten.",
+   "Alleen cacao of alleen olie."
+  ],
+  [
+   "8.4",
+   "Vicieuze cirkel",
+   "Het ene probleem veroorzaakt het andere, en zo blijft het doorgaan. Een arm land blijft daardoor arm.",
+   "Armoede, geen onderwijs, alleen ongeschoold werk, laag loon, armoede."
+  ],
+  [
+   "8.4",
+   "Noodhulp",
+   "Snelle hulp na een ramp, zodat mensen kunnen overleven.",
+   "Voedsel, medicijnen en tenten."
+  ],
+  [
+   "8.4",
+   "Structurele hulp",
+   "Hulp voor de lange termijn, zodat een land zichzelf kan redden.",
+   "Geld voor scholen en wegen."
+  ],
+  [
+   "8.4",
+   "Gebonden hulp",
+   "Het land dat hulp krijgt, moet het geld besteden in het land dat de hulp geeft.",
+   "Hulpgeld dat aan Nederlandse producten besteed moet worden."
+  ],
+  [
+   "8.4",
+   "Fairtrade",
+   "Organisatie die boeren in ontwikkelingslanden een eerlijke, gegarandeerde prijs geeft.",
+   "Chocolade of koffie met het Fairtrade-keurmerk."
+  ]
+ ],
+ "BANK": [
+  [
+   "8.1",
+   "Wat is export?",
+   [
+    "Verkopen aan het buitenland",
+    "Kopen uit het buitenland",
+    "Doorvoeren via de haven",
+    "Verkopen in eigen land"
+   ],
+   "Export heet ook uitvoer."
+  ],
+  [
+   "8.1",
+   "Wat is een voordeel van veel export voor een land?",
+   [
+    "Meer werkgelegenheid",
+    "Meer invoerrechten",
+    "Minder productie",
+    "Minder bedrijven"
+   ],
+   "Meer productie betekent meer banen. De overheid krijgt ook meer belasting."
+  ],
+  [
+   "8.1",
+   "Wat is wederuitvoer?",
+   [
+    "Ingevoerde producten bijna onbewerkt weer uitvoeren",
+    "Uitgevoerde producten later weer terugkopen",
+    "Producten uitvoeren die hier zijn gemaakt",
+    "Producten invoeren voor gebruik in eigen land"
+   ],
+   "Bijvoorbeeld via de haven van Rotterdam."
+  ],
+  [
+   "8.1",
+   "Waarom levert wederuitvoer weinig op voor Nederland?",
+   [
+    "De toegevoegde waarde is klein",
+    "De invoerrechten zijn hoog",
+    "De producten zijn verboden",
+    "De haven is te klein"
+   ],
+   "De producten worden hier nauwelijks bewerkt."
+  ],
+  [
+   "8.1",
+   "Waarom importeert Nederland cacaobonen?",
+   [
+    "Ons klimaat is er niet geschikt voor",
+    "De teelt is in Nederland verboden",
+    "De EU verplicht landen tot import",
+    "Onze boeren hebben geen tijd"
+   ],
+   "Sommige producten groeien hier niet."
+  ],
+  [
+   "8.1",
+   "Waarom komt veel kleding uit Bangladesh?",
+   [
+    "De productie is daar goedkoper",
+    "Het klimaat is daar kouder",
+    "De kwaliteit is daar altijd beter",
+    "De winkels zijn daar groter"
+   ],
+   "Goedkopere productie is een reden om te importeren."
+  ],
+  [
+   "8.1",
+   "Welke reden om te importeren klopt ook?",
+   [
+    "Een ruimere keuze voor consumenten",
+    "Een hogere prijs voor consumenten",
+    "Een lagere kwaliteit van producten",
+    "Een kleinere keuze in de winkels"
+   ],
+   "Denk aan auto's en voeding uit andere landen."
+  ],
+  [
+   "8.1",
+   "Wat is de exportquote?",
+   [
+    "De export in procenten van het nationaal inkomen",
+    "De import in procenten van het nationaal inkomen",
+    "Het aantal producten dat een land mag uitvoeren",
+    "De belasting die een land heft op de uitvoer"
+   ],
+   "(export : nationaal inkomen) × 100."
+  ],
+  [
+   "8.1",
+   "Nationaal inkomen 800 miljard, export 600 miljard. Wat is de exportquote?",
+   [
+    "75%",
+    "25%",
+    "133%",
+    "60%"
+   ],
+   "(600 : 800) × 100 = 75%."
+  ],
+  [
+   "8.1",
+   "Wat voor economie heeft Nederland?",
+   [
+    "Een open economie",
+    "Een gesloten economie",
+    "Een planeconomie",
+    "Een kleine economie"
+   ],
+   "Nederland heeft een hoge export- en importquote."
+  ],
+  [
+   "8.1",
+   "Wat staat er op de betalingsbalans?",
+   [
+    "Ontvangsten uit en betalingen aan het buitenland",
+    "De inkomsten en uitgaven van de rijksoverheid",
+    "De winst en het verlies van alle bedrijven",
+    "De spaartegoeden en schulden van gezinnen"
+   ],
+   "Het gaat om geld dat de grens over gaat."
+  ],
+  [
+   "8.2",
+   "Wat is de internationale concurrentiepositie?",
+   [
+    "Hoe goed een land kan concurreren met andere landen",
+    "Hoeveel landen lid zijn van de Europese Unie",
+    "Hoeveel producten een land per jaar mag invoeren",
+    "Hoe hoog de belasting is op producten uit het buitenland"
+   ],
+   "Het gaat om kwaliteit en prijs."
+  ],
+  [
+   "8.2",
+   "Hoe kan een land zijn concurrentiepositie versterken?",
+   [
+    "Goedkoper produceren met automatisering",
+    "De lonen elk jaar flink verhogen",
+    "Minder geld uitgeven aan technologie",
+    "De kwaliteit van producten verlagen"
+   ],
+   "Een lagere kostprijs maakt de prijs aantrekkelijker."
+  ],
+  [
+   "8.2",
+   "Waarvoor dienen protectiemaatregelen?",
+   [
+    "De eigen bedrijven beschermen",
+    "De import goedkoper maken",
+    "De vrijhandel stimuleren",
+    "De export verbieden"
+   ],
+   "Buitenlandse concurrentie krijgt het moeilijker."
+  ],
+  [
+   "8.2",
+   "Wat is een importheffing?",
+   [
+    "Belasting op producten uit het buitenland",
+    "Subsidie op producten voor het buitenland",
+    "Een verbod op producten uit het buitenland",
+    "Een maximum aan producten uit het buitenland"
+   ],
+   "Het product wordt daardoor duurder."
+  ],
+  [
+   "8.2",
+   "Er mag hoogstens 5.000 ton suiker per jaar worden ingevoerd. Hoe heet dat?",
+   [
+    "Contingentering",
+    "Exportsubsidie",
+    "Invoerverbod",
+    "Importheffing"
+   ],
+   "Een maximale hoeveelheid import."
+  ],
+  [
+   "8.2",
+   "Een land laat geen vuurwerk uit het buitenland meer toe. Hoe heet dat?",
+   [
+    "Invoerverbod",
+    "Contingentering",
+    "Exportsubsidie",
+    "Vrijhandel"
+   ],
+   "Het product mag helemaal niet worden ingevoerd."
+  ],
+  [
+   "8.2",
+   "Wat doet een exportsubsidie?",
+   [
+    "Export goedkoper maken",
+    "Import duurder maken",
+    "Import verbieden",
+    "Export verbieden"
+   ],
+   "De overheid geeft geld aan bedrijven die exporteren."
+  ],
+  [
+   "8.2",
+   "Wat is een nadeel van protectie voor de consument?",
+   [
+    "De producten worden duurder",
+    "De producten worden goedkoper",
+    "De keuze in de winkel wordt groter",
+    "De kwaliteit wordt altijd beter"
+   ],
+   "Er is minder concurrentie uit het buitenland."
+  ],
+  [
+   "8.2",
+   "Wat wil de WTO?",
+   [
+    "Vrijhandel en eerlijke concurrentie",
+    "Hogere importheffingen voor iedereen",
+    "Eén munt voor alle landen ter wereld",
+    "Minder handel tussen rijke landen"
+   ],
+   "De WTO is de Wereldhandelsorganisatie."
+  ],
+  [
+   "8.2",
+   "Wat is internationale arbeidsverdeling?",
+   [
+    "Elk land maakt waar het het beste in is",
+    "Elk land maakt alle producten zelf",
+    "Elk land heeft evenveel werknemers",
+    "Elk land betaalt dezelfde lonen"
+   ],
+   "Zo wordt er goedkoper geproduceerd."
+  ],
+  [
+   "8.2",
+   "Wat is een nadeel van internationale arbeidsverdeling voor een land?",
+   [
+    "Er gaan banen verloren",
+    "Er komen te veel banen bij",
+    "De producten worden duurder",
+    "De handel wordt verboden"
+   ],
+   "Productie verhuist naar landen waar het goedkoper kan."
+  ],
+  [
+   "8.3",
+   "Wat is de interne markt van de EU?",
+   [
+    "Binnen de EU spelen grenzen voor de handel geen rol",
+    "Een grote markthal in Brussel voor alle EU-landen",
+    "De markt voor producten van buiten de EU",
+    "Een afspraak over de prijzen in alle EU-landen"
+   ],
+   "Er is vrij verkeer binnen de EU."
+  ],
+  [
+   "8.3",
+   "Waarvan is er vrij verkeer in de EU?",
+   [
+    "Goederen en diensten, personen en kapitaal",
+    "Goederen en diensten, belastingen en lonen",
+    "Personen en kapitaal, wetten en belastingen",
+    "Kapitaal en lonen, personen en regeringen"
+   ],
+   "Dat zijn de drie soorten vrij verkeer."
+  ],
+  [
+   "8.3",
+   "Een Nederlander gaat in Duitsland werken. Welk vrij verkeer is dat?",
+   [
+    "Vrij verkeer van personen",
+    "Vrij verkeer van kapitaal",
+    "Vrij verkeer van goederen",
+    "Vrij verkeer van diensten"
+   ],
+   "Je mag in elk EU-land wonen en werken."
+  ],
+  [
+   "8.3",
+   "Wat is een voordeel van de open grenzen voor bedrijven?",
+   [
+    "Geen invoerrechten binnen de EU",
+    "Geen btw meer voor de klanten",
+    "Geen loon meer voor het personeel",
+    "Geen concurrentie uit andere landen"
+   ],
+   "Handelen met andere EU-landen is makkelijker en goedkoper."
+  ],
+  [
+   "8.3",
+   "Wat is de EMU?",
+   [
+    "De EU-landen die samen de euro hebben",
+    "De landen die lid zijn van de WTO",
+    "De centrale bank van de eurolanden",
+    "Het bestuur van de Europese Unie"
+   ],
+   "Economische en Monetaire Unie."
+  ],
+  [
+   "8.3",
+   "Wat is een voordeel van de euro?",
+   [
+    "Je hoeft geen geld te wisselen",
+    "Je betaalt nergens meer btw",
+    "De prijzen zijn overal gelijk",
+    "De lonen zijn overal gelijk"
+   ],
+   "Je kunt prijzen ook makkelijk vergelijken."
+  ],
+  [
+   "8.3",
+   "Wat is een taak van de ECB?",
+   [
+    "De waarde van de euro bewaken",
+    "De belasting in eurolanden innen",
+    "De lonen in eurolanden bepalen",
+    "De grenzen van de EU bewaken"
+   ],
+   "De ECB bepaalt ook de rente."
+  ],
+  [
+   "8.3",
+   "De ECB verlaagt de rente. Wat doen consumenten dan meestal?",
+   [
+    "Meer lenen en meer kopen",
+    "Meer sparen en minder kopen",
+    "Minder lenen en meer sparen",
+    "Niets, de rente telt niet"
+   ],
+   "Lenen wordt goedkoper en sparen levert minder op."
+  ],
+  [
+   "8.3",
+   "Het pond wordt minder waard ten opzichte van de euro. Wat gebeurt er met Nederlandse producten in Engeland?",
+   [
+    "Die worden daar duurder",
+    "Die worden daar goedkoper",
+    "Die blijven even duur",
+    "Die worden verboden"
+   ],
+   "Engelsen moeten meer ponden betalen voor dezelfde euro's."
+  ],
+  [
+   "8.3",
+   "Het pond wordt minder waard. Wat gebeurt er met de export van Engeland naar Nederland?",
+   [
+    "Die stijgt",
+    "Die daalt",
+    "Die blijft gelijk",
+    "Die stopt"
+   ],
+   "Engelse producten worden voor ons goedkoper."
+  ],
+  [
+   "8.4",
+   "Hoe bereken je het inkomen per hoofd van de bevolking?",
+   [
+    "nationaal inkomen : aantal inwoners",
+    "nationaal inkomen × aantal inwoners",
+    "aantal inwoners : nationaal inkomen",
+    "export : nationaal inkomen"
+   ],
+   "Het is het gemiddelde inkomen per inwoner."
+  ],
+  [
+   "8.4",
+   "Waarom zegt het inkomen per hoofd niet alles over de welvaart?",
+   [
+    "Het is een gemiddelde: je ziet de verdeling niet",
+    "Het wordt maar één keer in de tien jaar gemeten",
+    "Het telt alleen de inkomens van de rijken mee",
+    "Het is in elk land van de wereld precies gelijk"
+   ],
+   "Een kleine groep kan heel veel verdienen."
+  ],
+  [
+   "8.4",
+   "Welk kenmerk hoort bij een ontwikkelingsland?",
+   [
+    "Slechte gezondheidszorg",
+    "Een hoog inkomen per hoofd",
+    "Een trage bevolkingsgroei",
+    "Veel schoon drinkwater"
+   ],
+   "Ook ondervoeding en een snelle bevolkingsgroei."
+  ],
+  [
+   "8.4",
+   "Wat exporteren ontwikkelingslanden vooral?",
+   [
+    "Grondstoffen en landbouwproducten",
+    "Machines en medische apparaten",
+    "Auto's en elektronische producten",
+    "Diensten van banken en verzekeraars"
+   ],
+   "Die leveren per product weinig op."
+  ],
+  [
+   "8.4",
+   "Wat is een monocultuur?",
+   [
+    "Afhankelijk zijn van één of enkele exportproducten",
+    "Maar één taal spreken in het hele land",
+    "Alleen handel drijven met één ander land",
+    "Eén bedrijf dat alle producten verkoopt"
+   ],
+   "Daalt de prijs van dat product, dan heeft het hele land een probleem."
+  ],
+  [
+   "8.4",
+   "Hoe leidt slecht onderwijs tot armoede?",
+   [
+    "Mensen vinden alleen werk met een laag loon",
+    "Mensen willen dan niet meer gaan werken",
+    "Mensen verhuizen dan naar rijke landen",
+    "Mensen betalen dan te veel belasting"
+   ],
+   "Zonder opleiding blijft de arbeidsproductiviteit laag."
+  ],
+  [
+   "8.4",
+   "Wat is een vicieuze cirkel?",
+   [
+    "Het ene probleem veroorzaakt steeds het andere",
+    "Een groep landen die samen handel drijft",
+    "Een afspraak over de prijs van grondstoffen",
+    "Een lening die nooit terugbetaald wordt"
+   ],
+   "Daardoor blijft een arm land arm."
+  ],
+  [
+   "8.4",
+   "Wat hoort bij noodhulp?",
+   [
+    "Voedsel, medicijnen en tenten",
+    "Scholen, wegen en fabrieken",
+    "Leningen met een lage rente",
+    "Een keurmerk voor koffie"
+   ],
+   "Snelle hulp na een ramp."
+  ],
+  [
+   "8.4",
+   "Wat is structurele hulp?",
+   [
+    "Hulp zodat een land zichzelf kan redden",
+    "Hulp om direct na een ramp te overleven",
+    "Hulp die meteen terugbetaald moet worden",
+    "Hulp die alleen uit voedsel bestaat"
+   ],
+   "Bijvoorbeeld geld voor scholen."
+  ],
+  [
+   "8.4",
+   "Een land moet het hulpgeld besteden in het land dat de hulp geeft. Hoe heet dat?",
+   [
+    "Gebonden hulp",
+    "Noodhulp",
+    "Structurele hulp",
+    "Fairtrade"
+   ],
+   "Er zit een voorwaarde aan de hulp."
+  ],
+  [
+   "8.4",
+   "Wat doet Fairtrade?",
+   [
+    "Boeren een eerlijke, gegarandeerde prijs geven",
+    "Regeringen een lening met lage rente geven",
+    "Rijke landen een importheffing opleggen",
+    "Bedrijven een subsidie voor export geven"
+   ],
+   "Een minimumprijs plus een premie."
+  ]
+ ],
+ "SORT": [
+  {
+   "a": "Import",
+   "b": "Export",
+   "A": [
+    [
+     "🍚",
+     "Rijst komt Nederland binnen"
+    ],
+    [
+     "👕",
+     "Kleding uit Bangladesh"
+    ],
+    [
+     "🌹",
+     "Rozen uit Kenia"
+    ]
+   ],
+   "B": [
+    [
+     "🧀",
+     "Kaas naar Duitsland"
+    ],
+    [
+     "⚙️",
+     "Machines naar China"
+    ],
+    [
+     "🌷",
+     "Tulpen naar Engeland"
+    ]
+   ]
+  },
+  {
+   "a": "Protectie",
+   "b": "Vrijhandel",
+   "A": [
+    [
+     "🧾",
+     "Importheffing"
+    ],
+    [
+     "🚫",
+     "Invoerverbod"
+    ],
+    [
+     "📦",
+     "Contingentering"
+    ],
+    [
+     "💶",
+     "Exportsubsidie"
+    ]
+   ],
+   "B": [
+    [
+     "🌍",
+     "Doel van de WTO"
+    ],
+    [
+     "🤝",
+     "Geen handelsbelemmeringen"
+    ],
+    [
+     "🛒",
+     "Meer keuze, lagere prijzen"
+    ]
+   ]
+  },
+  {
+   "a": "Interne markt (EU)",
+   "b": "EMU en ECB",
+   "A": [
+    [
+     "🚛",
+     "Vrij verkeer van goederen"
+    ],
+    [
+     "🧳",
+     "Werken in een ander EU-land"
+    ],
+    [
+     "🛃",
+     "Geen invoerrechten binnen de EU"
+    ]
+   ],
+   "B": [
+    [
+     "💶",
+     "De euro"
+    ],
+    [
+     "🏦",
+     "De rente bepalen"
+    ],
+    [
+     "📊",
+     "Waarde van de munt bewaken"
+    ]
+   ]
+  },
+  {
+   "a": "Noodhulp",
+   "b": "Structurele hulp",
+   "A": [
+    [
+     "⛺",
+     "Tenten na een aardbeving"
+    ],
+    [
+     "💊",
+     "Medicijnen na een overstroming"
+    ],
+    [
+     "🍞",
+     "Voedsel bij hongersnood"
+    ]
+   ],
+   "B": [
+    [
+     "🏫",
+     "Scholen bouwen"
+    ],
+    [
+     "🛣️",
+     "Wegen aanleggen"
+    ],
+    [
+     "👩‍🏫",
+     "Leraren opleiden"
+    ]
+   ]
+  },
+  {
+   "a": "Ontwikkelingsland",
+   "b": "Rijk land",
+   "A": [
+    [
+     "🚱",
+     "Weinig schoon drinkwater"
+    ],
+    [
+     "🌾",
+     "Vooral landbouw"
+    ],
+    [
+     "👶",
+     "Snelle bevolkingsgroei"
+    ]
+   ],
+   "B": [
+    [
+     "🏥",
+     "Goede gezondheidszorg"
+    ],
+    [
+     "💻",
+     "Veel technologie"
+    ],
+    [
+     "💰",
+     "Hoog inkomen per hoofd"
+    ]
+   ]
+  }
+ ]
+}

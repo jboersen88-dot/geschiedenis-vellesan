@@ -46,7 +46,7 @@ CONFIG = {
 for _m, _t in [("j4h1", "jaar 4 mavo · hoofdstuk 1"), ("j4h2", "jaar 4 mavo · hoofdstuk 2"), ("j4h3", "jaar 4 mavo · hoofdstuk 3"), ("j4h4", "jaar 4 mavo · hoofdstuk 4"),
                ("j4h5", "jaar 4 mavo · hoofdstuk 5"), ("j4h6", "jaar 4 mavo · hoofdstuk 6"), ("j4h7", "jaar 4 mavo · hoofdstuk 7"), ("j4h8", "jaar 4 mavo · hoofdstuk 8"),
                ("j3h7", "jaar 3 mavo · hoofdstuk 7"), ("j3h1", "jaar 3 mavo · hoofdstuk 1"), ("j3h2", "jaar 3 mavo · hoofdstuk 2"), ("j3h3", "jaar 3 mavo · hoofdstuk 3"), ("j3h4", "jaar 3 mavo · hoofdstuk 4"),
-               ("j3h5", "jaar 3 mavo · hoofdstuk 5"), ("j3h6", "jaar 3 mavo · hoofdstuk 6")]:
+               ("j3h5", "jaar 3 mavo · hoofdstuk 5"), ("j3h6", "jaar 3 mavo · hoofdstuk 6"), ("j3h8", "jaar 3 mavo · hoofdstuk 8")]:
     CONFIG[_m] = dict(titel="Online oefentoets · Economie " + _t, key="eco-%s-toets-v1" % _m, bron=_m + "/bron", data=_m + "/bron/toetsen.json",
                       lab="oefen.html#lab", opg="Opgave", rek="Opgaven", terug=("oefen.html#toets", "Terug naar de oefenomgeving"))
 # jaar 2 mavo H3 t/m H6 (18 nov 2026): nieuw geschreven oefentoetsen bij de lesapps en PowerPoints van de docent

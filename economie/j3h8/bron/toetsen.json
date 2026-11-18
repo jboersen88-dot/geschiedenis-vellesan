@@ -1,0 +1,757 @@
+{
+ "blokken": {
+  "mc_a": [
+   {
+    "v": "Een Nederlandse kweker verkoopt paprika's aan supermarkten in Duitsland. Wat is dat voor Nederland?",
+    "o": [
+     "Wederuitvoer",
+     "Export",
+     "Import",
+     "Protectie"
+    ],
+    "j": 1,
+    "u": "Verkopen aan het buitenland."
+   },
+   {
+    "v": "Waarom is veel export goed voor de overheid?",
+    "o": [
+     "De overheid mag de prijzen bepalen",
+     "De overheid hoeft minder te importeren",
+     "De overheid krijgt meer invoerrechten",
+     "De overheid krijgt meer belasting"
+    ],
+    "j": 3,
+    "u": "Meer productie en winst leveren meer belasting op."
+   },
+   {
+    "v": "Telefoons uit Azië komen aan in Rotterdam en gaan meteen door naar Polen. Hoe heet dat?",
+    "o": [
+     "Contingentering",
+     "Globalisering",
+     "Wederuitvoer",
+     "Vrijhandel"
+    ],
+    "j": 2,
+    "u": "Invoeren en bijna onbewerkt weer uitvoeren."
+   },
+   {
+    "v": "Een land heeft een hoge exportquote en een hoge importquote. Wat voor economie is dat?",
+    "o": [
+     "Een open economie",
+     "Een eenzijdige economie",
+     "Een gesloten economie",
+     "Een arme economie"
+    ],
+    "j": 0,
+    "u": "Veel handel met het buitenland."
+   },
+   {
+    "v": "Een land zet een maximum op de invoer van staal. Welke maatregel is dat?",
+    "o": [
+     "Contingentering",
+     "Importheffing",
+     "Invoerverbod",
+     "Exportsubsidie"
+    ],
+    "j": 0,
+    "u": "Er mag maar een maximale hoeveelheid binnenkomen."
+   },
+   {
+    "v": "Wat is het doel van protectiemaatregelen?",
+    "o": [
+     "De eigen bedrijven beschermen",
+     "De consument lagere prijzen geven",
+     "De vrijhandel in de wereld vergroten",
+     "De export van andere landen helpen"
+    ],
+    "j": 0,
+    "u": "Buitenlandse concurrentie wordt moeilijker gemaakt."
+   },
+   {
+    "v": "Welke organisatie wil dat landen vrij met elkaar kunnen handelen?",
+    "o": [
+     "Het UWV",
+     "De WTO",
+     "De EMU",
+     "De ECB"
+    ],
+    "j": 1,
+    "u": "De Wereldhandelsorganisatie."
+   },
+   {
+    "v": "Kleding wordt gemaakt in landen waar dat goedkoop kan. Machines worden gemaakt in landen met veel kennis. Hoe heet dat?",
+    "o": [
+     "Economische en Monetaire Unie",
+     "Internationale concurrentiepositie",
+     "Internationale arbeidsverdeling",
+     "Maatschappelijk verantwoord ondernemen"
+    ],
+    "j": 2,
+    "u": "Elk land maakt waar het het beste in is."
+   },
+   {
+    "v": "Een Belgische student gaat in Nederland wonen en werken. Welk vrij verkeer is dat?",
+    "o": [
+     "Goederen",
+     "Diensten",
+     "Personen",
+     "Kapitaal"
+    ],
+    "j": 2,
+    "u": "In elk EU-land mag je wonen en werken."
+   },
+   {
+    "v": "Welke instelling bepaalt de rente in de eurolanden?",
+    "o": [
+     "De WTO",
+     "De ECB",
+     "De EMU",
+     "De EU"
+    ],
+    "j": 1,
+    "u": "De Europese Centrale Bank."
+   },
+   {
+    "v": "Een land verdient bijna al zijn geld met de export van koffie. Hoe heet dat?",
+    "o": [
+     "Vrijhandel",
+     "Monocultuur",
+     "Contingentering",
+     "Wederuitvoer"
+    ],
+    "j": 1,
+    "u": "Het land is afhankelijk van één product."
+   },
+   {
+    "v": "Na een overstroming sturen landen tenten en schoon drinkwater. Welke hulp is dat?",
+    "o": [
+     "Structurele hulp",
+     "Fairtrade",
+     "Noodhulp",
+     "Gebonden hulp"
+    ],
+    "j": 2,
+    "u": "Snelle hulp om te overleven."
+   }
+  ],
+  "rek_a": [
+   {
+    "nr": 1,
+    "titel": "Goed of fout?",
+    "tekst": "",
+    "p": 5,
+    "delen": [
+     {
+      "id": "",
+      "v": "Goed of fout?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Import is het verkopen van producten aan het buitenland."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Wederuitvoer levert weinig toegevoegde waarde op."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Een importheffing maakt buitenlandse producten duurder."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Alle landen van de EU betalen met de euro."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Structurele hulp is bedoeld voor de lange termijn."
+       }
+      ],
+      "uitw": [
+       "Import is kopen uit het buitenland. Verkopen aan het buitenland is export.",
+       "Alleen de landen van de EMU hebben de euro."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 2,
+    "titel": "Import, export of wederuitvoer?",
+    "tekst": "",
+    "p": 4,
+    "delen": [
+     {
+      "id": "",
+      "v": "Kies bij elk voorbeeld wat het voor Nederland is.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Import",
+         "Export",
+         "Wederuitvoer"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Een supermarkt koopt sinaasappels in Spanje"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Import",
+         "Export",
+         "Wederuitvoer"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Een fabriek in Eindhoven verkoopt machines aan Japan"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Import",
+         "Export",
+         "Wederuitvoer"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "Schoenen uit Vietnam gaan via Rotterdam door naar Duitsland"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Import",
+         "Export",
+         "Wederuitvoer"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Een garage koopt auto's in Frankrijk"
+       }
+      ],
+      "uitw": [
+       "Import: kopen uit het buitenland. Export: verkopen aan het buitenland. Wederuitvoer: invoeren en weer doorvoeren."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 3,
+    "titel": "De handel van Noordland",
+    "tekst": "Het nationaal inkomen van Noordland is €900 miljard. De export is €630 miljard. De import is €540 miljard.",
+    "p": 6,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken de exportquote van Noordland.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         70
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.05,
+        "label": "Exportquote"
+       }
+      ],
+      "uitw": [
+       "(export : nationaal inkomen) × 100 = (630 : 900) × 100 = 70,0%"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken de importquote van Noordland.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         60
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.05,
+        "label": "Importquote"
+       }
+      ],
+      "uitw": [
+       "(import : nationaal inkomen) × 100 = (540 : 900) × 100 = 60,0%"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Bereken het handelssaldo van Noordland, in miljard euro.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         90
+        ],
+        "p": 1,
+        "eenh": "miljard euro",
+        "tol": 0.5,
+        "label": "Handelssaldo"
+       }
+      ],
+      "uitw": [
+       "export − import = 630 − 540 = 90 miljard euro. De export is groter: een overschot."
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Heeft Noordland een open of een gesloten economie?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Een open economie",
+         "Een gesloten economie"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Noordland heeft"
+       }
+      ],
+      "uitw": [
+       "De export- en importquote zijn hoog."
+      ]
+     },
+     {
+      "id": "e",
+      "v": "Noem twee redenen waarom een land producten importeert.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "3e",
+        "p": 2,
+        "label": "Redenen voor import",
+        "model": "Het klimaat is niet geschikt om het product zelf te maken. In het buitenland kan het goedkoper worden gemaakt. Of: consumenten krijgen een ruimere keuze.",
+        "g": [
+         {
+          "t": "eerste juiste reden (klimaat niet geschikt / goedkopere productie in het buitenland / ruimere keuze)",
+          "p": 1
+         },
+         {
+          "t": "tweede juiste reden",
+          "p": 1
+         }
+        ],
+        "v": "Noem twee redenen waarom een land producten importeert.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Klimaat, goedkopere productie in het buitenland of een ruimere keuze."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 4,
+    "titel": "Bescherming van eigen bedrijven",
+    "tekst": "",
+    "p": 7,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Kies bij elk voorbeeld de protectiemaatregel.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Importheffing",
+         "Contingentering",
+         "Invoerverbod",
+         "Exportsubsidie"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Op kaas van buiten de EU komt 12% belasting"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Importheffing",
+         "Contingentering",
+         "Invoerverbod",
+         "Exportsubsidie"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Er mag hoogstens 20.000 ton rijst per jaar het land in"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Importheffing",
+         "Contingentering",
+         "Invoerverbod",
+         "Exportsubsidie"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "Speelgoed met gevaarlijke stoffen mag het land niet in"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Importheffing",
+         "Contingentering",
+         "Invoerverbod",
+         "Exportsubsidie"
+        ],
+        "j": 3,
+        "p": 1,
+        "label": "Boeren krijgen geld voor elke ton graan die zij uitvoeren"
+       }
+      ],
+      "uitw": [
+       "Importheffing: belasting. Contingentering: een maximum. Invoerverbod: helemaal niet. Exportsubsidie: geld voor export."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Een e-bike van buiten de EU kost €1.200,00. De importheffing is 6%. Bereken de importheffing in euro's.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         72
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Importheffing"
+       }
+      ],
+      "uitw": [
+       "(percentage : 100) × prijs = (6 : 100) × 1.200 = €72,00"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Bereken de prijs van de e-bike met de importheffing.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         1272
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Prijs met heffing"
+       }
+      ],
+      "uitw": [
+       "1.200 + 72 = €1.272,00"
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Leg uit wat het nadeel van een importheffing is voor de consument.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "4d",
+        "p": 1,
+        "label": "Nadeel van protectie",
+        "model": "Producten uit het buitenland worden duurder. De consument betaalt dus meer, of heeft minder keuze.",
+        "g": [
+         {
+          "t": "producten uit het buitenland worden duurder / de consument betaalt meer (of heeft minder keuze)",
+          "p": 1
+         }
+        ],
+        "v": "Leg uit wat het nadeel van een importheffing is voor de consument.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "De consument betaalt een hogere prijs."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 5,
+    "titel": "De Europese Unie",
+    "tekst": "",
+    "p": 7,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Kies bij elk voorbeeld het soort vrij verkeer.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Goederen en diensten",
+         "Personen",
+         "Kapitaal"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Een Nederlandse bakker verkoopt brood in België zonder invoerrechten"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goederen en diensten",
+         "Personen",
+         "Kapitaal"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Een Spaanse verpleegkundige gaat in Nederland werken"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goederen en diensten",
+         "Personen",
+         "Kapitaal"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "Je opent een spaarrekening bij een bank in Duitsland"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goederen en diensten",
+         "Personen",
+         "Kapitaal"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Een Poolse aannemer bouwt een huis in Nederland"
+       }
+      ],
+      "uitw": [
+       "Handel en bouwen: goederen en diensten. Wonen en werken: personen. Sparen en investeren: kapitaal."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Noem twee voordelen van de euro.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "5b",
+        "p": 2,
+        "label": "De euro",
+        "model": "Je hoeft geen geld te wisselen als je naar een ander euroland gaat of ermee handelt. Je kunt de prijzen in verschillende landen makkelijk vergelijken.",
+        "g": [
+         {
+          "t": "geen geld wisselen / geen wisselkosten",
+          "p": 1
+         },
+         {
+          "t": "prijzen makkelijk vergelijken / makkelijker handelen",
+          "p": 1
+         }
+        ],
+        "v": "Noem twee voordelen van de euro.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Geen geld wisselen en prijzen makkelijk vergelijken."
+      ]
+     },
+     {
+      "id": "c",
+      "v": "De ECB verhoogt de rente. Wat doen consumenten dan meestal?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Meer sparen en minder lenen",
+         "Meer lenen en minder sparen"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Consumenten gaan"
+       }
+      ],
+      "uitw": [
+       "Sparen levert meer op en lenen wordt duurder."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 6,
+    "titel": "Arm en rijk",
+    "tekst": "Zuidland heeft een nationaal inkomen van €48 miljard en 12 miljoen inwoners. Westland heeft een nationaal inkomen van €900 miljard en 20 miljoen inwoners.",
+    "p": 8,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken het inkomen per hoofd van de bevolking in Zuidland.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         4000
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.5,
+        "label": "Zuidland"
+       }
+      ],
+      "uitw": [
+       "nationaal inkomen : aantal inwoners = 48.000.000.000 : 12.000.000 = €4.000"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken het inkomen per hoofd van de bevolking in Westland.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         45000
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.5,
+        "label": "Westland"
+       }
+      ],
+      "uitw": [
+       "900.000.000.000 : 20.000.000 = €45.000"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Kies bij elk voorbeeld het soort hulp.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Noodhulp",
+         "Structurele hulp"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Voedselpakketten na een aardbeving"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Noodhulp",
+         "Structurele hulp"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Geld om leraren op te leiden"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Noodhulp",
+         "Structurele hulp"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Een nieuwe weg naar de haven"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Noodhulp",
+         "Structurele hulp"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Medicijnen bij een uitbraak van een ziekte"
+       }
+      ],
+      "uitw": [
+       "Noodhulp is snelle hulp om te overleven. Structurele hulp is voor de lange termijn."
+      ]
+     },
+     {
+      "id": "d",
+      "v": "In Zuidland gaan veel kinderen niet naar school. Leg uit hoe dat ervoor zorgt dat het land arm blijft.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "6d",
+        "p": 2,
+        "label": "De vicieuze cirkel",
+        "model": "Zonder onderwijs kunnen mensen alleen ongeschoold werk doen. Daarmee verdienen ze weinig. Door de armoede kunnen hun kinderen ook niet naar school. Zo blijft het doorgaan.",
+        "g": [
+         {
+          "t": "zonder onderwijs alleen ongeschoold werk / een laag loon",
+          "p": 1
+         },
+         {
+          "t": "door de armoede is er weer geen geld voor onderwijs: het blijft doorgaan (vicieuze cirkel)",
+          "p": 1
+         }
+        ],
+        "v": "In Zuidland gaan veel kinderen niet naar school. Leg uit hoe dat ervoor zorgt dat het land arm blijft.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Geen onderwijs, laag loon, armoede, weer geen onderwijs."
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "toetsen": {
+  "t1": {
+   "n": 1,
+   "t": "oefentoets A",
+   "sub": "Hoofdstuk 8",
+   "min": 50,
+   "mc": "mc_a",
+   "open": null,
+   "rek": "rek_a"
+  }
+ },
+ "VERS": [
+  {
+   "n": 1,
+   "min": 50,
+   "pts": 49
+  }
+ ]
+}
