@@ -505,3 +505,4 @@ Aanleiding: de eerste versie was "een standaard website". Je bestaande Google Si
 - Nieuwe losse map `rondleiding/` (raakt de lessite niet): rondleiding door het gebouw Briniostraat voor groep 7/8 op iPads. 13 stops op de plattegrond (3 etages) met per stop een kort filmpje, uitleg en 3 opdrachtjes; voortgang alleen op het apparaat.
 - QR-speurtocht: elke stop gaat open door de poster op die plek te scannen (of het codewoord te typen); 3 geheime bonuscodes. Posters: `rondleiding/qr/posters.pdf`, opnieuw te maken met `rondleiding/tools/maak-qr.js`.
 - Getest in een nagebootste iPad; nog niet op een echte iPad (camera).
+- 18 nov (later): rondleiding aangevuld met de nieuwbouw op de eerste etage: stop 12 "De nieuwbouw (B22 tot B25)" en stop 13 "De lift, B26 en B27" (nu 15 stops); posters opnieuw gemaakt (19 pagina's).
