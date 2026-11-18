@@ -1,0 +1,819 @@
+{
+ "blokken": {
+  "mc_a": [
+   {
+    "v": "Een bakker geeft de kapper elke week brood. In ruil knipt de kapper zijn haar. Wat is dit?",
+    "o": [
+     "Koop op afbetaling",
+     "Directe ruil",
+     "Giraal betalen",
+     "Indirecte ruil"
+    ],
+    "j": 1,
+    "u": "Er komt geen geld aan te pas."
+   },
+   {
+    "v": "Fleur betaalt in de kantine met haar telefoon. Met welk geld betaalt zij?",
+    "o": [
+     "Geleend geld",
+     "Giraal geld",
+     "Chartaal geld",
+     "Vreemd geld"
+    ],
+    "j": 1,
+    "u": "Het geld gaat van haar betaalrekening af."
+   },
+   {
+    "v": "Op het rekeningoverzicht van Tim staat −€32,10. Wat klopt?",
+    "o": [
+     "Tim heeft een debetsaldo",
+     "Tim heeft een creditsaldo",
+     "Tim heeft een hypotheek",
+     "Tim heeft een spaardeposito"
+    ],
+    "j": 0,
+    "u": "Een negatief saldo is een debetsaldo: Tim staat rood."
+   },
+   {
+    "v": "Welk geld hoort níét bij het girale geld?",
+    "o": [
+     "Geld op een lopende rekening",
+     "Geld op je spaarrekening",
+     "Geld op je betaalrekening",
+     "Geld op een rekening-courant"
+    ],
+    "j": 1,
+    "u": "Giraal geld is geld op een betaalrekening."
+   },
+   {
+    "v": "Oma zet €8.000 drie jaar vast. Zij krijgt elk jaar hetzelfde percentage. Wat is dit?",
+    "o": [
+     "Een spaardeposito",
+     "Een aandeel",
+     "Een salariskrediet",
+     "Een doorlopend krediet"
+    ],
+    "j": 0,
+    "u": "Het geld staat vast tegen een vaste rente."
+   },
+   {
+    "v": "Kim spaart voor een reis naar Spanje. Welk spaarmotief is dat?",
+    "o": [
+     "Sparen voor de rente",
+     "Sparen uit voorzorg",
+     "Sparen voor een doel",
+     "Sparen voor dividend"
+    ],
+    "j": 2,
+    "u": "Zij weet waarvoor zij spaart."
+   },
+   {
+    "v": "De rente is 2,4%. Met welke groeifactor reken je bij samengestelde rente?",
+    "o": [
+     "2,4",
+     "1,024",
+     "1,24",
+     "0,024"
+    ],
+    "j": 1,
+    "u": "(2,4 : 100) + 1 = 1,024."
+   },
+   {
+    "v": "De spaarrente is 1,5%. De prijzen stijgen met 4%. Wat gebeurt er?",
+    "o": [
+     "Het spaargeld wordt minder in euro's",
+     "De koopkracht van het spaargeld stijgt",
+     "De bank verhoogt meteen de rente",
+     "De koopkracht van het spaargeld daalt"
+    ],
+    "j": 3,
+    "u": "De prijzen stijgen harder dan het spaargeld groeit."
+   },
+   {
+    "v": "Sven koopt een laptop en betaalt de winkel in 12 termijnen. Hoe heet dat?",
+    "o": [
+     "Salariskrediet",
+     "Directe ruil",
+     "Koop op afbetaling",
+     "Spaardeposito"
+    ],
+    "j": 2,
+    "u": "Hij leent eigenlijk geld van de winkelier."
+   },
+   {
+    "v": "Waarom vraagt de bank bij een hypothecaire lening minder rente dan bij een persoonlijke lening?",
+    "o": [
+     "De lening is voor een auto",
+     "Het bedrag is veel kleiner",
+     "Het huis is het onderpand",
+     "De looptijd is veel korter"
+    ],
+    "j": 2,
+    "u": "Met een onderpand loopt de bank minder risico."
+   },
+   {
+    "v": "Een bedrijf maakt winst en keert een deel uit aan de aandeelhouders. Hoe heet die uitkering?",
+    "o": [
+     "Dividend",
+     "Rente",
+     "Aflossing",
+     "Provisie"
+    ],
+    "j": 0,
+    "u": "Dividend is winst per aandeel."
+   },
+   {
+    "v": "Je wisselt euro's voor Britse ponden. De bank rekent daar kosten voor. Hoe heten die kosten?",
+    "o": [
+     "Premie",
+     "Dividend",
+     "Provisie",
+     "Aflossing"
+    ],
+    "j": 2,
+    "u": "Ook wel transactiekosten."
+   }
+  ],
+  "rek_a": [
+   {
+    "nr": 1,
+    "titel": "Goed of fout?",
+    "tekst": "",
+    "p": 5,
+    "delen": [
+     {
+      "id": "",
+      "v": "Goed of fout?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Bij indirecte ruil gebruik je geld."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Bankbiljetten zijn giraal geld."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Bij een variabele rente kan de bank het percentage veranderen."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Bij enkelvoudige rente krijg je rente op rente."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Beleggen is zonder risico."
+       }
+      ],
+      "uitw": [
+       "Bankbiljetten zijn chartaal geld.",
+       "Rente op rente is samengestelde rente.",
+       "Bij beleggen kan je inleg minder waard worden."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 2,
+    "titel": "Geld in het dagelijks leven",
+    "tekst": "",
+    "p": 7,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Kies bij elke situatie de juiste geldfunctie.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Ruilmiddel",
+         "Rekenmiddel",
+         "Spaarmiddel"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Je rekent een ijsje af"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Ruilmiddel",
+         "Rekenmiddel",
+         "Spaarmiddel"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Je kijkt welke fiets het goedkoopst is"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Ruilmiddel",
+         "Rekenmiddel",
+         "Spaarmiddel"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "Je bewaart geld voor je rijbewijs"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Ruilmiddel",
+         "Rekenmiddel",
+         "Spaarmiddel"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Je rekent uit hoeveel korting je krijgt"
+       }
+      ],
+      "uitw": [
+       "Betalen is ruilen. Waarde uitdrukken in geld is rekenen. Bewaren voor later is sparen."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Kies bij elk voorbeeld de juiste soort geld.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Chartaal geld",
+         "Giraal geld"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Een briefje van €20"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Chartaal geld",
+         "Giraal geld"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Het saldo op je betaalrekening"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Chartaal geld",
+         "Giraal geld"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Muntgeld in een spaarpot"
+       }
+      ],
+      "uitw": [
+       "Chartaal geld is contant geld. Giraal geld staat op een betaalrekening."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 3,
+    "titel": "De rekening van Jip",
+    "tekst": "Jip heeft een oud saldo van €248,60. Deze week komt het loon van zijn bijbaan binnen: €164,00. Hij betaalt €27,50 aan de sportschool, €59,95 aan een webshop en €18,40 in de supermarkt.",
+    "p": 4,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken het totaal van de uitgaven.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         105.85
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Uitgaven"
+       }
+      ],
+      "uitw": [
+       "27,50 + 59,95 + 18,40 = €105,85"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken het nieuwe saldo van Jip.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         306.75
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Nieuw saldo"
+       }
+      ],
+      "uitw": [
+       "Nieuw saldo = oud saldo + ontvangsten − uitgaven = 248,60 + 164,00 − 105,85 = €306,75"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Is het nieuwe saldo een creditsaldo of een debetsaldo?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Creditsaldo",
+         "Debetsaldo"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Het saldo is een"
+       }
+      ],
+      "uitw": [
+       "Het saldo is positief: een creditsaldo."
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Het nieuwe saldo van Tess is €412,30. Er kwam €85,00 bij en er ging €126,45 af. Bereken het oude saldo van Tess.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         453.75
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Oud saldo"
+       }
+      ],
+      "uitw": [
+       "Oud saldo = nieuw saldo − ontvangsten + uitgaven = 412,30 − 85,00 + 126,45 = €453,75"
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 4,
+    "titel": "Twee manieren van sparen",
+    "tekst": "Omar zet €3.200 op een spaardeposito. Het geld staat 5 jaar vast tegen 2,5% enkelvoudige rente per jaar. Zijn zus Lina zet ook €3.200 op de bank, op een spaarrekening met 2,5% samengestelde rente per jaar. Ook zij laat het geld 5 jaar staan.",
+    "p": 6,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken hoeveel rente Omar per jaar krijgt.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         80
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Rente per jaar"
+       }
+      ],
+      "uitw": [
+       "(2,5 : 100) × 3.200 = €80"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken hoeveel rente Omar in totaal krijgt.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         400
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Totale rente"
+       }
+      ],
+      "uitw": [
+       "80 × 5 = €400"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Welke groeifactor gebruikt Lina?",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         1.025
+        ],
+        "p": 1,
+        "eenh": "",
+        "tol": 0.0001,
+        "label": "Groeifactor"
+       }
+      ],
+      "uitw": [
+       "(2,5 : 100) + 1 = 1,025"
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Bereken hoeveel er na 5 jaar op de rekening van Lina staat.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         3620.51
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.01,
+        "label": "Eindbedrag"
+       }
+      ],
+      "uitw": [
+       "3.200 × (1,025 ^ 5) = €3.620,51"
+      ]
+     },
+     {
+      "id": "e",
+      "v": "Lina heeft na 5 jaar meer rente gekregen dan Omar. Leg uit hoe dat komt.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "4e",
+        "p": 2,
+        "label": "Uitleg",
+        "model": "Bij Lina komt de rente elk jaar bij het spaargeld. Zij krijgt daarna ook rente over die rente. Omar krijgt elk jaar rente over hetzelfde bedrag.",
+        "g": [
+         {
+          "t": "bij Lina wordt de rente bij het spaargeld opgeteld (rente op rente)",
+          "p": 1
+         },
+         {
+          "t": "Omar krijgt elk jaar rente over hetzelfde bedrag",
+          "p": 1
+         }
+        ],
+        "v": "Lina heeft na 5 jaar meer rente gekregen dan Omar. Leg uit hoe dat komt.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Samengestelde rente is rente op rente."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 5,
+    "titel": "Lenen voor een scooter",
+    "tekst": "Roos leent €2.400 voor een scooter. Zij krijgt het hele bedrag in één keer. Zij betaalt 24 maanden lang €108,50 per maand terug.",
+    "p": 6,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken hoeveel Roos in totaal terugbetaalt.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         2604
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Totaal terugbetaald"
+       }
+      ],
+      "uitw": [
+       "24 × 108,50 = €2.604"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken de kredietkosten.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         204
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Kredietkosten"
+       }
+      ],
+      "uitw": [
+       "Kredietkosten = (termijnbedrag × aantal termijnen) − krediet = 2.604 − 2.400 = €204"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Bereken hoeveel procent de kredietkosten zijn van het geleende bedrag. Rond af op 1 decimaal.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         8.5
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.05,
+        "label": "Kredietkosten"
+       }
+      ],
+      "uitw": [
+       "(kredietkosten : krediet) × 100 = (204 : 2.400) × 100 = 8,5%"
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Welke vorm van krediet heeft Roos?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Persoonlijke lening",
+         "Doorlopend krediet",
+         "Hypothecaire lening"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Roos heeft een"
+       }
+      ],
+      "uitw": [
+       "Zij krijgt het bedrag in één keer en betaalt het in een vast aantal maanden terug."
+      ]
+     },
+     {
+      "id": "e",
+      "v": "Roos kan de lening ook in 36 maanden terugbetalen. Wat gebeurt er dan met de kredietkosten? Leg uit waarom.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "5e",
+        "p": 2,
+        "label": "Langere looptijd",
+        "model": "De kredietkosten worden hoger, want Roos betaalt dan langer rente.",
+        "g": [
+         {
+          "t": "de kredietkosten worden hoger",
+          "p": 1
+         },
+         {
+          "t": "zij betaalt langer rente",
+          "p": 1
+         }
+        ],
+        "v": "Roos kan de lening ook in 36 maanden terugbetalen. Wat gebeurt er dan met de kredietkosten? Leg uit waarom.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Hoe langer de looptijd, hoe meer rente je betaalt."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 6,
+    "titel": "Aandelen en vreemd geld",
+    "tekst": "Bas koopt 25 aandelen voor €18,40 per aandeel. Een jaar later verkoopt hij ze voor €21,10 per aandeel.",
+    "p": 5,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken de winst van Bas in euro's.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         67.5
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Winst"
+       }
+      ],
+      "uitw": [
+       "(verkoopprijs − aankoopprijs) × aantal aandelen = (21,10 − 18,40) × 25 = €67,50"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken hoeveel procent winst dat is van zijn inleg. Rond af op 1 decimaal.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         14.7
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.05,
+        "label": "Winst"
+       }
+      ],
+      "uitw": [
+       "Inleg: 25 × 18,40 = €460. (67,50 : 460) × 100 = 14,7%"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Bas had zijn geld ook op een spaarrekening kunnen zetten. Noem een nadeel van beleggen tegenover sparen.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "6c",
+        "p": 1,
+        "label": "Nadeel van beleggen",
+        "model": "Bij beleggen loop je risico: de aandelen kunnen minder waard worden, zodat je een deel van je inleg kwijt bent.",
+        "g": [
+         {
+          "t": "je loopt risico: de inleg kan minder waard worden",
+          "p": 1
+         }
+        ],
+        "v": "Bas had zijn geld ook op een spaarrekening kunnen zetten. Noem een nadeel van beleggen tegenover sparen.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Spaargeld is veilig, de koers van een aandeel kan dalen."
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Bas gaat naar Zwitserland en wisselt €250. Voor €1 krijgt hij 0,95 Zwitserse frank. Bereken hoeveel frank hij krijgt.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         237.5
+        ],
+        "p": 1,
+        "eenh": "",
+        "tol": 0.005,
+        "label": "Zwitserse frank"
+       }
+      ],
+      "uitw": [
+       "250 × 0,95 = 237,50 frank"
+      ]
+     },
+     {
+      "id": "e",
+      "v": "Na de vakantie heeft Bas nog 38 frank over. De koers is weer 0,95. Bereken hoeveel euro hij terugkrijgt.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         40
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Terug in euro"
+       }
+      ],
+      "uitw": [
+       "38 : 0,95 = €40,00"
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 7,
+    "titel": "De bank in het midden",
+    "tekst": "",
+    "p": 5,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Kies bij elke persoon: vraag naar geld of aanbod van geld.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Aanbod van geld",
+         "Vraag naar geld"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Een gezin zet €5.000 op een spaarrekening"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Aanbod van geld",
+         "Vraag naar geld"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Een bakker leent geld voor een nieuwe oven"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Aanbod van geld",
+         "Vraag naar geld"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Een student leent geld voor een laptop"
+       }
+      ],
+      "uitw": [
+       "Spaarders bieden geld aan. Leners vragen geld."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Leg uit hoe een bank geld verdient aan sparen en lenen. Gebruik het woord rente.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "7b",
+        "p": 2,
+        "label": "Verdienen aan rente",
+        "model": "De bank leent het spaargeld uit. Leners betalen een hogere rente dan spaarders krijgen. Het verschil is voor de bank.",
+        "g": [
+         {
+          "t": "leners betalen meer rente dan spaarders krijgen",
+          "p": 1
+         },
+         {
+          "t": "het verschil in rente is voor de bank",
+          "p": 1
+         }
+        ],
+        "v": "Leg uit hoe een bank geld verdient aan sparen en lenen. Gebruik het woord rente.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Lage rente voor spaarders, hogere rente voor leners."
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "toetsen": {
+  "t1": {
+   "n": 1,
+   "t": "oefentoets A",
+   "sub": "Hoofdstuk 3",
+   "min": 60,
+   "mc": "mc_a",
+   "open": null,
+   "rek": "rek_a"
+  }
+ },
+ "VERS": [
+  {
+   "n": 1,
+   "min": 60,
+   "pts": 50
+  }
+ ]
+}

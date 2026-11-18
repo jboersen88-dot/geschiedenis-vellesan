@@ -102,7 +102,13 @@ var RIJK={"jaar-3/mavo/hoofdstuk-0-rekenvaardigheden":{map:"j3h0",soort:"reken",
   alt:"Illustratie van een overheidsgebouw met zuilen en een vlag",
   intro:"Wie bestuurt ons land, wie krijgt een uitkering en hoe komt het Rijk aan zijn geld? Vier paragrafen over de overheid.",
   par:"Vier paragrafen over de overheid.",beeld:"Beelden: gemaakt voor deze site",reken:"Procenten, WW-uitkering, belasting in een prijs en het begrotingssaldo.",games:"Een snelle quiz, Swipe & Scoor en begrippen-memory.",
-  kleur:{"7.1":["var(--coral)","var(--berry)"],"7.2":["#7fd4c9","var(--teal)"],"7.3":["#f2c46b","var(--ochre)"],"7.4":["#b9d6cb","var(--green)"]}}};
+  kleur:{"7.1":["var(--coral)","var(--berry)"],"7.2":["#7fd4c9","var(--teal)"],"7.3":["#f2c46b","var(--ochre)"],"7.4":["#b9d6cb","var(--green)"]}},
+  /* jaar 3 mavo in de nieuwe opzet (18 nov 2026) */
+  "jaar-3/mavo/hoofdstuk-3-de-bank-en-jouw-geld":{map:"j3h3",kop:["De bank en jouw ","geld"],hero:"bank-h",kaart:{"3.1":"betalen-k","3.2":"sparen-k","3.3":"lenen-k","3.4":"beleggen-k"},
+  alt:"Illustratie van een bankgebouw met een stapel munten",
+  intro:"Betalen, sparen, lenen en beleggen: wat doet de bank met jouw geld, en wat kost of levert het op? Vier paragrafen met veel rekenwerk.",
+  par:"Vier paragrafen over de bank en jouw geld.",beeld:"Beelden: gemaakt voor deze site",reken:"Saldo, enkelvoudige en samengestelde rente, kredietkosten, aandelen en wisselkoersen.",games:"Een snelle quiz, Swipe & Scoor en begrippen-memory.",
+  kleur:{"3.1":["var(--coral)","var(--berry)"],"3.2":["#7fd4c9","var(--teal)"],"3.3":["#f2c46b","var(--ochre)"],"3.4":["#b9d6cb","var(--green)"]}}};
 /* SE-pagina's in de nieuwe opzet: de hoofdstukken van het SE (leren) en de oefenstof (oefenen) op één plek */
 var SE={"jaar-4/se-h1-h2-h8":{naam:"SE hoofdstuk 1 en 2",kort:"H1 + H2",kop:["SE hoofdstuk 1 ","en 2"],hero:"j4h1/inkomen",
   intro:"Alles voor het schoolexamen over inkomen en geld: hoofdstuk 1 en 2. Leer eerst per hoofdstuk, oefen daarna en maak als laatste het oefen-SE.",

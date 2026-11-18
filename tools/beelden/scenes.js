@@ -90,5 +90,16 @@ module.exports = (K, g, P) => {
       begroting: { bg: TE, d: [g(360, 430, 1.7, P.papier()), g(830, 440, 1.6, P.staven([60, 85, 70, 100], K.cream, K.coral))] },
       tanken: { bg: GR, d: [g(420, 430, 1.9, P.auto()), g(900, 440, 1.3, P.euro())] },
     },
+    j3h3: {
+      bank: { hero: 1, bg: GR, d: [g(430, 420, 1.9, P.overheid()), g(900, 470, 1.3, P.munten(K.ochre, 5))] },
+      betalen: { bg: IN, d: [g(380, 430, 1.8, P.kaart()), g(860, 440, 1.5, P.munten(K.ochre, 4))] },
+      saldo: { bg: TE, d: [g(380, 430, 1.7, P.papier()), g(850, 440, 1.4, P.reken())] },
+      sparen: { bg: GR, d: [g(400, 430, 1.8, P.varken(K.coral, K.cream)), g(870, 450, 1.5, P.munten(K.ochre, 5))] },
+      rente: { bg: OC, d: [g(600, 410, 2.2, P.lijn([[-100, 60], [-50, 44], [0, 20], [50, -18], [100, -72]], K.cream, K.deep))] },
+      lenen: { bg: BE, d: [g(300, 440, 1.5, P.kaart()), g(600, 430, 1.1, P.pijl(K.cream)), g(900, 440, 1.5, P.auto(K.cream, K.ochre))] },
+      hypotheek: { bg: TE, d: [g(380, 440, 1.8, P.huis(K.cream, K.coral)), g(860, 430, 1.5, P.papier())] },
+      beleggen: { bg: IN, d: [g(600, 410, 2.2, P.lijn([[-100, 30], [-55, -30], [-10, 10], [40, -50], [100, -20]]))] },
+      valuta: { bg: GR, d: [g(380, 410, 1.7, P.wereld()), g(860, 440, 1.5, P.euro())] },
+    },
   };
 };
