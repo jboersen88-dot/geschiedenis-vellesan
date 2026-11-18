@@ -129,7 +129,12 @@ var RIJK={"jaar-3/mavo/hoofdstuk-0-rekenvaardigheden":{map:"j3h0",soort:"reken",
   alt:"Illustratie van een bankgebouw met een stapel munten",
   intro:"Betalen, sparen, lenen en beleggen: wat doet de bank met jouw geld, en wat kost of levert het op? Vier paragrafen met veel rekenwerk.",
   par:"Vier paragrafen over de bank en jouw geld.",beeld:"Beelden: gemaakt voor deze site",reken:"Saldo, enkelvoudige en samengestelde rente, kredietkosten, aandelen en wisselkoersen.",games:"Een snelle quiz, Swipe & Scoor en begrippen-memory.",
-  kleur:{"3.1":["var(--coral)","var(--berry)"],"3.2":["#7fd4c9","var(--teal)"],"3.3":["#f2c46b","var(--ochre)"],"3.4":["#b9d6cb","var(--green)"]}}};
+  kleur:{"3.1":["var(--coral)","var(--berry)"],"3.2":["#7fd4c9","var(--teal)"],"3.3":["#f2c46b","var(--ochre)"],"3.4":["#b9d6cb","var(--green)"]}},
+  "jaar-3/mavo/hoofdstuk-4-ben-je-verzekerd":{map:"j3h4",kop:["Kies je voor ","zekerheid?"],hero:"verzekeren-h",kaart:{"4.1":"polis-k","4.2":"inboedel-k","4.3":"auto-k","4.4":"zorg-k"},
+  alt:"Illustratie van een paraplu boven een huis",
+  intro:"Verzekeren, je huis en je spullen, de auto en de zorg: waarvoor verzeker je je, en wat kost dat? Vier paragrafen met veel rekenwerk.",
+  par:"Vier paragrafen over verzekeren.",beeld:"Beelden: gemaakt voor deze site",reken:"Premie uit een tabel, verzekeringskosten, kans op schade, onderverzekering, de bonus-malusladder en zorgkosten.",games:"Een snelle quiz, Swipe & Scoor en begrippen-memory.",
+  kleur:{"4.1":["var(--coral)","var(--berry)"],"4.2":["#7fd4c9","var(--teal)"],"4.3":["#f2c46b","var(--ochre)"],"4.4":["#b9d6cb","var(--green)"]}}};
 /* SE-pagina's in de nieuwe opzet: de hoofdstukken van het SE (leren) en de oefenstof (oefenen) op één plek */
 var SE={"jaar-4/se-h1-h2-h8":{naam:"SE hoofdstuk 1 en 2",kort:"H1 + H2",kop:["SE hoofdstuk 1 ","en 2"],hero:"j4h1/inkomen",
   intro:"Alles voor het schoolexamen over inkomen en geld: hoofdstuk 1 en 2. Leer eerst per hoofdstuk, oefen daarna en maak als laatste het oefen-SE.",
@@ -150,7 +155,7 @@ var SE={"jaar-4/se-h1-h2-h8":{naam:"SE hoofdstuk 1 en 2",kort:"H1 + H2",kop:["SE
   intro:"Alles voor het schoolexamen over bedrijven en werk: hoofdstuk 3 en 4. Leer eerst per hoofdstuk, oefen daarna en maak als laatste het oefen-SE.",
   delen:["jaar-4/hoofdstuk-3","jaar-4/hoofdstuk-4-aan-het-werk"],
   toets:["se34/toets.html","Oefen-SE","Eén toets over beide hoofdstukken, met klok. Meerkeuze en rekenen kijkt de site na."],beeld:"Beelden: gemaakt voor deze site"}};
-var NAAM={"jaar-3/mavo/se-1":"SE H1 + H3","jaar-3/mavo/hoofdstuk-1-hoe-groot-is-jouw-welvaart":"Hoofdstuk 1: Hoe welvarend ben jij?","jaar-4/se4":"SE H3 + H4","jaar-4/se-h1-h2-h8":"SE H1 + H2","jaar-4/se-h5-en-h6":"SE H5 + H6 + H7 (3 mavo)","jaar-2/mavo/kopie-van-hoofdstuk-1":"Hoofdstuk 1 · lesstof en PowerPoints"};
+var NAAM={"jaar-3/mavo/hoofdstuk-4-ben-je-verzekerd":"Hoofdstuk 4: Kies je voor zekerheid?","jaar-3/mavo/se-1":"SE H1 + H3","jaar-3/mavo/hoofdstuk-1-hoe-groot-is-jouw-welvaart":"Hoofdstuk 1: Hoe welvarend ben jij?","jaar-4/se4":"SE H3 + H4","jaar-4/se-h1-h2-h8":"SE H1 + H2","jaar-4/se-h5-en-h6":"SE H5 + H6 + H7 (3 mavo)","jaar-2/mavo/kopie-van-hoofdstuk-1":"Hoofdstuk 1 · lesstof en PowerPoints"};
 
 var esc=function(t){return String(t).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});};
 var $=function(id){return document.getElementById(id);};

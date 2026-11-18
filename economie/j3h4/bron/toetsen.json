@@ -1,0 +1,817 @@
+{
+ "blokken": {
+  "mc_a": [
+   {
+    "v": "Mila betaalt elke maand €12 aan haar verzekeraar. Hoe heet dat bedrag?",
+    "o": [
+     "Polis",
+     "Premie",
+     "Uitkering",
+     "Dekking"
+    ],
+    "j": 1,
+    "u": "De premie betaal je om verzekerd te zijn."
+   },
+   {
+    "v": "Waar lees je precies wat er verzekerd is?",
+    "o": [
+     "In de claim",
+     "In de ladder",
+     "In de polis",
+     "In de premie"
+    ],
+    "j": 2,
+    "u": "In de polis staan de afspraken met de verzekeraar."
+   },
+   {
+    "v": "Bij schade betaalt Finn de eerste €100 zelf. Hoe heet dat?",
+    "o": [
+     "Zorgtoeslag",
+     "Poliskosten",
+     "Eigen risico",
+     "Nettopremie"
+    ],
+    "j": 2,
+    "u": "Het eigen risico is het deel van de schade dat je zelf betaalt."
+   },
+   {
+    "v": "De hond van Sofie bijt de jas van de buurman kapot. Welke verzekering vergoedt de jas?",
+    "o": [
+     "De zorgverzekering",
+     "De AVP van Sofie",
+     "De inboedel van Sofie",
+     "De opstal van de buurman"
+    ],
+    "j": 1,
+    "u": "De AVP vergoedt schade die je aan anderen toebrengt."
+   },
+   {
+    "v": "Bij een storm waait een boom op het dak van een koophuis. Welke verzekering vergoedt het dak?",
+    "o": [
+     "Cascoverzekering",
+     "Zorgverzekering",
+     "Opstalverzekering",
+     "Inboedelverzekering"
+    ],
+    "j": 2,
+    "u": "De opstalverzekering dekt schade aan het huis zelf."
+   },
+   {
+    "v": "Een inboedel is verzekerd voor €30.000, maar is €40.000 waard. Wat is hier aan de hand?",
+    "o": [
+     "Indexering",
+     "Onderverzekering",
+     "No-claimkorting",
+     "Solidariteit"
+    ],
+    "j": 1,
+    "u": "Het verzekerde bedrag is lager dan de echte waarde."
+   },
+   {
+    "v": "Je auto wordt gestolen. Met welke verzekering krijg je de auto vergoed?",
+    "o": [
+     "Opstalverzekering",
+     "Cascoverzekering",
+     "AVP",
+     "WA-verzekering"
+    ],
+    "j": 1,
+    "u": "Casco vergoedt schade aan en diefstal van je eigen auto."
+   },
+   {
+    "v": "Op de bonus-malusladder zak je een paar treden. Wat is er gebeurd?",
+    "o": [
+     "Je hebt je premie te laat betaald",
+     "Je hebt een nieuwe auto gekocht",
+     "Je hebt een jaar schadevrij gereden",
+     "Je hebt een schade geclaimd"
+    ],
+    "j": 3,
+    "u": "Na een claim krijg je minder korting."
+   },
+   {
+    "v": "De brutopremie is €1.000. De korting is 30%. Wat is de nettopremie?",
+    "o": [
+     "€970",
+     "€1.300",
+     "€300",
+     "€700"
+    ],
+    "j": 3,
+    "u": "1.000 − (30 : 100) × 1.000 = €700."
+   },
+   {
+    "v": "Lars gaat naar de huisarts. Hij heeft dit jaar nog geen zorgkosten gehad. Wat betaalt hij voor het bezoek?",
+    "o": [
+     "Niets",
+     "De hele rekening",
+     "Het hele eigen risico",
+     "De helft van de rekening"
+    ],
+    "j": 0,
+    "u": "Voor de huisarts geldt het eigen risico niet."
+   },
+   {
+    "v": "Een verzekeraar weigert iemand voor de basisverzekering omdat hij ziek is. Mag dat?",
+    "o": [
+     "Ja, bij een dure ziekte mag dat",
+     "Nee, alleen bij kinderen mag dat",
+     "Nee, er geldt een acceptatieplicht",
+     "Ja, bij een laag inkomen mag dat"
+    ],
+    "j": 2,
+    "u": "Voor de basisverzekering moet de verzekeraar iedereen aannemen."
+   },
+   {
+    "v": "Naar wie gaat de assurantiebelasting?",
+    "o": [
+     "Naar de verzekeraar",
+     "Naar het Rijk",
+     "Naar de gemeente",
+     "Naar de polishouder"
+    ],
+    "j": 1,
+    "u": "Het is een belasting van de overheid op verzekeringen."
+   }
+  ],
+  "rek_a": [
+   {
+    "nr": 1,
+    "titel": "Goed of fout?",
+    "tekst": "",
+    "p": 5,
+    "delen": [
+     {
+      "id": "",
+      "v": "Goed of fout?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Met een hoger eigen risico betaal je meer premie."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Een WA-verzekering is verplicht voor elke auto."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Een huurder heeft een opstalverzekering nodig."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Malus betekent een toeslag op de premie."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "De basisverzekering voor zorg is verplicht."
+       }
+      ],
+      "uitw": [
+       "Met een hoger eigen risico wordt de premie lager.",
+       "Het huis is van de verhuurder. De huurder verzekert alleen de inboedel."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 2,
+    "titel": "Welke verzekering?",
+    "tekst": "",
+    "p": 5,
+    "delen": [
+     {
+      "id": "",
+      "v": "Kies bij elke schade de verzekering die de schade vergoedt.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "AVP",
+         "Inboedelverzekering",
+         "Opstalverzekering",
+         "WA-verzekering",
+         "Cascoverzekering",
+         "Zorgverzekering"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Inbrekers stelen je spelcomputer uit huis"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "AVP",
+         "Inboedelverzekering",
+         "Opstalverzekering",
+         "WA-verzekering",
+         "Cascoverzekering",
+         "Zorgverzekering"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Je fietst per ongeluk een deuk in een geparkeerde auto"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "AVP",
+         "Inboedelverzekering",
+         "Opstalverzekering",
+         "WA-verzekering",
+         "Cascoverzekering",
+         "Zorgverzekering"
+        ],
+        "j": 5,
+        "p": 1,
+        "label": "Je breekt je been en moet naar het ziekenhuis"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "AVP",
+         "Inboedelverzekering",
+         "Opstalverzekering",
+         "WA-verzekering",
+         "Cascoverzekering",
+         "Zorgverzekering"
+        ],
+        "j": 3,
+        "p": 1,
+        "label": "Met je auto rijd je tegen de auto van een ander"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "AVP",
+         "Inboedelverzekering",
+         "Opstalverzekering",
+         "WA-verzekering",
+         "Cascoverzekering",
+         "Zorgverzekering"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "Door kortsluiting brandt de keuken van je koophuis uit"
+       }
+      ],
+      "uitw": [
+       "Spullen in huis: inboedel. Schade aan anderen: AVP, met de auto de WA-verzekering. Zorgkosten: zorgverzekering. Het huis zelf: opstal."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 3,
+    "titel": "De scooter van Tim",
+    "tekst": "Tim verzekert zijn scooter. De premie is €184,00 per jaar. De poliskosten zijn eenmalig €6,00. De assurantiebelasting is 21%.",
+    "p": 4,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Tel de premie en de poliskosten bij elkaar op.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         190
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Premie + poliskosten"
+       }
+      ],
+      "uitw": [
+       "184,00 + 6,00 = €190,00"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken de assurantiebelasting.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         39.9
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Assurantiebelasting"
+       }
+      ],
+      "uitw": [
+       "(21 : 100) × 190 = €39,90"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Bereken de verzekeringskosten voor het eerste jaar.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         229.9
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Verzekeringskosten"
+       }
+      ],
+      "uitw": [
+       "(premie + poliskosten) + assurantiebelasting = 190,00 + 39,90 = €229,90"
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Tim heeft een eigen risico van €75,00. Na een val is de schade aan de scooter van een ander €430,00. Bereken hoeveel de verzekeraar betaalt.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         355
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Uitkering"
+       }
+      ],
+      "uitw": [
+       "430 − 75 = €355,00"
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 4,
+    "titel": "Brand bij familie Peters",
+    "tekst": "De inboedel van familie Peters is €80.000 waard. De familie is verzekerd voor €60.000. Door een brand is er €12.000 schade.",
+    "p": 5,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken voor welk bedrag de familie onderverzekerd is.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         20000
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Onderverzekerd"
+       }
+      ],
+      "uitw": [
+       "80.000 − 60.000 = €20.000,00"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken hoeveel de verzekeraar uitkeert.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         9000
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Uitkering"
+       }
+      ],
+      "uitw": [
+       "(verzekerd bedrag : werkelijke waarde) × schade = (60.000 : 80.000) × 12.000 = €9.000,00"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Bereken hoeveel de familie zelf moet betalen.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         3000
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Zelf betalen"
+       }
+      ],
+      "uitw": [
+       "12.000 − 9.000 = €3.000,00"
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Leg uit wat indexering is en waarom het helpt tegen onderverzekering.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "4d",
+        "p": 2,
+        "label": "Indexering",
+        "model": "Bij indexering gaat het verzekerde bedrag elk jaar automatisch mee omhoog met de prijzen. Zo blijft het verzekerde bedrag gelijk aan de waarde van je spullen.",
+        "g": [
+         {
+          "t": "het verzekerde bedrag stijgt (automatisch) mee met de prijzen",
+          "p": 1
+         },
+         {
+          "t": "daardoor blijft het verzekerde bedrag hoog genoeg",
+          "p": 1
+         }
+        ],
+        "v": "Leg uit wat indexering is en waarom het helpt tegen onderverzekering.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Het verzekerde bedrag stijgt mee met de prijzen."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 5,
+    "titel": "De verzekeraar rekent",
+    "tekst": "",
+    "p": 3,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Een verzekeraar heeft 12.500 klanten met een inboedelverzekering. In één jaar melden 350 klanten schade. Bereken de kans op schade.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         2.8
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.05,
+        "label": "Kans op schade"
+       }
+      ],
+      "uitw": [
+       "(aantal schades : aantal verzekerden) × 100 = (350 : 12.500) × 100 = 2,8%"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Een huis heeft een herbouwwaarde van €320.000. De premie van de opstalverzekering is 0,09% per jaar. Bereken de premie per jaar.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         288
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Premie"
+       }
+      ],
+      "uitw": [
+       "(percentage : 100) × verzekerd bedrag = (0,09 : 100) × 320.000 = €288,00"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "In een wijk wordt vaker ingebroken dan in andere wijken. Wat betekent dat voor de premie van de inboedelverzekering in die wijk?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Hoger",
+         "Lager",
+         "Gelijk"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "De premie is daar"
+       }
+      ],
+      "uitw": [
+       "Hoe groter de kans op schade, hoe hoger de premie."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 6,
+    "titel": "De autoverzekering van Iris",
+    "tekst": "De brutopremie van de autoverzekering van Iris is €960,00 per jaar. Iris heeft 5 schadevrije jaren.",
+    "p": 6,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken de korting van Iris in euro's.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         432
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Korting"
+       }
+      ],
+      "uitw": [
+       "Bij 5 schadevrije jaren hoort 45%. (45 : 100) × 960 = €432,00"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken de nettopremie van Iris.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         528
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Nettopremie"
+       }
+      ],
+      "uitw": [
+       "brutopremie − korting = 960 − 432 = €528,00"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Iris claimt een schade. Daardoor valt zij terug naar 3 schadevrije jaren. Bereken haar nieuwe nettopremie.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         672
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Nieuwe nettopremie"
+       }
+      ],
+      "uitw": [
+       "Bij 3 jaar hoort 30%. 960 − (30 : 100) × 960 = €672,00"
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Bereken hoeveel premie Iris door de claim per jaar meer betaalt.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         144
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Meer premie"
+       }
+      ],
+      "uitw": [
+       "672 − 528 = €144,00"
+      ]
+     },
+     {
+      "id": "e",
+      "v": "De schade was een kras van €120,00. Leg met de bedragen uit of Iris de schade beter zelf had kunnen betalen.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "6e",
+        "p": 2,
+        "label": "Claimen of zelf betalen",
+        "model": "Ja. Zelf betalen kost €120. Door de claim betaalt zij €144 per jaar meer premie. Zelf betalen is dus goedkoper.",
+        "g": [
+         {
+          "t": "zelf betalen is goedkoper / zij had beter zelf kunnen betalen",
+          "p": 1
+         },
+         {
+          "t": "vergelijking van €120 schade met €144 meer premie",
+          "p": 1
+         }
+        ],
+        "v": "De schade was een kras van €120,00. Leg met de bedragen uit of Iris de schade beter zelf had kunnen betalen.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "€120 schade is minder dan €144 extra premie per jaar."
+      ]
+     }
+    ],
+    "tabel": [
+     [
+      "Schadevrije jaren",
+      "Korting op de brutopremie"
+     ],
+     [
+      "2",
+      "20%"
+     ],
+     [
+      "3",
+      "30%"
+     ],
+     [
+      "4",
+      "40%"
+     ],
+     [
+      "5",
+      "45%"
+     ],
+     [
+      "6",
+      "50%"
+     ]
+    ]
+   },
+   {
+    "nr": 7,
+    "titel": "De zorg van mevrouw Visser",
+    "tekst": "Mevrouw Visser betaalt €145,50 premie per maand voor de basisverzekering. Haar eigen risico is €385,00 per jaar.",
+    "p": 8,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Kies bij elke zorg: basisverzekering of aanvullende verzekering.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Basisverzekering",
+         "Aanvullende verzekering"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Een operatie in het ziekenhuis"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Basisverzekering",
+         "Aanvullende verzekering"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Fysiotherapie"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Basisverzekering",
+         "Aanvullende verzekering"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Een bezoek aan de huisarts"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Basisverzekering",
+         "Aanvullende verzekering"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "De tandarts"
+       }
+      ],
+      "uitw": [
+       "Huisarts, ziekenhuis en medicijnen zitten in de basisverzekering."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Dit jaar zijn de kosten van het ziekenhuis €1.240,00. Bereken hoeveel mevrouw Visser dit jaar zelf betaalt aan premie en eigen risico samen.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         2131
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Zelf betalen"
+       }
+      ],
+      "uitw": [
+       "(maandpremie × 12) + betaald eigen risico = (145,50 × 12) + 385 = 1.746 + 385 = €2.131,00"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Mevrouw Visser krijgt €96,00 zorgtoeslag per maand. Bereken hoeveel premie zij per maand zelf betaalt.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         49.5
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Per maand"
+       }
+      ],
+      "uitw": [
+       "145,50 − 96,00 = €49,50"
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Leg uit wat solidariteit betekent bij de zorgverzekering.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "7d",
+        "p": 2,
+        "label": "Solidariteit",
+        "model": "Iedereen betaalt dezelfde premie voor de basisverzekering, ook wie weinig zorg nodig heeft. Gezonde mensen betalen zo mee voor mensen die ziek zijn.",
+        "g": [
+         {
+          "t": "iedereen betaalt (dezelfde) premie voor de basisverzekering",
+          "p": 1
+         },
+         {
+          "t": "gezonde mensen betalen mee voor zieke mensen",
+          "p": 1
+         }
+        ],
+        "v": "Leg uit wat solidariteit betekent bij de zorgverzekering.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Gezonde mensen betalen mee voor mensen die zorg nodig hebben."
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "toetsen": {
+  "t1": {
+   "n": 1,
+   "t": "oefentoets A",
+   "sub": "Hoofdstuk 4",
+   "min": 60,
+   "mc": "mc_a",
+   "open": null,
+   "rek": "rek_a"
+  }
+ },
+ "VERS": [
+  {
+   "n": 1,
+   "min": 60,
+   "pts": 48
+  }
+ ]
+}

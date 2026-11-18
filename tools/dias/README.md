@@ -81,3 +81,13 @@ python3 -I tools/dias/lo.py "pad/naar/les.pptx" economie/j4h5/slides/5.4 weg=6,8
 ```
 
 `lo.py` doet alles in één keer (stappen-pptx, PDF met `soffice`, JPG's met `pdftoppm`, plaatsen) en print het aantal dia's en de klikstappen voor `deck.json` en `steps.json`. `weg=` laat dia's weg. Nearpod-versies waarin dezelfde dia steeds terugkomt met een regel erbij worden één dia met stappen. LibreOffice vervangt lettertypen die het niet heeft (Century Gothic): de dia's zijn goed leesbaar, maar een export met PowerPoint op de Mac is exacter.
+
+## Beelden van anderen uit een PowerPoint halen (`strip.py`)
+
+Staat er in een PowerPoint een tabel of grafiek uit het boek of van een website, dan komt die niet in de repo. `strip.py` maakt een kopie van de PowerPoint zonder die beelden. Daarna gaat de kopie door `lo.py`.
+
+```bash
+python3 -I tools/dias/strip.py les.pptx les-schoon.pptx "4:pics" "7:pics,txt=eenmalig" "3:pics,lijnen,leeg" "10:pics,ids=19|20"
+```
+
+Per dia (nummering: alle dia's in het bestand, ook verborgen): `pics` haalt alle afbeeldingen weg, `lijnen` de verbindingslijnen, `leeg` lege vormen (kaders om een tabel), `txt=` losse tekstvakjes met die tekst en `ids=` vormen op nummer. De klikstappen van weggehaalde vormen gaan mee weg. Gebruikt voor jaar 3 mavo H3 (3.1, 3.2, 3.4) en H4 (4.1, 4.3, 4.4). Kijk het resultaat altijd na.
