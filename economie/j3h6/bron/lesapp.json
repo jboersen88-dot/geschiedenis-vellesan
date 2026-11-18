@@ -1,0 +1,1305 @@
+{
+ "KEY": "h6m3-app-v1",
+ "PARS": [
+  {
+   "id": "6.1",
+   "t": "Produceren maar!",
+   "c": "var(--p1)",
+   "file": "1QGsgNAhOGzc5BtwGeHEQeN2rOMypJB0V",
+   "x": [
+    "o61",
+    "ore"
+   ],
+   "sum": "De vier productiefactoren, de bedrijfskolom en toegevoegde waarde, arbeidsintensief of kapitaalintensief, en afschrijven.",
+   "imgs": [
+    [
+     "keten",
+     "Van grondstof naar eindproduct: de bedrijfskolom"
+    ],
+    [
+     "machine",
+     "Machines nemen werk over: kapitaalintensief"
+    ]
+   ],
+   "q": [
+    "Welke vier productiefactoren zijn er?",
+    "Geef bij elke productiefactor twee voorbeelden.",
+    "Welke beloning hoort bij elke productiefactor?",
+    "Wat is een bedrijfskolom?",
+    "Wat wordt er bedoeld met toegevoegde waarde?",
+    "Op welke manier bereken je de toegevoegde waarde?",
+    "Wat is het verschil tussen een arbeidsintensief en een kapitaalintensief bedrijf?",
+    "Wat is het grote voordeel van een kapitaalintensief bedrijf?",
+    "Wat wordt er bedoeld met afschrijvingen?",
+    "Hoe bereken je de afschrijving per jaar?"
+   ]
+  },
+  {
+   "id": "6.2",
+   "t": "Tel uit je winst!",
+   "c": "var(--p2)",
+   "file": "1iHySqC-jFDvDQAxe8LLhlR5ruKbGPEyc",
+   "x": [
+    "o62",
+    "owi"
+   ],
+   "sum": "Van inkoopprijs naar verkoopprijs en consumentenprijs, en van omzet naar brutowinst en nettoresultaat.",
+   "imgs": [
+    [
+     "winst",
+     "Wat blijft er over? Van omzet naar winst"
+    ],
+    [
+     "prijs",
+     "De consumentenprijs: de prijs met btw"
+    ]
+   ],
+   "q": [
+    "Wat is de afzet?",
+    "Hoe bereken je de omzet?",
+    "Hoe bereken je de inkoopwaarde?",
+    "Hoe bereken je de brutowinst?",
+    "Waarom zegt de brutowinst nog niet zoveel over een bedrijf?",
+    "Wat zijn bedrijfskosten? Noem vier voorbeelden.",
+    "Hoe bereken je het nettoresultaat (de nettowinst)?",
+    "Wat is de brutowinstopslag?",
+    "Hoe bereken je de verkoopprijs met de brutowinstopslag?",
+    "Wat is de btw?",
+    "Wat is het verschil tussen de verkoopprijs en de consumentenprijs?"
+   ]
+  },
+  {
+   "id": "6.3",
+   "t": "Op de markt",
+   "c": "var(--p3)",
+   "file": "1PogBG56FCezT7MQk3dIPaVidJHu61q9g",
+   "x": [
+    "o63"
+   ],
+   "sum": "Concrete en abstracte markten, vraag en aanbod, de evenwichtsprijs en het marktaandeel.",
+   "imgs": [
+    [
+     "markt",
+     "Op de markt komen vraag en aanbod bij elkaar"
+    ],
+    [
+     "aandeel",
+     "Het marktaandeel: jouw deel van de taart"
+    ]
+   ],
+   "q": [
+    "Wat wordt er bedoeld met een concrete markt?",
+    "Wat wordt er bedoeld met een abstracte markt?",
+    "Van wie komt de vraag naar producten? En van wie komt het aanbod?",
+    "Wat gebeurt er met de prijs als de vraag groter is dan het aanbod? Leg uit waarom.",
+    "Wat is de evenwichtsprijs?",
+    "Wat is de evenwichtshoeveelheid?",
+    "Wat wordt er bedoeld met een marktaandeel?",
+    "Hoe bereken je het marktaandeel?"
+   ]
+  },
+  {
+   "id": "6.4",
+   "t": "Meer of minder productie?",
+   "c": "var(--p4)",
+   "file": "1nJ8Om-t8WDf0-BDyBjHTvHaU2THynzwr",
+   "x": [
+    "o64"
+   ],
+   "sum": "Vaste en variabele kosten, de kostprijs, de productiecapaciteit, arbeidsproductiviteit en maatschappelijk verantwoord ondernemen.",
+   "imgs": [
+    [
+     "kosten",
+     "Vaste en variabele kosten: wat kost één product?"
+    ],
+    [
+     "mvo",
+     "Ondernemen met oog voor mens en milieu"
+    ]
+   ],
+   "q": [
+    "Wat is het verschil tussen vaste kosten en variabele kosten?",
+    "Hoe bereken je de kostprijs van één product?",
+    "Wat wordt er bedoeld met de productiecapaciteit?",
+    "Waardoor wordt de productiecapaciteit bepaald?",
+    "Wat wordt er bedoeld met onderbezetting en met overbezetting?",
+    "Wat is arbeidsproductiviteit en hoe bereken je die?",
+    "Op welke manieren kan een bedrijf de arbeidsproductiviteit verhogen?",
+    "Wat is een voordeel van een hogere arbeidsproductiviteit?",
+    "Wat wordt er bedoeld met maatschappelijke kosten en maatschappelijke opbrengsten?",
+    "Op welke manier kan een bedrijf maatschappelijk verantwoord ondernemen?"
+   ]
+  }
+ ],
+ "GOALS": {
+  "6.1": [
+   "Ik kan de vier productiefactoren noemen, met een voorbeeld en de beloning.",
+   "Ik kan uitleggen wat een bedrijfskolom is.",
+   "Ik kan de toegevoegde waarde uitrekenen.",
+   "Ik kan uitleggen of een bedrijf arbeidsintensief of kapitaalintensief is.",
+   "Ik kan de afschrijving per jaar uitrekenen."
+  ],
+  "6.2": [
+   "Ik kan de verkoopprijs uitrekenen met de brutowinstopslag.",
+   "Ik kan de consumentenprijs uitrekenen met de btw.",
+   "Ik kan de omzet uitrekenen.",
+   "Ik kan de brutowinst en het nettoresultaat uitrekenen.",
+   "Ik kan uitleggen wat bedrijfskosten zijn."
+  ],
+  "6.3": [
+   "Ik kan het verschil uitleggen tussen een concrete en een abstracte markt.",
+   "Ik kan uitleggen van wie de vraag en van wie het aanbod komt.",
+   "Ik kan uitleggen wat de evenwichtsprijs en de evenwichtshoeveelheid zijn.",
+   "Ik kan uitleggen wat er met de prijs gebeurt als vraag of aanbod verandert.",
+   "Ik kan het marktaandeel uitrekenen."
+  ],
+  "6.4": [
+   "Ik kan kosten indelen in vaste en variabele kosten.",
+   "Ik kan de kostprijs van een product uitrekenen.",
+   "Ik kan uitleggen wat de productiecapaciteit bepaalt.",
+   "Ik kan de arbeidsproductiviteit uitrekenen en uitleggen hoe die kan stijgen.",
+   "Ik kan uitleggen wat maatschappelijk verantwoord ondernemen is."
+  ]
+ },
+ "CHK": [
+  [
+   "De productiefactoren en hun beloning kennen",
+   "6.1",
+   "quiz"
+  ],
+  [
+   "De toegevoegde waarde uitrekenen",
+   "6.1",
+   "reken",
+   "tw"
+  ],
+  [
+   "De afschrijving per jaar uitrekenen",
+   "6.1",
+   "reken",
+   "afschr"
+  ],
+  [
+   "De verkoopprijs uitrekenen met de brutowinstopslag",
+   "6.2",
+   "reken",
+   "vprijs"
+  ],
+  [
+   "De consumentenprijs uitrekenen",
+   "6.2",
+   "reken",
+   "cprijs"
+  ],
+  [
+   "De omzet uitrekenen",
+   "6.2",
+   "reken",
+   "omzet"
+  ],
+  [
+   "De brutowinst uitrekenen",
+   "6.2",
+   "reken",
+   "bwinst"
+  ],
+  [
+   "Het nettoresultaat uitrekenen",
+   "6.2",
+   "reken",
+   "nwinst"
+  ],
+  [
+   "Vraag, aanbod en evenwichtsprijs uitleggen",
+   "6.3",
+   "quiz"
+  ],
+  [
+   "Het marktaandeel uitrekenen",
+   "6.3",
+   "reken",
+   "maandeel"
+  ],
+  [
+   "Vaste en variabele kosten uit elkaar houden",
+   "6.4",
+   "quiz"
+  ],
+  [
+   "De kostprijs uitrekenen",
+   "6.4",
+   "reken",
+   "kostprijs"
+  ],
+  [
+   "De arbeidsproductiviteit uitrekenen",
+   "6.4",
+   "reken",
+   "aprod"
+  ]
+ ],
+ "MAT": {
+  "o61": [
+   "Oefenopgave 6.1",
+   [
+    [
+     "Nakijkblad",
+     "1kKh3dfIS6Nnewnwu2S1MLvZrykDZvNVU"
+    ]
+   ]
+  ],
+  "o62": [
+   "Oefenopgave 6.2",
+   [
+    [
+     "Nakijkblad",
+     "1HtFcS1OCXKPB1n8-Yxac_ZSWWjkcncGm"
+    ]
+   ]
+  ],
+  "o63": [
+   "Oefenopgave 6.3",
+   [
+    [
+     "Nakijkblad",
+     "1aqa2_ep__fkAnzlZuGtrKPZAI-yv_Tqk"
+    ]
+   ]
+  ],
+  "o64": [
+   "Oefenopgave 6.4",
+   [
+    [
+     "Nakijkblad",
+     "19wFRB6U0xd5QKsqeTuFwGYox18By9KMP"
+    ]
+   ]
+  ],
+  "ore": [
+   "Oefenopgave rekenen",
+   [
+    [
+     "Nakijkblad",
+     "1eYB4qaUT70G7vYtOuoxHucFxThff-h16"
+    ]
+   ]
+  ],
+  "owi": [
+   "Oefenen met winst berekenen",
+   [
+    [
+     "Oefening",
+     "1rbw1a7S4fuQAh0IPalbjICRkbJ1bGcuj"
+    ]
+   ]
+  ]
+ },
+ "VERS": [],
+ "FILMS": [
+  {
+   "par": "6.2",
+   "film": "1O9SYzXDgU4Do2idOkxv4AGYMXMMUellm",
+   "k": "Instructiefilm",
+   "t": "De consumentenprijs uitrekenen",
+   "d": "Stap voor stap van verkoopprijs naar consumentenprijs.",
+   "lab": "reken",
+   "mode": "cprijs",
+   "btn": "Oefen: consumentenprijs"
+  },
+  {
+   "par": "6.2",
+   "film": "1osYJVj1xUW4hJOTmEq6H1eo-9CIS9oOe",
+   "k": "Instructiefilm",
+   "t": "Van omzet naar nettowinst",
+   "d": "De omzet, de brutowinst en de nettowinst uitrekenen.",
+   "lab": "reken",
+   "mode": "nwinst",
+   "btn": "Oefen: nettoresultaat"
+  },
+  {
+   "par": "6.3",
+   "yt": "J9W8sFdR-5E",
+   "k": "Uitlegfilm",
+   "t": "Wat wordt de prijs?",
+   "d": "De uitlegfilm uit jaar 2 over de prijs op een markt.",
+   "lab": "quiz",
+   "qpar": "6.3",
+   "btn": "Oefen: quiz 6.3"
+  }
+ ],
+ "CARDS": [
+  [
+   "6.1",
+   "Productiefactoren",
+   "De vier middelen die nodig zijn om te produceren: natuur, arbeid, kapitaal en ondernemerschap.",
+   "Een bakker heeft graan, personeel, een oven en een ondernemer nodig."
+  ],
+  [
+   "6.1",
+   "Natuur",
+   "Alles wat de natuur levert om te produceren. De beloning is pacht.",
+   "Grond, olie, gas en zonlicht."
+  ],
+  [
+   "6.1",
+   "Arbeid",
+   "Het werk van mensen, met hoofd of handen. De beloning is loon.",
+   "De werknemers in een fabriek."
+  ],
+  [
+   "6.1",
+   "Kapitaal",
+   "De hulpmiddelen waarmee je produceert, en het geld om die te kopen. De beloning is huur of rente.",
+   "Een machine, een hamer of een bedrijfspand."
+  ],
+  [
+   "6.1",
+   "Ondernemerschap",
+   "De productiefactoren op de juiste manier inzetten en risico nemen. De beloning is winst.",
+   "De eigenaar beslist wat er wordt gemaakt."
+  ],
+  [
+   "6.1",
+   "Bedrijfskolom",
+   "Alle bedrijven na elkaar die een product maken, van grondstof tot eindproduct.",
+   "Graanboer, meelfabriek, bakkerij, supermarkt."
+  ],
+  [
+   "6.1",
+   "Toegevoegde waarde",
+   "Het verschil tussen de verkoopwaarde en de inkoopwaarde bij een bedrijf.",
+   "Inkoop €115, verkoop €785: toegevoegde waarde €670."
+  ],
+  [
+   "6.1",
+   "Arbeidsintensief",
+   "De productie hangt vooral af van mensen.",
+   "Een school of een verzorgingshuis."
+  ],
+  [
+   "6.1",
+   "Kapitaalintensief",
+   "De productie hangt vooral af van machines.",
+   "Een autofabriek met robots."
+  ],
+  [
+   "6.1",
+   "Investeren",
+   "Geld uitgeven aan kapitaalgoederen, zoals machines.",
+   "Een drukkerij koopt een nieuwe drukpers."
+  ],
+  [
+   "6.1",
+   "Afschrijving",
+   "De waardedaling van een kapitaalgoed, omdat het slijt of veroudert.",
+   "(€28.500 − €4.500) : 6 = €4.000 per jaar."
+  ],
+  [
+   "6.1",
+   "Restwaarde",
+   "Wat een kapitaalgoed nog waard is als het bedrijf het niet meer gebruikt.",
+   "Na zes jaar is de auto nog €4.500 waard."
+  ],
+  [
+   "6.2",
+   "Afzet",
+   "Het aantal producten dat is verkocht.",
+   "1.400 zakken hondenvoer in een week."
+  ],
+  [
+   "6.2",
+   "Omzet",
+   "Het geld dat binnenkomt door de verkoop: afzet × verkoopprijs.",
+   "1.400 × €18,50 = €25.900."
+  ],
+  [
+   "6.2",
+   "Inkoopwaarde",
+   "Wat de verkochte producten bij de inkoop hebben gekost: afzet × inkoopprijs.",
+   "1.400 × €9,90 = €13.860."
+  ],
+  [
+   "6.2",
+   "Brutowinst",
+   "De omzet min de inkoopwaarde.",
+   "€25.900 − €13.860 = €12.040."
+  ],
+  [
+   "6.2",
+   "Bedrijfskosten",
+   "Alle kosten van het bedrijf naast de inkoop.",
+   "Lonen, huur, energie en afschrijvingen."
+  ],
+  [
+   "6.2",
+   "Nettoresultaat",
+   "De brutowinst min de bedrijfskosten. Ook wel nettowinst. Is het negatief, dan is er verlies.",
+   "€12.040 − €8.650 = €3.390."
+  ],
+  [
+   "6.2",
+   "Brutowinstopslag",
+   "Het bedrag dat de winkelier boven op de inkoopprijs zet, vaak een percentage van de inkoopprijs.",
+   "Inkoopprijs €9, opslag 85%: verkoopprijs €16,65."
+  ],
+  [
+   "6.2",
+   "Verkoopprijs",
+   "De prijs zonder btw: de inkoopprijs plus de brutowinstopslag.",
+   "€16,65 exclusief btw."
+  ],
+  [
+   "6.2",
+   "Btw",
+   "Belasting over de toegevoegde waarde. De consument betaalt die boven op de verkoopprijs: 21% of 9%.",
+   "21% over €16,65 is €3,50."
+  ],
+  [
+   "6.2",
+   "Consumentenprijs",
+   "De prijs die de klant in de winkel betaalt: de verkoopprijs plus de btw.",
+   "€16,65 + €3,50 = €20,15."
+  ],
+  [
+   "6.3",
+   "Concrete markt",
+   "Een markt die je kunt zien: een plek waar kopers en verkopers bij elkaar komen.",
+   "De weekmarkt of een rommelmarkt."
+  ],
+  [
+   "6.3",
+   "Abstracte markt",
+   "Alle vraag naar en alle aanbod van een product bij elkaar. Het is geen plek.",
+   "De telefoonmarkt of de fietsenmarkt."
+  ],
+  [
+   "6.3",
+   "Vraag",
+   "Wat de kopers van een product willen kopen.",
+   "Bij een hogere prijs willen minder mensen kopen."
+  ],
+  [
+   "6.3",
+   "Aanbod",
+   "Wat de producenten van een product willen verkopen.",
+   "Bij een hogere prijs willen producenten meer verkopen."
+  ],
+  [
+   "6.3",
+   "Wet van vraag en aanbod",
+   "De prijs hangt af van vraag en aanbod. Meer vraag: hogere prijs. Meer aanbod: lagere prijs.",
+   "Na een slechte oogst worden aardbeien duurder."
+  ],
+  [
+   "6.3",
+   "Evenwichtsprijs",
+   "De prijs waarbij de vraag en het aanbod even groot zijn.",
+   "Bij €1,50 is de vraag 50.000 kg en het aanbod ook."
+  ],
+  [
+   "6.3",
+   "Evenwichtshoeveelheid",
+   "De hoeveelheid die bij de evenwichtsprijs wordt verkocht.",
+   "50.000 kg."
+  ],
+  [
+   "6.3",
+   "Concurrenten",
+   "Bedrijven die hetzelfde soort product verkopen aan dezelfde klanten.",
+   "Twee telefoonmerken."
+  ],
+  [
+   "6.3",
+   "Marktaandeel",
+   "Het deel van de totale afzet of omzet op een markt dat van één bedrijf is, in procenten.",
+   "(300 : 1.200) × 100 = 25,0%."
+  ],
+  [
+   "6.4",
+   "Vaste kosten",
+   "Kosten die gelijk blijven als je meer of minder produceert.",
+   "De huur van het pand en de afschrijving van machines."
+  ],
+  [
+   "6.4",
+   "Variabele kosten",
+   "Kosten die stijgen als je meer produceert.",
+   "Grondstoffen en energie."
+  ],
+  [
+   "6.4",
+   "Kostprijs",
+   "Wat het kost om één product te maken: de totale kosten gedeeld door de productie.",
+   "€231 : 250 stoelen = €0,92 per stoel."
+  ],
+  [
+   "6.4",
+   "Productiecapaciteit",
+   "De hoeveelheid die een bedrijf maximaal kan maken.",
+   "Hangt af van de mensen, hun uren en de machines."
+  ],
+  [
+   "6.4",
+   "Onderbezetting",
+   "Het bedrijf maakt minder dan het kan. Machines en mensen worden niet volledig gebruikt.",
+   "Een restaurant met halflege tafels."
+  ],
+  [
+   "6.4",
+   "Overbezetting",
+   "Er is meer vraag dan het bedrijf kan maken.",
+   "Er zijn te weinig machines of te weinig personeel."
+  ],
+  [
+   "6.4",
+   "Arbeidsproductiviteit",
+   "De productie per werknemer in een bepaalde tijd.",
+   "1.200 T-shirts : 8 werknemers = 150 per werknemer."
+  ],
+  [
+   "6.4",
+   "Mechanisatie",
+   "Machines nemen werk van mensen over. De arbeidsproductiviteit stijgt.",
+   "Een broodfabriek koopt een nieuwe machine."
+  ],
+  [
+   "6.4",
+   "Maatschappelijke kosten",
+   "Nadelen van de productie voor de samenleving.",
+   "Milieuvervuiling, geluidsoverlast en stank."
+  ],
+  [
+   "6.4",
+   "Maatschappelijke opbrengsten",
+   "Voordelen van de productie voor de samenleving.",
+   "Er ontstaat werkgelegenheid."
+  ],
+  [
+   "6.4",
+   "Maatschappelijk verantwoord ondernemen",
+   "Ondernemen met oog voor mens en milieu, gericht op de toekomst. Ook wel mvo.",
+   "Minder verpakking gebruiken en afval recyclen."
+  ]
+ ],
+ "BANK": [
+  [
+   "6.1",
+   "Welke vier productiefactoren zijn er?",
+   [
+    "Natuur, arbeid, kapitaal, ondernemerschap",
+    "Natuur, loon, kapitaal, winst en rente",
+    "Arbeid, pacht, omzet, ondernemerschap",
+    "Grond, arbeid, omzet, winst en kapitaal"
+   ],
+   "Deze vier heb je nodig om te produceren."
+  ],
+  [
+   "6.1",
+   "Bij welke productiefactor hoort een oven in een bakkerij?",
+   [
+    "Kapitaal",
+    "Natuur",
+    "Arbeid",
+    "Ondernemerschap"
+   ],
+   "Kapitaal: de hulpmiddelen waarmee je produceert."
+  ],
+  [
+   "6.1",
+   "Bij welke productiefactor hoort aardgas?",
+   [
+    "Natuur",
+    "Kapitaal",
+    "Arbeid",
+    "Ondernemerschap"
+   ],
+   "Alles wat de natuur levert."
+  ],
+  [
+   "6.1",
+   "Wat is de beloning voor de productiefactor arbeid?",
+   [
+    "Loon",
+    "Pacht",
+    "Rente",
+    "Winst"
+   ],
+   "Wie werkt, krijgt loon."
+  ],
+  [
+   "6.1",
+   "Wat is de beloning voor ondernemerschap?",
+   [
+    "Winst",
+    "Loon",
+    "Pacht",
+    "Rente"
+   ],
+   "De ondernemer neemt risico en krijgt de winst."
+  ],
+  [
+   "6.1",
+   "Wat is een bedrijfskolom?",
+   [
+    "Alle bedrijven van grondstof tot eindproduct",
+    "Alle bedrijven die in één stad staan",
+    "Alle werknemers van één groot bedrijf",
+    "Alle klanten die één product kopen"
+   ],
+   "Bijvoorbeeld graanboer, meelfabriek, bakkerij en supermarkt."
+  ],
+  [
+   "6.1",
+   "Een bakker koopt meel voor €0,45 en verkoopt het brood voor €1,10. Wat is de toegevoegde waarde?",
+   [
+    "€0,65",
+    "€1,55",
+    "€1,10",
+    "€0,45"
+   ],
+   "1,10 − 0,45 = €0,65."
+  ],
+  [
+   "6.1",
+   "Waarom voegt een consument geen waarde toe?",
+   [
+    "De consument produceert niet",
+    "De consument betaalt geen btw",
+    "De consument koopt te weinig",
+    "De consument heeft geen loon"
+   ],
+   "Alleen bedrijven in de bedrijfskolom voegen waarde toe."
+  ],
+  [
+   "6.1",
+   "Welk bedrijf is arbeidsintensief?",
+   [
+    "Een verzorgingshuis",
+    "Een autofabriek",
+    "Een containerhaven",
+    "Een oliebedrijf"
+   ],
+   "De productie hangt daar vooral af van mensen."
+  ],
+  [
+   "6.1",
+   "Wat is het voordeel van kapitaalintensief werken?",
+   [
+    "Meer productie en minder arbeidskosten",
+    "Meer personeel en minder afschrijving",
+    "Minder machines en meer handwerk",
+    "Minder productie en hogere prijzen"
+   ],
+   "Daardoor daalt de kostprijs."
+  ],
+  [
+   "6.1",
+   "Wat is afschrijving?",
+   [
+    "De waardedaling van een kapitaalgoed",
+    "De winst op een verkocht product",
+    "De belasting op een nieuwe machine",
+    "De rente op een lening van de bank"
+   ],
+   "Machines slijten en verouderen."
+  ],
+  [
+   "6.1",
+   "Een machine kost €50.000. Na 5 jaar is de restwaarde €10.000. Wat is de afschrijving per jaar?",
+   [
+    "€8.000",
+    "€10.000",
+    "€12.000",
+    "€2.000"
+   ],
+   "(50.000 − 10.000) : 5 = €8.000."
+  ],
+  [
+   "6.2",
+   "Wat is de afzet?",
+   [
+    "Het aantal verkochte producten",
+    "Het geld van alle verkopen samen",
+    "De prijs van één product",
+    "De winst na aftrek van kosten"
+   ],
+   "De afzet is een aantal, geen bedrag."
+  ],
+  [
+   "6.2",
+   "Hoe bereken je de omzet?",
+   [
+    "afzet × verkoopprijs",
+    "afzet × inkoopprijs",
+    "omzet − inkoopwaarde",
+    "brutowinst − kosten"
+   ],
+   "Het geld dat binnenkomt door de verkoop."
+  ],
+  [
+   "6.2",
+   "Afzet 200 stuks, verkoopprijs €12. Wat is de omzet?",
+   [
+    "€2.400",
+    "€212",
+    "€188",
+    "€1.200"
+   ],
+   "200 × 12 = €2.400."
+  ],
+  [
+   "6.2",
+   "Hoe bereken je de brutowinst?",
+   [
+    "omzet − inkoopwaarde",
+    "omzet − bedrijfskosten",
+    "afzet × verkoopprijs",
+    "omzet + inkoopwaarde"
+   ],
+   "Van de brutowinst gaan de bedrijfskosten nog af."
+  ],
+  [
+   "6.2",
+   "Waarom zegt de brutowinst nog niet zoveel?",
+   [
+    "De bedrijfskosten moeten er nog af",
+    "De omzet moet er nog bij worden geteld",
+    "De btw moet er nog bij worden geteld",
+    "De inkoopwaarde moet er nog af"
+   ],
+   "Pas het nettoresultaat laat zien wat er overblijft."
+  ],
+  [
+   "6.2",
+   "Wat hoort bij de bedrijfskosten?",
+   [
+    "De huur van de winkel",
+    "De inkoop van producten",
+    "De btw van de klant",
+    "De omzet van de week"
+   ],
+   "Ook lonen, energie en afschrijvingen."
+  ],
+  [
+   "6.2",
+   "Brutowinst €9.000, bedrijfskosten €6.500. Wat is het nettoresultaat?",
+   [
+    "€2.500",
+    "€15.500",
+    "€9.000",
+    "€6.500"
+   ],
+   "9.000 − 6.500 = €2.500."
+  ],
+  [
+   "6.2",
+   "De bedrijfskosten zijn hoger dan de brutowinst. Wat betekent dat?",
+   [
+    "Het bedrijf maakt verlies",
+    "Het bedrijf maakt winst",
+    "Het bedrijf heeft geen omzet",
+    "Het bedrijf betaalt geen btw"
+   ],
+   "Het nettoresultaat is dan negatief."
+  ],
+  [
+   "6.2",
+   "Waarvan is de brutowinstopslag een percentage?",
+   [
+    "Van de inkoopprijs",
+    "Van de consumentenprijs",
+    "Van de bedrijfskosten",
+    "Van de btw"
+   ],
+   "De opslag komt boven op de inkoopprijs."
+  ],
+  [
+   "6.2",
+   "Inkoopprijs €10, brutowinstopslag 50%. Wat is de verkoopprijs?",
+   [
+    "€15",
+    "€5",
+    "€60",
+    "€10,50"
+   ],
+   "10 + (50 : 100) × 10 = €15."
+  ],
+  [
+   "6.2",
+   "Wat is het verschil tussen de verkoopprijs en de consumentenprijs?",
+   [
+    "In de consumentenprijs zit de btw",
+    "In de verkoopprijs zit de btw",
+    "De verkoopprijs is altijd hoger",
+    "De consumentenprijs is zonder winst"
+   ],
+   "Consumentenprijs = verkoopprijs + btw."
+  ],
+  [
+   "6.2",
+   "Verkoopprijs €100, btw 21%. Wat is de consumentenprijs?",
+   [
+    "€121",
+    "€79",
+    "€21",
+    "€100"
+   ],
+   "100 + (21 : 100) × 100 = €121."
+  ],
+  [
+   "6.3",
+   "Wat is een voorbeeld van een concrete markt?",
+   [
+    "De weekmarkt op het plein",
+    "De markt voor telefoons",
+    "De markt voor arbeid",
+    "De markt voor huizen"
+   ],
+   "Een concrete markt kun je zien en bezoeken."
+  ],
+  [
+   "6.3",
+   "Wat is een abstracte markt?",
+   [
+    "Alle vraag en aanbod van een product",
+    "Een plein met kramen en verkopers",
+    "Een winkel met maar één product",
+    "Een markt die alleen 's avonds open is"
+   ],
+   "Bijvoorbeeld de fietsenmarkt."
+  ],
+  [
+   "6.3",
+   "Van wie komt het aanbod op een markt?",
+   [
+    "Van de producenten",
+    "Van de consumenten",
+    "Van de overheid",
+    "Van de vakbonden"
+   ],
+   "Zij bieden producten aan."
+  ],
+  [
+   "6.3",
+   "De prijs van een product stijgt. Wat gebeurt er meestal met de vraag?",
+   [
+    "De vraag daalt",
+    "De vraag stijgt",
+    "De vraag blijft gelijk",
+    "De vraag verdubbelt"
+   ],
+   "Niet iedereen wil of kan de hogere prijs betalen."
+  ],
+  [
+   "6.3",
+   "De prijs van een product stijgt. Wat gebeurt er meestal met het aanbod?",
+   [
+    "Het aanbod stijgt",
+    "Het aanbod daalt",
+    "Het aanbod blijft gelijk",
+    "Het aanbod verdwijnt"
+   ],
+   "Producenten verdienen er meer aan en maken er meer van."
+  ],
+  [
+   "6.3",
+   "De vraag is groter dan het aanbod. Wat gebeurt er met de prijs?",
+   [
+    "De prijs stijgt",
+    "De prijs daalt",
+    "De prijs blijft gelijk",
+    "De prijs vervalt"
+   ],
+   "Kopers willen meer betalen om het product te krijgen."
+  ],
+  [
+   "6.3",
+   "Wat is de evenwichtsprijs?",
+   [
+    "De prijs waarbij vraag en aanbod gelijk zijn",
+    "De prijs waarbij de winst het hoogst is",
+    "De prijs die de overheid heeft bepaald",
+    "De prijs waarbij niemand wil kopen"
+   ],
+   "Er wordt dan evenveel gevraagd als aangeboden."
+  ],
+  [
+   "6.3",
+   "Bij €2 is de vraag 400 stuks en het aanbod 400 stuks. Wat is de evenwichtshoeveelheid?",
+   [
+    "400 stuks",
+    "800 stuks",
+    "200 stuks",
+    "2 stuks"
+   ],
+   "De hoeveelheid die bij de evenwichtsprijs wordt verkocht."
+  ],
+  [
+   "6.3",
+   "Wat is het marktaandeel van een bedrijf?",
+   [
+    "Zijn deel van de totale afzet op de markt",
+    "Zijn winst per verkocht product",
+    "Zijn aantal aandelen op de beurs",
+    "Zijn deel van de btw van de klant"
+   ],
+   "Je rekent het uit in procenten."
+  ],
+  [
+   "6.3",
+   "Een merk verkoopt 300 van de 1.200 fietsen. Wat is het marktaandeel?",
+   [
+    "25%",
+    "4%",
+    "36%",
+    "75%"
+   ],
+   "(300 : 1.200) × 100 = 25%."
+  ],
+  [
+   "6.3",
+   "Wat is een voordeel van veel concurrentie voor de consument?",
+   [
+    "Lagere prijzen",
+    "Minder keuze",
+    "Hogere btw",
+    "Langere wachttijd"
+   ],
+   "Bedrijven doen hun best om klanten te krijgen."
+  ],
+  [
+   "6.4",
+   "Wat zijn vaste kosten?",
+   [
+    "Kosten die gelijk blijven bij meer productie",
+    "Kosten die stijgen bij meer productie",
+    "Kosten die de klant in de winkel betaalt",
+    "Kosten die elk jaar vanzelf lager worden"
+   ],
+   "Bijvoorbeeld de huur van het pand."
+  ],
+  [
+   "6.4",
+   "Welke kosten zijn variabel?",
+   [
+    "Grondstoffen",
+    "Huur van het pand",
+    "Loon van de directeur",
+    "Afschrijving"
+   ],
+   "Meer producten maken kost meer grondstoffen."
+  ],
+  [
+   "6.4",
+   "Totale kosten €3.000, productie 600 stuks. Wat is de kostprijs?",
+   [
+    "€5",
+    "€0,20",
+    "€2.400",
+    "€50"
+   ],
+   "3.000 : 600 = €5 per stuk."
+  ],
+  [
+   "6.4",
+   "Een bedrijf maakt meer producten. Wat gebeurt er met de vaste kosten per product?",
+   [
+    "Die dalen",
+    "Die stijgen",
+    "Die blijven gelijk",
+    "Die verdubbelen"
+   ],
+   "Dezelfde vaste kosten worden over meer producten verdeeld."
+  ],
+  [
+   "6.4",
+   "Wat is de productiecapaciteit?",
+   [
+    "Wat een bedrijf maximaal kan maken",
+    "Wat een bedrijf vorig jaar verkocht",
+    "Wat een werknemer per uur verdient",
+    "Wat een product kost om te maken"
+   ],
+   "Die hangt af van de mensen, hun uren en de machines."
+  ],
+  [
+   "6.4",
+   "Een fabriek kan 400 stoelen per dag maken en maakt er 300. Hoe heet dat?",
+   [
+    "Onderbezetting",
+    "Overbezetting",
+    "Mechanisatie",
+    "Specialisatie"
+   ],
+   "Machines en mensen worden niet volledig gebruikt."
+  ],
+  [
+   "6.4",
+   "Wat is arbeidsproductiviteit?",
+   [
+    "De productie per werknemer",
+    "Het loon per werknemer",
+    "Het aantal werknemers",
+    "De winst per product"
+   ],
+   "In een bepaalde tijd, bijvoorbeeld per uur."
+  ],
+  [
+   "6.4",
+   "8 werknemers maken samen 1.200 T-shirts per uur. Wat is de arbeidsproductiviteit?",
+   [
+    "150 per werknemer",
+    "9.600 per werknemer",
+    "1.192 per werknemer",
+    "1.208 per werknemer"
+   ],
+   "1.200 : 8 = 150."
+  ],
+  [
+   "6.4",
+   "Hoe kan een bedrijf de arbeidsproductiviteit verhogen?",
+   [
+    "Het personeel scholen",
+    "De lonen verlagen",
+    "Minder uren draaien",
+    "Machines verkopen"
+   ],
+   "Ook met mechanisatie, arbeidsverdeling en prestatieloon."
+  ],
+  [
+   "6.4",
+   "De arbeidsproductiviteit stijgt. Wat gebeurt er met de kostprijs per product?",
+   [
+    "Die daalt",
+    "Die stijgt",
+    "Die blijft gelijk",
+    "Die verdubbelt"
+   ],
+   "De loonkosten worden over meer producten verdeeld."
+  ],
+  [
+   "6.4",
+   "Wat is een voorbeeld van maatschappelijke kosten?",
+   [
+    "Stank van een fabriek",
+    "Banen bij een fabriek",
+    "Winst van een fabriek",
+    "Loon in een fabriek"
+   ],
+   "Nadelen voor de samenleving."
+  ],
+  [
+   "6.4",
+   "Wat past bij maatschappelijk verantwoord ondernemen?",
+   [
+    "Afval recyclen en minder verpakking",
+    "Zo goedkoop mogelijk laten produceren",
+    "Meer stroom en grondstoffen gebruiken",
+    "Alleen letten op de winst van dit jaar"
+   ],
+   "Mvo let op mens en milieu, ook in de toekomst."
+  ]
+ ],
+ "SORT": [
+  {
+   "a": "Natuur of arbeid",
+   "b": "Kapitaal of ondernemerschap",
+   "A": [
+    [
+     "🌾",
+     "Landbouwgrond"
+    ],
+    [
+     "🛢️",
+     "Olie"
+    ],
+    [
+     "👷",
+     "Werknemers"
+    ]
+   ],
+   "B": [
+    [
+     "🔨",
+     "Een hamer"
+    ],
+    [
+     "🏭",
+     "Een bedrijfspand"
+    ],
+    [
+     "🤖",
+     "Een machine"
+    ],
+    [
+     "🎲",
+     "Risico nemen"
+    ]
+   ]
+  },
+  {
+   "a": "Arbeidsintensief",
+   "b": "Kapitaalintensief",
+   "A": [
+    [
+     "🏫",
+     "Middelbare school"
+    ],
+    [
+     "🎨",
+     "Schildersbedrijf"
+    ],
+    [
+     "🧓",
+     "Verzorgingshuis"
+    ]
+   ],
+   "B": [
+    [
+     "🚗",
+     "Autofabriek"
+    ],
+    [
+     "🚢",
+     "Containerhaven"
+    ],
+    [
+     "🥖",
+     "Broodfabriek"
+    ]
+   ]
+  },
+  {
+   "a": "Inkoop",
+   "b": "Bedrijfskosten",
+   "A": [
+    [
+     "📦",
+     "Producten van de groothandel"
+    ],
+    [
+     "🧵",
+     "Stof voor de kleermaker"
+    ],
+    [
+     "🥬",
+     "Groente voor de groenteboer"
+    ]
+   ],
+   "B": [
+    [
+     "🏠",
+     "Huur van de winkel"
+    ],
+    [
+     "👩‍💼",
+     "Lonen"
+    ],
+    [
+     "💡",
+     "Energie"
+    ],
+    [
+     "📉",
+     "Afschrijvingen"
+    ]
+   ]
+  },
+  {
+   "a": "Concrete markt",
+   "b": "Abstracte markt",
+   "A": [
+    [
+     "🧺",
+     "Weekmarkt"
+    ],
+    [
+     "🪑",
+     "Rommelmarkt"
+    ],
+    [
+     "🐟",
+     "Vismarkt"
+    ]
+   ],
+   "B": [
+    [
+     "📱",
+     "Telefoonmarkt"
+    ],
+    [
+     "🏘️",
+     "Woningmarkt"
+    ],
+    [
+     "🚲",
+     "Fietsenmarkt"
+    ]
+   ]
+  },
+  {
+   "a": "Prijs omhoog",
+   "b": "Prijs omlaag",
+   "A": [
+    [
+     "📈",
+     "De vraag stijgt"
+    ],
+    [
+     "🌧️",
+     "Slechte oogst: minder aanbod"
+    ],
+    [
+     "🔥",
+     "Product is populair"
+    ]
+   ],
+   "B": [
+    [
+     "📉",
+     "De vraag daalt"
+    ],
+    [
+     "🚚",
+     "Veel meer aanbod"
+    ],
+    [
+     "🥊",
+     "Meer concurrentie"
+    ]
+   ]
+  },
+  {
+   "a": "Vaste kosten",
+   "b": "Variabele kosten",
+   "A": [
+    [
+     "🏢",
+     "Huur van het pand"
+    ],
+    [
+     "🤖",
+     "Afschrijving van een robot"
+    ],
+    [
+     "👔",
+     "Loon van de directeur"
+    ]
+   ],
+   "B": [
+    [
+     "🪵",
+     "Grondstoffen"
+    ],
+    [
+     "⚡",
+     "Energie voor de machines"
+    ],
+    [
+     "🚛",
+     "Transport naar winkels"
+    ]
+   ]
+  }
+ ]
+}

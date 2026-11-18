@@ -1,0 +1,834 @@
+{
+ "blokken": {
+  "mc_a": [
+   {
+    "v": "Fatima werkt graag omdat ze dan elke dag op tijd opstaat en een vast ritme heeft. Welk arbeidsmotief is dat?",
+    "o": [
+     "Geld verdienen",
+     "Nieuwe dingen leren",
+     "Contact met collega's",
+     "Regelmaat in je leven"
+    ],
+    "j": 3,
+    "u": "Werk geeft structuur aan je dag."
+   },
+   {
+    "v": "Wie spreken samen een cao af?",
+    "o": [
+     "Werknemers en de gemeente",
+     "Vakbonden en werkgevers",
+     "Werkgevers en het UWV",
+     "Vakbonden en de klanten"
+    ],
+    "j": 1,
+    "u": "De cao geldt daarna voor de hele bedrijfstak."
+   },
+   {
+    "v": "Op de loonstrook van Ruben staat €2.100 bruto en €1.560 netto. Wat is het verschil?",
+    "o": [
+     "Het vakantiegeld van Ruben",
+     "De btw op het loon",
+     "De winst van de werkgever",
+     "De loonbelasting en premies"
+    ],
+    "j": 3,
+    "u": "Die worden van het brutoloon afgehaald."
+   },
+   {
+    "v": "Oma past elke woensdag gratis op de kleinkinderen. Wat voor werk is dat?",
+    "o": [
+     "Grijs werk",
+     "Wit werk",
+     "Geschoold werk",
+     "Zwart werk"
+    ],
+    "j": 0,
+    "u": "Onbetaald en toegestaan."
+   },
+   {
+    "v": "In welke sector werkt een docent op een middelbare school?",
+    "o": [
+     "Primaire sector",
+     "Secundaire sector",
+     "Quartaire sector",
+     "Tertiaire sector"
+    ],
+    "j": 2,
+    "u": "Een dienst zonder winstdoel."
+   },
+   {
+    "v": "Twee zussen hebben samen een vof. Het bedrijf heeft een schuld die het niet kan betalen. Wat is het gevolg?",
+    "o": [
+     "Zij verliezen alleen hun aandelen",
+     "De klanten betalen de schuld",
+     "De schuld vervalt na één jaar",
+     "Zij moeten met privégeld betalen"
+    ],
+    "j": 3,
+    "u": "Bij een vof ben je met je privégeld aansprakelijk."
+   },
+   {
+    "v": "Wat is de werkgelegenheid?",
+    "o": [
+     "Het aanbod van arbeid",
+     "De vraag naar arbeid",
+     "De beroepsbevolking",
+     "De arbeidsparticipatie"
+    ],
+    "j": 1,
+    "u": "Alle banen bij werkgevers samen."
+   },
+   {
+    "v": "Wie telt mee bij de beroepsbevolking?",
+    "o": [
+     "Een kind van 12 met een krantenwijk",
+     "Een werkloze timmerman die solliciteert",
+     "Een student die geen bijbaan wil",
+     "Een gepensioneerde lerares van 70 jaar"
+    ],
+    "j": 1,
+    "u": "Je werkt of je zoekt werk, en je bent 15 jaar of ouder."
+   },
+   {
+    "v": "Een cd-fabriek sluit omdat bijna niemand nog cd's koopt. Welke werkloosheid ontstaat er?",
+    "o": [
+     "Frictiewerkloosheid",
+     "Seizoenswerkloosheid",
+     "Structurele werkloosheid",
+     "Conjuncturele werkloosheid"
+    ],
+    "j": 2,
+    "u": "Het product is verouderd. Deze banen komen niet terug."
+   },
+   {
+    "v": "Welke beloning hoort bij de productiefactor kapitaal?",
+    "o": [
+     "Pacht",
+     "Huur of rente",
+     "Winst",
+     "Loon"
+    ],
+    "j": 1,
+    "u": "Voor het gebruik van kapitaal betaal je huur of rente."
+   },
+   {
+    "v": "Een drukkerij vervangt tien werknemers door één grote machine. Wat wordt het bedrijf?",
+    "o": [
+     "Meer arbeidsintensief",
+     "Een abstracte markt",
+     "Meer kapitaalintensief",
+     "Een bedrijfskolom"
+    ],
+    "j": 2,
+    "u": "Machines worden belangrijker dan mensen."
+   },
+   {
+    "v": "Wat blijft over als van de brutowinst de bedrijfskosten af zijn?",
+    "o": [
+     "De afzet",
+     "Het nettoresultaat",
+     "De inkoopwaarde",
+     "De omzet"
+    ],
+    "j": 1,
+    "u": "Is het negatief, dan is er verlies."
+   },
+   {
+    "v": "Over welke prijs berekent een winkel de btw?",
+    "o": [
+     "De consumentenprijs",
+     "De kostprijs",
+     "De verkoopprijs",
+     "De inkoopprijs"
+    ],
+    "j": 2,
+    "u": "Verkoopprijs + btw = consumentenprijs."
+   },
+   {
+    "v": "Er komt een grote oogst appels op de markt. De vraag blijft gelijk. Wat gebeurt er met de prijs?",
+    "o": [
+     "De prijs daalt",
+     "De prijs stijgt",
+     "De prijs blijft gelijk",
+     "De prijs verdubbelt"
+    ],
+    "j": 0,
+    "u": "Meer aanbod bij dezelfde vraag: een lagere prijs."
+   },
+   {
+    "v": "Een bedrijf geeft het personeel een cursus. Daardoor maakt elke werknemer meer producten per uur. Wat stijgt er?",
+    "o": [
+     "De productiecapaciteit van de markt",
+     "De maatschappelijke kosten",
+     "De vaste kosten per product",
+     "De arbeidsproductiviteit"
+    ],
+    "j": 3,
+    "u": "De productie per werknemer."
+   },
+   {
+    "v": "Welk voorbeeld is een maatschappelijke opbrengst van een nieuwe fabriek?",
+    "o": [
+     "De buurt heeft last van stank",
+     "Er rijden meer vrachtwagens door het dorp",
+     "Er komen banen bij in de regio",
+     "De lucht in de omgeving wordt vuiler"
+    ],
+    "j": 2,
+    "u": "Een voordeel voor de samenleving."
+   }
+  ],
+  "rek_a": [
+   {
+    "nr": 1,
+    "titel": "Goed of fout?",
+    "tekst": "",
+    "p": 6,
+    "delen": [
+     {
+      "id": "",
+      "v": "Goed of fout?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Een cao geldt voor één werknemer."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Zwart werk is verboden."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Aandelen van een bv kan iedereen op de beurs kopen."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Conjuncturele werkloosheid is tijdelijk."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "De omzet is de afzet keer de verkoopprijs."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Variabele kosten blijven gelijk als de productie stijgt."
+       }
+      ],
+      "uitw": [
+       "Een cao geldt voor iedereen in een bedrijfstak.",
+       "Alleen aandelen van een nv zijn vrij te koop.",
+       "Variabele kosten stijgen mee met de productie."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 2,
+    "titel": "Het loon van Sam",
+    "tekst": "Sam is monteur. Zijn brutoloon is €2.340,00 per maand. Hij werkt 36 uur per week. Per maand wordt €468,00 loonbelasting en €187,20 aan premies ingehouden.",
+    "p": 4,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken het nettoloon van Sam per maand.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         1684.8
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Nettoloon"
+       }
+      ],
+      "uitw": [
+       "brutoloon − (loonbelasting + premies) = 2.340 − (468 + 187,20) = €1.684,80"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken het brutoloon van Sam per week.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         540
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Weekloon"
+       }
+      ],
+      "uitw": [
+       "(maandloon × 12) : 52 = (2.340 × 12) : 52 = €540,00"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Bereken het bruto-uurloon van Sam.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         15
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Uurloon"
+       }
+      ],
+      "uitw": [
+       "weekloon : aantal uren per week = 540 : 36 = €15,00"
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Sam wordt werkloos. De WW-uitkering is de eerste twee maanden 75% van het brutoloon. Bereken de uitkering per maand.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         1755
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "WW-uitkering"
+       }
+      ],
+      "uitw": [
+       "(75 : 100) × 2.340 = €1.755,00"
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 3,
+    "titel": "De arbeidsmarkt van Bergdorp",
+    "tekst": "In Bergdorp wonen 25.000 mensen van 15 jaar tot de pensioenleeftijd. Daarvan werken er 17.100. Nog eens 900 mensen hebben geen baan en zoeken werk.",
+    "p": 7,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken de beroepsbevolking van Bergdorp.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         18000
+        ],
+        "p": 1,
+        "eenh": "mensen",
+        "tol": 0.5,
+        "label": "Beroepsbevolking"
+       }
+      ],
+      "uitw": [
+       "werkenden + werklozen = 17.100 + 900 = 18.000 mensen"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken de arbeidsparticipatie.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         72
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.05,
+        "label": "Arbeidsparticipatie"
+       }
+      ],
+      "uitw": [
+       "(beroepsbevolking : bevolking van 15 jaar tot pensioenleeftijd) × 100 = (18.000 : 25.000) × 100 = 72,0%"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Bereken hoeveel procent van de beroepsbevolking werkloos is.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         5
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.05,
+        "label": "Werkloosheid"
+       }
+      ],
+      "uitw": [
+       "(werklozen : beroepsbevolking) × 100 = (900 : 18.000) × 100 = 5,0%"
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Kies bij elk voorbeeld de soort werkloosheid.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Conjunctureel",
+         "Structureel",
+         "Frictie",
+         "Seizoen"
+        ],
+        "j": 3,
+        "p": 1,
+        "label": "Een camping ontslaat in oktober het personeel van het zwembad"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Conjunctureel",
+         "Structureel",
+         "Frictie",
+         "Seizoen"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Door een crisis kopen mensen minder meubels en ontslaat de meubelzaak twee verkopers"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Conjunctureel",
+         "Structureel",
+         "Frictie",
+         "Seizoen"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "De kassa's van de supermarkt zijn vervangen door zelfscankassa's"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Conjunctureel",
+         "Structureel",
+         "Frictie",
+         "Seizoen"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "Mo is net klaar met zijn opleiding en zoekt een paar weken naar een baan"
+       }
+      ],
+      "uitw": [
+       "Seizoen: werk in een deel van het jaar. Conjunctureel: mensen kopen minder. Structureel: het werk verdwijnt blijvend. Frictie: kort zoeken."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 4,
+    "titel": "Werken voor een baas of voor jezelf",
+    "tekst": "",
+    "p": 6,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Kies bij elk bedrijf de ondernemingsvorm.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Eenmanszaak",
+         "Vof",
+         "Bv",
+         "Nv"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Een tegelzetter werkt alleen en is de enige eigenaar"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Eenmanszaak",
+         "Vof",
+         "Bv",
+         "Nv"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Drie vrienden zijn samen eigenaar van een escaperoom, zonder aandelen"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Eenmanszaak",
+         "Vof",
+         "Bv",
+         "Nv"
+        ],
+        "j": 3,
+        "p": 1,
+        "label": "Een groot energiebedrijf met aandelen op de beurs"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Eenmanszaak",
+         "Vof",
+         "Bv",
+         "Nv"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "Een familiebedrijf met aandelen die niet vrij te koop zijn"
+       }
+      ],
+      "uitw": [
+       "Eén eigenaar: eenmanszaak. Vennoten: vof. Aandelen niet vrij te koop: bv. Aandelen op de beurs: nv."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Noem een voordeel en een nadeel van werken als zelfstandige, vergeleken met werken in loondienst.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "4b",
+        "p": 2,
+        "label": "Zelfstandige of loondienst",
+        "model": "Voordeel: je bent je eigen baas en bepaalt zelf je uren en regels. Nadeel: je inkomen is onzeker en je moet zelf zorgen voor je pensioen en verzekeringen.",
+        "g": [
+         {
+          "t": "voordeel: eigen baas / zelf uren en regels bepalen",
+          "p": 1
+         },
+         {
+          "t": "nadeel: onzeker inkomen / zelf pensioen en verzekeringen regelen",
+          "p": 1
+         }
+        ],
+        "v": "Noem een voordeel en een nadeel van werken als zelfstandige, vergeleken met werken in loondienst.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Eigen baas, maar minder zekerheid."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 5,
+    "titel": "Fietsenwinkel Van Rijn",
+    "tekst": "Fietsenwinkel Van Rijn koopt een bestelbus voor €24.000,00. De bus gaat 8 jaar mee. Daarna is de restwaarde €2.400,00. De winkel koopt fietshelmen in voor €20,00 per stuk. De brutowinstopslag is 90% van de inkoopprijs. Per maand verkoopt de winkel 300 helmen. De bedrijfskosten zijn €4.150,00 per maand.",
+    "p": 6,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken de afschrijving van de bestelbus per jaar.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         2700
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Afschrijving"
+       }
+      ],
+      "uitw": [
+       "(aanschafprijs − restwaarde) : aantal gebruiksjaren = (24.000 − 2.400) : 8 = €2.700,00"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken de verkoopprijs van een fietshelm.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         38
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Verkoopprijs"
+       }
+      ],
+      "uitw": [
+       "inkoopprijs + ((opslagpercentage : 100) × inkoopprijs) = 20 + (90 : 100) × 20 = 20 + 18 = €38,00"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Bereken de consumentenprijs van een fietshelm. De btw is 21%.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         45.98
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Consumentenprijs"
+       }
+      ],
+      "uitw": [
+       "38 + (21 : 100) × 38 = 38 + 7,98 = €45,98"
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Bereken de omzet van de fietshelmen per maand.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         11400
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Omzet"
+       }
+      ],
+      "uitw": [
+       "afzet × verkoopprijs = 300 × 38 = €11.400,00"
+      ]
+     },
+     {
+      "id": "e",
+      "v": "Bereken de brutowinst op de fietshelmen per maand.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         5400
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Brutowinst"
+       }
+      ],
+      "uitw": [
+       "Inkoopwaarde: 300 × 20 = 6.000. omzet − inkoopwaarde = 11.400 − 6.000 = €5.400,00"
+      ]
+     },
+     {
+      "id": "f",
+      "v": "Bereken het nettoresultaat per maand.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         1250
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Nettoresultaat"
+       }
+      ],
+      "uitw": [
+       "brutowinst − bedrijfskosten = 5.400 − 4.150 = €1.250,00"
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 6,
+    "titel": "De helmenfabriek",
+    "tekst": "Een fabriek maakt 15.000 fietshelmen per jaar en verkoopt ze allemaal. De vaste kosten zijn €90.000,00 per jaar. De variabele kosten zijn €8,00 per helm.",
+    "p": 8,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Kies bij elke kostensoort: vaste of variabele kosten.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Vaste kosten",
+         "Variabele kosten"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Het plastic voor de helmen"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Vaste kosten",
+         "Variabele kosten"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "De huur van de fabriek"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Vaste kosten",
+         "Variabele kosten"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Het loon van de directeur"
+       }
+      ],
+      "uitw": [
+       "Vaste kosten blijven gelijk. Variabele kosten stijgen als je meer maakt."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken de kostprijs van één helm.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         14
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Kostprijs"
+       }
+      ],
+      "uitw": [
+       "Variabele kosten: 15.000 × 8 = 120.000. (vaste kosten + variabele kosten) : productie = (90.000 + 120.000) : 15.000 = €14,00"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "In de fabriek werken 12 mensen. Bereken de arbeidsproductiviteit per werknemer per jaar.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         1250
+        ],
+        "p": 1,
+        "eenh": "helmen",
+        "tol": 0.5,
+        "label": "Arbeidsproductiviteit"
+       }
+      ],
+      "uitw": [
+       "productie : aantal werknemers = 15.000 : 12 = 1.250 helmen"
+      ]
+     },
+     {
+      "id": "d",
+      "v": "In het hele land worden 120.000 helmen per jaar verkocht. Bereken het marktaandeel van de fabriek.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         12.5
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.05,
+        "label": "Marktaandeel"
+       }
+      ],
+      "uitw": [
+       "(afzet van het bedrijf : totale afzet) × 100 = (15.000 : 120.000) × 100 = 12,5%"
+      ]
+     },
+     {
+      "id": "e",
+      "v": "De fabriek koopt een machine waardoor elke werknemer meer helmen maakt. Leg uit wat er met de kostprijs van een helm gebeurt.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "6e",
+        "p": 2,
+        "label": "Arbeidsproductiviteit en kostprijs",
+        "model": "De kostprijs daalt. De arbeidsproductiviteit stijgt, dus de loonkosten worden over meer helmen verdeeld.",
+        "g": [
+         {
+          "t": "de kostprijs daalt",
+          "p": 1
+         },
+         {
+          "t": "de (loon)kosten worden over meer producten verdeeld / hogere arbeidsproductiviteit",
+          "p": 1
+         }
+        ],
+        "v": "De fabriek koopt een machine waardoor elke werknemer meer helmen maakt. Leg uit wat er met de kostprijs van een helm gebeurt.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Een hogere arbeidsproductiviteit geeft een lagere kostprijs."
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "toetsen": {
+  "t1": {
+   "n": 1,
+   "t": "oefen-SE",
+   "sub": "H5 en H6",
+   "min": 75,
+   "mc": "mc_a",
+   "open": null,
+   "rek": "rek_a"
+  }
+ },
+ "VERS": [
+  {
+   "n": 1,
+   "min": 75,
+   "pts": 53
+  }
+ ]
+}

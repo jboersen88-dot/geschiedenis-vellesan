@@ -134,7 +134,22 @@ var RIJK={"jaar-3/mavo/hoofdstuk-0-rekenvaardigheden":{map:"j3h0",soort:"reken",
   alt:"Illustratie van een paraplu boven een huis",
   intro:"Verzekeren, je huis en je spullen, de auto en de zorg: waarvoor verzeker je je, en wat kost dat? Vier paragrafen met veel rekenwerk.",
   par:"Vier paragrafen over verzekeren.",beeld:"Beelden: gemaakt voor deze site",reken:"Premie uit een tabel, verzekeringskosten, kans op schade, onderverzekering, de bonus-malusladder en zorgkosten.",games:"Een snelle quiz, Swipe & Scoor en begrippen-memory.",
-  kleur:{"4.1":["var(--coral)","var(--berry)"],"4.2":["#7fd4c9","var(--teal)"],"4.3":["#f2c46b","var(--ochre)"],"4.4":["#b9d6cb","var(--green)"]}}};
+  kleur:{"4.1":["var(--coral)","var(--berry)"],"4.2":["#7fd4c9","var(--teal)"],"4.3":["#f2c46b","var(--ochre)"],"4.4":["#b9d6cb","var(--green)"]}},
+  "jaar-3/mavo/hoofdstuk-5-werkt-dat-zo":{map:"j3h5",kop:["Is er werk ","voor jou?"],hero:"werk-h",kaart:{"5.1":"loon-k","5.2":"bedrijf-k","5.3":"markt-k","5.4":"robot-k"},
+  alt:"Illustratie van een werknemer met een helm naast een fabriek",
+  intro:"Waarom werken mensen, wat houd je over van je loon, bij wat voor bedrijf kun je werken en wat als er geen werk is? Vier paragrafen over werk.",
+  par:"Vier paragrafen over werk en de arbeidsmarkt.",beeld:"Beelden: gemaakt voor deze site",reken:"Van bruto naar netto, loon omrekenen, deeltijd, arbeidsparticipatie, werkloosheid en de WW-uitkering.",games:"Een snelle quiz, Swipe & Scoor en begrippen-memory.",
+  kleur:{"5.1":["var(--coral)","var(--berry)"],"5.2":["#7fd4c9","var(--teal)"],"5.3":["#f2c46b","var(--ochre)"],"5.4":["#b9d6cb","var(--green)"]}},
+  "jaar-3/mavo/hoofdstuk-6-productie-en-markt":{map:"j3h6",kop:["Productie en ","markt"],hero:"productie-h",kaart:{"6.1":"keten-k","6.2":"winst-k","6.3":"markt-k","6.4":"kosten-k"},
+  alt:"Illustratie van een fabriek met een doos en een winkel",
+  intro:"Hoe wordt een product gemaakt, wat verdient een bedrijf eraan en hoe komt de prijs tot stand? Vier paragrafen met veel rekenwerk.",
+  par:"Vier paragrafen over produceren, winst en de markt.",beeld:"Beelden: gemaakt voor deze site",reken:"Toegevoegde waarde, afschrijving, verkoopprijs en consumentenprijs, omzet en winst, marktaandeel, kostprijs en arbeidsproductiviteit.",games:"Een snelle quiz, Swipe & Scoor en begrippen-memory.",
+  kleur:{"6.1":["var(--coral)","var(--berry)"],"6.2":["#7fd4c9","var(--teal)"],"6.3":["#f2c46b","var(--ochre)"],"6.4":["#b9d6cb","var(--green)"]}},
+  "jaar-3/mavo/hoofdstuk-8-over-economische-grenzen":{map:"j3h8",kop:["Over de ","grens"],hero:"grens-h",kaart:{"8.1":"haven-k","8.2":"protectie-k","8.3":"europa-k","8.4":"welvaart-k"},
+  alt:"Illustratie van een vrachtschip en een wereldbol",
+  intro:"Waarom handelen landen met elkaar, hoe beschermen ze hun eigen bedrijven, wat doet de EU en waarom zijn sommige landen arm? Vier paragrafen over de wereld.",
+  par:"Vier paragrafen over handel, de EU en welvaart in de wereld.",beeld:"Beelden: gemaakt voor deze site",reken:"De export- en importquote, het handelssaldo, invoerrechten en het inkomen per hoofd van de bevolking.",games:"Een snelle quiz, Swipe & Scoor en begrippen-memory.",
+  kleur:{"8.1":["var(--coral)","var(--berry)"],"8.2":["#7fd4c9","var(--teal)"],"8.3":["#f2c46b","var(--ochre)"],"8.4":["#b9d6cb","var(--green)"]}}};
 /* SE-pagina's in de nieuwe opzet: de hoofdstukken van het SE (leren) en de oefenstof (oefenen) op één plek */
 var SE={"jaar-4/se-h1-h2-h8":{naam:"SE hoofdstuk 1 en 2",kort:"H1 + H2",kop:["SE hoofdstuk 1 ","en 2"],hero:"j4h1/inkomen",
   intro:"Alles voor het schoolexamen over inkomen en geld: hoofdstuk 1 en 2. Leer eerst per hoofdstuk, oefen daarna en maak als laatste het oefen-SE.",
@@ -145,6 +160,19 @@ var SE={"jaar-4/se-h1-h2-h8":{naam:"SE hoofdstuk 1 en 2",kort:"H1 + H2",kop:["SE
   intro:"Alles voor het schoolexamen over de overheid: hoofdstuk 5 en 6 van dit jaar en hoofdstuk 7 uit 3 mavo. Leer eerst per hoofdstuk, oefen daarna en maak als laatste het oefen-SE.",
   delen:["jaar-4/hoofdstuk-5-kan-de-overheid-dat-regelen","jaar-4/hoofdstuk-6-de-overheid-en-ons-inkomen","jaar-3/mavo/hoofdstuk-7-de-overheid-voor-ons-allemaal"],
   toets:["se56/toets.html","Oefen-SE","Eén toets over alle drie de hoofdstukken, met klok. Meerkeuze en rekenen kijkt de site na."],beeld:"Beelden: gemaakt voor deze site"},
+  "jaar-3/mavo/se-3-h5-h6":{naam:"SE hoofdstuk 5 en 6",kort:"H5 + H6",kop:["SE hoofdstuk 5 ","en 6"],hero:"j3h5/werk-h",
+  intro:"Alles voor het schoolexamen over werk en over productie en markt: hoofdstuk 5 en 6. Leer eerst per hoofdstuk, oefen daarna en maak als laatste het oefen-SE.",
+  delen:["jaar-3/mavo/hoofdstuk-5-werkt-dat-zo","jaar-3/mavo/hoofdstuk-6-productie-en-markt"],
+  toets:["j3se56/toets.html","Oefen-SE","Eén toets over beide hoofdstukken, met klok. Meerkeuze en rekenen kijkt de site na."],
+  extra:[["https://drive.google.com/file/d/1-BKaRXhjs3JvOoLsVkwQLMLEIpU9M3Dz/view","Oefentoets hoofdstuk 5 op papier","De oefentoets uit de les.",""],
+    ["https://drive.google.com/file/d/1W6wxtmSujC5hWigu-W7rYzpNB8XZt-0X/view","Nakijkblad oefentoets hoofdstuk 5","Kijk je oefentoets zelf na.",""]],beeld:"Beelden: gemaakt voor deze site"},
+  "jaar-3/mavo/se4-h7-h8":{naam:"SE hoofdstuk 7 en 8",kort:"H7 + H8",kop:["SE hoofdstuk 7 ","en 8"],hero:"j4h7/handel-h",
+  intro:"Alles voor het schoolexamen over handel en welvaart in de wereld: hoofdstuk 7 en 8 uit het boek van 4 mavo. Leer eerst per hoofdstuk, oefen daarna en maak als laatste het oefen-SE.",
+  delen:["jaar-4/hoofdstuk-7","jaar-4/hoofdstuk-8"],
+  toets:["j3se78/toets.html","Oefen-SE","Eén toets over beide hoofdstukken, met klok. Meerkeuze en rekenen kijkt de site na."],
+  extra:[["h.html?p=jaar-3%2Fmavo%2Fhoofdstuk-8-over-economische-grenzen","Over de grens (3 mavo)","Hetzelfde onderwerp uit het boek van 3 mavo: handig als herhaling.",""],
+    ["https://drive.google.com/file/d/15gUDjc97ZMMTT7raxKN2oJ9kNJJaPat8/view","Oefentoets hoofdstuk 7 op papier","De oefentoets uit de les.",""],
+    ["https://drive.google.com/file/d/12-pTNqw8ov_xtKFu-Y0vsO6U33mLZyqZ/view","Oefentoets hoofdstuk 7 met antwoorden","Kijk je oefentoets zelf na.",""]],beeld:"Beelden: gemaakt voor deze site"},
   "jaar-3/mavo/se-1":{naam:"SE hoofdstuk 1 en 3",kort:"H1 + H3",kop:["SE hoofdstuk 1 ","en 3"],hero:"j3h3/bank-h",
   intro:"Alles voor het schoolexamen over welvaart en de bank: hoofdstuk 1 en 3. Leer eerst per hoofdstuk, oefen daarna en maak als laatste het oefen-SE.",
   delen:["jaar-3/mavo/hoofdstuk-1-hoe-groot-is-jouw-welvaart","jaar-3/mavo/hoofdstuk-3-de-bank-en-jouw-geld"],
@@ -155,7 +183,7 @@ var SE={"jaar-4/se-h1-h2-h8":{naam:"SE hoofdstuk 1 en 2",kort:"H1 + H2",kop:["SE
   intro:"Alles voor het schoolexamen over bedrijven en werk: hoofdstuk 3 en 4. Leer eerst per hoofdstuk, oefen daarna en maak als laatste het oefen-SE.",
   delen:["jaar-4/hoofdstuk-3","jaar-4/hoofdstuk-4-aan-het-werk"],
   toets:["se34/toets.html","Oefen-SE","Eén toets over beide hoofdstukken, met klok. Meerkeuze en rekenen kijkt de site na."],beeld:"Beelden: gemaakt voor deze site"}};
-var NAAM={"jaar-3/mavo/hoofdstuk-4-ben-je-verzekerd":"Hoofdstuk 4: Kies je voor zekerheid?","jaar-3/mavo/se-1":"SE H1 + H3","jaar-3/mavo/hoofdstuk-1-hoe-groot-is-jouw-welvaart":"Hoofdstuk 1: Hoe welvarend ben jij?","jaar-4/se4":"SE H3 + H4","jaar-4/se-h1-h2-h8":"SE H1 + H2","jaar-4/se-h5-en-h6":"SE H5 + H6 + H7 (3 mavo)","jaar-2/mavo/kopie-van-hoofdstuk-1":"Hoofdstuk 1 · lesstof en PowerPoints"};
+var NAAM={"jaar-3/mavo/se-3-h5-h6":"SE H5 + H6","jaar-3/mavo/se4-h7-h8":"SE H7 + H8","jaar-3/mavo/hoofdstuk-8-over-economische-grenzen":"Hoofdstuk 8: Over de grens","jaar-3/mavo/hoofdstuk-6-productie-en-markt":"Hoofdstuk 6: Productie en markt","jaar-3/mavo/hoofdstuk-5-werkt-dat-zo":"Hoofdstuk 5: Is er werk voor jou?","jaar-3/mavo/hoofdstuk-4-ben-je-verzekerd":"Hoofdstuk 4: Kies je voor zekerheid?","jaar-3/mavo/se-1":"SE H1 + H3","jaar-3/mavo/hoofdstuk-1-hoe-groot-is-jouw-welvaart":"Hoofdstuk 1: Hoe welvarend ben jij?","jaar-4/se4":"SE H3 + H4","jaar-4/se-h1-h2-h8":"SE H1 + H2","jaar-4/se-h5-en-h6":"SE H5 + H6 + H7 (3 mavo)","jaar-2/mavo/kopie-van-hoofdstuk-1":"Hoofdstuk 1 · lesstof en PowerPoints"};
 
 var esc=function(t){return String(t).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});};
 var $=function(id){return document.getElementById(id);};
