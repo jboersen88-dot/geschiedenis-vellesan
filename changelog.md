@@ -506,3 +506,4 @@ Aanleiding: de eerste versie was "een standaard website". Je bestaande Google Si
 - QR-speurtocht: elke stop gaat open door de poster op die plek te scannen (of het codewoord te typen); 3 geheime bonuscodes. Posters: `rondleiding/qr/posters.pdf`, opnieuw te maken met `rondleiding/tools/maak-qr.js`.
 - Getest in een nagebootste iPad; nog niet op een echte iPad (camera).
 - 18 nov (later): rondleiding aangevuld met de nieuwbouw op de eerste etage: stop 12 "De nieuwbouw (B22 tot B25)" en stop 13 "De lift, B26 en B27" (nu 15 stops); posters opnieuw gemaakt (19 pagina's).
+- 18 nov (later): rondleiding: filmpje en uitleg van elke stop zijn nu altijd te bekijken; alleen de opdrachten gaan pas open na het scannen van de QR-poster.
