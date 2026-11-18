@@ -55,6 +55,7 @@ s = s.replace('"h2v2-"', J(D["KEY"] + "-"))  # highscores van de games
 sub(r'\["ov","hv","rk","ot","sp"\]\.map', "Object.keys(MAT).map")
 sub(r"^<script>/\* Edu-Racer[^\n]*\nwindow\.EDU_RACER_HTML=.*?</script>$\n", "")
 sub(r"^\s*'<button class=\"gtile\" data-game=\"racer\">.*?$\n", "")
+s = s.replace(".citem .ctxt{flex:1;min-width:0}", ".citem .ctxt{flex:1;min-width:0;overflow-wrap:anywhere}")  # lange woorden breken op een telefoon
 sub(r"LU_JAAR=2", "LU_JAAR=%d" % C["jaar"])
 sub(r"Jij en je geld<small", C["titel"] + "<small")
 if NR != 2:

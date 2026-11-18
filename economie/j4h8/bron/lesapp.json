@@ -1,0 +1,1175 @@
+{
+ "KEY": "h8v4-app-v1",
+ "PARS": [
+  {
+   "id": "8.1",
+   "t": "Verschillen in welvaart",
+   "c": "var(--p1)",
+   "file": "",
+   "x": [],
+   "sum": "Het inkomen per hoofd van de bevolking, wat nog meer meetelt voor welvaart, de inkomensverdeling en de vicieuze cirkel van armoede.",
+   "imgs": [
+    [
+     "verdeling",
+     "Hoe is het inkomen verdeeld?"
+    ],
+    [
+     "cirkel",
+     "Arm blijft arm: de vicieuze cirkel"
+    ]
+   ],
+   "q": [
+    "Wanneer is er welvaart in een land?",
+    "Hoe bereken je het inkomen per hoofd van de bevolking?",
+    "Waarom zegt het inkomen per hoofd te weinig over de welvaart? Noem vier dingen die ook meetellen.",
+    "Wat is informele productie? Geef twee voorbeelden.",
+    "Hoe is het nationaal inkomen in ontwikkelingslanden vaak verdeeld?",
+    "Wat laat een Lorenzcurve zien?",
+    "Wat is een vicieuze cirkel?",
+    "Waarom hebben ontwikkelingslanden vaak hulp van buitenaf nodig?"
+   ]
+  },
+  {
+   "id": "8.2",
+   "t": "Wat is een ontwikkelingsland?",
+   "c": "var(--p2)",
+   "file": "",
+   "x": [],
+   "sum": "De kenmerken van ontwikkelingslanden, monocultuur, de oorzaken van onderontwikkeling en de ruilvoet.",
+   "imgs": [
+    [
+     "monocultuur",
+     "Monocultuur: afhankelijk van één product"
+    ],
+    [
+     "ruilvoet",
+     "De ruilvoet: wat krijg je voor je export?"
+    ]
+   ],
+   "q": [
+    "Noem zes kenmerken van ontwikkelingslanden.",
+    "Wat is analfabetisme?",
+    "Wat is een eenzijdige economische structuur?",
+    "Wat is een monocultuur? Noem drie producten als voorbeeld.",
+    "Waarom hebben ontwikkelingslanden lage exportinkomsten?",
+    "Noem vijf oorzaken van de economische achterstand van ontwikkelingslanden.",
+    "Waarom is een snelle bevolkingsgroei een probleem?",
+    "Wat is de ruilvoet?",
+    "Wat betekent het voor een ontwikkelingsland als de ruilvoet slechter wordt?"
+   ]
+  },
+  {
+   "id": "8.3",
+   "t": "Hoe boekt een land vooruitgang?",
+   "c": "var(--p3)",
+   "file": "",
+   "x": [],
+   "sum": "Noodhulp en structurele hulp, gebonden en ongebonden hulp, lenen bij de Wereldbank en het IMF, microkrediet en grondstoffenovereenkomsten.",
+   "imgs": [
+    [
+     "noodhulp",
+     "Noodhulp: overleven na een ramp"
+    ],
+    [
+     "krediet",
+     "Een microkrediet: een kleine lening voor een eigen bedrijfje"
+    ]
+   ],
+   "q": [
+    "Wanneer is noodhulp nodig? Waaruit bestaat noodhulp?",
+    "Wat maakt het geven van noodhulp extra moeilijk?",
+    "Wat is ontwikkelingssamenwerking?",
+    "Wat is structurele hulp?",
+    "Wat is het verschil tussen gebonden en ongebonden hulp?",
+    "Bij welke twee internationale organisaties kunnen ontwikkelingslanden geld lenen?",
+    "Wat is een microkrediet? Voor wie is het bedoeld?",
+    "Wat is een grondstoffenovereenkomst?",
+    "Hoe werkt een buffervoorraad?"
+   ]
+  },
+  {
+   "id": "8.4",
+   "t": "Hoe dragen we ons steentje bij?",
+   "c": "var(--p4)",
+   "file": "",
+   "x": [],
+   "sum": "De VN, de Wereldbank en het IMF, de norm van 0,7%, hulp en handel, maatschappelijk verantwoord ondernemen en Fairtrade.",
+   "imgs": [
+    [
+     "samen",
+     "Landen werken samen tegen armoede"
+    ],
+    [
+     "fairtrade",
+     "Een eerlijke prijs voor de boer"
+    ]
+   ],
+   "q": [
+    "Noem drie organisaties waarin landen samenwerken tegen armoede.",
+    "Hoeveel procent van het nationaal inkomen besteden landen volgens de afspraak aan ontwikkelingssamenwerking?",
+    "Noem twee goededoelenorganisaties. Waar zijn zij afhankelijk van?",
+    "Hoe combineert de Nederlandse overheid hulp en handel?",
+    "Waarom verplaatsen bedrijven hun productie naar lagelonenlanden?",
+    "Wat doet een bedrijf dat maatschappelijk verantwoord onderneemt?",
+    "Wat is Fairtrade?",
+    "Uit welke twee delen bestaat de prijs die een boer van Fairtrade krijgt?",
+    "Wat is een coöperatie?"
+   ]
+  }
+ ],
+ "GOALS": {
+  "8.1": [
+   "Ik kan uitleggen hoe de welvaart van een land meestal wordt berekend.",
+   "Ik kan noemen wat nog meer invloed heeft op de welvaart van een land.",
+   "Ik kan de inkomensverdeling van landen vergelijken.",
+   "Ik kan uitleggen waarom er bij armoede vaak een vicieuze cirkel is."
+  ],
+  "8.2": [
+   "Ik kan de kenmerken van ontwikkelingslanden noemen.",
+   "Ik kan uitleggen waarom de waarde van de productie in een ontwikkelingsland vaak laag is.",
+   "Ik kan de oorzaken van onderontwikkeling noemen.",
+   "Ik kan uitleggen wat de ruilvoet is en wanneer die beter of slechter wordt."
+  ],
+  "8.3": [
+   "Ik kan uitleggen waarom noodhulp soms nodig is.",
+   "Ik kan uitleggen welke hulp nodig is voor economische groei in een ontwikkelingsland.",
+   "Ik kan noemen waar ontwikkelingslanden geld kunnen lenen.",
+   "Ik kan uitleggen hoe ontwikkelingslanden meer zekerheid krijgen over hun exportinkomsten."
+  ],
+  "8.4": [
+   "Ik kan instellingen noemen die ontwikkelingslanden helpen.",
+   "Ik kan uitleggen hoe Nederlandse bedrijven voordeel hebben van ontwikkelingshulp.",
+   "Ik kan uitleggen welke gevolgen productie door bedrijven heeft voor arme landen.",
+   "Ik kan uitleggen wat mijn koopgedrag betekent voor mensen in ontwikkelingslanden."
+  ]
+ },
+ "CHK": [
+  [
+   "Het inkomen per hoofd van de bevolking uitrekenen",
+   "8.1",
+   "reken",
+   "hoofd"
+  ],
+  [
+   "Uitleggen waarom het inkomen per hoofd niet alles zegt over welvaart",
+   "8.1",
+   "quiz"
+  ],
+  [
+   "Uit cijfers aflezen hoe het inkomen verdeeld is",
+   "8.1",
+   "reken",
+   "lorenz"
+  ],
+  [
+   "Uitleggen wat een vicieuze cirkel is",
+   "8.1",
+   "quiz"
+  ],
+  [
+   "Zes kenmerken van ontwikkelingslanden noemen",
+   "8.2",
+   "quiz"
+  ],
+  [
+   "Uitleggen wat een monocultuur is en waarom die riskant is",
+   "8.2",
+   "quiz"
+  ],
+  [
+   "Oorzaken van onderontwikkeling noemen",
+   "8.2",
+   "quiz"
+  ],
+  [
+   "Uitleggen wat de ruilvoet is",
+   "8.2",
+   "quiz"
+  ],
+  [
+   "Noodhulp en structurele hulp uit elkaar houden",
+   "8.3",
+   "quiz"
+  ],
+  [
+   "Gebonden en ongebonden hulp uit elkaar houden",
+   "8.3",
+   "quiz"
+  ],
+  [
+   "Uitleggen wat een microkrediet is",
+   "8.3",
+   "quiz"
+  ],
+  [
+   "Uitleggen hoe een grondstoffenovereenkomst en een buffervoorraad werken",
+   "8.3",
+   "quiz"
+  ],
+  [
+   "Uitrekenen hoeveel 0,7% van het nationaal inkomen is",
+   "8.4",
+   "reken",
+   "norm"
+  ],
+  [
+   "Organisaties noemen die armoede bestrijden",
+   "8.4",
+   "quiz"
+  ],
+  [
+   "Uitleggen waarom bedrijven naar lagelonenlanden gaan en wat mvo is",
+   "8.4",
+   "quiz"
+  ],
+  [
+   "De fairtradeprijs uitrekenen en uitleggen",
+   "8.4",
+   "reken",
+   "fair"
+  ]
+ ],
+ "MAT": {},
+ "VERS": [],
+ "FILMS": [
+  {
+   "par": "8.1",
+   "film": "1s0dLj8ymTXE8oIFQRgTu7VCxb7sDjMuM",
+   "k": "Uitlegfilm",
+   "t": "Ontwikkelingslanden",
+   "d": "Uitleg bij de eerste twee paragrafen.",
+   "lab": "quiz",
+   "qpar": "8.2",
+   "btn": "Oefen: quiz 8.2"
+  }
+ ],
+ "CARDS": [
+  [
+   "8.1",
+   "Welvaart",
+   "De inwoners van een land kunnen in veel van hun behoeften voorzien.",
+   "Genoeg eten, een huis, onderwijs en zorg."
+  ],
+  [
+   "8.1",
+   "Inkomen per hoofd van de bevolking",
+   "Het gemiddelde inkomen per inwoner van een land.",
+   "nationaal inkomen : aantal inwoners."
+  ],
+  [
+   "8.1",
+   "Inkomensverdeling",
+   "Hoe het nationaal inkomen over de bevolking verdeeld is: gelijk of ongelijk.",
+   "In ontwikkelingslanden verdient een kleine groep vaak een groot deel."
+  ],
+  [
+   "8.1",
+   "Koopkracht",
+   "Wat je met je inkomen kunt kopen. Dat hangt af van de prijzen in een land.",
+   "Met hetzelfde loon koop je in een goedkoop land meer."
+  ],
+  [
+   "8.1",
+   "Informele productie",
+   "Productie die niet wordt geregistreerd.",
+   "Zwart werk en zelfvoorziening."
+  ],
+  [
+   "8.1",
+   "Collectieve voorzieningen",
+   "Voorzieningen voor iedereen, zoals onderwijs en gezondheidszorg.",
+   "Ze tellen mee voor de welvaart van een land."
+  ],
+  [
+   "8.1",
+   "Lorenzcurve",
+   "Grafiek waarin je in één keer ziet hoe de inkomens in een land verdeeld zijn.",
+   "Hoe boller de lijn, hoe ongelijker."
+  ],
+  [
+   "8.1",
+   "Vicieuze cirkel",
+   "De oorzaak van het ene probleem is een gevolg van een ander probleem. Zo blijft een arm land arm.",
+   "Hulp van buitenaf kan de cirkel doorbreken."
+  ],
+  [
+   "8.2",
+   "Ontwikkelingsland",
+   "Een arm land met een laag inkomen per inwoner en een ongelijke inkomensverdeling.",
+   "Veel werkloosheid, ondervoeding en analfabetisme."
+  ],
+  [
+   "8.2",
+   "Analfabetisme",
+   "Een deel van de bevolking kan niet lezen en schrijven.",
+   "Een kenmerk van ontwikkelingslanden."
+  ],
+  [
+   "8.2",
+   "Eenzijdige economische structuur",
+   "De inkomens hangen vooral af van één productiesector, meestal de landbouw.",
+   "Bijna iedereen werkt op het land."
+  ],
+  [
+   "8.2",
+   "Monocultuur",
+   "Een land is voor zijn exportinkomsten afhankelijk van één of enkele producten.",
+   "Katoen, rijst, koffiebonen of cacaobonen."
+  ],
+  [
+   "8.2",
+   "Toegevoegde waarde",
+   "De waarde die bij de productie wordt toegevoegd. Bij landbouwproducten is die laag.",
+   "Cacaobonen leveren minder op dan chocolade."
+  ],
+  [
+   "8.2",
+   "Infrastructuur",
+   "Wegen, spoorlijnen en verbindingen voor vervoer en communicatie.",
+   "Slechte wegen maken handel moeilijk."
+  ],
+  [
+   "8.2",
+   "Rentelasten",
+   "De rente die een land moet betalen over zijn schulden.",
+   "Hoge schulden geven hoge rentelasten."
+  ],
+  [
+   "8.2",
+   "Corruptie",
+   "Bestuurders gebruiken hun macht voor zichzelf. De welvaart komt niet bij de armen terecht.",
+   "Een oorzaak van onderontwikkeling."
+  ],
+  [
+   "8.2",
+   "Ruilvoet",
+   "De verhouding tussen de prijs van exportproducten en de prijs van importproducten.",
+   "Slechter: je moet meer exporteren om dezelfde import te betalen."
+  ],
+  [
+   "8.3",
+   "Noodhulp",
+   "Snelle hulp na een ramp, zodat mensen kunnen overleven.",
+   "Voedsel, medicijnen, dekens en tenten."
+  ],
+  [
+   "8.3",
+   "Ontwikkelingssamenwerking",
+   "Rijke landen en ontwikkelingslanden werken samen om de welvaart daar blijvend te vergroten.",
+   "Projecten voor werk en onderwijs."
+  ],
+  [
+   "8.3",
+   "Structurele hulp",
+   "Hulp die erop gericht is dat een land economisch zelfstandiger wordt.",
+   "Geld voor scholen en wegen."
+  ],
+  [
+   "8.3",
+   "Gebonden hulp",
+   "Het ontvangende land moet het hulpgeld besteden aan goederen en diensten van het land dat de hulp geeft.",
+   "Hulpgeld dat aan Nederlandse producten besteed moet worden."
+  ],
+  [
+   "8.3",
+   "Ongebonden hulp",
+   "Het ontvangende land bepaalt zelf waaraan het het geld besteedt.",
+   "Het tegenovergestelde van gebonden hulp."
+  ],
+  [
+   "8.3",
+   "Wereldbank",
+   "Internationale organisatie waar ontwikkelingslanden geld kunnen lenen tegen gunstige voorwaarden.",
+   "Een lage rente of langer de tijd om terug te betalen."
+  ],
+  [
+   "8.3",
+   "IMF",
+   "Internationaal Monetair Fonds. Ook hier kunnen ontwikkelingslanden lenen tegen gunstige voorwaarden.",
+   "Werkt net als de Wereldbank met geld van de deelnemende landen."
+  ],
+  [
+   "8.3",
+   "Microkrediet",
+   "Een kleine lening voor kleine ondernemers in ontwikkelingslanden die niet bij de grote banken kunnen lenen.",
+   "Via een hulporganisatie zoals Oxfam Novib."
+  ],
+  [
+   "8.3",
+   "Grondstoffenovereenkomst",
+   "Een afspraak tussen landen om de prijs van een grondstof stabiel te houden.",
+   "Tegen grote prijsschommelingen."
+  ],
+  [
+   "8.3",
+   "Buffervoorraad",
+   "Een voorraad waarin overschotten worden opgeslagen. Bij tekorten wordt de voorraad verkocht.",
+   "Zo past het aanbod beter bij de vraag."
+  ],
+  [
+   "8.4",
+   "Verenigde Naties (VN)",
+   "Organisatie waarin landen samenwerken, ook bij het bestrijden van armoede.",
+   "Net als de Wereldbank en het IMF."
+  ],
+  [
+   "8.4",
+   "De norm van 0,7%",
+   "Afspraak in de VN en de EU: landen besteden ten minste 0,7% van hun nationaal inkomen aan ontwikkelingssamenwerking.",
+   "(0,7 : 100) × nationaal inkomen."
+  ],
+  [
+   "8.4",
+   "Goededoelenorganisatie",
+   "Organisatie die afhankelijk is van giften van burgers en samenwerkt met lokale hulporganisaties.",
+   "Oxfam Novib, Cordaid en Edukans."
+  ],
+  [
+   "8.4",
+   "Hulp en handel",
+   "De overheid geeft subsidie aan Nederlandse bedrijven die in ontwikkelingslanden investeren.",
+   "Een nieuwe fabriek geeft daar werk."
+  ],
+  [
+   "8.4",
+   "Lagelonenland",
+   "Een land met lage lonen, vaak een ontwikkelingsland. Bedrijven verplaatsen er hun productie naartoe.",
+   "Vooral bij arbeidsintensieve productie."
+  ],
+  [
+   "8.4",
+   "Maatschappelijk verantwoord ondernemen",
+   "Een bedrijf houdt bij de productie rekening met de arbeidsomstandigheden en het milieu.",
+   "Een bedrijf dat ook scholen en ziekenhuizen bouwt."
+  ],
+  [
+   "8.4",
+   "Leefbaar loon",
+   "Een loon waarvan een werknemer kan leven.",
+   "Voor een textielarbeider."
+  ],
+  [
+   "8.4",
+   "Fairtrade",
+   "Organisatie die boeren in ontwikkelingslanden een gegarandeerde, betere prijs voor hun producten geeft.",
+   "Een minimumprijs plus een fairtradepremie."
+  ],
+  [
+   "8.4",
+   "Coöperatie",
+   "Kleine boeren werken samen. Ze beslissen samen over de winst en onderhandelen samen met afnemers.",
+   "Een voorwaarde van Fairtrade."
+  ]
+ ],
+ "BANK": [
+  [
+   "8.1",
+   "Wanneer is er welvaart in een land?",
+   [
+    "Als inwoners in veel behoeften kunnen voorzien",
+    "Als het land meer exporteert dan importeert",
+    "Als de regering geen schulden meer heeft",
+    "Als iedereen in het land precies evenveel verdient"
+   ],
+   "Welvaart gaat over behoeften kunnen vervullen."
+  ],
+  [
+   "8.1",
+   "Wat is het inkomen per hoofd van de bevolking?",
+   [
+    "Het gemiddelde inkomen per inwoner",
+    "Het hoogste inkomen van het land",
+    "Het inkomen van de regering",
+    "Het loon van een werknemer"
+   ],
+   "nationaal inkomen : aantal inwoners."
+  ],
+  [
+   "8.1",
+   "Waarom zegt het inkomen per hoofd niet alles over de welvaart?",
+   [
+    "Het is een gemiddelde: je ziet de verdeling niet",
+    "Het wordt maar één keer in de tien jaar gemeten",
+    "Het telt alleen de inkomens van de rijken mee",
+    "Het is in elk land van de wereld precies gelijk"
+   ],
+   "Een kleine groep kan heel veel verdienen."
+  ],
+  [
+   "8.1",
+   "Wat is informele productie?",
+   [
+    "Productie die niet wordt geregistreerd",
+    "Productie van computers en telefoons",
+    "Productie voor de export naar de EU",
+    "Productie door de eigen overheid"
+   ],
+   "Bijvoorbeeld zwart werk en zelfvoorziening."
+  ],
+  [
+   "8.1",
+   "Welk voorbeeld is informele productie?",
+   [
+    "Groente verbouwen voor je eigen gezin",
+    "Werken in een fabriek met een contract",
+    "Lesgeven op een school van de overheid",
+    "Auto's maken voor de export"
+   ],
+   "Zelfvoorziening wordt niet geregistreerd."
+  ],
+  [
+   "8.1",
+   "Waarom tellen de prijzen in een land mee voor de welvaart?",
+   [
+    "Ze bepalen wat je met je inkomen kunt kopen",
+    "Ze bepalen hoeveel inwoners een land heeft",
+    "Ze bepalen hoeveel belasting je betaalt",
+    "Ze bepalen hoe groot de export is"
+   ],
+   "Dat is de koopkracht van het inkomen."
+  ],
+  [
+   "8.1",
+   "Hoe is het inkomen in ontwikkelingslanden vaak verdeeld?",
+   [
+    "Een kleine groep verdient een groot deel",
+    "Iedereen verdient ongeveer evenveel",
+    "De armste groep verdient het meest",
+    "Alleen de overheid heeft een inkomen"
+   ],
+   "De verdeling is vaak ongelijk."
+  ],
+  [
+   "8.1",
+   "In welk land zijn de verschillen tussen arm en rijk klein?",
+   [
+    "Denemarken",
+    "Kenia",
+    "Senegal",
+    "Peru"
+   ],
+   "Ook in Japan, Zweden en België zijn de verschillen klein."
+  ],
+  [
+   "8.1",
+   "Waarmee zie je in één keer hoe de inkomens verdeeld zijn?",
+   [
+    "Met de Lorenzcurve",
+    "Met de betalingsbalans",
+    "Met de wisselkoers",
+    "Met de ruilvoet"
+   ],
+   "Een grafiek van de inkomensverdeling."
+  ],
+  [
+   "8.1",
+   "Wat is een vicieuze cirkel?",
+   [
+    "Het ene probleem veroorzaakt het andere, steeds opnieuw",
+    "Een groep landen die alleen met elkaar handel drijft",
+    "Een afspraak om de prijs van grondstoffen te regelen",
+    "Een lening die een land nooit hoeft terug te betalen"
+   ],
+   "Daardoor blijft een arm land arm."
+  ],
+  [
+   "8.1",
+   "Waarom is de levensverwachting in ontwikkelingslanden laag?",
+   [
+    "Door slechte gezondheidszorg",
+    "Door te veel export",
+    "Door een hoge ruilvoet",
+    "Door te veel scholen"
+   ],
+   "Er is ook veel armoede en werkloosheid."
+  ],
+  [
+   "8.1",
+   "Hoe kan een land uit de vicieuze cirkel komen?",
+   [
+    "Met hulp van buitenaf een probleem aanpakken",
+    "Door alle grenzen van het land te sluiten",
+    "Door de bevolking sneller te laten groeien",
+    "Door alleen nog landbouwproducten te maken"
+   ],
+   "Op eigen kracht lukt dat vaak niet."
+  ],
+  [
+   "8.2",
+   "Welk kenmerk hoort bij een ontwikkelingsland?",
+   [
+    "Veel analfabetisme",
+    "Een hoog inkomen per inwoner",
+    "Een langzame bevolkingsgroei",
+    "Veel technische ontwikkeling"
+   ],
+   "Ook: werkloosheid, ondervoeding en een eenzijdige economie."
+  ],
+  [
+   "8.2",
+   "Wat is analfabetisme?",
+   [
+    "Niet kunnen lezen en schrijven",
+    "Niet genoeg te eten hebben",
+    "Geen werk kunnen vinden",
+    "Geen huis kunnen betalen"
+   ],
+   "Een deel van de bevolking kan niet lezen en schrijven."
+  ],
+  [
+   "8.2",
+   "Wat is een eenzijdige economische structuur?",
+   [
+    "De inkomens hangen af van één sector",
+    "Alle sectoren zijn even groot",
+    "Er is alleen maar industrie",
+    "De overheid bezit alle bedrijven"
+   ],
+   "Meestal is dat de landbouw."
+  ],
+  [
+   "8.2",
+   "Wat is een monocultuur?",
+   [
+    "Afhankelijk zijn van één of enkele exportproducten",
+    "Maar één taal spreken in het hele land",
+    "Alleen handel drijven met één ander land",
+    "Eén bedrijf dat alle producten verkoopt"
+   ],
+   "Bijvoorbeeld katoen, rijst, koffie of cacao."
+  ],
+  [
+   "8.2",
+   "Waarom zijn de exportinkomsten van ontwikkelingslanden laag?",
+   [
+    "Landbouwproducten hebben weinig toegevoegde waarde",
+    "Landbouwproducten mogen niet worden uitgevoerd",
+    "Rijke landen kopen nooit landbouwproducten",
+    "De boeren willen hun oogst niet verkopen"
+   ],
+   "Industriële producten uit rijke landen leveren meer op."
+  ],
+  [
+   "8.2",
+   "Waarom is een snelle bevolkingsgroei een probleem?",
+   [
+    "De welvaart moet met meer mensen worden gedeeld",
+    "Er zijn dan te veel mensen die kunnen werken",
+    "De export van het land wordt dan veel te groot",
+    "De prijzen van grondstoffen gaan dan omlaag"
+   ],
+   "De bevolking groeit sneller dan de economie."
+  ],
+  [
+   "8.2",
+   "Wat is het gevolg van hoge schulden voor een land?",
+   [
+    "Hoge rentelasten",
+    "Hoge exportinkomsten",
+    "Een betere ruilvoet",
+    "Meer onderwijs"
+   ],
+   "Het geld voor rente kan niet naar scholen of zorg."
+  ],
+  [
+   "8.2",
+   "Hoe maken rijke landen het ontwikkelingslanden moeilijk?",
+   [
+    "Met protectiemaatregelen",
+    "Met microkredieten",
+    "Met noodhulp",
+    "Met fairtrade"
+   ],
+   "Protectie gaat ten koste van de export van ontwikkelingslanden."
+  ],
+  [
+   "8.2",
+   "Wat is het gevolg van slechte infrastructuur?",
+   [
+    "Vervoer en communicatie zijn moeilijk",
+    "De bevolking groeit minder snel",
+    "De schulden van het land dalen",
+    "De oogsten worden steeds groter"
+   ],
+   "Dat remt de handel en de economie."
+  ],
+  [
+   "8.2",
+   "Wat is het gevolg van corruptie?",
+   [
+    "De welvaart komt niet bij de armen terecht",
+    "De welvaart wordt eerlijker verdeeld",
+    "De export van het land neemt sterk toe",
+    "De rente op leningen wordt veel lager"
+   ],
+   "Het geld blijft bij een kleine groep."
+  ],
+  [
+   "8.2",
+   "Wat is de ruilvoet?",
+   [
+    "De verhouding tussen exportprijzen en importprijzen",
+    "De verhouding tussen arme en rijke inwoners",
+    "De waarde van een munt in een andere munt",
+    "De rente die een land over schulden betaalt"
+   ],
+   "Hoeveel import kun je betalen met je export?"
+  ],
+  [
+   "8.2",
+   "De prijs van cacao daalt. De prijs van machines stijgt. Wat gebeurt er met de ruilvoet van een cacaoland?",
+   [
+    "Die wordt slechter",
+    "Die wordt beter",
+    "Die blijft gelijk",
+    "Die verdwijnt"
+   ],
+   "Het land moet meer cacao exporteren om dezelfde machines te betalen."
+  ],
+  [
+   "8.2",
+   "Wie bepaalt de prijs van grondstoffen?",
+   [
+    "Vraag en aanbod op de wereldmarkt",
+    "De regering van het ontwikkelingsland",
+    "De boeren die de oogst binnenhalen",
+    "De hulporganisaties in het land"
+   ],
+   "Ontwikkelingslanden hebben er weinig invloed op."
+  ],
+  [
+   "8.3",
+   "Wanneer is noodhulp nodig?",
+   [
+    "Na een natuurramp",
+    "Bij een handelsoverschot",
+    "Bij een goede oogst",
+    "Na een verkiezing"
+   ],
+   "Bijvoorbeeld bij hevige droogte of extreme regenval."
+  ],
+  [
+   "8.3",
+   "Wat hoort bij noodhulp?",
+   [
+    "Voedsel, medicijnen en tenten",
+    "Scholen, wegen en fabrieken",
+    "Leningen van de Wereldbank",
+    "Een grondstoffenovereenkomst"
+   ],
+   "Zo kan de bevolking overleven."
+  ],
+  [
+   "8.3",
+   "Wat maakt noodhulp extra moeilijk?",
+   [
+    "Een slechte infrastructuur",
+    "Een te lage rente",
+    "Te veel microkredieten",
+    "Een hoge exportquote"
+   ],
+   "Ook conflicten tussen bevolkingsgroepen maken het moeilijk."
+  ],
+  [
+   "8.3",
+   "Wat is structurele hulp?",
+   [
+    "Hulp om een land economisch zelfstandiger te maken",
+    "Hulp om mensen direct na een ramp te laten overleven",
+    "Hulp die een land meteen moet terugbetalen",
+    "Hulp die alleen uit voedselpakketten bestaat"
+   ],
+   "De oorzaken van armoede worden aangepakt."
+  ],
+  [
+   "8.3",
+   "Een land krijgt hulpgeld, maar moet daarmee producten kopen in het land dat de hulp geeft. Hoe heet dat?",
+   [
+    "Gebonden hulp",
+    "Ongebonden hulp",
+    "Noodhulp",
+    "Microkrediet"
+   ],
+   "Er zit een voorwaarde aan de hulp."
+  ],
+  [
+   "8.3",
+   "Wat is ongebonden hulp?",
+   [
+    "Het land bepaalt zelf waaraan het geld opgaat",
+    "Het land moet het geld binnen een jaar teruggeven",
+    "Het land moet producten kopen bij de gever",
+    "Het land krijgt alleen voedsel en medicijnen"
+   ],
+   "Er zijn geen voorwaarden over de besteding."
+  ],
+  [
+   "8.3",
+   "Waar kunnen ontwikkelingslanden geld lenen tegen gunstige voorwaarden?",
+   [
+    "Bij de Wereldbank en het IMF",
+    "Bij de WTO en de ECB",
+    "Bij Fairtrade en de VN",
+    "Bij de EMU en de SER"
+   ],
+   "Bijvoorbeeld een lage rente of langer terugbetalen."
+  ],
+  [
+   "8.3",
+   "Wat is een gunstige voorwaarde bij een lening?",
+   [
+    "Een lage rente",
+    "Een hoge rente",
+    "Een korte looptijd",
+    "Een hoge boete"
+   ],
+   "Of een langere periode van terugbetalen."
+  ],
+  [
+   "8.3",
+   "Wat is een microkrediet?",
+   [
+    "Een kleine lening voor kleine ondernemers",
+    "Een grote lening voor een arme regering",
+    "Een gift van een goed doel aan boeren",
+    "Een subsidie van de EU voor bedrijven"
+   ],
+   "Voor mensen die niet bij grote banken kunnen lenen."
+  ],
+  [
+   "8.3",
+   "Waarvoor hebben ontwikkelingslanden geld nodig om vooruit te komen?",
+   [
+    "Voor infrastructuur, onderwijs en zorg",
+    "Voor hogere invoerrechten op import",
+    "Voor een snel groeiende bevolking",
+    "Voor meer monocultuur in de landbouw"
+   ],
+   "Investeren zorgt voor economische vooruitgang."
+  ],
+  [
+   "8.3",
+   "Wat is een grondstoffenovereenkomst?",
+   [
+    "Een afspraak om de prijs van een grondstof stabiel te houden",
+    "Een afspraak om geen grondstoffen meer te exporteren",
+    "Een lening om grondstoffen in het buitenland te kopen",
+    "Een verbod op de handel in grondstoffen met rijke landen"
+   ],
+   "Tegen grote prijsschommelingen."
+  ],
+  [
+   "8.3",
+   "Wanneer verkoopt een land zijn buffervoorraad?",
+   [
+    "Als er tekorten zijn",
+    "Als er overschotten zijn",
+    "Als de prijs heel laag is",
+    "Als de oogst heel groot is"
+   ],
+   "Bij overschotten wordt de voorraad juist aangevuld."
+  ],
+  [
+   "8.3",
+   "Waarom zijn schommelende grondstofprijzen een probleem voor ontwikkelingslanden?",
+   [
+    "Hun exportinkomsten wisselen dan sterk",
+    "Hun bevolking groeit dan sneller",
+    "Hun schulden verdwijnen dan vanzelf",
+    "Hun import wordt dan altijd goedkoper"
+   ],
+   "Ze zijn afhankelijk van de export van grondstoffen."
+  ],
+  [
+   "8.4",
+   "In welke organisatie werken landen samen tegen armoede?",
+   [
+    "De Verenigde Naties",
+    "De Belastingdienst",
+    "De vakbond",
+    "De Kamer van Koophandel"
+   ],
+   "Ook in de Wereldbank en het IMF."
+  ],
+  [
+   "8.4",
+   "Hoeveel van het nationaal inkomen gaat volgens de afspraak naar ontwikkelingssamenwerking?",
+   [
+    "Ten minste 0,7%",
+    "Ten minste 7%",
+    "Ten minste 17%",
+    "Ten minste 70%"
+   ],
+   "Afgesproken binnen de VN en de EU."
+  ],
+  [
+   "8.4",
+   "Waar zijn organisaties als Cordaid en Edukans afhankelijk van?",
+   [
+    "Giften van burgers",
+    "Winst uit export",
+    "Rente op leningen",
+    "Invoerrechten"
+   ],
+   "Het zijn goededoelenorganisaties."
+  ],
+  [
+   "8.4",
+   "Hoe combineert de Nederlandse overheid hulp en handel?",
+   [
+    "Subsidie voor bedrijven die daar investeren",
+    "Invoerrechten op producten van daar",
+    "Een exportverbod naar arme landen",
+    "Hogere belasting voor bedrijven hier"
+   ],
+   "Een nieuwe fabriek geeft daar werk en welvaart."
+  ],
+  [
+   "8.4",
+   "Waarom verplaatsen bedrijven hun productie naar lagelonenlanden?",
+   [
+    "Om de productiekosten laag te houden",
+    "Om hogere lonen te kunnen betalen",
+    "Om meer milieuregels te krijgen",
+    "Om dichter bij de vakbond te zitten"
+   ],
+   "Vooral bij arbeidsintensieve productie loont dat."
+  ],
+  [
+   "8.4",
+   "Wat maakt een land aantrekkelijk voor bedrijven die goedkoop willen produceren?",
+   [
+    "Geen vakbonden en geen milieuregels",
+    "Sterke vakbonden en hoge lonen",
+    "Strenge regels voor arbeidstijden",
+    "Een hoog minimumloon"
+   ],
+   "Dat houdt de kosten laag, maar is slecht voor werknemers en milieu."
+  ],
+  [
+   "8.4",
+   "Wat doet een bedrijf dat maatschappelijk verantwoord onderneemt?",
+   [
+    "Het let op arbeidsomstandigheden en milieu",
+    "Het betaalt de laagst mogelijke lonen",
+    "Het verkoopt alleen nog in eigen land",
+    "Het wil helemaal geen winst meer maken"
+   ],
+   "Sommige bedrijven bouwen ook scholen en ziekenhuizen."
+  ],
+  [
+   "8.4",
+   "Wat is Fairtrade?",
+   [
+    "Een organisatie die boeren een gegarandeerde prijs geeft",
+    "Een bank die leningen geeft aan regeringen",
+    "Een afspraak over de prijs van grondstoffen",
+    "Een belasting op producten uit arme landen"
+   ],
+   "Een minimumprijs plus een premie."
+  ],
+  [
+   "8.4",
+   "Uit welke twee delen bestaat de fairtradeprijs?",
+   [
+    "Een minimumprijs en een premie",
+    "Een inkoopprijs en de btw",
+    "Een lening en de rente",
+    "Een subsidie en een heffing"
+   ],
+   "De minimumprijs dekt de kosten van de boer."
+  ],
+  [
+   "8.4",
+   "Wat is een voorwaarde van Fairtrade?",
+   [
+    "Boeren werken samen in een coöperatie",
+    "Boeren verkopen alleen aan de overheid",
+    "Boeren verbouwen maar één product",
+    "Boeren betalen geen belasting meer"
+   ],
+   "Samen beslissen ze over de winst en onderhandelen ze met afnemers."
+  ],
+  [
+   "8.4",
+   "Hoe kun jij als consument bijdragen?",
+   [
+    "Producten kopen met een eerlijke prijs voor de boer",
+    "Altijd het goedkoopste product in de winkel kopen",
+    "Alleen producten uit Nederland kopen",
+    "Minder belasting betalen aan de overheid"
+   ],
+   "Bijvoorbeeld producten van Fairtrade."
+  ]
+ ],
+ "SORT": [
+  {
+   "a": "Ontwikkelingsland",
+   "b": "Rijk land",
+   "A": [
+    [
+     "📉",
+     "Laag inkomen per inwoner"
+    ],
+    [
+     "📖",
+     "Veel analfabetisme"
+    ],
+    [
+     "🌾",
+     "Afhankelijk van de landbouw"
+    ],
+    [
+     "👶",
+     "Snelle bevolkingsgroei"
+    ]
+   ],
+   "B": [
+    [
+     "🏭",
+     "Alle sectoren goed ontwikkeld"
+    ],
+    [
+     "🎓",
+     "Goed onderwijs"
+    ],
+    [
+     "⚖️",
+     "Inkomen gelijkmatiger verdeeld"
+    ],
+    [
+     "🔬",
+     "Veel technische ontwikkeling"
+    ]
+   ]
+  },
+  {
+   "a": "Noodhulp",
+   "b": "Structurele hulp",
+   "A": [
+    [
+     "🍚",
+     "Voedsel na een droogte"
+    ],
+    [
+     "⛺",
+     "Tenten na een overstroming"
+    ],
+    [
+     "💊",
+     "Medicijnen na een ramp"
+    ]
+   ],
+   "B": [
+    [
+     "🏫",
+     "Scholen bouwen"
+    ],
+    [
+     "🛣️",
+     "Wegen aanleggen"
+    ],
+    [
+     "👩‍🏫",
+     "Werk- en onderwijsprojecten voor jongeren"
+    ]
+   ]
+  },
+  {
+   "a": "Gebonden hulp",
+   "b": "Ongebonden hulp",
+   "A": [
+    [
+     "🔗",
+     "Geld besteden bij het land dat de hulp geeft"
+    ],
+    [
+     "🇳🇱",
+     "Hulpgeld moet naar Nederlandse producten"
+    ]
+   ],
+   "B": [
+    [
+     "🆓",
+     "Het land kiest zelf waar het geld naartoe gaat"
+    ],
+    [
+     "🗳️",
+     "Geen voorwaarden over de besteding"
+    ]
+   ]
+  },
+  {
+   "a": "Oorzaak van armoede",
+   "b": "Hulp tegen armoede",
+   "A": [
+    [
+     "🏚️",
+     "Slechte infrastructuur"
+    ],
+    [
+     "💸",
+     "Hoge schulden"
+    ],
+    [
+     "🕴️",
+     "Corruptie"
+    ],
+    [
+     "🌪️",
+     "Natuurrampen"
+    ]
+   ],
+   "B": [
+    [
+     "🤝",
+     "Ontwikkelingssamenwerking"
+    ],
+    [
+     "🪙",
+     "Microkrediet"
+    ],
+    [
+     "☕",
+     "Fairtrade"
+    ],
+    [
+     "🏦",
+     "Lening van de Wereldbank"
+    ]
+   ]
+  },
+  {
+   "a": "Landen werken samen",
+   "b": "Goededoelenorganisatie",
+   "A": [
+    [
+     "🌐",
+     "Verenigde Naties"
+    ],
+    [
+     "🏦",
+     "Wereldbank"
+    ],
+    [
+     "💱",
+     "IMF"
+    ]
+   ],
+   "B": [
+    [
+     "🤲",
+     "Oxfam Novib"
+    ],
+    [
+     "❤️",
+     "Cordaid"
+    ],
+    [
+     "📚",
+     "Edukans"
+    ]
+   ]
+  }
+ ]
+}

@@ -1,0 +1,588 @@
+{
+ "blokken": {
+  "mc_a": [
+   {
+    "v": "In de haven komen sinaasappels uit Brazilië aan. Ze worden opnieuw verpakt en doorverkocht aan Polen. Hoe heet dit?",
+    "o": [
+     "Contingentering",
+     "Wederuitvoer",
+     "Specialisatie",
+     "Harmonisatie"
+    ],
+    "j": 1,
+    "u": "Invoeren en bijna onbewerkt weer uitvoeren."
+   },
+   {
+    "v": "Land A heeft een exportquote van 12%. Land B heeft een exportquote van 70%. Wat klopt?",
+    "o": [
+     "Land A heeft een meer open economie",
+     "Land A heeft een handelsoverschot",
+     "Land B heeft een meer open economie",
+     "Land B heeft een handelstekort"
+    ],
+    "j": 2,
+    "u": "Een hoge quote hoort bij een open economie."
+   },
+   {
+    "v": "Een Nederlander werkt in België en krijgt daar loon. Waar zie je dat loon terug?",
+    "o": [
+     "Op de rijksbegroting",
+     "In de exportquote",
+     "Op de betalingsbalans",
+     "In de miljoenennota"
+    ],
+    "j": 2,
+    "u": "De betalingsbalans telt ook lonen over de grens mee."
+   },
+   {
+    "v": "De koers van de euro stijgt ten opzichte van het Britse pond. Wat merkt een Nederlandse exporteur?",
+    "o": [
+     "Zijn producten worden goedkoper voor Britten",
+     "Hij betaalt meer invoerrechten",
+     "Hij krijgt subsidie van de overheid",
+     "Zijn producten worden duurder voor Britten"
+    ],
+    "j": 3,
+    "u": "Britten moeten meer ponden betalen voor dezelfde euro's."
+   },
+   {
+    "v": "Waarom maakt een land niet alles zelf?",
+    "o": [
+     "Elk land heeft dezelfde grondstoffen",
+     "Zelf maken is door de WTO verboden",
+     "Importeren is altijd gratis",
+     "Specialiseren levert meer welvaart op"
+    ],
+    "j": 3,
+    "u": "Je maakt waar je relatief goed in bent en importeert de rest."
+   },
+   {
+    "v": "Wat is een gevolg van invoerrechten voor bedrijven in het eigen land?",
+    "o": [
+     "Ze mogen niet meer naar het buitenland exporteren",
+     "Ze moeten hun eigen producten goedkoper maken",
+     "Ze krijgen minder last van buitenlandse concurrentie",
+     "Ze krijgen meer concurrentie uit het buitenland"
+    ],
+    "j": 2,
+    "u": "Buitenlandse producten worden duurder."
+   },
+   {
+    "v": "Welke organisatie let erop dat landen afspraken over invoerrechten nakomen?",
+    "o": [
+     "De EMU",
+     "De SER",
+     "De WTO",
+     "De ECB"
+    ],
+    "j": 2,
+    "u": "De Wereldhandelsorganisatie."
+   },
+   {
+    "v": "De btw-tarieven in de EU-landen worden meer gelijk gemaakt. Hoe heet dat?",
+    "o": [
+     "Protectie",
+     "Wederuitvoer",
+     "Globalisering",
+     "Harmonisatie"
+    ],
+    "j": 3,
+    "u": "Regels en tarieven op elkaar afstemmen."
+   },
+   {
+    "v": "Een Nederlands bedrijf koopt onderdelen in Italië. Welk voordeel heeft de euro?",
+    "o": [
+     "Geen risico dat de wisselkoers verandert",
+     "Geen vervoerskosten naar Nederland",
+     "Geen concurrentie van andere bedrijven",
+     "Geen btw over de onderdelen"
+    ],
+    "j": 0,
+    "u": "Beide landen betalen met dezelfde munt."
+   },
+   {
+    "v": "De inflatie in de eurozone is veel hoger dan 2%. Wie moet dan iets doen?",
+    "o": [
+     "De WTO",
+     "Het CBS",
+     "De ECB",
+     "De ACM"
+    ],
+    "j": 2,
+    "u": "De ECB bewaakt de prijsstabiliteit."
+   },
+   {
+    "v": "In een handelsverdrag staan ook eisen over arbeidsomstandigheden. Waarom wil de EU dat?",
+    "o": [
+     "Een akkoord moet de WTO overbodig maken",
+     "Een akkoord moet bijdragen aan een eerlijkere wereld",
+     "Een akkoord moet de export van de EU beperken",
+     "Een akkoord moet de import zo duur mogelijk maken"
+    ],
+    "j": 1,
+    "u": "Nederland en de EU willen een betere en eerlijkere wereld."
+   },
+   {
+    "v": "Een kledingbedrijf verhuist zijn fabriek van Nederland naar een lagelonenland. Wat is een gevolg in Nederland?",
+    "o": [
+     "De koers van de euro daalt meteen",
+     "De exportquote wordt nul procent",
+     "Productiemedewerkers verliezen hun baan",
+     "De invoerrechten op kleding stijgen"
+    ],
+    "j": 2,
+    "u": "Een nadeel van globalisering."
+   }
+  ],
+  "rek_a": [
+   {
+    "nr": 1,
+    "titel": "Goed of fout?",
+    "tekst": "",
+    "p": 5,
+    "delen": [
+     {
+      "id": "",
+      "v": "Goed of fout?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Nederland heeft een open economie."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Bij een handelsoverschot is de import groter dan de export."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Contingentering betekent dat er een beperkt aantal producten mag worden ingevoerd."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Alle landen van de EU betalen met de euro."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "De EU sluit handelsverdragen namens Nederland."
+       }
+      ],
+      "uitw": [
+       "Bij een handelsoverschot is de export groter dan de import.",
+       "De meeste EU-landen hebben de euro, niet alle."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 2,
+    "titel": "De handel van land X",
+    "tekst": "Het nationaal inkomen van land X is €800 miljard. De exportwaarde is €500 miljard en de importwaarde is €440 miljard.",
+    "p": 5,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken de exportquote. Rond af op 1 decimaal.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         62.5
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.05,
+        "label": "Exportquote"
+       }
+      ],
+      "uitw": [
+       "(exportwaarde : nationaal inkomen) × 100 = (500 : 800) × 100 = 62,5%."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken het handelssaldo in miljard euro. Typ een min-teken bij een tekort.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         60
+        ],
+        "p": 1,
+        "eenh": "",
+        "tol": 0.5,
+        "label": "Handelssaldo (miljard euro)"
+       }
+      ],
+      "uitw": [
+       "exportwaarde − importwaarde = 500 − 440 = 60. Een handelsoverschot van €60 miljard."
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Heeft land X een open of een gesloten economie?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Open economie",
+         "Gesloten economie"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Land X heeft een"
+       }
+      ],
+      "uitw": [
+       "De exportquote is hoog: veel uitvoer in verhouding tot het nationaal inkomen."
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Noem twee redenen waarom een land producten importeert.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "2d",
+        "p": 2,
+        "label": "Redenen voor import",
+        "model": "Bijvoorbeeld: sommige landbouwproducten groeien niet in ons klimaat, sommige grondstoffen zijn er niet of weinig, buitenlandse producten zijn goedkoper of beter, en consumenten willen meer keuze.",
+        "g": [
+         {
+          "t": "een eerste juiste reden (klimaat, grondstoffen, goedkoper of beter, meer keuze)",
+          "p": 1
+         },
+         {
+          "t": "een tweede juiste reden",
+          "p": 1
+         }
+        ],
+        "v": "Noem twee redenen waarom een land producten importeert.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Klimaat, grondstoffen, prijs of kwaliteit, en keuze."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 3,
+    "titel": "Staal van buiten de EU",
+    "tekst": "",
+    "p": 7,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Kies bij elke maatregel de juiste naam.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Invoerrechten",
+         "Contingentering",
+         "Invoerverbod",
+         "Exportsubsidie"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Belasting van 25% op ingevoerd staal"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Invoerrechten",
+         "Contingentering",
+         "Invoerverbod",
+         "Exportsubsidie"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Hooguit 2 miljoen ton staal per jaar invoeren"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Invoerrechten",
+         "Contingentering",
+         "Invoerverbod",
+         "Exportsubsidie"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "Staal uit land Y mag de EU niet meer in"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Invoerrechten",
+         "Contingentering",
+         "Invoerverbod",
+         "Exportsubsidie"
+        ],
+        "j": 3,
+        "p": 1,
+        "label": "Geld van de overheid voor bedrijven die staal uitvoeren"
+       }
+      ],
+      "uitw": [
+       "Belasting: invoerrechten. Beperkt aantal: contingentering. Niets erin: invoerverbod. Geld voor uitvoer: exportsubsidie."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Een partij staal kost €6.000. Bereken de prijs met 25% invoerrechten.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         7500.0
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.05,
+        "label": "Prijs met invoerrechten"
+       }
+      ],
+      "uitw": [
+       "(25 : 100) × 6.000 = 1.500. 6.000 + 1.500 = €7.500,00."
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Leg uit waarom de EU invoerrechten op staal heft. Gebruik het woord concurrentie.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "3c",
+        "p": 2,
+        "label": "Doel van invoerrechten",
+        "model": "Door invoerrechten wordt staal van buiten de EU duurder. Zo beschermt de EU de productie en de banen bij eigen staalbedrijven tegen concurrentie van buitenaf.",
+        "g": [
+         {
+          "t": "ingevoerd staal wordt duurder",
+          "p": 1
+         },
+         {
+          "t": "eigen bedrijven en banen worden beschermd tegen buitenlandse concurrentie",
+          "p": 1
+         }
+        ],
+        "v": "Leg uit waarom de EU invoerrechten op staal heft. Gebruik het woord concurrentie.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Protectie beschermt de eigen productie en werkgelegenheid."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 4,
+    "titel": "Europa zonder grenzen",
+    "tekst": "",
+    "p": 5,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Kies bij elk voorbeeld het juiste vrije verkeer.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Goederen en diensten",
+         "Personen",
+         "Kapitaal"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Een Poolse timmerman gaat in Nederland werken"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goederen en diensten",
+         "Personen",
+         "Kapitaal"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Een Nederlandse bakker koopt meel in Frankrijk"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goederen en diensten",
+         "Personen",
+         "Kapitaal"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "Je belegt in een Spaans bedrijf"
+       }
+      ],
+      "uitw": [
+       "Werken: personen. Meel kopen: goederen. Beleggen: kapitaal."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Noem twee taken van de ECB.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "4b",
+        "p": 2,
+        "label": "Taken van de ECB",
+        "model": "De waarde van de euro bewaken (prijsstabiliteit), het rentepeil bepalen en nieuwe bankbiljetten in omloop brengen.",
+        "g": [
+         {
+          "t": "een eerste juiste taak (waarde van de euro bewaken, rentepeil bepalen, bankbiljetten uitgeven)",
+          "p": 1
+         },
+         {
+          "t": "een tweede juiste taak",
+          "p": 1
+         }
+        ],
+        "v": "Noem twee taken van de ECB.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Prijsstabiliteit, rente en bankbiljetten."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 5,
+    "titel": "De wereld wordt kleiner",
+    "tekst": "De export van Nederland stijgt in een jaar van €650 miljard naar €676 miljard.",
+    "p": 4,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken met hoeveel procent de export is gestegen. Rond af op 1 decimaal.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         4.0
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.05,
+        "label": "Stijging"
+       }
+      ],
+      "uitw": [
+       "(nieuw − oud) : oud × 100 = (676 − 650) : 650 × 100 = 4,0%."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Noem twee dingen waar Nederland voor moet zorgen om een sterke internationale concurrentiepositie te houden.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "5b",
+        "p": 2,
+        "label": "Concurrentiepositie",
+        "model": "Goed onderwijs, goede gezondheidszorg, een goede infrastructuur en innovaties.",
+        "g": [
+         {
+          "t": "een eerste juist punt (onderwijs, gezondheidszorg, infrastructuur, innovaties)",
+          "p": 1
+         },
+         {
+          "t": "een tweede juist punt",
+          "p": 1
+         }
+        ],
+        "v": "Noem twee dingen waar Nederland voor moet zorgen om een sterke internationale concurrentiepositie te houden.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Onderwijs, zorg, infrastructuur en innovatie."
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Noem een nadeel van globalisering voor het milieu.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "5c",
+        "p": 1,
+        "label": "Globalisering en milieu",
+        "model": "Meer handel en productie is slecht voor het milieu: er worden bossen gekapt en soorten planten en dieren sterven uit.",
+        "g": [
+         {
+          "t": "een juist nadeel voor het milieu (bossen kappen, soorten sterven uit)",
+          "p": 1
+         }
+        ],
+        "v": "Noem een nadeel van globalisering voor het milieu.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Bossen verdwijnen en soorten sterven uit."
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "toetsen": {
+  "t1": {
+   "n": 1,
+   "t": "oefentoets A",
+   "sub": "Hoofdstuk 7",
+   "min": 45,
+   "mc": "mc_a",
+   "open": null,
+   "rek": "rek_a"
+  }
+ },
+ "VERS": [
+  {
+   "n": 1,
+   "min": 45,
+   "pts": 38
+  }
+ ]
+}

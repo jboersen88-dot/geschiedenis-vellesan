@@ -1,0 +1,648 @@
+{
+ "blokken": {
+  "mc_a": [
+   {
+    "v": "Een werkgever wil een werknemer met een vaste baan ontslaan. Welke instantie kan daar toestemming voor geven?",
+    "o": [
+     "De gemeente",
+     "Het UWV",
+     "De vakbond",
+     "De effectenbeurs"
+    ],
+    "j": 1,
+    "u": "Het UWV geeft toestemming voor ontslag."
+   },
+   {
+    "v": "In een fabriek moeten werknemers gehoorbescherming dragen. Welke wet regelt de veiligheid op het werk?",
+    "o": [
+     "De Arbowet",
+     "De wet op het minimumloon",
+     "De vennootschapsbelasting",
+     "De Algemene wet gelijke behandeling"
+    ],
+    "j": 0,
+    "u": "De Arbowet beschermt de gezondheid en veiligheid van werknemers."
+   },
+   {
+    "v": "Wie onderhandelen met elkaar over een nieuwe cao?",
+    "o": [
+     "Werknemers en aandeelhouders",
+     "Vakbonden en werkgevers",
+     "Vakbonden en het UWV",
+     "Werkgevers en de overheid"
+    ],
+    "j": 1,
+    "u": "In de cao staan de arbeidsvoorwaarden per bedrijfstak."
+   },
+   {
+    "v": "Een bedrijf wil alleen mannen aannemen voor een kantoorbaan. Waarom mag dat niet?",
+    "o": [
+     "Dat mag alleen met toestemming van het UWV",
+     "Dat verbiedt de Algemene wet gelijke behandeling",
+     "Dat staat in de cao van elke bedrijfstak",
+     "Dat verbiedt de Arbeidstijdenwet voor kantoren"
+    ],
+    "j": 1,
+    "u": "De wet verbiedt onderscheid op onder andere gender."
+   },
+   {
+    "v": "Jesse helpt elke zaterdag gratis bij de voedselbank. Wat voor werk is dat?",
+    "o": [
+     "Zwart werk",
+     "Loondienst",
+     "Onbetaald werk",
+     "Uitzendwerk"
+    ],
+    "j": 2,
+    "u": "Vrijwilligerswerk is onbetaald werk."
+   },
+   {
+    "v": "Mila werkt alleen als de supermarkt haar belt. Wat voor baan heeft zij?",
+    "o": [
+     "Een eigen bedrijf",
+     "Een vaste baan",
+     "Een flexibele baan",
+     "Een voltijdbaan"
+    ],
+    "j": 2,
+    "u": "Een oproepkracht werkt alleen als de werkgever haar nodig heeft."
+   },
+   {
+    "v": "Wat is een nadeel van werken als zelfstandige?",
+    "o": [
+     "Je mag zelf geen klanten uitkiezen",
+     "Je moet altijd personeel aannemen",
+     "Je mag niet meer dan 36 uur werken",
+     "Je hebt minder zekerheid over je inkomen"
+    ],
+    "j": 3,
+    "u": "Een zelfstandige heeft meer vrijheid, maar minder zekerheid."
+   },
+   {
+    "v": "Van welke onderneming kan iedereen aandelen kopen op de effectenbeurs?",
+    "o": [
+     "Een vof",
+     "Een nv",
+     "Een bv",
+     "Een stichting"
+    ],
+    "j": 1,
+    "u": "De aandelen van een nv worden op de beurs verhandeld."
+   },
+   {
+    "v": "In welke sector werkt een docent op een middelbare school?",
+    "o": [
+     "De primaire sector",
+     "De tertiaire sector",
+     "De secundaire sector",
+     "De quartaire sector"
+    ],
+    "j": 3,
+    "u": "Onderwijs is niet-commerciële dienstverlening."
+   },
+   {
+    "v": "Wie horen bij de beroepsbevolking?",
+    "o": [
+     "Alle mensen met een betaalde baan",
+     "Alle inwoners van achttien jaar en ouder",
+     "Alle werkenden en werkzoekenden samen",
+     "Alle mensen met een uitkering van het UWV"
+    ],
+    "j": 2,
+    "u": "De beroepsbevolking zorgt voor het aanbod van arbeid."
+   },
+   {
+    "v": "Een restaurant zoekt al maanden een kok, maar niemand solliciteert. Wat zegt dat over de arbeidsmarkt?",
+    "o": [
+     "De arbeidsmarkt is ruim",
+     "De beroepsbevolking is te groot",
+     "De werkgelegenheid is te laag",
+     "De arbeidsmarkt is krap"
+    ],
+    "j": 3,
+    "u": "Bij een krappe arbeidsmarkt is de vraag naar arbeid groter dan het aanbod."
+   },
+   {
+    "v": "Robin is ontslagen en zoekt werk, maar staat niet ingeschreven bij het UWV. Hoe heet dat?",
+    "o": [
+     "Regionaal werkloos",
+     "Arbeidsparticipatie",
+     "Verborgen werkloos",
+     "Geregistreerd werkloos"
+    ],
+    "j": 2,
+    "u": "Wie niet is ingeschreven, telt niet mee in de cijfers."
+   }
+  ],
+  "rek_a": [
+   {
+    "nr": 1,
+    "titel": "Goed of fout?",
+    "tekst": "",
+    "p": 5,
+    "delen": [
+     {
+      "id": "",
+      "v": "Goed of fout?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Je hebt vanaf 21 jaar recht op het wettelijk minimumloon."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Zwart werk is hetzelfde als onbetaald werk."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "De eigenaar van een eenmanszaak mag geen personeel in dienst hebben."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Een bv en een nv betalen vennootschapsbelasting over de winst."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Bij een ruime arbeidsmarkt is er veel werkloosheid."
+       }
+      ],
+      "uitw": [
+       "Bij zwart werk krijg je wel loon, maar betaal je geen belasting en premies. Dat is strafbaar.",
+       "Een eenmanszaak heeft één eigenaar. Personeel mag wel."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 2,
+    "titel": "Een bijbaan in de bouwmarkt",
+    "tekst": "Tim werkt 15 uur per week bij een bouwmarkt. Hij verdient €14,00 per uur.",
+    "p": 5,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken het loon van Tim per week.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         210
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.05,
+        "label": "Loon per week"
+       }
+      ],
+      "uitw": [
+       "15 × €14,00 = €210,00."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken het loon van Tim per maand. Een jaar heeft 52 weken.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         910
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.05,
+        "label": "Loon per maand"
+       }
+      ],
+      "uitw": [
+       "(weekloon × 52) : 12 = (€210,00 × 52) : 12 = €910,00."
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Heeft Tim een voltijdbaan of een deeltijdbaan?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Deeltijdbaan",
+         "Voltijdbaan"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Tim heeft een"
+       }
+      ],
+      "uitw": [
+       "Een voltijdbaan is 36 uur of meer per week. Tim werkt 15 uur."
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Noem twee arbeidsmotieven, naast geld verdienen.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "2d",
+        "p": 2,
+        "label": "Arbeidsmotieven",
+        "model": "Sociale contacten, nuttig bezig zijn, regelmaat en nieuwe dingen leren.",
+        "g": [
+         {
+          "t": "een eerste juist motief (sociale contacten, nuttig bezig zijn, regelmaat, nieuwe dingen leren)",
+          "p": 1
+         },
+         {
+          "t": "een tweede juist motief",
+          "p": 1
+         }
+        ],
+        "v": "Noem twee arbeidsmotieven, naast geld verdienen.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Mensen werken niet alleen voor het geld."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 3,
+    "titel": "Samen een fietsenwinkel",
+    "tekst": "Sara en Omar hebben samen een fietsenwinkel. Het is een vof. Dit jaar is de winst €80.000. Ze hebben afgesproken dat Sara 60% van de winst krijgt en Omar de rest.",
+    "p": 5,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken hoeveel winst Sara krijgt.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         48000
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.5,
+        "label": "Winst voor Sara"
+       }
+      ],
+      "uitw": [
+       "(percentage : 100) × totaal = (60 : 100) × €80.000 = €48.000."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken hoeveel winst Omar krijgt.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         32000
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.5,
+        "label": "Winst voor Omar"
+       }
+      ],
+      "uitw": [
+       "€80.000 − €48.000 = €32.000. Of: (40 : 100) × €80.000."
+      ]
+     },
+     {
+      "id": "c",
+      "v": "De winkel krijgt grote schulden. Leg uit waarom dat bij een vof een risico is voor Sara en Omar zelf.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "3c",
+        "p": 2,
+        "label": "Privé aansprakelijk",
+        "model": "De vennoten van een vof zijn privé aansprakelijk. Zij moeten de schulden van het bedrijf ook met hun eigen geld en spullen betalen.",
+        "g": [
+         {
+          "t": "de vennoten zijn privé aansprakelijk",
+          "p": 1
+         },
+         {
+          "t": "zij betalen de schulden ook met hun eigen geld of spullen",
+          "p": 1
+         }
+        ],
+        "v": "De winkel krijgt grote schulden. Leg uit waarom dat bij een vof een risico is voor Sara en Omar zelf.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Bij een eenmanszaak en een vof ben je privé aansprakelijk."
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Sara en Omar maken van hun winkel een bv. Wat kunnen zij dan hoogstens kwijtraken als de bv failliet gaat?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Hun aandeel in de bv",
+         "Hun eigen huis",
+         "Al hun spaargeld",
+         "Hun loon van vroeger"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Zij raken hoogstens kwijt"
+       }
+      ],
+      "uitw": [
+       "Bij een bv ben je bij faillissement hoogstens je aandeel kwijt."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 4,
+    "titel": "Werk in de regio",
+    "tekst": "In een regio werken 47.500 mensen. Er zijn 2.500 mensen werkloos.",
+    "p": 7,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Kies bij elk bedrijf de juiste sector.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Primaire sector",
+         "Secundaire sector",
+         "Tertiaire sector",
+         "Quartaire sector"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Een melkveehouderij"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Primaire sector",
+         "Secundaire sector",
+         "Tertiaire sector",
+         "Quartaire sector"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "Een transportbedrijf"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Primaire sector",
+         "Secundaire sector",
+         "Tertiaire sector",
+         "Quartaire sector"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Een meubelfabriek"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Primaire sector",
+         "Secundaire sector",
+         "Tertiaire sector",
+         "Quartaire sector"
+        ],
+        "j": 3,
+        "p": 1,
+        "label": "Een ziekenhuis"
+       }
+      ],
+      "uitw": [
+       "Primair: landbouw en visserij. Secundair: industrie en bouw. Tertiair: commerciële diensten. Quartair: niet-commerciële diensten."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken de beroepsbevolking van de regio.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         50000
+        ],
+        "p": 1,
+        "eenh": "",
+        "tol": 0.5,
+        "label": "Beroepsbevolking"
+       }
+      ],
+      "uitw": [
+       "Werkenden + werkzoekenden = 47.500 + 2.500 = 50.000."
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Bereken hoeveel procent van de beroepsbevolking werkloos is. Rond af op 1 decimaal.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         5
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.05,
+        "label": "Werkloosheid"
+       }
+      ],
+      "uitw": [
+       "(deel : geheel) × 100 = (2.500 : 50.000) × 100 = 5,0%."
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Bij een bedrijf werken 6 mensen in voltijd (36 uur) en 4 mensen 18 uur per week. Bereken het aantal arbeidsjaren.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         8
+        ],
+        "p": 1,
+        "eenh": "",
+        "tol": 0.05,
+        "label": "Arbeidsjaren"
+       }
+      ],
+      "uitw": [
+       "6 × 36 + 4 × 18 = 288 uur. 288 : 36 = 8 arbeidsjaren."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 5,
+    "titel": "Zonder werk",
+    "tekst": "",
+    "p": 7,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Kies bij elk voorbeeld de juiste soort werkloosheid.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Conjuncturele werkloosheid",
+         "Structurele werkloosheid",
+         "Frictiewerkloosheid",
+         "Seizoenswerkloosheid"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Mensen kopen minder, daardoor ontslaat een winkelketen personeel"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Conjuncturele werkloosheid",
+         "Structurele werkloosheid",
+         "Frictiewerkloosheid",
+         "Seizoenswerkloosheid"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Een bank vervangt medewerkers door een app"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Conjuncturele werkloosheid",
+         "Structurele werkloosheid",
+         "Frictiewerkloosheid",
+         "Seizoenswerkloosheid"
+        ],
+        "j": 3,
+        "p": 1,
+        "label": "Een strandtent heeft in de winter geen werk"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Conjuncturele werkloosheid",
+         "Structurele werkloosheid",
+         "Frictiewerkloosheid",
+         "Seizoenswerkloosheid"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "Noa is net klaar met haar opleiding en zoekt een baan"
+       }
+      ],
+      "uitw": [
+       "Conjunctureel: minder bestedingen. Structureel: de aanbodkant, zoals robots. Seizoen: een deel van het jaar. Frictie: korte tijd tussen school of baan en een nieuwe baan."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Het aantal werklozen in een stad stijgt van 4.000 naar 4.300. Bereken met hoeveel procent het aantal werklozen is gestegen. Rond af op 1 decimaal.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         7.5
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.05,
+        "label": "Stijging"
+       }
+      ],
+      "uitw": [
+       "(nieuw − oud) : oud × 100 = (4.300 − 4.000) : 4.000 × 100 = 7,5%."
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Leg uit hoe omscholen helpt tegen structurele werkloosheid.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "5c",
+        "p": 2,
+        "label": "Omscholen",
+        "model": "Door omscholen leer je een ander beroep. Daardoor pas je beter bij de banen die er wel zijn en vind je sneller werk.",
+        "g": [
+         {
+          "t": "door omscholen leer je iets anders of een ander beroep",
+          "p": 1
+         },
+         {
+          "t": "daardoor pas je beter bij de banen die er zijn",
+          "p": 1
+         }
+        ],
+        "v": "Leg uit hoe omscholen helpt tegen structurele werkloosheid.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Met een andere opleiding pas je beter bij de banen die er zijn."
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "toetsen": {
+  "t1": {
+   "n": 1,
+   "t": "oefentoets A",
+   "sub": "Hoofdstuk 4",
+   "min": 45,
+   "mc": "mc_a",
+   "open": null,
+   "rek": "rek_a"
+  }
+ },
+ "VERS": [
+  {
+   "n": 1,
+   "min": 45,
+   "pts": 41
+  }
+ ]
+}

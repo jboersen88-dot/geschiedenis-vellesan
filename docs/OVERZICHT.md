@@ -90,10 +90,14 @@ Alles wordt gestuurd vanuit `economie/economie.js` en `economie/data/paginas.jso
 | Jaar 4 mavo H1 "Verdien je genoeg?" | `j4h1` | ja | ja | nee | 1 |
 | Jaar 4 mavo H2 "Geld moet rollen" | `j4h2` | ja | ja | nee | 1 |
 | Jaar 4 mavo H3 "We gaan voor winst" | `j4h3` | ja | ja | nee | 1 |
+| Jaar 4 mavo H4 "Aan het werk" | `j4h4` | ja | ja | nee | 1 |
 | Jaar 4 mavo H5 "Kan de overheid dat regelen?" | `j4h5` | ja | ja | nee | 1 |
 | Jaar 4 mavo H6 "De overheid en ons inkomen" | `j4h6` | ja | ja | nee | 1 |
 | Jaar 3 mavo H7 "De overheid voor ons allemaal" | `j3h7` | ja | ja | nee | 1 |
 | Jaar 4 mavo SE H5 + H6 + H7 (SE-pagina, `SE` in `economie.js`) | `se56` | n.v.t. | n.v.t. | nee | 1 (oefen-SE) |
+| Jaar 4 mavo H7 "Nederland handelsland" | `j4h7` | ja | ja | nee | 1 |
+| Jaar 4 mavo H8 "Welvaart wereldwijd" | `j4h8` | ja | ja | nee | 1 |
+| Jaar 4 mavo SE H3 + H4 (SE-pagina `jaar-4/se4`) | `se34` | n.v.t. | n.v.t. | nee | 1 (oefen-SE) |
 | Jaar 4 mavo SE H1 + H2 (SE-pagina boven `j4h1`, `j4h2` en `se3`) | `se3` | n.v.t. | n.v.t. | nee | oefen-SE van `se3` |
 | Jaar 4 SE3 (H1 en H2) | `se3` | eigen `app.html` zoals boekje 1 | in dezelfde app | nee | 4, plus toets op maat |
 

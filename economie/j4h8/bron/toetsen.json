@@ -1,0 +1,578 @@
+{
+ "blokken": {
+  "mc_a": [
+   {
+    "v": "Land A en land B hebben hetzelfde inkomen per hoofd. Toch is de welvaart in land A hoger. Wat kan de reden zijn?",
+    "o": [
+     "In land A zijn de prijzen lager",
+     "In land A is meer corruptie",
+     "In land A wonen meer mensen",
+     "In land A is minder onderwijs"
+    ],
+    "j": 0,
+    "u": "Bij lagere prijzen is de koopkracht van het inkomen hoger."
+   },
+   {
+    "v": "Een vrouw verbouwt groente voor haar eigen gezin. Waarom telt dat niet mee in het nationaal inkomen?",
+    "o": [
+     "Het is een collectieve voorziening",
+     "Het is een monocultuur",
+     "Het is informele productie",
+     "Het is gebonden hulp"
+    ],
+    "j": 2,
+    "u": "Zelfvoorziening wordt niet geregistreerd."
+   },
+   {
+    "v": "Door armoede gaan kinderen niet naar school. Daardoor vinden ze later slecht werk en blijven ze arm. Hoe heet dit?",
+    "o": [
+     "Een ruilvoet",
+     "Een vicieuze cirkel",
+     "Een buffervoorraad",
+     "Een monocultuur"
+    ],
+    "j": 1,
+    "u": "Het ene probleem veroorzaakt het andere."
+   },
+   {
+    "v": "Een land verdient bijna al zijn exportinkomsten met koffiebonen. Wat is het risico?",
+    "o": [
+     "Bij een lage koffieprijs dalen de inkomsten sterk",
+     "Het land krijgt geen hulp van andere landen",
+     "Bij een lage koffieprijs stijgen de inkomsten sterk",
+     "Het land mag geen andere producten invoeren"
+    ],
+    "j": 0,
+    "u": "Bij een monocultuur ben je afhankelijk van één product."
+   },
+   {
+    "v": "Welke oorzaak van onderontwikkeling komt door rijke landen?",
+    "o": [
+     "Analfabetisme",
+     "Protectiemaatregelen",
+     "Bevolkingsgroei",
+     "Natuurrampen"
+    ],
+    "j": 1,
+    "u": "Protectie gaat ten koste van de export van ontwikkelingslanden."
+   },
+   {
+    "v": "De prijs van exportproducten van een land stijgt. De prijs van de import blijft gelijk. Wat gebeurt er met de ruilvoet?",
+    "o": [
+     "Die blijft gelijk",
+     "Die wordt slechter",
+     "Die halveert",
+     "Die wordt beter"
+    ],
+    "j": 3,
+    "u": "Met dezelfde export kan het land meer import betalen."
+   },
+   {
+    "v": "Nederland betaalt een school in Senegal. Senegal moet de schoolbanken in Nederland kopen. Wat voor hulp is dit?",
+    "o": [
+     "Gebonden hulp",
+     "Een microkrediet",
+     "Noodhulp",
+     "Ongebonden hulp"
+    ],
+    "j": 0,
+    "u": "Het geld moet besteed worden in het land dat de hulp geeft."
+   },
+   {
+    "v": "Amina wil een naaiatelier beginnen, maar de bank geeft haar geen lening. Wat kan haar helpen?",
+    "o": [
+     "Een invoerrecht",
+     "Een microkrediet",
+     "Een handelsverdrag",
+     "Een buffervoorraad"
+    ],
+    "j": 1,
+    "u": "Een kleine lening voor kleine ondernemers."
+   },
+   {
+    "v": "Er is dit jaar een groot overschot aan tin. Wat doen de landen met een grondstoffenovereenkomst?",
+    "o": [
+     "Ze stoppen een jaar lang met de productie",
+     "Ze verkopen alles meteen voor een lage prijs",
+     "Ze slaan het overschot op in een buffervoorraad",
+     "Ze geven het tin gratis weg aan rijke landen"
+    ],
+    "j": 2,
+    "u": "Bij tekorten verkopen ze de voorraad weer."
+   },
+   {
+    "v": "Welke organisatie is afhankelijk van giften van burgers?",
+    "o": [
+     "De Europese Unie",
+     "De Wereldbank",
+     "Het IMF",
+     "Cordaid"
+    ],
+    "j": 3,
+    "u": "Cordaid is een goededoelenorganisatie."
+   },
+   {
+    "v": "Waarom loont het vooral bij arbeidsintensieve productie om naar een lagelonenland te gaan?",
+    "o": [
+     "De loonkosten zijn een groot deel van de kosten",
+     "De belasting is daar altijd nul procent",
+     "De machines zijn daar veel beter dan hier",
+     "De klanten wonen allemaal in dat land"
+    ],
+    "j": 0,
+    "u": "Bij veel handwerk bespaar je veel met lage lonen."
+   },
+   {
+    "v": "Wat garandeert Fairtrade aan boeren?",
+    "o": [
+     "Een minimumprijs die de kosten dekt",
+     "Een lening zonder rente van de bank",
+     "Een subsidie van hun regering",
+     "Een vaste baan in een fabriek"
+    ],
+    "j": 0,
+    "u": "Daarbovenop komt de fairtradepremie."
+   }
+  ],
+  "rek_a": [
+   {
+    "nr": 1,
+    "titel": "Goed of fout?",
+    "tekst": "",
+    "p": 5,
+    "delen": [
+     {
+      "id": "",
+      "v": "Goed of fout?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Het inkomen per hoofd laat zien hoe het inkomen over de bevolking verdeeld is."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Bij een monocultuur is een land afhankelijk van één of enkele exportproducten."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Noodhulp is bedoeld om een land economisch zelfstandig te maken."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Bij de Wereldbank kunnen ontwikkelingslanden lenen tegen een lage rente."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Een voorwaarde van Fairtrade is dat boeren samenwerken in een coöperatie."
+       }
+      ],
+      "uitw": [
+       "Het inkomen per hoofd is alleen een gemiddelde.",
+       "Noodhulp is bedoeld om te overleven na een ramp. Structurele hulp maakt een land zelfstandiger."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 2,
+    "titel": "Twee landen vergelijken",
+    "tekst": "Land A heeft een nationaal inkomen van €50 miljard en 20 miljoen inwoners. Land B heeft een nationaal inkomen van €400 miljard en 10 miljoen inwoners. In land A verdient de armste 80% van de bevolking samen 40% van het inkomen.",
+    "p": 5,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken het inkomen per hoofd van land A.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         2500
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.5,
+        "label": "Inkomen per hoofd land A"
+       }
+      ],
+      "uitw": [
+       "nationaal inkomen : aantal inwoners = 50.000.000.000 : 20.000.000 = €2.500."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken het inkomen per hoofd van land B.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         40000
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.5,
+        "label": "Inkomen per hoofd land B"
+       }
+      ],
+      "uitw": [
+       "400.000.000.000 : 10.000.000 = €40.000."
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Hoeveel procent van het inkomen verdient de rijkste 20% in land A?",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         60
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.5,
+        "label": "Rijkste 20% in land A"
+       }
+      ],
+      "uitw": [
+       "100% − 40% = 60%."
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Noem twee dingen, naast het inkomen per hoofd, die meetellen voor de welvaart van een land.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "2d",
+        "p": 2,
+        "label": "Welvaart is meer dan inkomen",
+        "model": "De verdeling van het inkomen, de hoogte van de prijzen (koopkracht), de grootte van de informele productie en de collectieve voorzieningen zoals onderwijs en zorg.",
+        "g": [
+         {
+          "t": "een eerste juist punt (inkomensverdeling, prijzen of koopkracht, informele productie, collectieve voorzieningen)",
+          "p": 1
+         },
+         {
+          "t": "een tweede juist punt",
+          "p": 1
+         }
+        ],
+        "v": "Noem twee dingen, naast het inkomen per hoofd, die meetellen voor de welvaart van een land.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Verdeling, prijzen, informele productie en voorzieningen."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 3,
+    "titel": "Een land met alleen katoen",
+    "tekst": "De wereldmarktprijs van katoen daalt van €1.600 naar €1.400 per ton.",
+    "p": 4,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Hoe heet het als een land voor zijn export afhankelijk is van één product?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Monocultuur",
+         "Ruilvoet",
+         "Vicieuze cirkel",
+         "Contingentering"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Dit heet"
+       }
+      ],
+      "uitw": [
+       "Monocultuur: één of enkele exportproducten."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken met hoeveel procent de prijs van katoen is gedaald. Rond af op 1 decimaal. Typ een min-teken.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         -12.5
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.05,
+        "label": "Verandering"
+       }
+      ],
+      "uitw": [
+       "(nieuw − oud) : oud × 100 = (1.400 − 1.600) : 1.600 × 100 = −12,5%."
+      ]
+     },
+     {
+      "id": "c",
+      "v": "De prijs van machines die het land invoert blijft gelijk. Leg uit wat er met de ruilvoet gebeurt en wat dat betekent voor het land.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "3c",
+        "p": 2,
+        "label": "Ruilvoet",
+        "model": "De ruilvoet wordt slechter, want de exportprijs daalt en de importprijs blijft gelijk. Het land moet meer katoen exporteren om dezelfde machines te kunnen betalen.",
+        "g": [
+         {
+          "t": "de ruilvoet wordt slechter",
+          "p": 1
+         },
+         {
+          "t": "het land moet meer exporteren om dezelfde import te betalen",
+          "p": 1
+         }
+        ],
+        "v": "De prijs van machines die het land invoert blijft gelijk. Leg uit wat er met de ruilvoet gebeurt en wat dat betekent voor het land.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Lagere exportprijs, dezelfde importprijs: een slechtere ruilvoet."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 4,
+    "titel": "Hulp aan ontwikkelingslanden",
+    "tekst": "",
+    "p": 7,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Kies bij elk voorbeeld de juiste soort hulp.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Noodhulp",
+         "Structurele hulp"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Tenten en dekens na een aardbeving"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Noodhulp",
+         "Structurele hulp"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Een project om leraren op te leiden"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Noodhulp",
+         "Structurele hulp"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Drinkwater bij extreme droogte"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Noodhulp",
+         "Structurele hulp"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "De aanleg van een spoorlijn"
+       }
+      ],
+      "uitw": [
+       "Noodhulp is om te overleven. Structurele hulp maakt een land zelfstandiger."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Het nationaal inkomen van een land is €900 miljard. Bereken hoeveel miljard euro 0,7% daarvan is.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         6.3
+        ],
+        "p": 1,
+        "eenh": "",
+        "tol": 0.05,
+        "label": "Bedrag (miljard euro)"
+       }
+      ],
+      "uitw": [
+       "(0,7 : 100) × 900 = €6,3 miljard."
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Leg uit hoe een microkrediet iemand in een ontwikkelingsland kan helpen.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "4c",
+        "p": 2,
+        "label": "Microkrediet",
+        "model": "Met een microkrediet (een kleine lening) kan iemand die niet bij een grote bank kan lenen een eigen bedrijfje starten en zo zelf een inkomen verdienen.",
+        "g": [
+         {
+          "t": "het is een kleine lening voor iemand die niet bij de bank kan lenen",
+          "p": 1
+         },
+         {
+          "t": "daarmee kan die persoon een bedrijfje starten en inkomen verdienen",
+          "p": 1
+         }
+        ],
+        "v": "Leg uit hoe een microkrediet iemand in een ontwikkelingsland kan helpen.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Een kleine lening om een bedrijfje te beginnen."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 5,
+    "titel": "Een eerlijke prijs",
+    "tekst": "Een coöperatie van boeren verkoopt 5 ton cacao via Fairtrade. De minimumprijs is €2.400 per ton. De fairtradepremie is €200 per ton.",
+    "p": 4,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken wat de coöperatie in totaal ontvangt.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         13000
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.5,
+        "label": "Totaal"
+       }
+      ],
+      "uitw": [
+       "minimumprijs + fairtradepremie = 2.400 + 200 = €2.600 per ton. 5 × 2.600 = €13.000."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Noem twee redenen waarom bedrijven hun productie naar lagelonenlanden verplaatsen.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "5b",
+        "p": 2,
+        "label": "Lagelonenlanden",
+        "model": "De loonkosten zijn laag, er zijn geen afspraken over minimumloon, arbeidstijden en arbeidsomstandigheden, er zijn geen vakbonden en er zijn geen milieuregels.",
+        "g": [
+         {
+          "t": "een eerste juiste reden (lage lonen, geen regels voor arbeid, geen vakbonden, geen milieuregels)",
+          "p": 1
+         },
+         {
+          "t": "een tweede juiste reden",
+          "p": 1
+         }
+        ],
+        "v": "Noem twee redenen waarom bedrijven hun productie naar lagelonenlanden verplaatsen.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Lage kosten en weinig regels."
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Leg uit wat jij als consument kunt doen voor mensen in ontwikkelingslanden.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "5c",
+        "p": 1,
+        "label": "Jouw koopgedrag",
+        "model": "Je kunt producten kopen waarvoor de boer een eerlijke prijs krijgt of de werknemer een leefbaar loon, bijvoorbeeld producten van Fairtrade.",
+        "g": [
+         {
+          "t": "producten kiezen met een eerlijke prijs voor de boer of een leefbaar loon (bijvoorbeeld Fairtrade)",
+          "p": 1
+         }
+        ],
+        "v": "Leg uit wat jij als consument kunt doen voor mensen in ontwikkelingslanden.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Kies voor producten met een eerlijke prijs."
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "toetsen": {
+  "t1": {
+   "n": 1,
+   "t": "oefentoets A",
+   "sub": "Hoofdstuk 8",
+   "min": 45,
+   "mc": "mc_a",
+   "open": null,
+   "rek": "rek_a"
+  }
+ },
+ "VERS": [
+  {
+   "n": 1,
+   "min": 45,
+   "pts": 37
+  }
+ ]
+}

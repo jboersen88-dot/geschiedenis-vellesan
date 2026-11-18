@@ -1,3 +1,32 @@
+## 2026-11-18 · Economie 4 mavo: H4, H7, H8 en het SE H3 + H4 in de nieuwe opzet
+
+Derde ronde van de opdracht "4 mavo zoals 3V". Hiermee staan H1 tot en met H8 en de drie SE-pagina's van 4 mavo in de nieuwe opzet.
+
+- **Jaar 4 H4 "Aan het werk"** (`j4h4`), **H7 "Nederland handelsland"** (`j4h7`) en **H8 "Welvaart wereldwijd"** (`j4h8`): hoofdstukpagina, leeromgeving per paragraaf (dia's met klikstappen, filmpjes, begrippen, leerdoelen, Check jezelf) en oefenomgeving (begrippen, rekentrainer, quiz, games, oefentoets). Samen 120 begrippen, 158 quizvragen, 15 sorteersets, 14 rekensoorten en 3 oefentoetsen A (H4 41 punten, H7 38, H8 37).
+- **SE-pagina** `h.html?p=jaar-4/se4` (SE H3 + H4): deel 1 de twee hoofdstukken, deel 2 oefenen per hoofdstuk en een nieuw **oefen-SE** (`se34/toets.html`, 54 punten, 60 minuten). De oude pagina met Nearpod-links is hierdoor niet meer zichtbaar; de gegevens staan nog in `data/paginas.json`. De deep link is dezelfde gebleven.
+- **Bronnen**: de boektekst van de 7e editie (in eigen woorden, niets letterlijk), de PowerPoints van de docent en de filmpjes van de oude site. Niets overgenomen uit een echt SE of proefwerk.
+- **Paragraaf zonder PowerPoint**: staat er bij een paragraaf geen PowerPoint, dan vervalt het blok "Lesstof" en begint de paragraaf met het filmpje (nu bij 4.3). Hoort één PowerPoint bij twee paragrafen, dan toont de tweede paragraaf dezelfde dia's (`dias` in `RIJK`, nu bij 8.2 en 8.4).
+- **Leerdoelen**: de kop "Na 4.1 kan ik" staat er alleen als elk leerdoel met "Ik kan" begint. Anders staat er "Leerdoelen van 4.1" (H5, H6 en 3 mavo H7).
+- **SE-pagina's**: de hoofdstukkaart groeit nu mee met de tekst. Bij een lange inleiding viel de kop buiten de kaart.
+- **Telefoon**: lange woorden in de checklist van de oefenomgeving breken nu af (geen horizontaal scrollen meer op 375 px).
+- **Beelden**: eigen illustraties voor H4, H7 en H8 (`tools/beelden/scenes.js`, nieuwe vormen plant en kring).
+
+**Keuzes**
+- H4 is geschreven uit het "Hoofdstuk 4" (over werk) in het rtf-bestand van 3 mavo. Dat lijkt het 4 mavo-hoofdstuk van de 7e editie te zijn; in het rtf van jaar 4 ontbreekt H4. Dit is een aanname.
+- De titel van H8 ("Welvaart wereldwijd") is een eigen keuze, want de boektitel ontbrak in het materiaal. Zeg het als de titel anders moet.
+- H7 en H8 volgen de paragrafen van de 7e editie. De PowerPoints hebben deels de oude indeling: 8.1 en 8.2 delen één PowerPoint, 8.3 en 8.4 ook.
+- H4: de PowerPoint "4.2 Welke wetten werken" staat bij 4.1 en "4.1 Werk je voor loon of voor winst" bij 4.2, omdat de onderwerpen daar in de 7e editie staan. 4.3 heeft geen PowerPoint.
+- Weggelaten dia's: lesplanning, huiswerk en een dia met een persoonlijke boodschap aan een leerling.
+- De rekensom "loon per maand" in H4 gebruikt (weekloon × 52) : 12, zoals in H1.
+
+**Controleren door de docent**
+- Klopt de aanname over H4 en de titel van H8?
+- De dia's van H4, H7 en H8: lettertype en opbouw kunnen afwijken van PowerPoint. Staat elke PowerPoint bij de goede paragraaf?
+- De oefentoetsen en het oefen-SE H3 + H4 naast de eigen toetsen leggen.
+- Is er een PowerPoint voor 4.3 (arbeidsmarkt)? Dan komt die er alsnog bij.
+
+**Getest**: vragencheck (3935 vragen) en linkcheck op 0; a11ycheck meldt alleen `rondleiding/qr/posters.html` (stond al zo). Browsertest op 375 en 820 px, licht en donker, zonder consolefouten of horizontaal scrollen: hoofdstukpagina's, paragrafen (ook 4.3 en 8.2), oefenomgevingen, toetsen, de drie SE-pagina's en de jaarpagina. Alle rekengeneratoren van H4, H7 en H8 zijn 300 keer of vaker doorgerekend. **Niet getest**: echte iPad, AI-nakijker, filmpjes (YouTube en Drive waren in de test geblokkeerd).
+
 ## 2026-11-18 · Economie 4 mavo: H1, H2, H3 en het SE H1 + H2 in de nieuwe opzet
 
 Tweede ronde van de opdracht "4 mavo zoals 3V". H4, H7, H8 en het SE H3 + H4 volgen.

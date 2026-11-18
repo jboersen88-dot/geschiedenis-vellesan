@@ -52,11 +52,11 @@ for _m, _pad, _jr, _nr, _kop, _beelden in [
         ("j4h1", "jaar-4/hoofdstuk-1-verdien-je-genoeg", "jaar 4 mavo", 1, ["Verdien je ", "genoeg?"], ["inkomen", "welvaart", "prijzen"]),
         ("j4h2", "jaar-4/hoofdstuk-2-geld-moet-rollen", "jaar 4 mavo", 2, ["Geld moet ", "rollen"], ["budget", "sparen", "lenen"]),
         ("j4h3", "jaar-4/hoofdstuk-3", "jaar 4 mavo", 3, ["We gaan voor ", "winst"], ["winst", "productie", "markt"]),
-        ("j4h4", "jaar-4/hoofdstuk-4-aan-het-werk", "jaar 4 mavo", 4, ["Aan het ", "werk"], ["bouw", "kantoor", "zoeken"]),
+        ("j4h4", "jaar-4/hoofdstuk-4-aan-het-werk", "jaar 4 mavo", 4, ["Aan het ", "werk"], ["werk", "vormen", "zoeken"]),
         ("j4h5", "jaar-4/hoofdstuk-5-kan-de-overheid-dat-regelen", "jaar 4 mavo", 5, ["Kan de overheid dat ", "regelen?"], ["overheid", "zekerheid", "begroting"]),
         ("j4h6", "jaar-4/hoofdstuk-6-de-overheid-en-ons-inkomen", "jaar 4 mavo", 6, ["De overheid en ons ", "inkomen"], ["belasting", "vermogen", "draagkracht"]),
-        ("j4h7", "jaar-4/hoofdstuk-7", "jaar 4 mavo", 7, ["Nederland ", "handelsland"], ["haven", "euro", "wereld"]),
-        ("j4h8", "jaar-4/hoofdstuk-8", "jaar 4 mavo", 8, ["Welvaart ", "wereldwijd"], ["wereld", "markt", "hulp"]),
+        ("j4h7", "jaar-4/hoofdstuk-7", "jaar 4 mavo", 7, ["Nederland ", "handelsland"], ["handel", "euro", "wereld"]),
+        ("j4h8", "jaar-4/hoofdstuk-8", "jaar 4 mavo", 8, ["Welvaart ", "wereldwijd"], ["welvaart", "ruilvoet", "fairtrade"]),
         ("j3h7", "jaar-3/mavo/hoofdstuk-7-de-overheid-voor-ons-allemaal", "jaar 3 mavo", 7, ["De overheid voor ons ", "allemaal"], ["bestuur", "zekerheid", "begroting"])]:
     CONFIG[_m] = dict(bron="apps/%s.html" % _m, pad=_pad, hoofdstuk="Hoofdstuk %d" % _nr, eyebrow="Economie · %s · hoofdstuk %d" % (_jr, _nr), kop=_kop, nr="H%d" % _nr,
                       beelden=_beelden, toetsen=("§%d.1 t/m §%d.4" % (_nr, _nr), []))
