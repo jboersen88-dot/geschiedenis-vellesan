@@ -1,0 +1,1028 @@
+{
+ "blokken": {
+  "mc_a": [
+   {
+    "v": "Je hebt €20. Je wilt naar de film (€12) en een boek kopen (€15). Welk begrip past hierbij?",
+    "o": [
+     "Vrije goederen",
+     "Schaarste",
+     "Deflatie",
+     "Zelfvoorziening"
+    ],
+    "j": 1,
+    "u": "Je middelen zijn te klein voor al je behoeften: je moet kiezen."
+   },
+   {
+    "v": "Welk voorbeeld is een vrij goed?",
+    "o": [
+     "Brood van gisteren",
+     "Wind op het strand",
+     "Stroom van zonnepanelen",
+     "Water uit de kraan"
+    ],
+    "j": 1,
+    "u": "Wind is er vanzelf. Voor de andere drie zijn middelen ingezet."
+   },
+   {
+    "v": "Een kledingwinkel verlaagt alle prijzen om meer klanten te trekken. Welke P is dat?",
+    "o": [
+     "Personeel",
+     "Prijs",
+     "Product",
+     "Plaats"
+    ],
+    "j": 1,
+    "u": "De winkel kiest voor een lage prijs."
+   },
+   {
+    "v": "Een bedrijf wil vooral dat je de naam van het merk onthoudt. Welke reclame is dat?",
+    "o": [
+     "Sluikreclame",
+     "Ideële reclame",
+     "Merkreclame",
+     "Informatieve reclame"
+    ],
+    "j": 2,
+    "u": "Merkreclame draait om naamsbekendheid."
+   },
+   {
+    "v": "Lisa krijgt rente op haar spaargeld. Welk inkomen is dat?",
+    "o": [
+     "Inkomen in natura",
+     "Inkomen uit arbeid",
+     "Inkomen uit bezit",
+     "Overdrachtsinkomen"
+    ],
+    "j": 2,
+    "u": "Zij verdient aan iets wat zij bezit: haar spaargeld."
+   },
+   {
+    "v": "Welke uitgave is een incidentele uitgave?",
+    "o": [
+     "De premie van de verzekering",
+     "Een nieuwe wasmachine",
+     "De wekelijkse boodschappen",
+     "De maandelijkse huur"
+    ],
+    "j": 1,
+    "u": "Die uitgave komt maar af en toe voor."
+   },
+   {
+    "v": "De inflatie is 3%. Je loon stijgt ook met 3%. Wat gebeurt er met je koopkracht?",
+    "o": [
+     "Die stijgt",
+     "Die verdubbelt",
+     "Die blijft gelijk",
+     "Die daalt"
+    ],
+    "j": 2,
+    "u": "Je loon stijgt even hard als de prijzen."
+   },
+   {
+    "v": "Het indexcijfer van een prijs is 96. Wat klopt?",
+    "o": [
+     "De prijs is 4% gedaald",
+     "De prijs is €4 gedaald",
+     "De prijs is 4% gestegen",
+     "De prijs is 96% gedaald"
+    ],
+    "j": 0,
+    "u": "Onder de 100 is een daling: 100 − 96 = 4%."
+   },
+   {
+    "v": "Je bewaart geld om later een auto te kopen. Welke geldfunctie is dat?",
+    "o": [
+     "Spaarmiddel",
+     "Rekenmiddel",
+     "Leenmiddel",
+     "Ruilmiddel"
+    ],
+    "j": 0,
+    "u": "Je bewaart geld voor later."
+   },
+   {
+    "v": "Welk geld is chartaal geld?",
+    "o": [
+     "Een munt van €2",
+     "Geld op je rekening",
+     "Een betaalverzoek",
+     "Het saldo op je pas"
+    ],
+    "j": 0,
+    "u": "Chartaal geld is contant geld: munten en bankbiljetten."
+   },
+   {
+    "v": "Yara spaart, zodat zij een kapotte telefoon meteen kan vervangen. Welk spaarmotief is dat?",
+    "o": [
+     "Sparen uit voorzorg",
+     "Sparen voor dividend",
+     "Sparen voor een doel",
+     "Sparen voor de rente"
+    ],
+    "j": 0,
+    "u": "Zij spaart voor onverwachte uitgaven."
+   },
+   {
+    "v": "Bij welke rente krijg je ook rente over de rente van eerdere jaren?",
+    "o": [
+     "Vaste rente",
+     "Variabele rente",
+     "Enkelvoudige rente",
+     "Samengestelde rente"
+    ],
+    "j": 3,
+    "u": "Rente op rente."
+   },
+   {
+    "v": "Wat zijn kredietkosten?",
+    "o": [
+     "Het bedrag dat je per maand aflost",
+     "Het bedrag dat je extra terugbetaalt",
+     "Het bedrag dat je in totaal leent",
+     "Het bedrag dat de bank je uitleent"
+    ],
+    "j": 1,
+    "u": "Alles wat je meer terugbetaalt dan je hebt geleend."
+   },
+   {
+    "v": "Een gezin koopt een huis en leent daarvoor bij de bank. Welke lening is dat?",
+    "o": [
+     "Hypothecaire lening",
+     "Persoonlijke lening",
+     "Doorlopend krediet",
+     "Koop op afbetaling"
+    ],
+    "j": 0,
+    "u": "Het huis is het onderpand."
+   },
+   {
+    "v": "Wat is het risico van beleggen in aandelen?",
+    "o": [
+     "De bank kan sluiten",
+     "De koers kan dalen",
+     "De premie kan stijgen",
+     "De rente kan stijgen"
+    ],
+    "j": 1,
+    "u": "Dan zijn je aandelen minder waard dan je inleg."
+   },
+   {
+    "v": "De wisselkoers is: voor €1 krijg je 1,10 dollar. Hoeveel dollar krijg je voor €200?",
+    "o": [
+     "220 dollar",
+     "201,10 dollar",
+     "210 dollar",
+     "181,82 dollar"
+    ],
+    "j": 0,
+    "u": "200 × 1,10 = 220 dollar."
+   }
+  ],
+  "rek_a": [
+   {
+    "nr": 1,
+    "titel": "Goed of fout?",
+    "tekst": "",
+    "p": 6,
+    "delen": [
+     {
+      "id": "",
+      "v": "Goed of fout?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Een vakantie is een primaire behoefte."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Het Nibud geeft advies over omgaan met geld."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Bij deflatie dalen de prijzen gemiddeld."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Geld op je betaalrekening is giraal geld."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Bij een debetsaldo sta je in de plus."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Dividend is een deel van de winst van een bedrijf."
+       }
+      ],
+      "uitw": [
+       "Een vakantie is luxe: een secundaire behoefte.",
+       "Bij een debetsaldo sta je rood."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 2,
+    "titel": "Een nieuw energiedrankje",
+    "tekst": "Er komt een nieuw energiedrankje op de markt.",
+    "p": 9,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Kies bij elke situatie de juiste soort beïnvloeding.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Sociale beïnvloeding",
+         "Commerciële beïnvloeding"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Je teamgenoten drinken het allemaal"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Sociale beïnvloeding",
+         "Commerciële beïnvloeding"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Een bekende voetballer krijgt geld om het te drinken"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Sociale beïnvloeding",
+         "Commerciële beïnvloeding"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "De supermarkt zet het drankje bij de kassa"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Sociale beïnvloeding",
+         "Commerciële beïnvloeding"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Je zus zegt dat het lekker is"
+       }
+      ],
+      "uitw": [
+       "Sociaal: mensen om je heen. Commercieel: een bedrijf wil eraan verdienen."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Kies bij elk drankje de juiste soort merk.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "A-merk",
+         "B-merk",
+         "Huismerk"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Bekend van tv en het duurste in het schap"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "A-merk",
+         "B-merk",
+         "Huismerk"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "De naam van de supermarkt staat op het blikje"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "A-merk",
+         "B-merk",
+         "Huismerk"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Een onbekend merk met weinig reclame en een lage prijs"
+       }
+      ],
+      "uitw": [
+       "A-merk: bekend en duur. Huismerk: van de winkel zelf. B-merk: minder bekend en goedkoper."
+      ]
+     },
+     {
+      "id": "c",
+      "v": "De overheid maakt een spotje: 'Drink water in plaats van energiedrank.' Is dit commerciële of ideële reclame? Leg je antwoord uit.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "2c",
+        "p": 2,
+        "label": "Soort reclame",
+        "model": "Dit is ideële reclame. Het doel is het gedrag van mensen verbeteren (gezonder drinken), niet winst maken.",
+        "g": [
+         {
+          "t": "het is ideële reclame",
+          "p": 1
+         },
+         {
+          "t": "het doel is beter gedrag, niet winst maken",
+          "p": 1
+         }
+        ],
+        "v": "De overheid maakt een spotje: 'Drink water in plaats van energiedrank.' Is dit commerciële of ideële reclame? Leg je antwoord uit.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Ideële reclame wil het gedrag van mensen verbeteren."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 3,
+    "titel": "Het geld van Ilse",
+    "tekst": "Ilse heeft een krantenwijk. Zij verdient €38,50 per week. Van haar ouders krijgt zij €45,00 kleedgeld per maand.",
+    "p": 6,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken hoeveel Ilse per maand verdient met haar krantenwijk.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         166.83
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.01,
+        "label": "Loon per maand"
+       }
+      ],
+      "uitw": [
+       "(weekbedrag × 52) : 12 = (38,50 × 52) : 12 = €166,83"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken de totale inkomsten van Ilse per maand.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         211.83
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.01,
+        "label": "Inkomsten"
+       }
+      ],
+      "uitw": [
+       "166,83 + 45,00 = €211,83"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Ilse geeft elke maand €136,83 uit. De rest reserveert zij. Bereken hoeveel zij per maand reserveert.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         75
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.01,
+        "label": "Reserveren"
+       }
+      ],
+      "uitw": [
+       "Inkomsten − uitgaven = 211,83 − 136,83 = €75,00"
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Ilse wil een laptop van €1.150,00 kopen. Zij heeft al €400,00 gespaard. Bereken na hoeveel maanden zij de laptop kan kopen.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         10
+        ],
+        "p": 1,
+        "eenh": "maanden",
+        "tol": 0.01,
+        "label": "Aantal maanden"
+       }
+      ],
+      "uitw": [
+       "(benodigd bedrag − al gespaard) : bedrag per maand = (1.150 − 400) : 75 = 10 maanden"
+      ]
+     },
+     {
+      "id": "e",
+      "v": "Kies bij elk inkomen van Ilse de juiste soort.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Inkomen uit arbeid",
+         "Inkomen uit bezit",
+         "Overdrachtsinkomen"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Het loon van de krantenwijk"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Inkomen uit arbeid",
+         "Inkomen uit bezit",
+         "Overdrachtsinkomen"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "Het kleedgeld"
+       }
+      ],
+      "uitw": [
+       "Loon is een beloning voor werk. Voor kleedgeld levert Ilse geen tegenprestatie."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 4,
+    "titel": "De sportschool wordt duurder",
+    "tekst": "Een abonnement op de sportschool kostte in het basisjaar €25,00 per maand. Nu kost het €28,50 per maand.",
+    "p": 5,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken het indexcijfer van de prijs van nu.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         114
+        ],
+        "p": 1,
+        "eenh": "",
+        "tol": 0.05,
+        "label": "Indexcijfer"
+       }
+      ],
+      "uitw": [
+       "(nieuw getal : getal basisjaar) × 100 = (28,50 : 25,00) × 100 = 114,0"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Volgend jaar is het indexcijfer 120. Bereken de prijs van volgend jaar.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         30
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Prijs"
+       }
+      ],
+      "uitw": [
+       "(indexcijfer : 100) × bedrag basisjaar = (120 : 100) × 25,00 = €30,00"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Het loon van de trainer gaat van €2.400,00 naar €2.520,00 per maand. Bereken met hoeveel procent het loon stijgt.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         5
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.05,
+        "label": "Stijging"
+       }
+      ],
+      "uitw": [
+       "(nieuw − oud) : oud × 100 = (2.520 − 2.400) : 2.400 × 100 = 5,0%"
+      ]
+     },
+     {
+      "id": "d",
+      "v": "In hetzelfde jaar stijgen de prijzen met 3,5%. Wat gebeurt er met de koopkracht van de trainer?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Stijgt",
+         "Daalt",
+         "Blijft gelijk"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "De koopkracht"
+       }
+      ],
+      "uitw": [
+       "Het loon stijgt harder dan de prijzen."
+      ]
+     },
+     {
+      "id": "e",
+      "v": "Van het nieuwe loon van €2.520,00 gaat €831,60 naar de huur. Bereken hoeveel procent van het loon dat is.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         33
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.05,
+        "label": "Huur"
+       }
+      ],
+      "uitw": [
+       "(deel : geheel) × 100 = (831,60 : 2.520) × 100 = 33,0%"
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 5,
+    "titel": "De rekening van Mo",
+    "tekst": "Mo heeft een oud saldo van €86,40. Er komt €30,00 zakgeld bij en €112,50 loon. Hij betaalt €64,99 voor schoenen, €18,00 voor zijn abonnement en €161,25 voor de reparatie van zijn fiets.",
+    "p": 5,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken het totaal van de ontvangsten.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         142.5
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Ontvangsten"
+       }
+      ],
+      "uitw": [
+       "30,00 + 112,50 = €142,50"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken het totaal van de uitgaven.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         244.24
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Uitgaven"
+       }
+      ],
+      "uitw": [
+       "64,99 + 18,00 + 161,25 = €244,24"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Bereken het nieuwe saldo van Mo. Typ een min-teken bij een negatief saldo.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         -15.34
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Nieuw saldo"
+       }
+      ],
+      "uitw": [
+       "Nieuw saldo = oud saldo + ontvangsten − uitgaven = 86,40 + 142,50 − 244,24 = −€15,34"
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Wat voor saldo heeft Mo nu?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Creditsaldo",
+         "Debetsaldo"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Het saldo is een"
+       }
+      ],
+      "uitw": [
+       "Het saldo is negatief: Mo staat rood."
+      ]
+     },
+     {
+      "id": "e",
+      "v": "Mo betaalt de schoenen met zijn pinpas. Met welk geld betaalt hij?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Chartaal geld",
+         "Giraal geld"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Mo betaalt met"
+       }
+      ],
+      "uitw": [
+       "Het geld gaat van zijn betaalrekening af."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 6,
+    "titel": "Sparen bij de bank",
+    "tekst": "Oma zet €4.500,00 op een spaardeposito. Het geld staat 4 jaar vast tegen 2,8% rente per jaar. De rente wordt aan het einde in één keer uitbetaald. Bas zet €1.800,00 op een spaarrekening tegen 3,2% rente per jaar. De rente wordt elk jaar bijgeschreven. Het geld blijft 6 jaar staan.",
+    "p": 5,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken hoeveel rente oma per jaar krijgt.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         126
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Rente per jaar"
+       }
+      ],
+      "uitw": [
+       "(percentage : 100) × spaarbedrag = (2,8 : 100) × 4.500 = €126,00"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken hoeveel er na 4 jaar op het deposito van oma staat (spaarbedrag + rente).",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         5004
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Eindbedrag"
+       }
+      ],
+      "uitw": [
+       "126 × 4 = €504,00 rente. 4.500 + 504 = €5.004,00"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Welke groeifactor gebruikt Bas?",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         1.032
+        ],
+        "p": 1,
+        "eenh": "",
+        "tol": 0.0001,
+        "label": "Groeifactor"
+       }
+      ],
+      "uitw": [
+       "(3,2 : 100) + 1 = 1,032"
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Bereken hoeveel er na 6 jaar op de rekening van Bas staat.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         2174.46
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.01,
+        "label": "Eindbedrag"
+       }
+      ],
+      "uitw": [
+       "beginbedrag × (groeifactor ^ aantal jaren) = 1.800 × (1,032 ^ 6) = €2.174,46"
+      ]
+     },
+     {
+      "id": "e",
+      "v": "Bereken hoeveel rente Bas in totaal heeft gekregen.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         374.46
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.01,
+        "label": "Rente"
+       }
+      ],
+      "uitw": [
+       "2.174,46 − 1.800,00 = €374,46"
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 7,
+    "titel": "Lenen voor een keuken",
+    "tekst": "Familie Bakker leent €9.000,00 voor een nieuwe keuken. Zij betalen 48 maanden lang €214,50 per maand.",
+    "p": 6,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken hoeveel de familie in totaal terugbetaalt.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         10296
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Totaal"
+       }
+      ],
+      "uitw": [
+       "termijnbedrag × aantal termijnen = 214,50 × 48 = €10.296,00"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken de kredietkosten.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         1296
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Kredietkosten"
+       }
+      ],
+      "uitw": [
+       "(termijnbedrag × aantal termijnen) − krediet = 10.296 − 9.000 = €1.296,00"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Bereken hoeveel procent de kredietkosten zijn van het geleende bedrag.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         14.4
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.05,
+        "label": "Kredietkosten"
+       }
+      ],
+      "uitw": [
+       "(kredietkosten : krediet) × 100 = (1.296 : 9.000) × 100 = 14,4%"
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Wat voor lening is dit?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Consumptief krediet",
+         "Hypothecaire lening"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Dit is een"
+       }
+      ],
+      "uitw": [
+       "De familie leent voor een aankoop, niet voor een huis."
+      ]
+     },
+     {
+      "id": "e",
+      "v": "De familie kan ook kiezen voor 72 maanden. Leg uit waarom de kredietkosten dan hoger zijn.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "7e",
+        "p": 2,
+        "label": "Langere looptijd",
+        "model": "Bij een langere looptijd betaal je langer rente over het geleende bedrag. In totaal betaal je dus meer rente.",
+        "g": [
+         {
+          "t": "je betaalt langer rente",
+          "p": 1
+         },
+         {
+          "t": "daardoor betaal je in totaal meer terug",
+          "p": 1
+         }
+        ],
+        "v": "De familie kan ook kiezen voor 72 maanden. Leg uit waarom de kredietkosten dan hoger zijn.",
+        "h": []
+       }
+      ],
+      "uitw": [
+       "Hoe langer je leent, hoe langer je rente betaalt."
+      ]
+     }
+    ]
+   },
+   {
+    "nr": 8,
+    "titel": "Op reis en beleggen",
+    "tekst": "Je gaat op vakantie naar Zwitserland. De wisselkoers: voor €1 krijg je 0,95 Zwitserse frank.",
+    "p": 4,
+    "delen": [
+     {
+      "id": "a",
+      "v": "Je wisselt €350,00. Bereken hoeveel Zwitserse franken je krijgt.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         332.5
+        ],
+        "p": 1,
+        "eenh": "",
+        "tol": 0.005,
+        "label": "Zwitserse franken"
+       }
+      ],
+      "uitw": [
+       "euro's × wisselkoers = 350 × 0,95 = 332,50 Zwitserse franken"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Na de vakantie heb je nog 57 Zwitserse franken over. Bereken hoeveel euro je daarvoor terugkrijgt.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         60
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Euro"
+       }
+      ],
+      "uitw": [
+       "vreemd geld : wisselkoers = 57 : 0,95 = €60,00"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Tante Els koopt 40 aandelen voor €22,50 per aandeel. Later verkoopt zij ze voor €26,10 per aandeel. Bereken haar winst.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         144
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Winst"
+       }
+      ],
+      "uitw": [
+       "(verkoopprijs − aankoopprijs) × aantal aandelen = (26,10 − 22,50) × 40 = €144,00"
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Bereken hoeveel procent de winst is van haar inleg.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         16
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.05,
+        "label": "Winst"
+       }
+      ],
+      "uitw": [
+       "Inleg: 40 × 22,50 = €900,00. (144 : 900) × 100 = 16,0%"
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "toetsen": {
+  "t1": {
+   "n": 1,
+   "t": "oefen-SE",
+   "sub": "H1 en H3",
+   "min": 75,
+   "mc": "mc_a",
+   "open": null,
+   "rek": "rek_a"
+  }
+ },
+ "VERS": [
+  {
+   "n": 1,
+   "min": 75,
+   "pts": 62
+  }
+ ]
+}

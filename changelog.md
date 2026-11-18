@@ -1,3 +1,30 @@
+## 2026-11-18 · Economie 3 mavo: H1, H3 en het SE H1 + H3 in de nieuwe opzet
+
+Eerste ronde van de opdracht "bouw nu ook de hoofdstukken voor jaar 3 economie voor de mavo". Begonnen met H1 en H3, omdat het eerste SE van 3 mavo daarover gaat.
+
+- **Jaar 3 H3 "De bank en jouw geld"** (`j3h3`, nieuw): hoofdstukpagina, leeromgeving per paragraaf (de vier PowerPoints als dia's met klikstappen, vier instructiefilms, begrippen, leerdoelen, Check jezelf) en oefenomgeving. 41 begrippen, 49 quizvragen, 6 sorteersets, 9 rekensoorten (nieuw saldo, oud saldo terugrekenen, enkelvoudige en samengestelde rente, kredietkosten in euro's en procenten, winst op aandelen, wisselkoers heen en terug) en oefentoets A (50 punten, 60 minuten).
+- **Jaar 3 H1 "Hoe welvarend ben jij?"** (`j3h1`): had al een hoofdstukpagina en leeromgeving, nu ook leerdoelen, begrippen en een oefenomgeving. 49 begrippen, 51 quizvragen, 7 sorteersets, 9 rekensoorten (procent van een bedrag, prijs na korting, hoeveel procent, begroting, week en maand, reserveren, procentuele verandering, indexcijfer, rekenen met een indexcijfer) en oefentoets A (52 punten, 60 minuten). De voortgang van leerlingen blijft staan: zelfde opslagsleutel en dezelfde kernvragen in dezelfde volgorde.
+- **SE-pagina** `h.html?p=jaar-3/mavo/se-1` (nu "SE hoofdstuk 1 en 3"): deel 1 de twee hoofdstukken, deel 2 oefenen per hoofdstuk en een nieuw **oefen-SE** (`se13/toets.html`, 62 punten, 75 minuten). De oefentoets op papier en de herhalingsvragen van H1 staan er nog als tegel. De Nearpod-links van de oude pagina zijn niet meer zichtbaar; de gegevens staan nog in `data/paginas.json`. De deep link is dezelfde gebleven.
+- **Bronnen**: de PowerPoints, leerdoelen, kernvragen en instructiefilms van de docent. Het digitale boek (Pincode 3 vmbo-gt, editie 7.1) is alleen gebruikt om de afbakening en de paragraaftitels te controleren. Alles in eigen woorden. Niets overgenomen uit een echt SE of proefwerk.
+- **Beelden**: eigen illustraties voor H3 (`tools/beelden/scenes.js`).
+- `bouw-pagina.py`: H1 is daar weggehaald, want het hoofdstuk komt nu uit `j3h1/bron/` en `bouw-oefen.py`.
+
+**Keuzes**
+- De hoofdstuk- en paragraaftitels volgen editie 7.1 van het boek, net als het leerdoelenblad van de docent: H1 heet nu "Hoe welvarend ben jij?" met 1.1 "Kun jij kopen wat je wilt?", 1.2 "Hoe word je beïnvloed?", 1.3 "Je inkomsten en uitgaven" en 1.4 "Wordt alles duurder?". De PowerPoints zelf hebben nog de oude titels. De links naar de pagina's zijn niet veranderd.
+- Het eerste SE is opgezet als H1 + H3, omdat in Drive een "Oefentoets voor het SE hoofdstuk 1 en 3" van oktober 2026 staat. De oude pagina heette "SE 1" en ging alleen over H1.
+- Uit de PowerPoint van 3.4 zijn twee dia's weggelaten: een grafiek uit het boek en een grafiek van een krant.
+- De formule voor reserveren is (benodigd bedrag − al gespaard) : aantal maanden. De samengestelde rente is beginbedrag × (groeifactor ^ aantal jaren).
+- De oefentoets H1 op papier staat nu als oefenstof bij paragraaf 1.4.
+- H3 heeft geen persoonlijke route (Mijn route); dat heeft alleen jaar 2 H2.
+
+**Controleren door de docent**
+- Kloppen de nieuwe titels van H1 en de indeling van het SE (H1 + H3)?
+- In de dia's staan nog drie beelden van anderen: 3.1 dia 5 (grafiek "Betalingen aan de kassa"), 3.2 dia 3 (schermafbeelding van een rentetabel) en 3.4 de tabel met wisselkoersen. Zeg het als die weg moeten of opnieuw getekend moeten worden.
+- De oefentoetsen van H1 en H3 en het oefen-SE naast de eigen toetsen leggen.
+- De dia's van H3: lettertype en opbouw kunnen afwijken van PowerPoint.
+
+**Getest**: vragencheck (4692 vragen) en linkcheck op 0; a11ycheck meldt alleen `rondleiding/qr/posters.html` (stond al zo). Browsertest op 375 en 820 px, licht en donker, zonder consolefouten of horizontaal scrollen: hoofdstukpagina's, paragrafen, oefenomgevingen, toetsen, de SE-pagina en de jaarpagina. Alle 18 rekengeneratoren zijn 400 keer doorgerekend. **Niet getest**: echte iPad, AI-nakijker, filmpjes en Drive-links (YouTube, Drive en de Worker waren in de test geblokkeerd).
+
 ## 2026-11-18 · Economie 2 mavo: H3, H4, H5 en H6 in de nieuwe opzet
 
 Opdracht: "de overige hoofdstukken voor jaar 2 mavo". H3 tot en met H6 hebben nu dezelfde opzet als H2: hoofdstukpagina, leeromgeving per paragraaf en een oefenomgeving.

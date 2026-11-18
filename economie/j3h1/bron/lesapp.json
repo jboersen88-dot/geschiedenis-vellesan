@@ -1,0 +1,1406 @@
+{
+ "KEY": "eco-j3h1-v1",
+ "PARS": [
+  {
+   "id": "1.1",
+   "t": "Kun jij kopen wat je wilt?",
+   "c": "var(--p1)",
+   "file": "16dvcf2LugMrDrctNJqPoh3OxQfwAfA7A",
+   "x": [
+    "pr"
+   ],
+   "sum": "Behoeften, middelen en schaarste, vrije goederen, welvaart en rekenen met procenten.",
+   "imgs": [
+    [
+     "eten",
+     "Samen eten: een primaire behoefte"
+    ],
+    [
+     "wensen",
+     "Een lijstje met wensen: secundaire behoeften"
+    ]
+   ],
+   "q": [
+    "Wat zijn behoeften?",
+    "Je hebt twee soorten behoeften. Noem ze allebei en geef van allebei minimaal twee voorbeelden.",
+    "Geef drie redenen waarom mensen verschillende behoeften hebben.",
+    "Leg uit dat technologische ontwikkelingen invloed hebben op onze behoeften.",
+    "Wat wordt er bedoeld met e-commerce?",
+    "Welke invloed heeft e-commerce op onze economie? Leg je antwoord uit.",
+    "Wat wordt er bedoeld met middelen?",
+    "Wat zijn de twee belangrijkste middelen?",
+    "Bij economie heeft het begrip schaars twee betekenissen. Geef ze allebei.",
+    "Leg uit dat brood in Nederland ook een schaars product is, ook al hebben wij er genoeg van.",
+    "Wat wordt er bedoeld met vrije goederen?",
+    "Leg het belangrijkste verschil uit tussen vrije goederen en schaarse goederen.",
+    "Wat wordt er bedoeld met welvaart?",
+    "Leg uit dat de welvaart in Nederland hoog is in vergelijking met andere landen.",
+    "Hoe reken je met procenten? Oefen met de opgaven bij de oefenstof."
+   ]
+  },
+  {
+   "id": "1.2",
+   "t": "Hoe word je beïnvloed?",
+   "c": "var(--p2)",
+   "file": "1RJJ_d47_8eG1rauDGDNuFjaYyPQy7mKw",
+   "x": [],
+   "sum": "Consumenten, sociale en commerciële beïnvloeding, de marketingmix, reclame, A- en B-merken en jongeren als doelgroep.",
+   "imgs": [
+    [
+     "vlogger",
+     "Een vlogger filmt zichzelf: commerciële beïnvloeding via social media"
+    ],
+    [
+     "reclamebord",
+     "Een reclamebord langs de weg"
+    ]
+   ],
+   "q": [
+    "Wanneer ben je een consument?",
+    "Op welke twee manieren worden consumenten beïnvloed? Geef van beide manieren twee voorbeelden.",
+    "Wat is de marketingmix?",
+    "Welke onderdelen van de marketingmix zie je vaak terug in commerciële reclames?",
+    "Wat wordt er bedoeld met ideële reclame?",
+    "Wat is het grootste verschil tussen commerciële en ideële reclame?",
+    "Wat is het verschil tussen A-merken en B-merken?",
+    "Welk onderdeel van de marketingmix past bij de keuze voor een A- of B-merk?",
+    "Waarom zijn jongeren een goede doelgroep?"
+   ]
+  },
+  {
+   "id": "1.3",
+   "t": "Je inkomsten en uitgaven",
+   "c": "var(--p3)",
+   "file": "12JU4_E6djDz6Br_iLhLfIjp3vokRTTNL",
+   "x": [],
+   "sum": "Het Nibud, budgetteren en een begroting, soorten inkomsten en uitgaven, en geld reserveren.",
+   "imgs": [
+    [
+     "begroting",
+     "Rekeningen en een rekenmachine: een begroting maken"
+    ],
+    [
+     "spaarvarken",
+     "Sparen: geld reserveren voor later"
+    ]
+   ],
+   "q": [
+    "Wat doet het Nibud?",
+    "Wat wordt er bedoeld met budgetteren?",
+    "Wat staat er in een begroting?",
+    "Welke drie soorten inkomsten kan een mens hebben? Geef van alle drie een voorbeeld.",
+    "Welke drie soorten uitgaven hebben wij?",
+    "Op welke van de drie soorten uitgaven heb jij het minste invloed? Leg je antwoord uit.",
+    "Wat wordt er bedoeld met geld reserveren?",
+    "Welke redenen kun je hebben om geld te reserveren?"
+   ]
+  },
+  {
+   "id": "1.4",
+   "t": "Wordt alles duurder?",
+   "c": "var(--p4)",
+   "file": "1_9io8UfS1lePjo6u7FOefjZoTIAEAnex",
+   "x": [
+    "ix",
+    "ot"
+   ],
+   "sum": "Koopkracht, inflatie en deflatie, het CBS en rekenen met indexcijfers.",
+   "imgs": [
+    [
+     "prijzen",
+     "Boodschappen doen: wat kun je kopen voor je geld?"
+    ],
+    [
+     "munten",
+     "Muntjes stapelen: hoeveel is je geld waard?"
+    ]
+   ],
+   "q": [
+    "Wat wordt er bedoeld met koopkracht?",
+    "Welke twee factoren hebben invloed op de koopkracht?",
+    "Wat wordt er bedoeld met inflatie?",
+    "Wat is het nut van het CBS?",
+    "Wat is het tegenovergestelde van inflatie?",
+    "Hoe bereken je een indexcijfer? Welke formule gebruik je daarvoor?"
+   ]
+  }
+ ],
+ "GOALS": {
+  "1.1": [
+   "Ik kan het verschil uitleggen tussen primaire en secundaire behoeften.",
+   "Ik kan uitleggen waarom mensen verschillende behoeften hebben.",
+   "Ik kan uitleggen wat schaarste is en waarom schaars iets anders is dan zeldzaam.",
+   "Ik kan uitleggen wat vrije goederen zijn, met voorbeelden.",
+   "Ik kan uitleggen wat welvaart is.",
+   "Ik kan een percentage van een bedrag uitrekenen."
+  ],
+  "1.2": [
+   "Ik kan het verschil uitleggen tussen sociale en commerciële beïnvloeding.",
+   "Ik kan de 6 P's van de marketingmix noemen.",
+   "Ik kan het verschil uitleggen tussen informatieve reclame, merkreclame en ideële reclame.",
+   "Ik kan het verschil uitleggen tussen een A-merk, een B-merk en een huismerk.",
+   "Ik kan uitleggen waarom jongeren een belangrijke doelgroep zijn."
+  ],
+  "1.3": [
+   "Ik kan uitleggen wat budgetteren is en wat er in een begroting staat.",
+   "Ik kan de soorten inkomen noemen, met bij elke soort een voorbeeld.",
+   "Ik kan uitleggen wat inkomen in natura is.",
+   "Ik kan uitgaven verdelen in dagelijkse uitgaven, vaste lasten en incidentele uitgaven.",
+   "Ik kan een weekbedrag omrekenen naar een maandbedrag en terug.",
+   "Ik kan uitrekenen hoeveel je per maand moet reserveren."
+  ],
+  "1.4": [
+   "Ik kan uitleggen wat koopkracht is en waar die van afhangt.",
+   "Ik kan uitleggen wat inflatie en deflatie zijn.",
+   "Ik kan uitleggen wat er met je koopkracht gebeurt als je loon harder stijgt dan de prijzen.",
+   "Ik kan een verandering in procenten uitrekenen.",
+   "Ik kan een indexcijfer uitrekenen en uitleggen wat het betekent.",
+   "Ik kan uitleggen waarom het CBS de prijzen bijhoudt."
+  ]
+ },
+ "CHK": [
+  [
+   "Primaire en secundaire behoeften uit elkaar houden",
+   "1.1",
+   "quiz"
+  ],
+  [
+   "Uitleggen wat schaarste is",
+   "1.1",
+   "quiz"
+  ],
+  [
+   "Vrije goederen herkennen",
+   "1.1",
+   "quiz"
+  ],
+  [
+   "Een percentage van een bedrag uitrekenen",
+   "1.1",
+   "reken",
+   "procentvan"
+  ],
+  [
+   "De prijs na korting uitrekenen",
+   "1.1",
+   "reken",
+   "korting"
+  ],
+  [
+   "Sociale en commerciële beïnvloeding herkennen",
+   "1.2",
+   "quiz"
+  ],
+  [
+   "De 6 P's van de marketingmix herkennen",
+   "1.2",
+   "quiz"
+  ],
+  [
+   "Soorten reclame uit elkaar houden",
+   "1.2",
+   "quiz"
+  ],
+  [
+   "Uitrekenen hoeveel procent iets is",
+   "1.2",
+   "reken",
+   "deel"
+  ],
+  [
+   "Soorten inkomen herkennen",
+   "1.3",
+   "quiz"
+  ],
+  [
+   "Soorten uitgaven herkennen",
+   "1.3",
+   "quiz"
+  ],
+  [
+   "Een begroting uitrekenen",
+   "1.3",
+   "reken",
+   "budget"
+  ],
+  [
+   "Van week naar maand rekenen en terug",
+   "1.3",
+   "reken",
+   "maand"
+  ],
+  [
+   "Uitrekenen wat je per maand reserveert",
+   "1.3",
+   "reken",
+   "reserve"
+  ],
+  [
+   "Inflatie, deflatie en koopkracht uitleggen",
+   "1.4",
+   "quiz"
+  ],
+  [
+   "Een verandering in procenten uitrekenen",
+   "1.4",
+   "reken",
+   "pct"
+  ],
+  [
+   "Een indexcijfer uitrekenen",
+   "1.4",
+   "reken",
+   "index"
+  ],
+  [
+   "Met een indexcijfer een bedrag uitrekenen",
+   "1.4",
+   "reken",
+   "bedrag"
+  ]
+ ],
+ "MAT": {
+  "pr": [
+   "Rekenen met procenten",
+   [
+    [
+     "Oefenvragen",
+     "1x5AiahR3ovH7sj5Ume42EMAA7d9lj5X_"
+    ],
+    [
+     "Antwoorden",
+     "1E-y3vuU1vIHXJGsgpvN9-jnVWk1_8sjA"
+    ]
+   ]
+  ],
+  "ix": [
+   "Werken met indexcijfers",
+   [
+    [
+     "Oefenopgave",
+     "1-ndk4XI1u81UTS__S4YRTdlLuwgA6AGc"
+    ],
+    [
+     "Antwoorden",
+     "1bFGFbUIm1crzj0t0CT7SxlEgQf52kD2B"
+    ]
+   ]
+  ],
+  "ot": [
+   "Oefentoets hoofdstuk 1 (op papier)",
+   [
+    [
+     "Oefentoets",
+     "1RbgXqWzkvSJ3p8GJAM-oa8tF5yNyvvZn"
+    ],
+    [
+     "Antwoorden",
+     "1a77esOSHANf3IoLhKFsxW566aVe_5LPg"
+    ]
+   ]
+  ]
+ },
+ "VERS": [],
+ "FILMS": [],
+ "CARDS": [
+  [
+   "1.1",
+   "Behoeften",
+   "Alles wat je nodig hebt, of denkt nodig te hebben.",
+   "Eten, een huis, een telefoon, een vakantie."
+  ],
+  [
+   "1.1",
+   "Primaire behoeften",
+   "Behoeften aan dingen die je nodig hebt om te leven: de basisgoederen.",
+   "Eten, drinken en onderdak."
+  ],
+  [
+   "1.1",
+   "Secundaire behoeften",
+   "Behoeften aan dingen die het leven leuker maken: luxe goederen.",
+   "Een spelcomputer, een vakantie, een dure merkjas."
+  ],
+  [
+   "1.1",
+   "E-commerce",
+   "Kopen en verkopen via internet.",
+   "Je bestelt schoenen in een webshop."
+  ],
+  [
+   "1.1",
+   "Middelen",
+   "Wat je kunt inzetten om in je behoeften te voorzien. De twee belangrijkste zijn tijd en geld.",
+   "Je hebt geld nodig om te kopen en tijd om te werken."
+  ],
+  [
+   "1.1",
+   "Schaarste",
+   "Je hebt nooit genoeg middelen voor al je behoeften. Je moet dus kiezen.",
+   "Je zakgeld is op, maar je wilt nog naar de bioscoop."
+  ],
+  [
+   "1.1",
+   "Schaarse goederen",
+   "Goederen waar middelen voor zijn opgeofferd om ze te maken. Daarom hebben ze een prijs.",
+   "Brood: er is grond, werk en een oven voor nodig."
+  ],
+  [
+   "1.1",
+   "Vrije goederen",
+   "Goederen die er vanzelf zijn. Je hoeft er geen middelen voor in te zetten.",
+   "Zeewater, zonlicht en wind."
+  ],
+  [
+   "1.1",
+   "Zeldzaam",
+   "Er is weinig van. Dat is iets anders dan schaars.",
+   "Een oude postzegel is zeldzaam. Brood is schaars, maar niet zeldzaam."
+  ],
+  [
+   "1.1",
+   "Welvaart",
+   "De mate waarin je in je behoeften kunt voorzien.",
+   "Met een hoger inkomen kun je meer kopen: je welvaart is hoger."
+  ],
+  [
+   "1.1",
+   "Prioriteiten stellen",
+   "Kiezen wat je het belangrijkst vindt, omdat je niet alles kunt hebben.",
+   "Eerst sparen voor een fiets, daarna pas nieuwe kleren."
+  ],
+  [
+   "1.2",
+   "Consument",
+   "Iemand die goederen koopt of diensten inhuurt.",
+   "Je koopt een broodje of neemt een taxi."
+  ],
+  [
+   "1.2",
+   "Koopgedrag",
+   "Alle goederen en diensten die je koopt, bij elkaar.",
+   "Wat jij koopt, waar en hoe vaak."
+  ],
+  [
+   "1.2",
+   "Sociale beïnvloeding",
+   "Je laat je bij het kopen leiden door mensen om je heen.",
+   "Je vrienden dragen dezelfde schoenen, dus jij wilt ze ook."
+  ],
+  [
+   "1.2",
+   "Commerciële beïnvloeding",
+   "Bedrijven proberen je over te halen om iets te kopen. Zij willen geld verdienen.",
+   "Reclame op tv of van een influencer."
+  ],
+  [
+   "1.2",
+   "Marketing",
+   "Alles wat een bedrijf doet om consumenten te verleiden iets te kopen.",
+   "Een actie, een mooie verpakking, een reclamefilmpje."
+  ],
+  [
+   "1.2",
+   "Marketingmix",
+   "De zes P's waarmee een bedrijf zijn verkoop stuurt: product, prijs, plaats, promotie, personeel en presentatie.",
+   "Een goedkope winkel kiest voor lage prijzen en volle schappen."
+  ],
+  [
+   "1.2",
+   "Product",
+   "P van de marketingmix: wat verkoop je, en van welk merk?",
+   "A-merk, B-merk of huismerk."
+  ],
+  [
+   "1.2",
+   "Prijs",
+   "P van de marketingmix: kies je een hoge of een lage prijs?",
+   "Een duur horloge of een koopje bij een prijsvechter."
+  ],
+  [
+   "1.2",
+   "Plaats",
+   "P van de marketingmix: waar verkoop je het product?",
+   "In een drukke winkelstraat of alleen via internet."
+  ],
+  [
+   "1.2",
+   "Promotie",
+   "P van de marketingmix: hoe breng je het product onder de aandacht?",
+   "Reclame op social media of sponsoring van een club."
+  ],
+  [
+   "1.2",
+   "Personeel",
+   "P van de marketingmix: welke mensen werken er en wat weten zij?",
+   "Een verkoper die alles van fietsen weet."
+  ],
+  [
+   "1.2",
+   "Presentatie",
+   "P van de marketingmix: hoe ziet de winkel of de website eruit?",
+   "Een strakke etalage met weinig producten."
+  ],
+  [
+   "1.2",
+   "Informatieve reclame",
+   "Reclame die vertelt wat een product kan en wat het kost.",
+   "Een folder met de prijs en de eigenschappen van een laptop."
+  ],
+  [
+   "1.2",
+   "Merkreclame",
+   "Reclame die een merk bekend wil maken.",
+   "Een spotje waarin vooral het logo en de sfeer te zien zijn."
+  ],
+  [
+   "1.2",
+   "Ideële reclame",
+   "Reclame zonder winstdoel. Het doel is het gedrag van mensen verbeteren.",
+   "Een campagne tegen appen op de fiets."
+  ],
+  [
+   "1.2",
+   "A-merk",
+   "Een bekend merk dat veel reclame maakt en vaak duurder is.",
+   "Een bekend merk cola dat je bijna overal kunt kopen."
+  ],
+  [
+   "1.2",
+   "B-merk",
+   "Een minder bekend merk met weinig reclame en een lagere prijs.",
+   "Een onbekend merk chips in de supermarkt."
+  ],
+  [
+   "1.2",
+   "Huismerk",
+   "Het eigen merk van een winkel.",
+   "De pindakaas met de naam van de supermarkt erop."
+  ],
+  [
+   "1.2",
+   "Doelgroep",
+   "De groep consumenten die een bedrijf wil bereiken.",
+   "Jongeren, ouderen of gezinnen met kinderen."
+  ],
+  [
+   "1.3",
+   "Nibud",
+   "Nationaal Instituut voor Budgetvoorlichting. Het geeft informatie en advies over omgaan met geld.",
+   "Het Nibud laat zien hoeveel zakgeld gewoon is."
+  ],
+  [
+   "1.3",
+   "Budgetteren",
+   "Je uitgaven afstemmen op je inkomsten.",
+   "Je kijkt eerst wat er binnenkomt en bepaalt dan wat je uitgeeft."
+  ],
+  [
+   "1.3",
+   "Begroting",
+   "Een overzicht van de inkomsten en uitgaven die je verwacht.",
+   "Links je inkomsten, rechts je uitgaven, onderaan de totalen."
+  ],
+  [
+   "1.3",
+   "Inkomen uit arbeid",
+   "Inkomen dat je krijgt als beloning voor werk.",
+   "Loon van je bijbaan, winst uit je eigen bedrijf."
+  ],
+  [
+   "1.3",
+   "Inkomen uit bezit",
+   "Inkomen dat je krijgt omdat je iets bezit.",
+   "Rente op spaargeld, huur van een zomerhuisje, dividend."
+  ],
+  [
+   "1.3",
+   "Overdrachtsinkomen",
+   "Inkomen waar je geen tegenprestatie voor levert.",
+   "Zakgeld, kleedgeld, kinderbijslag, AOW, bijstand."
+  ],
+  [
+   "1.3",
+   "Inkomen in natura",
+   "Een beloning in goederen of diensten in plaats van geld.",
+   "Een telefoon of een auto van je werkgever."
+  ],
+  [
+   "1.3",
+   "Dagelijkse uitgaven",
+   "Uitgaven die je steeds opnieuw doet en waarbij je deels zelf kunt kiezen.",
+   "Boodschappen, verzorging, een cadeautje."
+  ],
+  [
+   "1.3",
+   "Vaste lasten",
+   "Uitgaven die op een vast moment terugkomen. Ze worden vaak automatisch afgeschreven.",
+   "Huur, energie, verzekering, telefoonabonnement."
+  ],
+  [
+   "1.3",
+   "Incidentele uitgaven",
+   "Uitgaven die af en toe voorkomen. Vaak zijn het grote bedragen.",
+   "Een reparatie, een nieuwe wasmachine, een vakantie."
+  ],
+  [
+   "1.3",
+   "Reserveren",
+   "Geld opzijzetten voor een incidentele uitgave of voor een doel.",
+   "Elke maand €50 apart leggen voor een scooter."
+  ],
+  [
+   "1.4",
+   "Koopkracht",
+   "Hoeveel goederen en diensten je met je inkomen kunt kopen.",
+   "Stijgt je loon harder dan de prijzen, dan stijgt je koopkracht."
+  ],
+  [
+   "1.4",
+   "Prijspeil",
+   "De gemiddelde hoogte van alle prijzen.",
+   "Stijgt het prijspeil, dan zijn boodschappen gemiddeld duurder."
+  ],
+  [
+   "1.4",
+   "Inflatie",
+   "De prijzen stijgen gemiddeld. Je kunt minder kopen met hetzelfde geld.",
+   "Een brood kostte €2,00 en kost nu €2,10."
+  ],
+  [
+   "1.4",
+   "Deflatie",
+   "De prijzen dalen gemiddeld. Het tegenovergestelde van inflatie.",
+   "Je kunt meer kopen met hetzelfde geld."
+  ],
+  [
+   "1.4",
+   "CBS",
+   "Centraal Bureau voor de Statistiek. Het verzamelt cijfers over Nederland, ook over de prijzen.",
+   "Het CBS meet hoeveel de prijzen zijn gestegen."
+  ],
+  [
+   "1.4",
+   "Indexcijfer",
+   "Een getal dat een verandering laat zien ten opzichte van het basisjaar.",
+   "Indexcijfer 103: een stijging van 3%."
+  ],
+  [
+   "1.4",
+   "Basisjaar",
+   "Het jaar waarmee je vergelijkt. Het indexcijfer van het basisjaar is altijd 100.",
+   "2020 = 100."
+  ],
+  [
+   "1.4",
+   "Procentuele verandering",
+   "Hoeveel procent iets is gestegen of gedaald.",
+   "Van €6,00 naar €8,50 zakgeld is een stijging van 41,7%."
+  ]
+ ],
+ "BANK": [
+  [
+   "1.1",
+   "Wat is een primaire behoefte?",
+   [
+    "De behoefte aan eten",
+    "De behoefte aan games",
+    "De behoefte aan reizen",
+    "De behoefte aan sieraden"
+   ],
+   "Eten heb je nodig om te leven."
+  ],
+  [
+   "1.1",
+   "Welke behoefte is secundair?",
+   [
+    "Een vakantie naar Spanje",
+    "Een dak boven je hoofd",
+    "Water om te drinken",
+    "Een warme maaltijd"
+   ],
+   "Een vakantie is luxe: je kunt zonder."
+  ],
+  [
+   "1.1",
+   "Waarom heeft iemand van 14 andere behoeften dan iemand van 40?",
+   [
+    "Door het verschil in leeftijd",
+    "Door het verschil in weer",
+    "Door het verschil in prijspeil",
+    "Door het verschil in schaarste"
+   ],
+   "Leeftijd is een van de redenen voor verschil in behoeften."
+  ],
+  [
+   "1.1",
+   "Wat zijn de twee belangrijkste middelen om in je behoeften te voorzien?",
+   [
+    "Tijd en geld",
+    "Wind en water",
+    "Loon en rente",
+    "Vraag en aanbod"
+   ],
+   "Met geld koop je, en alles kost tijd."
+  ],
+  [
+   "1.1",
+   "Wat betekent schaarste bij economie?",
+   [
+    "Je middelen zijn te klein voor al je behoeften",
+    "Er is van een product bijna niets meer te koop",
+    "De prijzen stijgen sneller dan je inkomen",
+    "Een product is alleen in het buitenland te koop"
+   ],
+   "Je hebt nooit genoeg tijd en geld voor alles wat je wilt."
+  ],
+  [
+   "1.1",
+   "Waarom is brood een schaars goed?",
+   [
+    "Er zijn middelen nodig om het te maken",
+    "Er is in Nederland te weinig brood",
+    "Brood is duurder dan andere producten",
+    "Brood is maar kort houdbaar"
+   ],
+   "Er is grond, werk en een oven voor nodig. Brood is er niet vanzelf."
+  ],
+  [
+   "1.1",
+   "Welk goed is een vrij goed?",
+   [
+    "Zonlicht",
+    "Kraanwater",
+    "Brood",
+    "Stroom"
+   ],
+   "Zonlicht is er vanzelf. Voor kraanwater en stroom zijn middelen nodig."
+  ],
+  [
+   "1.1",
+   "Wat is het verschil tussen schaars en zeldzaam?",
+   [
+    "Zeldzaam betekent dat er weinig van is",
+    "Zeldzaam betekent dat het gratis is",
+    "Schaars betekent dat het op is",
+    "Schaars betekent dat het gratis is"
+   ],
+   "Schaars: er zijn middelen voor nodig. Zeldzaam: er is weinig van."
+  ],
+  [
+   "1.1",
+   "Waarom hebben schaarse goederen een prijs?",
+   [
+    "Er zijn middelen voor opgeofferd",
+    "Er is bijna niets meer van over",
+    "De overheid bepaalt alle prijzen",
+    "Niemand wil ze gratis hebben"
+   ],
+   "Het maken kost arbeid, kapitaal en natuur."
+  ],
+  [
+   "1.1",
+   "Wat is welvaart?",
+   [
+    "Hoe goed je in je behoeften kunt voorzien",
+    "Hoe gelukkig je bent met je vrienden",
+    "Hoeveel uren je per week werkt",
+    "Hoe hard de prijzen elk jaar stijgen"
+   ],
+   "Hoe meer behoeften je kunt vervullen, hoe hoger je welvaart."
+  ],
+  [
+   "1.1",
+   "Mila kweekt haar eigen groente. Wat gebeurt er met haar welvaart?",
+   [
+    "Die stijgt: zij houdt geld over",
+    "Die daalt: zij verdient minder",
+    "Die blijft altijd precies gelijk",
+    "Die daalt: groente is een vrij goed"
+   ],
+   "Door zelfvoorziening hoeft zij minder te kopen."
+  ],
+  [
+   "1.1",
+   "Je kunt niet alles kopen wat je wilt. Wat moet je dan doen?",
+   [
+    "Prioriteiten stellen",
+    "Vrije goederen kopen",
+    "Je inkomen in natura vragen",
+    "Een indexcijfer berekenen"
+   ],
+   "Je kiest wat je het belangrijkst vindt."
+  ],
+  [
+   "1.1",
+   "Wat is e-commerce?",
+   [
+    "Kopen en verkopen via internet",
+    "Betalen met contant geld",
+    "Reclame maken op de radio",
+    "Ruilen zonder geld erbij"
+   ],
+   "Denk aan webshops."
+  ],
+  [
+   "1.2",
+   "Wanneer ben je een consument?",
+   [
+    "Als je iets koopt of een dienst inhuurt",
+    "Als je iets maakt en het verkoopt",
+    "Als je werkt voor een werkgever",
+    "Als je reclame maakt voor een merk"
+   ],
+   "Ook als je een taxi neemt, ben je consument."
+  ],
+  [
+   "1.2",
+   "Je koopt een jas omdat je beste vriend hem ook heeft. Wat is dit?",
+   [
+    "Sociale beïnvloeding",
+    "Commerciële beïnvloeding",
+    "Ideële reclame",
+    "Informatieve reclame"
+   ],
+   "Je laat je leiden door mensen om je heen."
+  ],
+  [
+   "1.2",
+   "Een influencer krijgt geld om een drankje te laten zien. Wat is dit?",
+   [
+    "Commerciële beïnvloeding",
+    "Sociale beïnvloeding",
+    "Ideële reclame",
+    "Zelfvoorziening"
+   ],
+   "Een bedrijf betaalt om jou iets te laten kopen."
+  ],
+  [
+   "1.2",
+   "Wat is het doel van commerciële beïnvloeding?",
+   [
+    "Meer verkopen en winst maken",
+    "Het gedrag van mensen verbeteren",
+    "Consumenten eerlijk voorlichten",
+    "De prijzen laag houden"
+   ],
+   "Bedrijven willen geld verdienen."
+  ],
+  [
+   "1.2",
+   "Een winkel kiest voor een pand in een drukke winkelstraat. Welke P is dat?",
+   [
+    "Plaats",
+    "Prijs",
+    "Promotie",
+    "Presentatie"
+   ],
+   "Plaats: waar verkoop je het product?"
+  ],
+  [
+   "1.2",
+   "Een sportmerk sponsort een voetbalclub. Welke P is dat?",
+   [
+    "Promotie",
+    "Product",
+    "Personeel",
+    "Plaats"
+   ],
+   "Promotie: het product onder de aandacht brengen."
+  ],
+  [
+   "1.2",
+   "Een winkel richt de etalage strak in met weinig producten. Welke P is dat?",
+   [
+    "Presentatie",
+    "Promotie",
+    "Personeel",
+    "Prijs"
+   ],
+   "Presentatie: hoe de winkel eruitziet."
+  ],
+  [
+   "1.2",
+   "Bij welke P hoort de keuze voor een A-merk of een B-merk?",
+   [
+    "Product",
+    "Plaats",
+    "Promotie",
+    "Personeel"
+   ],
+   "Het gaat om wat er wordt verkocht."
+  ],
+  [
+   "1.2",
+   "Een folder noemt de prijs en de eigenschappen van een stofzuiger. Welke reclame is dat?",
+   [
+    "Informatieve reclame",
+    "Ideële reclame",
+    "Merkreclame",
+    "Sluikreclame"
+   ],
+   "De reclame geeft informatie over het product."
+  ],
+  [
+   "1.2",
+   "Een campagne wil dat jongeren niet gaan roken. Welke reclame is dat?",
+   [
+    "Ideële reclame",
+    "Merkreclame",
+    "Informatieve reclame",
+    "Commerciële reclame"
+   ],
+   "Het doel is beter gedrag, niet winst."
+  ],
+  [
+   "1.2",
+   "Wat is het doel van merkreclame?",
+   [
+    "Het merk bekender maken",
+    "Het gedrag verbeteren",
+    "De prijs verlagen",
+    "De winkel verplaatsen"
+   ],
+   "Het draait om naamsbekendheid."
+  ],
+  [
+   "1.2",
+   "Wat klopt over een A-merk?",
+   [
+    "Er wordt veel reclame voor gemaakt",
+    "Het is het eigen merk van een winkel",
+    "Het is altijd het goedkoopste merk",
+    "Het is alleen via internet te koop"
+   ],
+   "Een A-merk is bekend en vaak duurder."
+  ],
+  [
+   "1.2",
+   "Wat is een huismerk?",
+   [
+    "Het eigen merk van een winkel",
+    "Een merk voor in het huishouden",
+    "Het duurste merk in de winkel",
+    "Een merk zonder verpakking"
+   ],
+   "Bijvoorbeeld de hagelslag met de naam van de supermarkt."
+  ],
+  [
+   "1.2",
+   "Waarom zijn jongeren een interessante doelgroep voor bedrijven?",
+   [
+    "Zij zijn makkelijk te beïnvloeden",
+    "Zij kopen bijna nooit iets nieuws",
+    "Zij kijken nooit naar reclame",
+    "Zij sparen al hun geld op"
+   ],
+   "En wie jong een merk kiest, blijft het vaak lang kopen."
+  ],
+  [
+   "1.3",
+   "Wat doet het Nibud?",
+   [
+    "Advies geven over omgaan met geld",
+    "De prijzen in winkels meten",
+    "Geld uitlenen aan gezinnen",
+    "Reclames controleren"
+   ],
+   "Nibud: Nationaal Instituut voor Budgetvoorlichting."
+  ],
+  [
+   "1.3",
+   "Wat is budgetteren?",
+   [
+    "Je uitgaven afstemmen op je inkomsten",
+    "Je inkomsten optellen bij je uitgaven",
+    "Zo veel mogelijk geld uitgeven",
+    "Geld lenen als je te weinig hebt"
+   ],
+   "Je geeft niet meer uit dan er binnenkomt."
+  ],
+  [
+   "1.3",
+   "Wat staat er in een begroting?",
+   [
+    "De verwachte inkomsten en uitgaven",
+    "De prijzen van vorig jaar",
+    "De rente van alle banken",
+    "De reclames van een winkel"
+   ],
+   "Een begroting is een plan voor je geld."
+  ],
+  [
+   "1.3",
+   "Welk inkomen is inkomen uit arbeid?",
+   [
+    "Het loon van een bijbaan",
+    "De rente op spaargeld",
+    "De kinderbijslag",
+    "Het zakgeld van thuis"
+   ],
+   "Loon krijg je als beloning voor werk."
+  ],
+  [
+   "1.3",
+   "Welk inkomen is inkomen uit bezit?",
+   [
+    "De huur van een zomerhuisje",
+    "Het loon van een bakker",
+    "Een bijstandsuitkering",
+    "Het kleedgeld van thuis"
+   ],
+   "Je verdient aan iets wat je bezit."
+  ],
+  [
+   "1.3",
+   "Wat is een overdrachtsinkomen?",
+   [
+    "Inkomen zonder tegenprestatie",
+    "Inkomen uit je eigen bedrijf",
+    "Inkomen in de vorm van goederen",
+    "Inkomen uit het buitenland"
+   ],
+   "Bijvoorbeeld zakgeld, AOW of kinderbijslag."
+  ],
+  [
+   "1.3",
+   "Jesse mag de auto van zijn werkgever ook privé gebruiken. Wat is dit?",
+   [
+    "Inkomen in natura",
+    "Inkomen uit bezit",
+    "Overdrachtsinkomen",
+    "Een vaste last"
+   ],
+   "Een beloning in goederen of diensten."
+  ],
+  [
+   "1.3",
+   "Welke uitgave is een vaste last?",
+   [
+    "De huur van je woning",
+    "Een ijsje in de stad",
+    "Een nieuwe fietsband",
+    "Een cadeau voor oma"
+   ],
+   "De huur komt elke maand terug."
+  ],
+  [
+   "1.3",
+   "De wasmachine gaat stuk en moet gemaakt worden. Welke uitgave is dat?",
+   [
+    "Een incidentele uitgave",
+    "Een dagelijkse uitgave",
+    "Een vaste last",
+    "Een overdrachtsuitgave"
+   ],
+   "Onverwacht en vaak een groot bedrag."
+  ],
+  [
+   "1.3",
+   "Op welke uitgaven heb je op korte termijn de minste invloed?",
+   [
+    "Vaste lasten",
+    "Dagelijkse uitgaven",
+    "Uitgaven aan snoep",
+    "Uitgaven aan cadeaus"
+   ],
+   "Je zit vaak vast aan een contract, zoals huur of een abonnement."
+  ],
+  [
+   "1.3",
+   "Wat is reserveren?",
+   [
+    "Geld opzijzetten voor later",
+    "Geld lenen bij de bank",
+    "Geld uitgeven aan luxe",
+    "Geld wisselen op vakantie"
+   ],
+   "Voor een incidentele uitgave of voor een doel."
+  ],
+  [
+   "1.3",
+   "Je verdient €40 per week. Hoe reken je uit hoeveel dat per maand is?",
+   [
+    "(40 × 52) : 12",
+    "(40 × 12) : 52",
+    "40 × 4",
+    "40 × 12"
+   ],
+   "Eerst naar een jaar (× 52), dan naar een maand (: 12)."
+  ],
+  [
+   "1.4",
+   "Wat is koopkracht?",
+   [
+    "Wat je met je inkomen kunt kopen",
+    "Hoeveel geld je hebt gespaard",
+    "Hoeveel winkels er in je buurt zijn",
+    "Hoe hard je moet werken voor je loon"
+   ],
+   "Het gaat om de hoeveelheid goederen en diensten."
+  ],
+  [
+   "1.4",
+   "Van welke twee dingen hangt je koopkracht af?",
+   [
+    "Je inkomen en de prijzen",
+    "Je leeftijd en je spaargeld",
+    "De rente en de wisselkoers",
+    "Je opleiding en je woonplaats"
+   ],
+   "Meer inkomen of lagere prijzen: je kunt meer kopen."
+  ],
+  [
+   "1.4",
+   "Wat is inflatie?",
+   [
+    "De prijzen stijgen gemiddeld",
+    "De prijzen dalen gemiddeld",
+    "De lonen stijgen gemiddeld",
+    "De lonen dalen gemiddeld"
+   ],
+   "Bij inflatie wordt je geld minder waard."
+  ],
+  [
+   "1.4",
+   "Wat is deflatie?",
+   [
+    "De prijzen dalen gemiddeld",
+    "De prijzen stijgen gemiddeld",
+    "De lonen blijven gelijk",
+    "De rente stijgt elk jaar"
+   ],
+   "Deflatie is het tegenovergestelde van inflatie."
+  ],
+  [
+   "1.4",
+   "Je loon stijgt met 2%. De prijzen stijgen met 5%. Wat gebeurt er met je koopkracht?",
+   [
+    "Die daalt",
+    "Die stijgt",
+    "Die blijft gelijk",
+    "Die verdubbelt"
+   ],
+   "De prijzen stijgen harder dan je loon."
+  ],
+  [
+   "1.4",
+   "Je loon stijgt met 4%. De prijzen stijgen met 1%. Wat gebeurt er met je koopkracht?",
+   [
+    "Die stijgt",
+    "Die daalt",
+    "Die blijft gelijk",
+    "Die halveert"
+   ],
+   "Je loon stijgt harder dan de prijzen."
+  ],
+  [
+   "1.4",
+   "Wat doet het CBS?",
+   [
+    "Cijfers over Nederland verzamelen",
+    "Advies geven over je begroting",
+    "Reclame maken voor de overheid",
+    "De prijzen in winkels bepalen"
+   ],
+   "Het CBS meet onder andere de inflatie."
+  ],
+  [
+   "1.4",
+   "Welk indexcijfer heeft het basisjaar?",
+   [
+    "100",
+    "0",
+    "1",
+    "10"
+   ],
+   "Het basisjaar is altijd 100."
+  ],
+  [
+   "1.4",
+   "Het indexcijfer van de prijs is 104. Wat betekent dat?",
+   [
+    "De prijs is 4% gestegen",
+    "De prijs is 104% gestegen",
+    "De prijs is €4 gestegen",
+    "De prijs is 4% gedaald"
+   ],
+   "104 − 100 = 4% hoger dan in het basisjaar."
+  ],
+  [
+   "1.4",
+   "Het indexcijfer is 92. Wat betekent dat?",
+   [
+    "Een daling van 8%",
+    "Een stijging van 8%",
+    "Een daling van 92%",
+    "Een stijging van 92%"
+   ],
+   "Onder de 100 is een daling: 100 − 92 = 8%."
+  ],
+  [
+   "1.4",
+   "Een prijs gaat van €50 naar €60. Hoeveel procent is de stijging?",
+   [
+    "20%",
+    "10%",
+    "16,7%",
+    "120%"
+   ],
+   "(60 − 50) : 50 × 100 = 20%."
+  ],
+  [
+   "1.4",
+   "Waarom is inflatie vervelend als je loon gelijk blijft?",
+   [
+    "Je kunt minder kopen",
+    "Je krijgt minder loon",
+    "Je betaalt meer rente",
+    "Je moet meer sparen"
+   ],
+   "Hetzelfde loon, hogere prijzen: je koopkracht daalt."
+  ]
+ ],
+ "SORT": [
+  {
+   "a": "Primaire behoefte",
+   "b": "Secundaire behoefte",
+   "A": [
+    [
+     "🍞",
+     "Brood"
+    ],
+    [
+     "🚰",
+     "Drinkwater"
+    ],
+    [
+     "🏠",
+     "Een dak boven je hoofd"
+    ]
+   ],
+   "B": [
+    [
+     "🎮",
+     "Een spelcomputer"
+    ],
+    [
+     "✈️",
+     "Een vliegvakantie"
+    ],
+    [
+     "💍",
+     "Sieraden"
+    ],
+    [
+     "🎧",
+     "Een dure koptelefoon"
+    ]
+   ]
+  },
+  {
+   "a": "Vrije goederen",
+   "b": "Schaarse goederen",
+   "A": [
+    [
+     "☀️",
+     "Zonlicht"
+    ],
+    [
+     "🌊",
+     "Zeewater"
+    ],
+    [
+     "💨",
+     "Wind"
+    ]
+   ],
+   "B": [
+    [
+     "🥖",
+     "Brood"
+    ],
+    [
+     "🚲",
+     "Een fiets"
+    ],
+    [
+     "📱",
+     "Een telefoon"
+    ],
+    [
+     "💡",
+     "Stroom uit het stopcontact"
+    ]
+   ]
+  },
+  {
+   "a": "Sociale beïnvloeding",
+   "b": "Commerciële beïnvloeding",
+   "A": [
+    [
+     "👫",
+     "Je vrienden dragen het ook"
+    ],
+    [
+     "👪",
+     "Thuis kopen ze altijd dit merk"
+    ],
+    [
+     "💬",
+     "Een klasgenoot raadt het aan"
+    ]
+   ],
+   "B": [
+    [
+     "📺",
+     "Een reclame op tv"
+    ],
+    [
+     "🤳",
+     "Een betaalde post van een influencer"
+    ],
+    [
+     "🏷️",
+     "Een aanbieding in de folder"
+    ]
+   ]
+  },
+  {
+   "a": "Commerciële reclame",
+   "b": "Ideële reclame",
+   "A": [
+    [
+     "🥤",
+     "Spotje voor een frisdrank"
+    ],
+    [
+     "👟",
+     "Poster van een schoenenmerk"
+    ],
+    [
+     "🛒",
+     "Folder van een supermarkt"
+    ]
+   ],
+   "B": [
+    [
+     "🚭",
+     "Campagne tegen roken"
+    ],
+    [
+     "🚲",
+     "Campagne: niet appen op de fiets"
+    ],
+    [
+     "🩸",
+     "Oproep om bloed te geven"
+    ]
+   ]
+  },
+  {
+   "a": "Inkomen uit arbeid",
+   "b": "Overdrachtsinkomen",
+   "A": [
+    [
+     "🧑‍🍳",
+     "Loon van een bijbaan"
+    ],
+    [
+     "🏪",
+     "Winst uit je eigen winkel"
+    ],
+    [
+     "👷",
+     "Salaris van een timmerman"
+    ]
+   ],
+   "B": [
+    [
+     "🪙",
+     "Zakgeld"
+    ],
+    [
+     "👶",
+     "Kinderbijslag"
+    ],
+    [
+     "👵",
+     "AOW"
+    ],
+    [
+     "👕",
+     "Kleedgeld"
+    ]
+   ]
+  },
+  {
+   "a": "Vaste lasten",
+   "b": "Dagelijkse uitgaven",
+   "A": [
+    [
+     "🏠",
+     "Huur"
+    ],
+    [
+     "📱",
+     "Telefoonabonnement"
+    ],
+    [
+     "🛡️",
+     "Verzekering"
+    ],
+    [
+     "⚡",
+     "Energie"
+    ]
+   ],
+   "B": [
+    [
+     "🛒",
+     "Boodschappen"
+    ],
+    [
+     "🧴",
+     "Shampoo"
+    ],
+    [
+     "🎁",
+     "Een cadeautje"
+    ]
+   ]
+  },
+  {
+   "a": "Inflatie",
+   "b": "Deflatie",
+   "A": [
+    [
+     "📈",
+     "De prijzen stijgen"
+    ],
+    [
+     "💸",
+     "Je geld wordt minder waard"
+    ],
+    [
+     "🔺",
+     "Indexcijfer boven de 100"
+    ]
+   ],
+   "B": [
+    [
+     "📉",
+     "De prijzen dalen"
+    ],
+    [
+     "💪",
+     "Je geld wordt meer waard"
+    ],
+    [
+     "🔻",
+     "Indexcijfer onder de 100"
+    ]
+   ]
+  }
+ ]
+}
