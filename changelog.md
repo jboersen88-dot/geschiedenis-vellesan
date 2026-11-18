@@ -1,3 +1,10 @@
+## 2026-11-18 · Stellingen: "Goed of fout" in plaats van "Waar of onwaar"
+
+- Besluit van de docent, geldt voor alle oefentoetsen: bij een stelling kiest de leerling **Goed** of **Fout**. Aangepast in oefentoets A van economie 3 vwo H2 (opgave 3b); dat was de enige plek op de site met "Waar of onwaar".
+- In het nakijkscherm van alle economietoetsen staat nu "Juiste antwoord:" in plaats van "Goed:" (`bouw-toets.py`, de vier toetspagina's opnieuw gebouwd).
+- De regel staat in `CLAUDE.md` onder Vragen.
+- Getest in de browser op 820 en 375 px. De AI-nakijker is niet getest.
+
 ## 2026-11-18 · Economie 3 vwo H2: oefentoets A en B
 
 - De twee digitale oefentoetsen heten nu **Oefentoets A** en **Oefentoets B** (was "1 · de basis" en "2 · verdieping") en zijn ongeveer even zwaar: A 42 punten, B 46 punten, allebei 60 minuten. De adressen `toets.html?t=t1` en `?t=t2` zijn gelijk gebleven.
