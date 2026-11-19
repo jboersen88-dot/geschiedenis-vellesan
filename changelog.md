@@ -1,3 +1,19 @@
+## 2026-11-19 · Economie 4 mavo H6: bijtelling en box 3 eruit, plaatjes in de dia's vernieuwd
+
+De docent besloot: de bijtelling mag weg (staat niet meer in de basisstof van het boek), box 3 wordt niet meer behandeld (komt al jaren niet meer in het eindexamen), en de oude plaatjes in de PowerPoints mogen worden bijgewerkt, zolang de verhaallijn gelijk blijft.
+
+- **Bijtelling**: weg uit de begrippen, de quiz en het sorteerspel, en uit de PowerPoint van 6.1 (doelen, begrippen, herhalingsvraag en het vak in het schema; "Stap 5" heet nu "Stap 4").
+- **Box 3**: de rekensoort "Box 3: vermogen", vijf begrippen, zes quizvragen, het sorteerspel "Box 1 of box 3", de film "Belasting over je spaargeld", de box 3-opgave in de oefentoets en het box 3-deel in de oefen-SE zijn weg. Er staat nog één begrip "Box 3" met de zin dat je het niet hoeft te berekenen. De formule "belasting box 1 + belasting box 3 − heffingskortingen" is gebleven zoals in het boek; het bedrag van box 3 is dan gegeven of nul. De twee dia's over box 3 in 6.2 zijn in de PowerPoint verborgen (niet verwijderd) en staan niet meer op de site.
+- **Oude link**: `#lab/reken/box3` opent nu gewoon de rekentrainer (aanpassing in `bouw-oefen.py`; alleen `j4h6` is opnieuw gebouwd, andere hoofdstukken krijgen dit bij hun volgende bouw).
+- **Plaatjes opnieuw getekend** (eigen tekening, geen scan uit het boek): het rekenvoorbeeld in 6.1 dia 7 (zonder bijtelling, giften in plaats van studiekosten: 42.620 + 1.960 + 1.400 = 45.980; 45.980 − 7.635 = 38.345), de grafiek arbeidskorting 2025 in 6.4 dia 4 (overgetekend naar het boek, de punten zijn van de grafiek afgelezen) en het voorbeeld nivellering in 6.4 dia 7 (Pavel en Noor uit het nieuwe boek).
+- De illustratie bij 6.2 toont nu een formulier met een kortingslabel (heffingskorting) in plaats van een spaarvarken.
+
+**Getest**: tweede losse rekencontrole opnieuw gedraaid (2.000 rekenvragen, alle toetsantwoorden en uitwerkingsregels): 0 fouten. vragencheck en linkcheck op 0, a11ycheck alleen de bekende melding in `rondleiding/qr/posters.html`. Browsertest 375 en 820 px, licht en donker, geen consolefouten. De PowerPoints zijn alleen in LibreOffice gecontroleerd, niet in PowerPoint zelf.
+
+**Niet aangepast**: de tabel eigenwoningforfait 2023 in 6.1 dia 8 (0,35% klopt nog; de tabel van 2025 staat niet in het boek) en het voorbeeld van Tim over 2018 in 6.2.
+
+**Controleren door de docent**: open de vier PowerPoints één keer in PowerPoint en klik de animaties van 6.1 door, omdat daar vakken zijn weggehaald. In 6.4 dia 7 ligt jouw tekstvak "meer" nog over het woord "minder"; dat heb ik zo gelaten.
+
 ## 2026-11-19 · Economie 4 mavo H6: cijfers van 2025 uit het nieuwste boek
 
 De docent vroeg om hoofdstuk 6 na te kijken met het nieuwste boek (Pincode 7.1 vmbo-gt 4, digitaal gelezen, blz. 180 t/m 203 en het antwoordenboek). De site en de PowerPoints rekenden nog met oude cijfers.

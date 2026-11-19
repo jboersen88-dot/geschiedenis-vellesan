@@ -281,7 +281,7 @@ function route(){var h=location.hash.slice(1).split("/");
 if(h[0]==="toets")show("toets");
 else if(h[0]==="route"){show("route");if(window.EcoRouteApp){if(h[1]==="doel"&&h[2])EcoRouteApp.focus(h[2]);else EcoRouteApp.home();}}
 else if(h[0]==="lab"){show("lab");
-  if(h[1]==="reken"){showLab("reken");if(h[2]){mode=h[2];newR();}}
+  if(h[1]==="reken"){showLab("reken");if(h[2]){if(RGEN[h[2]])mode=h[2];newR();}}
   else if(h[1]==="quiz"){showLab("quiz");if(h[2]==="fouten")startQuiz("fouten");else if(h[2]){quizPar=h[2];quizHome();}}
   else if(h[1]==="begrippen"){showLab("begrippen");if(h[2]){cardFilter=h[2];renderFlash();}}
   else if(h[1])showLab(h[1]);}
