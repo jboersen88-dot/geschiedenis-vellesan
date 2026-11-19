@@ -1,3 +1,42 @@
+## 2026-11-19 · Economie 4 mavo H6: cijfers van 2025 uit het nieuwste boek
+
+De docent vroeg om hoofdstuk 6 na te kijken met het nieuwste boek (Pincode 7.1 vmbo-gt 4, digitaal gelezen, blz. 180 t/m 203 en het antwoordenboek). De site en de PowerPoints rekenden nog met oude cijfers.
+
+**Wat het boek nu zegt (en wat de site nu gebruikt)**
+- Box 1: drie schijven. Schijf 1 t/m €38.400: 35,8%. Schijf 2 t/m €76.800: 37,5%. Schijf 3: 49,5%. (Was: twee schijven, 37,1% en 49,5%, grens €68.508.)
+- Belastbaar inkomen = inkomsten + eigenwoningforfait − aftrekposten. De bijtelling staat niet meer in de formule (alleen nog in een plusopdracht). Studiekosten zijn geen aftrekpost meer; het boek noemt hypotheekrente, giften en reiskosten met het openbaar vervoer. Eigenwoningforfait: 0,35% van de WOZ-waarde.
+- Box 3: heffingsvrij vermogen €57.000 (was €50.000). Fictief rendement: spaargeld 1,4%, beleggingen 6,0%, schulden 2,6% (was één percentage van 1,9%). Belasting 36% (was 31%). Het boek rekent zo: fictief rendement per soort, dan het deel dat meetelt (een gegeven percentage), dan 36%.
+- Ongewijzigd: de loonstrook in 6.1, het voorbeeld met de heffingskorting, 6.3 en 6.4.
+
+**Aangepast op de site**
+- `j4h6/bron/lesapp.py`: begrippen, quizvragen, sorteerspel en "Check jezelf". Het begrip bijtelling staat er nog, met de zin dat het extra stof is.
+- `j4h6/bron/reken.js`: rekentrainer voor belastbaar inkomen (nu met WOZ-waarde en 0,35%), box 1 (drie schijven) en box 3 (nieuwe methode). Bij box 3 klopt het gegeven percentage precies met het belastbaar vermogen.
+- `j4h6/bron/toetsen.py` en `se56/bron/toetsen.py`: alle sommen opnieuw gemaakt met de nieuwe cijfers (Yara, De Wit, mevrouw Bakker, Sven).
+- Illustratie "schijven" heeft nu drie staven (`tools/beelden/scenes.js`).
+
+**PowerPoints 6.1 t/m 6.4** (dia's opnieuw omgezet met klikstappen; de pptx-bestanden staan in de projectbestanden, niet in de repo)
+- 6.1: schijven 35,8% / 37,5% / 49,5%; "Studiekosten" is "Reiskosten (OV)" geworden.
+- 6.2: heffingskortingen met de bedragen van 2025 uit de eigen PowerPoint van de docent van 2025; box 3 met €57.000, 1,4% en 36% (voorbeeld: €76.000 spaargeld, belasting €95,76); het schema met de totalen bijgewerkt (€18.747,02 en €15.400,02). Twee plaatjes met oude bedragen vervangen door eigen tabellen.
+- 6.2, rekenfout gevonden: in het voorbeeld stond €15.322 − €1.996 − €2.097 = €13.225. Dat moet €11.229 zijn. Verbeterd.
+- 6.3: vraag 9 gebruikt nu de tabellen "t/m 2024" en "vanaf 2025" (zelf getekend) en Jason heeft €33.800, zoals in het nieuwe boek. Op de dia van Siti stond "Voor Jason"; dat is "Voor Siti" geworden.
+- 6.4: het schema op dia 4 is vervangen door het bijgewerkte schema.
+
+**Getest**
+- Eerste controle: de rekengeneratoren 400 keer per soort gedraaid, geen fouten.
+- Tweede, losse controle (ander script, rekent vanuit de tekst van de vraag opnieuw met exacte decimalen): 2.400 rekenvragen, alle antwoorden van de vier toetsopgaven en elke regel in de uitwerkingen. 0 fouten.
+- vragencheck en linkcheck op 0. Browsertest op 375 en 820 px, licht en donker, zonder consolefouten en zonder horizontaal scrollen.
+- a11ycheck meldt 1 fout in `rondleiding/qr/posters.html` (geen viewport). Dat bestand hoort bij ander werk en is hier niet aangeraakt.
+
+**Niet aangepast, wel oud (staat in plaatjes in de PowerPoints)**
+- 6.1 dia 7: het rekenvoorbeeld uit het oude boek, met bijtelling en studiekosten. De som zelf klopt.
+- 6.1 dia 8: de tabel eigenwoningforfait van 2023. Het percentage 0,35% klopt nog.
+- 6.2 dia 5: het voorbeeld van Tim over 2018. 6.4 dia 4: de grafiek arbeidskorting 2021. 6.4 dia 7: het voorbeeld Lynn en Ji Won uit het oude boek (klopt, het nieuwe boek gebruikt andere namen).
+
+**Controleren door de docent**
+- Box 3: is de methode van het nieuwe boek (rendement per soort, deel dat meetelt, 36%) ook hoe je het in de les en op het SE doet?
+- Mag de bijtelling als "extra stof" blijven staan?
+- De hoofdstuktitels in Pincode 7.1 zijn anders dan op de site (H4 heet "Werk aan de winkel!", H5 "Hoe werkt de overheid?", H6 "Iedereen betaalt belasting", H8 "Ontwikkelingslanden"). De paragraaftitels van H6 zijn gelijk. De titels op de site zijn nog niet veranderd.
+
 ## 2026-11-19 · Economie 4 mavo: de drie schoolexamens goed genummerd
 
 De docent meldde dat de SE-indeling van 4 mavo niet klopte. Dit jaar zijn er drie PTA-toetsen: SE 1 over hoofdstuk 1 en 2 (inkomen en consumptie), SE 2 over hoofdstuk 5 en 6 plus hoofdstuk 7 uit het boek van 3 mavo, SE 3 over hoofdstuk 3 en 4.
