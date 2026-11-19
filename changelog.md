@@ -18,6 +18,40 @@ De twaalf PowerPoints van H3, H4 en H5 staan nu als klikbare dia's in de leeromg
 - H6 heeft nog geen dia's: de PowerPoints uit 2019 hebben oude belastingschijven.
 
 **Getest**: vragencheck en linkcheck op 0; a11ycheck meldt alleen `rondleiding/qr/posters.html` (stond al zo). Browsertest van alle twaalf paragrafen op 375 en 820 px, licht en donker: de dia's laden, geen consolefouten, geen horizontaal scrollen. Bij 4.1 doorgeklikt met de knop Volgende: de stappen en dia's wisselen. **Niet getest**: op een echte iPad, en niet elke klikstap is met het oog nagekeken.
+## 2026-11-19 · Economie 4 mavo: de drie schoolexamens goed genummerd
+
+De docent meldde dat de SE-indeling van 4 mavo niet klopte. Dit jaar zijn er drie PTA-toetsen: SE 1 over hoofdstuk 1 en 2 (inkomen en consumptie), SE 2 over hoofdstuk 5 en 6 plus hoofdstuk 7 uit het boek van 3 mavo, SE 3 over hoofdstuk 3 en 4.
+
+- **Jaarpagina 4 mavo**, blok "Toetsen en SE's": de tegels heten nu SE 1, SE 2 en SE 3 en staan in die volgorde (`nr` in `SE` in `economie.js`).
+- **SE-pagina's**: de kop en de inleiding noemen het nummer ("SE 1: hoofdstuk 1 en 2", "het eerste schoolexamen van dit jaar"). De deep links zijn niet veranderd.
+- **Oude pagina "SE6"** (Nearpods en nakijkbladen van H7 en H8): heet nu "Herhaling H7 + H8" met het label "Extra · geen schoolexamen". De inhoud en de link zijn gelijk gebleven.
+- **Leeromgeving en oefentoets van H1 + H2** (`se3/app.html`, `se3/toets.html`): in de teksten staat nu "SE 1" in plaats van "SE3". De map heet nog `se3` en de opslagsleutels zijn gelijk, dus leerlingen houden hun voortgang.
+
+**Keuze**: de tegel "eindexamen" is gebleven. De pagina "Herhaling H7 + H8" is niet weggehaald, omdat er nakijkbladen op staan.
+
+**Controleren door de docent**: moet "Herhaling H7 + H8" bij 4 mavo blijven staan, of mag die weg?
+
+**Getest**: vragencheck en linkcheck op 0; a11ycheck meldt alleen `rondleiding/qr/posters.html` (stond al zo). Browsertest op 375 en 820 px, licht en donker, zonder consolefouten: jaarpagina, SE 1 en de leeromgeving van SE 1. **Niet getest**: echte iPad.
+
+## 2026-11-19 · Economie 3 mavo: dia's bij 6.2 en 8.3
+
+**Wat**: de twee PowerPoints die te groot waren voor de Drive-koppeling staan er nu in. De docent gaf toegang tot de OneDrive-map op de Mac.
+
+- **6.2 Tel uit je winst!**: de nieuwe PowerPoint (11 dia's met klikstappen) in plaats van de oudere "Winst of verlies". De knop naar de PowerPoint wijst nu naar het nieuwe bestand.
+- **8.3 Samenwerken is slimmer**: 6 dia's met klikstappen uit "8.3 + 8.4 samen" (alleen het deel over de EU).
+
+**Keuzes**
+- 6.2: de dia's met alleen een film zijn weggelaten (de film van de uitgever en drie online filmpjes). De tweede dia "Deel 2" is weggelaten, die stond er dubbel. Op de titeldia staat de titel uit het boek.
+- 6.2, dia 4: de laatste klikstap is de eindstand. In de export zonder PowerPoint liepen de tekstvakken daar door elkaar.
+- 8.3: alle plaatjes zijn weggehaald (grafieken en schema's uit het boek, twee kaarten zonder duidelijke rechten). De drie dia's met alleen het schema van de ECB zijn daardoor vervallen. De taken van de ECB staan wel bij de begrippen.
+- 8.3 heeft geen knop naar een PowerPoint in Drive: het bestand in Drive is een ander bestand dan waar de dia's uit komen.
+
+**Controleren door de docent**
+- 6.2, dia 4 (fietsenvoorbeeld) heeft 43 klikken. Lopen de stappen goed?
+- 8.3: zijn de dia's zonder plaatjes zo bruikbaar?
+
+**Getest**: vragencheck en linkcheck op 0; a11ycheck alleen de bestaande fout in `rondleiding/qr/posters.html`. Browsertest op 375 en 820 px, licht en donker, zonder consolefouten. Beide decks doorgeklikt tot de laatste dia, alle beelden laden.
+**Niet getest**: een echte iPad in Safari. De dia's zijn gemaakt met LibreOffice, lettertypen kunnen iets afwijken van PowerPoint.
 
 ## 2026-11-18 · Economie 3 mavo: H5, H6, H8 en de SE-pagina's H5 + H6 en H7 + H8
 

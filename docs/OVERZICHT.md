@@ -57,7 +57,7 @@ index.html                      kaft: kies Economie of Geschiedenis
 │   ├── jaar.html?j=jaar-3&n=mavo   jaar en niveau
 │   ├── h.html?p=<pad>[&par=2.1]    hoofdstukpagina en leeromgeving per paragraaf
 │   ├── <map>/oefen.html, toets.html, data.json, route.json, slides/, bron/
-│   ├── se3/app.html            jaar 4 SE3: leeromgeving in de opzet van boekje 1
+│   ├── se3/app.html            jaar 4 SE 1 (H1 en H2, map heet nog se3): leeromgeving in de opzet van boekje 1
 │   └── apps/                   de oude lesapps van de Google Site (bron voor de bouwscripts)
 ├── losse onderdelen Geschiedenis: toets.html, spotprent.html, spotprent-opdrachten.html,
 │   racer.html, kaart.html, beeldquiz.html, verhaal.html, filmvragen.html, nakijken.html,
@@ -112,7 +112,7 @@ Alles wordt gestuurd vanuit `economie/economie.js` en `economie/data/paginas.jso
 | Jaar 4 mavo H8 "Welvaart wereldwijd" | `j4h8` | ja | ja | nee | 1 |
 | Jaar 4 mavo SE H3 + H4 (SE-pagina `jaar-4/se4`) | `se34` | n.v.t. | n.v.t. | nee | 1 (oefen-SE) |
 | Jaar 4 mavo SE H1 + H2 (SE-pagina boven `j4h1`, `j4h2` en `se3`) | `se3` | n.v.t. | n.v.t. | nee | oefen-SE van `se3` |
-| Jaar 4 SE3 (H1 en H2) | `se3` | eigen `app.html` zoals boekje 1 | in dezelfde app | nee | 4, plus toets op maat |
+| Jaar 4 SE 1 (H1 en H2; map `se3`) | `se3` | eigen `app.html` zoals boekje 1 | in dezelfde app | nee | 4, plus toets op maat |
 
 Alle andere hoofdstukken (jaar 2 H3 tot en met H6, jaar 3 mavo H3 tot en met H8, jaar 4 H1 tot en met H8) staan er in de overgangsvorm: de inhoud van de oude Google-pagina in de nieuwe opmaak, soms met een oude lesapp uit `economie/apps/`. De docent wil de oude Google-opzet helemaal weg hebben (besluit van 10 november). Die hoofdstukken moeten dus nog naar de opzet van hoofdstuk 3.
 
