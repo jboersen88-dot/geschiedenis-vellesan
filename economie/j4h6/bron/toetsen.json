@@ -38,7 +38,7 @@
     "v": "Lotte koopt een huis. Wat verandert er in haar aangifte?",
     "o": [
      "Ze betaalt voortaan bpm",
-     "Ze telt een bijtelling op",
+     "Ze trekt haar loon ervan af",
      "Ze telt het eigenwoningforfait op",
      "Ze krijgt een arbeidskorting"
     ],
@@ -57,34 +57,34 @@
     "u": "Aftrekposten maken je belastbaar inkomen lager."
    },
    {
-    "v": "Iemand verdient €40.000. Hij krijgt €1.000 loonsverhoging. In welke schijf valt die verhoging?",
+    "v": "Schijf 1 loopt t/m €38.400. Schijf 2 loopt t/m €76.800. Iemand verdient €40.000 en krijgt €1.000 loonsverhoging. In welke schijf valt die verhoging?",
     "o": [
-     "Schijf 2",
      "Schijf 1",
-     "In geen van beide",
-     "In beide schijven"
+     "Schijf 2",
+     "In alle schijven",
+     "Schijf 3"
     ],
     "j": 1,
-    "u": "Schijf 1 loopt tot €68.508."
+    "u": "€40.000 is meer dan €38.400 en minder dan €76.800."
    },
    {
     "v": "Waarom is het Nederlandse tarief progressief?",
     "o": [
-     "Iedereen betaalt hetzelfde percentage",
-     "Hoge inkomens betalen geen belasting",
-     "Schijf 1 heeft een hoger percentage",
-     "Schijf 2 heeft een hoger percentage"
+     "Iedereen betaalt precies hetzelfde percentage",
+     "Mensen met een hoog inkomen betalen niets",
+     "Een lagere schijf heeft een hoger percentage",
+     "Een hogere schijf heeft een hoger percentage"
     ],
     "j": 3,
     "u": "Hoe hoger het inkomen, hoe hoger het percentage."
    },
    {
-    "v": "Sara heeft €20.000 spaargeld. Het heffingsvrij vermogen is €50.000. Wat betaalt zij in box 3?",
+    "v": "Sara heeft €20.000 spaargeld. Het heffingsvrij vermogen is €57.000. Wat betaalt zij in box 3?",
     "o": [
-     "31% van €50.000",
-     "1,9% van €20.000",
+     "36% van €57.000",
+     "1,4% van €20.000",
      "Niets",
-     "31% van €20.000"
+     "36% van €20.000"
     ],
     "j": 2,
     "u": "Haar vermogen is lager dan het heffingsvrij vermogen."
@@ -93,7 +93,7 @@
     "v": "Wat gaat er als laatste van de berekende belasting af?",
     "o": [
      "Het eigenwoningforfait",
-     "De bijtelling",
+     "Het fictief rendement",
      "De heffingskortingen",
      "De aftrekposten"
     ],
@@ -112,7 +112,7 @@
     "u": "Meer inactieven per actieve."
    },
    {
-    "v": "De overheid verhoogt alleen het tarief van schijf 2. Wat is het gevolg?",
+    "v": "De overheid verhoogt alleen het tarief van de hoogste schijf. Wat is het gevolg?",
     "o": [
      "Nivellering",
      "Vergrijzing",
@@ -163,7 +163,7 @@
         ],
         "j": 1,
         "p": 1,
-        "label": "De bijtelling is een aftrekpost."
+        "label": "Het eigenwoningforfait is een aftrekpost."
        },
        {
         "type": "keuze",
@@ -197,7 +197,7 @@
        }
       ],
       "uitw": [
-       "De bijtelling tel je bij je inkomen op.",
+       "Het eigenwoningforfait tel je bij je inkomen op.",
        "Bij nivellering worden de verschillen kleiner."
       ]
      }
@@ -206,17 +206,36 @@
    {
     "nr": 2,
     "titel": "De aangifte van Yara",
-    "tekst": "Yara verdient €38.500 loon. Eigenwoningforfait: €1.300. Bijtelling auto van de zaak: €9.000. Hypotheekrente: €5.600. Studiekosten: €900.",
-    "p": 5,
+    "tekst": "Yara verdient €38.500 loon. Haar huis heeft een WOZ-waarde van €380.000. Het eigenwoningforfait is 0,35% van de WOZ-waarde. Hypotheekrente: €5.600. Giften aan goede doelen: €900.",
+    "p": 6,
     "delen": [
      {
       "id": "a",
+      "v": "Bereken het eigenwoningforfait van Yara.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         1330
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.5,
+        "label": "Eigenwoningforfait"
+       }
+      ],
+      "uitw": [
+       "(0,35 : 100) × 380.000 = €1.330"
+      ]
+     },
+     {
+      "id": "b",
       "v": "Schrijf eerst de formule op. Bereken daarna het belastbaar inkomen van Yara.",
       "velden": [
        {
         "type": "num",
         "ans": [
-         42300
+         33330
         ],
         "p": 1,
         "eenh": "€",
@@ -225,20 +244,20 @@
        }
       ],
       "uitw": [
-       "Belastbaar inkomen = inkomsten + eigenwoningforfait + bijtelling − aftrekposten",
-       "38.500 + 1.300 + 9.000 = 48.800",
+       "Belastbaar inkomen = inkomsten + eigenwoningforfait − aftrekposten",
+       "38.500 + 1.330 = 39.830",
        "Aftrekposten: 5.600 + 900 = 6.500",
-       "48.800 − 6.500 = €42.300"
+       "39.830 − 6.500 = €33.330"
       ]
      },
      {
-      "id": "b",
-      "v": "Bereken de belasting in box 1. Yara's hele inkomen valt in schijf 1 (37,1%). Rond naar beneden af op hele euro's.",
+      "id": "c",
+      "v": "Bereken de belasting in box 1. Yara's hele inkomen valt in schijf 1 (35,8%). Rond naar beneden af op hele euro's.",
       "velden": [
        {
         "type": "num",
         "ans": [
-         15693
+         11932
         ],
         "p": 1,
         "eenh": "€",
@@ -247,17 +266,17 @@
        }
       ],
       "uitw": [
-       "(37,1 : 100) × 42.300 = 15.693,30 → €15.693"
+       "(35,8 : 100) × 33.330 = 11.932,14 → €11.932"
       ]
      },
      {
-      "id": "c",
+      "id": "d",
       "v": "Yara heeft €2.900 aan heffingskortingen en betaalt niets in box 3. Bereken de verschuldigde inkomstenbelasting.",
       "velden": [
        {
         "type": "num",
         "ans": [
-         12793
+         9032
         ],
         "p": 1,
         "eenh": "€",
@@ -266,12 +285,12 @@
        }
       ],
       "uitw": [
-       "15.693 + 0 − 2.900 = €12.793"
+       "11.932 + 0 − 2.900 = €9.032"
       ]
      },
      {
-      "id": "d",
-      "v": "Op het loon van Yara is dit jaar €13.400 loonheffing ingehouden. Krijgt ze geld terug of moet ze bijbetalen? Bereken ook het bedrag.",
+      "id": "e",
+      "v": "Op het loon van Yara is dit jaar €9.600 loonheffing ingehouden. Krijgt ze geld terug of moet ze bijbetalen? Bereken ook het bedrag.",
       "velden": [
        {
         "type": "keuze",
@@ -286,7 +305,7 @@
        {
         "type": "num",
         "ans": [
-         607
+         568
         ],
         "p": 1,
         "eenh": "€",
@@ -295,7 +314,7 @@
        }
       ],
       "uitw": [
-       "Ze heeft €13.400 betaald en moest €12.793 betalen. 13.400 − 12.793 = €607 terug."
+       "Ze heeft €9.600 betaald en moest €9.032 betalen. 9.600 − 9.032 = €568 terug."
       ]
      }
     ]
@@ -303,36 +322,47 @@
    {
     "nr": 3,
     "titel": "Een hoog inkomen",
-    "tekst": "Het belastbaar inkomen van meneer De Wit is €80.000. Schijf 1 loopt tot €68.508 (37,1%). Daarboven geldt schijf 2 (49,5%).",
-    "p": 4,
+    "tekst": "Het belastbaar inkomen van meneer De Wit is €90.000. Schijf 1 loopt t/m €38.400 (35,8%). Schijf 2 loopt van €38.400 t/m €76.800 (37,5%). Daarboven geldt schijf 3 (49,5%).",
+    "p": 6,
     "delen": [
      {
       "id": "a",
-      "v": "Hoeveel euro van het inkomen valt in schijf 2?",
+      "v": "Hoeveel euro van het inkomen valt in schijf 2? En hoeveel in schijf 3?",
       "velden": [
        {
         "type": "num",
         "ans": [
-         11492
+         38400
         ],
         "p": 1,
         "eenh": "€",
         "tol": 0.5,
         "label": "In schijf 2"
+       },
+       {
+        "type": "num",
+        "ans": [
+         13200
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.5,
+        "label": "In schijf 3"
        }
       ],
       "uitw": [
-       "80.000 − 68.508 = €11.492"
+       "Schijf 2: 76.800 − 38.400 = €38.400",
+       "Schijf 3: 90.000 − 76.800 = €13.200"
       ]
      },
      {
       "id": "b",
-      "v": "Bereken de belasting in schijf 1 en in schijf 2. Rond elke schijf naar beneden af op hele euro's.",
+      "v": "Bereken de belasting in elke schijf. Rond elke schijf naar beneden af op hele euro's.",
       "velden": [
        {
         "type": "num",
         "ans": [
-         25416
+         13747
         ],
         "p": 1,
         "eenh": "€",
@@ -342,17 +372,28 @@
        {
         "type": "num",
         "ans": [
-         5688
+         14400
         ],
         "p": 1,
         "eenh": "€",
         "tol": 0.5,
         "label": "Schijf 2"
+       },
+       {
+        "type": "num",
+        "ans": [
+         6534
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.5,
+        "label": "Schijf 3"
        }
       ],
       "uitw": [
-       "(37,1 : 100) × 68.508 = 25.416,47 → €25.416",
-       "(49,5 : 100) × 11.492 = 5.688,54 → €5.688"
+       "(35,8 : 100) × 38.400 = 13.747,20 → €13.747",
+       "(37,5 : 100) × 38.400 = €14.400",
+       "(49,5 : 100) × 13.200 = €6.534"
       ]
      },
      {
@@ -362,7 +403,7 @@
        {
         "type": "num",
         "ans": [
-         31104
+         34681
         ],
         "p": 1,
         "eenh": "€",
@@ -371,25 +412,35 @@
        }
       ],
       "uitw": [
-       "25.416 + 5.688 = €31.104"
+       "13.747 + 14.400 + 6.534 = €34.681"
       ]
      }
     ]
    },
    {
     "nr": 4,
-    "titel": "Spaargeld in box 3",
-    "tekst": "Mevrouw Bakker heeft een vermogen van €90.000. Het heffingsvrij vermogen is €50.000. Het fictief rendement is 1,9% en de belasting is 31%.",
-    "p": 3,
+    "titel": "Vermogen in box 3",
+    "tekst": "Mevrouw Bakker heeft €75.000 spaargeld, €30.000 beleggingen en €10.000 schulden. Het heffingsvrij vermogen is €57.000. Fictief rendement: spaargeld 1,4%, beleggingen 6,0%, schulden 2,6%.",
+    "p": 4,
     "delen": [
      {
       "id": "a",
-      "v": "Bereken het belastbaar vermogen.",
+      "v": "Bereken het vermogen van mevrouw Bakker. Bereken daarna haar belastbaar vermogen.",
       "velden": [
        {
         "type": "num",
         "ans": [
-         40000
+         95000
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.5,
+        "label": "Vermogen"
+       },
+       {
+        "type": "num",
+        "ans": [
+         38000
         ],
         "p": 1,
         "eenh": "€",
@@ -398,17 +449,18 @@
        }
       ],
       "uitw": [
-       "90.000 − 50.000 = €40.000"
+       "75.000 + 30.000 − 10.000 = €95.000",
+       "95.000 − 57.000 = €38.000"
       ]
      },
      {
       "id": "b",
-      "v": "Bereken het fictief rendement.",
+      "v": "Bereken het fictief rendement. Het rendement op de schulden trek je eraf.",
       "velden": [
        {
         "type": "num",
         "ans": [
-         760
+         2590
         ],
         "p": 1,
         "eenh": "€",
@@ -417,17 +469,20 @@
        }
       ],
       "uitw": [
-       "(1,9 : 100) × 40.000 = €760"
+       "Spaargeld: (1,4 : 100) × 75.000 = €1.050",
+       "Beleggingen: (6,0 : 100) × 30.000 = €1.800",
+       "Schulden: (2,6 : 100) × 10.000 = €260",
+       "1.050 + 1.800 − 260 = €2.590"
       ]
      },
      {
       "id": "c",
-      "v": "Bereken de belasting in box 3. Rond naar beneden af op hele euro's.",
+      "v": "Van het fictief rendement telt 40% mee. Daarover betaalt mevrouw Bakker 36% belasting. Bereken de belasting in box 3. Rond naar beneden af op hele euro's.",
       "velden": [
        {
         "type": "num",
         "ans": [
-         235
+         372
         ],
         "p": 1,
         "eenh": "€",
@@ -436,7 +491,8 @@
        }
       ],
       "uitw": [
-       "(31 : 100) × 760 = 235,60 → €235"
+       "(40 : 100) × 2.590 = €1.036",
+       "(36 : 100) × 1.036 = 372,96 → €372"
       ]
      }
     ]
@@ -598,7 +654,7 @@
   {
    "n": 1,
    "min": 50,
-   "pts": 38
+   "pts": 42
   }
  ]
 }

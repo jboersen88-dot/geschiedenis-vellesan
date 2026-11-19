@@ -7,7 +7,7 @@
    "c": "var(--p1)",
    "file": "",
    "x": [],
-   "sum": "Loonheffing op je loonstrook, aangifte doen, de drie boxen, eigenwoningforfait, bijtelling, aftrekposten en het belastbaar inkomen berekenen.",
+   "sum": "Loonheffing op je loonstrook, aangifte doen, de drie boxen, eigenwoningforfait, aftrekposten en het belastbaar inkomen berekenen.",
    "imgs": [
     [
      "loonstrook",
@@ -25,7 +25,7 @@
     "Wat is een aanslag? En wat is een naheffing?",
     "Welk inkomen valt in box 1?",
     "Wat is het eigenwoningforfait?",
-    "Wat is de bijtelling?",
+    "Hoeveel procent van de WOZ-waarde is het eigenwoningforfait?",
     "Wat zijn aftrekposten? Noem er drie.",
     "Schrijf de formule op voor het belastbaar inkomen."
    ]
@@ -40,7 +40,7 @@
    "imgs": [
     [
      "schijven",
-     "Twee schijven, twee tarieven"
+     "Drie schijven, drie tarieven"
     ],
     [
      "vermogen",
@@ -55,7 +55,7 @@
     "Waaruit bestaat je vermogen?",
     "Wat is het heffingsvrij vermogen?",
     "Wat is het fictief rendement?",
-    "Schrijf de drie stappen op om de belasting in box 3 te berekenen.",
+    "Hoe bereken je de belasting in box 3? Schrijf de stappen op.",
     "Wat is een heffingskorting? Noem er twee.",
     "Schrijf de formule op voor de verschuldigde inkomstenbelasting."
    ]
@@ -120,7 +120,7 @@
   "6.1": [
    "Ik kan uitleggen waarom loonheffing wordt ingehouden.",
    "Ik weet wat inkomstenbelasting is.",
-   "Ik kan uitleggen wat belastbaar inkomen, eigenwoningforfait en bijtelling zijn.",
+   "Ik kan uitleggen wat belastbaar inkomen en eigenwoningforfait zijn.",
    "Ik weet wat aftrekposten zijn.",
    "Ik kan het belastbaar inkomen berekenen."
   ],
@@ -154,7 +154,7 @@
    "netto"
   ],
   [
-   "Eigenwoningforfait, bijtelling en aftrekposten uit elkaar houden",
+   "Eigenwoningforfait en aftrekposten uit elkaar houden",
    "6.1",
    "quiz"
   ],
@@ -305,31 +305,31 @@
    "6.1",
    "Belastbaar inkomen",
    "Het inkomen waarover de belasting wordt berekend.",
-   "Inkomsten + eigenwoningforfait + bijtelling − aftrekposten."
+   "Inkomsten + eigenwoningforfait − aftrekposten."
   ],
   [
    "6.1",
    "Eigenwoningforfait",
-   "Een bedrag dat je bij je inkomen moet optellen als je een eigen huis bezit.",
-   "Hoe meer je woning waard is, hoe hoger het bedrag."
+   "Een bedrag dat je bij je inkomen moet optellen als je een eigen huis bezit. Het is 0,35% van de WOZ-waarde.",
+   "WOZ-waarde €300.000: (0,35 : 100) × 300.000 = €1.050."
   ],
   [
    "6.1",
    "Bijtelling",
-   "Een bedrag dat je bij je inkomen moet optellen als je een auto van de zaak ook privé gebruikt.",
+   "Een bedrag dat bij je inkomen komt als je een auto van de zaak ook privé gebruikt. Dit is extra stof.",
    "Een percentage van de nieuwwaarde van de auto."
   ],
   [
    "6.1",
    "Aftrekposten",
    "Kosten die je van je inkomen mag aftrekken. Je belastbaar inkomen wordt lager, dus je betaalt minder belasting.",
-   "Hypotheekrente, studiekosten, giften."
+   "Hypotheekrente, giften aan goede doelen, reiskosten met het openbaar vervoer naar je werk."
   ],
   [
    "6.2",
    "Schijventarief",
-   "Je belastbaar inkomen is verdeeld over twee schijven. Elke schijf heeft een eigen percentage.",
-   "Schijf 1: 37,1%. Schijf 2: 49,5%."
+   "Je belastbaar inkomen is verdeeld over drie schijven. Elke schijf heeft een eigen percentage.",
+   "Schijf 1 (t/m €38.400): 35,8%. Schijf 2 (t/m €76.800): 37,5%. Schijf 3: 49,5%."
   ],
   [
    "6.2",
@@ -353,7 +353,7 @@
    "6.2",
    "Vermogen",
    "Al je spaargeld en beleggingen samen, min je schulden.",
-   "€30.000 spaargeld − €5.000 schuld = €25.000."
+   "€70.000 spaargeld + €20.000 beleggingen − €5.000 schuld = €85.000."
   ],
   [
    "6.2",
@@ -371,19 +371,19 @@
    "6.2",
    "Heffingsvrij vermogen",
    "Het eerste deel van je vermogen. Daarover betaal je geen belasting.",
-   "De eerste €50.000."
+   "De eerste €57.000."
   ],
   [
    "6.2",
    "Belastbaar vermogen",
    "Je vermogen min het heffingsvrij vermogen.",
-   "€65.000 − €50.000 = €15.000."
+   "€85.000 − €57.000 = €28.000."
   ],
   [
    "6.2",
    "Fictief rendement",
-   "Het rendement dat je volgens de overheid hebt op je spaargeld of beleggingen.",
-   "De overheid rekent met 1,9%."
+   "Het rendement dat je volgens de overheid hebt op je spaargeld of beleggingen. Over het deel dat meetelt betaal je 36% belasting.",
+   "Spaargeld: 1,4%. Beleggingen: 6,0%. Schulden: 2,6% (dat gaat eraf)."
   ],
   [
    "6.2",
@@ -596,7 +596,7 @@
     "Benzine",
     "Huur"
    ],
-   "Ook eigen studiekosten en giften aan goede doelen zijn aftrekposten."
+   "Ook giften aan goede doelen en reiskosten met het openbaar vervoer naar je werk zijn aftrekposten."
   ],
   [
    "6.1",
@@ -618,7 +618,7 @@
     "Op tientallen",
     "Op honderdtallen"
    ],
-   "Altijd op hele euro's, in jouw voordeel."
+   "Altijd op hele euro's, in jouw voordeel: inkomsten en belasting naar beneden, aftrekposten naar boven."
   ],
   [
    "6.1",
@@ -635,21 +635,21 @@
    "6.2",
    "Hoeveel schijven heeft het schijventarief in box 1?",
    [
-    "Twee",
     "Drie",
+    "Twee",
     "Vier",
     "Eén"
    ],
-   "De meeste inkomens vallen in schijf 1. Wat je meer verdient, valt in schijf 2."
+   "Schijf 1 loopt t/m €38.400, schijf 2 t/m €76.800. Wat je meer verdient, valt in schijf 3."
   ],
   [
    "6.2",
-   "Wat is waar over de twee schijven?",
+   "Wat is waar over de drie schijven?",
    [
-    "Schijf 2 heeft een hoger percentage",
-    "Schijf 1 heeft een hoger percentage",
-    "Beide hebben hetzelfde percentage",
-    "In schijf 2 betaal je geen belasting"
+    "Schijf 3 heeft het hoogste percentage",
+    "Schijf 1 heeft het hoogste percentage",
+    "Alle drie hebben hetzelfde percentage",
+    "In schijf 3 betaal je geen belasting"
    ],
    "Daardoor betalen hoge inkomens in verhouding meer."
   ],
@@ -728,7 +728,7 @@
     "De rente die je echt hebt gekregen",
     "De winst op je aandelen dit jaar"
    ],
-   "De overheid gaat uit van een vast percentage."
+   "De overheid gaat uit van vaste percentages: 1,4% voor spaargeld en 6,0% voor beleggingen."
   ],
   [
    "6.2",
@@ -768,8 +768,8 @@
    "Je vermogen is lager dan het heffingsvrij vermogen. Hoeveel belasting betaal je in box 3?",
    [
     "Niets",
-    "31% van je vermogen",
-    "1,9% van je vermogen",
+    "36% van je vermogen",
+    "1,4% van je vermogen",
     "De helft"
    ],
    "Er is dan geen belastbaar vermogen."
@@ -780,7 +780,7 @@
    [
     "Het inkomen over de schijven verdelen",
     "De heffingskorting eraf trekken",
-    "De twee percentages optellen",
+    "De drie percentages optellen",
     "Het vermogen erbij optellen"
    ],
    "Eerst verdelen, dan per schijf rekenen, dan optellen."
@@ -1038,10 +1038,6 @@
      "Eigenwoningforfait"
     ],
     [
-     "🚗",
-     "Bijtelling auto van de zaak"
-    ],
-    [
      "💶",
      "Loon"
     ],
@@ -1054,10 +1050,6 @@
     [
      "🏦",
      "Hypotheekrente"
-    ],
-    [
-     "🎓",
-     "Eigen studiekosten"
     ],
     [
      "🎁",
@@ -1084,10 +1076,6 @@
     [
      "🏠",
      "Eigenwoningforfait"
-    ],
-    [
-     "🚗",
-     "Bijtelling"
     ]
    ],
    "B": [

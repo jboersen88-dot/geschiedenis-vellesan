@@ -131,7 +131,7 @@
      "Fictief"
     ],
     "j": 1,
-    "u": "Schijf 2 heeft een hoger percentage dan schijf 1."
+    "u": "Een hogere schijf heeft een hoger percentage."
    },
    {
     "v": "Wat is het fictief rendement?",
@@ -142,7 +142,7 @@
      "Rendement dat je bank uitbetaalt"
     ],
     "j": 1,
-    "u": "In box 3 rekent de overheid met een vast percentage."
+    "u": "In box 3 rekent de overheid met vaste percentages."
    },
    {
     "v": "De hoge inkomens stijgen 4%, de lage inkomens 1%. Hoe heet dit?",
@@ -522,7 +522,7 @@
    {
     "nr": 4,
     "titel": "De aangifte van Sven",
-    "tekst": "Sven verdient €76.200 loon. Eigenwoningforfait: €1.500. Hypotheekrente: €3.700. Schijf 1 loopt tot €68.508 (37,1%). Daarboven geldt schijf 2 (49,5%).",
+    "tekst": "Sven verdient €76.200 loon. Eigenwoningforfait: €1.500. Hypotheekrente: €3.700. Schijf 1 loopt t/m €38.400 (35,8%). Schijf 2 loopt van €38.400 t/m €76.800 (37,5%).",
     "p": 5,
     "delen": [
      {
@@ -541,7 +541,7 @@
        }
       ],
       "uitw": [
-       "Belastbaar inkomen = inkomsten + eigenwoningforfait + bijtelling − aftrekposten",
+       "Belastbaar inkomen = inkomsten + eigenwoningforfait − aftrekposten",
        "76.200 + 1.500 − 3.700 = €74.000"
       ]
      },
@@ -552,7 +552,7 @@
        {
         "type": "num",
         "ans": [
-         25416
+         13747
         ],
         "p": 1,
         "eenh": "€",
@@ -562,7 +562,7 @@
        {
         "type": "num",
         "ans": [
-         2718
+         13350
         ],
         "p": 1,
         "eenh": "€",
@@ -571,19 +571,19 @@
        }
       ],
       "uitw": [
-       "Schijf 1: (37,1 : 100) × 68.508 = 25.416,47 → €25.416",
-       "In schijf 2: 74.000 − 68.508 = €5.492",
-       "Schijf 2: (49,5 : 100) × 5.492 = 2.718,54 → €2.718"
+       "Schijf 1: (35,8 : 100) × 38.400 = 13.747,20 → €13.747",
+       "In schijf 2: 74.000 − 38.400 = €35.600",
+       "Schijf 2: (37,5 : 100) × 35.600 = €13.350"
       ]
      },
      {
       "id": "c",
-      "v": "Sven heeft een vermogen van €70.000. Het heffingsvrij vermogen is €50.000, het fictief rendement 1,9% en de belasting 31%. Bereken de belasting in box 3. Rond naar beneden af op hele euro's.",
+      "v": "Sven heeft €76.000 spaargeld. Hij heeft geen beleggingen en geen schulden. Het fictief rendement op spaargeld is 1,4%. Van het fictief rendement telt 25% mee. Daarover betaalt Sven 36% belasting. Bereken de belasting in box 3. Rond naar beneden af op hele euro's.",
       "velden": [
        {
         "type": "num",
         "ans": [
-         117
+         95
         ],
         "p": 1,
         "eenh": "€",
@@ -592,9 +592,9 @@
        }
       ],
       "uitw": [
-       "70.000 − 50.000 = €20.000",
-       "(1,9 : 100) × 20.000 = €380",
-       "(31 : 100) × 380 = 117,80 → €117"
+       "Fictief rendement: (1,4 : 100) × 76.000 = €1.064",
+       "Het deel dat meetelt: (25 : 100) × 1.064 = €266",
+       "(36 : 100) × 266 = 95,76 → €95"
       ]
      },
      {
@@ -604,7 +604,7 @@
        {
         "type": "num",
         "ans": [
-         25751
+         24692
         ],
         "p": 1,
         "eenh": "€",
@@ -613,7 +613,7 @@
        }
       ],
       "uitw": [
-       "Box 1: 25.416 + 2.718 = 28.134. Totaal: 28.134 + 117 − 2.500 = €25.751"
+       "Box 1: 13.747 + 13.350 = 27.097. Totaal: 27.097 + 95 − 2.500 = €24.692"
       ]
      }
     ]
