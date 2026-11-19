@@ -19,7 +19,7 @@ mc_a = mc(567, [
  ("Wat staat er op een loonstrook tussen het brutoloon en het nettoloon?", ["De inhoudingen", "De aftrekposten", "De heffingskortingen", "Het eigenwoningforfait"], "Loonheffing en bijvoorbeeld pensioenpremie."),
  ("Wat doet het eigenwoningforfait met je belastbaar inkomen?", ["Dat wordt hoger", "Dat wordt lager", "Dat blijft gelijk", "Dat wordt nul"], "Je telt het bij je inkomen op."),
  ("Welk tarief heeft de Nederlandse inkomstenbelasting?", ["Progressief", "Degressief", "Proportioneel", "Fictief"], "Een hogere schijf heeft een hoger percentage."),
- ("Wat is het fictief rendement?", ["Rendement dat de overheid aanneemt", "Rendement dat je bank uitbetaalt", "Rente die je betaalt op een lening", "Winst die een bedrijf uitkeert"], "In box 3 rekent de overheid met vaste percentages."),
+ ("Wat doet een heffingskorting?", ["Je betaalt minder belasting", "Je krijgt een hoger brutoloon", "Je betaalt meer premies", "Je krijgt een hogere uitkering"], "Het is een korting op de inkomstenbelasting."),
  ("De hoge inkomens stijgen 4%, de lage inkomens 1%. Hoe heet dit?", ["Denivellering", "Nivellering", "Herverdeling", "Vergrijzing"], "De verschillen worden in verhouding groter."),
  ("Wie stemt als laatste over een wetsvoorstel?", ["De Eerste Kamer", "De Tweede Kamer", "De gemeenteraad", "De Provinciale Staten"], "De Eerste Kamer controleert de Tweede Kamer."),
  ("Welke overheid haalt het vuilnis op?", ["De gemeente", "De provincie", "Het Rijk", "Het waterschap"], "Een taak van de gemeente."),
@@ -48,8 +48,7 @@ rek_a = [
  opgave(4, "De aangifte van Sven", [
    deel("a", "Schrijf eerst de formule op. Bereken daarna het belastbaar inkomen.", [num(74000, "Belastbaar inkomen", "€", tol=0.5)], ["Belastbaar inkomen = inkomsten + eigenwoningforfait − aftrekposten", "76.200 + 1.500 − 3.700 = €74.000"]),
    deel("b", "Bereken de belasting in schijf 1 en in schijf 2. Rond elke schijf naar beneden af op hele euro's.", [num(13747, "Schijf 1", "€", tol=0.5), num(13350, "Schijf 2", "€", tol=0.5)], ["Schijf 1: (35,8 : 100) × 38.400 = 13.747,20 → €13.747", "In schijf 2: 74.000 − 38.400 = €35.600", "Schijf 2: (37,5 : 100) × 35.600 = €13.350"]),
-   deel("c", "Sven heeft €76.000 spaargeld. Hij heeft geen beleggingen en geen schulden. Het fictief rendement op spaargeld is 1,4%. Van het fictief rendement telt 25% mee. Daarover betaalt Sven 36% belasting. Bereken de belasting in box 3. Rond naar beneden af op hele euro's.", [num(95, "Belasting box 3", "€", tol=0.5)], ["Fictief rendement: (1,4 : 100) × 76.000 = €1.064", "Het deel dat meetelt: (25 : 100) × 1.064 = €266", "(36 : 100) × 266 = 95,76 → €95"]),
-   deel("d", "Sven heeft €2.500 aan heffingskortingen. Bereken de verschuldigde inkomstenbelasting.", [num(24692, "Te betalen", "€", tol=0.5)], "Box 1: 13.747 + 13.350 = 27.097. Totaal: 27.097 + 95 − 2.500 = €24.692"),
+   deel("c", "Sven heeft €2.500 aan heffingskortingen. In box 3 betaalt hij niets. Bereken de verschuldigde inkomstenbelasting.", [num(24597, "Te betalen", "€", tol=0.5)], "Box 1: 13.747 + 13.350 = 27.097. Totaal: 27.097 + 0 − 2.500 = €24.597"),
   ], tekst="Sven verdient €76.200 loon. Eigenwoningforfait: €1.500. Hypotheekrente: €3.700. Schijf 1 loopt t/m €38.400 (35,8%). Schijf 2 loopt van €38.400 t/m €76.800 (37,5%)."),
  opgave(5, "Eerlijk?", [
    deel("a", "Bereken met hoeveel procent elk inkomen daalt. Rond af op 1 decimaal. Typ een min-teken.", [num(-1, "Laag inkomen", "%"), num(-3, "Hoog inkomen", "%")], ["(nieuw − oud) : oud × 100", "(1.980 − 2.000) : 2.000 × 100 = −1,0%", "(4.850 − 5.000) : 5.000 × 100 = −3,0%"]),

@@ -79,21 +79,21 @@
     "u": "Hoe hoger het inkomen, hoe hoger het percentage."
    },
    {
-    "v": "Sara heeft €20.000 spaargeld. Het heffingsvrij vermogen is €57.000. Wat betaalt zij in box 3?",
+    "v": "Voor wie is de arbeidskorting bedoeld?",
     "o": [
-     "36% van €57.000",
-     "1,4% van €20.000",
-     "Niets",
-     "36% van €20.000"
+     "Mensen met een eigen huis",
+     "Mensen met een uitkering",
+     "Mensen met betaald werk",
+     "Mensen met veel spaargeld"
     ],
     "j": 2,
-    "u": "Haar vermogen is lager dan het heffingsvrij vermogen."
+    "u": "De arbeidskorting is een heffingskorting voor werkenden."
    },
    {
     "v": "Wat gaat er als laatste van de berekende belasting af?",
     "o": [
      "Het eigenwoningforfait",
-     "Het fictief rendement",
+     "De hypotheekrente",
      "De heffingskortingen",
      "De aftrekposten"
     ],
@@ -419,86 +419,6 @@
    },
    {
     "nr": 4,
-    "titel": "Vermogen in box 3",
-    "tekst": "Mevrouw Bakker heeft €75.000 spaargeld, €30.000 beleggingen en €10.000 schulden. Het heffingsvrij vermogen is €57.000. Fictief rendement: spaargeld 1,4%, beleggingen 6,0%, schulden 2,6%.",
-    "p": 4,
-    "delen": [
-     {
-      "id": "a",
-      "v": "Bereken het vermogen van mevrouw Bakker. Bereken daarna haar belastbaar vermogen.",
-      "velden": [
-       {
-        "type": "num",
-        "ans": [
-         95000
-        ],
-        "p": 1,
-        "eenh": "€",
-        "tol": 0.5,
-        "label": "Vermogen"
-       },
-       {
-        "type": "num",
-        "ans": [
-         38000
-        ],
-        "p": 1,
-        "eenh": "€",
-        "tol": 0.5,
-        "label": "Belastbaar vermogen"
-       }
-      ],
-      "uitw": [
-       "75.000 + 30.000 − 10.000 = €95.000",
-       "95.000 − 57.000 = €38.000"
-      ]
-     },
-     {
-      "id": "b",
-      "v": "Bereken het fictief rendement. Het rendement op de schulden trek je eraf.",
-      "velden": [
-       {
-        "type": "num",
-        "ans": [
-         2590
-        ],
-        "p": 1,
-        "eenh": "€",
-        "tol": 0.5,
-        "label": "Fictief rendement"
-       }
-      ],
-      "uitw": [
-       "Spaargeld: (1,4 : 100) × 75.000 = €1.050",
-       "Beleggingen: (6,0 : 100) × 30.000 = €1.800",
-       "Schulden: (2,6 : 100) × 10.000 = €260",
-       "1.050 + 1.800 − 260 = €2.590"
-      ]
-     },
-     {
-      "id": "c",
-      "v": "Van het fictief rendement telt 40% mee. Daarover betaalt mevrouw Bakker 36% belasting. Bereken de belasting in box 3. Rond naar beneden af op hele euro's.",
-      "velden": [
-       {
-        "type": "num",
-        "ans": [
-         372
-        ],
-        "p": 1,
-        "eenh": "€",
-        "tol": 0.5,
-        "label": "Belasting box 3"
-       }
-      ],
-      "uitw": [
-       "(40 : 100) × 2.590 = €1.036",
-       "(36 : 100) × 1.036 = 372,96 → €372"
-      ]
-     }
-    ]
-   },
-   {
-    "nr": 5,
     "titel": "Eerlijk verdeeld?",
     "tekst": "De overheid geeft iedereen €120 per maand extra. Een laag inkomen gaat van €2.000 naar €2.120. Een hoog inkomen gaat van €6.000 naar €6.120.",
     "p": 9,
@@ -550,7 +470,7 @@
        },
        {
         "type": "open",
-        "nr": "5b",
+        "nr": "4b",
         "p": 1,
         "label": "Uitleg",
         "model": "Nivellerend: het lage inkomen stijgt in procenten meer (6%) dan het hoge inkomen (2%). De verschillen worden in verhouding kleiner.",
@@ -613,7 +533,7 @@
       "velden": [
        {
         "type": "open",
-        "nr": "5d",
+        "nr": "4d",
         "p": 2,
         "label": "AOW-leeftijd",
         "model": "Door de vergrijzing krijgen steeds meer mensen AOW, terwijl de actieven de premies betalen. Door de AOW-leeftijd te verhogen blijft de AOW betaalbaar.",
@@ -654,7 +574,7 @@
   {
    "n": 1,
    "min": 50,
-   "pts": 42
+   "pts": 38
   }
  ]
 }

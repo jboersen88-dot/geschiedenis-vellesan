@@ -36,7 +36,7 @@
    "c": "var(--p2)",
    "file": "",
    "x": [],
-   "sum": "Het schijventarief in box 1, progressief, degressief en proportioneel, belasting over je vermogen in box 3 en de heffingskortingen.",
+   "sum": "Het schijventarief in box 1, progressief, degressief en proportioneel, en de heffingskortingen.",
    "imgs": [
     [
      "schijven",
@@ -44,7 +44,7 @@
     ],
     [
      "vermogen",
-     "Box 3: belasting over je vermogen"
+     "Heffingskorting: een korting op je belasting"
     ]
    ],
    "q": [
@@ -52,10 +52,6 @@
     "Schrijf de drie stappen op om de belasting in box 1 te berekenen.",
     "Wat is een progressief belastingtarief?",
     "Wat is het verschil tussen een degressief en een proportioneel tarief?",
-    "Waaruit bestaat je vermogen?",
-    "Wat is het heffingsvrij vermogen?",
-    "Wat is het fictief rendement?",
-    "Hoe bereken je de belasting in box 3? Schrijf de stappen op.",
     "Wat is een heffingskorting? Noem er twee.",
     "Schrijf de formule op voor de verschuldigde inkomstenbelasting."
    ]
@@ -127,7 +123,6 @@
   "6.2": [
    "Ik kan in box 1 de belasting berekenen met het schijventarief.",
    "Ik kan uitleggen dat Nederland een progressief belastingtarief heeft.",
-   "Ik kan de vermogensrendementsheffing berekenen.",
    "Ik weet wat de heffingskorting is."
   ],
   "6.3": [
@@ -174,12 +169,6 @@
    "Progressief, degressief en proportioneel uit elkaar houden",
    "6.2",
    "quiz"
-  ],
-  [
-   "De belasting in box 3 berekenen",
-   "6.2",
-   "reken",
-   "box3"
   ],
   [
    "De verschuldigde inkomstenbelasting berekenen met de heffingskorting",
@@ -236,16 +225,6 @@
    "lab": "quiz",
    "qpar": "6.2",
    "btn": "Oefen: quiz 6.2"
-  },
-  {
-   "par": "6.2",
-   "yt": "0Sj35WHqmRQ",
-   "k": "Introfilm",
-   "t": "Belasting over je spaargeld",
-   "d": "Box 3: heffingsvrij vermogen en fictief rendement.",
-   "lab": "reken",
-   "mode": "box3",
-   "btn": "Oefen: box 3"
   },
   {
    "par": "6.4",
@@ -315,12 +294,6 @@
   ],
   [
    "6.1",
-   "Bijtelling",
-   "Een bedrag dat bij je inkomen komt als je een auto van de zaak ook privé gebruikt. Dit is extra stof.",
-   "Een percentage van de nieuwwaarde van de auto."
-  ],
-  [
-   "6.1",
    "Aftrekposten",
    "Kosten die je van je inkomen mag aftrekken. Je belastbaar inkomen wordt lager, dus je betaalt minder belasting.",
    "Hypotheekrente, giften aan goede doelen, reiskosten met het openbaar vervoer naar je werk."
@@ -351,39 +324,9 @@
   ],
   [
    "6.2",
-   "Vermogen",
-   "Al je spaargeld en beleggingen samen, min je schulden.",
-   "€70.000 spaargeld + €20.000 beleggingen − €5.000 schuld = €85.000."
-  ],
-  [
-   "6.2",
    "Box 3",
-   "De box voor mensen met vermogen. Je betaalt belasting over het rendement op je vermogen.",
-   "Belasting over spaargeld en beleggingen."
-  ],
-  [
-   "6.2",
-   "Vermogensrendementsheffing",
-   "De belasting in box 3 over het inkomen uit je vermogen.",
-   "Belasting over je spaargeld."
-  ],
-  [
-   "6.2",
-   "Heffingsvrij vermogen",
-   "Het eerste deel van je vermogen. Daarover betaal je geen belasting.",
-   "De eerste €57.000."
-  ],
-  [
-   "6.2",
-   "Belastbaar vermogen",
-   "Je vermogen min het heffingsvrij vermogen.",
-   "€85.000 − €57.000 = €28.000."
-  ],
-  [
-   "6.2",
-   "Fictief rendement",
-   "Het rendement dat je volgens de overheid hebt op je spaargeld of beleggingen. Over het deel dat meetelt betaal je 36% belasting.",
-   "Spaargeld: 1,4%. Beleggingen: 6,0%. Schulden: 2,6% (dat gaat eraf)."
+   "De box voor belasting over vermogen, zoals spaargeld en beleggingen. Dit hoef je niet te kunnen berekenen.",
+   "Het bedrag van box 3 staat er altijd bij."
   ],
   [
    "6.2",
@@ -538,7 +481,7 @@
    [
     "Een naheffing",
     "Een heffingskorting",
-    "Een bijtelling",
+    "Een aangifte",
     "Een aftrekpost"
    ],
    "Je moet alsnog bijbetalen."
@@ -575,17 +518,6 @@
     "De belasting die je aan de gemeente betaalt"
    ],
    "Je telt het op als je een eigen huis hebt."
-  ],
-  [
-   "6.1",
-   "Mo rijdt ook privé in de auto van de zaak. Wat betekent dat voor zijn inkomen?",
-   [
-    "Hij telt een bijtelling op",
-    "Hij krijgt een aftrekpost",
-    "Hij krijgt een heffingskorting",
-    "Hij telt een forfait op"
-   ],
-   "Bijtelling: een percentage van de nieuwwaarde van de auto."
   ],
   [
    "6.1",
@@ -688,50 +620,6 @@
   ],
   [
    "6.2",
-   "Waaruit bestaat je vermogen?",
-   [
-    "Spaargeld en beleggingen min schulden",
-    "Loon en uitkering plus toeslagen",
-    "Je huis en je auto plus je fiets",
-    "Alles wat je in een jaar uitgeeft"
-   ],
-   "Je schulden gaan eraf."
-  ],
-  [
-   "6.2",
-   "Waarover betaal je belasting in box 3?",
-   [
-    "Over het rendement op je vermogen",
-    "Over het loon van je bijbaan",
-    "Over de waarde van je woning",
-    "Over de winst van je bedrijf"
-   ],
-   "Daarom heet het vermogensrendementsheffing."
-  ],
-  [
-   "6.2",
-   "Wat is het heffingsvrij vermogen?",
-   [
-    "Het deel waarover je geen belasting betaalt",
-    "Het deel waarover je dubbel belasting betaalt",
-    "Het vermogen van mensen zonder inkomen",
-    "Het spaargeld van kinderen tot 18 jaar"
-   ],
-   "Het eerste deel van je vermogen is vrij."
-  ],
-  [
-   "6.2",
-   "Wat is het fictief rendement?",
-   [
-    "Het rendement dat de overheid aanneemt",
-    "Het rendement dat de bank je belooft",
-    "De rente die je echt hebt gekregen",
-    "De winst op je aandelen dit jaar"
-   ],
-   "De overheid gaat uit van vaste percentages: 1,4% voor spaargeld en 6,0% voor beleggingen."
-  ],
-  [
-   "6.2",
    "Wat doet een heffingskorting?",
    [
     "Je betaalt minder belasting",
@@ -751,28 +639,6 @@
     "De spaarkorting"
    ],
    "De algemene heffingskorting is voor iedereen."
-  ],
-  [
-   "6.2",
-   "Welke box hoef je niet te kennen?",
-   [
-    "Box 2",
-    "Box 1",
-    "Box 3",
-    "Box 4"
-   ],
-   "Box 2 is voor aandeelhouders in bv's en nv's."
-  ],
-  [
-   "6.2",
-   "Je vermogen is lager dan het heffingsvrij vermogen. Hoeveel belasting betaal je in box 3?",
-   [
-    "Niets",
-    "36% van je vermogen",
-    "1,4% van je vermogen",
-    "De helft"
-   ],
-   "Er is dan geen belastbaar vermogen."
   ],
   [
    "6.2",
@@ -824,7 +690,7 @@
    [
     "Herverdeling",
     "Privatisering",
-    "Bijtelling",
+    "Vergrijzing",
     "Aanbesteding"
    ],
    "Herverdeling van de inkomens."
@@ -880,7 +746,7 @@
     "Nivellering",
     "Denivellering",
     "Vergrijzing",
-    "Bijtelling"
+    "Herverdeling"
    ],
    "De verschillen worden in verhouding kleiner."
   ],
@@ -1058,42 +924,6 @@
     [
      "🚆",
      "Reiskosten openbaar vervoer"
-    ]
-   ]
-  },
-  {
-   "a": "Box 1",
-   "b": "Box 3",
-   "A": [
-    [
-     "💶",
-     "Loon"
-    ],
-    [
-     "🏪",
-     "Nettowinst van je bedrijf"
-    ],
-    [
-     "🏠",
-     "Eigenwoningforfait"
-    ]
-   ],
-   "B": [
-    [
-     "🐷",
-     "Spaargeld"
-    ],
-    [
-     "📈",
-     "Beleggingen"
-    ],
-    [
-     "🆓",
-     "Heffingsvrij vermogen"
-    ],
-    [
-     "🔮",
-     "Fictief rendement"
     ]
    ]
   },
