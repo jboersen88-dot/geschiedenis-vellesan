@@ -190,6 +190,15 @@ x = set_xfrm(x, 4, 0, 0, EMU_W, EMU_H)
 x = textbox(x, 600000, EMU_H - 520000, EMU_W - 1200000, 300000, [BRON], size=1000, color="1F3A5F")
 save(17, x)
 
+# ---- dia 6 en 8: foto van de minister-president (was Rutte, nu Rob Jetten) ----
+# Portretfoto van rijksoverheid.nl: gebruik voor educatieve doeleinden toegestaan, auteursrecht bij de Rijksoverheid.
+# Daarom alleen in de PowerPoint voor de les; dia 6 en 8 gaan niet naar de openbare site (weg=6,8 in lo.py).
+files["ppt/media/image12.jpeg"] = open(os.path.join(CROPS, "jetten.jpg"), "rb").read()
+for n in (6, 8):
+    x = slide(n)
+    x = textbox(x, 9266773, 2490000, 2047850, 330000, ["Minister-president Rob Jetten", "Foto: Rijksoverheid"], size=800, algn="ctr")
+    save(n, x)
+
 with zipfile.ZipFile(OUT, "w", zipfile.ZIP_DEFLATED) as o:
     for n in z.namelist():
         o.writestr(z.getinfo(n), files[n])
