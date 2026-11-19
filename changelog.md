@@ -1,3 +1,23 @@
+## 2026-11-19 · Economie 2 mavo: dia's met klikstappen bij H3, H4 en H5
+
+De twaalf PowerPoints van H3, H4 en H5 staan nu als klikbare dia's in de leeromgeving, met de klikstappen uit de PowerPoint. Hiermee is het punt "nog niet af" van 18 november opgelost voor deze drie hoofdstukken.
+
+- **Bron**: de PowerPoints van de OneDrive van de docent. Het zijn dezelfde bestanden als op Google Drive (zelfde naam en grootte). De link naar de PowerPoint in Drive blijft eronder staan.
+- **Hoe**: omgezet met LibreOffice (`tools/dias/lo.py`), zoals bij 3 en 4 mavo. Het lettertype wijkt daardoor iets af van PowerPoint. Nearpod-dia's die steeds terugkomen met een regel erbij zijn één dia met stappen geworden.
+- **Aantallen**: H3 27 dia's, H4 37 dia's, H5 33 dia's.
+
+**Keuzes: weggelaten dia's**
+- 4.1: de dia "productiefactoren". De tabel kwam kapot uit de omzetting (koppen op de verkeerde plek). De stof staat wel bij de begrippen.
+- 4.2: de dia "Aan de slag met echte prijzen". Dat is een stuk tekst uit een bron (MVO Nederland, bewerkt) en het werd bijna wit weergegeven.
+- 4.4, 5.1 (twee dia's) en 5.2: dia's met alleen een filmpje of een link naar een film. Die spelen niet af als plaatje.
+
+**Controleren door de docent**
+- Staat bij elke paragraaf de goede PowerPoint, en klopt de volgorde van de klikstappen?
+- Wil je de dia "productiefactoren" van 4.1 terug? Dan is een export uit PowerPoint zelf nodig.
+- In de dia's staan beelden uit je PowerPoints (krantenbericht, grafieken, kaartje). Zeg het als er iets niet op de openbare site mag.
+- H6 heeft nog geen dia's: de PowerPoints uit 2019 hebben oude belastingschijven.
+
+**Getest**: vragencheck en linkcheck op 0; a11ycheck meldt alleen `rondleiding/qr/posters.html` (stond al zo). Browsertest van alle twaalf paragrafen op 375 en 820 px, licht en donker: de dia's laden, geen consolefouten, geen horizontaal scrollen. Bij 4.1 doorgeklikt met de knop Volgende: de stappen en dia's wisselen. **Niet getest**: op een echte iPad, en niet elke klikstap is met het oog nagekeken.
 ## 2026-11-19 · Economie 4 mavo: de drie schoolexamens goed genummerd
 
 De docent meldde dat de SE-indeling van 4 mavo niet klopte. Dit jaar zijn er drie PTA-toetsen: SE 1 over hoofdstuk 1 en 2 (inkomen en consumptie), SE 2 over hoofdstuk 5 en 6 plus hoofdstuk 7 uit het boek van 3 mavo, SE 3 over hoofdstuk 3 en 4.
