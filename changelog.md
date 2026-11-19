@@ -37,6 +37,41 @@ De docent vroeg om hoofdstuk 6 na te kijken met het nieuwste boek (Pincode 7.1 v
 - Mag de bijtelling als "extra stof" blijven staan?
 - De hoofdstuktitels in Pincode 7.1 zijn anders dan op de site (H4 heet "Werk aan de winkel!", H5 "Hoe werkt de overheid?", H6 "Iedereen betaalt belasting", H8 "Ontwikkelingslanden"). De paragraaftitels van H6 zijn gelijk. De titels op de site zijn nog niet veranderd.
 
+## 2026-11-19 · Economie 4 mavo 5.4: cijfers van de Miljoenennota 2027
+
+De dia's van 5.4 "Geld genoeg?" lieten de Miljoenennota 2026 zien (en op één dia nog 2024). Alle beelden en cijfers komen nu uit de **Miljoenennota 2027** (Prinsjesdag 15 september 2026).
+
+- **Bronnen**: de Miljoenennotaposter 2027 van het ministerie van Financiën (rijksoverheid.nl, lesmateriaal Prinsjesdag) en de Miljoenennota 2027 op rijksfinancien.nl (tabel 2 "Budgettaire kerngegevens", figuur 12 en 13). Op elke veranderde dia staat de bron.
+- **Wat is er veranderd** (dianummers van de PowerPoint): 3 en 4 de nieuwe poster met kaders om inkomsten (€ 481,2 miljard) en uitgaven (€ 516,8 miljard); 5 (was Miljoenennota 2024 met "tekort van 34,9 miljard") nu de nieuwe poster met "Tekort: € 35,6 miljard"; 6 t/m 9 indirecte belastingen (€ 136,9) en directe belastingen (€ 180,8) met alle posten; 10 en 11 premies werknemersverzekeringen (€ 48,3) en volksverzekeringen (€ 49,7); 12 alle uitgaven; 13 en 14 sociale zekerheid en zorg, 2026 naast 2027 (was 2024 naast 2026); 15 het EMU-saldo van 1970 tot 2031 (was een figuur tot 2020); 16 nieuwe tekst en de grafiek van de staatsschuld van 1970 tot 2031; 17 overheidsschuld 2027: € 599,6 miljard, 46,9% van het bbp.
+- **Tekst dia 16**: "Dit jaar een tekort!" werd "Tekort in 2027: € 35,6 miljard"; "Werklozen" werd "Meer geld voor defensie" (de werkloosheid is volgens de Miljoenennota laag, 3,9% in 2026 en 4,0% in 2027; het kabinet verhoogt de defensie-uitgaven naar 3,5% bbp); "hogere rentekosten" kreeg het bedrag € 12,9 miljard; "43,3% van het BBP" werd "Staatsschuld 2027: 46,9% van het bbp". Zorgkosten, AOW-kosten en Oekraïne bleven staan.
+- **Gecontroleerd, twee keer**: elk getal is op de poster op ware grootte gelezen en vergeleken met de tekst van de samenvatting van de Miljoenennota en tabel 2 (inkomsten 481,2, uitgaven 516,8, schuld 599,6 en 46,9% komen in alle drie overeen). Tekort = 516,8 − 481,2 = 35,6, gelijk aan het EMU-saldo van de centrale overheid in tabel 2. De posten zijn opgeteld: de totalen wijken door afronding 0,1 tot 0,2 af (bijvoorbeeld sociale zekerheid: posten 132,2, totaal 132,4). Dat staat ook op de poster.
+- **Fout in de oude dia**: op de dia van 2024 stond "tekort van 34,9 miljard", maar 433,6 − 402,9 = 30,7. Die dia is vervangen.
+- **Let op bij zorg**: in 2026 zat de zorgtoeslag in "Medische zorg incl. zorgtoeslag" (€ 73,6). In 2027 staat de zorgtoeslag apart (€ 7,5). Dat staat als opmerking op de dia.
+- **Niet veranderd**: dia 1, 2, de dia over de gemeente (tabel van Venlo, de som klopt: 369,3 miljoen), de link en de herhalingsvragen. De oefenstof en toetsen van 5.4 gebruiken verzonnen bedragen in eigen situaties; daar stonden geen echte begrotingscijfers in.
+- **Hoe**: `tools/miljoenennota/maak54.py` (nieuw) maakt de nieuwe PowerPoint uit de oude en de uitsneden; daarna `tools/dias/lo.py ... weg=6,8,18,20` voor de dia's op de site (16 dia's, klikstappen gelijk gebleven). De werkwijze voor volgend jaar staat in `tools/miljoenennota/README.md`. De nieuwe PowerPoint voor de les staat in de projectmap (economie-4-mavo); het origineel op de OneDrive is niet aangeraakt.
+- **Te controleren door de docent**: de nieuwe PowerPoint in PowerPoint zelf openen (gemaakt en bekeken met LibreOffice) en zelf op de OneDrive zetten; dia 6 en 8 hebben nog de foto van Rutte bij "de overheid", die is niet meer de minister-president.
+- **Getest**: vragencheck, linkcheck en a11ycheck; de paragraaf 5.4 in de browser op 375 en 820 px, licht en donker. **Niet getest**: op een echte iPad.
+
+## 2026-11-19 · Economie 2 mavo: dia's met klikstappen bij H3, H4 en H5
+
+De twaalf PowerPoints van H3, H4 en H5 staan nu als klikbare dia's in de leeromgeving, met de klikstappen uit de PowerPoint. Hiermee is het punt "nog niet af" van 18 november opgelost voor deze drie hoofdstukken.
+
+- **Bron**: de PowerPoints van de OneDrive van de docent. Het zijn dezelfde bestanden als op Google Drive (zelfde naam en grootte). De link naar de PowerPoint in Drive blijft eronder staan.
+- **Hoe**: omgezet met LibreOffice (`tools/dias/lo.py`), zoals bij 3 en 4 mavo. Het lettertype wijkt daardoor iets af van PowerPoint. Nearpod-dia's die steeds terugkomen met een regel erbij zijn één dia met stappen geworden.
+- **Aantallen**: H3 27 dia's, H4 37 dia's, H5 33 dia's.
+
+**Keuzes: weggelaten dia's**
+- 4.1: de dia "productiefactoren". De tabel kwam kapot uit de omzetting (koppen op de verkeerde plek). De stof staat wel bij de begrippen.
+- 4.2: de dia "Aan de slag met echte prijzen". Dat is een stuk tekst uit een bron (MVO Nederland, bewerkt) en het werd bijna wit weergegeven.
+- 4.4, 5.1 (twee dia's) en 5.2: dia's met alleen een filmpje of een link naar een film. Die spelen niet af als plaatje.
+
+**Controleren door de docent**
+- Staat bij elke paragraaf de goede PowerPoint, en klopt de volgorde van de klikstappen?
+- Wil je de dia "productiefactoren" van 4.1 terug? Dan is een export uit PowerPoint zelf nodig.
+- In de dia's staan beelden uit je PowerPoints (krantenbericht, grafieken, kaartje). Zeg het als er iets niet op de openbare site mag.
+- H6 heeft nog geen dia's: de PowerPoints uit 2019 hebben oude belastingschijven.
+
+**Getest**: vragencheck en linkcheck op 0; a11ycheck meldt alleen `rondleiding/qr/posters.html` (stond al zo). Browsertest van alle twaalf paragrafen op 375 en 820 px, licht en donker: de dia's laden, geen consolefouten, geen horizontaal scrollen. Bij 4.1 doorgeklikt met de knop Volgende: de stappen en dia's wisselen. **Niet getest**: op een echte iPad, en niet elke klikstap is met het oog nagekeken.
 ## 2026-11-19 · Economie 4 mavo: de drie schoolexamens goed genummerd
 
 De docent meldde dat de SE-indeling van 4 mavo niet klopte. Dit jaar zijn er drie PTA-toetsen: SE 1 over hoofdstuk 1 en 2 (inkomen en consumptie), SE 2 over hoofdstuk 5 en 6 plus hoofdstuk 7 uit het boek van 3 mavo, SE 3 over hoofdstuk 3 en 4.
@@ -51,6 +86,26 @@ De docent meldde dat de SE-indeling van 4 mavo niet klopte. Dit jaar zijn er dri
 **Controleren door de docent**: moet "Herhaling H7 + H8" bij 4 mavo blijven staan, of mag die weg?
 
 **Getest**: vragencheck en linkcheck op 0; a11ycheck meldt alleen `rondleiding/qr/posters.html` (stond al zo). Browsertest op 375 en 820 px, licht en donker, zonder consolefouten: jaarpagina, SE 1 en de leeromgeving van SE 1. **Niet getest**: echte iPad.
+
+## 2026-11-19 · Economie 3 mavo: dia's bij 6.2 en 8.3
+
+**Wat**: de twee PowerPoints die te groot waren voor de Drive-koppeling staan er nu in. De docent gaf toegang tot de OneDrive-map op de Mac.
+
+- **6.2 Tel uit je winst!**: de nieuwe PowerPoint (11 dia's met klikstappen) in plaats van de oudere "Winst of verlies". De knop naar de PowerPoint wijst nu naar het nieuwe bestand.
+- **8.3 Samenwerken is slimmer**: 6 dia's met klikstappen uit "8.3 + 8.4 samen" (alleen het deel over de EU).
+
+**Keuzes**
+- 6.2: de dia's met alleen een film zijn weggelaten (de film van de uitgever en drie online filmpjes). De tweede dia "Deel 2" is weggelaten, die stond er dubbel. Op de titeldia staat de titel uit het boek.
+- 6.2, dia 4: de laatste klikstap is de eindstand. In de export zonder PowerPoint liepen de tekstvakken daar door elkaar.
+- 8.3: alle plaatjes zijn weggehaald (grafieken en schema's uit het boek, twee kaarten zonder duidelijke rechten). De drie dia's met alleen het schema van de ECB zijn daardoor vervallen. De taken van de ECB staan wel bij de begrippen.
+- 8.3 heeft geen knop naar een PowerPoint in Drive: het bestand in Drive is een ander bestand dan waar de dia's uit komen.
+
+**Controleren door de docent**
+- 6.2, dia 4 (fietsenvoorbeeld) heeft 43 klikken. Lopen de stappen goed?
+- 8.3: zijn de dia's zonder plaatjes zo bruikbaar?
+
+**Getest**: vragencheck en linkcheck op 0; a11ycheck alleen de bestaande fout in `rondleiding/qr/posters.html`. Browsertest op 375 en 820 px, licht en donker, zonder consolefouten. Beide decks doorgeklikt tot de laatste dia, alle beelden laden.
+**Niet getest**: een echte iPad in Safari. De dia's zijn gemaakt met LibreOffice, lettertypen kunnen iets afwijken van PowerPoint.
 
 ## 2026-11-18 · Economie 3 mavo: H5, H6, H8 en de SE-pagina's H5 + H6 en H7 + H8
 

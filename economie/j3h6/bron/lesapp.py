@@ -17,7 +17,7 @@ PARS = [
          "Wat is het grote voordeel van een kapitaalintensief bedrijf?",
          "Wat wordt er bedoeld met afschrijvingen?",
          "Hoe bereken je de afschrijving per jaar?"]),
- dict(id="6.2", t="Tel uit je winst!", c="var(--p2)", file="1iHySqC-jFDvDQAxe8LLhlR5ruKbGPEyc", x=["o62", "owi"],
+ dict(id="6.2", t="Tel uit je winst!", c="var(--p2)", file="1ii0agoGTbf08VysrBjwOmtlzGrN1D_rh", x=["o62", "owi"],
       sum="Van inkoopprijs naar verkoopprijs en consumentenprijs, en van omzet naar brutowinst en nettoresultaat.",
       imgs=[["winst", "Wat blijft er over? Van omzet naar winst"], ["prijs", "De consumentenprijs: de prijs met btw"]],
       q=["Wat is de afzet?",

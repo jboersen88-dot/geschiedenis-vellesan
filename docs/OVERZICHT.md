@@ -84,9 +84,9 @@ Alles wordt gestuurd vanuit `economie/economie.js` en `economie/data/paginas.jso
 | Jaar 2 mavo H1 "Wat heb je nodig?" | `j2h1` | ja | ja, met Edu-Racer | ja | 2 (A en B) |
 | Jaar 2 mavo H1, GL-versie | `j2h1gl` | ja | nee | nee | nee |
 | **Jaar 2 mavo H2 "Jij en je geld"** (het voorbeeld) | `j2h2` | ja | ja, met Edu-Racer | ja | 3 (1-, 2- en 3-ster) |
-| Jaar 2 mavo H3 "Aan het werk?" | `j2h3` | nog niet (PowerPoint via Drive) | ja | nee | 1 |
-| Jaar 2 mavo H4 "Hoe maken we het?" | `j2h4` | nog niet (PowerPoint via Drive) | ja | nee | 1 |
-| Jaar 2 mavo H5 "Is handel iets voor jou?" | `j2h5` | nog niet (PowerPoint via Drive) | ja | nee | 1 |
+| Jaar 2 mavo H3 "Aan het werk?" | `j2h3` | ja | ja | nee | 1 |
+| Jaar 2 mavo H4 "Hoe maken we het?" | `j2h4` | ja | ja | nee | 1 |
+| Jaar 2 mavo H5 "Is handel iets voor jou?" | `j2h5` | ja | ja | nee | 1 |
 | Jaar 2 mavo H6 "Wat doet de overheid?" | `j2h6` | nee (geen bruikbare PowerPoints) | ja | nee | 1 |
 | Jaar 3 mavo H0 rekenvaardigheden | `j3h0` | formulepagina | nee | nee | nee |
 | Jaar 3 mavo H1 "Hoe welvarend ben jij?" | `j3h1` | ja | ja | nee | 1 |
