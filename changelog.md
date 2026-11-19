@@ -13,6 +13,26 @@ De docent meldde dat de SE-indeling van 4 mavo niet klopte. Dit jaar zijn er dri
 
 **Getest**: vragencheck en linkcheck op 0; a11ycheck meldt alleen `rondleiding/qr/posters.html` (stond al zo). Browsertest op 375 en 820 px, licht en donker, zonder consolefouten: jaarpagina, SE 1 en de leeromgeving van SE 1. **Niet getest**: echte iPad.
 
+## 2026-11-19 · Economie 3 mavo: dia's bij 6.2 en 8.3
+
+**Wat**: de twee PowerPoints die te groot waren voor de Drive-koppeling staan er nu in. De docent gaf toegang tot de OneDrive-map op de Mac.
+
+- **6.2 Tel uit je winst!**: de nieuwe PowerPoint (11 dia's met klikstappen) in plaats van de oudere "Winst of verlies". De knop naar de PowerPoint wijst nu naar het nieuwe bestand.
+- **8.3 Samenwerken is slimmer**: 6 dia's met klikstappen uit "8.3 + 8.4 samen" (alleen het deel over de EU).
+
+**Keuzes**
+- 6.2: de dia's met alleen een film zijn weggelaten (de film van de uitgever en drie online filmpjes). De tweede dia "Deel 2" is weggelaten, die stond er dubbel. Op de titeldia staat de titel uit het boek.
+- 6.2, dia 4: de laatste klikstap is de eindstand. In de export zonder PowerPoint liepen de tekstvakken daar door elkaar.
+- 8.3: alle plaatjes zijn weggehaald (grafieken en schema's uit het boek, twee kaarten zonder duidelijke rechten). De drie dia's met alleen het schema van de ECB zijn daardoor vervallen. De taken van de ECB staan wel bij de begrippen.
+- 8.3 heeft geen knop naar een PowerPoint in Drive: het bestand in Drive is een ander bestand dan waar de dia's uit komen.
+
+**Controleren door de docent**
+- 6.2, dia 4 (fietsenvoorbeeld) heeft 43 klikken. Lopen de stappen goed?
+- 8.3: zijn de dia's zonder plaatjes zo bruikbaar?
+
+**Getest**: vragencheck en linkcheck op 0; a11ycheck alleen de bestaande fout in `rondleiding/qr/posters.html`. Browsertest op 375 en 820 px, licht en donker, zonder consolefouten. Beide decks doorgeklikt tot de laatste dia, alle beelden laden.
+**Niet getest**: een echte iPad in Safari. De dia's zijn gemaakt met LibreOffice, lettertypen kunnen iets afwijken van PowerPoint.
+
 ## 2026-11-18 · Economie 3 mavo: H5, H6, H8 en de SE-pagina's H5 + H6 en H7 + H8
 
 Derde en laatste ronde van de opdracht "bouw nu ook de hoofdstukken voor jaar 3 economie voor de mavo". Alle hoofdstukken van 3 mavo staan nu in de nieuwe opzet.
