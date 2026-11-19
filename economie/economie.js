@@ -16,7 +16,7 @@ var THEMA={"jaar-2/mavo/hoofdstuk-0-rekenvaardigheden":"rekenen","jaar-2/mavo/ho
 var APPS={"jaar-2/mavo/hoofdstuk-1":[["Lesapp","jaar-2_mavo_hoofdstuk-1.html"]],"jaar-2/mavo/hoofdstuk-2":[["Lesapp","jaar-2_mavo_hoofdstuk-2.html"]],"jaar-2/mavo/hoofdstuk-3-aan-het-werk":[["Lesapp","jaar-2_mavo_hoofdstuk-3-aan-het-werk.html"]],"jaar-2/mavo/hoofdstuk-4":[["Lesapp","jaar-2_mavo_hoofdstuk-4.html"]],
   "jaar-4/hoofdstuk-1-verdien-je-genoeg":[["Lesapp","jaar-4_hoofdstuk-1-verdien-je-genoeg.html"]],"jaar-4/hoofdstuk-2-geld-moet-rollen":[["Lesapp","jaar-4_hoofdstuk-2-geld-moet-rollen.html"]],"jaar-4/hoofdstuk-3":[["Lesapp","jaar-4_hoofdstuk-3.html"]]};
 /* pagina's met een eigen volledige leeromgeving (zelfde opzet als de Geschiedenis-boekjes): [link, titel, tekst] */
-var LEEROMG={"jaar-4/se-h1-h2-h8":["se3/app.html","Open de leeromgeving SE3","Dia's per paragraaf, begrippen, leerdoelen, rekenen en formules, quiz, games en een toets op maat die de AI voor je nakijkt. Werkt ook op je telefoon en iPad."]};
+var LEEROMG={"jaar-4/se-h1-h2-h8":["se3/app.html","Open de leeromgeving SE 1","Dia's per paragraaf, begrippen, leerdoelen, rekenen en formules, quiz, games en een toets op maat die de AI voor je nakijkt. Werkt ook op je telefoon en iPad."]};
 /* hoofdstukken met een eigen pagina op volle breedte (opzet van Geschiedenis boekje 1): hoofdstukpagina, per paragraaf een leeromgeving
    (h.html?p=...&par=2.1) en een oefenomgeving. De inhoud staat in <map>/data.json en <map>/oefen.html, gemaakt door bouw-oefen.py
    uit de oude lesapp. Hier alleen de vormgeving: hero, kaartbeeld (als het niet het eerste beeld is) en kleuren [op de kaart, op de lichte band]. */
@@ -151,13 +151,13 @@ var RIJK={"jaar-3/mavo/hoofdstuk-0-rekenvaardigheden":{map:"j3h0",soort:"reken",
   par:"Vier paragrafen over handel, de EU en welvaart in de wereld.",beeld:"Beelden: gemaakt voor deze site",reken:"De export- en importquote, het handelssaldo, invoerrechten en het inkomen per hoofd van de bevolking.",games:"Een snelle quiz, Swipe & Scoor en begrippen-memory.",
   kleur:{"8.1":["var(--coral)","var(--berry)"],"8.2":["#7fd4c9","var(--teal)"],"8.3":["#f2c46b","var(--ochre)"],"8.4":["#b9d6cb","var(--green)"]}}};
 /* SE-pagina's in de nieuwe opzet: de hoofdstukken van het SE (leren) en de oefenstof (oefenen) op één plek */
-var SE={"jaar-4/se-h1-h2-h8":{naam:"SE hoofdstuk 1 en 2",kort:"H1 + H2",kop:["SE hoofdstuk 1 ","en 2"],hero:"j4h1/inkomen",
-  intro:"Alles voor het schoolexamen over inkomen en geld: hoofdstuk 1 en 2. Leer eerst per hoofdstuk, oefen daarna en maak als laatste het oefen-SE.",
+var SE={"jaar-4/se-h1-h2-h8":{nr:1,naam:"Hoofdstuk 1 en 2",kort:"Inkomen en consumptie",kop:["SE 1: hoofdstuk 1 ","en 2"],hero:"j4h1/inkomen",
+  intro:"Alles voor het eerste schoolexamen van dit jaar, over inkomen en consumptie: hoofdstuk 1 en 2. Leer eerst per hoofdstuk, oefen daarna en maak als laatste het oefen-SE.",
   delen:["jaar-4/hoofdstuk-1-verdien-je-genoeg","jaar-4/hoofdstuk-2-geld-moet-rollen"],
   toets:["se3/toets.html","Oefen-SE","Eén toets over beide hoofdstukken, met klok. Meerkeuze en rekenen kijkt de site na."],
   extra:[["se3/app.html","Oefenlab SE","Quiz, games, rekenen en een toets op maat over hoofdstuk 1 en 2 samen.",""]],beeld:"Foto's: Unsplash (gratis licentie) · beelden gemaakt voor deze site"},
-  "jaar-4/se-h5-en-h6":{naam:"SE hoofdstuk 5, 6 en 7",kort:"H5 + H6 + H7 (3 mavo)",kop:["SE hoofdstuk 5, 6 ","en 7"],hero:"j4h5/overheid-h",
-  intro:"Alles voor het schoolexamen over de overheid: hoofdstuk 5 en 6 van dit jaar en hoofdstuk 7 uit 3 mavo. Leer eerst per hoofdstuk, oefen daarna en maak als laatste het oefen-SE.",
+  "jaar-4/se-h5-en-h6":{nr:2,naam:"Hoofdstuk 5, 6 en 7",kort:"H7 uit het boek van 3 mavo",kop:["SE 2: hoofdstuk 5, 6 ","en 7"],hero:"j4h5/overheid-h",
+  intro:"Alles voor het tweede schoolexamen van dit jaar, over de overheid: hoofdstuk 5 en 6 van dit jaar en hoofdstuk 7 uit het boek van 3 mavo. Leer eerst per hoofdstuk, oefen daarna en maak als laatste het oefen-SE.",
   delen:["jaar-4/hoofdstuk-5-kan-de-overheid-dat-regelen","jaar-4/hoofdstuk-6-de-overheid-en-ons-inkomen","jaar-3/mavo/hoofdstuk-7-de-overheid-voor-ons-allemaal"],
   toets:["se56/toets.html","Oefen-SE","Eén toets over alle drie de hoofdstukken, met klok. Meerkeuze en rekenen kijkt de site na."],beeld:"Beelden: gemaakt voor deze site"},
   "jaar-3/mavo/se-3-h5-h6":{naam:"SE hoofdstuk 5 en 6",kort:"H5 + H6",kop:["SE hoofdstuk 5 ","en 6"],hero:"j3h5/werk-h",
@@ -179,11 +179,11 @@ var SE={"jaar-4/se-h1-h2-h8":{naam:"SE hoofdstuk 1 en 2",kort:"H1 + H2",kop:["SE
   toets:["se13/toets.html","Oefen-SE","Eén toets over beide hoofdstukken, met klok. Meerkeuze en rekenen kijkt de site na."],
   extra:[["https://drive.google.com/file/d/1MyiM_9hov8xVy91OMxwA7AkZEdVA5qT1/view","Oefentoets hoofdstuk 1 op papier","De oefentoets uit de les. Het nakijkblad staat onderaan het document.",""],
     ["https://drive.google.com/file/d/1z6ric2rTNplNUFT2kDkqbGNQav-ixfCs/view","Herhalingsvragen hoofdstuk 1","Het nakijkblad bij de herhalingsvragen uit de les.",""]],beeld:"Foto's: Unsplash (gratis licentie) · beelden gemaakt voor deze site"},
-  "jaar-4/se4":{naam:"SE hoofdstuk 3 en 4",kort:"H3 + H4",kop:["SE hoofdstuk 3 ","en 4"],hero:"j4h3/winst-h",
-  intro:"Alles voor het schoolexamen over bedrijven en werk: hoofdstuk 3 en 4. Leer eerst per hoofdstuk, oefen daarna en maak als laatste het oefen-SE.",
+  "jaar-4/se4":{nr:3,naam:"Hoofdstuk 3 en 4",kort:"Bedrijven en werk",kop:["SE 3: hoofdstuk 3 ","en 4"],hero:"j4h3/winst-h",
+  intro:"Alles voor het derde en laatste schoolexamen van dit jaar, over bedrijven en werk: hoofdstuk 3 en 4. Leer eerst per hoofdstuk, oefen daarna en maak als laatste het oefen-SE.",
   delen:["jaar-4/hoofdstuk-3","jaar-4/hoofdstuk-4-aan-het-werk"],
   toets:["se34/toets.html","Oefen-SE","Eén toets over beide hoofdstukken, met klok. Meerkeuze en rekenen kijkt de site na."],beeld:"Beelden: gemaakt voor deze site"}};
-var NAAM={"jaar-3/mavo/se-3-h5-h6":"SE H5 + H6","jaar-3/mavo/se4-h7-h8":"SE H7 + H8","jaar-3/mavo/hoofdstuk-8-over-economische-grenzen":"Hoofdstuk 8: Over de grens","jaar-3/mavo/hoofdstuk-6-productie-en-markt":"Hoofdstuk 6: Productie en markt","jaar-3/mavo/hoofdstuk-5-werkt-dat-zo":"Hoofdstuk 5: Is er werk voor jou?","jaar-3/mavo/hoofdstuk-4-ben-je-verzekerd":"Hoofdstuk 4: Kies je voor zekerheid?","jaar-3/mavo/se-1":"SE H1 + H3","jaar-3/mavo/hoofdstuk-1-hoe-groot-is-jouw-welvaart":"Hoofdstuk 1: Hoe welvarend ben jij?","jaar-4/se4":"SE H3 + H4","jaar-4/se-h1-h2-h8":"SE H1 + H2","jaar-4/se-h5-en-h6":"SE H5 + H6 + H7 (3 mavo)","jaar-2/mavo/kopie-van-hoofdstuk-1":"Hoofdstuk 1 · lesstof en PowerPoints"};
+var NAAM={"jaar-3/mavo/se-3-h5-h6":"SE H5 + H6","jaar-3/mavo/se4-h7-h8":"SE H7 + H8","jaar-3/mavo/hoofdstuk-8-over-economische-grenzen":"Hoofdstuk 8: Over de grens","jaar-3/mavo/hoofdstuk-6-productie-en-markt":"Hoofdstuk 6: Productie en markt","jaar-3/mavo/hoofdstuk-5-werkt-dat-zo":"Hoofdstuk 5: Is er werk voor jou?","jaar-3/mavo/hoofdstuk-4-ben-je-verzekerd":"Hoofdstuk 4: Kies je voor zekerheid?","jaar-3/mavo/se-1":"SE H1 + H3","jaar-3/mavo/hoofdstuk-1-hoe-groot-is-jouw-welvaart":"Hoofdstuk 1: Hoe welvarend ben jij?","jaar-4/se4":"SE 3 · H3 + H4","jaar-4/se6":"Herhaling H7 + H8","jaar-4/se-h1-h2-h8":"SE 1 · H1 + H2","jaar-4/se-h5-en-h6":"SE 2 · H5 + H6 + H7 (3 mavo)","jaar-2/mavo/kopie-van-hoofdstuk-1":"Hoofdstuk 1 · lesstof en PowerPoints"};
 
 var esc=function(t){return String(t).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});};
 var $=function(id){return document.getElementById(id);};
@@ -237,7 +237,7 @@ function jaar(){
   var j=JAREN.filter(function(x){return x.id===Q.get("j");})[0]||JAREN[1];
   var n=j.niv.filter(function(x){return x.id===Q.get("n");})[0];
   if(!n||!n.pre){niveau(j);return;}
-  var L=hoofdstukken(n),se=L.filter(function(p){return isSE(p.pad);}),rest=L.filter(function(p){return !isSE(p.pad);}),
+  var L=hoofdstukken(n),se=L.filter(function(p){return isSE(p.pad);}).map(function(p,i){return [p,SE[p.pad]&&SE[p.pad].nr?SE[p.pad].nr:50+i];}).sort(function(a,b){return a[1]-b[1];}).map(function(a){return a[0];}),rest=L.filter(function(p){return !isSE(p.pad);}),
   nul=rest.filter(function(p){return hNum(p)[0]===0;}),hs=rest.filter(function(p){return hNum(p)[0]!==0&&!(RIJK[p.pad]&&RIJK[p.pad].van);});
   hs.sort(function(a,b){return (hNum(a)[0]===null?99:hNum(a)[0])-(hNum(b)[0]===null?99:hNum(b)[0]);});
   document.title=naam(j,n)+" · Economie";document.body.className="rijk";
@@ -252,7 +252,7 @@ function jaar(){
   if(een)h+=rUitgelicht(een,j,n);
   else h+='<section class="rblk" id="hoofdstukken"><div class="wrap"><div class="rhead io"><div><div class="eyebrow">'+esc(naam(j,n))+'</div><h2>'+(hs.length===1?"Het hoofdstuk.":"De "+hs.length+" hoofdstukken.")+'</h2></div><p>Per hoofdstuk de PowerPoints, de uitleg, de filmpjes en de oefenstof. Kies het hoofdstuk waar je in de les mee bezig bent.</p></div><div class="rchaps vier">'+hs.map(kaart).join("")+'</div></div></section>';
   if(se.length)h+=rGolf(" top")+'<section class="rblk rapp" id="toetsen"><div class="wrap"><div class="rhead io"><div><div class="eyebrow">Toetsen en SE\'s</div><h2>Bereid je voor op de toets.</h2></div><p>Per SE de stof die je moet kennen, met oefentoetsen en nakijkbladen.</p></div><div class="roef'+(se.length===3?" n3":"")+'">'
-    +se.map(function(p,i){var z=SE[p.pad];if(z)return '<a class="io" style="--d:'+i+'" href="'+url(p)+'"><b>SE</b><small>'+esc(z.kort)+'</small><h3>'+esc(z.naam)+'</h3><p>Nieuw: leren per hoofdstuk, oefenen en een oefen-SE.</p><span class="arr">→</span></a>';var t=titel(p),m=/\(([^)]*)\)|(H\s*\d+\s*\+\s*H?\s*\d+.*)$/i.exec(t);return '<a class="io" style="--d:'+i+'" href="'+url(p)+'"><b>'+esc((/SE\s*\d+/i.exec(t)||[t.split(" ")[0]])[0].replace(/\s+/,""))+'</b><small>'+esc(m?(m[1]||m[2]).replace(/\s+/g," "):"Toetsvoorbereiding")+'</small><h3>'+esc(/\d/.test(t)?"Schoolexamen "+(/SE\s*(\d+)/i.exec(t)||[,""])[1]:t)+'</h3><p>'+esc(telling(p)||"Toetsvoorbereiding")+'</p><span class="arr">→</span></a>';}).join("")+'</div></div></section>'+rGolf("");
+    +se.map(function(p,i){var z=SE[p.pad];if(z)return '<a class="io" style="--d:'+i+'" href="'+url(p)+'"><b>SE'+(z.nr?" "+z.nr:"")+'</b><small>'+esc(z.kort)+'</small><h3>'+esc(z.naam)+'</h3><p>Nieuw: leren per hoofdstuk, oefenen en een oefen-SE.</p><span class="arr">→</span></a>';var t=titel(p);if(/^Herhaling /.test(t))return '<a class="io" style="--d:'+i+'" href="'+url(p)+'"><b>Extra</b><small>Geen schoolexamen</small><h3>'+esc(t)+'</h3><p>'+esc(telling(p)||"Herhaling")+'</p><span class="arr">→</span></a>';var m=/\(([^)]*)\)|(H\s*\d+\s*\+\s*H?\s*\d+.*)$/i.exec(t);return '<a class="io" style="--d:'+i+'" href="'+url(p)+'"><b>'+esc((/SE\s*\d+/i.exec(t)||[t.split(" ")[0]])[0].replace(/\s+/,""))+'</b><small>'+esc(m?(m[1]||m[2]).replace(/\s+/g," "):"Toetsvoorbereiding")+'</small><h3>'+esc(/\d/.test(t)?"Schoolexamen "+(/SE\s*(\d+)/i.exec(t)||[,""])[1]:t)+'</h3><p>'+esc(telling(p)||"Toetsvoorbereiding")+'</p><span class="arr">→</span></a>';}).join("")+'</div></div></section>'+rGolf("");
   h+='<section class="rblk rend"><div class="wrap"><div class="eyebrow" style="color:var(--coral)">Verkeerde plek?</div><h2>Ander jaar of niveau.</h2><p>Kies een ander jaar of ga terug naar het overzicht van Economie.</p><div class="rbtns">'+(j.niv.length>1?'<a class="rbtn primary" href="'+jaarUrl(j)+'">Ander niveau <span class="arr">→</span></a>':'')+'<a class="rbtn '+(j.niv.length>1?"ghost":"primary")+'" href="index.html">Ander jaar</a></div></div></section>'+rVoet(j.titel.toLowerCase()+" "+n.titel.toLowerCase(),n.beeld||"Foto's: Unsplash (gratis licentie)");
   document.body.innerHTML=h;rijkGedrag({},false);
   if(een)rUitgelichtVul(een);}

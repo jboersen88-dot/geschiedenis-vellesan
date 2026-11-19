@@ -8,11 +8,11 @@ ECO = os.path.join(ROOT, "economie")
 
 CONFIG = {
     "se3": dict(
-        titel="Economie · jaar 4 · SE3 (hoofdstuk 1 en 2)",
+        titel="Economie · jaar 4 · SE 1 (hoofdstuk 1 en 2)",
         eyebrow="Economie · jaar 4",          # klein regeltje boven de titel
-        kort="SE3 · hoofdstuk 1 en 2",        # titel in de balk en op de banner
+        kort="SE 1 · hoofdstuk 1 en 2",        # titel in de balk en op de banner
         sub="8 paragrafen · inkomen, besteden, geld en rekenen",
-        intro_eyebrow="Jaar 4 · SE3",
+        intro_eyebrow="Jaar 4 · SE 1",
         key="gs-eco-se3-v1",                  # localStorage-sleutel
         terug="../h.html?p=jaar-4%2Fse-h1-h2-h8",
         bron="se3/bron",                      # map met data.json, reken.js, lab-html.inc (relatief aan economie/)
@@ -92,7 +92,7 @@ s = rep(s, 'href="boekje-1.html">← Overzicht', 'href="%s">← Overzicht' % C["
 s = rex(s, r'<div class="banner" style="[^"]*"><div class="cap">.*?</div></div>',
         '<div class="banner" style="background:linear-gradient(120deg,var(--plum) 0%%,var(--plum-2) 100%%)"><div class="cap"><b>%s</b><span>%s</span></div></div>' % (C["kort"], C["sub"]))
 s = rep(s, "Boekje 1 · SE 1", C["intro_eyebrow"])
-s = rep(s, "Van spinnewiel tot supermarkt.<br>Begin hier.", "Alles om je SE3 te halen.<br>Begin hier.")
+s = rep(s, "Van spinnewiel tot supermarkt.<br>Begin hier.", "Alles om je SE 1 te halen.<br>Begin hier.")
 s = rex(s, r"Alles voor het boekje De industriële samenleving op één plek:[^<]*",
         "Alles voor dit SE-onderdeel op één plek: de PowerPoint per paragraaf, vragen om af te vinken, begrippen, een formule- en rekentrainer, een vraagbank met %d vragen, games, filmpjes en oefentoetsen met nakijkblad." % len(D["BANK"]))
 s = rep(s, 'data-par="H1"><svg', 'data-par="%s"><svg' % first)
