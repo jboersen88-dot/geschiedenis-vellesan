@@ -1,3 +1,18 @@
+## 2026-11-19 · Economie 4 mavo: de drie schoolexamens goed genummerd
+
+De docent meldde dat de SE-indeling van 4 mavo niet klopte. Dit jaar zijn er drie PTA-toetsen: SE 1 over hoofdstuk 1 en 2 (inkomen en consumptie), SE 2 over hoofdstuk 5 en 6 plus hoofdstuk 7 uit het boek van 3 mavo, SE 3 over hoofdstuk 3 en 4.
+
+- **Jaarpagina 4 mavo**, blok "Toetsen en SE's": de tegels heten nu SE 1, SE 2 en SE 3 en staan in die volgorde (`nr` in `SE` in `economie.js`).
+- **SE-pagina's**: de kop en de inleiding noemen het nummer ("SE 1: hoofdstuk 1 en 2", "het eerste schoolexamen van dit jaar"). De deep links zijn niet veranderd.
+- **Oude pagina "SE6"** (Nearpods en nakijkbladen van H7 en H8): heet nu "Herhaling H7 + H8" met het label "Extra · geen schoolexamen". De inhoud en de link zijn gelijk gebleven.
+- **Leeromgeving en oefentoets van H1 + H2** (`se3/app.html`, `se3/toets.html`): in de teksten staat nu "SE 1" in plaats van "SE3". De map heet nog `se3` en de opslagsleutels zijn gelijk, dus leerlingen houden hun voortgang.
+
+**Keuze**: de tegel "eindexamen" is gebleven. De pagina "Herhaling H7 + H8" is niet weggehaald, omdat er nakijkbladen op staan.
+
+**Controleren door de docent**: moet "Herhaling H7 + H8" bij 4 mavo blijven staan, of mag die weg?
+
+**Getest**: vragencheck en linkcheck op 0; a11ycheck meldt alleen `rondleiding/qr/posters.html` (stond al zo). Browsertest op 375 en 820 px, licht en donker, zonder consolefouten: jaarpagina, SE 1 en de leeromgeving van SE 1. **Niet getest**: echte iPad.
+
 ## 2026-11-18 · Economie 3 mavo: H5, H6, H8 en de SE-pagina's H5 + H6 en H7 + H8
 
 Derde en laatste ronde van de opdracht "bouw nu ook de hoofdstukken voor jaar 3 economie voor de mavo". Alle hoofdstukken van 3 mavo staan nu in de nieuwe opzet.

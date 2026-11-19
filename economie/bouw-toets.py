@@ -11,7 +11,7 @@ ECO = os.path.join(ROOT, "economie")
 
 CONFIG = {
     "se3": dict(
-        titel="Online oefentoets · Economie SE3",
+        titel="Online oefentoets · Economie jaar 4 · SE 1",
         key="gs-eco-se3-toets-v1",          # localStorage-sleutel (de Geschiedenis-toets gebruikt gv-toets-v1; zelfde domein)
         bron="se3/bron",
         data="se3/bron/data.json",           # VERS: n, min, pts moeten kloppen met toetsen.json
