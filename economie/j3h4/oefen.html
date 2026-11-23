@@ -176,6 +176,7 @@ code,.calc{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:14px}
 .racer-wrap{display:flex;flex-direction:column;gap:10px}
 .racer-top{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap}
 .racer-frame{width:100%;height:min(780px,calc(100vh - 210px));min-height:560px;border:0;border-radius:22px;box-shadow:var(--shadow);background:#4CB84C;display:block}
+.gtile.gt-haven{background:linear-gradient(135deg,#123a30,#2f8f86);grid-column:1 / -1;min-height:200px;text-decoration:none}
 .gtile .gico{font-size:44px}
 .gtile b{font-size:24px;letter-spacing:-.02em}
 .gtile span{opacity:.9}
@@ -960,6 +961,7 @@ var gWrap=document.getElementById("gWrap");
 function gamesHome(){
 stopSwipe();MEM=null;
 gWrap.innerHTML='<div class="gpick">'+
+'<a class="gtile gt-haven" href="../../havenmeester/?h=j3h4"><span class="gico">⚓</span><b>Havenmeester</b><span>Bouw je eigen haven. Help schepen met de vragen van dit hoofdstuk, verdien munten en verzamel schepen.</span><em>Nieuw · speel in een eigen scherm</em></a>'+
 '<button class="gtile" data-game="swipe"><span class="gico">👆</span><b>Swipe &amp; Scoor</b><span>Veeg elk kaartje naar de juiste kant. Hoe meer goed op rij, hoe meer punten!</span><em>Highscore: '+hs("swipe")+'</em></button>'+
 '<button class="gtile" data-game="memory"><span class="gico">🧠</span><b>Begrippen-memory</b><span>Zoek bij elk begrip de juiste uitleg. Lukt het in zo weinig mogelijk beurten?</span><em>Beste: '+(hs("memory")?hs("memory")+' beurten':'nog geen')+'</em></button>'+
 '</div>';
@@ -1143,7 +1145,7 @@ function route(){var h=location.hash.slice(1).split("/");
 if(h[0]==="toets")show("toets");
 else if(h[0]==="route"){show("route");if(window.EcoRouteApp){if(h[1]==="doel"&&h[2])EcoRouteApp.focus(h[2]);else EcoRouteApp.home();}}
 else if(h[0]==="lab"){show("lab");
-  if(h[1]==="reken"){showLab("reken");if(h[2]){mode=h[2];newR();}}
+  if(h[1]==="reken"){showLab("reken");if(h[2]){if(RGEN[h[2]])mode=h[2];newR();}}
   else if(h[1]==="quiz"){showLab("quiz");if(h[2]==="fouten")startQuiz("fouten");else if(h[2]){quizPar=h[2];quizHome();}}
   else if(h[1]==="begrippen"){showLab("begrippen");if(h[2]){cardFilter=h[2];renderFlash();}}
   else if(h[1])showLab(h[1]);}

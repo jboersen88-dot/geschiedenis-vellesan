@@ -62,7 +62,7 @@ td.code{font-weight:900;letter-spacing:.6mm;font-size:4.6mm}
 .small{font-size:3.4mm;color:#555}
 `;
 
-let html = `<!doctype html><html lang="nl"><head><meta charset="utf-8"><title>QR-posters Vellesan College</title><style>${css}</style></head><body>`;
+let html = `<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>QR-posters Vellesan College</title><style>${css}</style></head><body>`;
 
 const etage = i => (D.etages[i] || {}).naam || "";
 html += `<section class="page overview"><h1>QR-posters rondleiding</h1>

@@ -418,6 +418,12 @@ nav.tabs button span{display:flex!important;flex-direction:column;line-height:1.
 @media (max-width:400px){.otabs nav.tabs button .i{display:none}}
 </style>""")
 
+# Havenmeester (havenmeester/): de nieuwe game met de vragen van dit hoofdstuk, als eerste tegel bij Games
+_swipe = '\'<button class="gtile" data-game="swipe">'
+assert _swipe in s and ".gtile .gico{" in s
+s = s.replace(_swipe, '\'<a class="gtile gt-haven" href="../../havenmeester/?h=%s"><span class="gico">⚓</span><b>Havenmeester</b><span>Bouw je eigen haven. Help schepen met de vragen van dit hoofdstuk, verdien munten en verzamel schepen.</span><em>Nieuw · speel in een eigen scherm</em></a>\'+\n' % name + _swipe, 1)
+s = s.replace(".gtile .gico{", ".gtile.gt-haven{background:linear-gradient(135deg,#123a30,#2f8f86);grid-column:1 / -1;min-height:200px;text-decoration:none}\n.gtile .gico{", 1)
+
 for gone in ["Plus+Jakarta", 'data-tab="les"', 'data-tab="films"', 'class="top"']:
     assert gone not in s, gone
 open(os.path.join(OUT, "oefen.html"), "w", encoding="utf-8").write(s)

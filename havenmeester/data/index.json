@@ -1,0 +1,227 @@
+[
+{
+"id": "gs1",
+"vak": "Geschiedenis",
+"groep": "Jaar 3",
+"titel": "De industriële samenleving",
+"n": 130,
+"nb": 49,
+"ns": 8
+},
+{
+"id": "gs2",
+"vak": "Geschiedenis",
+"groep": "Jaar 3",
+"titel": "Sociale zekerheid en verzorgingsstaat",
+"n": 49,
+"nb": 41,
+"ns": 4
+},
+{
+"id": "j2h1",
+"vak": "Economie",
+"groep": "Jaar 2 mavo",
+"titel": "H1 · Wat heb je nodig?",
+"n": 132,
+"nb": 35,
+"ns": 7
+},
+{
+"id": "j2h2",
+"vak": "Economie",
+"groep": "Jaar 2 mavo",
+"titel": "H2 · Jij en je geld",
+"n": 113,
+"nb": 37,
+"ns": 7
+},
+{
+"id": "j2h3",
+"vak": "Economie",
+"groep": "Jaar 2 mavo",
+"titel": "H3 · Aan het werk?",
+"n": 110,
+"nb": 42,
+"ns": 8
+},
+{
+"id": "j2h4",
+"vak": "Economie",
+"groep": "Jaar 2 mavo",
+"titel": "H4 · Hoe maken we het?",
+"n": 105,
+"nb": 45,
+"ns": 8
+},
+{
+"id": "j2h5",
+"vak": "Economie",
+"groep": "Jaar 2 mavo",
+"titel": "H5 · Is handel iets voor jou?",
+"n": 75,
+"nb": 38,
+"ns": 6
+},
+{
+"id": "j2h6",
+"vak": "Economie",
+"groep": "Jaar 2 mavo",
+"titel": "H6 · Wat doet de overheid?",
+"n": 52,
+"nb": 36,
+"ns": 6
+},
+{
+"id": "j3h1",
+"vak": "Economie",
+"groep": "Jaar 3 mavo",
+"titel": "H1 · Hoe welvarend ben jij?",
+"n": 51,
+"nb": 49,
+"ns": 7
+},
+{
+"id": "j3h2",
+"vak": "Economie",
+"groep": "Jaar 3 mavo",
+"titel": "H2 · Wat voor consument ben jij?",
+"n": 45,
+"nb": 42,
+"ns": 6
+},
+{
+"id": "j3h3",
+"vak": "Economie",
+"groep": "Jaar 3 mavo",
+"titel": "H3 · De bank en jouw geld",
+"n": 49,
+"nb": 41,
+"ns": 6
+},
+{
+"id": "j3h4",
+"vak": "Economie",
+"groep": "Jaar 3 mavo",
+"titel": "H4 · Kies je voor zekerheid?",
+"n": 44,
+"nb": 38,
+"ns": 5
+},
+{
+"id": "j3h5",
+"vak": "Economie",
+"groep": "Jaar 3 mavo",
+"titel": "H5 · Is er werk voor jou?",
+"n": 48,
+"nb": 49,
+"ns": 6
+},
+{
+"id": "j3h6",
+"vak": "Economie",
+"groep": "Jaar 3 mavo",
+"titel": "H6 · Productie en markt",
+"n": 47,
+"nb": 42,
+"ns": 6
+},
+{
+"id": "j3h7",
+"vak": "Economie",
+"groep": "Jaar 3 mavo",
+"titel": "H7 · De overheid voor ons allemaal",
+"n": 53,
+"nb": 38,
+"ns": 5
+},
+{
+"id": "j3h8",
+"vak": "Economie",
+"groep": "Jaar 3 mavo",
+"titel": "H8 · Over de grens",
+"n": 43,
+"nb": 37,
+"ns": 5
+},
+{
+"id": "j3vh2",
+"vak": "Economie",
+"groep": "Jaar 3 havo/vwo",
+"titel": "H2 · De rol van geld",
+"n": 49,
+"nb": 30,
+"ns": 6
+},
+{
+"id": "j4h1",
+"vak": "Economie",
+"groep": "Jaar 4 mavo",
+"titel": "H1 · Verdien je genoeg?",
+"n": 130,
+"nb": 54,
+"ns": 9
+},
+{
+"id": "j4h2",
+"vak": "Economie",
+"groep": "Jaar 4 mavo",
+"titel": "H2 · Geld moet rollen",
+"n": 135,
+"nb": 59,
+"ns": 10
+},
+{
+"id": "j4h3",
+"vak": "Economie",
+"groep": "Jaar 4 mavo",
+"titel": "H3 · We gaan voor winst",
+"n": 109,
+"nb": 44,
+"ns": 8
+},
+{
+"id": "j4h4",
+"vak": "Economie",
+"groep": "Jaar 4 mavo",
+"titel": "H4 · Aan het werk",
+"n": 59,
+"nb": 48,
+"ns": 5
+},
+{
+"id": "j4h5",
+"vak": "Economie",
+"groep": "Jaar 4 mavo",
+"titel": "H5 · Kan de overheid dat regelen?",
+"n": 61,
+"nb": 39,
+"ns": 7
+},
+{
+"id": "j4h6",
+"vak": "Economie",
+"groep": "Jaar 4 mavo",
+"titel": "H6 · De overheid en ons inkomen",
+"n": 43,
+"nb": 30,
+"ns": 4
+},
+{
+"id": "j4h7",
+"vak": "Economie",
+"groep": "Jaar 4 mavo",
+"titel": "H7 · Nederland handelsland",
+"n": 50,
+"nb": 36,
+"ns": 5
+},
+{
+"id": "j4h8",
+"vak": "Economie",
+"groep": "Jaar 4 mavo",
+"titel": "H8 · Welvaart wereldwijd",
+"n": 49,
+"nb": 36,
+"ns": 5
+}
+]

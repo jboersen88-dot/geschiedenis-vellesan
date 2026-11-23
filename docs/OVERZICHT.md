@@ -126,6 +126,7 @@ Alle andere hoofdstukken (jaar 2 H3 tot en met H6, jaar 3 mavo H3 tot en met H8,
 
 | Game | Waar | Hoe het werkt |
 |---|---|---|
+| **Havenmeester** | `havenmeester/` (`?h=<pakket>`) | Bouw je eigen haven. Een dienst van 5 minuten: 3 schepen en het gouden schip, met zes spellen (Lossen, Douane, Sorteerband, Aanmeren, Flessenpost, Konvooi) en bonuskaarten. Munten voor 9 gebouwen en 12 schepen. Vragen van 25 hoofdstukken uit de bestaande vragenbanken (`havenmeester/data/`). Opslag `havenmeester-v1`. |
 | **Geschiedenis-Racer** | `racer.html` | Race over 5 rijstroken, auto ontwijkt obstakels en raapt munten. Bij elke tankstop een minigame van 5 vragen: quiz, swipen (sorteren), vallende blokken, poorten, koppelen. Goede antwoorden geven benzine. 186 vragen en 10 sorteersets bovenaan het bestand. Geen klok bij meerkeuze, 100 punten per goed antwoord. |
 | **Edu-Racer Economie** | in `economie/j2h1/oefen.html`, `j2h2/oefen.html` en `economie/apps/jaar-4_se-h1-h2-h8_1.html` | Dezelfde racemotor met economievragen (jaar 2 H2: 117 vragen en 16 sorteersets). Op de tegel staat "Vragen nog niet door de docent gecontroleerd" tot de docent ze heeft nagekeken (besluit 4). |
 | **Swipe & Scoor** | Oefenlab, Games | Kaarten naar links of rechts vegen in de goede groep (sorteersets). |
@@ -172,6 +173,7 @@ De drie speurtochten hebben elk een eigen Cloudflare Worker (codes, pestkaarten,
 | `economie/bouw-route.py <map>` | `route.json` voor Mijn route (indeling in `SPEC` in het script) |
 | `economie/bouw-toets.py <map>` | `toets.html` uit `bron/toetsen.json` |
 | `economie/bouw-eco.py se3` | `economie/se3/app.html` uit `app.html` en `se3/bron/` |
+| `havenmeester/bouw.py` | `havenmeester/data/<pakket>.json` en `index.json`: de vragen voor Havenmeester, uit `app.html`, `boekje-2/app.html` en elke `economie/<map>/oefen.html`. Draai dit na elke wijziging aan een vragenbank. |
 
 Volgorde voor een nieuw Economie-hoofdstuk: dia's maken, `bron/` vullen, een regel in `RIJK` (en `CONFIG` in de scripts), dan `bouw-pagina.py` of `maak-lesapp.py`, `bouw-route.py`, `bouw-oefen.py` en `bouw-toets.py`. Pas nooit een gebouwd bestand met de hand aan: pas de bron of het script aan en bouw opnieuw.
 
