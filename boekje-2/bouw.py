@@ -93,6 +93,9 @@ s = re.sub(r'<a class="gtile" href="doeboek\.html".*?</a>', lambda m: doeboek_te
 s = re.sub(r'<a class="gtile" href="verhaal\.html".*?</a>', "", s, flags=re.S)
 assert s.count("doeboek.html?h=") == 2
 s = s.replace('href="kaart.html"', 'href="../kaart.html"').replace('href="beeldquiz.html"', 'href="../beeldquiz.html"')
+# Havenmeester speelt in boekje 2 met het vragenpakket gs2 (havenmeester/bouw.py)
+assert 'href="havenmeester/?h=gs1"' in s
+s = s.replace('href="havenmeester/?h=gs1"', 'href="../havenmeester/?h=gs2"')
 for gone in ["racer.html", "nakijken.html", "toets.html?t="]:
     assert gone not in s, gone
 

@@ -176,6 +176,7 @@ code,.calc{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:14px}
 .racer-wrap{display:flex;flex-direction:column;gap:10px}
 .racer-top{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap}
 .racer-frame{width:100%;height:min(780px,calc(100vh - 210px));min-height:560px;border:0;border-radius:22px;box-shadow:var(--shadow);background:#4CB84C;display:block}
+.gtile.gt-haven{background:linear-gradient(135deg,#123a30,#2f8f86);grid-column:1 / -1;min-height:200px;text-decoration:none}
 .gtile .gico{font-size:44px}
 .gtile b{font-size:24px;letter-spacing:-.02em}
 .gtile span{opacity:.9}
@@ -838,8 +839,8 @@ function qp(t){return '<p class="qq">'+t+'</p>';}
 
 var FORM={
 budget:"inkomsten − uitgaven",
-maand:"weekbedrag × 52 : 12",
-week:"maandbedrag × 12 : 52",
+maand:"(weekbedrag × 52) : 12",
+week:"(maandbedrag × 12) : 52",
 saldo:"oud saldo + bij − af",
 pct:"(nieuw − oud) : oud × 100",
 procvan:"(percentage : 100) × totaal",
@@ -860,9 +861,9 @@ var rows=[["Inkomsten per maand",""]].concat(inc.map(function(x){return [x[0],eu
 return{f:"budget",h:"Is er een overschot of een tekort? Bereken het verschil (typ een min-teken bij een tekort).",body:stmt(rows,"cpi"),a:a,d:2,u:"€",calc:"Totaal inkomsten: "+eur(ti)+"\nTotaal uitgaven: "+eur(to)+"\n"+eur(ti)+" − "+eur(to)+" = "+eur(a)+(a<0?"\nTekort: de uitgaven zijn hoger dan de inkomsten.":a>0?"\nOverschot: er blijft geld over.":"\nIn balans.")};},
 maand:function(){
 if(Math.random()<0.55){var w=pick([["Je verdient met je bijbaan ",35,140],["Je krijgt aan zakgeld ",8,25],["Je gezin geeft aan boodschappen ",120,240]]),x=money(w[1],w[2]),j=r(x*52,2),a=r(x*52/12,2);
-return{f:"maand",h:"Hoeveel is dat per maand? (2 decimalen)",body:qp(w[0]+eur(x)+" per week."),a:a,d:2,u:"€",calc:"Week → maand: × 52 : 12\n"+eur(x)+" × 52 = "+eur(j)+" per jaar\n"+eur(j)+" : 12 = "+eur(a)+" per maand\n(Niet × 4: een maand is langer dan 4 weken!)"};}
+return{f:"maand",h:"Hoeveel is dat per maand? (2 decimalen)",body:qp(w[0]+eur(x)+" per week."),a:a,d:2,u:"€",calc:"Week → maand: (weekbedrag × 52) : 12\n"+eur(x)+" × 52 = "+eur(j)+" per jaar\n"+eur(j)+" : 12 = "+eur(a)+" per maand\n(Niet × 4: een maand is langer dan 4 weken!)"};}
 var m=pick([["Je huur is ",450,950],["Je telefoonabonnement kost ",12,45],["Je sportcontributie is ",15,40],["Je verdient met je bijbaan ",180,520]]),y=money(m[1],m[2]),j2=r(y*12,2),b=r(y*12/52,2);
-return{f:"week",h:"Hoeveel is dat per week? (2 decimalen)",body:qp(m[0]+eur(y)+" per maand."),a:b,d:2,u:"€",calc:"Maand → week: × 12 : 52\n"+eur(y)+" × 12 = "+eur(j2)+" per jaar\n"+eur(j2)+" : 52 = "+eur(b)+" per week"};},
+return{f:"week",h:"Hoeveel is dat per week? (2 decimalen)",body:qp(m[0]+eur(y)+" per maand."),a:b,d:2,u:"€",calc:"Maand → week: (maandbedrag × 12) : 52\n"+eur(y)+" × 12 = "+eur(j2)+" per jaar\n"+eur(j2)+" : 52 = "+eur(b)+" per week"};},
 saldo:function(){var o=money(40,900),plusL=shuffle(["Loon bijbaan","Zakgeld","Terugbetaling webshop","Verjaardagsgeld","Tikkie van een vriend"]),minL=shuffle(["Supermarkt","Telefoonabonnement","Sportschool","Webshop","Bioscoop","Kapper","Opladen ov-chipkaart"]),rows=[["Oud saldo (credit)",eur(o)]],sp=0,sm=0,k=rnd(3,5);
 for(var i=0;i<k;i++){var plus=i===0||Math.random()<0.35;if(plus){var x=money(10,250);sp+=x;rows.push([plusL.pop(),"+ "+eur(x)]);}else{var y=money(5,140);sm+=y;rows.push([minL.pop(),"− "+eur(y)]);}}
 sp=r(sp,2);sm=r(sm,2);var a=r(o+sp-sm,2);rows.push(["Nieuw saldo","?",1]);
@@ -1023,6 +1024,7 @@ var gWrap=document.getElementById("gWrap");
 function gamesHome(){
 stopSwipe();MEM=null;
 gWrap.innerHTML='<div class="gpick">'+
+'<a class="gtile gt-haven" href="../../havenmeester/?h=j2h2"><span class="gico">⚓</span><b>Havenmeester</b><span>Bouw je eigen haven. Help schepen met de vragen van dit hoofdstuk, verdien munten en verzamel schepen.</span><em>Nieuw · speel in een eigen scherm</em></a>'+
 '<button class="gtile" data-game="swipe"><span class="gico">👆</span><b>Swipe &amp; Scoor</b><span>Veeg elk kaartje naar de juiste kant. Hoe meer goed op rij, hoe meer punten!</span><em>Highscore: '+hs("swipe")+'</em></button>'+
 '<button class="gtile" data-game="memory"><span class="gico">🧠</span><b>Begrippen-memory</b><span>Zoek bij elk begrip de juiste uitleg. Lukt het in zo weinig mogelijk beurten?</span><em>Beste: '+(hs("memory")?hs("memory")+' beurten':'nog geen')+'</em></button>'+
    '<button class="gtile" data-game="racer"><span class="gico">🏎️</span><b>Edu-Racer</b><span>Race over de weg, ontwijk auto\'s en overstekers, en tank bij met goede antwoorden. Haal jij alle 7 tankstops?</span><em>Vragen nog niet door de docent gecontroleerd</em></button>'+
@@ -1207,7 +1209,7 @@ function route(){var h=location.hash.slice(1).split("/");
 if(h[0]==="toets")show("toets");
 else if(h[0]==="route"){show("route");if(window.EcoRouteApp){if(h[1]==="doel"&&h[2])EcoRouteApp.focus(h[2]);else EcoRouteApp.home();}}
 else if(h[0]==="lab"){show("lab");
-  if(h[1]==="reken"){showLab("reken");if(h[2]){mode=h[2];newR();}}
+  if(h[1]==="reken"){showLab("reken");if(h[2]){if(RGEN[h[2]])mode=h[2];newR();}}
   else if(h[1]==="quiz"){showLab("quiz");if(h[2]==="fouten")startQuiz("fouten");else if(h[2]){quizPar=h[2];quizHome();}}
   else if(h[1]==="begrippen"){showLab("begrippen");if(h[2]){cardFilter=h[2];renderFlash();}}
   else if(h[1])showLab(h[1]);}

@@ -1,3 +1,35 @@
+## 2026-11-23 · Havenmeester: een nieuwe game naast de racer
+
+De docent vroeg om een compleet nieuwe game: moderner dan de racer, mooier, met meer opties, en met de stof in het spel zelf. De racer blijft gewoon bestaan.
+
+**Waarom deze vorm.** Eerst gekeken wat 13- tot 15-jarigen nu spelen (blogs en overzichten van gratis browsergames, geen onderzoek onder leerlingen). Wat steeds terugkomt: iets opbouwen dat van jou is (tycoon- en bouwspellen), verzamelen en verbeteren, korte rondes van een paar minuten, tijdens een ronde een bonus kiezen, en een reeks dagen op rij. Daar is Havenmeester op gebouwd. Het is een eigen spel, geen namaak van een bestaand spel.
+
+**Wat het is** (`havenmeester/`, live op `/havenmeester/`):
+- **Je eigen haven**: een getekende, bewegende haven (golven, schepen, molens, kraan, vuurtoren, dag in licht en nacht in donker). Met munten bouw je 9 gebouwen, elk in 3 niveaus. Nieuwe gebouwen geven nieuwe spellen of een voordeel (meer munten, rente van de bank, dagbonus van de markt).
+- **Een dienst** duurt ongeveer 5 minuten: 3 schepen en als laatste het gouden schip (dubbele munten, met de vragen die je fout had). Na elk schip kies je één van drie bonuskaarten.
+- **Zes spellen, de stof is het spel**: Lossen (meerkeuze: de goede container), Douane (Goed of fout?), Sorteerband (kisten naar de goede loods, uit de sorteersets), Aanmeren (begrip en omschrijving, bij Geschiedenis ook oorzaak en gevolg), Flessenpost (het begrip spellen bij de omschrijving) en Konvooi (tijdlijn op volgorde, alleen Geschiedenis).
+- **Verzamelen**: 12 schepen, 6 vlagkleuren, 10 rangen van Dekhulp tot Admiraal.
+- **Leren**: een fout antwoord komt sneller terug, wat je kent komt minder vaak. Na een fout staat er "Juiste antwoord:" met de uitleg uit de vragenbank. Per hoofdstuk zie je hoeveel procent je beheerst (twee keer goed is beheerst). Aan het eind van een dienst staan je fouten onder elkaar.
+- **Stof**: 25 pakketten, alle hoofdstukken met een oefenomgeving (Economie jaar 2, 3 en 4, en de twee boekjes Geschiedenis). Je kunt ook één of meer paragrafen kiezen.
+
+**Hoe het gebouwd is.**
+- Geen nieuwe vragen. `havenmeester/bouw.py` haalt meerkeuze (`BANK`), begrippen (`CARDS`), sorteersets (`SORT`), tijdlijn (`TL`) en oorzaak en gevolg (`CG`) uit `app.html`, `boekje-2/app.html` en elke `economie/<map>/oefen.html`, en schrijft `havenmeester/data/<pakket>.json`. **Draai dit script opnieuw als een vragenbank verandert.**
+- `haven.js` (spel), `kunst.js` (alle tekeningen als SVG, in code getekend, geen plaatjes) en `haven.css`. Geen bibliotheken. Alleen `transform` en `opacity` bewegen, en alles staat stil bij "minder beweging".
+- Voortgang alleen op het apparaat, nieuwe sleutel `havenmeester-v1`. Geluid staat standaard uit.
+- Tegel "Havenmeester" bovenaan bij Games in alle 23 oefenomgevingen van Economie (via `bouw-oefen.py`, link `havenmeester/?h=<map>`) en in de app van boekje 1 en boekje 2.
+
+**Bijvangst van het opnieuw bouwen van alle oefenomgevingen**: `j2h2` kreeg de haakjes in de formules week/maand ((weekbedrag × 52) : 12) die al in de bron stonden, en `j2h1` en `j2h2` de beveiliging voor oude rekenlinks van 19 november. `j4h6/data.json` gaf bij het bouwen minder klikstappen dan er staan; dat bestand is niet veranderd. `rondleiding/qr/posters.html` had geen viewport; die staat er nu in (ook in `maak-qr.js`).
+
+**Getest**: een testrobot heeft in Chromium zes hele diensten gespeeld (375 px licht, 820 px donker en licht, met Geschiedenis en Economie jaar 2 en 4), met goede en foute antwoorden, in alle zes spellen, daarna bouwen, vloot, logboek en stof kiezen. Ook: eerste keer openen, paragraaf kiezen, toetsenbord, dienst stoppen, de tegel in de oefenomgeving, 1180 en 1280 px, en "minder beweging". Geen consolefouten, geen horizontaal scrollen. vragencheck, linkcheck en a11ycheck op 0.
+
+**Niet getest**: op een echte iPad in Safari (alleen Chromium met aanraking). Vegen op de Sorteerband is alleen met tikken getest. Het geluid is niet beluisterd.
+
+**Wat de docent moet controleren**:
+- Speel een paar diensten op een iPad en kijk of het tempo en de prijzen kloppen (eerste dienst levert ongeveer 400 tot 900 munten op, het duurste schip kost 12.000).
+- Bij Douane staat een meerkeuzevraag met één antwoord erbij, en de leerling kiest Goed of Fout. Bij rekenvragen moet de leerling dan zelf rekenen. Zeg het als je rekenvragen daar liever niet wilt.
+- De Economie-vragen komen uit de Quiz van de oefenomgeving. Daar staat geen melding "nog niet gecontroleerd" bij, dus hier ook niet.
+- Er is geen voortgangscode voor Havenmeester. Kan erbij als je de stand per leerling wilt inzamelen.
+
 ## 2026-11-19 · Economie 4 mavo H6: bijtelling en box 3 eruit, plaatjes in de dia's vernieuwd
 
 De docent besloot: de bijtelling mag weg (staat niet meer in de basisstof van het boek), box 3 wordt niet meer behandeld (komt al jaren niet meer in het eindexamen), en de oude plaatjes in de PowerPoints mogen worden bijgewerkt, zolang de verhaallijn gelijk blijft.
