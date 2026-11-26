@@ -71,7 +71,16 @@
     if (!AC) {
       var C = window.AudioContext || window.webkitAudioContext;
       if (!C) return null;
-      try { AC = new C(); master = AC.createGain(); master.gain.value = 0.35; master.connect(AC.destination); } catch (e) { return null; }
+      try {
+        AC = new C(); master = AC.createGain(); master.gain.value = 0.35;
+        /* zachte compressor en een kleine galm: klinkt voller dan losse piepjes */
+        var comp = AC.createDynamicsCompressor(); comp.threshold.value = -18; comp.ratio.value = 4;
+        master.connect(comp); comp.connect(AC.destination);
+        var len = Math.floor(AC.sampleRate * 1.1), ir = AC.createBuffer(2, len, AC.sampleRate);
+        for (var ch = 0; ch < 2; ch++) { var dd = ir.getChannelData(ch); for (var k = 0; k < len; k++) dd[k] = (Math.random() * 2 - 1) * Math.pow(1 - k / len, 3); }
+        var rev = AC.createConvolver(), wet = AC.createGain(); rev.buffer = ir; wet.gain.value = 0.22;
+        master.connect(rev); rev.connect(wet); wet.connect(comp);
+      } catch (e) { return null; }
     }
     if (AC.state === "suspended") { try { AC.resume(); } catch (e) {} }
     return AC;
@@ -83,7 +92,18 @@
     if (slideTo) o.frequency.exponentialRampToValueAtTime(slideTo, t + dur);
     g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(vol || 0.5, t + 0.012);
     g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
-    o.connect(g); g.connect(master); o.start(t); o.stop(t + dur + 0.05);
+    if (type === "square" || type === "sawtooth") { var lp = a.createBiquadFilter(); lp.type = "lowpass"; lp.frequency.value = 2400; o.connect(lp); lp.connect(g); } else o.connect(g);
+    g.connect(master); o.start(t); o.stop(t + dur + 0.05);
+  }
+  /* ruis die door een filter zwiept: een zachte "swoosh" bij het wisselen van scherm */
+  function sweep(t0, dur, vol, f1, f2) {
+    var a = audio(); if (!a) return;
+    var len = Math.floor(a.sampleRate * dur), b = a.createBuffer(1, len, a.sampleRate), d = b.getChannelData(0);
+    for (var i = 0; i < len; i++) d[i] = Math.random() * 2 - 1;
+    var s = a.createBufferSource(), g = a.createGain(), f = a.createBiquadFilter(), t = a.currentTime + (t0 || 0);
+    f.type = "bandpass"; f.Q.value = 1.2; f.frequency.setValueAtTime(f1, t); f.frequency.exponentialRampToValueAtTime(f2, t + dur);
+    g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(vol, t + dur * 0.45); g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+    s.buffer = b; s.connect(f); f.connect(g); g.connect(master); s.start(t);
   }
   function noise(t0, dur, vol, hp) {
     var a = audio(); if (!a) return;
@@ -94,8 +114,12 @@
     s.buffer = b; g.gain.value = vol || 0.3; s.connect(f); f.connect(g); g.connect(master);
     s.start(a.currentTime + (t0 || 0));
   }
+  var lastSfx = 0;
   function sfx(name) {
     if (!state.geluid) return;
+    var now = Date.now();
+    if ((name === "zoomin" || name === "zoomout") && now - lastSfx < 250) return;
+    lastSfx = now;
     var m = /^note:(\d+)$/.exec(name || "");
     if (m) { var f = 523.25 * Math.pow(2, +m[1] / 12); tone(f, 0, 0.5, "triangle", 0.5); tone(f * 2, 0, 0.25, "sine", 0.12); return; }
     switch (name) {
@@ -109,6 +133,8 @@
       case "fizz": noise(0, 1.4, 0.35, 2500); break;
       case "unlock": tone(392, 0, 0.1, "square", 0.15); tone(523, 0.08, 0.1, "square", 0.15); tone(784, 0.16, 0.35, "triangle", 0.4); noise(0, 0.08, 0.3, 3000); break;
       case "win": [523, 659, 784, 1047].forEach(function (f, i) { tone(f, i * 0.11, 0.4, "triangle", 0.35); }); tone(1568, 0.45, 0.6, "sine", 0.2); break;
+      case "zoomin": sweep(0, 0.38, 0.16, 400, 2600); break;
+      case "zoomout": sweep(0, 0.38, 0.14, 2200, 350); break;
       case "boom": tone(110, 0, 0.6, "sine", 0.6, 40); noise(0, 0.5, 0.25, 200); break;
     }
   }
@@ -245,6 +271,7 @@
     var key = (cls || "x").split(" ")[0], d = key in DEPTH ? DEPTH[key] : 3;
     var dir = lastDepth < 0 ? "" : d > lastDepth ? "deeper" : d < lastDepth ? "back" : "side";
     lastDepth = d;
+    if (dir === "deeper" || dir === "back") sfx(dir === "deeper" ? "zoomin" : "zoomout");
     var old = root.querySelector(".view");
     var r = old && !reduced && dir ? old.getBoundingClientRect() : null;
     root.textContent = "";

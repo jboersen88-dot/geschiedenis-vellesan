@@ -1,3 +1,11 @@
+## 2026-11-26 · Open dag: ronde 8, voller geluid
+
+- Alle geluidjes gaan nu door een zachte compressor en een kleine galm (zelf berekend, geen geluidsbestanden). Scherpe piepjes (blok- en zaagtand) krijgen een filter, zodat ze minder schel klinken.
+- Nieuw: een zachte "swoosh" omhoog als je inzoomt naar een stop en omlaag als je terug gaat. Speelt niet als er net al een ander geluidje klonk.
+
+**Getest**: Chromium op 375 en 820 px met geluid aan, hele route en speelhal, geen consolefouten.
+**Niet getest**: hoe het klinkt op een iPad-speaker; de galm kan in een drukke gang wegvallen.
+
 ## 2026-11-26 · Open dag: ronde 7, nieuwe startfilm en overgangen
 
 - Startfilm (`rondleiding/media/intro.mp4`) opnieuw gemonteerd: 8 korte shots uit de eigen filmpjes (hal, aula, lab, binnentuin, biologie, tekenzolder, handvaardigheid, bibliotheek), met dezelfde warme kleurcorrectie, een vignet en steeds een andere overvloeier. 15,7 s, 1,2 MB, zonder geluid. Nieuwe posterfoto `intro.jpg`.
