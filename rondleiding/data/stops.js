@@ -9,6 +9,11 @@ window.RONDLEIDING = {
   intro: { clip: "media/intro.mp4", poster: "media/intro.jpg" },
   voiceover: "voiceover/",            // map met <id>.mp3 van de vertelstem (mag leeg zijn)
   kluis: { code: "1926", hint: "Het is het jaar waarin het oude gebouw is gebouwd." },
+  // Pijlen in de radar (heads-up display). De iPad weet waar je bent door de laatst gescande poster
+  // en kijkt met het kompas welke kant je op kijkt. "draai" = de kompasrichting (graden) van "boven"
+  // op de plattegrond. Instellen: open de rondleiding met ?ijk=1, ga bij een poster staan, richt op een plek.
+  // "assen" = hoe de schuine plattegrond loopt (richting van de lange gang en van de aula, in beeldpunten).
+  hud: { draai: null, kijkhoek: 60, assen: [[0.94, -0.35], [0.45, 0.89]] },
   // De prijs: na zoveel gespeelde spelletjes (stops en speelhal samen) mag je de grote kluis kraken.
   // Verander "aantal" om het makkelijker of moeilijker te maken. "tekst" staat op de leerlingenpas.
   prijs: { aantal: 8, tekst: "Laat je pas zien aan iemand van de school. Dan krijg je je prijs!" },
@@ -19,7 +24,7 @@ window.RONDLEIDING = {
   ],
   stops: [
     {
-      id: "s01", item: ["🪪", "Schoolpas"], code: "ZON", naam: "Ingang en receptie", sub: "Hier begint je missie", etage: 0, x: 35, y: 74,
+      id: "s01", kort: "Receptie", item: ["🪪", "Schoolpas"], code: "ZON", naam: "Ingang en receptie", sub: "Hier begint je missie", etage: 0, x: 35, y: 74,
       clip: "media/s01.mp4", poster: "media/s01.jpg",
       uitleg: "Je komt binnen door de glazen schuifdeuren. Bij de receptie zitten de conciërges. Ben je ziek of te laat? Dan meld je je hier.",
       loop: "Start bij de hoofdingang. Loop door de schuifdeuren naar de receptie.",
@@ -28,7 +33,7 @@ window.RONDLEIDING = {
       ]
     },
     {
-      id: "s02", item: ["📅", "Rooster"], code: "BOOT", naam: "Hal 1", sub: "Het hart van de school", etage: 0, x: 46, y: 55,
+      id: "s02", kort: "Hal 1", item: ["📅", "Rooster"], code: "BOOT", naam: "Hal 1", sub: "Het hart van de school", etage: 0, x: 46, y: 55,
       clip: "media/s02.mp4", poster: "media/s02.jpg",
       uitleg: "In de pauze zit je hier op de gele zitplekken. Op het scherm aan de muur staat of een les uitvalt of verplaatst is.",
       loop: "Loop vanaf de receptie de grote hal in.",
@@ -37,7 +42,7 @@ window.RONDLEIDING = {
       ]
     },
     {
-      id: "s03", item: ["🔑", "Kluissleutel"], code: "KAAS", naam: "De kluisjes", sub: "Jouw eigen kluisje", etage: 0, x: 27, y: 56,
+      id: "s03", kort: "Kluisjes", item: ["🔑", "Kluissleutel"], code: "KAAS", naam: "De kluisjes", sub: "Jouw eigen kluisje", etage: 0, x: 27, y: 56,
       clip: "media/s03.mp4", poster: "media/s03.jpg",
       uitleg: "Iedere leerling krijgt een eigen kluisje. Daar gaan je jas, je tas en je boeken in. Zo hoef je niet alles mee te sjouwen.",
       loop: "Loop vanuit de hal naar de oranje kluisjes.",
@@ -51,7 +56,7 @@ window.RONDLEIDING = {
       ]
     },
     {
-      id: "s04", item: ["🎹", "Bladmuziek"], code: "MAAN", naam: "De aula", sub: "Eten, muziek en dans", etage: 0, x: 16, y: 59, cijfer: 1,
+      id: "s04", kort: "Aula", item: ["🎹", "Bladmuziek"], code: "MAAN", naam: "De aula", sub: "Eten, muziek en dans", etage: 0, x: 16, y: 59, cijfer: 1,
       clip: "media/s04.mp4", poster: "media/s04.jpg",
       uitleg: "In de aula eet en drink je in de pauze. Er staat een gele piano. Ook dans en muziek gebruiken deze ruimte.",
       loop: "Loop langs de kluisjes naar de grote ruimte met de lange tafels.",
@@ -60,7 +65,7 @@ window.RONDLEIDING = {
       ]
     },
     {
-      id: "s05", item: ["🥤", "Drinkfles"], code: "TAART", naam: "Eten en drinken", sub: "Even pauze", etage: 0, x: 33, y: 42,
+      id: "s05", kort: "Eten en drinken", item: ["🥤", "Drinkfles"], code: "TAART", naam: "Eten en drinken", sub: "Even pauze", etage: 0, x: 33, y: 42,
       clip: "media/s05.mp4", poster: "media/s05.jpg",
       uitleg: "Hier staan twee automaten: één voor drinken en één voor snacks. Je mag ook je eigen lunch meenemen.",
       loop: "Loop vanuit de aula terug richting de hal. Je komt langs de automaten.",
@@ -69,7 +74,7 @@ window.RONDLEIDING = {
       ]
     },
     {
-      id: "s06", item: ["🔨", "Hamer"], code: "HAAS", naam: "Handvaardigheid", sub: "Lokaal B12", etage: 0, x: 53, y: 69,
+      id: "s06", kort: "Handvaardigheid", item: ["🔨", "Hamer"], code: "HAAS", naam: "Handvaardigheid", sub: "Lokaal B12", etage: 0, x: 53, y: 69,
       clip: "media/s06.mp4", poster: "media/s06.jpg",
       uitleg: "Dit lokaal is een echte werkplaats, met werkbanken en bankschroeven. Hier maak je dingen met je handen. In de vitrine staat werk van leerlingen.",
       loop: "Loop terug naar de hal en zoek lokaal B12.",
@@ -78,7 +83,7 @@ window.RONDLEIDING = {
       ]
     },
     {
-      id: "s20", item: ["🤝", "Hulpkaart"], code: "BEER", naam: "Hal 2: wie helpt jou?", sub: "Rector, leerlingcoördinator en docenten", etage: 0, x: 40, y: 25,
+      id: "s20", kort: "Rector en docentenkamer", item: ["🤝", "Hulpkaart"], code: "BEER", naam: "Hal 2: wie helpt jou?", sub: "Rector, leerlingcoördinator en docenten", etage: 0, x: 40, y: 25,
       clip: "media/s20.mp4", poster: "media/s20.jpg",
       uitleg: "Hal 2 ligt in het oude gebouw uit 1926. Het is een monument, daarom ziet het er nog bijna net zo uit als vroeger. Hier zitten de rector, de baas van de school, de leerlingcoördinator en de docentenkamer. Zit je ergens mee? Hier helpen ze je.",
       loop: "Loop vanuit de hal verder het oude gebouw in, naar de rode deuren.",
@@ -89,7 +94,7 @@ window.RONDLEIDING = {
       ]
     },
     {
-      id: "s08", item: ["🧮", "Rekenmachine"], code: "DRAAK", naam: "De gang met B01 tot B07", sub: "Elke les een ander lokaal", etage: 0, x: 60, y: 27,
+      id: "s08", kort: "Economie en wiskunde", item: ["🧮", "Rekenmachine"], code: "DRAAK", naam: "De gang met B01 tot B07", sub: "Elke les een ander lokaal", etage: 0, x: 60, y: 27,
       clip: "media/s08.mp4", poster: "media/s08.jpg",
       uitleg: "In deze gang krijg je economie, wiskunde, biologie, natuurkunde en scheikunde. Anders dan op de basisschool loop je elke les naar een ander lokaal.",
       loop: "Loop vanuit Hal 2 de gang in. Je ziet lokalen met een B en een nummer.",
@@ -100,7 +105,7 @@ window.RONDLEIDING = {
       ]
     },
     {
-      id: "s09", item: ["🦴", "Botje"], code: "PAARD", naam: "Biologie", sub: "Lokaal B05", etage: 0, x: 67, y: 6,
+      id: "s09", kort: "Biologie", item: ["🦴", "Botje"], code: "PAARD", naam: "Biologie", sub: "Lokaal B05", etage: 0, x: 67, y: 6,
       clip: "media/s09.mp4", poster: "media/s09.jpg",
       uitleg: "In dit biologielokaal staat een skelet. De stoelen lopen omhoog, net als in een klein theater. Zo ziet iedereen de proeftafel goed.",
       loop: "Loop de gang door tot het einde. Daar is B05.",
@@ -109,7 +114,7 @@ window.RONDLEIDING = {
       ]
     },
     {
-      id: "s16", item: ["🥽", "Labbril"], code: "KROON", naam: "Het lab", sub: "Natuur- en scheikunde, B06 en B07", etage: 0, x: 77, y: 15, cijfer: 9,
+      id: "s16", kort: "Het lab", item: ["🥽", "Labbril"], code: "KROON", naam: "Het lab", sub: "Natuur- en scheikunde, B06 en B07", etage: 0, x: 77, y: 15, cijfer: 9,
       clip: "media/s16.mp4", poster: "media/s16.jpg",
       uitleg: "In B06 en B07 krijg je natuurkunde en scheikunde. Daar doe je zelf proefjes. In de gang staan glazen kasten met spullen om te bekijken.",
       loop: "Loop vanaf de biologie de hoek om, langs de glazen kasten.",
@@ -118,7 +123,7 @@ window.RONDLEIDING = {
       ]
     },
     {
-      id: "s17", item: ["📐", "Geodriehoek"], code: "WOLK", naam: "Nieuwbouw beneden", sub: "B08 tot B11", etage: 0, x: 78, y: 46,
+      id: "s17", kort: "Wiskunde, B08 en B09", item: ["📐", "Geodriehoek"], code: "WOLK", naam: "Nieuwbouw beneden", sub: "B08 tot B11", etage: 0, x: 78, y: 46,
       clip: "media/s17.mp4", poster: "media/s17.jpg",
       uitleg: "Dit is de begane grond van het nieuwe gebouw. In B08 en B09 krijg je wiskunde. Door de grote ramen kijk je op de binnentuin.",
       loop: "Loop naar het nieuwe gebouw aan de andere kant van de binnentuin.",
@@ -127,7 +132,7 @@ window.RONDLEIDING = {
       ]
     },
     {
-      id: "s19", item: ["🍃", "Blaadje"], code: "BLAD", naam: "De binnentuin", sub: "Buiten pauze houden", etage: 0, x: 66, y: 38,
+      id: "s19", kort: "Binnentuin", item: ["🍃", "Blaadje"], code: "BLAD", naam: "De binnentuin", sub: "Buiten pauze houden", etage: 0, x: 66, y: 38,
       clip: "media/s19.mp4", poster: "media/s19.jpg",
       uitleg: "Midden tussen het oude en het nieuwe gebouw ligt de binnentuin. Is het mooi weer? Dan kun je hier in de pauze zitten.",
       loop: "Kijk door de grote ramen van de nieuwbouw, of loop naar de deur van de binnentuin.",
@@ -136,7 +141,7 @@ window.RONDLEIDING = {
       ]
     },
     {
-      id: "s10", item: ["📖", "Woordenboek"], code: "SOEP", naam: "1e etage: de talen", sub: "Engels, Frans en Duits", etage: 1, x: 53, y: 30,
+      id: "s10", kort: "Talen", item: ["📖", "Woordenboek"], code: "SOEP", naam: "1e etage: de talen", sub: "Engels, Frans en Duits", etage: 1, x: 53, y: 30,
       clip: "media/s10.mp4", poster: "media/s10.jpg",
       uitleg: "Op de eerste etage krijg je talen, zoals Engels, Frans en Duits. Ook geschiedenis heeft hier lokalen. Je jas hangt aan de kapstok in de gang, niet in het lokaal.",
       loop: "Ga de trap op naar de eerste etage. Volg de gang met de oranje deuren.",
@@ -148,7 +153,7 @@ window.RONDLEIDING = {
       ]
     },
     {
-      id: "s18", item: ["💡", "Lampje"], code: "VONK", naam: "B19, B20 en B21", sub: "Natuurkunde en Nederlands", etage: 1, x: 62, y: 13,
+      id: "s18", kort: "B19 tot B21", item: ["💡", "Lampje"], code: "VONK", naam: "B19, B20 en B21", sub: "Natuurkunde en Nederlands", etage: 1, x: 62, y: 13,
       clip: "media/s18.mp4", poster: "media/s18.jpg",
       uitleg: "In B19 krijg je natuurkunde en scheikunde. Daar laat de docent proefjes zien. In B20 en B21 krijg je Nederlands.",
       loop: "Loop op de eerste etage door de gang van het oude gebouw tot het einde.",
@@ -157,7 +162,7 @@ window.RONDLEIDING = {
       ]
     },
     {
-      id: "s11", item: ["💻", "Laptop"], code: "KAT", naam: "Het computerlokaal", sub: "Toetsen op de computer", etage: 1, x: 32, y: 41,
+      id: "s11", kort: "Computerlokaal", item: ["💻", "Laptop"], code: "KAT", naam: "Het computerlokaal", sub: "Toetsen op de computer", etage: 1, x: 32, y: 41,
       clip: "media/s11.mp4", poster: "media/s11.jpg",
       uitleg: "Hier staan rijen computers met blauwe schotten ertussen. Je gebruikt ze voor lessen en voor toetsen op de computer.",
       loop: "Blijf op de eerste etage en loop naar het computerlokaal.",
@@ -166,7 +171,7 @@ window.RONDLEIDING = {
       ]
     },
     {
-      id: "s14", item: ["🚪", "Gele deur"], code: "VIS", naam: "De nieuwbouw", sub: "B22 tot B25", etage: 1, x: 67, y: 47, cijfer: 2,
+      id: "s14", kort: "Nieuwbouw", item: ["🚪", "Gele deur"], code: "VIS", naam: "De nieuwbouw", sub: "B22 tot B25", etage: 1, x: 67, y: 47, cijfer: 2,
       clip: "media/s14.mp4", poster: "media/s14.jpg",
       uitleg: "Dit is het nieuwe deel van de school, met gele deuren en grote ramen. Hier krijg je onder andere Nederlands, Engels en wiskunde.",
       loop: "Loop van het oude gebouw naar de nieuwbouw. De vloer wordt glad en grijs.",
@@ -177,7 +182,7 @@ window.RONDLEIDING = {
       ]
     },
     {
-      id: "s15", item: ["🌍", "Wereldbol"], code: "UIL", naam: "De lift, B26 en B27", sub: "Geschiedenis en aardrijkskunde", etage: 1, x: 49, y: 60,
+      id: "s15", kort: "Geschiedenis en aardrijkskunde", item: ["🌍", "Wereldbol"], code: "UIL", naam: "De lift, B26 en B27", sub: "Geschiedenis en aardrijkskunde", etage: 1, x: 49, y: 60,
       clip: "media/s15.mp4", poster: "media/s15.jpg",
       uitleg: "Aan het eind van de gang is de lift, voor leerlingen die niet goed kunnen traplopen. In B26 krijg je geschiedenis. In B27 krijg je aardrijkskunde.",
       loop: "Loop de gang van de nieuwbouw helemaal uit. Aan het eind zie je de liftdeur.",
@@ -186,7 +191,7 @@ window.RONDLEIDING = {
       ]
     },
     {
-      id: "s12", item: ["🎨", "Penseel"], code: "TAS", naam: "De tekenzolder", sub: "Tekenen en CKV, B29 en B30", etage: 2, x: 47, y: 33, cijfer: 6,
+      id: "s12", kort: "Tekenzolder", item: ["🎨", "Penseel"], code: "TAS", naam: "De tekenzolder", sub: "Tekenen en CKV, B29 en B30", etage: 2, x: 47, y: 33, cijfer: 6,
       clip: "media/s12.mp4", poster: "media/s12.jpg",
       uitleg: "Dit lokaal ligt onder het dak, met oranjerode balken en dakramen. Hier krijg je tekenen en CKV. Je werkt aan een ezel.",
       loop: "Ga de trap op naar de tweede etage, de bovenste verdieping.",
@@ -195,7 +200,7 @@ window.RONDLEIDING = {
       ]
     },
     {
-      id: "s13", item: ["📚", "Bibliotheekpas"], code: "GOUD", naam: "Bibliotheek en studiezaal", sub: "B31, de finale", etage: 2, x: 73, y: 20,
+      id: "s13", kort: "Bibliotheek", item: ["📚", "Bibliotheekpas"], code: "GOUD", naam: "Bibliotheek en studiezaal", sub: "B31, de finale", etage: 2, x: 73, y: 20,
       clip: "media/s13.mp4", poster: "media/s13.jpg",
       uitleg: "Hier leen je boeken en tijdschriften. In de huiswerkklas maak je je huiswerk. Hier krijg je ook extra hulp, bijvoorbeeld bij dyslexie.",
       loop: "Blijf op de tweede etage en loop naar B31.",

@@ -50,6 +50,12 @@ Een filmpje toevoegen bij een stop zonder film: zet `media/<id>.mp4` (staand, 48
 - `speelhal: [ ...opdrachten ]`: spelletjes zonder QR-code, op `#/speelhal`. Zelfde vorm als `opdrachten` bij een stop. Met `titel` en `icoon` geef je een opdracht een eigen naam en plaatje.
 - Elk spelletje heeft onderaan "Overslaan, ik ga verder".
 
+## Pijlen in de Radar
+
+- De Radar toont pijlen naar plekken op dezelfde etage, vanaf de laatst gescande poster. De iPad gebruikt het kompas.
+- `kort` bij een stop: korte naam voor de pijl.
+- `hud: { draai, kijkhoek, assen }`: `draai` is de kompasrichting van "boven" op de plattegrond. Meten: open met `?ijk=1`, scan een poster, richt op een plek en tik op Instellen. Het getal wordt ook op die iPad bewaard (`vellesan-hud-draai`).
+
 ## Opslag
 
-Alleen op de iPad, in `localStorage` onder `vellesan-missie-v2`: agent (dier, kleur, verzonnen naam), gevonden codes, gedane opdrachten, sterren, antwoorden op tel- en open vragen. Foto's blijven alleen in het geheugen. De oude sleutel `vellesan-rondleiding-v1` wordt niet gebruikt en niet gewist. "Opnieuw beginnen" op het startscherm wist alles voor een volgend kind.
+Alleen op de iPad, in `localStorage` onder `vellesan-missie-v2`: agent (dier, kleur, verzonnen naam), gevonden codes, gedane opdrachten, sterren, laatst gescande stop, antwoorden op tel- en open vragen. Foto's blijven alleen in het geheugen. De oude sleutel `vellesan-rondleiding-v1` wordt niet gebruikt en niet gewist. "Opnieuw beginnen" op het startscherm wist alles voor een volgend kind.

@@ -1,3 +1,20 @@
+## 2026-11-26 · Open dag: pijlen in beeld in de Radar (heads-up display)
+
+Wens van de docent: rondkijken met de camera en pijlen in beeld zien naar de plekken om je heen, zoals een heads-up display in de auto.
+
+- **Hoe**: de Radar (camera die QR-posters zoekt) toont nu ook zwevende pijlen met namen: Aula, Rector en docentenkamer, Talen, enzovoort. De volgende missie is oranje. Plekken die achter of naast je liggen, staan als pijl aan de rand. Tik op een pijl om die plek te openen.
+- **Waar ben je?**: de laatst gescande poster (nieuw veld `laatst` in de bestaande opslag). Zonder poster vraagt de Radar om er eerst een te scannen. Echte plaatsbepaling binnen kan niet in Safari (geen GPS binnen, geen bluetooth), en echte AR (WebXR) werkt niet op de iPad. Dit is het beste wat in de browser kan.
+- **Welke kant kijk je op?**: het kompas van de iPad. Zonder kompas (computer) kun je slepen met de vinger.
+- **Andere etages**: "Trap op" of "Trap af" met de plekken die daar nog wachten.
+- **Richtingen**: berekend uit de plekken op de plattegrond. De plattegrond is schuin getekend; `hud.assen` in `data/stops.js` zet hem recht. Elke stop heeft nu een korte naam (`kort`) voor de pijlen.
+- **Instellen**: het kompas weet niet hoe de plattegrond ligt. Open de rondleiding één keer met `?ijk=1`, scan een poster, richt de iPad op een plek uit de lijst en tik op Instellen. Het getal dat verschijnt, komt in `hud.draai`. Tot dan wijzen de pijlen wel goed ten opzichte van elkaar, maar niet goed ten opzichte van het gebouw.
+
+**Getest**: in Chromium op 375, 820 en 1180 px met een nepcamera en nep-kompas: pijlen verschuiven als je draait, randpijlen, trap op/af, het instelblok, geen consolefouten, geen horizontaal scrollen. De eerdere tests opnieuw gedraaid.
+
+**Niet getest**: echte iPad. Vooral: werkt het kompas als je de iPad rechtop of liggend houdt, en hoeveel wijkt het binnen af door staal in het gebouw?
+
+**Controleren door de docent**: doe het instellen bij één poster en stuur het getal. Loop daarna met de Radar door de hal en kijk of de pijlen ongeveer kloppen.
+
 ## 2026-11-26 · Open dag: speelhal en een prijs na 8 spelletjes
 
 Wens van de docent: meer korte, snelle spelletjes over de school. Ze zijn niet verplicht, maar wie er genoeg speelt, wint een prijs.

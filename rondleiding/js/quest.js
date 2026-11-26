@@ -10,7 +10,7 @@
   var root = document.getElementById("main");
 
   /* ================= opslag ================= */
-  function fresh() { return { agent: null, briefed: false, found: {}, secrets: {}, opd: {}, sterren: {}, done: {}, ans: {}, kluis: false, geluid: true }; }
+  function fresh() { return { agent: null, briefed: false, found: {}, secrets: {}, opd: {}, sterren: {}, done: {}, ans: {}, kluis: false, geluid: true, laatst: null }; }
   var state = fresh();
   try {
     var raw = localStorage.getItem(KEY);
@@ -862,7 +862,7 @@
     if (!state.agent) { var a = AVATARS[Math.floor(Math.random() * AVATARS.length)]; state.agent = { icoon: a, kleur: KLEUREN[0], naam: NAAM1[0] + " " + NAAM2[AVATARS.indexOf(a)] }; }
     if (r.kind === "stop") {
       var first = !state.found[r.item.id];
-      state.found[r.item.id] = true; save(); pendingGame = true;
+      state.found[r.item.id] = true; state.laatst = r.item.id; save(); pendingGame = true;
       pendingBanner = first ? "Gevonden! De missies van " + r.item.naam + " zijn open." : "Je bent bij " + r.item.naam + ".";
       navigate("#/stop/" + (r.idx + 1), replace);
     } else {
@@ -893,11 +893,121 @@
       return [el("h2", { text: "Code typen" }), form];
     });
   }
+  /* ================= heads-up display: pijlen in de radar =================
+     Waar ben je? De laatst gescande poster (of de stop die open staat).
+     Welke kant kijk je op? Het kompas van de iPad (webkitCompassHeading), anders de draaisensor,
+     anders slepen met de vinger. De plattegrond is schuin getekend; "assen" zet hem terug naar recht. */
+  var HUDC = D.hud || {}, IJKKEY = "vellesan-hud-draai";
+  function hudDraai() { try { var v = localStorage.getItem(IJKKEY); if (v != null && v !== "") return +v; } catch (e) {} return +HUDC.draai || 0; }
+  function worldXY(s) {
+    var e = etages[s.etage] || {}, A = (HUDC.assen || [])[0] || [0.94, -0.35], B = (HUDC.assen || [])[1] || [0.45, 0.89];
+    var px = s.x / 100 * (e.w || 1000), py = s.y / 100 * (e.h || 700), det = A[0] * B[1] - A[1] * B[0];
+    return { a: (px * B[1] - B[0] * py) / det, b: (A[0] * py - A[1] * px) / det };
+  }
+  function mapBearing(from, to) { var p = worldXY(from), q = worldXY(to); return (Math.atan2(q.a - p.a, -(q.b - p.b)) * 180 / Math.PI + 360) % 360; }
+  function mapDist(from, to) { var p = worldXY(from), q = worldXY(to); return Math.hypot(q.a - p.a, q.b - p.b); }
+  function norm180(d) { d = ((d % 360) + 540) % 360 - 180; return d; }
+  function camHeading(alpha, beta, gamma) {
+    var r = Math.PI / 180, cA = Math.cos(alpha * r), sA = Math.sin(alpha * r), sB = Math.sin(beta * r), cG = Math.cos(gamma * r), sG = Math.sin(gamma * r);
+    var rA = -cA * sG - sA * sB * cG, rB = -sA * sG + cA * sB * cG, h = Math.atan(rA / rB);
+    if (rB < 0) h += Math.PI; else if (rA < 0) h += 2 * Math.PI;
+    return h * 180 / Math.PI;
+  }
+  function hereStop() {
+    var m = /^#\/stop\/(\d+)/.exec(location.hash), i = m ? +m[1] - 1 : -1;
+    if (i >= 0 && stops[i] && isOpen(stops[i]) && state.found[stops[i].id]) return stops[i];
+    for (var k = 0; k < stops.length; k++) if (stops[k].id === state.laatst) return stops[k];
+    return null;
+  }
+  function hudArrows(ov) {
+    var here = hereStop(), heading = null, smooth = null, raf = 0, off = false, fov = HUDC.kijkhoek || 60, src = "";
+    var layer = el("div", { class: "hud-layer" });
+    var tags = [], floorsEl = el("div", { class: "hud-floors" }), where = el("div", { class: "hud-where" });
+    var nextStop = null; for (var ni2 = 0; ni2 < stops.length && !nextStop; ni2++) if (!isDone(stops[ni2]) && stops[ni2] !== here) nextStop = stops[ni2];
+    layer.appendChild(where); layer.appendChild(floorsEl);
+    if (!here) {
+      where.textContent = "Scan een poster. Dan weet de radar waar je bent en wijzen de pijlen de weg.";
+      return { el: layer, stop: function () {} };
+    }
+    where.appendChild(el("span", { class: "hud-pin", "aria-hidden": "true", text: "📍" }));
+    where.appendChild(document.createTextNode("Je bent bij " + (here.kort || here.naam)));
+    // plekken op dezelfde etage: de volgende missie en de dichtstbijzijnde
+    var same = stops.filter(function (s) { return s !== here && s.etage === here.etage; })
+      .sort(function (p, q) { return mapDist(here, p) - mapDist(here, q); });
+    var pickd = same.slice(0, 6);
+    if (nextStop && nextStop.etage === here.etage && pickd.indexOf(nextStop) < 0) pickd.push(nextStop);
+    var maxD = pickd.reduce(function (m, s) { return Math.max(m, mapDist(here, s)); }, 1);
+    pickd.forEach(function (s, k) {
+      var isNext = s === nextStop, done = isDone(s);
+      var t = el("button", { type: "button", class: "hud-tag" + (isNext ? " next" : "") + (done ? " done" : ""), "aria-label": (isNext ? "Volgende missie: " : "") + (s.kort || s.naam), onclick: function () { stopAll(); go("#/stop/" + (stops.indexOf(s) + 1)); } },
+        el("span", { class: "hud-arrow", "aria-hidden": "true" }),
+        el("span", { class: "hud-label" }, isNext ? el("small", { text: "Volgende missie" }) : null, el("strong", { text: (s.kort || s.naam) + (done ? " ✓" : "") })));
+      t._b = mapBearing(here, s); t._d = mapDist(here, s) / maxD; t._row = k % 3;
+      tags.push(t); layer.appendChild(t);
+    });
+    // andere etages: de trap op of af
+    [0, 1, 2].forEach(function (f) {
+      if (f === here.etage || !etages[f]) return;
+      var names = stops.filter(function (s) { return s.etage === f && !isDone(s); }).slice(0, 3).map(function (s) { return s.kort || s.naam; });
+      if (!names.length) return;
+      floorsEl.appendChild(el("div", { class: "hud-floor" }, el("b", { text: f > here.etage ? "⬆ Trap op" : "⬇ Trap af" }), " " + etages[f].naam + ": " + names.join(", ")));
+    });
+    var tip = el("p", { class: "hud-tip", text: "" });
+    layer.appendChild(tip);
+    function paint() {
+      raf = requestAnimationFrame(paint);
+      if (heading == null) return;
+      smooth = smooth == null ? heading : (smooth + norm180(heading - smooth) * 0.18 + 360) % 360;
+      var W = layer.clientWidth || window.innerWidth, edgeL = 0, edgeR = 0;
+      tags.forEach(function (t) {
+        var rel = norm180(t._b + hudDraai() - smooth), inView = Math.abs(rel) <= fov / 2;
+        t.classList.toggle("edge", !inView);
+        t.classList.toggle("left", !inView && rel < 0);
+        t.classList.toggle("right", !inView && rel > 0);
+        var x, y;
+        if (inView) { x = W / 2 + rel / (fov / 2) * (W / 2 - 70); y = 28 + t._d * 18 + t._row * 9; }
+        else if (rel < 0) { x = 10; y = 30 + (edgeL++) * 9; }
+        else { x = W - 10; y = 30 + (edgeR++) * 9; }
+        t.style.transform = "translate(" + Math.round(x) + "px," + y.toFixed(1) + "vh) translate(" + (inView ? "-50%" : rel < 0 ? "0" : "-100%") + ",-50%)";
+        t.style.setProperty("--rot", inView ? "0deg" : rel < 0 ? "-90deg" : "90deg");
+      });
+    }
+    function onIOS(e) { if (e.webkitCompassHeading != null && !isNaN(e.webkitCompassHeading)) { src = "kompas"; heading = e.webkitCompassHeading; } else if (!src && e.alpha != null) { src = "draai"; heading = camHeading(e.alpha, e.beta || 0, e.gamma || 0); } }
+    function onAbs(e) { if (e.alpha == null) return; src = "kompas"; heading = camHeading(e.alpha, e.beta || 0, e.gamma || 0); }
+    var drag = null;
+    function down(e) { if (e.target.closest && e.target.closest(".hud-tag")) return; drag = { x: e.clientX, h: heading == null ? 0 : heading }; }
+    function move(e) { if (!drag || src === "kompas") return; heading = (drag.h - (e.clientX - drag.x) * fov / (layer.clientWidth || 600) + 360) % 360; }
+    function up() { drag = null; }
+    function stopAll() { if (off) return; off = true; cancelAnimationFrame(raf); window.removeEventListener("deviceorientation", onIOS); window.removeEventListener("deviceorientationabsolute", onAbs); }
+    askMotion().then(function (ok) {
+      if (off) return;
+      window.addEventListener("deviceorientationabsolute", onAbs);
+      window.addEventListener("deviceorientation", onIOS);
+      setTimeout(function () { if (off) return; if (heading == null) { heading = mapBearing(here, nextStop && nextStop.etage === here.etage ? nextStop : pickd[0] || here) + hudDraai(); tip.textContent = "Geen kompas. Sleep met je vinger om rond te kijken."; } }, 1200);
+    });
+    layer.addEventListener("pointerdown", down); layer.addEventListener("pointermove", move);
+    layer.addEventListener("pointerup", up); layer.addEventListener("pointercancel", up);
+    raf = requestAnimationFrame(paint);
+    // docent: richting instellen met ?ijk=1
+    if (/[?&]ijk=1/.test(location.search)) {
+      var sel = el("select", { class: "hud-ijk-sel", "aria-label": "Plek waar je op richt" }, pickd.map(function (s, k) { return el("option", { value: String(k), text: s.kort || s.naam }); }));
+      var out = el("span", { role: "status", text: "Richt de iPad recht op een plek en tik op Instellen." });
+      layer.appendChild(el("div", { class: "hud-ijk" }, el("strong", { text: "Richting instellen" }), sel,
+        btn("Instellen", "small", function () {
+          if (heading == null) { out.textContent = "Nog geen kompas."; return; }
+          var d = Math.round((smooth - pickd[+sel.value]._b + 360) % 360);
+          try { localStorage.setItem(IJKKEY, String(d)); } catch (e) {}
+          out.textContent = "Klaar: draai = " + d + ". Stuur dit getal door, dan zet ik het vast.";
+        }), out));
+    }
+    return { el: layer, stop: stopAll };
+  }
+
   function openScanner() {
     var stream = null, raf = 0, closed = false, lastTick = 0;
     var video = el("video", { class: "scan-video", playsinline: true, muted: true, autoplay: true, "aria-label": "Camerabeeld" });
     video.muted = true; video.setAttribute("webkit-playsinline", "");
-    var msg = el("p", { class: "scan-msg", role: "status", "aria-live": "polite", text: "Radar staat aan. Loop rustig rond en richt de iPad op een QR-poster." });
+    var msg = el("p", { class: "scan-msg", role: "status", "aria-live": "polite", text: "Kijk rond: de pijlen wijzen de weg. Zie je een QR-poster? Richt de iPad erop." });
     var readout = el("div", { class: "scan-readout", "aria-hidden": "true" }, el("span", { text: "AGENT-RADAR" }), el("span", { class: "blink", text: "● ZOEKEN" }));
     var ov = el("div", { class: "scanner", role: "dialog", "aria-modal": "true", "aria-label": "QR-code scannen" },
       video,
@@ -908,12 +1018,14 @@
     function onKey(e) { if (e.key === "Escape") stop(); }
     function stop() {
       if (closed) return; closed = true;
-      cancelAnimationFrame(raf); document.removeEventListener("keydown", onKey);
+      cancelAnimationFrame(raf); document.removeEventListener("keydown", onKey); hudA.stop();
       if (stream) { stream.getTracks().forEach(function (t) { try { t.stop(); } catch (e) {} }); stream = null; }
       try { video.srcObject = null; } catch (e) {}
       ov.remove();
       if (prevFocus && prevFocus.focus) try { prevFocus.focus(); } catch (e) {}
     }
+    var hudA = hudArrows(ov);
+    ov.insertBefore(hudA.el, ov.querySelector(".scan-top"));
     document.addEventListener("keydown", onKey);
     document.body.appendChild(ov);
     ov.querySelector(".scan-top button").focus();
