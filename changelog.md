@@ -1,3 +1,13 @@
+## 2026-11-26 · Open dag: ronde 11, nieuwe QR-posters
+
+- De QR-posters (`rondleiding/qr/posters.pdf`, 23 pagina's: overzicht, 19 stops, 3 geheime) hebben nu dezelfde stijl als de app: donkere band met "Missie Vellesan", het plaatje van het kluisvoorwerp (met "AI-illustratie"), "Stop 08 van 19", de naam in Fraunces, de etage, een grote QR-code met oranje zoekerhoeken en de typcode in losse letterblokjes. Wit papier, dus zuinig met inkt.
+- Opgelost: bij de oude posters viel het codewoord onderaan half van de pagina.
+- Het overzicht vooraan (welke poster waar hangt) is gebleven.
+
+**Getest**: PDF gemaakt met `tools/maak-qr.js`; de QR-codes van stop 1 en geheim 3 uit de PDF gelezen met dezelfde QR-lezer als de app (geven het juiste adres); lange namen passen.
+**Niet getest**: geprint op de schoolprinter, en scannen van papier met een iPad.
+**Controleren**: print één poster op A4 zonder verkleining en scan hem met een iPad.
+
 ## 2026-11-26 · Open dag: ronde 10, het winkeltje en mooiere startschermen
 
 Vergeleken met het analysedocument en elk scherm opnieuw bekeken als Joost ("ziet het er professioneel uit?").
