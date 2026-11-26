@@ -242,7 +242,7 @@
   }
 
   /* ================= router ================= */
-  var lastFloor = null, pendingBanner = "";
+  var lastFloor = null, pendingBanner = "", pendingGame = false;
   function route() {
     leave();
     var qh = /^#\/?qr=([^&]+)/i.exec(location.hash);
@@ -436,7 +436,7 @@
     }
   }
   function scanFab() {
-    return el("button", { type: "button", class: "scan-fab", onclick: function () { openScanner(); }, "aria-label": "Scan een QR-code" }, el("span", { class: "scan-fab-ring", "aria-hidden": "true" }), icon("scan"), el("span", { text: "Scan" }));
+    return el("button", { type: "button", class: "scan-fab", onclick: function () { openScanner(); }, "aria-label": "Radar aan: zoek een QR-poster" }, el("span", { class: "scan-fab-ring", "aria-hidden": "true" }), icon("scan"), el("span", { text: "Radar" }));
   }
 
   /* ================= stop ================= */
@@ -552,6 +552,12 @@
           el("nav", { class: "stop-nav", "aria-label": "Stops" }, prev, btn("Terug naar de kaart", "ghost", function () { go("#/kaart"); }), nextB)))
     ], "stop");
     if (banner) { sfx("unlock"); setTimeout(function () { burst(document.querySelector(".banner"), 40); }, 150); }
+    // na het scannen meteen het spelletje starten
+    if (pendingGame) {
+      pendingGame = false;
+      var first = -1; ops.forEach(function (o, k) { if (first < 0 && !state.opd[s.id + ":" + k]) first = k; });
+      if (first >= 0) setTimeout(function () { if (location.hash === "#/stop/" + (idx + 1)) openGame(s, idx, first); }, reduced ? 300 : 1600);
+    }
     renderStop.repaint = paintMissions;
   }
   function scanMini() { return btn([icon("scan"), "Scan"], "ghost small", function () { openScanner(); }, "Scan een QR-code"); }
@@ -795,7 +801,7 @@
     if (!state.agent) { var a = AVATARS[Math.floor(Math.random() * AVATARS.length)]; state.agent = { icoon: a, kleur: KLEUREN[0], naam: NAAM1[0] + " " + NAAM2[AVATARS.indexOf(a)] }; }
     if (r.kind === "stop") {
       var first = !state.found[r.item.id];
-      state.found[r.item.id] = true; save();
+      state.found[r.item.id] = true; save(); pendingGame = true;
       pendingBanner = first ? "Gevonden! De missies van " + r.item.naam + " zijn open." : "Je bent bij " + r.item.naam + ".";
       navigate("#/stop/" + (r.idx + 1), replace);
     } else {
@@ -830,8 +836,8 @@
     var stream = null, raf = 0, closed = false, lastTick = 0;
     var video = el("video", { class: "scan-video", playsinline: true, muted: true, autoplay: true, "aria-label": "Camerabeeld" });
     video.muted = true; video.setAttribute("webkit-playsinline", "");
-    var msg = el("p", { class: "scan-msg", role: "status", "aria-live": "polite", text: "Richt de camera op de QR-code." });
-    var readout = el("div", { class: "scan-readout", "aria-hidden": "true" }, el("span", { text: "AGENT-SCANNER" }), el("span", { class: "blink", text: "● ZOEKEN" }));
+    var msg = el("p", { class: "scan-msg", role: "status", "aria-live": "polite", text: "Radar staat aan. Loop rustig rond en richt de iPad op een QR-poster." });
+    var readout = el("div", { class: "scan-readout", "aria-hidden": "true" }, el("span", { text: "AGENT-RADAR" }), el("span", { class: "blink", text: "● ZOEKEN" }));
     var ov = el("div", { class: "scanner", role: "dialog", "aria-modal": "true", "aria-label": "QR-code scannen" },
       video,
       el("div", { class: "scan-hud", "aria-hidden": "true" }, el("div", { class: "scan-box" }, el("i", { class: "c1" }), el("i", { class: "c2" }), el("i", { class: "c3" }), el("i", { class: "c4" }), el("b", { class: "scan-line" }))),
@@ -865,7 +871,18 @@
       var img = ctx.getImageData(0, 0, canvas.width, canvas.height);
       var code = window.jsQR(img.data, img.width, img.height, { inversionAttempts: "dontInvert" });
       if (code && code.data) {
-        if (lookupCode(code.data)) { ov.classList.add("hit"); sfx("unlock"); var d = code.data; setTimeout(function () { stop(); applyCode(d, false); }, reduced ? 0 : 500); cancelAnimationFrame(raf); }
+        var hit = lookupCode(code.data);
+        if (hit) {
+          ov.classList.add("hit"); sfx("unlock"); cancelAnimationFrame(raf); closed = true;
+          var d = code.data, it = hit.item;
+          readout.lastChild.textContent = "● GEVONDEN";
+          msg.textContent = (hit.kind === "stop" ? "Gevonden: " + it.naam : "Geheime code gevonden!");
+          // portaal: de plek komt vanuit de poster tot leven
+          var portal = el("div", { class: "portal", "aria-hidden": "true" }, el("div", { class: "portal-img", style: { "background-image": "url(" + it.poster + ")" } }), el("div", { class: "portal-ring" }));
+          ov.appendChild(portal);
+          setTimeout(function () { sfx("whoosh"); }, 200);
+          setTimeout(function () { closed = false; stop(); applyCode(d, false); }, reduced ? 0 : 1300);
+        }
         else msg.textContent = "Deze QR-code hoort niet bij de rondleiding.";
       }
     }
