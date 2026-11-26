@@ -1,3 +1,15 @@
+## 2026-11-26 · Open dag: ronde 10, het winkeltje en mooiere startschermen
+
+Vergeleken met het analysedocument en elk scherm opnieuw bekeken als Joost ("ziet het er professioneel uit?").
+- **Nieuw spel "Het winkeltje"** in de speelhal (idee uit het analysedocument voor B01/B02 economie). Je runt 30 seconden een kraampje met koeken en kiest de prijs. Klanten lopen langs; is de prijs te hoog, dan zeggen ze "Te duur!". Aan het eind: wat je verdiende en dat te duur of te goedkoop minder oplevert. Wat klanten willen betalen is eerlijk verdeeld, niet puur geluk. Engine `winkel` in `js/games-c.js`.
+- **Startschermen** (agent kiezen en missie-uitleg) voelden als een los formulier in een leeg vlak. Nu staat de startfilm wazig op de achtergrond, is de kaart op een iPad breder en zijn de dieren groter.
+- **Speelhal**: de kaarten staan nu netjes verdeeld (3 + 2 op een iPad, 2 per rij op een telefoon) in plaats van één losse kaart onderaan.
+- Niet overgenomen uit het document, omdat het feiten of beelden vraagt die ik niet heb: tijdlijn voor geschiedenis, kaart van Nederland voor aardrijkskunde, "raad het boek", 360-foto's en een scorebord op het digibord.
+
+**Getest**: Chromium op 375, 820 en 1180 px, hele route, alle speelhal-spelletjes, winkeltje helemaal uitgespeeld, scanner en pijlen, geen consolefouten, geen horizontaal scrollen, checks op 0.
+**Niet getest**: op een echte iPad.
+**Controleren**: of je het winkeltje als economiedocent goed vindt, en of een koek het goede product is.
+
 ## 2026-11-26 · Open dag: ronde 9, spelletjes nagelopen als kind
 
 Alle 19 stop-spelletjes geopend en bekeken op 375 en 820 px (de speelhal was al getest). Wat ik aanpaste:

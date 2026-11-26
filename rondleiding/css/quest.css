@@ -454,8 +454,9 @@ body.on-map main,body.on-bonus main{padding-bottom:calc(130px + env(safe-area-in
 .prize-track i{display:block;height:100%;background:linear-gradient(90deg,var(--accent2),var(--accent));transform-origin:0 50%;transition:transform .8s var(--ease)}
 .prize-bar.won{border-color:var(--accent)}
 .prize-bar .btn{flex:none}
-.hall-grid{display:grid;gap:12px;grid-template-columns:repeat(2,minmax(0,1fr));max-width:820px;margin:0 auto 18px}
-@media (min-width:760px){ .hall-grid{grid-template-columns:repeat(4,minmax(0,1fr))} }
+.hall-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;max-width:820px;margin:0 auto 18px}
+.hall-grid>*{flex:0 1 calc(50% - 6px);min-width:0}
+@media (min-width:760px){ .hall-grid>*{flex-basis:calc(33.333% - 8px)} }
 .hall-card{display:grid;justify-items:center;gap:6px;padding:18px 10px;border-radius:var(--radius);color:var(--ink);font:inherit;cursor:pointer;text-align:center;
   opacity:0;transform:translateY(12px);animation:rise .5s var(--ease) var(--d,0s) forwards;transition:transform .2s var(--ease)}
 .hall-card:active{transform:scale(.97)}
@@ -542,3 +543,12 @@ img.pi{width:30px;height:30px;border-radius:8px;box-shadow:none}
 .view.in.stag>:nth-child(4){animation-delay:.24s} .view.in.stag>:nth-child(n+5){animation-delay:.3s}
 @keyframes stagIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){ .view,.view.deeper,.view.back,.view.side{transform:none;transition:opacity .2s} .view.in.stag>*{animation:none} }
+
+/* ---------- start-schermen: wazige startfilm erachter ---------- */
+.setup-bg{position:fixed;inset:-40px;z-index:0;background-size:cover;background-position:center;filter:blur(22px) saturate(1.2);opacity:.55;transform:scale(1.08);animation:setupBg 1.2s ease both;pointer-events:none}
+.setup-bg::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 45%,var(--bg,#070b18) 100%)}
+@keyframes setupBg{from{opacity:0}to{opacity:.55}}
+body.on-setup .agent,body.on-setup .brief{box-shadow:0 30px 80px -30px rgba(0,0,0,.7),0 0 0 1px rgba(243,146,0,.18),0 0 60px -20px rgba(243,146,0,.35)}
+body.on-setup .view{width:100%;display:flex;justify-content:center}
+@media (min-width:700px){ .agent-grid button{font-size:2.1rem} .agent,.brief{max-width:620px;padding:34px 34px} .brief-art{max-width:300px} }
+@media (prefers-reduced-motion:reduce){ .setup-bg{animation:none} }

@@ -286,6 +286,11 @@
     add(v, view);
     root.appendChild(v);
     document.body.className = "on-" + (cls || "x").split(" ")[0];
+    /* bij de start-schermen: de startfilm zacht en wazig op de achtergrond */
+    var sbg = document.querySelector(".setup-bg");
+    if (key === "setup" && D.intro && D.intro.poster) {
+      if (!sbg) { sbg = el("div", { class: "setup-bg", "aria-hidden": "true", style: { backgroundImage: "url(" + D.intro.poster + ")" } }); document.body.insertBefore(sbg, root); }
+    } else if (sbg) sbg.parentNode.removeChild(sbg);
     window.scrollTo(0, 0);
     requestAnimationFrame(function () { v.classList.add("in"); });
     return v;

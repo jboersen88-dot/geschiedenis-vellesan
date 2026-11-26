@@ -238,7 +238,8 @@ window.RONDLEIDING = {
     { type: "etage", titel: "Welk vak?", icoon: "🎒", vraag: "Bij welk vak hoort dit?", etages: ["Biologie", "Talen", "Tekenen"], plekken: [
       ["Je bekijkt een echt skelet.", 0], ["Je zegt hallo in het Frans.", 1], ["Je werkt aan een ezel.", 2],
       ["De stoelen lopen omhoog, net als in een theater.", 0], ["Je leert Duitse woorden.", 1], ["Je lokaal ligt onder het dak.", 2]
-    ] }
+    ] },
+    { type: "winkel", vraag: "Economie: run je eigen kraampje. Hoeveel vraag jij voor een koek?", seconden: 30, waar: ["🍪", "koek"] }
   ],
   bonus: [
     { id: "b1", code: "RAKET", naam: "De grote trap", clip: "media/b1.mp4", poster: "media/b1.jpg", uitleg: "De monumentale trap uit 1926. Let op de koperen leuning en de zwarte stenen treden." },

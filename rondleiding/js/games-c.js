@@ -109,4 +109,68 @@
     host.appendChild(count); host.appendChild(card); host.appendChild(row); host.appendChild(msg);
     show();
   } });
+
+  /* Het winkeltje (economie): kies een prijs voor je kraampje. Te duur? Dan lopen klanten door. */
+  Quest.game("winkel", { titel: "Het winkeltje", icoon: "🏪", render: function (host, o, api) {
+    var el = api.el, SECS = o.seconden || 30, waar = o.waar || ["🍪", "koek"];
+    var MIN = 0.5, MAX = 3.5, STAP = 0.5, prijs = 1.5, omzet = 0, verkocht = 0, weg = 0, running = false, ended = false, spawnT = 0, timers = [];
+    var GEZ = ["🧑", "👧", "👦", "👩", "🧓", "🧒", "👨", "👱"];
+    // vaste verdeling van wat klanten willen betalen, geschud: eerlijk, niet puur geluk
+    var wil = []; for (var k = 0; k < 40; k++) wil.push(MIN + (k + 0.5) * (MAX - MIN) / 40); wil = api.shuffle(wil); var wi = 0;
+    function euro(v) { return "€ " + v.toFixed(2).replace(".", ","); }
+    var prijsEl = el("output", { class: "wk-prijs", "aria-live": "polite", text: euro(prijs) });
+    var min = el("button", { type: "button", class: "btn round ghost wk-pm", "aria-label": "Prijs omlaag", onclick: function () { zet(-STAP); } }, "−");
+    var plus = el("button", { type: "button", class: "btn round ghost wk-pm", "aria-label": "Prijs omhoog", onclick: function () { zet(STAP); } }, "+");
+    var omzetEl = el("strong", { text: euro(0) }), telEl = el("strong", { text: "0" });
+    var stats = el("div", { class: "wk-stats" },
+      el("div", null, el("small", { text: "Verdiend" }), omzetEl),
+      el("div", null, el("small", { text: "Verkocht" }), telEl));
+    var timer = timerBar(api, SECS, finish);
+    var straat = el("div", { class: "wk-straat", "aria-hidden": "true" });
+    var kraam = el("div", { class: "wk-kraam" },
+      el("div", { class: "wk-dak", "aria-hidden": "true" }),
+      el("div", { class: "wk-bord" }, el("span", { class: "wk-waar", "aria-hidden": "true", text: waar[0] }), prijsEl),
+      el("div", { class: "wk-knoppen" }, min, el("span", { class: "wk-lbl", text: "Jouw prijs" }), plus));
+    var scene = el("div", { class: "wk-scene" }, straat, kraam);
+    var msg = el("p", { class: "g-msg", "aria-live": "polite", text: "Kies een prijs per " + waar[1] + ". Is hij te duur, dan lopen klanten door." });
+    var start = el("button", { type: "button", class: "btn big glow", onclick: function () { start.remove(); running = true; timer.start(); msg.textContent = "Klanten komen eraan! Je mag de prijs steeds veranderen."; loop(); } }, "Open je kraampje!");
+    host.appendChild(timer.el); host.appendChild(stats); host.appendChild(scene); host.appendChild(msg); host.appendChild(start);
+    function zet(d) {
+      if (ended) return;
+      prijs = Math.max(MIN, Math.min(MAX, Math.round((prijs + d) * 2) / 2));
+      prijsEl.textContent = euro(prijs); api.sfx("tick");
+      prijsEl.classList.remove("bump"); void prijsEl.offsetWidth; prijsEl.classList.add("bump");
+      min.disabled = prijs <= MIN; plus.disabled = prijs >= MAX;
+    }
+    function later(fn, ms) { var t = setTimeout(fn, ms); timers.push(t); return t; }
+    function loop() {
+      if (!running) return;
+      klant();
+      spawnT = later(loop, api.reduced ? 1100 : 850 + Math.random() * 300);
+    }
+    function klant() {
+      var max = wil[wi++ % wil.length], koopt = prijs <= max + 0.001;
+      var p = el("span", { class: "wk-klant" }, el("span", { class: "wk-gez", text: GEZ[Math.floor(Math.random() * GEZ.length)] }),
+        el("span", { class: "wk-bubbel" + (koopt ? " ja" : " nee"), text: koopt ? "+" + euro(prijs).slice(2) : "Te duur!" }));
+      straat.appendChild(p);
+      requestAnimationFrame(function () { p.classList.add("in"); });
+      later(function () {
+        if (ended) return;
+        p.classList.add("praat");
+        if (koopt) { omzet += prijs; verkocht++; omzetEl.textContent = euro(omzet); telEl.textContent = String(verkocht); api.sfx("coin"); }
+        else { weg++; api.sfx("tap"); }
+        later(function () { p.classList.add("uit"); later(function () { p.remove(); }, 600); }, 650);
+      }, api.reduced ? 50 : 700);
+    }
+    function finish() {
+      if (ended) return; ended = true; running = false; clearTimeout(spawnT);
+      min.disabled = plus.disabled = true;
+      Array.prototype.forEach.call(straat.children, function (k) { k.classList.add("uit"); });
+      var stars = omzet >= 28 ? 3 : omzet >= 18 ? 2 : 1;
+      msg.textContent = "Je verdiende " + euro(omzet) + " met " + verkocht + " " + (verkocht === 1 ? waar[1] : waar[1] + "en") + ". " + weg + " klanten vonden het te duur. Te duur of te goedkoop levert minder op. Bij economie leer je waarom.";
+      api.burst(kraam, 30);
+      later(function () { api.done(stars); }, 400);
+    }
+    return function () { ended = true; running = false; timer.stop(); timers.forEach(clearTimeout); };
+  } });
 })();

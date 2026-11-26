@@ -118,7 +118,7 @@ Alle andere hoofdstukken (jaar 2 H3 tot en met H6, jaar 3 mavo H3 tot en met H8,
 
 ### 4.3 Open dag
 
-`rondleiding/` is "Missie Vellesan", een losse app voor groep 7 en 8 op iPads: 19 stops op een 3D-plattegrond, per stop een filmpje (met kijk-rond-modus), uitleg en één kort spelletje. De missies gaan open door de QR-poster op die plek te scannen. Daarnaast is er een speelhal met vier snelle spelletjes die overal werken. Kinderen verzamelen spullen voor hun kluisje; na 8 gespeelde spelletjes (`prijs.aantal`) mogen ze de grote kluis kraken en winnen ze een prijs. Inhoud in `rondleiding/data/stops.js`, kern in `rondleiding/js/quest.js`, games in `rondleiding/js/games-a.js`, `games-b.js` en `games-c.js` (contract `rondleiding/GAMES.md`, uitleg `rondleiding/SCHEMA.md`), posters maken met `rondleiding/tools/maak-qr.js`.
+`rondleiding/` is "Missie Vellesan", een losse app voor groep 7 en 8 op iPads: 19 stops op een 3D-plattegrond, per stop een filmpje (met kijk-rond-modus), uitleg en één kort spelletje. De missies gaan open door de QR-poster op die plek te scannen. Daarnaast is er een speelhal met vijf snelle spelletjes die overal werken (waaronder "Het winkeltje" voor economie). Kinderen verzamelen spullen voor hun kluisje; na 8 gespeelde spelletjes (`prijs.aantal`) mogen ze de grote kluis kraken en winnen ze een prijs. Inhoud in `rondleiding/data/stops.js`, kern in `rondleiding/js/quest.js`, games in `rondleiding/js/games-a.js`, `games-b.js` en `games-c.js` (contract `rondleiding/GAMES.md`, uitleg `rondleiding/SCHEMA.md`), posters maken met `rondleiding/tools/maak-qr.js`.
 
 ## 5. De games
 
