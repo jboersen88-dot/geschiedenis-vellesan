@@ -62,7 +62,7 @@ index.html                      kaft: kies Economie of Geschiedenis
 ├── losse onderdelen Geschiedenis: toets.html, spotprent.html, spotprent-opdrachten.html,
 │   racer.html, kaart.html, beeldquiz.html, verhaal.html, filmvragen.html, nakijken.html,
 │   doeboek.html, presenteer.html
-├── rondleiding/                open dag: rondleiding met QR-speurtocht (staat los van de lessite)
+├── rondleiding/                open dag: "Missie Vellesan", rondleiding met QR-speurtocht en mini-games (staat los van de lessite)
 ├── slides/, img/, data/, materiaal/   dia's, beelden, databestanden, de 4 PowerPoints van boekje 1
 ├── tools/                      controles, dia-gereedschap, docentpagina's
 └── docs/                       besluiten, overdracht, dit overzicht
@@ -118,7 +118,7 @@ Alle andere hoofdstukken (jaar 2 H3 tot en met H6, jaar 3 mavo H3 tot en met H8,
 
 ### 4.3 Open dag
 
-`rondleiding/` is een losse app voor groep 7 en 8 op iPads: 17 stops op de plattegrond van het gebouw, per stop een filmpje, uitleg en 3 opdrachten. De opdrachten gaan open door de QR-poster op die plek te scannen. Gegevens in `rondleiding/data/stops.js` (uitleg in `rondleiding/SCHEMA.md`), posters maken met `rondleiding/tools/maak-qr.js`.
+`rondleiding/` is "Missie Vellesan", een losse app voor groep 7 en 8 op iPads: 20 stops op een 3D-plattegrond, per stop een filmpje (met kijk-rond-modus), uitleg en 1 of 2 missies (15 soorten mini-games). De missies gaan open door de QR-poster op die plek te scannen. Kinderen verzamelen spullen voor hun kluisje en kraken aan het eind de grote kluis. Inhoud in `rondleiding/data/stops.js`, kern in `rondleiding/js/quest.js`, games in `rondleiding/js/games-a.js` en `games-b.js` (contract `rondleiding/GAMES.md`, uitleg `rondleiding/SCHEMA.md`), posters maken met `rondleiding/tools/maak-qr.js`.
 
 ## 5. De games
 
@@ -136,7 +136,7 @@ Alle andere hoofdstukken (jaar 2 H3 tot en met H6, jaar 3 mavo H3 tot en met H8,
 | **Scroll-verhaal** | `verhaal.html` | Vijf scènes van de crisis naar de welvaart, met cijfers die meelopen. |
 | **Schat het eerst** | `boekje-1.html#cijfers` | Zes schatvragen met een schuif, daarna de echte waarde en uitleg. |
 | **Spotprent analyseren** | `spotprent.html` | 11 prenten met de Kijkwijzer in 4 stappen, hints en AI-feedback per stap. |
-| **Rondleiding** | `rondleiding/` | QR-speurtocht door het gebouw (open dag). |
+| **Rondleiding** | `rondleiding/` | Missie Vellesan: QR-speurtocht met mini-games door het gebouw (open dag). |
 
 ### De racemotor (EDU-Racer)
 

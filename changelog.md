@@ -1,3 +1,23 @@
+## 2026-11-26 · Open dag: rondleiding opnieuw gebouwd als "Missie Vellesan"
+
+De docent vond de eerste rondleiding niet mooi en niet professioneel genoeg en wilde een wow-ervaring met effecten, spelletjes en alle lokalen. De rondleiding is helemaal opnieuw gebouwd. Adres, QR-codewoorden en `?qr=`/`?stop=` blijven werken.
+
+- **Verhaal**: het kind kiest een dier en krijgt een verzonnen agentnaam (geen echte naam). Bij elke stop verdient het een voorwerp voor het kluisje. Bij vier stops vindt het een geheim cijfer. In de bibliotheek kraakt het de grote kluis (1926, het bouwjaar) en krijgt het een leerlingenpas.
+- **Startscherm**: filmmontage uit de clips (`media/intro.mp4`, 17 s, zonder geluid), letters die invliegen.
+- **Plattegrond**: de drie etages zweven als 3D-lagen (`img/vloer-N.webp`, witte achtergrond weggehaald). Tik op een etage om in te zoomen. Kantelen van de iPad beweegt de kaart een beetje mee.
+- **Stopscherm**: groot filmscherm met titel, de film vult ook brede schermen (wazige achtergrond). Knop "Kijk rond": de film schermvullend, beweegt mee als je de iPad draait (of sleep met de vinger). Voice-overs uit `voiceover/<id>.mp3` worden automatisch gebruikt zodra ze er staan.
+- **Missies**: 15 soorten mini-games: piano (aula), kluisje kraken, automaat met spelgeld, schuifpuzzel (handvaardigheid), tegels draaien (Hal 2), wie helpt je (rector), rooster-puzzel, skelet bouwen (biologie), bruisbal maken door te schudden (lab), raad het getal (wiskunde), blaadjes vangen (binnentuin), hallo in vier talen met uitspraak, stroomkring (B19), woordpuzzel (B20/B21, bibliotheek), typ-race (computerlokaal), oud of nieuw sorteren, lift-geheugen, tekenen (tekenzolder). Plus quiz, tellen, zoeken, foto en open vraag. Sterren per missie, geluid (zelf gemaakt met WebAudio, geen bestanden), confetti.
+- **Nieuwe stops**: B19, B20 en B21 (code VONK), de binnentuin (BLAD) en rector en docentenkamer (STER). Clips geknipt uit de originele films (IMG_9193 5:48-6:14 en 3:04-3:28, IMG_9194 3:01-3:10), 540 x 960. Lokaalverdeling volgens de docent (26 nov) en de plattegrond van jan 2025.
+- **Vertelstem**: nieuwe stem (ElevenLabs, "Roos") in `voiceover/<id>.mp3`, met de tekst in `voiceover/<id>.txt`. De film speelt zonder geluid met de stem erover, met ondertitels die meelopen (verdeeld naar zinslengte, dus niet op de tiende seconde precies).
+- **Posters**: `qr/posters.pdf` opnieuw gemaakt (20 stops + 3 geheime). De stopnummers zijn veranderd; print de nieuwe set.
+- **Techniek**: `js/quest.js` (kern), `js/games-a.js` en `js/games-b.js` (games, contract in `GAMES.md`), `css/`. Oude `app.js` en `style.css` zijn weg. Nieuwe opslag `vellesan-missie-v2`; de oude sleutel wordt niet gebruikt. Standaard donker thema, ook als de iPad op licht staat (keuze: het filmische ontwerp werkt alleen donker).
+
+**Getest**: in Chromium op 375 en 820 px: intro, agent kiezen, uitleg, kaart (3D en per etage), elke missie van alle 20 stops geopend, alle games doorgespeeld in een testopstelling, de finale met de kluis en de leerlingenpas. Geen consolefouten, geen horizontaal scrollen. vragencheck, linkcheck en a11ycheck op 0.
+
+**Niet getest**: echte iPad en Safari: schudden (lab), draaien (kijk rond), camera-scanner, geluid, spraak bij de talen, en of stem en film tegelijk starten op de iPad.
+
+**Controleren door de docent**: speel de rondleiding één keer op een iPad. Kloppen de plekken van de bolletjes op de kaart, vooral B19-B21, binnentuin en rector? Kloppen de vakken per lokaal (B10, B11 en B22-B25 zijn niet zeker)? Print daarna pas de nieuwe posters.
+
 ## 2026-11-19 · Economie 4 mavo H6: bijtelling en box 3 eruit, plaatjes in de dia's vernieuwd
 
 De docent besloot: de bijtelling mag weg (staat niet meer in de basisstof van het boek), box 3 wordt niet meer behandeld (komt al jaren niet meer in het eindexamen), en de oude plaatjes in de PowerPoints mogen worden bijgewerkt, zolang de verhaallijn gelijk blijft.

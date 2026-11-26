@@ -1,49 +1,48 @@
-# Rondleiding: data contract (data/stops.js)
+# Missie Vellesan: hoe het werkt
 
-`data/stops.js` sets one global: `window.RONDLEIDING = {...}`. Plain script, no modules, no build step.
+Digitale rondleiding voor de open dag (groep 7 en 8, iPads). Gewone HTML, CSS en JavaScript, geen build-stap.
+
+## Bestanden
+
+| Bestand | Wat |
+|---|---|
+| `index.html` | Laadt alles. Standaard donker thema (`data-theme="dark"`). |
+| `data/stops.js` | Alle inhoud: stops, opdrachten, bonusfilmpjes, kluiscode. |
+| `js/quest.js` | Kern: router, opslag, intro, agent kiezen, 3D-kaart, stopscherm, kijk-rond, scanner, kluisje, finale, leerlingenpas, geluid en effecten. Ook de opdrachten `mc`, `zoek`, `tel`, `open`, `foto`, `koppel`, `kluis`. |
+| `js/games-a.js` | Mini-games `piano`, `lift`, `schuif`, `tegels`, `skelet`, `lab`, `teken`. |
+| `js/games-b.js` | Mini-games `scherm`, `automaat`, `getal`, `vang`, `stroom`, `typen`, `sorteer`, `woord`. |
+| `GAMES.md` | Het contract voor een nieuwe mini-game. |
+| `img/vloer-N.webp` | Plattegrond per etage met doorzichtige achtergrond (uit `img/kaart-N.jpg`). |
+| `media/<id>.mp4/.jpg` | Filmpje en stilstaand beeld per stop. `media/intro.mp4` is de montage op het startscherm. |
+| `voiceover/<id>.mp3` | Vertelstem per stop (optioneel). Bestaat het bestand, dan speelt de film zonder geluid met deze stem erover. |
+| `qr/posters.pdf` | Posters om te printen. Opnieuw maken: `node tools/maak-qr.js` (met `qrcode` en `playwright` op `NODE_PATH`). |
+
+## Een stop in `data/stops.js`
 
 ```js
-window.RONDLEIDING = {
-  basisUrl: "https://example.nl/rondleiding/", // public address of the app; QR = basisUrl + "?qr=" + code
-  qrVerplicht: true,                        // true: a stop must be found by scanning its QR first (lock screen); false: old behaviour
-  titel: "Ontdek het Vellesan",            // shown on the start screen
-  welkom: "korte welkomsttekst voor kinderen",
-  etages: [                                 // index = etage number
-    { naam: "Begane grond", kaart: "img/kaart-0.jpg", w: 1100, h: 700 },
-    { naam: "1e etage",     kaart: "img/kaart-1.jpg", w: 1233, h: 800 },
-    { naam: "2e etage",     kaart: "img/kaart-2.jpg", w: 1210, h: 760 }
-  ],
-  stops: [                                  // in walking order
-    {
-      id: "s01",                            // also the media file name
-      code: "ZON",                          // QR code word: unique, 3-5 capital letters, easy Dutch word
-      naam: "Ingang en receptie",
-      etage: 0,                             // index into etages
-      x: 35, y: 74,                         // position on that floor's map, in PERCENT of image width/height
-      clip: "media/s01.mp4",                // portrait 480x854 mp4 with the teacher's voice
-      poster: "media/s01.jpg",
-      uitleg: "2-3 korte zinnen: wat is dit voor plek en hoe werkt het hier?",
-      loop: "1-2 zinnen: zo loop je vanaf de vorige stop hierheen.",
-      opdrachten: [                         // 2 or 3 per stop; the child chooses which to do
-        { type: "mc",   vraag: "...", opties: ["a","b","c"], goed: 1, uitleg: "korte reactie na het antwoord" },
-        { type: "zoek", vraag: "Zoek ... Gevonden? Tik op de knop!" },            // just a 'Gevonden!' button
-        { type: "tel",  vraag: "Tel ... Hoeveel zijn het er?" },                   // number input, no right/wrong, saved
-        { type: "foto", vraag: "Maak een foto van ... (geen mensen op de foto!)" },// camera input, photo shown on the iPad only, never uploaded
-        { type: "open", vraag: "Wat zou jij ...?" }                                // short text input, saved
-      ]
-    }
-  ],
-  bonus: [                                  // extra clips, no map position
-    { id: "b1", code: "RAKET", naam: "De grote trap", clip: "media/b1.mp4", poster: "media/b1.jpg", uitleg: "..." }
-  ]
-};
+{
+  id: "s18",                       // ook de naam van film en voice-over
+  item: ["💡", "Lampje"],          // beloning voor in het kluisje
+  code: "VONK",                    // QR-codewoord, 3-5 hoofdletters, uniek; staat op de poster
+  naam: "B19, B20 en B21", sub: "Natuurkunde en Nederlands",
+  etage: 1, x: 62, y: 13,          // plek op de plattegrond in procenten
+  cijfer: 9,                       // optioneel: geheim cijfer voor de grote kluis
+  clip: "media/s18.mp4",           // null = "Film volgt"
+  poster: "media/s18.jpg",
+  uitleg: "...", loop: "...",
+  opdrachten: [ { type: "stroom", vraag: "..." }, ... ]
+}
 ```
 
-## QR treasure hunt
+Een filmpje toevoegen bij een stop zonder film: zet `media/<id>.mp4` (staand, 480 x 854) en `media/<id>.jpg` neer en vul `clip` en `poster` in.
 
-- Every stop and every bonus item has a unique `code` (3-5 capital letters, no confusing letters, case-insensitive when typed).
-- A poster QR contains `basisUrl + "?qr=" + code`. The app also accepts `#qr=CODE`, a bare code, or any text containing `qr=CODE`.
-- Stop code: the stop is marked found (`found[id]`) and opens with a "Gevonden!" banner. Bonus code: the bonus clip is unlocked (`secrets[id]`) and each found one earns 2 stars. Bonus items are the "geheime" QR posters.
-- With `qrVerplicht: true` an unfound stop shows a lock screen; unfound bonus clips show as mystery cards. With `false` everything is open as before.
-- localStorage state gains `found` and `secrets` (objects id -> true); old saves without them mean "nothing found".
-- Posters: `node tools/maak-qr.js [basisUrl]` writes `qr/posters.html` and `qr/posters.pdf` (needs the npm packages `qrcode` and `playwright`, installed outside the app folder, see the header of the script). Reprint if the web address changes.
+## Volgorde en adressen
+
+- De volgorde van `stops` is de looproute. Het stopnummer is de plek in de lijst.
+- QR-poster: `basisUrl + "?qr=" + code`. Ook `#qr=CODE` en typen werken.
+- `?stop=N` en `#/stop/N` openen stop N. Andere schermen: `#/kaart`, `#/kluisje`, `#/finale`, `#/bonus`.
+- Met `qrVerplicht: true` zijn film en uitleg altijd te zien, maar gaan de missies pas open na het scannen.
+
+## Opslag
+
+Alleen op de iPad, in `localStorage` onder `vellesan-missie-v2`: agent (dier, kleur, verzonnen naam), gevonden codes, gedane opdrachten, sterren, antwoorden op tel- en open vragen. Foto's blijven alleen in het geheugen. De oude sleutel `vellesan-rondleiding-v1` wordt niet gebruikt en niet gewist. "Opnieuw beginnen" op het startscherm wist alles voor een volgend kind.

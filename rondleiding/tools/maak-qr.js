@@ -45,6 +45,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,san
 .name{font-size:9.5mm;font-weight:700;margin:3mm 0 0;line-height:1.15;min-height:22mm}
 .qr{width:140mm;height:140mm;margin:4mm 0;border:1.2mm solid #f39200;border-radius:4mm;padding:2mm;background:#fff}
 .qr svg{width:100%;height:100%;display:block}
+.unlock{font-size:6mm;color:#c2484d;font-weight:800;margin-top:2mm}
 .scan{font-size:10mm;font-weight:800;margin:2mm 0 0}
 .type{margin-top:auto;width:100%;border-top:0.8mm solid #f39200;padding-top:5mm;font-size:6.5mm}
 .word{display:block;font-size:20mm;font-weight:900;letter-spacing:2mm;margin-top:1mm;line-height:1.1}
@@ -62,7 +63,7 @@ td.code{font-weight:900;letter-spacing:.6mm;font-size:4.6mm}
 .small{font-size:3.4mm;color:#555}
 `;
 
-let html = `<!doctype html><html lang="nl"><head><meta charset="utf-8"><title>QR-posters Vellesan College</title><style>${css}</style></head><body>`;
+let html = `<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>QR-posters Vellesan College</title><style>${css}</style></head><body>`;
 
 const etage = i => (D.etages[i] || {}).naam || "";
 html += `<section class="page overview"><h1>QR-posters rondleiding</h1>
@@ -76,8 +77,8 @@ html += `</tbody></table>
 
 D.stops.forEach((s, i) => {
   html += `<section class="page"><div class="frame">
-<div class="top">Vellesan College</div>
-<div class="stop">Stop ${i + 1}</div>
+<div class="top">Missie Vellesan</div>
+<div class="stop">Stop ${i + 1}</div><div class="unlock">Scan en open je missies</div>
 <div class="name">${esc(s.naam)}</div>
 <div class="qr">${svg(urlFor(s.code))}</div>
 <div class="scan">Scan mij met de iPad</div>
@@ -86,7 +87,7 @@ D.stops.forEach((s, i) => {
 });
 D.bonus.forEach((b, i) => {
   html += `<section class="page secret"><div class="frame">
-<div class="top">Vellesan College</div>
+<div class="top">Missie Vellesan</div>
 <div class="stop">Geheime QR-code!</div>
 <div class="name">Je hebt een bonus gevonden</div>
 <div class="qr">${svg(urlFor(b.code))}</div>
