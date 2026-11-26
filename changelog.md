@@ -1,3 +1,10 @@
+## 2026-11-26 · Open dag: stem en AI-beelden ingebouwd
+
+- **Stem** (ElevenLabs, Roos): `voiceover/welkom.mp3` bij de uitleg (na de eerste tik op Volgende), `prijs.mp3` bij "Prijs vrijgespeeld" en `kluis.mp3` als de kluis opengaat. Tekst in de bijbehorende `.txt`. Let op: in de welkomtekst zegt de stem "acht". Verander je `prijs.aantal`, neem dan ook dit fragment opnieuw op.
+- **Beelden** (Adobe Firefly, met label "AI-illustratie"): een agententafel met een kaart van de school (uitleg), een speelhal-kast met schoolspullen (speelhal) en een gouden kluis met beker (kluis op slot). Verkleind naar webp, 512 px, samen 118 kB.
+
+**Getest**: in Chromium op 375 en 820 px, geen consolefouten, checks op 0. **Niet getest**: of Safari op de iPad de stem afspeelt bij de prijs (die start niet direct na een tik).
+
 ## 2026-11-26 · Open dag: plek voor stem en AI-beelden, Speelhal vanaf elke stop
 
 - **Stem en beelden klaargezet**: `stemmen` (welkom, prijs, kluis) en `beelden` (briefing, speelhal, kluis) in `data/stops.js`. De fragmenten zijn gemaakt met ElevenLabs (stem Roos) en de beelden met Adobe Firefly. Ze staan nog op `null`: de bestanden moeten nog van de computer van de docent komen. Beelden krijgen het label "AI-illustratie".

@@ -15,8 +15,8 @@ window.RONDLEIDING = {
   // "assen" = hoe de schuine plattegrond loopt (richting van de lange gang en van de aula, in beeldpunten).
   hud: { draai: null, kijkhoek: 60, assen: [[0.94, -0.35], [0.45, 0.89]] },
   // Korte stemfragmenten (ElevenLabs, stem Roos) en AI-illustraties (Adobe Firefly). null = niet gebruiken.
-  stemmen: { welkom: null, prijs: null, kluis: null },
-  beelden: { briefing: null, speelhal: null, kluis: null },
+  stemmen: { welkom: "voiceover/welkom.mp3", prijs: "voiceover/prijs.mp3", kluis: "voiceover/kluis.mp3" },
+  beelden: { briefing: "img/ai-briefing.webp", speelhal: "img/ai-speelhal.webp", kluis: "img/ai-kluis.webp" },
   // De prijs: na zoveel gespeelde spelletjes (stops en speelhal samen) mag je de grote kluis kraken.
   // Verander "aantal" om het makkelijker of moeilijker te maken. "tekst" staat op de leerlingenpas.
   prijs: { aantal: 8, tekst: "Laat je pas zien aan iemand van de school. Dan krijg je je prijs!" },
