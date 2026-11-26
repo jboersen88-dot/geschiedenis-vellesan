@@ -132,7 +132,7 @@ window.RONDLEIDING = {
       uitleg: "Dit is de begane grond van het nieuwe gebouw. In B08 en B09 krijg je wiskunde. Door de grote ramen kijk je op de binnentuin.",
       loop: "Loop naar het nieuwe gebouw aan de andere kant van de binnentuin.",
       opdrachten: [
-        { type: "getal", vraag: "Wiskunde-uitdaging: raad het geheime getal tussen 1 en 100. Je krijgt hints!" }
+        { type: "getal", vraag: "Wiskunde-uitdaging: raad het geheime getal tussen 1 en 50. Je krijgt hints!" }
       ]
     },
     {
@@ -141,7 +141,7 @@ window.RONDLEIDING = {
       uitleg: "Midden tussen het oude en het nieuwe gebouw ligt de binnentuin. Is het mooi weer? Dan kun je hier in de pauze zitten.",
       loop: "Kijk door de grote ramen van de nieuwbouw, of loop naar de deur van de binnentuin.",
       opdrachten: [
-        { type: "vang", vraag: "Pauze-spel! Vang zo veel mogelijk vallende blaadjes in 20 seconden." }
+        { type: "vang", vraag: "Pauze-spel! Vang in 20 seconden zo veel mogelijk blaadjes. Een gouden blad is 3 punten." }
       ]
     },
     {

@@ -199,7 +199,7 @@
       for (var s = 0; s < N * N; s++) grid.push(s);
       // oplosbare shuffle: willekeurige zetten vanaf opgelost
       var prevSlot = -1;
-      for (var m = 0; m < 40 || isSolved(); m++) {
+      for (var m = 0; m < (o.zetten || 16) || isSolved(); m++) {
         var from = gapSlot;
         var nb = neighbours(gapSlot).filter(function (x) { return x !== prevSlot; });
         swapWithGap(nb[rnd(nb.length)]);
@@ -246,7 +246,7 @@
         moves++; counter.textContent = "Zetten: " + moves;
         api.sfx("tap");
         if (moves >= 60) solveBtn.hidden = false;
-        if (isSolved()) finish(moves <= 50 ? 3 : moves <= 90 ? 2 : 1);
+        if (isSolved()) finish(moves <= 30 ? 3 : moves <= 60 ? 2 : 1);
       }
       function finish(stars) {
         solved = true; solveBtn.hidden = true;

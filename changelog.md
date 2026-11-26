@@ -1,3 +1,15 @@
+## 2026-11-26 · Open dag: ronde 9, spelletjes nagelopen als kind
+
+Alle 19 stop-spelletjes geopend en bekeken op 375 en 820 px (de speelhal was al getest). Wat ik aanpaste:
+- **Schuifpuzzel** (handvaardigheid): was te moeilijk voor groep 7 (40 schudzetten). Nu 16, en de sterren passen daarbij (3 sterren tot 30 zetten).
+- **Raad het getal** (wiskunde): duurde te lang. Nu 1 tot 50 met 7 pogingen in plaats van 1 tot 100 met 10. Hints en sterren schalen mee.
+- **Koppel ze** (wie helpt je, rooster, talen): op een telefoon waren de twee kolommen ongelijk breed en de knoppen ongelijk hoog. Nu even breed en per rij even hoog; alleen losse woorden worden afgebroken.
+- **Vang de blaadjes** (binnentuin): spannender. Af en toe valt er een gouden blad dat 3 punten waard is, en bij elke vangst springt "+1" of "+3" omhoog.
+
+**Getest**: Chromium op 375 en 820 px, alle spelletjes geopend, vang en getal helemaal uitgespeeld, hele route, checks op 0, geen consolefouten.
+**Niet getest**: op een echte iPad.
+**Controleren**: of de spelletjes nu kort genoeg zijn. Langst blijven de schuifpuzzel en het tekenen.
+
 ## 2026-11-26 · Open dag: ronde 8, voller geluid
 
 - Alle geluidjes gaan nu door een zachte compressor en een kleine galm (zelf berekend, geen geluidsbestanden). Scherpe piepjes (blok- en zaagtand) krijgen een filter, zodat ze minder schel klinken.

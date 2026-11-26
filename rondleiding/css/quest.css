@@ -309,8 +309,9 @@ body.on-map .view,body.on-hall .view,body.on-bonus .view{padding-bottom:120px}
 .foto-prev img{display:block;width:100%}
 .foto-prev.flash{animation:flash .6s}
 @keyframes flash{from{filter:brightness(3)}}
-.kp{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.kp-col{display:grid;gap:10px;align-content:start}
+.kp{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px}
+.kp-item{overflow-wrap:break-word} .kp-item.r{hyphens:auto;-webkit-hyphens:auto}
+.kp-col{display:grid;gap:10px;grid-auto-rows:1fr}
 .kp-item{min-height:56px;padding:8px 10px;border-radius:14px;border:1px solid var(--line);background:var(--panel);font-weight:700;cursor:pointer;transition:transform .15s,background .2s,border-color .2s}
 .kp-item.sel{border-color:var(--accent);background:rgba(243,146,0,.2);transform:scale(1.03)}
 .kp-item.done{--h:140;background:hsla(var(--h),70%,50%,.22);border-color:hsla(var(--h),70%,60%,.8);cursor:default}

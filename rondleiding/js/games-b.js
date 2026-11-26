@@ -232,19 +232,19 @@
     titel: "Raad het getal", icoon: "🔢",
     render: function (host, o, api) {
       setup(host, api, "getal");
-      var T = tracker(), E = api.el, MAX = 10;
-      var secret = 1 + Math.floor(Math.random() * 100);
-      var lo = 1, hi = 100, tries = 0, entry = "", finished = false, seen = {};
+      var T = tracker(), E = api.el, MAX = o.pogingen || 7, TOP = o.max || 50;
+      var secret = 1 + Math.floor(Math.random() * TOP);
+      var lo = 1, hi = TOP, tries = 0, entry = "", finished = false, seen = {};
       var counter = E("div", { class: "getal-count", text: "Poging 1 van " + MAX });
       var disp = E("div", { class: "getal-disp", "aria-live": "polite", text: "?" });
       var arrow = E("div", { class: "getal-arrow", "aria-hidden": "true", text: "🌡️" });
       var word = E("div", { class: "getal-word", text: "Begin maar!" });
-      var hintEl = E("div", { class: "getal-hint", text: "Het getal ligt tussen 1 en 100." });
+      var hintEl = E("div", { class: "getal-hint", text: "Het getal ligt tussen 1 en " + TOP + "." });
       var range = E("div", { class: "getal-range" });
       var fill = E("div", { class: "getal-fill" });
       var mark = E("div", { class: "getal-mark" }, E("span", { class: "getal-pin" }));
       var track = E("div", { class: "getal-track", "aria-hidden": "true" }, fill, range, mark);
-      var scale = E("div", { class: "getal-scale", "aria-hidden": "true" }, E("span", { text: "1" }), E("span", { text: "100" }));
+      var scale = E("div", { class: "getal-scale", "aria-hidden": "true" }, E("span", { text: "1" }), E("span", { text: String(TOP) }));
       var heat = E("div", { class: "getal-thermo" },
         E("div", { class: "getal-bulb", "aria-hidden": "true" }), E("div", { class: "getal-tube" }, track, scale));
       var top = E("div", { class: "getal-top" }, arrow, E("div", { class: "getal-fb" }, word, hintEl));
@@ -273,10 +273,11 @@
         disp.classList.toggle("is-empty", !entry);
       }
       function setRange() {
-        range.style.transform = "translateX(" + ((lo - 1) / 100 * 100) + "%) scaleX(" + ((hi - lo + 1) / 100) + ")";
+        range.style.transform = "translateX(" + ((lo - 1) / TOP * 100) + "%) scaleX(" + ((hi - lo + 1) / TOP) + ")";
       }
       function pin(n) { mark.style.transform = "translateX(" + ((n - 0.5)) + "%)"; mark.classList.add("is-on"); }
       function heatInfo(d) {
+        d = d * 100 / TOP;
         if (d <= 3) return ["Kokend heet!", "hot", 0.97];
         if (d <= 8) return ["Heel warm", "hot", 0.85];
         if (d <= 20) return ["Warm", "warm", 0.65];
@@ -289,7 +290,7 @@
       function guess() {
         if (!entry) { say(msg, "Tik eerst een getal.", "bad"); return; }
         var n = parseInt(entry, 10);
-        if (n < 1 || n > 100) { say(msg, "Kies een getal van 1 tot en met 100.", "bad"); api.sfx("bad"); entry = ""; show(); return; }
+        if (n < 1 || n > TOP) { say(msg, "Kies een getal van 1 tot en met " + TOP + ".", "bad"); api.sfx("bad"); entry = ""; show(); return; }
         if (seen[n]) { say(msg, "Dat getal had je al.", "bad"); api.sfx("bad"); entry = ""; show(); return; }
         seen[n] = true; tries++; entry = ""; show();
         pin(n);
@@ -305,7 +306,7 @@
           fill.className = "getal-fill is-hot"; fill.style.transform = "scaleX(1)";
           api.sfx("win"); api.burst(disp);
           say(msg, "Super! Je had " + tries + " " + (tries === 1 ? "poging" : "pogingen") + " nodig.", "good");
-          var stars = tries <= 6 ? 3 : tries <= 9 ? 2 : 1;
+          var stars = tries <= 4 ? 3 : tries <= 6 ? 2 : 1;
           T.timeout(function () { api.done(stars); }, 800);
           return;
         }
@@ -348,7 +349,7 @@
       var scoreEl = E("span", { class: "vang-score", text: "0" });
       var timeEl = E("span", { class: "vang-time", text: "20" });
       var bar = E("div", { class: "vang-bar", "aria-live": "off" },
-        E("div", { class: "vang-stat" }, E("small", { text: "Gevangen" }), scoreEl),
+        E("div", { class: "vang-stat" }, E("small", { text: "Punten" }), scoreEl),
         E("div", { class: "vang-stat" }, E("small", { text: "Tijd" }), timeEl));
       var timebar = E("div", { class: "vang-timebar", "aria-hidden": "true" }, E("div", { class: "vang-timefill" }));
       var fillEl = timebar.firstChild;
@@ -395,16 +396,21 @@
       function spawn(now, W, H) {
         if (leaves.length >= 12) return;
         var size = 60;
-        var inner = E("span", { class: "vang-leaf-in", text: LEAF[Math.floor(Math.random() * LEAF.length)] });
-        var el = E("button", { type: "button", class: "vang-leaf", "aria-label": "Blaadje" }, inner);
+        var gold = Math.random() < 0.12;
+        var inner = E("span", { class: "vang-leaf-in", text: gold ? "🍁" : LEAF[Math.floor(Math.random() * LEAF.length)] });
+        var el = E("button", { type: "button", class: "vang-leaf" + (gold ? " is-gold" : ""), "aria-label": gold ? "Gouden blad, 3 punten" : "Blaadje" }, inner);
         var l = { el: el, in_: inner, x: Math.random() * (W - size), y: reduced ? Math.random() * (H - size) : -size, r: Math.random() * 360,
           vy: 120 + Math.random() * 110, vr: (Math.random() - 0.5) * 120, born: now, caught: false, sw: Math.random() * 6, amp: 10 + Math.random() * 20 };
         l.x0 = l.x;
         el.addEventListener("pointerdown", function (e) {
           e.preventDefault();
           if (l.caught || !running) return;
-          l.caught = true; score++; scoreEl.textContent = String(score);
-          api.sfx("pop");
+          var pts = gold ? 3 : 1;
+          l.caught = true; score += pts; scoreEl.textContent = String(score);
+          api.sfx(gold ? "coin" : "pop");
+          var pop = E("span", { class: "vang-pop" + (gold ? " is-gold" : ""), "aria-hidden": "true", text: "+" + pts });
+          pop.style.transform = "translate3d(" + (l.x + 18).toFixed(0) + "px," + l.y.toFixed(0) + "px,0)";
+          arena.appendChild(pop); T.timeout(function () { if (pop.parentNode) pop.parentNode.removeChild(pop); }, 700);
           el.classList.add("is-caught");
           var i = leaves.indexOf(l); if (i >= 0) leaves.splice(i, 1);
           T.timeout(function () { if (el.parentNode) el.parentNode.removeChild(el); }, 320);
@@ -438,10 +444,10 @@
         running = false; cancelAnimationFrame(raf);
         clearLeaves();
         timeEl.textContent = "0"; fillEl.style.transform = "scaleX(0)";
-        var stars = score >= 15 ? 3 : score >= 8 ? 2 : 1;
+        var stars = score >= 18 ? 3 : score >= 9 ? 2 : 1;
         api.sfx(stars > 1 ? "win" : "good");
         overlay.textContent = ""; overlay.classList.remove("is-count");
-        overlay.appendChild(E("div", { class: "vang-big", text: score + " blaadjes!" }));
+        overlay.appendChild(E("div", { class: "vang-big", text: score + " punten!" }));
         overlay.appendChild(E("div", { class: "vang-stars", "aria-hidden": "true", text: "★★★".slice(0, stars) + "☆☆☆".slice(0, 3 - stars) }));
         var b = E("button", { type: "button", class: "btn ghost vang-start", text: "Nog een keer" });
         b.onclick = countdown; overlay.appendChild(b);
@@ -449,7 +455,7 @@
         say(msg, stars === 3 ? "Wat een vangst!" : stars === 2 ? "Mooi gedaan!" : "Probeer het nog eens voor meer sterren.", "good");
         if (!doneCalled) { doneCalled = true; T.timeout(function () { api.done(stars); }, 900); }
       }
-      showStart("Vang zo veel mogelijk blaadjes in 20 seconden!", "Start");
+      showStart("Vang de blaadjes! Een gouden blad is 3 punten.", "Start");
       return function () { running = false; cancelAnimationFrame(raf); T.clear(); };
     }
   });
