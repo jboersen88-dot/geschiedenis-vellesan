@@ -9,6 +9,9 @@ window.RONDLEIDING = {
   intro: { clip: "media/intro.mp4", poster: "media/intro.jpg" },
   voiceover: "voiceover/",            // map met <id>.mp3 van de vertelstem (mag leeg zijn)
   kluis: { code: "1926", hint: "Het is het jaar waarin het oude gebouw is gebouwd." },
+  // De prijs: na zoveel gespeelde spelletjes (stops en speelhal samen) mag je de grote kluis kraken.
+  // Verander "aantal" om het makkelijker of moeilijker te maken. "tekst" staat op de leerlingenpas.
+  prijs: { aantal: 8, tekst: "Laat je pas zien aan iemand van de school. Dan krijg je je prijs!" },
   etages: [
     { naam: "Begane grond", kort: "BG", kaart: "img/vloer-0.webp", w: 1100, h: 700 },
     { naam: "1e etage", kort: "1", kaart: "img/vloer-1.webp", w: 1233, h: 800 },
@@ -200,6 +203,33 @@ window.RONDLEIDING = {
         { type: "woord", vraag: "Zet de letters goed. Het zijn woorden uit de bibliotheek.", woorden: ["BOEK", "LEZEN", "HUISWERK"] }
       ]
     }
+  ],
+  // Speelhal: korte spelletjes die je overal kunt spelen, ook zonder QR-code.
+  speelhal: [
+    { type: "goedfout", vraag: "Hoeveel weet jij al van de school?", seconden: 45, aantal: 8, zinnen: [
+      ["Elke leerling krijgt een eigen kluisje.", true],
+      ["Je jas neem je mee het lokaal in.", false],
+      ["Ben je ziek? Dan meld je je bij de receptie.", true],
+      ["Je blijft de hele dag in hetzelfde lokaal.", false],
+      ["In de aula eet en drink je in de pauze.", true],
+      ["Bij natuurkunde en scheikunde doe je zelf proefjes.", true],
+      ["De lift is voor iedereen die haast heeft.", false],
+      ["In de bibliotheek kun je boeken lenen.", true],
+      ["In de huiswerkklas maak je je huiswerk.", true],
+      ["Je eigen lunch meenemen mag niet.", false],
+      ["De rector is de baas van de school.", true],
+      ["Op het scherm in de hal zie je of een les uitvalt.", true]
+    ] },
+    { type: "memory", vraag: "Zoek de paren: een vak en het ding dat erbij hoort.", paren: [
+      ["Wiskunde", "📐"], ["Biologie", "🦴"], ["Scheikunde", "🧪"], ["Tekenen", "🎨"], ["Talen", "💬"], ["Aardrijkskunde", "🌍"]
+    ] },
+    { type: "etage", vraag: "Op welke etage ligt deze plek?", etages: ["Begane grond", "1e etage", "2e etage"], plekken: [
+      ["De aula", 0], ["De tekenzolder", 2], ["De bibliotheek", 2], ["Biologie, B05", 0], ["Engels, Frans en Duits", 1], ["Het computerlokaal", 1]
+    ] },
+    { type: "etage", titel: "Welk vak?", icoon: "🎒", vraag: "Bij welk vak hoort dit?", etages: ["Biologie", "Talen", "Tekenen"], plekken: [
+      ["Je bekijkt een echt skelet.", 0], ["Je zegt hallo in het Frans.", 1], ["Je werkt aan een ezel.", 2],
+      ["De stoelen lopen omhoog, net als in een theater.", 0], ["Je leert Duitse woorden.", 1], ["Je lokaal ligt onder het dak.", 2]
+    ] }
   ],
   bonus: [
     { id: "b1", code: "RAKET", naam: "De grote trap", clip: "media/b1.mp4", poster: "media/b1.jpg", uitleg: "De monumentale trap uit 1926. Let op de koperen leuning en de zwarte stenen treden." },

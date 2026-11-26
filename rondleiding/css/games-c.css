@@ -1,0 +1,28 @@
+/* Missie Vellesan: speelhal-spelletjes (games-c.js) */
+.gc-timer{height:8px;border-radius:99px;background:var(--line);overflow:hidden;margin:0 0 12px}
+.gc-timer i{display:block;height:100%;background:linear-gradient(90deg,var(--accent2),var(--accent));transform-origin:0 50%}
+.gc-count{margin:0 0 8px;font-weight:700;color:var(--muted);text-align:center}
+.gc-card{min-height:120px;display:grid;place-items:center;padding:18px;border-radius:20px;background:var(--panel2);border:2px solid var(--line);text-align:center;margin-bottom:12px;transition:border-color .3s}
+.gc-big{margin:0;font-size:1.25rem;font-weight:800;line-height:1.35}
+.gc-in{animation:gcIn .35s var(--ease)}
+@keyframes gcIn{from{opacity:0;transform:translateY(10px) scale(.98)}to{opacity:1;transform:none}}
+.gc-ok{border-color:var(--good)}
+.gc-no{border-color:var(--bad);animation:gcNo .35s}
+@keyframes gcNo{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.gc-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.gc-row.three{grid-template-columns:1fr}
+@media (min-width:560px){ .gc-row.three{grid-template-columns:repeat(3,1fr)} }
+.gc-row .btn{width:100%;justify-content:center}
+.gc-goed{background:linear-gradient(180deg,#6ee7b7,var(--good));color:#06281c}
+.gc-fout{border-color:var(--bad)!important}
+.gc-mem{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;perspective:800px}
+@media (min-width:560px){ .gc-mem{grid-template-columns:repeat(4,minmax(0,1fr))} }
+.gc-tile{position:relative;aspect-ratio:1;border:0;padding:0;background:none;cursor:pointer;transform-style:preserve-3d;transition:transform .45s var(--ease);font:inherit;color:var(--ink);width:100%;max-width:130px;justify-self:center}
+.gc-tile.up{transform:rotateY(180deg)}
+.gc-back,.gc-front{position:absolute;inset:0;display:grid;place-items:center;border-radius:16px;backface-visibility:hidden;-webkit-backface-visibility:hidden;border:1px solid var(--line)}
+.gc-back{background:linear-gradient(135deg,var(--accent2),var(--accent));color:#1b1206;font-family:var(--f-head);font-size:1.8rem;font-weight:800}
+.gc-front{background:var(--panel2);transform:rotateY(180deg);padding:4px;text-align:center}
+.gc-front strong{font-size:.86rem;line-height:1.15;overflow-wrap:anywhere}
+.gc-ic{font-size:34px}
+.gc-tile.got .gc-front{border:2px solid var(--good);background:rgba(52,211,153,.16)}
+@media (prefers-reduced-motion:reduce){ .gc-tile{transition:none} .gc-in,.gc-no{animation:none} }

@@ -194,6 +194,13 @@
   function nextIdx() { for (var i = 0; i < stops.length; i++) if (!isDone(stops[i])) return i; return -1; }
   function totalStars() { var n = 0; for (var k in state.sterren) n += state.sterren[k] || 0; for (var b in state.secrets) if (state.secrets[b]) n += 2; return n; }
   function maxStars() { var n = 0; stops.forEach(function (s) { n += 3 * (s.opdrachten || []).length; }); return n + bonus.length * 2; }
+  /* prijs: na een aantal gespeelde spelletjes (stops en speelhal samen) */
+  var hal = D.speelhal || [];
+  var HAL = { id: "hal", naam: "Speelhal", opdrachten: hal, arcade: true };
+  function prizeGoal() { var n = (D.prijs && D.prijs.aantal) || 8; var max = hal.length; stops.forEach(function (s) { max += (s.opdrachten || []).length; }); return Math.max(1, Math.min(n, max)); }
+  function playedCount() { var n = 0; for (var k in state.opd) if (state.opd[k]) n++; return n; }
+  function prizeLeft() { return Math.max(0, prizeGoal() - playedCount()); }
+  function prizeWon() { return prizeLeft() === 0; }
   function digits() { return stops.filter(function (s) { return s.cijfer != null; }); }
   function findStop(q) {
     if (!q) return -1;
@@ -233,7 +240,8 @@
         el("span", { class: "hud-name" }, el("small", { text: "Agent" }), el("strong", { text: a.naam || "Nieuwkomer" }))),
       extra || null,
       el("div", { class: "hud-stats" },
-        el("span", { class: "pill", "aria-label": doneCount() + " van " + stops.length + " stops klaar" }, icon("check"), doneCount() + "/" + stops.length),
+        el("button", { type: "button", class: "pill btnpill prize-pill" + (prizeWon() ? " won" : ""), onclick: function () { go("#/speelhal"); }, "aria-label": prizeWon() ? "Prijs vrijgespeeld. Naar de speelhal" : Math.min(playedCount(), prizeGoal()) + " van " + prizeGoal() + " spelletjes voor je prijs. Naar de speelhal" },
+          el("span", { "aria-hidden": "true", text: "🎁" }), prizeWon() ? icon("check") : Math.min(playedCount(), prizeGoal()) + "/" + prizeGoal()),
         el("span", { class: "pill star", "aria-label": totalStars() + " sterren" }, icon("star"), String(totalStars())),
         el("button", { type: "button", class: "pill btnpill", "aria-label": state.geluid ? "Geluid uit" : "Geluid aan", onclick: function (e) {
           state.geluid = !state.geluid; save(); var b = e.currentTarget; b.innerHTML = ""; add(b, icon(state.geluid ? "sound" : "mute"));
@@ -255,6 +263,7 @@
       if (h === "kluisje") return renderLocker();
       if (h === "finale") return renderFinale();
       if (h === "bonus") return renderBonus();
+      if (h === "speelhal") return renderHall();
       if (h === "briefing") return renderBriefing();
       return renderIntro();
     } catch (e) {
@@ -346,7 +355,7 @@
       { ic: "film", t: "Kijk en loop", p: "Bij elke plek zie je een filmpje. Zo weet je waar je heen moet." },
       { ic: "scan", t: "Scan de poster", p: "Op elke plek hangt een poster met een QR-code. Scan hem en je missie gaat open." },
       { ic: "locker", t: "Speel en verzamel", p: "Bij elke plek speel je een kort spelletje. Je wint iets voor je kluisje." },
-      { ic: "lock", t: "Kies zelf", p: "Je hoeft niet alles te doen. Kies wat je leuk vindt. Klaar? Kraak dan de grote kluis, dat kan altijd." }
+      { ic: "lock", t: "Win de prijs", p: "Je hoeft niet alles te doen. Speel " + prizeGoal() + " spelletjes, waar je maar wilt. Dan mag je de grote kluis kraken en win je een prijs!" }
     ];
     var i = 0, box = el("div", { class: "brief-card", "aria-live": "polite" }), dots = el("div", { class: "dots", "aria-hidden": "true" });
     steps.forEach(function () { dots.appendChild(el("i")); });
@@ -417,10 +426,9 @@
         el("div", { class: "ring", style: { "--p": prog }, role: "img", "aria-label": Math.round(prog * 100) + " procent klaar" }, el("span", { text: Math.round(prog * 100) + "%" }))),
       tabs, stage,
       el("p", { class: "fine center", text: "Tik op een etage om in te zoomen. Tik op een bolletje voor de plek." }),
-      next,
+      next, prizeBar(),
       el("div", { class: "map-actions" },
         btn([icon("locker"), "Mijn kluisje"], "ghost", function () { go("#/kluisje"); }),
-        ni >= 0 && doneCount() > 0 ? btn([icon("lock"), "Klaar? Kraak de kluis"], "ghost", function () { go("#/finale"); }) : null,
         btn([icon("star"), "Geheime filmpjes"], "ghost", function () { go("#/bonus"); })),
       scanFab()
     ], "map");
@@ -603,6 +611,42 @@
     ov.querySelector(".vr-hud button").focus();
   }
 
+  /* ================= prijs + speelhal ================= */
+  function prizeBar(noBtn) {
+    var goal = prizeGoal(), got = Math.min(playedCount(), goal), won = got >= goal;
+    return el("div", { class: "prize-bar glass" + (won ? " won" : "") },
+      el("span", { class: "prize-ic", "aria-hidden": "true", text: won ? "🏆" : "🎁" }),
+      el("div", { class: "prize-txt" },
+        el("strong", { text: won ? "Prijs vrijgespeeld!" : "Nog " + (goal - got) + (goal - got === 1 ? " spelletje" : " spelletjes") + " tot je prijs" }),
+        el("div", { class: "prize-track", role: "img", "aria-label": got + " van " + goal + " spelletjes gespeeld" }, el("i", { style: { transform: "scaleX(" + (got / goal) + ")" } })),
+        el("small", { class: "muted", text: won ? "Kraak nu de grote kluis. Spelen mag altijd nog." : got + " van " + goal + " gespeeld. Bij een stop of in de speelhal." })),
+      won ? btn(["Kluis", icon("next")], "glow", function () { go("#/finale"); }, "Naar de grote kluis") : noBtn ? null : btn(["Speelhal"], "ghost", function () { go("#/speelhal"); }, "Naar de speelhal"));
+  }
+  function renderHall() {
+    ambient();
+    var grid = el("div", { class: "hall-grid" });
+    function paint() {
+      grid.textContent = "";
+      hal.forEach(function (o, k) {
+        var g = Quest.games[o.type] || {}, key = HAL.id + ":" + k, done = !!state.opd[key], st = state.sterren[key] || 0;
+        grid.appendChild(el("button", { type: "button", class: "hall-card glass" + (done ? " done" : ""), style: { "--d": (k * 0.06) + "s" }, onclick: function () { sfx("tap"); openGame(HAL, -1, k); },
+            "aria-label": (o.titel || g.titel || "Spel") + (done ? ", gespeeld, " + st + " sterren" : "") },
+          el("span", { class: "hall-ic", "aria-hidden": "true", text: o.icoon || g.icoon || "★" }),
+          el("strong", { text: o.titel || g.titel || "Spel" }),
+          el("span", { class: "hall-stars", "aria-hidden": "true" }, [0, 1, 2].map(function (n) { return el("i", { class: n < st ? "on" : "", html: SVG.star }); }))));
+      });
+    }
+    paint();
+    var barBox = el("div", null, prizeBar(true));
+    renderHall.repaint = function () { paint(); barBox.textContent = ""; barBox.appendChild(prizeBar(true)); };
+    onLeave(function () { renderHall.repaint = null; });
+    show([hud(),
+      el("div", { class: "locker-head" }, el("p", { class: "eyebrow", text: "Overal te spelen" }), el("h1", { class: "h-display", text: "Speelhal" }),
+        el("p", { class: "lead", text: "Korte spelletjes over de school. Elk spelletje telt mee voor je prijs." })),
+      barBox, grid,
+      el("div", { class: "g-row center" }, btn([icon("map"), "Naar de kaart"], "glow", function () { go("#/kaart"); })), scanFab()], "hall");
+  }
+
   /* ================= modal + game ================= */
   function modal(build, cls) {
     var prevFocus = document.activeElement;
@@ -628,32 +672,35 @@
       var api = {
         el: el, shuffle: shuffle, sfx: sfx, burst: burst, reduced: reduced, speak: speak, motion: motion,
         done: function (n) {
-          if (finished) return; finished = true;
+          if (finished) return; finished = true; if (skip) skip.remove();
+          var wasWon = prizeWon();
           n = Math.max(1, Math.min(3, Math.round(n || 1)));
           state.opd[key] = true; state.sterren[key] = Math.max(state.sterren[key] || 0, n);
           var allOps = (s.opdrachten || []).every(function (oo, k) { return state.opd[s.id + ":" + k]; });
-          var stopNew = allOps && !state.done[s.id];
+          var stopNew = allOps && !state.done[s.id] && !s.arcade;
           if (allOps) state.done[s.id] = true;
           save();
           sfx("win"); confetti(1800);
+          if (!wasWon && prizeWon()) setTimeout(function () { sfx("unlock"); toast("🏆 <strong>Prijs vrijgespeeld!</strong> Je mag nu de grote kluis kraken."); }, reduced ? 0 : 900);
           reward.textContent = "";
           var starsEl = el("div", { class: "rw-stars" }, [0, 1, 2].map(function (k) { return el("i", { class: k < n ? "on" : "", style: { "--d": (0.15 + k * 0.18) + "s" }, html: SVG.star }); }));
           reward.appendChild(el("div", { class: "rw glass" }, starsEl,
             el("strong", { text: n === 3 ? "Perfect, agent!" : n === 2 ? "Goed gedaan!" : "Gelukt!" }),
-            el("div", { class: "g-row center" }, btn(stopNew ? "Bekijk je beloning" : "Verder", "glow", function () { close(); if (renderStop.repaint) renderStop.repaint(); if (stopNew) setTimeout(function () { stopReward(s, idx); }, reduced ? 0 : 280); }))));
+            el("div", { class: "g-row center" }, btn(stopNew ? "Bekijk je beloning" : "Verder", "glow", function () { close(); var h0 = document.querySelector(".view .hud"); if (h0) h0.replaceWith(hud()); if (s.arcade) { if (renderHall.repaint) renderHall.repaint(); } else if (renderStop.repaint) renderStop.repaint(); if (stopNew) setTimeout(function () { stopReward(s, idx); }, reduced ? 0 : 280); }))));
           reward.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "nearest" });
           var b = reward.querySelector("button"); if (b) b.focus();
         }
       };
       var head = el("div", { class: "g-head" },
-        el("span", { class: "g-ic", "aria-hidden": "true", text: (g && g.icoon) || "★" }),
-        el("div", null, el("p", { class: "eyebrow", text: "Missie · " + s.naam }), el("h2", { text: (g && g.titel) || "Opdracht" })),
+        el("span", { class: "g-ic", "aria-hidden": "true", text: o.icoon || (g && g.icoon) || "★" }),
+        el("div", null, el("p", { class: "eyebrow", text: (s.arcade ? "" : "Missie · ") + s.naam }), el("h2", { text: o.titel || (g && g.titel) || "Opdracht" })),
         btn(icon("close"), "ghost round", close, "Sluiten"));
       var q = el("p", { class: "g-q", text: o.vraag });
       if (alreadyDone) q.appendChild(el("span", { class: "g-again", text: " Je hebt deze al gedaan. Nog een keer mag!" }));
       if (!g) host.appendChild(el("p", { text: "Deze opdracht kan nu niet worden geladen." }));
       else try { box._cleanup = g.render(host, o, api); } catch (e) { console.error(e); host.appendChild(el("p", { text: "Oeps, deze opdracht doet het even niet." })); host.appendChild(btn("Sla over", "", function () { api.done(1); })); }
-      return [head, q, host, reward];
+      var skip = el("div", { class: "g-skip" }, el("button", { type: "button", class: "linkbtn", onclick: close }, "Overslaan, ik ga verder"));
+      return [head, q, host, reward, skip];
     }, "game");
   }
   function stopReward(s, idx) {
@@ -697,6 +744,17 @@
   /* ================= finale ================= */
   function renderFinale() {
     ambient();
+    if (!prizeWon() && !state.kluis) {
+      var left = prizeLeft();
+      show([hud(),
+        el("div", { class: "center finale-head" }, el("p", { class: "eyebrow", text: "De laatste missie" }), el("h1", { class: "h-display", text: "De grote kluis zit nog op slot" }),
+          el("p", { class: "lead", text: "Speel nog " + left + (left === 1 ? " spelletje" : " spelletjes") + ". Dan mag je de kluis kraken en win je een prijs." })),
+        el("div", { class: "vault locked-vault", "aria-hidden": "true" }, el("div", { class: "vault-door" }, el("div", { class: "vault-handle" }), el("div", { class: "vault-bolts" }))),
+        prizeBar(true),
+        el("div", { class: "g-row center" }, btn([el("span", { "aria-hidden": "true", text: "🕹️" }), "Naar de speelhal"], "glow", function () { go("#/speelhal"); }), btn([icon("map"), "Naar de kaart"], "ghost", function () { go("#/kaart"); }))
+      ], "finale");
+      return;
+    }
     var target = String((D.kluis && D.kluis.code) || "1926");
     var vals = target.split("").map(function () { return 0; });
     var wheels = el("div", { class: "vault-wheels" }), tries = 0;
@@ -741,13 +799,16 @@
       el("div", { class: "pass-mid" }, el("span", { class: "avatar xl", style: { "--c": a.kleur || "#f39200" }, text: a.icoon || "🦊" }),
         el("div", null, el("small", { text: "Agent" }), el("strong", { class: "pass-name", text: a.naam || "" }), el("small", { text: date }))),
       el("div", { class: "pass-stats" },
-        el("div", null, el("strong", { text: doneCount() + "/" + stops.length }), el("span", { text: "stops" })),
+        el("div", null, el("strong", { text: String(playedCount()) }), el("span", { text: "spelletjes" })),
         el("div", null, el("strong", { text: String(totalStars()) }), el("span", { text: "sterren" })),
         el("div", null, el("strong", { text: Object.keys(state.secrets).length + "/" + bonus.length }), el("span", { text: "geheimen" }))),
-      el("div", { class: "pass-items", "aria-label": "Verzamelde spullen" }, stops.filter(isDone).map(function (s) { return el("span", { text: s.item[0] }); })));
+      el("div", { class: "pass-foot" },
+        el("div", { class: "pass-items", "aria-label": "Verzamelde spullen" }, stops.filter(isDone).map(function (s) { return el("span", { text: s.item[0] }); })),
+        prizeWon() ? el("div", { class: "pass-stamp", role: "img", "aria-label": "Prijs gewonnen" }, el("span", { text: "Prijs" }), el("strong", { text: "gewonnen" })) : null));
     show([
       el("div", { class: "center finale-head" }, el("p", { class: "eyebrow", text: "Missie geslaagd" }), el("h1", { class: "h-display", text: "Welkom op het Vellesan!" }),
-        el("p", { class: "lead", text: "Je hebt de kluis gekraakt. Dit is jouw leerlingenpas. Laat hem zien aan iemand van de school!" })),
+        el("p", { class: "lead", text: "Je hebt de kluis gekraakt. Dit is jouw leerlingenpas." }),
+        prizeWon() ? el("p", { class: "prize-claim", text: "🏆 " + ((D.prijs && D.prijs.tekst) || "Laat je pas zien aan iemand van de school!") }) : null),
       card,
       el("div", { class: "g-row center" }, btn([icon("map"), "Kaart"], "ghost", function () { go("#/kaart"); }), btn([icon("star"), "Geheime filmpjes"], "ghost", function () { go("#/bonus"); }))
     ], "pass-view");

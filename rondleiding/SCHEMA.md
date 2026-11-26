@@ -11,6 +11,7 @@ Digitale rondleiding voor de open dag (groep 7 en 8, iPads). Gewone HTML, CSS en
 | `js/quest.js` | Kern: router, opslag, intro, agent kiezen, 3D-kaart, stopscherm, kijk-rond, scanner, kluisje, finale, leerlingenpas, geluid en effecten. Ook de opdrachten `mc`, `zoek`, `tel`, `open`, `foto`, `koppel`, `kluis`. |
 | `js/games-a.js` | Mini-games `piano`, `lift`, `schuif`, `tegels`, `skelet`, `lab`, `teken`. |
 | `js/games-b.js` | Mini-games `scherm`, `automaat`, `getal`, `vang`, `stroom`, `typen`, `sorteer`, `woord`. |
+| `js/games-c.js` | Speelhal-games `goedfout`, `memory`, `etage` (ook gebruikt voor "Welk vak?"). |
 | `GAMES.md` | Het contract voor een nieuwe mini-game. |
 | `img/vloer-N.webp` | Plattegrond per etage met doorzichtige achtergrond (uit `img/kaart-N.jpg`). |
 | `media/<id>.mp4/.jpg` | Filmpje en stilstaand beeld per stop. `media/intro.mp4` is de montage op het startscherm. |
@@ -40,8 +41,14 @@ Een filmpje toevoegen bij een stop zonder film: zet `media/<id>.mp4` (staand, 48
 
 - De volgorde van `stops` is de looproute. Het stopnummer is de plek in de lijst.
 - QR-poster: `basisUrl + "?qr=" + code`. Ook `#qr=CODE` en typen werken.
-- `?stop=N` en `#/stop/N` openen stop N. Andere schermen: `#/kaart`, `#/kluisje`, `#/finale`, `#/bonus`.
+- `?stop=N` en `#/stop/N` openen stop N. Andere schermen: `#/kaart`, `#/kluisje`, `#/finale`, `#/bonus`, `#/speelhal`.
 - Met `qrVerplicht: true` zijn film en uitleg altijd te zien, maar gaan de missies pas open na het scannen.
+
+## Prijs en speelhal
+
+- `prijs: { aantal: 8, tekst: "..." }`: na zoveel gespeelde spelletjes (stops en speelhal samen) gaat de grote kluis open en staat er een stempel op de pas. Lager = makkelijker.
+- `speelhal: [ ...opdrachten ]`: spelletjes zonder QR-code, op `#/speelhal`. Zelfde vorm als `opdrachten` bij een stop. Met `titel` en `icoon` geef je een opdracht een eigen naam en plaatje.
+- Elk spelletje heeft onderaan "Overslaan, ik ga verder".
 
 ## Opslag
 

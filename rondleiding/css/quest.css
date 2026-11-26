@@ -405,7 +405,7 @@ body.on-pass-view main{perspective:1200px}
 .fx-p{position:absolute;border-radius:2px;transform:translate(-50%,-50%);animation:fxp 1s var(--ease) forwards}
 @keyframes fxp{0%{opacity:1;transform:translate(-50%,-50%) scale(1)}100%{opacity:0;transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy))) rotate(220deg) scale(.4)}}
 .fx-confetti{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:210}
-.toast{position:fixed;left:50%;top:max(16px,env(safe-area-inset-top));z-index:220;max-width:min(92vw,460px);padding:12px 18px;border-radius:16px;background:rgba(15,20,40,.92);color:#fff;border:1px solid var(--line);font-weight:700;transform:translate(-50%,-30px);opacity:0;transition:transform .4s var(--ease),opacity .4s}
+.toast{position:fixed;left:50%;width:max-content;top:max(16px,env(safe-area-inset-top));z-index:220;max-width:min(92vw,460px);padding:12px 18px;border-radius:16px;background:rgba(15,20,40,.92);color:#fff;border:1px solid var(--line);font-weight:700;transform:translate(-50%,-30px);opacity:0;transition:transform .4s var(--ease),opacity .4s}
 .toast.in{transform:translate(-50%,0);opacity:1}
 .toast.bad{border-color:var(--bad)}
 
@@ -435,3 +435,43 @@ body.on-map main,body.on-bonus main{padding-bottom:calc(130px + env(safe-area-in
 .portal-ring{position:absolute;width:220px;height:220px;border-radius:50%;border:4px solid var(--accent2);animation:portalRing .9s ease-out forwards}
 @keyframes portalOpen{0%{opacity:1;transform:scale(.04) rotate(-30deg)}35%{opacity:1;transform:scale(.18) rotate(-10deg)}100%{opacity:1;transform:scale(1) rotate(0)}}
 @keyframes portalRing{from{transform:scale(.3);opacity:1}to{transform:scale(3.5);opacity:0}}
+
+/* ===== prijs, speelhal, overslaan ===== */
+.prize-pill.won{background:linear-gradient(180deg,var(--accent2),var(--accent));color:#1b1206;border-color:transparent}
+.prize-bar{display:flex;gap:12px;align-items:center;max-width:820px;margin:0 auto 14px;padding:12px 14px}
+.prize-ic{font-size:30px;flex:none}
+.prize-txt{flex:1;min-width:0;display:grid;gap:5px}
+.prize-txt strong{font-size:1rem}
+.prize-txt small{font-size:.82rem}
+.prize-track{height:8px;border-radius:99px;background:var(--line);overflow:hidden}
+.prize-track i{display:block;height:100%;background:linear-gradient(90deg,var(--accent2),var(--accent));transform-origin:0 50%;transition:transform .8s var(--ease)}
+.prize-bar.won{border-color:var(--accent)}
+.prize-bar .btn{flex:none}
+.hall-grid{display:grid;gap:12px;grid-template-columns:repeat(2,minmax(0,1fr));max-width:820px;margin:0 auto 18px}
+@media (min-width:760px){ .hall-grid{grid-template-columns:repeat(4,minmax(0,1fr))} }
+.hall-card{display:grid;justify-items:center;gap:6px;padding:18px 10px;border-radius:var(--radius);color:var(--ink);font:inherit;cursor:pointer;text-align:center;
+  opacity:0;transform:translateY(12px);animation:rise .5s var(--ease) var(--d,0s) forwards;transition:transform .2s var(--ease)}
+.hall-card:active{transform:scale(.97)}
+.hall-card strong{font-size:1.02rem}
+.hall-ic{font-size:44px;line-height:1.1}
+.hall-card.done{border-color:rgba(52,211,153,.5)}
+.hall-stars{display:flex;gap:2px;color:var(--line)}
+.hall-stars i{width:18px;height:18px;display:block}
+.hall-stars i svg{width:100%;height:100%}
+.hall-stars i.on{color:#fde047}
+@keyframes rise{to{opacity:1;transform:none}}
+.g-skip{text-align:center;margin-top:12px}
+.linkbtn{background:none;border:0;color:var(--muted);font:inherit;font-weight:600;text-decoration:underline;text-underline-offset:3px;padding:10px 12px;min-height:44px;cursor:pointer}
+.linkbtn:hover{color:var(--ink)}
+.locked-vault{width:min(180px,50vw)}
+.locked-vault .vault-door{filter:saturate(.6) brightness(.85)}
+.prize-claim{display:inline-block;margin:10px auto 0;padding:10px 16px;border-radius:16px;background:var(--panel2);border:1px solid var(--accent);font-weight:700}
+.pass-foot{display:flex;align-items:center;gap:10px;margin-top:14px}
+.pass-foot .pass-items{margin-top:0;flex:1;min-width:0}
+.pass-stamp{flex:none;display:grid;place-items:center;width:84px;height:84px;border-radius:50%;border:3px solid #fde047;color:#fde047;
+  transform:rotate(-14deg);text-transform:uppercase;line-height:1.05;text-align:center;font-weight:800;box-shadow:inset 0 0 0 3px rgba(253,224,71,.25);
+  animation:stamp .6s var(--ease) 1.2s both}
+.pass-stamp span{font-size:.72rem;letter-spacing:.12em}
+.pass-stamp strong{font-size:.86rem}
+@keyframes stamp{from{opacity:0;transform:rotate(-14deg) scale(2.2)}to{opacity:1;transform:rotate(-14deg) scale(1)}}
+@media (prefers-reduced-motion:reduce){ .hall-card,.pass-stamp{animation:none;opacity:1;transform:none} .pass-stamp{transform:rotate(-14deg)} }

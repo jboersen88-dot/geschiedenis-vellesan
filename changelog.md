@@ -1,3 +1,19 @@
+## 2026-11-26 · Open dag: speelhal en een prijs na 8 spelletjes
+
+Wens van de docent: meer korte, snelle spelletjes over de school. Ze zijn niet verplicht, maar wie er genoeg speelt, wint een prijs.
+
+- **Prijs**: na 8 gespeelde spelletjes (stops en speelhal samen, er zijn er 23) mag het kind de grote kluis kraken en wint het een prijs. Daarvoor zit de kluis op slot, met de melding hoeveel spelletjes nog nodig zijn. Het getal staat in `data/stops.js` bij `prijs.aantal`, de tekst op de pas bij `prijs.tekst`. Keuze: 8, omdat dat met een paar stops plus de speelhal in ongeveer een kwartier lukt.
+- **Voortgang**: in de balk bovenin staat 🎁 met "5/8" (tik erop voor de speelhal). Op de kaart staat een prijsbalk. Bij 8 komt er een melding "Prijs vrijgespeeld!". Op de leerlingenpas staat een stempel "Prijs gewonnen" en de tekst over de prijs.
+- **Speelhal** (`#/speelhal`): vier snelle spelletjes die overal werken, ook zonder QR-code: Goed of fout? (45 seconden, 8 zinnen over de school), Vakken-memory (vak en ding dat erbij hoort), Waar is het? (op welke etage) en Welk vak?. Alle feiten komen uit de uitleg bij de stops. Code in `js/games-c.js` en `css/games-c.css`.
+- **Overslaan**: onder elk spelletje staat "Overslaan, ik ga verder". Zo kan een kind altijd door.
+- De uitleg aan het begin zegt nu: speel 8 spelletjes, waar je maar wilt, dan mag je de kluis kraken.
+
+**Getest**: in Chromium op 375 en 820 px: alle vier speelhal-spelletjes doorgespeeld, de melding bij 8, de kluis op slot en daarna open, de pas met stempel, Overslaan. De eerdere tests (hele route, filmpjes, scanner met nepcamera) opnieuw gedraaid. Geen consolefouten, geen horizontaal scrollen. vragencheck, linkcheck en a11ycheck op 0.
+
+**Niet getest**: echte iPad en Safari.
+
+**Controleren door de docent**: is 8 een goed aantal? Wat is de prijs, en klopt de tekst "Laat je pas zien aan iemand van de school. Dan krijg je je prijs!"? Kloppen de zinnen bij Goed of fout?
+
 ## 2026-11-26 · Open dag: rondleiding opnieuw gebouwd als "Missie Vellesan"
 
 De docent vond de eerste rondleiding niet mooi en niet professioneel genoeg en wilde een wow-ervaring met effecten, spelletjes en alle lokalen. De rondleiding is helemaal opnieuw gebouwd. Adres, QR-codewoorden en `?qr=`/`?stop=` blijven werken.
