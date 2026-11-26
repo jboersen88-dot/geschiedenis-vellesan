@@ -201,6 +201,17 @@
   function playedCount() { var n = 0; for (var k in state.opd) if (state.opd[k]) n++; return n; }
   function prizeLeft() { return Math.max(0, prizeGoal() - playedCount()); }
   function prizeWon() { return prizeLeft() === 0; }
+  /* korte stemfragmenten (ElevenLabs) en AI-illustraties; staan in stops.js onder stemmen en beelden */
+  var voEl = null;
+  function stem(k) {
+    var f = D.stemmen && D.stemmen[k]; if (!f || !state.geluid) return;
+    try { if (!voEl) voEl = new Audio(); voEl.pause(); voEl.src = f; var pr = voEl.play(); if (pr && pr.catch) pr.catch(function () {}); } catch (e) {}
+  }
+  function stemStop() { try { if (voEl) voEl.pause(); } catch (e) {} }
+  function aiBeeld(k, cls) {
+    var f = D.beelden && D.beelden[k]; if (!f) return null;
+    return el("figure", { class: "ai-art " + (cls || "") }, el("img", { src: f, alt: "", loading: "lazy", decoding: "async" }), el("figcaption", { text: "AI-illustratie" }));
+  }
   function digits() { return stops.filter(function (s) { return s.cijfer != null; }); }
   function findStop(q) {
     if (!q) return -1;
@@ -359,14 +370,15 @@
     ];
     var i = 0, box = el("div", { class: "brief-card", "aria-live": "polite" }), dots = el("div", { class: "dots", "aria-hidden": "true" });
     steps.forEach(function () { dots.appendChild(el("i")); });
-    var nextB = btn("Volgende", "big glow block", function () { if (i < steps.length - 1) { i++; sfx("whoosh"); paint(); } else { state.briefed = true; save(); sfx("unlock"); go("#/kaart"); } });
+    var nextB = btn("Volgende", "big glow block", function () { if (i === 0) stem("welkom"); if (i < steps.length - 1) { i++; sfx("whoosh"); paint(); } else { state.briefed = true; save(); sfx("unlock"); go("#/kaart"); } });
     function paint() {
       var s = steps[i]; box.textContent = "";
       box.appendChild(el("div", { class: "brief-in" }, el("div", { class: "brief-ic" }, icon(s.ic)), el("p", { class: "eyebrow", text: "Missie-uitleg " + (i + 1) + "/" + steps.length }), el("h2", { text: s.t }), el("p", { class: "lead", text: s.p })));
       Array.prototype.forEach.call(dots.children, function (d, k) { d.className = k === i ? "on" : ""; });
       nextB.textContent = i < steps.length - 1 ? "Volgende" : "Naar de kaart!";
     }
-    show(el("div", { class: "brief panel glass" }, box, dots, nextB), "setup");
+    show(el("div", { class: "brief panel glass" }, aiBeeld("briefing", "brief-art"), box, dots, nextB), "setup");
+    onLeave(stemStop);
     paint();
   }
 
@@ -557,7 +569,7 @@
           el("div", { class: "route glass" }, icon("walk"), el("div", null, el("strong", { text: "Zo loop je hierheen" }), el("p", { text: s.loop }))),
           el("div", { class: "g-row" }, s.clip ? lookBtn : null),
           mission,
-          el("nav", { class: "stop-nav", "aria-label": "Stops" }, prev, btn("Terug naar de kaart", "ghost", function () { go("#/kaart"); }), nextB)))
+          el("nav", { class: "stop-nav", "aria-label": "Stops" }, prev, btn([el("span", { "aria-hidden": "true", text: "🕹️" }), "Speelhal"], "ghost", function () { go("#/speelhal"); }), nextB)))
     ], "stop");
     if (banner) { sfx("unlock"); setTimeout(function () { burst(document.querySelector(".banner"), 40); }, 150); }
     // na het scannen meteen het spelletje starten
@@ -643,7 +655,7 @@
     show([hud(),
       el("div", { class: "locker-head" }, el("p", { class: "eyebrow", text: "Overal te spelen" }), el("h1", { class: "h-display", text: "Speelhal" }),
         el("p", { class: "lead", text: "Korte spelletjes over de school. Elk spelletje telt mee voor je prijs." })),
-      barBox, grid,
+      aiBeeld("speelhal", "hall-art"), barBox, grid,
       el("div", { class: "g-row center" }, btn([icon("map"), "Naar de kaart"], "glow", function () { go("#/kaart"); })), scanFab()], "hall");
   }
 
@@ -681,7 +693,7 @@
           if (allOps) state.done[s.id] = true;
           save();
           sfx("win"); confetti(1800);
-          if (!wasWon && prizeWon()) setTimeout(function () { sfx("unlock"); toast("🏆 <strong>Prijs vrijgespeeld!</strong> Je mag nu de grote kluis kraken."); }, reduced ? 0 : 900);
+          if (!wasWon && prizeWon()) setTimeout(function () { sfx("unlock"); toast("🏆 <strong>Prijs vrijgespeeld!</strong> Je mag nu de grote kluis kraken."); stem("prijs"); }, reduced ? 0 : 900);
           reward.textContent = "";
           var starsEl = el("div", { class: "rw-stars" }, [0, 1, 2].map(function (k) { return el("i", { class: k < n ? "on" : "", style: { "--d": (0.15 + k * 0.18) + "s" }, html: SVG.star }); }));
           reward.appendChild(el("div", { class: "rw glass" }, starsEl,
@@ -749,7 +761,7 @@
       show([hud(),
         el("div", { class: "center finale-head" }, el("p", { class: "eyebrow", text: "De laatste missie" }), el("h1", { class: "h-display", text: "De grote kluis zit nog op slot" }),
           el("p", { class: "lead", text: "Speel nog " + left + (left === 1 ? " spelletje" : " spelletjes") + ". Dan mag je de kluis kraken en win je een prijs." })),
-        el("div", { class: "vault locked-vault", "aria-hidden": "true" }, el("div", { class: "vault-door" }, el("div", { class: "vault-handle" }), el("div", { class: "vault-bolts" }))),
+        aiBeeld("kluis", "vault-art") || el("div", { class: "vault locked-vault", "aria-hidden": "true" }, el("div", { class: "vault-door" }, el("div", { class: "vault-handle" }), el("div", { class: "vault-bolts" }))),
         prizeBar(true),
         el("div", { class: "g-row center" }, btn([el("span", { "aria-hidden": "true", text: "🕹️" }), "Naar de speelhal"], "glow", function () { go("#/speelhal"); }), btn([icon("map"), "Naar de kaart"], "ghost", function () { go("#/kaart"); }))
       ], "finale");
@@ -780,7 +792,7 @@
         el("div", { class: "g-row center" }, btn("Open de kluis", "big glow", function (e) {
           if (vals.join("") === target) {
             state.kluis = true; save(); sfx("boom"); setTimeout(function () { sfx("win"); }, 300);
-            door.classList.add("open"); burst(door, 60); confetti(4000);
+            door.classList.add("open"); burst(door, 60); confetti(4000); setTimeout(function () { stem("kluis"); }, reduced ? 0 : 1200);
             setTimeout(function () { renderPass(); }, reduced ? 200 : 1900);
           } else {
             tries++; sfx("bad"); wheels.classList.remove("shake"); void wheels.offsetWidth; wheels.classList.add("shake");

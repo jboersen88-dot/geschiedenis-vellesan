@@ -1,3 +1,10 @@
+## 2026-11-26 · Open dag: plek voor stem en AI-beelden, Speelhal vanaf elke stop
+
+- **Stem en beelden klaargezet**: `stemmen` (welkom, prijs, kluis) en `beelden` (briefing, speelhal, kluis) in `data/stops.js`. De fragmenten zijn gemaakt met ElevenLabs (stem Roos) en de beelden met Adobe Firefly. Ze staan nog op `null`: de bestanden moeten nog van de computer van de docent komen. Beelden krijgen het label "AI-illustratie".
+- **Stopscherm**: de knop "Terug naar de kaart" stond er dubbel (de knop Kaart staat al bovenaan). Op die plek staat nu "Speelhal".
+
+**Getest**: in Chromium op 375, 820 en 1180 px (liggend), zonder consolefouten. **Niet getest**: de stem op een iPad (Safari kan geluid blokkeren dat niet direct na een tik start).
+
 ## 2026-11-26 · Open dag: pijlen in beeld in de Radar (heads-up display)
 
 Wens van de docent: rondkijken met de camera en pijlen in beeld zien naar de plekken om je heen, zoals een heads-up display in de auto.
