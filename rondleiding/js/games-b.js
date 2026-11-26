@@ -605,7 +605,7 @@
       setup(host, api, "typen");
       var T = tracker(), E = api.el, finished = false, started = false;
       var pool = (o.woorden && o.woorden.length ? o.woorden : ["school", "pauze", "rooster"]);
-      var words = api.shuffle(pool).slice(0, 6);
+      var words = api.shuffle(pool).slice(0, 4);
       var idx = 0, t0 = 0, tid = 0;
       var timeEl = E("span", { class: "typen-time", text: "0,0" });
       var idxEl = E("span", { class: "typen-idx", text: "Woord 1 van " + words.length });
@@ -652,7 +652,7 @@
         finished = true; clearInterval(tid); tick();
         var secs = (Date.now() - t0) / 1000;
         input.disabled = true; input.blur();
-        var stars = secs < 35 ? 3 : secs < 60 ? 2 : 1;
+        var stars = secs < 25 ? 3 : secs < 45 ? 2 : 1;
         var txt = secs.toFixed(1).replace(".", ",");
         wordEl.textContent = "Klaar!";
         card.classList.add("is-done");

@@ -21,8 +21,7 @@ window.RONDLEIDING = {
       uitleg: "Je komt binnen door de glazen schuifdeuren. Bij de receptie zitten de conciërges. Ben je ziek of te laat? Dan meld je je hier.",
       loop: "Start bij de hoofdingang. Loop door de schuifdeuren naar de receptie.",
       opdrachten: [
-        { type: "mc", vraag: "Waar meld je je als je te laat bent?", opties: ["Bij de receptie", "In de aula", "Bij de kluisjes", "In de bibliotheek"], goed: 0, uitleg: "Precies. De conciërges helpen je verder." },
-        { type: "foto", vraag: "Maak een foto van de ronde houten balie. Zorg dat er geen mensen op staan." }
+        { type: "mc", vraag: "Waar meld je je als je te laat bent?", opties: ["Bij de receptie", "In de aula", "Bij de kluisjes", "In de bibliotheek"], goed: 0, uitleg: "Precies. De conciërges helpen je verder." }
       ]
     },
     {
@@ -31,8 +30,7 @@ window.RONDLEIDING = {
       uitleg: "In de pauze zit je hier op de gele zitplekken. Op het scherm aan de muur staat of een les uitvalt of verplaatst is.",
       loop: "Loop vanaf de receptie de grote hal in.",
       opdrachten: [
-        { type: "scherm", vraag: "Lees het scherm. Welke les gaat vandaag niet door?" },
-        { type: "tel", vraag: "Tel de gele zitplekken in de hal. Hoeveel zie je er?" }
+        { type: "scherm", vraag: "Lees het scherm. Welke les gaat vandaag niet door?" }
       ]
     },
     {
@@ -55,8 +53,7 @@ window.RONDLEIDING = {
       uitleg: "In de aula eet en drink je in de pauze. Er staat een gele piano. Ook dans en muziek gebruiken deze ruimte.",
       loop: "Loop langs de kluisjes naar de grote ruimte met de lange tafels.",
       opdrachten: [
-        { type: "piano", vraag: "Speel de melodie na op de piano. Luister goed en tik dezelfde toetsen." },
-        { type: "mc", vraag: "Welke kleur heeft de piano in de aula?", opties: ["Geel", "Rood", "Zwart", "Blauw"], goed: 0, uitleg: "Goed gezien. Die gele piano valt echt op." }
+        { type: "piano", vraag: "Speel de melodie na op de piano. Luister goed en tik dezelfde toetsen." }
       ]
     },
     {
@@ -65,8 +62,7 @@ window.RONDLEIDING = {
       uitleg: "Hier staan twee automaten: één voor drinken en één voor snacks. Je mag ook je eigen lunch meenemen.",
       loop: "Loop vanuit de aula terug richting de hal. Je komt langs de automaten.",
       opdrachten: [
-        { type: "automaat", vraag: "Je hebt 3 euro spelgeld. Kies een drankje en een snack, maar geef niet te veel uit!" },
-        { type: "zoek", vraag: "Zoek de twee automaten. Gevonden? Tik op de knop." }
+        { type: "automaat", vraag: "Je hebt 3 euro spelgeld. Kies een drankje en een snack, maar geef niet te veel uit!" }
       ]
     },
     {
@@ -75,25 +71,14 @@ window.RONDLEIDING = {
       uitleg: "Dit lokaal is een echte werkplaats, met werkbanken en bankschroeven. Hier maak je dingen met je handen. In de vitrine staat werk van leerlingen.",
       loop: "Loop terug naar de hal en zoek lokaal B12.",
       opdrachten: [
-        { type: "schuif", vraag: "Schuif de stukjes zo dat de foto van de werkplaats weer klopt.", beeld: "media/s06.jpg" },
-        { type: "foto", vraag: "Maak een foto van het werkstuk dat jij het mooist vindt. Zonder mensen erop." }
+        { type: "schuif", vraag: "Schuif de stukjes zo dat de foto van de werkplaats weer klopt.", beeld: "media/s06.jpg" }
       ]
     },
     {
-      id: "s07", item: ["🏛️", "Monumentsteen"], code: "BEER", naam: "Hal 2", sub: "Het oude gebouw uit 1926", etage: 0, x: 37, y: 27,
-      clip: "media/s07.mp4", poster: "media/s07.jpg",
-      uitleg: "Hier stap je het oude gebouw in. Het is van 1926 en een monument. Kijk naar de tegelvloer en het glas-in-loodraam.",
-      loop: "Loop vanuit de hal verder het oude gebouw in. Let op de tegelvloer.",
-      opdrachten: [
-        { type: "tegels", vraag: "Draai de tegels tot het patroon klopt, net als de oude vloer." },
-        { type: "zoek", vraag: "Zoek het glas-in-loodraam. Gevonden? Tik op de knop." }
-      ]
-    },
-    {
-      id: "s20", item: ["🤝", "Hulpkaart"], code: "STER", naam: "Rector en docentenkamer", sub: "Wie helpt jou?", etage: 0, x: 44, y: 22,
+      id: "s20", item: ["🤝", "Hulpkaart"], code: "BEER", naam: "Hal 2: wie helpt jou?", sub: "Rector, leerlingcoördinator en docenten", etage: 0, x: 40, y: 25,
       clip: "media/s20.mp4", poster: "media/s20.jpg",
-      uitleg: "Bij Hal 2 zitten de rector, de leerlingcoördinator en de docentenkamer. De rector is de baas van de school. De leerlingcoördinator helpt je als er iets niet goed gaat.",
-      loop: "Blijf in Hal 2. Kijk naar de deuren van de kamers.",
+      uitleg: "Hal 2 ligt in het oude gebouw uit 1926. Het is een monument, daarom ziet het er nog bijna net zo uit als vroeger. Hier zitten de rector, de baas van de school, de leerlingcoördinator en de docentenkamer. Zit je ergens mee? Hier helpen ze je.",
+      loop: "Loop vanuit de hal verder het oude gebouw in, naar de rode deuren.",
       opdrachten: [
         { type: "koppel", vraag: "Wie helpt je? Koppel elk probleem aan de goede persoon.",
           links: ["Je bent ziek en blijft thuis", "Je hebt ruzie in de klas", "Je wilt iets vragen over je klas", "Wie is de baas van de school?"],
@@ -108,8 +93,7 @@ window.RONDLEIDING = {
       opdrachten: [
         { type: "koppel", vraag: "Rooster-puzzel: welk vak hoort bij welk lokaal?",
           links: ["B01", "B03", "B05", "B06"],
-          rechts: ["Economie", "Wiskunde", "Biologie", "Scheikunde"] },
-        { type: "tel", vraag: "Tel de kunstwerken aan de muur. Hoeveel zijn het er?" }
+          rechts: ["Economie", "Wiskunde", "Biologie", "Scheikunde"] }
       ]
     },
     {
@@ -118,8 +102,7 @@ window.RONDLEIDING = {
       uitleg: "In dit biologielokaal staat een skelet. De stoelen lopen omhoog, net als in een klein theater. Zo ziet iedereen de proeftafel goed.",
       loop: "Loop de gang door tot het einde. Daar is B05.",
       opdrachten: [
-        { type: "skelet", vraag: "Het skelet is uit elkaar gevallen! Sleep elk bot naar de goede plek." },
-        { type: "open", vraag: "Verzin een grappige naam voor het skelet." }
+        { type: "skelet", vraag: "Het skelet is uit elkaar gevallen! Sleep elk bot naar de goede plek." }
       ]
     },
     {
@@ -128,8 +111,7 @@ window.RONDLEIDING = {
       uitleg: "In B06 en B07 krijg je natuurkunde en scheikunde. Daar doe je zelf proefjes. In de gang staan glazen kasten met spullen om te bekijken.",
       loop: "Loop vanaf de biologie de hoek om, langs de glazen kasten.",
       opdrachten: [
-        { type: "lab", vraag: "Maak je eigen bruisbal! Doe de stoffen in de kolf en schud de iPad." },
-        { type: "mc", vraag: "Wat doe je vaak bij natuurkunde en scheikunde?", opties: ["Zelf proefjes", "Zingen", "Voetballen", "Koken"], goed: 0, uitleg: "Ja. Daarom heet dit het lab." }
+        { type: "lab", vraag: "Maak je eigen bruisbal! Doe de stoffen in de kolf en schud de iPad." }
       ]
     },
     {
@@ -138,8 +120,7 @@ window.RONDLEIDING = {
       uitleg: "Dit is de begane grond van het nieuwe gebouw. In B08 en B09 krijg je wiskunde. Door de grote ramen kijk je op de binnentuin.",
       loop: "Loop naar het nieuwe gebouw aan de andere kant van de binnentuin.",
       opdrachten: [
-        { type: "getal", vraag: "Wiskunde-uitdaging: raad het geheime getal tussen 1 en 100. Je krijgt hints!" },
-        { type: "zoek", vraag: "Zoek de lokalen B08, B09, B10 en B11. Alle vier gevonden? Tik op de knop." }
+        { type: "getal", vraag: "Wiskunde-uitdaging: raad het geheime getal tussen 1 en 100. Je krijgt hints!" }
       ]
     },
     {
@@ -148,8 +129,7 @@ window.RONDLEIDING = {
       uitleg: "Midden tussen het oude en het nieuwe gebouw ligt de binnentuin. Is het mooi weer? Dan kun je hier in de pauze zitten.",
       loop: "Kijk door de grote ramen van de nieuwbouw, of loop naar de deur van de binnentuin.",
       opdrachten: [
-        { type: "vang", vraag: "Pauze-spel! Vang zo veel mogelijk vallende blaadjes in 20 seconden." },
-        { type: "tel", vraag: "Tel de bankjes in de binnentuin. Hoeveel zie je er?" }
+        { type: "vang", vraag: "Pauze-spel! Vang zo veel mogelijk vallende blaadjes in 20 seconden." }
       ]
     },
     {
@@ -161,8 +141,7 @@ window.RONDLEIDING = {
         { type: "koppel", spreek: true, vraag: "Zeg hallo in vier talen! Tik op een woord om het te horen en koppel het aan de taal.",
           links: ["Hello", "Bonjour", "Guten Tag", "Hallo"],
           rechts: ["Engels", "Frans", "Duits", "Nederlands"],
-          talen: ["en-GB", "fr-FR", "de-DE", "nl-NL"] },
-        { type: "mc", vraag: "Welke taal krijg je in lokaal B18?", opties: ["Duits", "Frans", "Engels", "Spaans"], goed: 0, uitleg: "Goed. B18 is een lokaal voor Duits." }
+          talen: ["en-GB", "fr-FR", "de-DE", "nl-NL"] }
       ]
     },
     {
@@ -171,8 +150,7 @@ window.RONDLEIDING = {
       uitleg: "In B19 krijg je natuurkunde en scheikunde. Daar laat de docent proefjes zien. In B20 en B21 krijg je Nederlands.",
       loop: "Loop op de eerste etage door de gang van het oude gebouw tot het einde.",
       opdrachten: [
-        { type: "stroom", vraag: "B19: maak de stroomkring dicht, zodat het lampje gaat branden." },
-        { type: "woord", vraag: "B20 en B21: zet de letters in de goede volgorde. Het zijn woorden van school.", woorden: ["ROOSTER", "MENTOR", "KLUISJE", "PAUZE"] }
+        { type: "stroom", vraag: "B19: maak de stroomkring dicht, zodat het lampje gaat branden." }
       ]
     },
     {
@@ -181,20 +159,18 @@ window.RONDLEIDING = {
       uitleg: "Hier staan rijen computers met blauwe schotten ertussen. Je gebruikt ze voor lessen en voor toetsen op de computer.",
       loop: "Blijf op de eerste etage en loop naar het computerlokaal.",
       opdrachten: [
-        { type: "typen", vraag: "Typ-race! Typ de woorden zo snel als je kunt.", woorden: ["school", "kluisje", "aula", "rooster", "pauze", "mentor", "lokaal", "huiswerk"] },
-        { type: "tel", vraag: "Tel de computers in één rij. Hoeveel zijn het er?" }
+        { type: "typen", vraag: "Typ-race! Typ de woorden zo snel als je kunt.", woorden: ["school", "kluisje", "aula", "rooster", "pauze", "mentor", "lokaal", "huiswerk"] }
       ]
     },
     {
       id: "s14", item: ["🚪", "Gele deur"], code: "VIS", naam: "De nieuwbouw", sub: "B22 tot B25", etage: 1, x: 67, y: 47, cijfer: 2,
       clip: "media/s14.mp4", poster: "media/s14.jpg",
-      uitleg: "Nu ben je in het nieuwe deel van de school: een gladde vloer, grote ramen en gele deuren. Hier krijg je onder andere Nederlands, Engels en wiskunde.",
+      uitleg: "Dit is het nieuwe deel van de school, met gele deuren en grote ramen. Hier krijg je onder andere Nederlands, Engels en wiskunde.",
       loop: "Loop van het oude gebouw naar de nieuwbouw. De vloer wordt glad en grijs.",
       opdrachten: [
-        { type: "sorteer", vraag: "Oud of nieuw? Sleep alles naar het goede gebouw.",
-          bakken: ["Oud gebouw", "Nieuwbouw"],
-          items: [ ["Tegelvloer", 0], ["Glas-in-loodraam", 0], ["Monument uit 1926", 0], ["Gele deuren", 1], ["Gladde grijze vloer", 1], ["Grote ramen", 1] ] },
-        { type: "zoek", vraag: "Zoek lokaal B24. Gevonden? Tik op de knop." }
+        { type: "sorteer", vraag: "Wat neem je mee? Sleep elk ding naar de goede les.",
+          bakken: ["Wiskunde", "Talen"],
+          items: [ ["Geodriehoek", 0], ["Rekenmachine", 0], ["Passer", 0], ["Woordenboek", 1], ["Leesboek", 1], ["Koptelefoon voor luisteren", 1] ] }
       ]
     },
     {
@@ -203,8 +179,7 @@ window.RONDLEIDING = {
       uitleg: "Aan het eind van de gang is de lift, voor leerlingen die niet goed kunnen traplopen. In B26 krijg je geschiedenis. In B27 krijg je aardrijkskunde.",
       loop: "Loop de gang van de nieuwbouw helemaal uit. Aan het eind zie je de liftdeur.",
       opdrachten: [
-        { type: "lift", vraag: "Lift-geheugen! Onthoud de knoppen die oplichten en druk ze in dezelfde volgorde." },
-        { type: "mc", vraag: "Welk vak krijg je in B27?", opties: ["Aardrijkskunde", "Geschiedenis", "Wiskunde", "Muziek"], goed: 0, uitleg: "Klopt. In B26 is het geschiedenis." }
+        { type: "lift", vraag: "Lift-geheugen! Onthoud de knoppen die oplichten en druk ze in dezelfde volgorde." }
       ]
     },
     {
@@ -213,8 +188,7 @@ window.RONDLEIDING = {
       uitleg: "Dit lokaal ligt onder het dak, met oranjerode balken en dakramen. Hier krijg je tekenen en CKV. Je werkt aan een ezel.",
       loop: "Ga de trap op naar de tweede etage, de bovenste verdieping.",
       opdrachten: [
-        { type: "teken", vraag: "Jij bent de kunstenaar! Teken je droomlokaal. Wat staat er allemaal in?" },
-        { type: "zoek", vraag: "Zoek de dakramen in het schuine dak. Gevonden? Tik op de knop." }
+        { type: "teken", vraag: "Jij bent de kunstenaar! Teken je droomlokaal. Wat staat er allemaal in?" }
       ]
     },
     {
@@ -223,8 +197,7 @@ window.RONDLEIDING = {
       uitleg: "Hier leen je boeken en tijdschriften. In de huiswerkklas maak je je huiswerk. Hier krijg je ook extra hulp, bijvoorbeeld bij dyslexie.",
       loop: "Blijf op de tweede etage en loop naar B31.",
       opdrachten: [
-        { type: "woord", vraag: "Zet de letters goed. Het zijn woorden uit de bibliotheek.", woorden: ["BOEK", "LEZEN", "HUISWERK"] },
-        { type: "mc", vraag: "Wat kun je in de bibliotheek doen?", opties: ["Boeken lenen", "Een fiets lenen", "Een kluisje huren", "Gymmen"], goed: 0, uitleg: "Klopt. Lezen kan hier prima." }
+        { type: "woord", vraag: "Zet de letters goed. Het zijn woorden uit de bibliotheek.", woorden: ["BOEK", "LEZEN", "HUISWERK"] }
       ]
     }
   ],

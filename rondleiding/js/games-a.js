@@ -138,7 +138,7 @@
       var notes = [0, 2, 4, 5, 7, 9, 11];
       var keys = notes.map(function (n, i) { return { n: n, i: i }; });
       return memory(host, api, {
-        cls: "piano", keys: keys, notes: notes, lengths: [3, 4, 5],
+        cls: "piano", keys: keys, notes: notes, lengths: [3, 4],
         make: function (k, i) {
           return api.el("button", { type: "button", "class": "piano-key", "aria-label": "Toets " + (i + 1) },
             api.el("span", { "class": "piano-glow" }), api.el("span", { "class": "piano-nr", text: String(i + 1) }));
@@ -164,7 +164,7 @@
       var names = ["verdieping 0", "verdieping 1", "verdieping 2", "omhoog", "omlaag"];
       var led;
       return memory(host, api, {
-        cls: "lift", keys: defs, notes: defs.map(function (d) { return d.n; }), lengths: [3, 4, 5],
+        cls: "lift", keys: defs, notes: defs.map(function (d) { return d.n; }), lengths: [3, 4],
         make: function (k, i) {
           var b = api.el("button", { type: "button", "class": "lift-btn" + (i > 2 ? " is-arrow" : ""), "aria-label": "Knop " + names[i] },
             api.el("span", { "class": "lift-ring" }), api.el("span", { "class": "lift-lbl", text: k.t }));

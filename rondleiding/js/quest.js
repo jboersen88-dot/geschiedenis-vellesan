@@ -291,11 +291,11 @@
       el("div", { class: "intro-wrap" },
         el("div", { class: "intro-badge" }, el("span", { class: "dot" }), "Open dag · Vellesan College"),
         letters,
-        el("p", { class: "intro-lead", text: "Ontdek de school als een echte geheim agent. Kijk, zoek, speel en vul je eigen kluisje." }),
+        el("p", { class: "intro-lead", text: "Ontdek de school als een echte geheim agent. Speel korte spelletjes en ontdek hoe het hier werkt." }),
         el("div", { class: "intro-stats" },
           el("div", null, el("strong", { text: String(stops.length) }), el("span", { text: "plekken" })),
           el("div", null, el("strong", { text: "3" }), el("span", { text: "etages" })),
-          el("div", null, el("strong", { text: String(stops.reduce(function (n, s) { return n + (s.opdrachten || []).length; }, 0)) }), el("span", { text: "missies" }))),
+          el("div", null, el("strong", { text: String(stops.reduce(function (n, s) { return n + (s.opdrachten || []).length; }, 0)) }), el("span", { text: "spelletjes" }))),
         hasAgent
           ? el("div", { class: "intro-cta" }, btn(["Verder met je missie", icon("next")], "big glow", function () { sfx("whoosh"); go("#/kaart"); }),
               btn("Opnieuw beginnen", "ghost", function () { confirmReset(); }))
@@ -345,8 +345,8 @@
     var steps = [
       { ic: "film", t: "Kijk en loop", p: "Bij elke plek zie je een filmpje. Zo weet je waar je heen moet." },
       { ic: "scan", t: "Scan de poster", p: "Op elke plek hangt een poster met een QR-code. Scan hem en je missie gaat open." },
-      { ic: "locker", t: "Vul je kluisje", p: "Elke missie levert iets op voor je kluisje. Vind ook de vier geheime cijfers." },
-      { ic: "lock", t: "Kraak de kluis", p: "In de bibliotheek kraak je de grote kluis. Lukt het jou?" }
+      { ic: "locker", t: "Speel en verzamel", p: "Bij elke plek speel je een kort spelletje. Je wint iets voor je kluisje." },
+      { ic: "lock", t: "Kies zelf", p: "Je hoeft niet alles te doen. Kies wat je leuk vindt. Klaar? Kraak dan de grote kluis, dat kan altijd." }
     ];
     var i = 0, box = el("div", { class: "brief-card", "aria-live": "polite" }), dots = el("div", { class: "dots", "aria-hidden": "true" });
     steps.forEach(function () { dots.appendChild(el("i")); });
@@ -420,6 +420,7 @@
       next,
       el("div", { class: "map-actions" },
         btn([icon("locker"), "Mijn kluisje"], "ghost", function () { go("#/kluisje"); }),
+        ni >= 0 && doneCount() > 0 ? btn([icon("lock"), "Klaar? Kraak de kluis"], "ghost", function () { go("#/finale"); }) : null,
         btn([icon("star"), "Geheime filmpjes"], "ghost", function () { go("#/bonus"); })),
       scanFab()
     ], "map");
@@ -710,6 +711,7 @@
       door,
       el("div", { class: "panel glass vault-panel" },
         el("p", { class: "muted center", text: "Jouw cijfers: " + known }),
+        known.indexOf("?") >= 0 && D.kluis && D.kluis.hint ? el("p", { class: "center fine", text: "Mis je cijfers? Geeft niet. Tip: " + D.kluis.hint }) : null,
         wheels, msg,
         el("div", { class: "g-row center" }, btn("Open de kluis", "big glow", function (e) {
           if (vals.join("") === target) {
