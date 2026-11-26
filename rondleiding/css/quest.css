@@ -519,3 +519,6 @@ body.on-map main,body.on-bonus main{padding-bottom:calc(130px + env(safe-area-in
 .vault-art figcaption{right:50%;transform:translateX(50%);bottom:10px}
 @keyframes vaultGlow{50%{box-shadow:0 0 60px -10px rgba(243,146,0,.7)}}
 @media (prefers-reduced-motion:reduce){ .vault-art{animation:none} }
+
+.rw-prize{margin:4px 0 10px;font-weight:700;color:var(--muted);text-align:center}
+.rw-prize.won{color:var(--accent2)}

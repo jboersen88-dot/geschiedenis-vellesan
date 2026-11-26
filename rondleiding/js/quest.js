@@ -700,6 +700,8 @@
           var starsEl = el("div", { class: "rw-stars" }, [0, 1, 2].map(function (k) { return el("i", { class: k < n ? "on" : "", style: { "--d": (0.15 + k * 0.18) + "s" }, html: SVG.star }); }));
           reward.appendChild(el("div", { class: "rw glass" }, starsEl,
             el("strong", { text: n === 3 ? "Perfect, agent!" : n === 2 ? "Goed gedaan!" : "Gelukt!" }),
+            el("p", { class: "rw-prize" + (prizeWon() ? " won" : "") }, el("span", { "aria-hidden": "true", text: prizeWon() ? "🏆 " : "🎁 " }),
+              prizeWon() ? (wasWon ? "Je prijs heb je al. Spelen mag altijd!" : "Prijs vrijgespeeld! De grote kluis mag open.") : Math.min(playedCount(), prizeGoal()) + " van " + prizeGoal() + " spelletjes. Nog " + prizeLeft() + " tot je prijs!"),
             el("div", { class: "g-row center" }, btn(stopNew ? "Bekijk je beloning" : "Verder", "glow", function () { close(); var h0 = document.querySelector(".view .hud"); if (h0) h0.replaceWith(hud()); if (s.arcade) { if (renderHall.repaint) renderHall.repaint(); } else if (renderStop.repaint) renderStop.repaint(); if (stopNew) setTimeout(function () { stopReward(s, idx); }, reduced ? 0 : 280); }))));
           reward.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "nearest" });
           var b = reward.querySelector("button"); if (b) b.focus();

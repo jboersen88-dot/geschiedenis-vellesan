@@ -22,7 +22,7 @@
 .gc-back,.gc-front{position:absolute;inset:0;display:grid;place-items:center;border-radius:16px;backface-visibility:hidden;-webkit-backface-visibility:hidden;border:1px solid var(--line)}
 .gc-back{background:linear-gradient(135deg,var(--accent2),var(--accent));color:#1b1206;font-family:var(--f-head);font-size:1.8rem;font-weight:800}
 .gc-front{background:var(--panel2);transform:rotateY(180deg);padding:4px;text-align:center}
-.gc-front strong{font-size:.86rem;line-height:1.15;overflow-wrap:anywhere}
+.gc-front strong{font-size:clamp(.68rem,3.2vw,.86rem);line-height:1.15;hyphens:auto;-webkit-hyphens:auto}
 .gc-ic{font-size:34px}
 .gc-tile.got .gc-front{border:2px solid var(--good);background:rgba(52,211,153,.16)}
 @media (prefers-reduced-motion:reduce){ .gc-tile{transition:none} .gc-in,.gc-no{animation:none} }

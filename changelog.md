@@ -1,3 +1,10 @@
+## 2026-11-26 · Open dag: ronde 5, beloning toont de prijs
+
+- Na elk spelletje staat onder de sterren hoeveel spelletjes je nog nodig hebt voor de prijs ("7 van 8 spelletjes. Nog 1 tot je prijs!"), of dat de kluis open mag.
+- Vakken-memory: lange vaknamen (Aardrijkskunde) braken lelijk af op een telefoon. De letters schalen nu mee.
+
+**Getest**: Chromium op 375 en 820 px, geen consolefouten.
+
 ## 2026-11-26 · Open dag: ronde 4, kaart en startscherm
 
 Rondleiding opnieuw doorgelopen als kind (375, 820 en 1180 px).
