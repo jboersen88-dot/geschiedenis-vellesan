@@ -1,3 +1,24 @@
+## 2026-11-26 · Economie 3 mavo: dia's 6.2 hersteld en dia 4 korter, 8.3 met eigen schema's
+
+De docent vroeg om zelf te bepalen wat het beste is voor dia 4 van 6.2 (43 klikken) en voor de kale dia's van 8.3.
+
+**Fout van 19 november hersteld (6.2)**: bij het weglaten van dia's waren de verkeerde nummers gebruikt. Daardoor stonden er twee lege dia's in 6.2 en ontbraken "Consumentenprijs berekenen" en "Oefenen". Dat is nu goed: 11 dia's, geen lege, niets ontbreekt. `tools/dias/lo.py` telt bij `weg=` alleen de zichtbare dia's; verborgen dia's tellen niet mee.
+
+**6.2, dia 4 (fietsenvoorbeeld)**: opnieuw opgebouwd, met dezelfde inhoud en dezelfde getallen als in de PowerPoint. Nu 7 klikken in plaats van 43: bij elke klik komt er één regel bij (begrip, uitleg, som). De export zonder PowerPoint liet de tekstvakken door elkaar lopen; dat is hiermee ook weg.
+
+**8.3**: eigen tekeningen in plaats van de weggehaalde plaatjes, in de stijl van de PowerPoint.
+- Dia 2: schema van de interne markt (binnen de EU geen invoertarief, van buiten wel).
+- Dia 4: staafjes met het hoge btw-tarief van Nederland (21%), Duitsland (19%) en Luxemburg (17%). De tarieven komen uit de PowerPoint "8.2 Nederland en de EU" van de docent.
+- Dia 6 "Taken van de ECB" is terug: een eigen schema met de drie taken, in drie klikken, in eigen woorden.
+- Dia 3 en 5: de eigen illustraties van de site (pijlen, euromunt).
+
+**Keuze**: de PowerPoint-bestanden van de docent in OneDrive en Drive zijn niet veranderd. De nieuwe dia's staan alleen op de site.
+
+**Controleren door de docent**: dia 4 van 6.2 en de schema's van 8.3. Dia 3 (28 klikken) en dia 10 (31 klikken) van 6.2 hebben nog de animaties uit de PowerPoint; die lopen goed, maar zeg het als die ook korter moeten.
+
+**Getest**: vragencheck en linkcheck op 0; a11ycheck alleen de bestaande fout in `rondleiding/qr/posters.html`. Browsertest op 375 en 820 px, licht en donker, zonder consolefouten. Alle dia's en de nieuwe klikstappen bekeken.
+**Niet getest**: een echte iPad in Safari.
+
 ## 2026-11-19 · Economie 4 mavo H6: bijtelling en box 3 eruit, plaatjes in de dia's vernieuwd
 
 De docent besloot: de bijtelling mag weg (staat niet meer in de basisstof van het boek), box 3 wordt niet meer behandeld (komt al jaren niet meer in het eindexamen), en de oude plaatjes in de PowerPoints mogen worden bijgewerkt, zolang de verhaallijn gelijk blijft.
