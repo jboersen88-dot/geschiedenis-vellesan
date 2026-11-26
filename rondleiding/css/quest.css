@@ -530,3 +530,14 @@ img.slot-ic{width:58px;height:58px;font-size:0;border-radius:14px}
 .slot.have{overflow:hidden}
 img.pi{width:30px;height:30px;border-radius:8px;box-shadow:none}
 .ai-note{font-size:.72rem;color:var(--muted);text-align:center;margin:6px 0 0}
+
+/* ---------- overgangen tussen schermen ---------- */
+.view.deeper{transform:scale(.94)} .view.back{transform:scale(1.05)} .view.side{transform:translateX(18px)}
+.view.in,.view.in.deeper,.view.in.back,.view.in.side{transform:none;transition-delay:.08s}
+.view.out{position:fixed;z-index:0;margin:0;pointer-events:none;opacity:0;transition:opacity .32s ease,transform .42s var(--ease)}
+.view.out.deeper{transform:scale(1.07)} .view.out.back{transform:scale(.93)} .view.out.side{transform:translateX(-18px)}
+.view.in.stag>:not(.banner):not(.scan-fab){animation:stagIn .55s var(--ease) both}
+.view.in.stag>:nth-child(2){animation-delay:.12s} .view.in.stag>:nth-child(3){animation-delay:.18s}
+.view.in.stag>:nth-child(4){animation-delay:.24s} .view.in.stag>:nth-child(n+5){animation-delay:.3s}
+@keyframes stagIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){ .view,.view.deeper,.view.back,.view.side{transform:none;transition:opacity .2s} .view.in.stag>*{animation:none} }

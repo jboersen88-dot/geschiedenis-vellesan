@@ -1,3 +1,12 @@
+## 2026-11-26 · Open dag: ronde 7, nieuwe startfilm en overgangen
+
+- Startfilm (`rondleiding/media/intro.mp4`) opnieuw gemonteerd: 8 korte shots uit de eigen filmpjes (hal, aula, lab, binnentuin, biologie, tekenzolder, handvaardigheid, bibliotheek), met dezelfde warme kleurcorrectie, een vignet en steeds een andere overvloeier. 15,7 s, 1,2 MB, zonder geluid. Nieuwe posterfoto `intro.jpg`.
+- Overgangen tussen schermen: naar een dieper scherm (kaart naar stop) zoomt het beeld in, terug zoomt uit, het oude scherm vervaagt mee. Daarna komen de blokken één voor één binnen. Alleen `transform` en `opacity`; bij "minder beweging" alleen een korte fade.
+
+**Getest**: Chromium op 375, 820 en 1180 px, hele route, speelhal, scanner en pijlen, geen consolefouten, geen horizontaal scrollen, checks op 0.
+**Niet getest**: op een echte iPad (vloeiendheid van de overgangen in Safari).
+**Controleren**: of de shots in de startfilm de goede indruk geven.
+
 ## 2026-11-26 · Open dag: ronde 6, eigen plaatjes voor de kluisspullen
 
 - De 19 spullen in het kluisje (schoolpas, rooster, sleutel, ...) waren emoji. Nu zijn het eigen glanzende 3D-plaatjes in één stijl, gemaakt met Adobe Firefly (`img/items/<id>.webp`, 256 px, samen 94 kB). Ze staan in het kluisje, bij de beloning en op de leerlingenpas, met de vermelding "AI-illustratie".

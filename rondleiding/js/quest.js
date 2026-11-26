@@ -238,10 +238,24 @@
   var cleanup = [];
   function onLeave(fn) { cleanup.push(fn); }
   function leave() { var c = cleanup; cleanup = []; c.forEach(function (f) { try { f(); } catch (e) {} }); }
+  /* diepte per scherm: dieper = inzoomen, terug = uitzoomen */
+  var DEPTH = { intro: 0, setup: 1, map: 2 }, lastDepth = -1;
   function show(view, cls) {
     try { if (window.speechSynthesis) speechSynthesis.cancel(); } catch (e) {}
+    var key = (cls || "x").split(" ")[0], d = key in DEPTH ? DEPTH[key] : 3;
+    var dir = lastDepth < 0 ? "" : d > lastDepth ? "deeper" : d < lastDepth ? "back" : "side";
+    lastDepth = d;
+    var old = root.querySelector(".view");
+    var r = old && !reduced && dir ? old.getBoundingClientRect() : null;
     root.textContent = "";
-    var v = el("div", { class: "view " + (cls || "") });
+    if (r && r.height) {
+      old.classList.remove("in", "deeper", "back", "side"); old.classList.add("out", dir);
+      old.setAttribute("aria-hidden", "true"); old.inert = true;
+      old.style.top = r.top + "px"; old.style.left = r.left + "px"; old.style.width = r.width + "px";
+      root.appendChild(old);
+      setTimeout(function () { if (old.parentNode) old.parentNode.removeChild(old); }, 450);
+    }
+    var v = el("div", { class: "view " + (cls || "") + (dir ? " " + dir : "") + (key !== "intro" ? " stag" : "") });
     add(v, view);
     root.appendChild(v);
     document.body.className = "on-" + (cls || "x").split(" ")[0];
