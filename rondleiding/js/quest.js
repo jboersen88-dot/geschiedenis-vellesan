@@ -311,11 +311,11 @@
       el("div", { class: "intro-wrap" },
         el("div", { class: "intro-badge" }, el("span", { class: "dot" }), "Open dag · Vellesan College"),
         letters,
-        el("p", { class: "intro-lead", text: "Ontdek de school als een echte geheim agent. Speel korte spelletjes en ontdek hoe het hier werkt." }),
+        el("p", { class: "intro-lead", text: "Ontdek de school als een echte geheim agent. Speel " + prizeGoal() + " korte spelletjes en win een prijs!" }),
         el("div", { class: "intro-stats" },
           el("div", null, el("strong", { text: String(stops.length) }), el("span", { text: "plekken" })),
           el("div", null, el("strong", { text: "3" }), el("span", { text: "etages" })),
-          el("div", null, el("strong", { text: String(stops.reduce(function (n, s) { return n + (s.opdrachten || []).length; }, 0)) }), el("span", { text: "spelletjes" }))),
+          el("div", null, el("strong", { text: String(stops.reduce(function (n, s) { return n + (s.opdrachten || []).length; }, hal.length)) }), el("span", { text: "spelletjes" }))),
         hasAgent
           ? el("div", { class: "intro-cta" }, btn(["Verder met je missie", icon("next")], "big glow", function () { sfx("whoosh"); go("#/kaart"); }),
               btn("Opnieuw beginnen", "ghost", function () { confirmReset(); }))
@@ -425,7 +425,9 @@
       next = el("div", { class: "next-card glass" },
         el("div", { class: "next-thumb", style: { "background-image": "url(" + s.poster + ")" } }, el("span", { text: stopNr(ni) })),
         el("div", { class: "next-txt" }, el("p", { class: "eyebrow", text: "Volgende missie · " + etages[s.etage].naam }), el("h3", { text: s.naam }), el("p", { class: "muted", text: s.loop })),
-        btn(["Ga", icon("next")], "glow", function () { sfx("tap"); go("#/stop/" + (ni + 1)); }, "Ga naar stop " + (ni + 1)));
+        el("div", { class: "next-btns" },
+          btn(["Ga", icon("next")], "glow", function () { sfx("tap"); go("#/stop/" + (ni + 1)); }, "Ga naar stop " + (ni + 1)),
+          btn([icon("scan"), "Radar"], "ghost", function () { openScanner(); }, "Radar aan: zoek een QR-poster")));
     } else {
       next = el("div", { class: "next-card glass done" }, el("div", { class: "next-txt" }, el("p", { class: "eyebrow", text: "Alle missies klaar" }), el("h3", { text: "Tijd voor de grote kluis!" })),
         btn(["Kraak de kluis", icon("next")], "glow", function () { go("#/finale"); }));
@@ -442,7 +444,7 @@
       el("div", { class: "map-actions" },
         btn([icon("locker"), "Mijn kluisje"], "ghost", function () { go("#/kluisje"); }),
         btn([icon("star"), "Geheime filmpjes"], "ghost", function () { go("#/bonus"); })),
-      scanFab()
+      ni >= 0 ? null : scanFab()
     ], "map");
     if (lastFloor != null) setFloor(cur); else setStack();
     // licht meebewegen met kantelen of muis (parallax)

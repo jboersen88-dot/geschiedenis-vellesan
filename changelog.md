@@ -1,3 +1,12 @@
+## 2026-11-26 · Open dag: ronde 4, kaart en startscherm
+
+Rondleiding opnieuw doorgelopen als kind (375, 820 en 1180 px).
+
+- **Kaart**: de zwevende Radar-knop lag over de knop "Ga" van de volgende missie. Op de kaart staat de Radar nu naast "Ga" in de kaart van de volgende missie; de zwevende knop verschijnt pas als alle missies klaar zijn. Onder aan de kaart, speelhal en geheime filmpjes is extra ruimte zodat niets onder de knop verdwijnt.
+- **Startscherm**: "19 spelletjes" werd 23 (de speelhal telt mee) en de tekst noemt nu de prijs: "Speel 8 korte spelletjes en win een prijs!".
+
+**Getest**: Chromium op 375, 820 en 1180 px, alle eerdere tests, geen consolefouten. **Niet getest**: echte iPad.
+
 ## 2026-11-26 · Open dag: stem en AI-beelden ingebouwd
 
 - **Stem** (ElevenLabs, Roos): `voiceover/welkom.mp3` bij de uitleg (na de eerste tik op Volgende), `prijs.mp3` bij "Prijs vrijgespeeld" en `kluis.mp3` als de kluis opengaat. Tekst in de bijbehorende `.txt`. Let op: in de welkomtekst zegt de stem "acht". Verander je `prijs.aantal`, neem dan ook dit fragment opnieuw op.
