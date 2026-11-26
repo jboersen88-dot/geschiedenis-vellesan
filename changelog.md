@@ -1,3 +1,10 @@
+## 2026-11-26 · Open dag: ronde 6, eigen plaatjes voor de kluisspullen
+
+- De 19 spullen in het kluisje (schoolpas, rooster, sleutel, ...) waren emoji. Nu zijn het eigen glanzende 3D-plaatjes in één stijl, gemaakt met Adobe Firefly (`img/items/<id>.webp`, 256 px, samen 94 kB). Ze staan in het kluisje, bij de beloning en op de leerlingenpas, met de vermelding "AI-illustratie".
+- Terug naar emoji kan door `itemBeelden: null` te zetten in `data/stops.js`.
+
+**Getest**: Chromium op 375 en 820 px, hele route, geen consolefouten, checks op 0.
+
 ## 2026-11-26 · Open dag: ronde 5, beloning toont de prijs
 
 - Na elk spelletje staat onder de sterren hoeveel spelletjes je nog nodig hebt voor de prijs ("7 van 8 spelletjes. Nog 1 tot je prijs!"), of dat de kluis open mag.

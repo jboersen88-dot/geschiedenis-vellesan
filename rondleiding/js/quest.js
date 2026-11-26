@@ -208,6 +208,12 @@
     try { if (!voEl) voEl = new Audio(); voEl.pause(); voEl.src = f; var pr = voEl.play(); if (pr && pr.catch) pr.catch(function () {}); } catch (e) {}
   }
   function stemStop() { try { if (voEl) voEl.pause(); } catch (e) {} }
+  /* plaatje van een kluisspul (Firefly), anders het emoji-teken */
+  function itemArt(s, cls) {
+    var dir = D.itemBeelden;
+    if (dir && s.item) return el("img", { class: "item-img " + (cls || ""), src: dir + s.id + ".webp", alt: "", decoding: "async" });
+    return el("span", { class: cls || "", text: s.item ? s.item[0] : "★" });
+  }
   function aiBeeld(k, cls) {
     var f = D.beelden && D.beelden[k]; if (!f) return null;
     return el("figure", { class: "ai-art " + (cls || "") }, el("img", { src: f, alt: "", loading: "lazy", decoding: "async" }), el("figcaption", { text: "AI-illustratie" }));
@@ -722,11 +728,11 @@
   function stopReward(s, idx) {
     sfx("unlock");
     modal(function (close) {
-      var item = el("div", { class: "reward-item" }, el("div", { class: "ri-glow", "aria-hidden": "true" }), el("span", { class: "ri-emoji", text: s.item ? s.item[0] : "★" }));
+      var item = el("div", { class: "reward-item" }, el("div", { class: "ri-glow", "aria-hidden": "true" }), itemArt(s, "ri-emoji"));
       setTimeout(function () { burst(item, 50); confetti(2600); }, reduced ? 0 : 350);
       var out = [el("p", { class: "eyebrow center", text: "Stop " + (idx + 1) + " voltooid" }), item,
         el("h2", { class: "center", text: s.item ? s.item[1] : "Beloning" }),
-        el("p", { class: "center", text: "Dit gaat in je kluisje." })];
+        el("p", { class: "center", text: "Dit gaat in je kluisje." }), D.itemBeelden ? el("p", { class: "ai-note", text: "AI-illustratie" }) : null];
       if (s.cijfer != null) out.push(el("div", { class: "digit-found" }, el("span", { text: "Geheim cijfer gevonden" }), el("strong", { text: String(s.cijfer) }), el("small", { text: "Onthoud hem voor de grote kluis!" })));
       var ni = nextIdx();
       out.push(el("div", { class: "g-row center" },
@@ -744,7 +750,7 @@
     stops.forEach(function (s, i) {
       var have = isDone(s);
       grid.appendChild(el("button", { type: "button", class: "slot" + (have ? " have" : ""), style: { "--d": (i * 0.03) + "s" }, onclick: function () { go("#/stop/" + (i + 1)); }, "aria-label": have ? s.item[1] + ", van " + s.naam : "Nog leeg: " + s.naam },
-        el("span", { class: "slot-ic", text: have ? s.item[0] : "?" }), el("span", { class: "slot-t", text: have ? s.item[1] : s.naam })));
+        have ? itemArt(s, "slot-ic") : el("span", { class: "slot-ic", text: "?" }), el("span", { class: "slot-t", text: have ? s.item[1] : s.naam })));
     });
     var code = el("div", { class: "code-row", role: "img", "aria-label": "Geheime cijfers" });
     digits().forEach(function (s) { code.appendChild(el("span", { class: "code-d" + (isDone(s) ? " on" : ""), text: isDone(s) ? String(s.cijfer) : "?" })); });
@@ -752,6 +758,7 @@
       el("div", { class: "locker-head" }, el("p", { class: "eyebrow", text: "Agent " + ((state.agent && state.agent.naam) || "") }), el("h1", { class: "h-display", text: "Mijn kluisje" }),
         el("p", { class: "lead", text: got + " van " + stops.length + " spullen verzameld." })),
       el("div", { class: "locker-door glass" }, grid),
+      D.itemBeelden ? el("p", { class: "ai-note", text: "De plaatjes van de spullen zijn AI-illustraties." }) : null,
       el("section", { class: "panel glass" }, el("h2", { text: "Geheime cijfers" }), el("p", { class: "muted", text: "Bij vier stops vind je een cijfer. Samen openen ze de grote kluis." }), code),
       el("div", { class: "g-row center" }, btn([icon("map"), "Naar de kaart"], "glow", function () { go("#/kaart"); }), btn([icon("lock"), "De grote kluis"], "ghost", function () { go("#/finale"); }))
     ], "locker");
@@ -819,13 +826,13 @@
         el("div", null, el("strong", { text: String(totalStars()) }), el("span", { text: "sterren" })),
         el("div", null, el("strong", { text: Object.keys(state.secrets).length + "/" + bonus.length }), el("span", { text: "geheimen" }))),
       el("div", { class: "pass-foot" },
-        el("div", { class: "pass-items", "aria-label": "Verzamelde spullen" }, stops.filter(isDone).map(function (s) { return el("span", { text: s.item[0] }); })),
+        el("div", { class: "pass-items", "aria-label": "Verzamelde spullen" }, stops.filter(isDone).map(function (s) { return itemArt(s, "pi"); })),
         prizeWon() ? el("div", { class: "pass-stamp", role: "img", "aria-label": "Prijs gewonnen" }, el("span", { text: "Prijs" }), el("strong", { text: "gewonnen" })) : null));
     show([
       el("div", { class: "center finale-head" }, el("p", { class: "eyebrow", text: "Missie geslaagd" }), el("h1", { class: "h-display", text: "Welkom op het Vellesan!" }),
         el("p", { class: "lead", text: "Je hebt de kluis gekraakt. Dit is jouw leerlingenpas." }),
         prizeWon() ? el("p", { class: "prize-claim", text: "🏆 " + ((D.prijs && D.prijs.tekst) || "Laat je pas zien aan iemand van de school!") }) : null),
-      card,
+      card, D.itemBeelden ? el("p", { class: "ai-note", text: "Plaatjes van de spullen: AI-illustraties." }) : null,
       el("div", { class: "g-row center" }, btn([icon("map"), "Kaart"], "ghost", function () { go("#/kaart"); }), btn([icon("star"), "Geheime filmpjes"], "ghost", function () { go("#/bonus"); }))
     ], "pass-view");
     confetti(5000);

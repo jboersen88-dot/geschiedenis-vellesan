@@ -522,3 +522,11 @@ body.on-map main,body.on-bonus main{padding-bottom:calc(130px + env(safe-area-in
 
 .rw-prize{margin:4px 0 10px;font-weight:700;color:var(--muted);text-align:center}
 .rw-prize.won{color:var(--accent2)}
+
+/* ===== kluisspullen als plaatje (AI-illustratie) ===== */
+.item-img{display:block;object-fit:cover;border-radius:22%;box-shadow:0 10px 24px -10px rgba(0,0,0,.8)}
+img.ri-emoji{width:150px;height:150px;border-radius:30px}
+img.slot-ic{width:58px;height:58px;font-size:0;border-radius:14px}
+.slot.have{overflow:hidden}
+img.pi{width:30px;height:30px;border-radius:8px;box-shadow:none}
+.ai-note{font-size:.72rem;color:var(--muted);text-align:center;margin:6px 0 0}
