@@ -1,3 +1,13 @@
+## 2026-11-27 · Open dag: Missie Vellesan live, met icoon voor het beginscherm
+
+- Missie Vellesan staat live op het bestaande adres (`rondleiding/`), zodat collega's hem kunnen testen.
+- Zet je de rondleiding op het beginscherm van een iPad, dan krijgt hij nu het icoon van de kluis (AI-illustratie) en de naam "Missie Vellesan" in plaats van een schermafdruk.
+- Testblad voor collega's met QR-code, stappen voor het beginscherm, wat te testen en de codes van de stops: staat buiten de repo bij de projectbestanden.
+
+**Getest**: Chromium, hele route op 375 en 820 px, checks op 0.
+**Niet getest**: het icoon op een echte iPad.
+**Controleren**: zet de site op het beginscherm van één iPad en kijk of het icoon klopt.
+
 ## 2026-11-27 · Open dag: filmpjes opnieuw in HD
 
 - Alle 22 filmpjes van de stops en de bonus zijn opnieuw gemaakt uit de originele films van Joost (map OPEN DAG). Eerst 480 x 854 pixels, nu Full HD (1080 x 1920), stabiel gemaakt tegen schudden, iets scherper en met wat meer kleur.
