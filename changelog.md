@@ -1,3 +1,15 @@
+## 2026-11-27 · Open dag: filmpjes opnieuw in HD
+
+- Alle 22 filmpjes van de stops en de bonus zijn opnieuw gemaakt uit de originele films van Joost (map OPEN DAG). Eerst 480 x 854 pixels, nu Full HD (1080 x 1920), stabiel gemaakt tegen schudden, iets scherper en met wat meer kleur.
+- Zelfde stukken film als eerst: de knippunten zijn teruggevonden door de oude clips beeld voor beeld te vergelijken met de originelen.
+- 4,5 tot 14,7 MB per filmpje, samen ongeveer 210 MB. Bestanden ruim onder de 100 MB, de repo blijft onder 1 GB maar komt wel dichterbij.
+- Nieuwe stilstaande beelden (`media/<id>.jpg`, 720 pixels breed); bij s17, s18 en s19 is het scherpste beeld uit de eerste seconden gekozen.
+- Filmpjes laden pas als je de stop opent (`preload="metadata"`), dus de kaart blijft snel.
+
+**Getest**: alle clips 1080 x 1920 met geluid; stop 1 laadt en speelt in Chromium op 820 px; hele route op 375 en 820 px; geen consolefouten; checks op 0.
+**Niet getest**: afspelen op een iPad via de schoolwifi.
+**Controleren**: speel een paar filmpjes af op een iPad op school. Laden ze snel genoeg?
+
 ## 2026-11-27 · Open dag: de plattegrond als echt 3D-model
 
 - De kaart in Missie Vellesan is nu een 3D-model van de school dat je met je vinger draait. De drie etages zweven boven elkaar, met glazen buitenmuren. De bolletjes van de stops draaien altijd naar je toe.
