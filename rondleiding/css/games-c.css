@@ -1,0 +1,54 @@
+/* Missie Vellesan: speelhal-spelletjes (games-c.js) */
+.gc-timer{height:8px;border-radius:99px;background:var(--line);overflow:hidden;margin:0 0 12px}
+.gc-timer i{display:block;height:100%;background:linear-gradient(90deg,var(--accent2),var(--accent));transform-origin:0 50%}
+.gc-count{margin:0 0 8px;font-weight:700;color:var(--muted);text-align:center}
+.gc-card{min-height:120px;display:grid;place-items:center;padding:18px;border-radius:20px;background:var(--panel2);border:2px solid var(--line);text-align:center;margin-bottom:12px;transition:border-color .3s}
+.gc-big{margin:0;font-size:1.25rem;font-weight:800;line-height:1.35}
+.gc-in{animation:gcIn .35s var(--ease)}
+@keyframes gcIn{from{opacity:0;transform:translateY(10px) scale(.98)}to{opacity:1;transform:none}}
+.gc-ok{border-color:var(--good)}
+.gc-no{border-color:var(--bad);animation:gcNo .35s}
+@keyframes gcNo{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.gc-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.gc-row.three{grid-template-columns:1fr}
+@media (min-width:560px){ .gc-row.three{grid-template-columns:repeat(3,1fr)} }
+.gc-row .btn{width:100%;justify-content:center}
+.gc-goed{background:linear-gradient(180deg,#6ee7b7,var(--good));color:#06281c}
+.gc-fout{border-color:var(--bad)!important}
+.gc-mem{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;perspective:800px}
+@media (min-width:560px){ .gc-mem{grid-template-columns:repeat(4,minmax(0,1fr))} }
+.gc-tile{position:relative;aspect-ratio:1;border:0;padding:0;background:none;cursor:pointer;transform-style:preserve-3d;transition:transform .45s var(--ease);font:inherit;color:var(--ink);width:100%;max-width:130px;justify-self:center}
+.gc-tile.up{transform:rotateY(180deg)}
+.gc-back,.gc-front{position:absolute;inset:0;display:grid;place-items:center;border-radius:16px;backface-visibility:hidden;-webkit-backface-visibility:hidden;border:1px solid var(--line)}
+.gc-back{background:linear-gradient(135deg,var(--accent2),var(--accent));color:#1b1206;font-family:var(--f-head);font-size:1.8rem;font-weight:800}
+.gc-front{background:var(--panel2);transform:rotateY(180deg);padding:4px;text-align:center}
+.gc-front strong{font-size:clamp(.68rem,3.2vw,.86rem);line-height:1.15;hyphens:auto;-webkit-hyphens:auto}
+.gc-ic{font-size:34px}
+.gc-tile.got .gc-front{border:2px solid var(--good);background:rgba(52,211,153,.16)}
+@media (prefers-reduced-motion:reduce){ .gc-tile{transition:none} .gc-in,.gc-no{animation:none} }
+
+/* Het winkeltje */
+.wk-stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 12px}
+.wk-stats div{padding:10px 14px;border-radius:16px;background:var(--panel2);border:1px solid var(--line)}
+.wk-stats small{display:block;font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.wk-stats strong{font-size:1.5rem;font-variant-numeric:tabular-nums}
+.wk-scene{position:relative;display:grid;grid-template-columns:1fr minmax(150px,44%);align-items:end;gap:8px;min-height:230px;padding:14px;border-radius:20px;overflow:hidden;background:linear-gradient(180deg,rgba(125,211,252,.16),rgba(47,143,134,.14) 70%,rgba(0,0,0,.18));border:1px solid var(--line);margin-bottom:12px}
+.wk-straat{position:relative;height:150px}
+.wk-klant{position:absolute;left:0;bottom:0;display:flex;flex-direction:column;align-items:center;opacity:0;transform:translateX(-70px);transition:transform .7s var(--ease),opacity .4s}
+.wk-klant.in{opacity:1;transform:translateX(30px)}
+.wk-klant.uit{opacity:0;transform:translateX(110px) translateY(10px)}
+.wk-gez{font-size:3.2rem;line-height:1}
+.wk-bubbel{order:-1;margin-bottom:6px;padding:4px 10px;border-radius:12px;font-weight:800;font-size:.9rem;white-space:nowrap;opacity:0;transform:translateY(6px) scale(.8);transition:opacity .2s,transform .25s var(--ease)}
+.wk-bubbel.ja{background:var(--good);color:#06281c}
+.wk-bubbel.nee{background:var(--bad);color:#fff}
+.wk-klant.praat .wk-bubbel{opacity:1;transform:none}
+.wk-kraam{position:relative;padding:0 0 10px;border-radius:16px;background:var(--panel2);border:1px solid var(--line);text-align:center;overflow:hidden}
+.wk-dak{height:26px;background:repeating-linear-gradient(90deg,#f39200 0 22px,#fff6e8 22px 44px);border-bottom:3px solid rgba(0,0,0,.15)}
+.wk-bord{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px;padding:12px 8px 6px}
+.wk-waar{font-size:clamp(1.6rem,7vw,2.2rem)}
+.wk-prijs{white-space:nowrap;font-family:var(--f-head);font-size:clamp(1.2rem,5vw,1.7rem);font-weight:800;color:var(--accent);font-variant-numeric:tabular-nums}
+.wk-prijs.bump{animation:pop .3s var(--ease)}
+.wk-knoppen{display:flex;align-items:center;justify-content:center;gap:8px}
+.wk-lbl{font-size:.75rem;font-weight:700;color:var(--muted)}
+.wk-pm{min-width:44px;min-height:44px;font-size:1.4rem}
+@media (prefers-reduced-motion:reduce){ .wk-klant,.wk-bubbel{transition:none} }

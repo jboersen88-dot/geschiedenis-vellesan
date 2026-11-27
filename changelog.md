@@ -1,3 +1,168 @@
+## 2026-11-27 · Open dag: filmpjes opnieuw in HD
+
+- Alle 22 filmpjes van de stops en de bonus zijn opnieuw gemaakt uit de originele films van Joost (map OPEN DAG). Eerst 480 x 854 pixels, nu Full HD (1080 x 1920), stabiel gemaakt tegen schudden, iets scherper en met wat meer kleur.
+- Zelfde stukken film als eerst: de knippunten zijn teruggevonden door de oude clips beeld voor beeld te vergelijken met de originelen.
+- 4,5 tot 14,7 MB per filmpje, samen ongeveer 210 MB. Bestanden ruim onder de 100 MB, de repo blijft onder 1 GB maar komt wel dichterbij.
+- Nieuwe stilstaande beelden (`media/<id>.jpg`, 720 pixels breed); bij s17, s18 en s19 is het scherpste beeld uit de eerste seconden gekozen.
+- Filmpjes laden pas als je de stop opent (`preload="metadata"`), dus de kaart blijft snel.
+
+**Getest**: alle clips 1080 x 1920 met geluid; stop 1 laadt en speelt in Chromium op 820 px; hele route op 375 en 820 px; geen consolefouten; checks op 0.
+**Niet getest**: afspelen op een iPad via de schoolwifi.
+**Controleren**: speel een paar filmpjes af op een iPad op school. Laden ze snel genoeg?
+
+## 2026-11-27 · Open dag: de plattegrond als echt 3D-model
+
+- De kaart in Missie Vellesan is nu een 3D-model van de school dat je met je vinger draait. De drie etages zweven boven elkaar, met glazen buitenmuren. De bolletjes van de stops draaien altijd naar je toe.
+- Eén vinger: draaien en kantelen (met een zachte uitloop). Twee vingers: knijpen om te zoomen, schuiven en draaien. Knoppen voor min, plus, linksom, rechtsom en terug naar het begin. Op een computer: slepen, muiswiel en pijltjestoetsen.
+- Met de knoppen "Begane grond", "1e etage" en "2e etage" komt die etage naar voren; de andere worden doorzichtig. "Alles" laat weer de hele school zien.
+- Hoe: alleen CSS 3D en gewone JavaScript (`js/map3d.js`, `css/map3d.css`), geen bibliotheken. De bovenaanzichten (`img/plan-0/1/2.webp`) en de muren zijn berekend uit de bestaande kaartplaatjes met `tools/maak-3d-kaart.py`. Lukt 3D niet, dan verschijnt de oude kaart.
+
+**Getest**: Chromium op 375 en 820 px: slepen draait het model, een etage kiezen werkt, tikken op een bolletje opent de juiste stop, na slepen opent er niet per ongeluk een stop, geen consolefouten, geen horizontaal scrollen; hele route en speelhal opnieuw; checks op 0.
+**Niet getest**: op een echte iPad in Safari (knijpen en draaien met twee vingers heb ik alleen kunnen nabootsen).
+**Controleren**: draai en knijp op een iPad. Voelt het soepel? Staan de bolletjes op de goede plek in de school?
+
+## 2026-11-26 · Open dag: ronde 11, nieuwe QR-posters
+
+- De QR-posters (`rondleiding/qr/posters.pdf`, 23 pagina's: overzicht, 19 stops, 3 geheime) hebben nu dezelfde stijl als de app: donkere band met "Missie Vellesan", het plaatje van het kluisvoorwerp (met "AI-illustratie"), "Stop 08 van 19", de naam in Fraunces, de etage, een grote QR-code met oranje zoekerhoeken en de typcode in losse letterblokjes. Wit papier, dus zuinig met inkt.
+- Opgelost: bij de oude posters viel het codewoord onderaan half van de pagina.
+- Het overzicht vooraan (welke poster waar hangt) is gebleven.
+
+**Getest**: PDF gemaakt met `tools/maak-qr.js`; de QR-codes van stop 1 en geheim 3 uit de PDF gelezen met dezelfde QR-lezer als de app (geven het juiste adres); lange namen passen.
+**Niet getest**: geprint op de schoolprinter, en scannen van papier met een iPad.
+**Controleren**: print één poster op A4 zonder verkleining en scan hem met een iPad.
+
+## 2026-11-26 · Open dag: ronde 10, het winkeltje en mooiere startschermen
+
+Vergeleken met het analysedocument en elk scherm opnieuw bekeken als Joost ("ziet het er professioneel uit?").
+- **Nieuw spel "Het winkeltje"** in de speelhal (idee uit het analysedocument voor B01/B02 economie). Je runt 30 seconden een kraampje met koeken en kiest de prijs. Klanten lopen langs; is de prijs te hoog, dan zeggen ze "Te duur!". Aan het eind: wat je verdiende en dat te duur of te goedkoop minder oplevert. Wat klanten willen betalen is eerlijk verdeeld, niet puur geluk. Engine `winkel` in `js/games-c.js`.
+- **Startschermen** (agent kiezen en missie-uitleg) voelden als een los formulier in een leeg vlak. Nu staat de startfilm wazig op de achtergrond, is de kaart op een iPad breder en zijn de dieren groter.
+- **Speelhal**: de kaarten staan nu netjes verdeeld (3 + 2 op een iPad, 2 per rij op een telefoon) in plaats van één losse kaart onderaan.
+- Niet overgenomen uit het document, omdat het feiten of beelden vraagt die ik niet heb: tijdlijn voor geschiedenis, kaart van Nederland voor aardrijkskunde, "raad het boek", 360-foto's en een scorebord op het digibord.
+
+**Getest**: Chromium op 375, 820 en 1180 px, hele route, alle speelhal-spelletjes, winkeltje helemaal uitgespeeld, scanner en pijlen, geen consolefouten, geen horizontaal scrollen, checks op 0.
+**Niet getest**: op een echte iPad.
+**Controleren**: of je het winkeltje als economiedocent goed vindt, en of een koek het goede product is.
+
+## 2026-11-26 · Open dag: ronde 9, spelletjes nagelopen als kind
+
+Alle 19 stop-spelletjes geopend en bekeken op 375 en 820 px (de speelhal was al getest). Wat ik aanpaste:
+- **Schuifpuzzel** (handvaardigheid): was te moeilijk voor groep 7 (40 schudzetten). Nu 16, en de sterren passen daarbij (3 sterren tot 30 zetten).
+- **Raad het getal** (wiskunde): duurde te lang. Nu 1 tot 50 met 7 pogingen in plaats van 1 tot 100 met 10. Hints en sterren schalen mee.
+- **Koppel ze** (wie helpt je, rooster, talen): op een telefoon waren de twee kolommen ongelijk breed en de knoppen ongelijk hoog. Nu even breed en per rij even hoog; alleen losse woorden worden afgebroken.
+- **Vang de blaadjes** (binnentuin): spannender. Af en toe valt er een gouden blad dat 3 punten waard is, en bij elke vangst springt "+1" of "+3" omhoog.
+
+**Getest**: Chromium op 375 en 820 px, alle spelletjes geopend, vang en getal helemaal uitgespeeld, hele route, checks op 0, geen consolefouten.
+**Niet getest**: op een echte iPad.
+**Controleren**: of de spelletjes nu kort genoeg zijn. Langst blijven de schuifpuzzel en het tekenen.
+
+## 2026-11-26 · Open dag: ronde 8, voller geluid
+
+- Alle geluidjes gaan nu door een zachte compressor en een kleine galm (zelf berekend, geen geluidsbestanden). Scherpe piepjes (blok- en zaagtand) krijgen een filter, zodat ze minder schel klinken.
+- Nieuw: een zachte "swoosh" omhoog als je inzoomt naar een stop en omlaag als je terug gaat. Speelt niet als er net al een ander geluidje klonk.
+
+**Getest**: Chromium op 375 en 820 px met geluid aan, hele route en speelhal, geen consolefouten.
+**Niet getest**: hoe het klinkt op een iPad-speaker; de galm kan in een drukke gang wegvallen.
+
+## 2026-11-26 · Open dag: ronde 7, nieuwe startfilm en overgangen
+
+- Startfilm (`rondleiding/media/intro.mp4`) opnieuw gemonteerd: 8 korte shots uit de eigen filmpjes (hal, aula, lab, binnentuin, biologie, tekenzolder, handvaardigheid, bibliotheek), met dezelfde warme kleurcorrectie, een vignet en steeds een andere overvloeier. 15,7 s, 1,2 MB, zonder geluid. Nieuwe posterfoto `intro.jpg`.
+- Overgangen tussen schermen: naar een dieper scherm (kaart naar stop) zoomt het beeld in, terug zoomt uit, het oude scherm vervaagt mee. Daarna komen de blokken één voor één binnen. Alleen `transform` en `opacity`; bij "minder beweging" alleen een korte fade.
+
+**Getest**: Chromium op 375, 820 en 1180 px, hele route, speelhal, scanner en pijlen, geen consolefouten, geen horizontaal scrollen, checks op 0.
+**Niet getest**: op een echte iPad (vloeiendheid van de overgangen in Safari).
+**Controleren**: of de shots in de startfilm de goede indruk geven.
+
+## 2026-11-26 · Open dag: ronde 6, eigen plaatjes voor de kluisspullen
+
+- De 19 spullen in het kluisje (schoolpas, rooster, sleutel, ...) waren emoji. Nu zijn het eigen glanzende 3D-plaatjes in één stijl, gemaakt met Adobe Firefly (`img/items/<id>.webp`, 256 px, samen 94 kB). Ze staan in het kluisje, bij de beloning en op de leerlingenpas, met de vermelding "AI-illustratie".
+- Terug naar emoji kan door `itemBeelden: null` te zetten in `data/stops.js`.
+
+**Getest**: Chromium op 375 en 820 px, hele route, geen consolefouten, checks op 0.
+
+## 2026-11-26 · Open dag: ronde 5, beloning toont de prijs
+
+- Na elk spelletje staat onder de sterren hoeveel spelletjes je nog nodig hebt voor de prijs ("7 van 8 spelletjes. Nog 1 tot je prijs!"), of dat de kluis open mag.
+- Vakken-memory: lange vaknamen (Aardrijkskunde) braken lelijk af op een telefoon. De letters schalen nu mee.
+
+**Getest**: Chromium op 375 en 820 px, geen consolefouten.
+
+## 2026-11-26 · Open dag: ronde 4, kaart en startscherm
+
+Rondleiding opnieuw doorgelopen als kind (375, 820 en 1180 px).
+
+- **Kaart**: de zwevende Radar-knop lag over de knop "Ga" van de volgende missie. Op de kaart staat de Radar nu naast "Ga" in de kaart van de volgende missie; de zwevende knop verschijnt pas als alle missies klaar zijn. Onder aan de kaart, speelhal en geheime filmpjes is extra ruimte zodat niets onder de knop verdwijnt.
+- **Startscherm**: "19 spelletjes" werd 23 (de speelhal telt mee) en de tekst noemt nu de prijs: "Speel 8 korte spelletjes en win een prijs!".
+
+**Getest**: Chromium op 375, 820 en 1180 px, alle eerdere tests, geen consolefouten. **Niet getest**: echte iPad.
+
+## 2026-11-26 · Open dag: stem en AI-beelden ingebouwd
+
+- **Stem** (ElevenLabs, Roos): `voiceover/welkom.mp3` bij de uitleg (na de eerste tik op Volgende), `prijs.mp3` bij "Prijs vrijgespeeld" en `kluis.mp3` als de kluis opengaat. Tekst in de bijbehorende `.txt`. Let op: in de welkomtekst zegt de stem "acht". Verander je `prijs.aantal`, neem dan ook dit fragment opnieuw op.
+- **Beelden** (Adobe Firefly, met label "AI-illustratie"): een agententafel met een kaart van de school (uitleg), een speelhal-kast met schoolspullen (speelhal) en een gouden kluis met beker (kluis op slot). Verkleind naar webp, 512 px, samen 118 kB.
+
+**Getest**: in Chromium op 375 en 820 px, geen consolefouten, checks op 0. **Niet getest**: of Safari op de iPad de stem afspeelt bij de prijs (die start niet direct na een tik).
+
+## 2026-11-26 · Open dag: plek voor stem en AI-beelden, Speelhal vanaf elke stop
+
+- **Stem en beelden klaargezet**: `stemmen` (welkom, prijs, kluis) en `beelden` (briefing, speelhal, kluis) in `data/stops.js`. De fragmenten zijn gemaakt met ElevenLabs (stem Roos) en de beelden met Adobe Firefly. Ze staan nog op `null`: de bestanden moeten nog van de computer van de docent komen. Beelden krijgen het label "AI-illustratie".
+- **Stopscherm**: de knop "Terug naar de kaart" stond er dubbel (de knop Kaart staat al bovenaan). Op die plek staat nu "Speelhal".
+
+**Getest**: in Chromium op 375, 820 en 1180 px (liggend), zonder consolefouten. **Niet getest**: de stem op een iPad (Safari kan geluid blokkeren dat niet direct na een tik start).
+
+## 2026-11-26 · Open dag: pijlen in beeld in de Radar (heads-up display)
+
+Wens van de docent: rondkijken met de camera en pijlen in beeld zien naar de plekken om je heen, zoals een heads-up display in de auto.
+
+- **Hoe**: de Radar (camera die QR-posters zoekt) toont nu ook zwevende pijlen met namen: Aula, Rector en docentenkamer, Talen, enzovoort. De volgende missie is oranje. Plekken die achter of naast je liggen, staan als pijl aan de rand. Tik op een pijl om die plek te openen.
+- **Waar ben je?**: de laatst gescande poster (nieuw veld `laatst` in de bestaande opslag). Zonder poster vraagt de Radar om er eerst een te scannen. Echte plaatsbepaling binnen kan niet in Safari (geen GPS binnen, geen bluetooth), en echte AR (WebXR) werkt niet op de iPad. Dit is het beste wat in de browser kan.
+- **Welke kant kijk je op?**: het kompas van de iPad. Zonder kompas (computer) kun je slepen met de vinger.
+- **Andere etages**: "Trap op" of "Trap af" met de plekken die daar nog wachten.
+- **Richtingen**: berekend uit de plekken op de plattegrond. De plattegrond is schuin getekend; `hud.assen` in `data/stops.js` zet hem recht. Elke stop heeft nu een korte naam (`kort`) voor de pijlen.
+- **Instellen**: het kompas weet niet hoe de plattegrond ligt. Open de rondleiding één keer met `?ijk=1`, scan een poster, richt de iPad op een plek uit de lijst en tik op Instellen. Het getal dat verschijnt, komt in `hud.draai`. Tot dan wijzen de pijlen wel goed ten opzichte van elkaar, maar niet goed ten opzichte van het gebouw.
+
+**Getest**: in Chromium op 375, 820 en 1180 px met een nepcamera en nep-kompas: pijlen verschuiven als je draait, randpijlen, trap op/af, het instelblok, geen consolefouten, geen horizontaal scrollen. De eerdere tests opnieuw gedraaid.
+
+**Niet getest**: echte iPad. Vooral: werkt het kompas als je de iPad rechtop of liggend houdt, en hoeveel wijkt het binnen af door staal in het gebouw?
+
+**Controleren door de docent**: doe het instellen bij één poster en stuur het getal. Loop daarna met de Radar door de hal en kijk of de pijlen ongeveer kloppen.
+
+## 2026-11-26 · Open dag: speelhal en een prijs na 8 spelletjes
+
+Wens van de docent: meer korte, snelle spelletjes over de school. Ze zijn niet verplicht, maar wie er genoeg speelt, wint een prijs.
+
+- **Prijs**: na 8 gespeelde spelletjes (stops en speelhal samen, er zijn er 23) mag het kind de grote kluis kraken en wint het een prijs. Daarvoor zit de kluis op slot, met de melding hoeveel spelletjes nog nodig zijn. Het getal staat in `data/stops.js` bij `prijs.aantal`, de tekst op de pas bij `prijs.tekst`. Keuze: 8, omdat dat met een paar stops plus de speelhal in ongeveer een kwartier lukt.
+- **Voortgang**: in de balk bovenin staat 🎁 met "5/8" (tik erop voor de speelhal). Op de kaart staat een prijsbalk. Bij 8 komt er een melding "Prijs vrijgespeeld!". Op de leerlingenpas staat een stempel "Prijs gewonnen" en de tekst over de prijs.
+- **Speelhal** (`#/speelhal`): vier snelle spelletjes die overal werken, ook zonder QR-code: Goed of fout? (45 seconden, 8 zinnen over de school), Vakken-memory (vak en ding dat erbij hoort), Waar is het? (op welke etage) en Welk vak?. Alle feiten komen uit de uitleg bij de stops. Code in `js/games-c.js` en `css/games-c.css`.
+- **Overslaan**: onder elk spelletje staat "Overslaan, ik ga verder". Zo kan een kind altijd door.
+- De uitleg aan het begin zegt nu: speel 8 spelletjes, waar je maar wilt, dan mag je de kluis kraken.
+
+**Getest**: in Chromium op 375 en 820 px: alle vier speelhal-spelletjes doorgespeeld, de melding bij 8, de kluis op slot en daarna open, de pas met stempel, Overslaan. De eerdere tests (hele route, filmpjes, scanner met nepcamera) opnieuw gedraaid. Geen consolefouten, geen horizontaal scrollen. vragencheck, linkcheck en a11ycheck op 0.
+
+**Niet getest**: echte iPad en Safari.
+
+**Controleren door de docent**: is 8 een goed aantal? Wat is de prijs, en klopt de tekst "Laat je pas zien aan iemand van de school. Dan krijg je je prijs!"? Kloppen de zinnen bij Goed of fout?
+
+## 2026-11-26 · Open dag: rondleiding opnieuw gebouwd als "Missie Vellesan"
+
+De docent vond de eerste rondleiding niet mooi en niet professioneel genoeg en wilde een wow-ervaring met effecten, spelletjes en alle lokalen. De rondleiding is helemaal opnieuw gebouwd. Adres, QR-codewoorden en `?qr=`/`?stop=` blijven werken.
+
+- **Verhaal**: het kind kiest een dier en krijgt een verzonnen agentnaam (geen echte naam). Bij elke stop verdient het een voorwerp voor het kluisje. Bij vier stops vindt het een geheim cijfer. In de bibliotheek kraakt het de grote kluis (1926, het bouwjaar) en krijgt het een leerlingenpas.
+- **Startscherm**: filmmontage uit de clips (`media/intro.mp4`, 17 s, zonder geluid), letters die invliegen.
+- **Plattegrond**: de drie etages zweven als 3D-lagen (`img/vloer-N.webp`, witte achtergrond weggehaald). Tik op een etage om in te zoomen. Kantelen van de iPad beweegt de kaart een beetje mee.
+- **Stopscherm**: groot filmscherm met titel, de film vult ook brede schermen (wazige achtergrond). Knop "Kijk rond": de film schermvullend, beweegt mee als je de iPad draait (of sleep met de vinger). Voice-overs uit `voiceover/<id>.mp3` worden automatisch gebruikt zodra ze er staan.
+- **Spelletjes**: één per stop: quiz (receptie), roosterscherm lezen (hal), kluisje kraken, piano (aula), automaat met spelgeld, schuifpuzzel (handvaardigheid), wie helpt je (Hal 2), rooster-puzzel (gang B01-B07), skelet bouwen (biologie), bruisbal maken door te schudden (lab), raad het getal (wiskunde), blaadjes vangen (binnentuin), hallo in vier talen met uitspraak, stroomkring (B19), typ-race (computerlokaal), wat neem je mee naar welke les (nieuwbouw), lift-geheugen, tekenen (tekenzolder), woordpuzzel (bibliotheek). Sterren per spel, geluid (zelf gemaakt met WebAudio, geen bestanden), confetti.
+- **Nieuwe stops**: B19, B20 en B21 (code VONK), de binnentuin (BLAD) en rector en docentenkamer (STER). Clips geknipt uit de originele films (IMG_9193 5:48-6:14 en 3:04-3:28, IMG_9194 3:01-3:10), 540 x 960. Lokaalverdeling volgens de docent (26 nov) en de plattegrond van jan 2025.
+- **Vertelstem**: nieuwe stem (ElevenLabs, "Roos") in `voiceover/<id>.mp3`, met de tekst in `voiceover/<id>.txt`. De film speelt zonder geluid met de stem erover, met ondertitels die meelopen (verdeeld naar zinslengte, dus niet op de tiende seconde precies).
+- **Kort en luchtig** (wens van de docent, 26 nov): het gaat om wat je op elke plek doet, niet om het gebouw. Elke stop heeft nu precies één kort spelletje (ongeveer een minuut). Een kind hoeft niet alles te doen: de grote kluis kan altijd, en wie cijfers mist krijgt meteen een tip. Hal 2 en de rector zijn samen één stop ("Hal 2: wie helpt jou?", code BEER); de oude Hal 2-clip en de tegelpuzzel worden niet meer gebruikt (de puzzel staat nog in `games-a.js`). Typ-race 4 woorden, piano en lift 2 rondes.
+- **Radar** (vraag van de docent: automatisch herkennen waar je bent): GPS werkt binnen niet en ziet geen etages, bluetooth en NFC werken niet in Safari. Daarom de QR-poster, maar dan zonder gedoe: de knop "Radar" zet de camera aan terwijl het kind loopt en herkent een poster vanzelf. De plek komt dan als een portaal uit de poster tot leven en het spelletje van die plek start meteen. Dat gebeurt ook als de poster met de gewone Camera-app is gescand of de code is getypt. Getest met een nep-camerabeeld van een QR-code in Chromium.
+- **Posters**: `qr/posters.pdf` opnieuw gemaakt (19 stops + 3 geheime). De stopnummers zijn veranderd; print de nieuwe set.
+- **Techniek**: `js/quest.js` (kern), `js/games-a.js` en `js/games-b.js` (games, contract in `GAMES.md`), `css/`. Oude `app.js` en `style.css` zijn weg. Nieuwe opslag `vellesan-missie-v2`; de oude sleutel wordt niet gebruikt. Standaard donker thema, ook als de iPad op licht staat (keuze: het filmische ontwerp werkt alleen donker).
+
+**Getest**: in Chromium op 375 en 820 px: intro, agent kiezen, uitleg, kaart (3D en per etage), elke missie van alle 20 stops geopend, alle games doorgespeeld in een testopstelling, de finale met de kluis en de leerlingenpas. Geen consolefouten, geen horizontaal scrollen. vragencheck, linkcheck en a11ycheck op 0.
+
+**Niet getest**: echte iPad en Safari: schudden (lab), draaien (kijk rond), camera-scanner, geluid, spraak bij de talen, en of stem en film tegelijk starten op de iPad.
+
+**Controleren door de docent**: speel de rondleiding één keer op een iPad. Kloppen de plekken van de bolletjes op de kaart, vooral B19-B21, binnentuin en rector? Kloppen de vakken per lokaal (B10, B11 en B22-B25 zijn niet zeker)? Print daarna pas de nieuwe posters.
 ## 2026-11-27 (2) · Economie 2 mavo H2: toetsen heel hoofdstuk 2 aangepast na feedback van de docent
 
 - **Formule** alleen nog bij de procentformules ((percentage : 100) × totaal, (deel : geheel) × 100, (nieuw − oud) : oud × 100), niet meer bij week naar maand of de schadevergoeding. Bij 3 sterren geen formule meer.
