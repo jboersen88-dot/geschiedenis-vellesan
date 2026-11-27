@@ -42,7 +42,8 @@
       ]
      }
     ],
-    "p": 3
+    "p": 3,
+    "ond": "inkomen"
    },
    {
     "nr": 2,
@@ -84,7 +85,8 @@
       ]
      }
     ],
-    "p": 3
+    "p": 3,
+    "ond": "inkomen"
    },
    {
     "nr": 3,
@@ -169,7 +171,8 @@
       ]
      }
     ],
-    "p": 6
+    "p": 6,
+    "ond": "inkomen"
    },
    {
     "nr": 4,
@@ -258,7 +261,8 @@
       ]
      }
     ],
-    "p": 4
+    "p": 4,
+    "ond": "begroting"
    },
    {
     "nr": 5,
@@ -342,7 +346,8 @@
       ]
      }
     ],
-    "p": 6
+    "p": 6,
+    "ond": "sparen"
    },
    {
     "nr": 6,
@@ -392,7 +397,8 @@
       ]
      }
     ],
-    "p": 3
+    "p": 3,
+    "ond": "sparen"
    },
    {
     "nr": 7,
@@ -460,7 +466,8 @@
       ]
      }
     ],
-    "p": 4
+    "p": 4,
+    "ond": "begroting"
    },
    {
     "nr": 8,
@@ -506,7 +513,8 @@
       ]
      }
     ],
-    "p": 4
+    "p": 4,
+    "ond": "begroting"
    },
    {
     "nr": 9,
@@ -659,7 +667,8 @@
       "€ 30,00"
      ]
     ],
-    "p": 8
+    "p": 8,
+    "ond": "begroting"
    },
    {
     "nr": 10,
@@ -705,7 +714,8 @@
       ]
      }
     ],
-    "p": 3
+    "p": 3,
+    "ond": "procent"
    },
    {
     "nr": 11,
@@ -769,7 +779,8 @@
       ]
      }
     ],
-    "p": 4
+    "p": 4,
+    "ond": "procent"
    },
    {
     "nr": 12,
@@ -825,7 +836,8 @@
       ]
      }
     ],
-    "p": 4
+    "p": 4,
+    "ond": "procent"
    },
    {
     "nr": 13,
@@ -871,7 +883,8 @@
       ]
      }
     ],
-    "p": 3
+    "p": 3,
+    "ond": "procent"
    },
    {
     "nr": 14,
@@ -909,7 +922,8 @@
       ]
      }
     ],
-    "p": 2
+    "p": 2,
+    "ond": "sparen"
    },
    {
     "nr": 15,
@@ -973,7 +987,8 @@
       ]
      }
     ],
-    "p": 4
+    "p": 4,
+    "ond": "sparen"
    }
   ],
   "rek_2": [
@@ -1017,7 +1032,8 @@
       ]
      }
     ],
-    "p": 3
+    "p": 3,
+    "ond": "inkomen"
    },
    {
     "nr": 2,
@@ -1130,7 +1146,8 @@
       ]
      }
     ],
-    "p": 8
+    "p": 8,
+    "ond": "inkomen"
    },
    {
     "nr": 3,
@@ -1168,7 +1185,8 @@
       ]
      }
     ],
-    "p": 2
+    "p": 2,
+    "ond": "begroting"
    },
    {
     "nr": 4,
@@ -1214,7 +1232,8 @@
       ]
      }
     ],
-    "p": 4
+    "p": 4,
+    "ond": "begroting"
    },
    {
     "nr": 5,
@@ -1252,7 +1271,8 @@
       ]
      }
     ],
-    "p": 2
+    "p": 2,
+    "ond": "begroting"
    },
    {
     "nr": 6,
@@ -1529,7 +1549,8 @@
       "per week"
      ]
     ],
-    "p": 15
+    "p": 15,
+    "ond": "begroting"
    },
    {
     "nr": 7,
@@ -1587,7 +1608,8 @@
       ]
      }
     ],
-    "p": 4
+    "p": 4,
+    "ond": "procent"
    },
    {
     "nr": 8,
@@ -1637,7 +1659,8 @@
       ]
      }
     ],
-    "p": 3
+    "p": 3,
+    "ond": "procent"
    },
    {
     "nr": 9,
@@ -1676,7 +1699,8 @@
       ]
      }
     ],
-    "p": 3
+    "p": 3,
+    "ond": "procent"
    },
    {
     "nr": 10,
@@ -1767,7 +1791,8 @@
       ]
      }
     ],
-    "p": 6
+    "p": 6,
+    "ond": "sparen"
    },
    {
     "nr": 11,
@@ -1868,7 +1893,8 @@
       ]
      }
     ],
-    "p": 6
+    "p": 6,
+    "ond": "sparen"
    },
    {
     "nr": 12,
@@ -1906,7 +1932,8 @@
       ]
      }
     ],
-    "p": 2
+    "p": 2,
+    "ond": "sparen"
    },
    {
     "nr": 13,
@@ -1982,7 +2009,8 @@
       ]
      }
     ],
-    "p": 5
+    "p": 5,
+    "ond": "sparen"
    }
   ],
   "rek_3": [
@@ -2063,7 +2091,8 @@
       ]
      }
     ],
-    "p": 5
+    "p": 5,
+    "ond": "inkomen"
    },
    {
     "nr": 2,
@@ -2164,7 +2193,8 @@
       ]
      }
     ],
-    "p": 6
+    "p": 6,
+    "ond": "inkomen"
    },
    {
     "nr": 3,
@@ -2206,7 +2236,8 @@
       ]
      }
     ],
-    "p": 3
+    "p": 3,
+    "ond": "begroting"
    },
    {
     "nr": 4,
@@ -2252,7 +2283,8 @@
       ]
      }
     ],
-    "p": 4
+    "p": 4,
+    "ond": "begroting"
    },
    {
     "nr": 5,
@@ -2531,7 +2563,8 @@
       "per maand"
      ]
     ],
-    "p": 15
+    "p": 15,
+    "ond": "begroting"
    },
    {
     "nr": 6,
@@ -2589,7 +2622,8 @@
       ]
      }
     ],
-    "p": 4
+    "p": 4,
+    "ond": "procent"
    },
    {
     "nr": 7,
@@ -2638,7 +2672,8 @@
       ]
      }
     ],
-    "p": 4
+    "p": 4,
+    "ond": "procent"
    },
    {
     "nr": 8,
@@ -2687,7 +2722,8 @@
       ]
      }
     ],
-    "p": 3
+    "p": 3,
+    "ond": "procent"
    },
    {
     "nr": 9,
@@ -2729,7 +2765,8 @@
       ]
      }
     ],
-    "p": 3
+    "p": 3,
+    "ond": "sparen"
    },
    {
     "nr": 10,
@@ -2801,7 +2838,8 @@
       ]
      }
     ],
-    "p": 5
+    "p": 5,
+    "ond": "sparen"
    },
    {
     "nr": 11,
@@ -2885,37 +2923,3263 @@
       ]
      }
     ],
-    "p": 7
+    "p": 7,
+    "ond": "sparen"
+   }
+  ],
+  "rek_4": [
+   {
+    "nr": 1,
+    "titel": "Soorten inkomen",
+    "tekst": "",
+    "delen": [
+     {
+      "id": "",
+      "v": "Kies bij elke persoon welk soort inkomen het is.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Loon",
+         "Winst",
+         "Uitkering"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Mo werkt bij de supermarkt."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Loon",
+         "Winst",
+         "Uitkering"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "De ouders van Noor krijgen kinderbijslag."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Loon",
+         "Winst",
+         "Uitkering"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Eva heeft een eigen kapperszaak."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Loon",
+         "Winst",
+         "Uitkering"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Lars werkt als kok in een restaurant."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Loon",
+         "Winst",
+         "Uitkering"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "Henk kan door ziekte niet meer werken. Hij krijgt geld van de overheid."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Loon",
+         "Winst",
+         "Uitkering"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Fleur verkoopt taarten in haar eigen winkel."
+       }
+      ],
+      "uitw": [
+       "In dienst bij een bedrijf = loon. Eigen bedrijf = winst. Geld van de overheid = uitkering."
+      ]
+     }
+    ],
+    "ond": "inkomen",
+    "p": 6,
+    "kalc": false
+   },
+   {
+    "nr": 2,
+    "titel": "Soorten uitgaven",
+    "tekst": "",
+    "delen": [
+     {
+      "id": "",
+      "v": "Kies bij elke uitgave welke soort het is.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Vaste last",
+         "Huishoudelijke uitgave",
+         "Incidentele uitgave"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "De huur van het huis"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Vaste last",
+         "Huishoudelijke uitgave",
+         "Incidentele uitgave"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Brood en melk"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Vaste last",
+         "Huishoudelijke uitgave",
+         "Incidentele uitgave"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "Een nieuwe wasmachine"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Vaste last",
+         "Huishoudelijke uitgave",
+         "Incidentele uitgave"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Het abonnement van je telefoon"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Vaste last",
+         "Huishoudelijke uitgave",
+         "Incidentele uitgave"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Een broek en een trui"
+       }
+      ],
+      "uitw": [
+       "Vast = elke maand hetzelfde bedrag of een contract. Huishoudelijk = vaak, en je bepaalt zelf hoeveel. Incidenteel = groot en maar soms."
+      ]
+     }
+    ],
+    "ond": "inkomen",
+    "p": 5,
+    "kalc": false
+   },
+   {
+    "nr": 3,
+    "titel": "Goed of fout?",
+    "tekst": "",
+    "delen": [
+     {
+      "id": "a",
+      "v": "Je budget is het bedrag dat je kunt uitgeven.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": ""
+       }
+      ],
+      "uitw": [
+       "Goed. Budget = het bedrag dat je kunt uitgeven."
+      ],
+      "ond": "begroting"
+     },
+     {
+      "id": "b",
+      "v": "Als je spaart, betaal jij rente aan de bank.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": ""
+       }
+      ],
+      "uitw": [
+       "Fout. Bij sparen krijg jij rente van de bank."
+      ],
+      "ond": "sparen"
+     },
+     {
+      "id": "c",
+      "v": "Een zorgverzekering is in Nederland verplicht.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": ""
+       }
+      ],
+      "uitw": [
+       "Goed. Iedereen moet een zorgverzekering hebben."
+      ],
+      "ond": "verzekeren"
+     },
+     {
+      "id": "d",
+      "v": "Een maandtermijn bestaat uit aflossing en rente.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": ""
+       }
+      ],
+      "uitw": [
+       "Goed. Je betaalt elke maand een deel terug (aflossing) en rente."
+      ],
+      "ond": "lenen"
+     },
+     {
+      "id": "e",
+      "v": "Als je eigen risico hoger is, betaal je meer premie.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": ""
+       }
+      ],
+      "uitw": [
+       "Fout. Een hoger eigen risico geeft een lagere premie."
+      ],
+      "ond": "verzekeren"
+     }
+    ],
+    "ond": "begroting",
+    "p": 5,
+    "kalc": false
+   },
+   {
+    "nr": 4,
+    "titel": "Zakgeld van Lisa",
+    "tekst": "Een jaar heeft 52 weken en 12 maanden. Rond af op 2 decimalen.",
+    "delen": [
+     {
+      "id": "",
+      "v": "Lisa krijgt €7,50 zakgeld per week. Hoeveel is dat per maand?",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         32.5
+        ],
+        "p": 2,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Zakgeld per maand"
+       }
+      ],
+      "uitw": [
+       "(weekbedrag × 52) : 12",
+       "(7,50 × 52) : 12 = 390 : 12 = €32,50 per maand",
+       "Een maand is langer dan 4 weken. Daarom niet × 4."
+      ]
+     }
+    ],
+    "ond": "begroting",
+    "p": 2,
+    "kalc": false
+   },
+   {
+    "nr": 5,
+    "titel": "De maand van Daan",
+    "tekst": "Dit is de begroting van Daan voor één maand.",
+    "delen": [
+     {
+      "id": "a",
+      "v": "Hoeveel zijn de inkomsten van Daan samen?",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         150.0
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Totaal inkomsten"
+       }
+      ],
+      "uitw": [
+       "€30 + €120 = €150"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Hoeveel zijn de uitgaven van Daan samen?",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         97.0
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Totaal uitgaven"
+       }
+      ],
+      "uitw": [
+       "€12 + €45 + €40 = €97"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Houdt Daan deze maand geld over of komt hij geld tekort? Hoeveel?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "houdt geld over",
+         "komt geld tekort"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Daan"
+       },
+       {
+        "type": "num",
+        "ans": [
+         53.0
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Bedrag"
+       }
+      ],
+      "uitw": [
+       "€150 − €97 = €53 over"
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Daan had €85 op zijn rekening. Wat is zijn nieuwe saldo aan het eind van de maand?",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         138.0
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Nieuw saldo"
+       }
+      ],
+      "uitw": [
+       "Oud saldo + wat erbij komt − wat eraf gaat: €85 + €150 − €97 = €138"
+      ]
+     }
+    ],
+    "ond": "begroting",
+    "tabel": [
+     [
+      "Inkomsten",
+      "Per maand",
+      "Uitgaven",
+      "Per maand"
+     ],
+     [
+      "Zakgeld",
+      "€30",
+      "Telefoon",
+      "€12"
+     ],
+     [
+      "Bijbaan",
+      "€120",
+      "Kleding",
+      "€45"
+     ],
+     [
+      "",
+      "",
+      "Uitgaan",
+      "€40"
+     ]
+    ],
+    "p": 5,
+    "kalc": false
+   },
+   {
+    "nr": 6,
+    "titel": "Geldfuncties",
+    "tekst": "",
+    "delen": [
+     {
+      "id": "",
+      "v": "Kies bij elke situatie welke geldfunctie erbij hoort.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Ruilmiddel",
+         "Spaarmiddel",
+         "Rekenmiddel"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Je koopt een ijsje en betaalt €2,50."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Ruilmiddel",
+         "Spaarmiddel",
+         "Rekenmiddel"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Je zet je verjaardagsgeld op je spaarrekening."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Ruilmiddel",
+         "Spaarmiddel",
+         "Rekenmiddel"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "Je ziet dat een spel in de ene winkel €5 duurder is dan in de andere."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Ruilmiddel",
+         "Spaarmiddel",
+         "Rekenmiddel"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Je betaalt je treinkaartje met je pinpas."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Ruilmiddel",
+         "Spaarmiddel",
+         "Rekenmiddel"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Je oma bewaart geld in een spaarpot voor later."
+       }
+      ],
+      "uitw": [
+       "Betalen = ruilmiddel. Bewaren voor later = spaarmiddel. Prijzen vergelijken = rekenmiddel."
+      ]
+     }
+    ],
+    "ond": "sparen",
+    "p": 5,
+    "kalc": false
+   },
+   {
+    "nr": 7,
+    "titel": "Redenen om te sparen",
+    "tekst": "",
+    "delen": [
+     {
+      "id": "",
+      "v": "Kies bij elk voorbeeld de reden om te sparen.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Sparen voor een doel",
+         "Sparen uit voorzorg",
+         "Sparen voor de rente"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Sem spaart voor een nieuwe skateboard."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Sparen voor een doel",
+         "Sparen uit voorzorg",
+         "Sparen voor de rente"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Lina houdt geld achter de hand voor als haar telefoon kapotgaat."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Sparen voor een doel",
+         "Sparen uit voorzorg",
+         "Sparen voor de rente"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "Jesse zet geld op de bank, omdat hij er geld bij krijgt."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Sparen voor een doel",
+         "Sparen uit voorzorg",
+         "Sparen voor de rente"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Mila spaart voor een vakantie met vriendinnen."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Sparen voor een doel",
+         "Sparen uit voorzorg",
+         "Sparen voor de rente"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "Tom kiest de bank die de hoogste rente geeft."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Sparen voor een doel",
+         "Sparen uit voorzorg",
+         "Sparen voor de rente"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Sara zet geld opzij voor als haar fiets gerepareerd moet worden."
+       }
+      ],
+      "uitw": [
+       "Iets kopen = doel. Voor als er iets misgaat = voorzorg. Geld erbij krijgen = rente."
+      ]
+     }
+    ],
+    "ond": "sparen",
+    "p": 6,
+    "kalc": false
+   },
+   {
+    "nr": 8,
+    "titel": "Rente van Yara",
+    "tekst": "Rond af op 2 decimalen.",
+    "delen": [
+     {
+      "id": "a",
+      "v": "Yara heeft €400 op haar spaarrekening. De bank geeft 2% rente per jaar. Hoeveel rente krijgt ze na 1 jaar?",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "4-8f",
+        "p": 1,
+        "label": "Schrijf hier de formule die je gaat gebruiken",
+        "v": "Je berekent de rente. Schrijf de formule op die je gebruikt.",
+        "model": "(rentepercentage : 100) × spaarbedrag, of (percentage : 100) × totaal",
+        "g": [
+         {
+          "t": "de juiste formule: (rentepercentage : 100) × spaarbedrag, of (percentage : 100) × totaal",
+          "p": 1
+         }
+        ],
+        "h": [
+         "E2H2"
+        ],
+        "ph": "Schrijf hier de formule"
+       },
+       {
+        "type": "open",
+        "nr": "4-8b",
+        "p": 1,
+        "label": "Schrijf hier je berekening",
+        "v": "Yara heeft €400 op haar spaarrekening. De bank geeft 2% rente per jaar. Hoeveel rente krijgt ze na 1 jaar? Schrijf de berekening op.",
+        "model": "(2 : 100) × 400 = 8",
+        "g": [
+         {
+          "t": "een juiste berekening met de goede getallen: (2 : 100) × 400 = 8",
+          "p": 1
+         }
+        ],
+        "h": [
+         "E2H2"
+        ],
+        "ph": "Schrijf hier je berekening"
+       },
+       {
+        "type": "num",
+        "ans": [
+         8.0
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Rente"
+       }
+      ],
+      "uitw": [
+       "(rentepercentage : 100) × spaarbedrag, of (percentage : 100) × totaal",
+       "(2 : 100) × 400 = €8,00"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Hoeveel geld staat er na 1 jaar op de rekening van Yara?",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         408.0
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005
+       }
+      ],
+      "uitw": [
+       "€400 + €8 = €408,00"
+      ]
+     }
+    ],
+    "ond": "sparen",
+    "p": 4,
+    "kalc": false
+   },
+   {
+    "nr": 9,
+    "titel": "Korting op een jas",
+    "tekst": "",
+    "delen": [
+     {
+      "id": "a",
+      "v": "Een jas kost €80. Je krijgt 25% korting. Hoeveel euro korting krijg je?",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "4-9f",
+        "p": 1,
+        "label": "Schrijf hier de formule die je gaat gebruiken",
+        "v": "Je berekent een percentage van een bedrag. Schrijf de formule op die je gebruikt.",
+        "model": "(percentage : 100) × totaal",
+        "g": [
+         {
+          "t": "de juiste formule: (percentage : 100) × totaal",
+          "p": 1
+         }
+        ],
+        "h": [
+         "E2H2"
+        ],
+        "ph": "Schrijf hier de formule"
+       },
+       {
+        "type": "open",
+        "nr": "4-9b",
+        "p": 1,
+        "label": "Schrijf hier je berekening",
+        "v": "Een jas kost €80. Je krijgt 25% korting. Hoeveel euro korting krijg je? Schrijf de berekening op.",
+        "model": "(25 : 100) × 80 = 20",
+        "g": [
+         {
+          "t": "een juiste berekening met de goede getallen: (25 : 100) × 80 = 20",
+          "p": 1
+         }
+        ],
+        "h": [
+         "E2H2"
+        ],
+        "ph": "Schrijf hier je berekening"
+       },
+       {
+        "type": "num",
+        "ans": [
+         20.0
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Korting"
+       }
+      ],
+      "uitw": [
+       "(percentage : 100) × totaal",
+       "(25 : 100) × 80 = €20,00"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Hoeveel betaal je voor de jas?",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         60.0
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005
+       }
+      ],
+      "uitw": [
+       "€80 − €20 = €60,00"
+      ]
+     }
+    ],
+    "ond": "procent",
+    "p": 4,
+    "kalc": false
+   },
+   {
+    "nr": 10,
+    "titel": "Duurdere koekjes",
+    "tekst": "Rond af op 1 decimaal.",
+    "delen": [
+     {
+      "id": "",
+      "v": "Een pak koekjes kostte €2,00. Nu kost het €2,30. Met hoeveel procent is de prijs veranderd? Is het een stijging of een daling?",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "4-10f",
+        "p": 1,
+        "label": "Schrijf hier de formule die je gaat gebruiken",
+        "v": "Je berekent een procentuele verandering. Schrijf de formule op die je gebruikt.",
+        "model": "(nieuw − oud) : oud × 100",
+        "g": [
+         {
+          "t": "de juiste formule: (nieuw − oud) : oud × 100",
+          "p": 1
+         }
+        ],
+        "h": [
+         "E2H2"
+        ],
+        "ph": "Schrijf hier de formule"
+       },
+       {
+        "type": "open",
+        "nr": "4-10b",
+        "p": 1,
+        "label": "Schrijf hier je berekening",
+        "v": "Een pak koekjes kostte €2,00. Nu kost het €2,30. Met hoeveel procent is de prijs veranderd? Schrijf de berekening op.",
+        "model": "(2,30 − 2,00) : 2,00 × 100 = 15",
+        "g": [
+         {
+          "t": "een juiste berekening met de goede getallen: (2,30 − 2,00) : 2,00 × 100 = 15",
+          "p": 1
+         }
+        ],
+        "h": [
+         "E2H2"
+        ],
+        "ph": "Schrijf hier je berekening"
+       },
+       {
+        "type": "num",
+        "ans": [
+         15.0
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.005,
+        "label": "Verandering"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Stijging",
+         "Daling"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Is het een stijging of een daling?"
+       }
+      ],
+      "uitw": [
+       "(nieuw − oud) : oud × 100",
+       "(2,30 − 2,00) : 2,00 × 100 = 0,30 : 2,00 × 100 = 15,0% stijging",
+       "Je deelt altijd door het oude bedrag."
+      ]
+     }
+    ],
+    "ond": "procent",
+    "p": 4,
+    "kalc": false
+   },
+   {
+    "nr": 11,
+    "titel": "Lenen",
+    "tekst": "",
+    "delen": [
+     {
+      "id": "a",
+      "v": "Wat is aflossing?",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "4-11a",
+        "p": 1,
+        "label": "Wat is aflossing?",
+        "v": "Wat is aflossing?",
+        "model": "Het terugbetalen van (een deel van) het geleende geld.",
+        "g": [
+         {
+          "t": "het terugbetalen van (een deel van) het geleende geld",
+          "p": 1
+         }
+        ],
+        "h": [
+         "E2H2"
+        ]
+       }
+      ],
+      "uitw": [
+       "Aflossing = terugbetalen van geleend geld."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Hoe oud moet je zijn om geld te lenen bij een bank?",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         18
+        ],
+        "p": 1,
+        "eenh": "jaar",
+        "tol": 0.5,
+        "label": "Leeftijd"
+       }
+      ],
+      "uitw": [
+       "Je moet 18 jaar zijn."
+      ]
+     },
+     {
+      "id": "c",
+      "v": "De tabel hierboven is van een bank. Je ziet de maandtermijn bij elk bedrag en elke looptijd. Tim leent €2.500. Hij betaalt het terug in 24 maanden. Zoek in de tabel: hoeveel is zijn maandtermijn?",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         113.07
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Maandtermijn"
+       }
+      ],
+      "uitw": [
+       "In de rij €2.500 en de kolom 24 maanden staat €113,07."
+      ],
+      "tabel": [
+       [
+        "Geleend bedrag",
+        "12 maanden",
+        "24 maanden",
+        "36 maanden"
+       ],
+       [
+        "€1.000",
+        "€86,99",
+        "€45,23",
+        "€31,34"
+       ],
+       [
+        "€2.500",
+        "€217,47",
+        "€113,07",
+        "€78,34"
+       ],
+       [
+        "€5.000",
+        "€434,94",
+        "€226,14",
+        "€156,68"
+       ]
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Hoeveel betaalt Tim in totaal terug?",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         2713.68
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Totaal terugbetaald"
+       }
+      ],
+      "uitw": [
+       "Maandtermijn × aantal maanden = 113,07 × 24 = €2.713,68"
+      ]
+     },
+     {
+      "id": "e",
+      "v": "Wat zijn de kosten van de lening?",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         213.68
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Kosten van de lening"
+       }
+      ],
+      "uitw": [
+       "Totaal terugbetaald − geleend bedrag = 2.713,68 − 2.500 = €213,68"
+      ]
+     }
+    ],
+    "ond": "lenen",
+    "p": 5,
+    "kalc": false
+   },
+   {
+    "nr": 12,
+    "titel": "Verplicht of vrijwillig?",
+    "tekst": "",
+    "delen": [
+     {
+      "id": "",
+      "v": "Kies bij elke verzekering of hij verplicht of vrijwillig is.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Verplicht",
+         "Vrijwillig"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Zorgverzekering"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Verplicht",
+         "Vrijwillig"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Reisverzekering"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Verplicht",
+         "Vrijwillig"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "WA-verzekering voor een scooter"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Verplicht",
+         "Vrijwillig"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Inboedelverzekering"
+       }
+      ],
+      "uitw": [
+       "Verplicht: zorgverzekering en WA voor een scooter, brommer of auto. Fiets-, reis- en inboedelverzekering zijn vrijwillig."
+      ]
+     }
+    ],
+    "ond": "verzekeren",
+    "p": 4,
+    "kalc": false
+   },
+   {
+    "nr": 13,
+    "titel": "Kapotte telefoon",
+    "tekst": "",
+    "delen": [
+     {
+      "id": "a",
+      "v": "Wat is de premie?",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "4-13a",
+        "p": 1,
+        "label": "Wat is de premie?",
+        "v": "Wat is de premie van een verzekering?",
+        "model": "Het bedrag dat je als verzekerde betaalt voor je verzekering.",
+        "g": [
+         {
+          "t": "het bedrag dat je betaalt voor je verzekering",
+          "p": 1
+         }
+        ],
+        "h": [
+         "E2H2"
+        ]
+       }
+      ],
+      "uitw": [
+       "Premie = wat jij betaalt voor de verzekering."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Wat is het eigen risico?",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "4-13b",
+        "p": 1,
+        "label": "Wat is het eigen risico?",
+        "v": "Wat is het eigen risico bij een verzekering?",
+        "model": "Het deel van de schade dat je zelf moet betalen.",
+        "g": [
+         {
+          "t": "het deel van de schade dat je zelf betaalt",
+          "p": 1
+         }
+        ],
+        "h": [
+         "E2H2"
+        ]
+       }
+      ],
+      "uitw": [
+       "Eigen risico = het deel van de schade dat je zelf betaalt."
+      ]
+     },
+     {
+      "id": "c",
+      "v": "De telefoon van Sam valt kapot. De schade is €350. Zijn eigen risico is €50. Hoeveel krijgt Sam van de verzekeraar?",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         300.0
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Schadevergoeding"
+       }
+      ],
+      "uitw": [
+       "schade − eigen risico: €350 − €50 = €300"
+      ]
+     }
+    ],
+    "ond": "verzekeren",
+    "p": 3,
+    "kalc": false
+   },
+   {
+    "nr": 14,
+    "titel": "Eigen risico van €100",
+    "tekst": "Nora heeft een verzekering met een eigen risico van €100.",
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken bij elke schade hoeveel Nora van de verzekeraar krijgt.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         150.0
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Kapotte bril van €250"
+       },
+       {
+        "type": "num",
+        "ans": [
+         0.0
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Krasje op de deur van €80"
+       },
+       {
+        "type": "num",
+        "ans": [
+         1100.0
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Waterschade van €1.200"
+       }
+      ],
+      "uitw": [
+       "€250 − €100 = €150",
+       "€80 is minder dan het eigen risico. Nora betaalt alles zelf: €0",
+       "€1.200 − €100 = €1.100"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Nora kan kiezen: eigen risico €100 of eigen risico €0. Bij welke keuze betaalt ze de laagste premie?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Eigen risico €100",
+         "Eigen risico €0"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": ""
+       }
+      ],
+      "uitw": [
+       "Een hoger eigen risico geeft een lagere premie."
+      ]
+     }
+    ],
+    "ond": "verzekeren",
+    "p": 4,
+    "kalc": false
+   }
+  ],
+  "rek_5": [
+   {
+    "nr": 1,
+    "titel": "Familie de Vries",
+    "tekst": "",
+    "delen": [
+     {
+      "id": "a",
+      "v": "Kies bij elk inkomen welk soort het is.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Loon",
+         "Winst",
+         "Uitkering"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Vader werkt bij een bank."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Loon",
+         "Winst",
+         "Uitkering"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "Ze krijgen kinderbijslag voor hun dochter."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Loon",
+         "Winst",
+         "Uitkering"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Moeder heeft een eigen fietsenwinkel."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Loon",
+         "Winst",
+         "Uitkering"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "Opa kan niet meer werken en krijgt geld van de overheid."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Loon",
+         "Winst",
+         "Uitkering"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Zoon Tim werkt op zaterdag bij een bakker."
+       }
+      ],
+      "uitw": [
+       "In dienst = loon. Eigen bedrijf = winst. Van de overheid = uitkering."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Kies bij elke uitgave van de familie welke soort het is.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Vaste last",
+         "Huishoudelijke uitgave",
+         "Incidentele uitgave"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "De energierekening, elke maand hetzelfde bedrag"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Vaste last",
+         "Huishoudelijke uitgave",
+         "Incidentele uitgave"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "De boodschappen van deze week"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Vaste last",
+         "Huishoudelijke uitgave",
+         "Incidentele uitgave"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "Een nieuwe bank voor de woonkamer"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Vaste last",
+         "Huishoudelijke uitgave",
+         "Incidentele uitgave"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "De premie van de zorgverzekering"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Vaste last",
+         "Huishoudelijke uitgave",
+         "Incidentele uitgave"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Een etentje in een restaurant"
+       }
+      ],
+      "uitw": [
+       "Vast bedrag elke maand = vaste last. Vaak en zelf bepalen = huishoudelijk. Groot en soms = incidenteel."
+      ],
+      "ond": "inkomen"
+     }
+    ],
+    "ond": "inkomen",
+    "p": 10,
+    "kalc": false
+   },
+   {
+    "nr": 2,
+    "titel": "Omrekenen",
+    "tekst": "Een jaar heeft 52 weken en 12 maanden. Rond af op 2 decimalen.",
+    "delen": [
+     {
+      "id": "a",
+      "v": "Emma verdient €63,75 per week. Hoeveel is dat per maand?",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         276.25
+        ],
+        "p": 2,
+        "eenh": "€",
+        "tol": 0.005
+       }
+      ],
+      "uitw": [
+       "(weekbedrag × 52) : 12",
+       "(63,75 × 52) : 12 = 3.315 : 12 = €276,25"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Haar telefoonabonnement kost €17,99 per maand. Hoeveel is dat per week?",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         4.15
+        ],
+        "p": 2,
+        "eenh": "€",
+        "tol": 0.005
+       }
+      ],
+      "uitw": [
+       "(maandbedrag × 12) : 52",
+       "(17,99 × 12) : 52 = 215,88 : 52 = €4,15"
+      ]
+     }
+    ],
+    "ond": "begroting",
+    "p": 4,
+    "kalc": false
+   },
+   {
+    "nr": 3,
+    "titel": "Begroting van Finn",
+    "tekst": "Finn maakt een begroting per maand. Sommige bedragen zijn per week. Rond af op 2 decimalen.",
+    "delen": [
+     {
+      "id": "a",
+      "v": "Reken de weekbedragen om naar maandbedragen.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         34.67
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Zakgeld per maand"
+       },
+       {
+        "type": "num",
+        "ans": [
+         26.0
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Eten en drinken per maand"
+       }
+      ],
+      "uitw": [
+       "Zakgeld: (8 × 52) : 12 = €34,67",
+       "Eten en drinken: (6 × 52) : 12 = €26,00"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken de totalen per maand.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         194.67
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Totaal inkomsten"
+       },
+       {
+        "type": "num",
+        "ans": [
+         75.5
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Totaal uitgaven"
+       }
+      ],
+      "uitw": [
+       "Inkomsten: 34,67 + 160,00 = €194,67",
+       "Uitgaven: 14,50 + 26,00 + 35,00 = €75,50"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Hoeveel houdt Finn per maand over?",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         119.17
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Over per maand"
+       }
+      ],
+      "uitw": [
+       "194,67 − 75,50 = €119,17"
+      ]
+     }
+    ],
+    "ond": "begroting",
+    "tabel": [
+     [
+      "Inkomsten",
+      "Bedrag",
+      "Uitgaven",
+      "Bedrag"
+     ],
+     [
+      "Zakgeld",
+      "€8 per week",
+      "Telefoon",
+      "€14,50 per maand"
+     ],
+     [
+      "Bijbaan",
+      "€160 per maand",
+      "Eten en drinken",
+      "€6 per week"
+     ],
+     [
+      "",
+      "",
+      "Kleding",
+      "€35 per maand"
+     ]
+    ],
+    "p": 5,
+    "kalc": false
+   },
+   {
+    "nr": 4,
+    "titel": "Goed of fout?",
+    "tekst": "",
+    "delen": [
+     {
+      "id": "a",
+      "v": "Je pint bij de bakker. Geld is hier een ruilmiddel.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": ""
+       }
+      ],
+      "uitw": [
+       "Goed. Betalen = ruilmiddel."
+      ],
+      "ond": "sparen"
+     },
+     {
+      "id": "b",
+      "v": "Als je een lening in een langere tijd terugbetaalt, worden de kosten lager.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": ""
+       }
+      ],
+      "uitw": [
+       "Fout. Hoe langer je leent, hoe meer rente je betaalt."
+      ],
+      "ond": "lenen"
+     },
+     {
+      "id": "c",
+      "v": "Een fietsverzekering is verplicht.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": ""
+       }
+      ],
+      "uitw": [
+       "Fout. Een fietsverzekering is vrijwillig."
+      ],
+      "ond": "verzekeren"
+     },
+     {
+      "id": "d",
+      "v": "Als je geld leent van je ouders, betaal je meestal geen rente.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": ""
+       }
+      ],
+      "uitw": [
+       "Goed. Bij familie betaal je meestal alleen het geleende bedrag terug."
+      ],
+      "ond": "lenen"
+     },
+     {
+      "id": "e",
+      "v": "Een weekbedrag reken je om naar een maandbedrag met × 4.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": ""
+       }
+      ],
+      "uitw": [
+       "Fout. Een maand is langer dan 4 weken: × 52 : 12."
+      ],
+      "ond": "begroting"
+     }
+    ],
+    "ond": "begroting",
+    "p": 5,
+    "kalc": false
+   },
+   {
+    "nr": 5,
+    "titel": "Ruben spaart",
+    "tekst": "Ruben zegt: “Ik zet elke maand €25 opzij. Over een half jaar wil ik een nieuwe fiets kopen. Ik houd ook altijd €100 apart voor als er iets kapotgaat. Ik zet mijn geld bij de bank met de hoogste rente.”",
+    "delen": [
+     {
+      "id": "a",
+      "v": "Kies bij elke zin de reden om te sparen.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Sparen voor een doel",
+         "Sparen uit voorzorg",
+         "Sparen voor de rente"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "“Over een half jaar wil ik een nieuwe fiets kopen.”"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Sparen voor een doel",
+         "Sparen uit voorzorg",
+         "Sparen voor de rente"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "“Ik houd altijd €100 apart voor als er iets kapotgaat.”"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Sparen voor een doel",
+         "Sparen uit voorzorg",
+         "Sparen voor de rente"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "“Ik zet mijn geld bij de bank met de hoogste rente.”"
+       }
+      ],
+      "uitw": [
+       "Iets kopen = doel. Voor als er iets misgaat = voorzorg."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Ruben zet zijn geld op een spaarrekening en niet in een la. Welk voordeel heeft dat?",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "5-5b",
+        "p": 1,
+        "label": "Voordeel van een spaarrekening",
+        "v": "Ruben zet zijn geld op een spaarrekening en niet in een la. Welk voordeel heeft dat?",
+        "model": "Hij krijgt rente van de bank.",
+        "g": [
+         {
+          "t": "hij krijgt rente (van de bank)",
+          "p": 1
+         }
+        ],
+        "h": [
+         "E2H2"
+        ]
+       }
+      ],
+      "uitw": [
+       "Op de bank krijg je rente over je spaargeld."
+      ]
+     }
+    ],
+    "ond": "sparen",
+    "p": 4,
+    "kalc": false
+   },
+   {
+    "nr": 6,
+    "titel": "Geldfuncties",
+    "tekst": "",
+    "delen": [
+     {
+      "id": "",
+      "v": "Kies bij elke situatie welke geldfunctie erbij hoort.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Ruilmiddel",
+         "Spaarmiddel",
+         "Rekenmiddel"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Je koopt een kaartje voor de bioscoop."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Ruilmiddel",
+         "Spaarmiddel",
+         "Rekenmiddel"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "Je vergelijkt de prijs van twee laptops."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Ruilmiddel",
+         "Spaarmiddel",
+         "Rekenmiddel"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Je spaart elke week €5 voor je rijbewijs."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Ruilmiddel",
+         "Spaarmiddel",
+         "Rekenmiddel"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "Je ziet dat een tas in de uitverkoop €12 goedkoper is."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Ruilmiddel",
+         "Spaarmiddel",
+         "Rekenmiddel"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Je betaalt de kapper met je telefoon."
+       }
+      ],
+      "uitw": [
+       "Betalen = ruilmiddel. Bewaren voor later = spaarmiddel. Prijzen vergelijken = rekenmiddel."
+      ]
+     }
+    ],
+    "ond": "sparen",
+    "p": 5,
+    "kalc": false
+   },
+   {
+    "nr": 7,
+    "titel": "Rente van Noah",
+    "tekst": "Rond af op 2 decimalen.",
+    "delen": [
+     {
+      "id": "a",
+      "v": "Noah heeft €1.250 op zijn spaarrekening. De bank geeft 1,8% rente per jaar. Hoeveel rente krijgt hij na 1 jaar?",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "5-6f",
+        "p": 1,
+        "label": "Schrijf hier de formule die je gaat gebruiken",
+        "v": "Je berekent de rente. Schrijf de formule op die je gebruikt.",
+        "model": "(rentepercentage : 100) × spaarbedrag, of (percentage : 100) × totaal",
+        "g": [
+         {
+          "t": "de juiste formule: (rentepercentage : 100) × spaarbedrag, of (percentage : 100) × totaal",
+          "p": 1
+         }
+        ],
+        "h": [
+         "E2H2"
+        ],
+        "ph": "Schrijf hier de formule"
+       },
+       {
+        "type": "open",
+        "nr": "5-6b",
+        "p": 1,
+        "label": "Schrijf hier je berekening",
+        "v": "Noah heeft €1.250 op zijn spaarrekening. De bank geeft 1,8% rente per jaar. Hoeveel rente krijgt hij na 1 jaar? Schrijf de berekening op.",
+        "model": "(1,8 : 100) × 1.250 = 22,50",
+        "g": [
+         {
+          "t": "een juiste berekening met de goede getallen: (1,8 : 100) × 1.250 = 22,50",
+          "p": 1
+         }
+        ],
+        "h": [
+         "E2H2"
+        ],
+        "ph": "Schrijf hier je berekening"
+       },
+       {
+        "type": "num",
+        "ans": [
+         22.5
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Rente"
+       }
+      ],
+      "uitw": [
+       "(rentepercentage : 100) × spaarbedrag, of (percentage : 100) × totaal",
+       "(1,8 : 100) × 1.250 = €22,50"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Een andere bank geeft 2,1% rente. Hoeveel euro meer rente krijgt Noah bij die bank?",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         26.25
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Rente bij de andere bank"
+       },
+       {
+        "type": "num",
+        "ans": [
+         3.75
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Hoeveel meer"
+       }
+      ],
+      "uitw": [
+       "(2,1 : 100) × 1.250 = €26,25",
+       "26,25 − 22,50 = €3,75 meer"
+      ]
+     }
+    ],
+    "ond": "sparen",
+    "p": 5,
+    "kalc": false
+   },
+   {
+    "nr": 8,
+    "titel": "Sophie spaart",
+    "tekst": "Rond af op 1 decimaal.",
+    "delen": [
+     {
+      "id": "",
+      "v": "Sophie verdient €240 per maand. Ze spaart €54 per maand. Hoeveel procent van haar geld spaart ze?",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "5-7f",
+        "p": 1,
+        "label": "Schrijf hier de formule die je gaat gebruiken",
+        "v": "Je berekent welk deel van een geheel iets is, in procenten. Schrijf de formule op die je gebruikt.",
+        "model": "(deel : geheel) × 100",
+        "g": [
+         {
+          "t": "de juiste formule: (deel : geheel) × 100",
+          "p": 1
+         }
+        ],
+        "h": [
+         "E2H2"
+        ],
+        "ph": "Schrijf hier de formule"
+       },
+       {
+        "type": "open",
+        "nr": "5-7b",
+        "p": 1,
+        "label": "Schrijf hier je berekening",
+        "v": "Sophie verdient €240 per maand. Ze spaart €54 per maand. Hoeveel procent van haar geld spaart ze? Schrijf de berekening op.",
+        "model": "(54 : 240) × 100 = 22,5",
+        "g": [
+         {
+          "t": "een juiste berekening met de goede getallen: (54 : 240) × 100 = 22,5",
+          "p": 1
+         }
+        ],
+        "h": [
+         "E2H2"
+        ],
+        "ph": "Schrijf hier je berekening"
+       },
+       {
+        "type": "num",
+        "ans": [
+         22.5
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.005
+       }
+      ],
+      "uitw": [
+       "(deel : geheel) × 100",
+       "(54 : 240) × 100 = 22,5%",
+       "Deel = wat ze spaart. Geheel = wat ze verdient."
+      ]
+     }
+    ],
+    "ond": "procent",
+    "p": 3,
+    "kalc": false
+   },
+   {
+    "nr": 9,
+    "titel": "Hogere huur",
+    "tekst": "Rond af op 1 decimaal.",
+    "delen": [
+     {
+      "id": "",
+      "v": "De huur van een studentenkamer was €485 per maand. Nu is het €512. Met hoeveel procent is de huur veranderd? Is het een stijging of een daling?",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "5-8f",
+        "p": 1,
+        "label": "Schrijf hier de formule die je gaat gebruiken",
+        "v": "Je berekent een procentuele verandering. Schrijf de formule op die je gebruikt.",
+        "model": "(nieuw − oud) : oud × 100",
+        "g": [
+         {
+          "t": "de juiste formule: (nieuw − oud) : oud × 100",
+          "p": 1
+         }
+        ],
+        "h": [
+         "E2H2"
+        ],
+        "ph": "Schrijf hier de formule"
+       },
+       {
+        "type": "open",
+        "nr": "5-8b",
+        "p": 1,
+        "label": "Schrijf hier je berekening",
+        "v": "De huur was €485 per maand. Nu is het €512. Met hoeveel procent is de huur veranderd? Schrijf de berekening op.",
+        "model": "(512 − 485) : 485 × 100 = 5,6",
+        "g": [
+         {
+          "t": "een juiste berekening met de goede getallen: (512 − 485) : 485 × 100 = 5,6",
+          "p": 1
+         }
+        ],
+        "h": [
+         "E2H2"
+        ],
+        "ph": "Schrijf hier je berekening"
+       },
+       {
+        "type": "num",
+        "ans": [
+         5.6
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.005,
+        "label": "Verandering"
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Stijging",
+         "Daling"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Is het een stijging of een daling?"
+       }
+      ],
+      "uitw": [
+       "(nieuw − oud) : oud × 100",
+       "(512 − 485) : 485 × 100 = 27 : 485 × 100 = 5,6% stijging"
+      ]
+     }
+    ],
+    "ond": "procent",
+    "p": 4,
+    "kalc": false
+   },
+   {
+    "nr": 10,
+    "titel": "Lotte leent €5.000",
+    "tekst": "Lotte wil €5.000 lenen voor een scooter. De bank geeft deze tabel met maandtermijnen. Rond procenten af op 1 decimaal.",
+    "delen": [
+     {
+      "id": "a",
+      "v": "Zoek in de tabel de maandtermijn bij 24 maanden en bij 36 maanden.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         226.14
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Maandtermijn 24 maanden"
+       },
+       {
+        "type": "num",
+        "ans": [
+         156.68
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Maandtermijn 36 maanden"
+       }
+      ],
+      "uitw": [
+       "In de rij €5.000: 24 maanden = €226,14, 36 maanden = €156,68."
+      ],
+      "tabel": [
+       [
+        "Geleend bedrag",
+        "12 maanden",
+        "24 maanden",
+        "36 maanden"
+       ],
+       [
+        "€1.000",
+        "€86,99",
+        "€45,23",
+        "€31,34"
+       ],
+       [
+        "€2.500",
+        "€217,47",
+        "€113,07",
+        "€78,34"
+       ],
+       [
+        "€5.000",
+        "€434,94",
+        "€226,14",
+        "€156,68"
+       ]
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken de kosten van de lening bij 24 maanden en bij 36 maanden.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         427.36
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Kosten bij 24 maanden"
+       },
+       {
+        "type": "num",
+        "ans": [
+         640.48
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Kosten bij 36 maanden"
+       }
+      ],
+      "uitw": [
+       "24 maanden: 226,14 × 24 = €5.427,36; 5.427,36 − 5.000 = €427,36",
+       "36 maanden: 156,68 × 36 = €5.640,48; 5.640,48 − 5.000 = €640,48"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Lotte kiest 36 maanden. Hoeveel procent van het geleende bedrag zijn de kosten?",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "5-9f",
+        "p": 1,
+        "label": "Schrijf hier de formule die je gaat gebruiken",
+        "v": "Je berekent welk deel van een geheel iets is, in procenten. Schrijf de formule op die je gebruikt.",
+        "model": "(deel : geheel) × 100",
+        "g": [
+         {
+          "t": "de juiste formule: (deel : geheel) × 100",
+          "p": 1
+         }
+        ],
+        "h": [
+         "E2H2"
+        ],
+        "ph": "Schrijf hier de formule"
+       },
+       {
+        "type": "open",
+        "nr": "5-9b",
+        "p": 1,
+        "label": "Schrijf hier je berekening",
+        "v": "Lotte leent €5.000. De kosten van de lening zijn €640,48. Hoeveel procent van het geleende bedrag zijn de kosten? Schrijf de berekening op.",
+        "model": "(640,48 : 5.000) × 100 = 12,8",
+        "g": [
+         {
+          "t": "een juiste berekening met de goede getallen: (640,48 : 5.000) × 100 = 12,8",
+          "p": 1
+         }
+        ],
+        "h": [
+         "E2H2"
+        ],
+        "ph": "Schrijf hier je berekening"
+       },
+       {
+        "type": "num",
+        "ans": [
+         12.8
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.005
+       }
+      ],
+      "uitw": [
+       "(deel : geheel) × 100",
+       "(640,48 : 5.000) × 100 = 12,8%"
+      ]
+     }
+    ],
+    "ond": "lenen",
+    "p": 7,
+    "kalc": false
+   },
+   {
+    "nr": 11,
+    "titel": "De maandtermijn",
+    "tekst": "",
+    "delen": [
+     {
+      "id": "",
+      "v": "Lotte betaalt elke maand een maandtermijn. Uit welke twee delen bestaat dit bedrag?",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "5-10",
+        "p": 2,
+        "label": "Twee delen van de maandtermijn",
+        "v": "Een maandtermijn van een lening bestaat uit twee delen. Noem de twee delen.",
+        "model": "Aflossing en rente.",
+        "g": [
+         {
+          "t": "aflossing (een deel van het geleende geld terugbetalen)",
+          "p": 1
+         },
+         {
+          "t": "rente",
+          "p": 1
+         }
+        ],
+        "h": [
+         "E2H2"
+        ]
+       }
+      ],
+      "uitw": [
+       "Maandtermijn = aflossing + rente."
+      ]
+     }
+    ],
+    "ond": "lenen",
+    "p": 2,
+    "kalc": false
+   },
+   {
+    "nr": 12,
+    "titel": "Jesse en zijn scooter",
+    "tekst": "",
+    "delen": [
+     {
+      "id": "a",
+      "v": "Jesse koopt een scooter. Welke verzekering moet hij verplicht hebben?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "WA-verzekering",
+         "Reisverzekering",
+         "Inboedelverzekering"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": ""
+       }
+      ],
+      "uitw": [
+       "Voor een scooter, brommer of auto is een WA-verzekering verplicht."
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Wat vergoedt deze verzekering?",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "5-11b",
+        "p": 1,
+        "label": "Wat vergoedt een WA-verzekering?",
+        "v": "Wat vergoedt een WA-verzekering?",
+        "model": "De schade die je met je scooter aan iemand anders toebrengt.",
+        "g": [
+         {
+          "t": "de schade die je (met je scooter) aan iemand anders toebrengt",
+          "p": 1
+         }
+        ],
+        "h": [
+         "E2H2"
+        ]
+       }
+      ],
+      "uitw": [
+       "WA = wettelijke aansprakelijkheid."
+      ]
+     }
+    ],
+    "ond": "verzekeren",
+    "p": 2,
+    "kalc": false
+   },
+   {
+    "nr": 13,
+    "titel": "Inbraak bij Fenna",
+    "tekst": "Bij Fenna wordt ingebroken. Haar laptop van €899 en haar telefoon van €429 worden gestolen. Ze heeft een inboedelverzekering met een eigen risico van €150. Rond procenten af op 1 decimaal.",
+    "delen": [
+     {
+      "id": "a",
+      "v": "Hoe groot is de schade?",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         1328.0
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Schade"
+       }
+      ],
+      "uitw": [
+       "€899 + €429 = €1.328,00"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Hoeveel krijgt Fenna van de verzekeraar?",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         1178.0
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Schadevergoeding"
+       }
+      ],
+      "uitw": [
+       "schade − eigen risico",
+       "1.328,00 − 150 = €1.178,00"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Hoeveel procent van de schade krijgt Fenna vergoed?",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "5-12f",
+        "p": 1,
+        "label": "Schrijf hier de formule die je gaat gebruiken",
+        "v": "Je berekent welk deel van een geheel iets is, in procenten. Schrijf de formule op die je gebruikt.",
+        "model": "(deel : geheel) × 100",
+        "g": [
+         {
+          "t": "de juiste formule: (deel : geheel) × 100",
+          "p": 1
+         }
+        ],
+        "h": [
+         "E2H2"
+        ],
+        "ph": "Schrijf hier de formule"
+       },
+       {
+        "type": "open",
+        "nr": "5-12b",
+        "p": 1,
+        "label": "Schrijf hier je berekening",
+        "v": "De schade is €1.328,00. Fenna krijgt €1.178,00 vergoed. Hoeveel procent van de schade krijgt ze vergoed? Schrijf de berekening op.",
+        "model": "(1.178,00 : 1.328,00) × 100 = 88,7",
+        "g": [
+         {
+          "t": "een juiste berekening met de goede getallen: (1.178,00 : 1.328,00) × 100 = 88,7",
+          "p": 1
+         }
+        ],
+        "h": [
+         "E2H2"
+        ],
+        "ph": "Schrijf hier je berekening"
+       },
+       {
+        "type": "num",
+        "ans": [
+         88.7
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.005
+       }
+      ],
+      "uitw": [
+       "(deel : geheel) × 100",
+       "(1.178,00 : 1.328,00) × 100 = 88,7%"
+      ],
+      "ond": "procent"
+     }
+    ],
+    "ond": "verzekeren",
+    "p": 5,
+    "kalc": false
+   }
+  ],
+  "rek_6": [
+   {
+    "nr": 1,
+    "titel": "Twee uitgaven",
+    "tekst": "",
+    "delen": [
+     {
+      "id": "",
+      "v": "Sanne betaalt elke maand €45 voor de sportclub. Ze koopt ook één keer nieuwe sportschoenen van €120. Welke uitgave is een vaste last en welke is incidenteel? Leg bij allebei uit waarom.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "6-1",
+        "p": 2,
+        "label": "Vaste last en incidentele uitgave",
+        "v": "Sanne betaalt elke maand €45 voor de sportclub. Ze koopt ook één keer nieuwe sportschoenen van €120. Welke uitgave is een vaste last en welke is incidenteel? Leg bij allebei uit waarom.",
+        "model": "De sportclub is een vaste last: elke maand hetzelfde bedrag (een abonnement of contract). De sportschoenen zijn een incidentele uitgave: een groter bedrag dat je maar soms hebt.",
+        "g": [
+         {
+          "t": "sportclub = vaste last, want elke maand hetzelfde bedrag / contract",
+          "p": 1
+         },
+         {
+          "t": "sportschoenen = incidentele uitgave, want groot bedrag en maar soms",
+          "p": 1
+         }
+        ],
+        "h": [
+         "E2H2"
+        ]
+       }
+      ],
+      "uitw": [
+       "Vraag jezelf af: komt het elke maand terug, of maar soms?"
+      ]
+     }
+    ],
+    "ond": "inkomen",
+    "p": 2,
+    "kalc": false
+   },
+   {
+    "nr": 2,
+    "titel": "Bas spaart voor een telefoon",
+    "tekst": "Dit zijn de inkomsten en uitgaven van Bas. Een jaar heeft 52 weken en 12 maanden. Rond af op 2 decimalen.",
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken het totaal van de inkomsten per maand.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         247.5
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Totaal inkomsten"
+       }
+      ],
+      "uitw": [
+       "Bijbaan: (52,50 × 52) : 12 = €227,50",
+       "227,50 + 20,00 = €247,50"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Bereken het totaal van de uitgaven per maand.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         177.0
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Totaal uitgaven"
+       }
+      ],
+      "uitw": [
+       "Uitgaan: (15 × 52) : 12 = €65,00",
+       "Eten en drinken: (7,50 × 52) : 12 = €32,50",
+       "19,50 + 65,00 + 32,50 + 60,00 = €177,00"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Bas spaart elke maand alles wat hij overhoudt. Na hoeveel maanden heeft hij genoeg voor een telefoon van €420?",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         6
+        ],
+        "p": 2,
+        "eenh": "maanden",
+        "tol": 0.5
+       }
+      ],
+      "uitw": [
+       "Over per maand: 247,50 − 177,00 = €70,50",
+       "420 : 70,50 = 5,96, dus na 6 maanden",
+       "Na 5 maanden heeft hij nog net te weinig."
+      ]
+     },
+     {
+      "id": "d",
+      "v": "Bas wil sneller sparen. Welke uitgave kan hij het makkelijkst verlagen? Leg uit waarom.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "6-2d",
+        "p": 2,
+        "label": "Welke uitgave verlagen?",
+        "v": "Bas heeft deze uitgaven per maand: telefoon €19,50 (abonnement), uitgaan €15 per week, eten en drinken €7,50 per week, kleding €60. Bas wil sneller sparen. Welke uitgave kan hij het makkelijkst verlagen? Leg uit waarom.",
+        "model": "Uitgaan, eten en drinken of kleding: dat zijn huishoudelijke uitgaven. Daar bepaal je zelf hoeveel je uitgeeft. Het telefoonabonnement is een vaste last met een contract.",
+        "g": [
+         {
+          "t": "noemt uitgaan, eten en drinken of kleding",
+          "p": 1
+         },
+         {
+          "t": "uitleg: daar bepaal je zelf hoeveel je uitgeeft (geen vast contract)",
+          "p": 1
+         }
+        ],
+        "h": [
+         "E2H2"
+        ]
+       }
+      ],
+      "uitw": [
+       "Bij een huishoudelijke uitgave bepaal je zelf hoeveel. Bij een vaste last zit je vast aan een contract."
+      ],
+      "ond": "inkomen"
+     }
+    ],
+    "ond": "begroting",
+    "tabel": [
+     [
+      "Inkomsten",
+      "Bedrag",
+      "Uitgaven",
+      "Bedrag"
+     ],
+     [
+      "Bijbaan",
+      "€52,50 per week",
+      "Telefoon",
+      "€19,50 per maand"
+     ],
+     [
+      "Zakgeld",
+      "€20 per maand",
+      "Uitgaan",
+      "€15 per week"
+     ],
+     [
+      "",
+      "",
+      "Eten en drinken",
+      "€7,50 per week"
+     ],
+     [
+      "",
+      "",
+      "Kleding",
+      "€60 per maand"
+     ]
+    ],
+    "p": 6,
+    "kalc": false
+   },
+   {
+    "nr": 3,
+    "titel": "Goed of fout?",
+    "tekst": "",
+    "delen": [
+     {
+      "id": "a",
+      "v": "Lisa had €200 op haar rekening. Nu is het €250. Haar saldo is met 25% gestegen.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": ""
+       }
+      ],
+      "uitw": [
+       "Goed. (250 − 200) : 200 × 100 = 25%"
+      ],
+      "ond": "procent"
+     },
+     {
+      "id": "b",
+      "v": "Een prijs daalt van €50 naar €40. Daarna stijgt de prijs met 20%. De prijs is dan weer €50.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": ""
+       }
+      ],
+      "uitw": [
+       "Fout. 20% van €40 is €8. De prijs wordt €48, niet €50."
+      ],
+      "ond": "procent"
+     },
+     {
+      "id": "c",
+      "v": "Bij dezelfde schade krijg je minder schadevergoeding als je eigen risico hoger is.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": ""
+       }
+      ],
+      "uitw": [
+       "Goed. Schadevergoeding = schade − eigen risico."
+      ],
+      "ond": "verzekeren"
+     },
+     {
+      "id": "d",
+      "v": "Een lening van €1.000 kost meestal meer als je hem in 24 maanden terugbetaalt dan in 12 maanden.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": ""
+       }
+      ],
+      "uitw": [
+       "Goed. Hoe langer je leent, hoe meer rente je betaalt."
+      ],
+      "ond": "lenen"
+     },
+     {
+      "id": "e",
+      "v": "Als de bank 0% rente geeft, is sparen voor de rente een goede reden om te sparen.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Goed",
+         "Fout"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": ""
+       }
+      ],
+      "uitw": [
+       "Fout. Bij 0% rente krijg je niets extra."
+      ],
+      "ond": "sparen"
+     }
+    ],
+    "ond": "procent",
+    "p": 5,
+    "kalc": false
+   },
+   {
+    "nr": 4,
+    "titel": "Twee jaar sparen",
+    "tekst": "Mila zet €1.500 op een spaarrekening. De bank geeft 2% rente per jaar. Ze laat de rente op de rekening staan. Rond af op 2 decimalen.",
+    "delen": [
+     {
+      "id": "a",
+      "v": "Hoeveel rente krijgt Mila in het eerste jaar?",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         30.0
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Rente jaar 1"
+       }
+      ],
+      "uitw": [
+       "(rentepercentage : 100) × spaarbedrag, of (percentage : 100) × totaal",
+       "(2 : 100) × 1.500 = €30,00"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Hoeveel rente krijgt Mila in het tweede jaar?",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         1530.0
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Saldo na jaar 1"
+       },
+       {
+        "type": "num",
+        "ans": [
+         30.6
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Rente jaar 2"
+       }
+      ],
+      "uitw": [
+       "Saldo na jaar 1: 1.500 + 30 = €1.530,00",
+       "Rente jaar 2: (2 : 100) × 1.530,00 = €30,60"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Leg uit waarom Mila in het tweede jaar meer rente krijgt dan in het eerste jaar.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "6-4c",
+        "p": 2,
+        "label": "Waarom meer rente in jaar 2?",
+        "v": "Mila zet €1.500 op een spaarrekening met 2% rente per jaar. Ze laat de rente op de rekening staan. Leg uit waarom ze in het tweede jaar meer rente krijgt dan in het eerste jaar.",
+        "model": "In het tweede jaar staat er meer geld op de rekening, want de rente van het eerste jaar staat er ook op. Over een hoger bedrag krijg je meer rente.",
+        "g": [
+         {
+          "t": "er staat meer geld op de rekening (de rente van jaar 1 staat er ook op)",
+          "p": 1
+         },
+         {
+          "t": "over een hoger bedrag krijg je meer rente",
+          "p": 1
+         }
+        ],
+        "h": [
+         "E2H2"
+        ]
+       }
+      ],
+      "uitw": [
+       "Ze krijgt in jaar 2 ook rente over de rente van jaar 1."
+      ]
+     }
+    ],
+    "ond": "sparen",
+    "p": 5,
+    "kalc": false
+   },
+   {
+    "nr": 5,
+    "titel": "Waar is de koptelefoon goedkoper?",
+    "tekst": "Winkel A verkoopt een koptelefoon voor €129,95 met 20% korting. Winkel B verkoopt dezelfde koptelefoon voor €119,95 met €12 korting. Rond af op 2 decimalen.",
+    "delen": [
+     {
+      "id": "a",
+      "v": "Wat kost de koptelefoon bij winkel A als de korting eraf is gehaald?",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "6-5b",
+        "p": 1,
+        "label": "Schrijf hier je berekening",
+        "v": "Een koptelefoon kost €129,95. Je krijgt 20% korting. Wat kost hij als de korting eraf is gehaald? Schrijf de berekening op.",
+        "model": "(20 : 100) × 129,95 = 25,99 korting; 129,95 − 25,99 = 103,96",
+        "g": [
+         {
+          "t": "een juiste berekening met de goede getallen: (20 : 100) × 129,95 = 25,99 korting; 129,95 − 25,99 = 103,96",
+          "p": 1
+         }
+        ],
+        "h": [
+         "E2H2"
+        ],
+        "ph": "Schrijf hier je berekening"
+       },
+       {
+        "type": "num",
+        "ans": [
+         25.99
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Korting bij A"
+       },
+       {
+        "type": "num",
+        "ans": [
+         103.96
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Prijs bij A"
+       }
+      ],
+      "uitw": [
+       "(percentage : 100) × totaal",
+       "(20 : 100) × 129,95 = €25,99 korting",
+       "129,95 − 25,99 = €103,96"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Wat kost de koptelefoon bij winkel B als de korting eraf is gehaald?",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         107.95
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Prijs bij B"
+       }
+      ],
+      "uitw": [
+       "119,95 − 12,00 = €107,95"
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Bij welke winkel is de koptelefoon goedkoper, en hoeveel?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Winkel A",
+         "Winkel B"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Goedkoper bij"
+       },
+       {
+        "type": "num",
+        "ans": [
+         3.99
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Verschil"
+       }
+      ],
+      "uitw": [
+       "107,95 − 103,96 = €3,99",
+       "De laagste prijs zonder korting is dus niet altijd de goedkoopste."
+      ]
+     }
+    ],
+    "ond": "procent",
+    "p": 6,
+    "kalc": false
+   },
+   {
+    "nr": 6,
+    "titel": "Opslag voor Joep",
+    "tekst": "Joep verdiende €9,50 per uur. Nu verdient hij €10,26 per uur. Rond euro's af op 2 decimalen en procenten op 1 decimaal.",
+    "delen": [
+     {
+      "id": "a",
+      "v": "Met hoeveel procent is het uurloon van Joep gestegen?",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "6-6b",
+        "p": 1,
+        "label": "Schrijf hier je berekening",
+        "v": "Joep verdiende €9,50 per uur. Nu verdient hij €10,26 per uur. Met hoeveel procent is zijn uurloon gestegen? Schrijf de berekening op.",
+        "model": "(10,26 − 9,50) : 9,50 × 100 = 8,0",
+        "g": [
+         {
+          "t": "een juiste berekening met de goede getallen: (10,26 − 9,50) : 9,50 × 100 = 8,0",
+          "p": 1
+         }
+        ],
+        "h": [
+         "E2H2"
+        ],
+        "ph": "Schrijf hier je berekening"
+       },
+       {
+        "type": "num",
+        "ans": [
+         8.0
+        ],
+        "p": 1,
+        "eenh": "%",
+        "tol": 0.005
+       }
+      ],
+      "uitw": [
+       "(nieuw − oud) : oud × 100",
+       "(10,26 − 9,50) : 9,50 × 100 = 0,76 : 9,50 × 100 = 8,0%"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Joep werkt 12 uur per week. Hoeveel verdient hij nu per maand meer dan eerst?",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         9.12
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Meer per week"
+       },
+       {
+        "type": "num",
+        "ans": [
+         39.52
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Meer per maand"
+       }
+      ],
+      "uitw": [
+       "Per week: 0,76 × 12 = €9,12",
+       "Per maand: (9,12 × 52) : 12 = €39,52"
+      ],
+      "ond": "begroting"
+     }
+    ],
+    "ond": "procent",
+    "p": 4,
+    "kalc": false
+   },
+   {
+    "nr": 7,
+    "titel": "Twee leningen",
+    "tekst": "Iris wil €3.000 lenen. Lening A: 24 maanden lang €135,50 per maand. Lening B: 36 maanden lang €96,80 per maand.",
+    "delen": [
+     {
+      "id": "a",
+      "v": "Bereken de kosten van lening A en van lening B.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         252.0
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Kosten lening A"
+       },
+       {
+        "type": "num",
+        "ans": [
+         484.8
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Kosten lening B"
+       }
+      ],
+      "uitw": [
+       "A: 135,50 × 24 = €3.252,00; 3.252,00 − 3.000 = €252,00",
+       "B: 96,80 × 36 = €3.484,80; 3.484,80 − 3.000 = €484,80"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Lening B heeft een lagere maandtermijn, maar is toch duurder. Leg uit hoe dat kan.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "6-7b",
+        "p": 2,
+        "label": "Waarom is lening B duurder?",
+        "v": "Iris leent €3.000. Lening A: 24 maanden €135,50 per maand. Lening B: 36 maanden €96,80 per maand. Lening B heeft een lagere maandtermijn, maar is toch duurder. Leg uit hoe dat kan.",
+        "model": "Bij lening B betaal je langer terug (36 maanden in plaats van 24). Hoe langer je een schuld hebt, hoe meer rente je betaalt.",
+        "g": [
+         {
+          "t": "bij B betaal je langer terug (meer maanden)",
+          "p": 1
+         },
+         {
+          "t": "dan betaal je meer rente",
+          "p": 1
+         }
+        ],
+        "h": [
+         "E2H2"
+        ]
+       }
+      ],
+      "uitw": [
+       "Lagere termijn, maar veel meer maanden."
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Iris kiest lening A. Waar moet ze op letten voordat ze de lening afsluit?",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "6-7c",
+        "p": 1,
+        "label": "Waar op letten?",
+        "v": "Iris wil lening A afsluiten: €3.000 lenen en 24 maanden €135,50 per maand terugbetalen. Waar moet ze op letten voordat ze de lening afsluit?",
+        "model": "Of ze elke maand €135,50 kan betalen: heeft ze genoeg inkomen om de lening op tijd terug te betalen?",
+        "g": [
+         {
+          "t": "of ze de maandtermijn elke maand kan betalen (genoeg inkomen heeft)",
+          "p": 1
+         }
+        ],
+        "h": [
+         "E2H2"
+        ]
+       }
+      ],
+      "uitw": [
+       "Een lening moet je altijd terugbetalen."
+      ]
+     }
+    ],
+    "ond": "lenen",
+    "p": 5,
+    "kalc": false
+   },
+   {
+    "nr": 8,
+    "titel": "Een oude fiets verzekeren?",
+    "tekst": "Kees heeft een oude fiets die nog €60 waard is. Een fietsverzekering kost €8 per maand.",
+    "delen": [
+     {
+      "id": "a",
+      "v": "Hoeveel premie betaalt Kees per jaar?",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         96.0
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Premie per jaar"
+       }
+      ],
+      "uitw": [
+       "8 × 12 = €96"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Is het slim om deze fiets te verzekeren? Leg uit met de bedragen.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "6-8b",
+        "p": 2,
+        "label": "Slim om te verzekeren?",
+        "v": "Kees heeft een oude fiets die €60 waard is. Een fietsverzekering kost €8 per maand, dat is €96 per jaar. Is het slim om deze fiets te verzekeren? Leg uit met de bedragen.",
+        "model": "Nee. De premie van €96 per jaar is hoger dan de fiets waard is (€60). Als de fiets kapot of weg is, kan Kees de schade zelf betalen.",
+        "g": [
+         {
+          "t": "nee, niet slim",
+          "p": 1
+         },
+         {
+          "t": "de premie per jaar (€96) is hoger dan de waarde van de fiets (€60)",
+          "p": 1
+         }
+        ],
+        "h": [
+         "E2H2"
+        ]
+       }
+      ],
+      "uitw": [
+       "Kleine schade kun je vaak zelf betalen."
+      ]
+     }
+    ],
+    "ond": "verzekeren",
+    "p": 3,
+    "kalc": false
+   },
+   {
+    "nr": 9,
+    "titel": "Welke verzekering kiest Anouk?",
+    "tekst": "Verzekering A: premie €6 per maand, geen eigen risico. Verzekering B: premie €4 per maand, eigen risico €100.",
+    "delen": [
+     {
+      "id": "a",
+      "v": "Anouk heeft dit jaar één keer schade van €250. Hoeveel betaalt ze dit jaar in totaal zelf bij verzekering A en bij verzekering B? Tel de premie en het eigen risico op.",
+      "velden": [
+       {
+        "type": "num",
+        "ans": [
+         72.0
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Totaal bij A"
+       },
+       {
+        "type": "num",
+        "ans": [
+         148.0
+        ],
+        "p": 1,
+        "eenh": "€",
+        "tol": 0.005,
+        "label": "Totaal bij B"
+       }
+      ],
+      "uitw": [
+       "A: premie 6 × 12 = €72, eigen risico €0, samen €72",
+       "B: premie 4 × 12 = €48, eigen risico €100, samen €148"
+      ]
+     },
+     {
+      "id": "b",
+      "v": "Welke verzekering was dit jaar goedkoper voor Anouk?",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Verzekering A",
+         "Verzekering B"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": ""
+       }
+      ],
+      "uitw": [
+       "A: €72 is minder dan €148."
+      ]
+     },
+     {
+      "id": "c",
+      "v": "Leg uit waarom de premie van verzekering B lager is.",
+      "velden": [
+       {
+        "type": "open",
+        "nr": "6-9c",
+        "p": 2,
+        "label": "Waarom is de premie van B lager?",
+        "v": "Verzekering A: premie €6 per maand, geen eigen risico. Verzekering B: premie €4 per maand, eigen risico €100. Leg uit waarom de premie van verzekering B lager is.",
+        "model": "Bij B is het eigen risico hoger. Je betaalt zelf een groter deel van de schade, dus de verzekeraar hoeft minder te vergoeden.",
+        "g": [
+         {
+          "t": "het eigen risico is hoger",
+          "p": 1
+         },
+         {
+          "t": "de verzekeraar hoeft minder te vergoeden / je betaalt zelf meer van de schade",
+          "p": 1
+         }
+        ],
+        "h": [
+         "E2H2"
+        ]
+       }
+      ],
+      "uitw": [
+       "Hoger eigen risico = lagere premie."
+      ]
+     }
+    ],
+    "ond": "verzekeren",
+    "p": 5,
+    "kalc": false
+   },
+   {
+    "nr": 10,
+    "titel": "Bo koopt een telefoon",
+    "tekst": "Bo bekijkt twee telefoons. Telefoon X kost €289. Telefoon Y kost €319.",
+    "delen": [
+     {
+      "id": "",
+      "v": "Kies bij elke zin welke geldfunctie erbij hoort.",
+      "velden": [
+       {
+        "type": "keuze",
+        "opties": [
+         "Ruilmiddel",
+         "Spaarmiddel",
+         "Rekenmiddel"
+        ],
+        "j": 2,
+        "p": 1,
+        "label": "Bo ziet dat telefoon X €30 goedkoper is dan telefoon Y."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Ruilmiddel",
+         "Spaarmiddel",
+         "Rekenmiddel"
+        ],
+        "j": 0,
+        "p": 1,
+        "label": "Ze betaalt telefoon X met haar pinpas."
+       },
+       {
+        "type": "keuze",
+        "opties": [
+         "Ruilmiddel",
+         "Spaarmiddel",
+         "Rekenmiddel"
+        ],
+        "j": 1,
+        "p": 1,
+        "label": "Het geld dat ze overhoudt, zet ze op haar spaarrekening."
+       }
+      ],
+      "uitw": [
+       "Prijzen vergelijken = rekenmiddel. Betalen = ruilmiddel. Bewaren voor later = spaarmiddel."
+      ]
+     }
+    ],
+    "ond": "sparen",
+    "p": 3,
+    "kalc": false
    }
   ]
  },
  "toetsen": {
   "t1": {
    "n": 1,
-   "t": "1-ster oefentoets",
+   "t": "1-ster oefentoets §2.1 en §2.2",
    "sub": "1 ster",
    "min": 50,
    "mc": "mc_geen",
    "open": null,
-   "rek": "rek_1"
+   "rek": "rek_1",
+   "groep": "Oefentoetsen §2.1 en §2.2"
   },
   "t2": {
    "n": 2,
-   "t": "2-ster oefentoets",
+   "t": "2-ster oefentoets §2.1 en §2.2",
    "sub": "2 sterren",
    "min": 50,
    "mc": "mc_geen",
    "open": null,
-   "rek": "rek_2"
+   "rek": "rek_2",
+   "groep": "Oefentoetsen §2.1 en §2.2"
   },
   "t3": {
    "n": 3,
-   "t": "3-ster oefentoets",
+   "t": "3-ster oefentoets §2.1 en §2.2",
    "sub": "3 sterren",
    "min": 50,
    "mc": "mc_geen",
    "open": null,
-   "rek": "rek_3"
+   "rek": "rek_3",
+   "groep": "Oefentoetsen §2.1 en §2.2"
+  },
+  "t4": {
+   "n": 4,
+   "t": "1-ster oefentoets heel hoofdstuk 2",
+   "sub": "1 ster · heel hoofdstuk 2",
+   "ster": 1,
+   "min": 40,
+   "mc": "mc_geen",
+   "open": null,
+   "rek": "rek_4",
+   "groep": "Oefentoetsen heel hoofdstuk 2 (§2.1 t/m §2.4)"
+  },
+  "t5": {
+   "n": 5,
+   "t": "2-ster oefentoets heel hoofdstuk 2",
+   "sub": "2 sterren · heel hoofdstuk 2",
+   "ster": 2,
+   "min": 40,
+   "mc": "mc_geen",
+   "open": null,
+   "rek": "rek_5",
+   "groep": "Oefentoetsen heel hoofdstuk 2 (§2.1 t/m §2.4)"
+  },
+  "t6": {
+   "n": 6,
+   "t": "3-ster oefentoets heel hoofdstuk 2",
+   "sub": "3 sterren · heel hoofdstuk 2",
+   "ster": 3,
+   "min": 40,
+   "mc": "mc_geen",
+   "open": null,
+   "rek": "rek_6",
+   "groep": "Oefentoetsen heel hoofdstuk 2 (§2.1 t/m §2.4)"
   }
  },
  "VERS": [
@@ -2933,6 +6197,53 @@
    "n": 3,
    "min": 50,
    "pts": 59
+  },
+  {
+   "n": 4,
+   "min": 40,
+   "pts": 62
+  },
+  {
+   "n": 5,
+   "min": 40,
+   "pts": 61
+  },
+  {
+   "n": 6,
+   "min": 40,
+   "pts": 44
   }
- ]
+ ],
+ "onderwerpen": {
+  "inkomen": {
+   "t": "Inkomen en uitgaven",
+   "par": "§2.1",
+   "tip": "Leer de drie soorten inkomen (loon, winst, uitkering) en de drie groepen uitgaven (vaste lasten, huishoudelijk, incidenteel). Oefen §2.1 in Mijn route."
+  },
+  "begroting": {
+   "t": "Begroting en week naar maand",
+   "par": "§2.1",
+   "tip": "Oefen omrekenen: week naar maand is (× 52) : 12, maand naar week is (× 12) : 52. Maak daarna een begroting in de Rekentrainer."
+  },
+  "procent": {
+   "t": "Rekenen met procenten",
+   "par": "§2.1 t/m §2.4",
+   "tip": "Schrijf altijd eerst de formule op. Oefen de drie formules in de Rekentrainer: (deel : geheel) × 100, (percentage : 100) × totaal en (nieuw − oud) : oud × 100."
+  },
+  "sparen": {
+   "t": "Geld, sparen en rente",
+   "par": "§2.2",
+   "tip": "Leer de drie geldfuncties en de drie redenen om te sparen. Oefen de rente: (rentepercentage : 100) × spaarbedrag."
+  },
+  "lenen": {
+   "t": "Lenen",
+   "par": "§2.3",
+   "tip": "Leer aflossing, rente en maandtermijn. Oefen: totaal terug = maandtermijn × aantal maanden, kosten = totaal terug − geleend bedrag."
+  },
+  "verzekeren": {
+   "t": "Verzekeren",
+   "par": "§2.4",
+   "tip": "Leer premie, polis en eigen risico, en welke verzekeringen verplicht zijn. Oefen: schadevergoeding = schade − eigen risico."
+  }
+ }
 }

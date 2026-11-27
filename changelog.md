@@ -163,6 +163,58 @@ De docent vond de eerste rondleiding niet mooi en niet professioneel genoeg en w
 **Niet getest**: echte iPad en Safari: schudden (lab), draaien (kijk rond), camera-scanner, geluid, spraak bij de talen, en of stem en film tegelijk starten op de iPad.
 
 **Controleren door de docent**: speel de rondleiding één keer op een iPad. Kloppen de plekken van de bolletjes op de kaart, vooral B19-B21, binnentuin en rector? Kloppen de vakken per lokaal (B10, B11 en B22-B25 zijn niet zeker)? Print daarna pas de nieuwe posters.
+## 2026-11-27 (2) · Economie 2 mavo H2: toetsen heel hoofdstuk 2 aangepast na feedback van de docent
+
+- **Formule** alleen nog bij de procentformules ((percentage : 100) × totaal, (deel : geheel) × 100, (nieuw − oud) : oud × 100), niet meer bij week naar maand of de schadevergoeding. Bij 3 sterren geen formule meer.
+- **Berekening**: na de formule schrijft de leerling de berekening op in een eigen vak. Dat vak wordt nagekeken (AI, of zelf met het vinkje als de AI niet bereikbaar is) en telt 1 punt. Bij plus- en minsommen geen berekening. Het oude vak "hier wordt niets mee nagekeken" staat niet meer bij deze toetsen (`kalc: false` per opgave).
+- **Duidelijke invulvakken**: "Schrijf hier de formule die je gaat gebruiken" en "Schrijf hier je berekening" (nieuw veld `ph` in `bouw-toets.py`).
+- **Indeelvragen** langer: 1 ster soorten inkomen 6, uitgaven 5, geldfuncties 5, spaarmotieven 6 situaties; 2 sterren inkomen 5, uitgaven 5, een nieuwe vraag geldfuncties (5) en spaarmotieven 3.
+- **Lenen met een tabel** (maandtermijnen bij €1.000, €2.500 en €5.000 voor 12, 24 en 36 maanden) bij 1 en 2 sterren. De bedragen in de tabel zijn zelf uitgerekend (8% per jaar), het is een voorbeeldtabel.
+- **Eigen risico**: 1 ster heeft een nieuwe vraag (wat is eigen risico, drie schades met €100 eigen risico, waaronder een schade kleiner dan het eigen risico).
+- **3 sterren vraag 5**: "als de korting eraf is gehaald".
+
+Punten: 1 ster 62, 2 sterren 61, 3 sterren 44 (40 minuten).
+**Getest**: vragencheck en linkcheck op 0, a11ycheck alleen de bestaande fout. Browsertest 375 en 820 px, licht en donker, alle toetsen inleveren en bestand maken, geen consolefouten.
+**Niet getest**: hoe goed de AI de berekeningen nakijkt; of 40 minuten genoeg is voor de 1-ster-toets met meer vragen.
+
+## 2026-11-27 · Economie 2 mavo H2: drie oefentoetsen over heel hoofdstuk 2, overzicht en bestand voor de docent
+
+De docent vroeg om nieuwe oefentoetsen over heel hoofdstuk 2 (1, 2 en 3 sterren, 40 minuten), duidelijke titels bij de oude toetsen, een overzicht aan het eind en een bestand dat leerlingen kunnen AirDroppen.
+
+**Oude toetsen**: heten nu "1-ster oefentoets §2.1 en §2.2" (enz.) en staan onder de kop "Oefentoetsen §2.1 en §2.2". Ook de Word-links noemen §2.1 en §2.2.
+
+**Nieuwe toetsen** (`t4`, `t5`, `t6` in `economie/j2h2/bron/toetsen.json`, kop "Oefentoetsen heel hoofdstuk 2"): 40 minuten, 47, 47 en 45 punten. Onderwerpen §2.1 t/m §2.4: inkomen en uitgaven, begroting en week naar maand, procenten, geldfuncties/sparen/rente, lenen, verzekeren. Moeilijker = meer denkstappen (twee stappen combineren, vergelijken, uitleggen), niet moeilijkere taal. Feiten komen uit de leerdoelen en vragenbank van de route (route.json), situaties zijn nieuw. Formules typt de leerling zelf (geen meerkeuze), stellingen heten "Goed of fout?".
+
+**Overzicht aan het eind** (alle zes toetsen): per onderwerp een balk met punten en "Gaat goed / Bijna / Nog oefenen", "Dit kun je al" en "Dit moet je nog doen" met een tip en de vragen die fout gingen.
+
+**Bestand voor de docent**: leerling vult naam en klas in en tikt op "Maak je bestand en deel het". Op de iPad opent het deelmenu (AirDrop). Elders wordt het een download. Het bestand is een HTML-pagina met naam, klas, datum, cijfer, punten per onderwerp, wat al goed gaat, wat nog moet en punten per vraag. Naam en klas blijven alleen op het apparaat (nieuwe sleutel `eco-leerling-v1`) en gaan niet naar de AI.
+
+**Hoe**: `bouw-toets.py` kent nu `onderwerpen` (in toetsen.json) en `ond` per opgave of deelvraag; toetsen t1 t/m t9 zijn mogelijk. `bouw-oefen.py` zet de toetskaarten per `groep` onder een kop.
+
+**Getest**: vragencheck en linkcheck op 0, a11ycheck alleen de bestaande fout in `rondleiding/qr/posters.html`. Browsertest (Chromium) op 375 en 820 px, licht en donker: alle zes toetsen inleveren, overzicht, bestand downloaden, geen horizontaal scrollen, geen consolefouten van de pagina zelf.
+**Niet getest**: het deelmenu met AirDrop op een echte iPad (de download-route wel). Of de leerlingen echt 40 minuten nodig hebben.
+**Controleren door de docent**: de vragen en antwoorden van de nieuwe toetsen, en of de grenzen kloppen (Gaat goed vanaf 80%, Bijna vanaf 55%).
+
+## 2026-11-26 · Economie 3 mavo: dia's 6.2 hersteld en dia 4 korter, 8.3 met eigen schema's
+
+De docent vroeg om zelf te bepalen wat het beste is voor dia 4 van 6.2 (43 klikken) en voor de kale dia's van 8.3.
+
+**Fout van 19 november hersteld (6.2)**: bij het weglaten van dia's waren de verkeerde nummers gebruikt. Daardoor stonden er twee lege dia's in 6.2 en ontbraken "Consumentenprijs berekenen" en "Oefenen". Dat is nu goed: 11 dia's, geen lege, niets ontbreekt. `tools/dias/lo.py` telt bij `weg=` alleen de zichtbare dia's; verborgen dia's tellen niet mee.
+
+**6.2, dia 4 (fietsenvoorbeeld)**: opnieuw opgebouwd, met dezelfde inhoud en dezelfde getallen als in de PowerPoint. Nu 7 klikken in plaats van 43: bij elke klik komt er één regel bij (begrip, uitleg, som). De export zonder PowerPoint liet de tekstvakken door elkaar lopen; dat is hiermee ook weg.
+
+**8.3**: eigen tekeningen in plaats van de weggehaalde plaatjes, in de stijl van de PowerPoint.
+- Dia 2: schema van de interne markt (binnen de EU geen invoertarief, van buiten wel).
+- Dia 4: staafjes met het hoge btw-tarief van Nederland (21%), Duitsland (19%) en Luxemburg (17%). De tarieven komen uit de PowerPoint "8.2 Nederland en de EU" van de docent.
+- Dia 6 "Taken van de ECB" is terug: een eigen schema met de drie taken, in drie klikken, in eigen woorden.
+- Dia 3 en 5: de eigen illustraties van de site (pijlen, euromunt).
+
+**Keuze**: de PowerPoint-bestanden van de docent in OneDrive en Drive zijn niet veranderd. De nieuwe dia's staan alleen op de site.
+
+**Controleren door de docent**: dia 4 van 6.2 en de schema's van 8.3. Dia 3 (28 klikken) en dia 10 (31 klikken) van 6.2 hebben nog de animaties uit de PowerPoint; die lopen goed, maar zeg het als die ook korter moeten.
+
+**Getest**: vragencheck en linkcheck op 0; a11ycheck alleen de bestaande fout in `rondleiding/qr/posters.html`. Browsertest op 375 en 820 px, licht en donker, zonder consolefouten. Alle dia's en de nieuwe klikstappen bekeken.
+**Niet getest**: een echte iPad in Safari.
 
 ## 2026-11-19 · Economie 4 mavo H6: bijtelling en box 3 eruit, plaatjes in de dia's vernieuwd
 

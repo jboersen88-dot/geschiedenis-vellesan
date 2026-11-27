@@ -98,6 +98,10 @@ for o in blok("rek"):
         assert f["type"] in ("num", "keuze", "open")
         if f["type"] == "open":
             assert sum(g["p"] for g in f["g"]) == f["p"]
+for o in blok("rek"):
+    for d in o["delen"]:
+        k = d.get("ond") or o.get("ond")
+        assert not k or k in J.get("onderwerpen", {}), (o["nr"], k)
 for o in blok("open"):
     assert sum(g["p"] for g in o["g"]) == o["p"], o["nr"]
 for q in blok("mc"):
@@ -122,7 +126,7 @@ for blk in [k for k in B if k.startswith("mc") and B[k]]:
 toetsjs = ",".join('"%s":{"t":%s,"th":"%s","rk":"%s","sub":%s,"min":%d,"mc":B.%s,"open":%s,"rek":B.%s}' % (
     k, json.dumps(t.get("t", "Oefentoets %d" % t["n"]), ensure_ascii=False), t.get("th", ""), t.get("rk", ""), json.dumps(t.get("sub", ""), ensure_ascii=False),
     t["min"], t["mc"], ("B." + t["open"]) if t["open"] else "[]", t["rek"]) for k, t in T.items())
-data = "var OPG=%s,LAB=%s,REK=%s;\n" % (json.dumps(C["opg"]), json.dumps(C["lab"]), json.dumps(C.get("rek", "Rekenen"))) + "var B=" + json.dumps(B, ensure_ascii=False, separators=(",", ":")) + ";\nwindow.TOETSEN={" + toetsjs + "};"
+data = "var OPG=%s,LAB=%s,REK=%s,ONDW=%s;\n" % (json.dumps(C["opg"]), json.dumps(C["lab"]), json.dumps(C.get("rek", "Rekenen")), json.dumps(J.get("onderwerpen", {}), ensure_ascii=False)) + "var B=" + json.dumps(B, ensure_ascii=False, separators=(",", ":")) + ";\nwindow.TOETSEN={" + toetsjs + "};"
 assert "</script" not in data
 
 s = rep(s, "<title>Online oefentoets · Geschiedenis</title>", "<title>%s</title>" % C["titel"])
@@ -143,12 +147,27 @@ input.num:focus{border-color:var(--teal);outline:none}
 .bron .t{margin-bottom:6px}
 .bron{overflow-x:auto}
 @media(max-width:520px){.bron table{font-size:13px}.bron td,.bron th{padding:4px 5px;hyphens:auto}}
+.ovz{margin-top:16px}.ovz h2{margin:4px 0 6px}.ovrows{display:grid;gap:12px;margin:14px 0 4px}
+.ovr{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 12px;align-items:center}
+.ovr .ovt b{display:block}.ovr .ovt span{font-size:13px}.ovr .ovn{font-size:14px;font-weight:600;text-align:right;white-space:nowrap}
+.ovbar{grid-column:1/-1;height:10px;border-radius:99px;background:color-mix(in srgb,var(--line) 70%,transparent);overflow:hidden}
+.ovbar i{display:block;height:100%;border-radius:99px;transform-origin:left;transition:transform .6s cubic-bezier(.2,.7,.2,1);background:var(--bad)}
+.ovr.s1 .ovbar i{background:#d39b2a}.ovr.s2 .ovbar i{background:var(--ok)}
+.ovr .lab{display:inline-block;padding:2px 9px;border-radius:99px;font-size:12.5px;margin-left:6px;background:var(--bad-soft)}.ovr.s1 .lab{background:color-mix(in srgb,#d39b2a 22%,transparent)}.ovr.s2 .lab{background:var(--ok-soft)}
+.ovlist{margin:8px 0 0;padding-left:20px}.ovlist li{margin:6px 0}
+.ovz h3{font-size:19px;margin:18px 0 4px}
+.send{margin-top:18px;padding:16px;border:1.5px dashed var(--line);border-radius:16px}
+.send .rowf{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0}.send .rowf label{display:flex;flex-direction:column;gap:4px;font-size:13.5px;color:var(--muted);flex:1 1 160px}
+.send input{min-height:44px;border:2px solid var(--line);border-radius:12px;padding:8px 12px;font:16px Inter,sans-serif;background:var(--card);color:var(--ink)}
+.send input:focus{border-color:var(--teal);outline:none}#sendmsg{margin:10px 0 0;font-size:14px}
+@media(prefers-reduced-motion:reduce){.ovbar i{transition:none}}
 </style>"""
 s = rep(s, "</style>", CSS.lstrip("\n"))
 
 # ---------- toetsen klaarzetten: alle open vragen (ook die in een rekenopgave) in D[k].ao ----------
 s = rep(s, "Object.keys(D).forEach(mcWarn);", r"""Object.keys(D).forEach(mcWarn);
 Object.keys(D).forEach(function(k){var d=D[k];d.ao=d.open.slice();d.rek.forEach(function(r){r.delen.forEach(function(dl){dl.velden.forEach(function(f){if(f.type==="open")d.ao.push(f);});});});});""")
+s = rep(s, 'var n=document.getElementById("gm");', 'ovzFill();var n=document.getElementById("gm");')
 s = rep(s, "function maxPts(k){return D[k].mc.length+D[k].open.reduce(function(a,o){return a+o.p;},0);}",
         "function maxPts(k){return D[k].mc.length+D[k].open.reduce(function(a,o){return a+o.p;},0)+D[k].rek.reduce(function(a,r){return a+r.p;},0);}")
 
@@ -198,14 +217,14 @@ function rekScore(){var s=0;D[cur].rek.forEach(function(r){r.delen.forEach(funct
 function rtbl(r){return '<table>'+r.map(function(c,i){return '<tr>'+c.map(function(x){return i?'<td>'+esc(x)+'</td>':'<th scope="col">'+esc(x)+'</th>';}).join("")+'</tr>';}).join("")+'</table>';}
 function rekBron(r){return r.tekst||r.tabel?'<div class="bron">'+(r.tekst?'<div class="t">'+esc(r.tekst)+'</div>':"")+(r.tabel?rtbl(r.tabel):"")+'</div>':"";}
 function fieldEx(r,dl,f,i){var key=r.nr+dl.id,v=((st[cur].rek||{})[key]||[])[i],lab=OPG+" "+r.nr+" "+dl.id;
-  if(f.type==="open")return '<label class="muted" style="font-size:13.5px" for="to-'+f.nr+'">'+esc(f.label)+'</label><textarea class="s" id="to-'+f.nr+'" data-o="'+f.nr+'" placeholder="Typ hier je antwoord">'+esc(st[cur].open[f.nr]||"")+'</textarea>';
+  if(f.type==="open")return '<label class="muted" style="font-size:13.5px" for="to-'+f.nr+'">'+esc(f.label)+'</label><textarea class="s" id="to-'+f.nr+'" data-o="'+f.nr+'" placeholder="'+escA(f.ph||"Typ hier je antwoord")+'">'+esc(st[cur].open[f.nr]||"")+'</textarea>';
   if(f.type==="keuze")return '<div class="stepper" role="group" aria-label="'+escA(f.label||lab)+'">'+(f.label?'<span class="muted">'+esc(f.label)+(/[.?!]$/.test(f.label)?'':':')+'</span>':"")+f.opties.map(function(o,j){return '<button class="w" data-rk="'+key+'" data-f="'+i+'" data-v="'+j+'" aria-pressed="'+(v===j)+'">'+esc(o)+'</button>';}).join("")+'</div>';
   var pre=f.eenh==="€"?"€":"",post=f.eenh&&!pre?f.eenh:"";
   return '<div class="ans">'+(f.label?'<label class="muted" for="rk-'+key+i+'">'+esc(f.label)+(/[.?!]$/.test(f.label)?'':':')+'</label>':"")+(pre?'<span>€</span>':"")+'<input class="num" type="text" inputmode="decimal" autocomplete="off" id="rk-'+key+i+'" data-r="'+key+'" data-f="'+i+'" value="'+escA(v==null?"":v)+'" aria-label="Antwoord '+lab+'">'+(post?'<span class="muted">'+esc(post)+'</span>':"")+'</div>';}
 function rekEx(r){var h='<div class="card q"><div class="n">'+OPG+' '+r.nr+' · '+r.p+' punten</div><p>'+esc(r.titel)+'</p>'+rekBron(r);
   r.delen.forEach(function(dl){h+='<div class="rk">'+(dl.tabel?rekBron(dl):"")+'<div class="rl">'+(dl.id?dl.id+') ':'')+esc(dl.v)+' <span class="muted">('+dp(dl)+' p)</span></div>';
     dl.velden.forEach(function(f,i){h+=fieldEx(r,dl,f,i);});h+='</div>';});
-  if(!r.delen.some(function(dl){return dl.velden.some(function(f){return f.type==="num";});}))return h+'</div>';/* geen rekenantwoord: geen vak voor de berekening */
+  if(r.kalc===false||!r.delen.some(function(dl){return dl.velden.some(function(f){return f.type==="num";});}))return h+'</div>';/* kalc:false = de berekening is een eigen veld dat wordt nagekeken, of er is geen berekening nodig *//* geen rekenantwoord: geen vak voor de berekening */
   return h+'<div class="rk"><label class="muted" style="font-size:13.5px" for="rc-'+r.nr+'">Je berekening (mag ook op papier; hier wordt niets mee nagekeken)</label><textarea class="s" id="rc-'+r.nr+'" data-c="'+r.nr+'">'+esc((st[cur].calc||{})[r.nr]||"")+'</textarea></div></div>';}
 function exam(){
   var d=D[cur],a=st[cur],n=0;
@@ -252,9 +271,55 @@ function rekRes(r){var a=st[cur],h='<div class="card q"><div class="n">'+OPG+' '
     h+='</div>';});
   var c=(a.calc||{})[r.nr];if(c&&c.trim())h+='<div class="rk"><div class="muted" style="font-size:13px">Jouw berekening</div><div class="mine">'+esc(c)+'</div></div>';
   return h+'</div>';}
+/* ---------- overzicht per onderwerp en het bestand voor de docent (alleen als toetsen.json onderwerpen heeft) ---------- */
+var LKEY="eco-leerling-v1",STL=["Nog oefenen","Bijna","Gaat goed"];
+function oPts(o){var v=st[cur].self[o.nr];if(boxed(o)){var s=0;if(Array.isArray(v))o.g.forEach(function(g,i){if(v[i])s+=g.p;});return s;}return typeof v==="number"?v:0;}
+function rPts(r){var s=0;r.delen.forEach(function(dl){var q=deelPts(r,dl);s+=q.p+q.ex;dl.velden.forEach(function(f){if(f.type==="open")s+=oPts(f);});});return s;}
+function ovzData(){var m={};D[cur].rek.forEach(function(r){r.delen.forEach(function(dl){var k=dl.ond||r.ond;if(!k||!ONDW[k])return;
+    var x=m[k]=m[k]||{k:k,p:0,max:0,fout:[]},q=deelPts(r,dl),p=q.p+q.ex,mx=dp(dl);dl.velden.forEach(function(f){if(f.type==="open")p+=oPts(f);});
+    x.p+=p;x.max+=mx;if(p<mx)x.fout.push(r.nr+(dl.id||""));});});
+  return Object.keys(ONDW).filter(function(k){return m[k]&&m[k].max;}).map(function(k){var x=m[k];x.pct=x.p/x.max;x.st=x.pct>=0.8?2:x.pct>=0.55?1:0;return x;});}
+function pn(p){return p%1?p.toFixed(1).replace(".",","):String(p);}
+function ovzFill(){var el=document.getElementById("ovzb");if(!el)return;var X=ovzData(),h='<div class="ovrows">';
+  X.forEach(function(x){h+='<div class="ovr s'+x.st+'"><div class="ovt"><b>'+esc(ONDW[x.k].t)+'</b><span class="muted">'+esc(ONDW[x.k].par)+'</span></div><div class="ovn">'+pn(x.p)+' van '+x.max+'<span class="lab">'+STL[x.st]+'</span></div><div class="ovbar" aria-hidden="true"><i style="transform:scaleX('+x.pct.toFixed(3)+')"></i></div></div>';});
+  h+='</div>';var goed=X.filter(function(x){return x.st===2;}),nog=X.filter(function(x){return x.st<2;}).sort(function(a,b){return a.pct-b.pct;});
+  if(goed.length)h+='<h3>Dit kun je al</h3><ul class="ovlist">'+goed.map(function(x){return '<li>'+esc(ONDW[x.k].t)+'</li>';}).join("")+'</ul>';
+  h+='<h3>Dit moet je nog doen</h3>'+(nog.length?'<ul class="ovlist">'+nog.map(function(x){return '<li><b>'+esc(ONDW[x.k].t)+'.</b> '+esc(ONDW[x.k].tip)+' <span class="muted">(Kijk nog eens naar '+OPG.toLowerCase()+' '+x.fout.join(", ")+'.)</span></li>';}).join("")+'</ul>':'<p>Niets! Maak nu een toets met meer sterren.</p>');
+  el.innerHTML=h;}
+function ovzHtml(){if(!Object.keys(ONDW).length||!D[cur].rek.some(function(r){return r.ond;}))return "";var L={};try{L=JSON.parse(localStorage.getItem(LKEY))||{};}catch(e){}
+  return '<div class="card ovz fade"><div class="eyebrow">Jouw overzicht</div><h2>Waar sta je?</h2><p class="muted" style="margin:0">Per onderwerp zie je hoeveel punten je hebt. Kijk eerst de uitlegvragen na, dan klopt je overzicht.</p><div id="ovzb"></div>'+
+    '<div class="send"><h3 style="margin-top:0">Stuur je resultaat naar meneer Boersen</h3><p class="muted" style="margin:0">Vul je naam en klas in en tik op de knop. Kies daarna <b>AirDrop</b> en stuur het bestand naar meneer Boersen. Je krijgt zelf ook het bestand: daarin staat wat je al kunt en wat je nog moet doen.</p>'+
+    '<div class="rowf"><label>Je naam<input id="lnaam" autocomplete="name" value="'+escA(L.naam||"")+'"></label><label>Je klas<input id="lklas" value="'+escA(L.klas||"")+'"></label></div>'+
+    '<button class="btn" id="mkfile">Maak je bestand en deel het</button><p id="sendmsg" class="muted" role="status"></p></div></div>';}
+function bestand(){var naam=document.getElementById("lnaam").value.trim(),klas=document.getElementById("lklas").value.trim(),msg=document.getElementById("sendmsg");
+  if(!naam){msg.textContent="Vul eerst je naam in.";document.getElementById("lnaam").focus();return;}
+  try{localStorage.setItem(LKEY,JSON.stringify({naam:naam,klas:klas}));}catch(e){}
+  var d=D[cur],m=maxPts(cur),p=mcScore()+openScore()+rekScore(),g=gradeOf(p,m),X=ovzData(),nu=new Date(),
+    dat=nu.toLocaleDateString("nl-NL",{day:"numeric",month:"long",year:"numeric"})+" om "+nu.toLocaleTimeString("nl-NL",{hour:"2-digit",minute:"2-digit"}),
+    goed=X.filter(function(x){return x.st===2;}),nog=X.filter(function(x){return x.st<2;}).sort(function(a,b){return a.pct-b.pct;});
+  var kl={0:"#c2484d",1:"#b07a12",2:"#1d8a5a"},h='<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Resultaat '+esc(d.t)+' · '+esc(naam)+'</title><style>'+
+    'body{font:16px/1.5 -apple-system,Inter,Arial,sans-serif;color:#201a14;background:#f6f0e6;margin:0;padding:24px}main{max-width:760px;margin:auto;background:#fffdf9;border:1px solid #e6dac4;border-radius:18px;padding:24px}'+
+    'h1{font-family:Georgia,serif;color:#1f5f4e;margin:0 0 4px}h2{font-size:19px;color:#1f5f4e;margin:22px 0 6px}table{border-collapse:collapse;width:100%}td,th{border-bottom:1px solid #e6dac4;padding:7px 6px;text-align:left;vertical-align:top}'+
+    '.c{font-size:44px;font-weight:700;color:#1f5f4e}.t{display:inline-block;padding:1px 9px;border-radius:99px;color:#fff;font-size:13px}.m{color:#6f6556}li{margin:6px 0}</style></head><body><main>'+
+    '<div class="m">Economie · resultaat oefentoets</div><h1>'+esc(d.t[0].toUpperCase()+d.t.slice(1))+'</h1>'+
+    '<table><tr><th>Naam</th><td>'+esc(naam)+'</td></tr><tr><th>Klas</th><td>'+esc(klas||"-")+'</td></tr><tr><th>Gemaakt op</th><td>'+esc(dat)+'</td></tr><tr><th>Punten</th><td>'+pn(p)+' van '+m+'</td></tr></table>'+
+    '<p style="margin:14px 0 0">Cijfer: <span class="c">'+g.toFixed(1).replace(".",",")+'</span></p>'+
+    '<h2>Per onderwerp</h2><table><tr><th>Onderwerp</th><th>Punten</th><th>Stand</th></tr>'+X.map(function(x){return '<tr><td>'+esc(ONDW[x.k].t)+' <span class="m">'+esc(ONDW[x.k].par)+'</span></td><td>'+pn(x.p)+' van '+x.max+' ('+Math.round(x.pct*100)+'%)</td><td><span class="t" style="background:'+kl[x.st]+'">'+STL[x.st]+'</span></td></tr>';}).join("")+'</table>'+
+    '<h2>Dit kan ik al</h2>'+(goed.length?'<ul>'+goed.map(function(x){return '<li>'+esc(ONDW[x.k].t)+'</li>';}).join("")+'</ul>':'<p class="m">Nog geen onderwerp op "Gaat goed".</p>')+
+    '<h2>Dit moet ik nog doen</h2>'+(nog.length?'<ul>'+nog.map(function(x){return '<li><b>'+esc(ONDW[x.k].t)+'.</b> '+esc(ONDW[x.k].tip)+' <span class="m">Fout of niet af: '+OPG.toLowerCase()+' '+x.fout.join(", ")+'.</span></li>';}).join("")+'</ul>':'<p>Alles gaat goed. Volgende stap: een toets met meer sterren.</p>')+
+    '<h2>Per '+OPG.toLowerCase()+'</h2><table><tr><th>'+OPG+'</th><th>Punten</th></tr>'+d.rek.map(function(r){var q=rPts(r);return '<tr><td>'+r.nr+'. '+esc(r.titel)+'</td><td>'+pn(q)+' van '+r.p+(q<r.p?' ✗':' ✓')+'</td></tr>';}).join("")+'</table>'+
+    '<p class="m" style="font-size:13px;margin-top:18px">Rekenen en keuzes zijn nagekeken met het nakijkblad. De uitlegvragen zijn nagekeken door de AI of door de leerling zelf.</p></main></body></html>';
+  var fn=("Resultaat "+d.t+" - "+naam+(klas?" - "+klas:"")).replace(/[\\/:*?"<>|§]+/g,"").replace(/\s+/g," ").trim()+".html";
+  var file;try{file=new File([h],fn,{type:"text/html"});}catch(e){file=new Blob([h],{type:"text/html"});}
+  var url=URL.createObjectURL(file),dl='<a href="'+url+'" download="'+escA(fn)+'">download het bestand</a>';
+  if(navigator.canShare&&file instanceof File&&navigator.canShare({files:[file]})){
+    navigator.share({files:[file],title:"Resultaat oefentoets"}).then(function(){msg.innerHTML="Gedeeld. Lukt AirDrop niet? Dan kun je ook "+dl+".";},function(){msg.innerHTML="Delen gestopt. Tik opnieuw op de knop, of "+dl+".";});
+  }else{var a=document.createElement("a");a.href=url;a.download=fn;document.body.appendChild(a);a.click();a.remove();
+    msg.innerHTML="Je bestand staat bij je downloads. Open het in Bestanden en deel het met AirDrop. Lukt het niet? Dan kun je ook hier "+dl+".";}}
+app.addEventListener("click",function(e){if(e.target.closest("#mkfile"))bestand();});
 function result(){
   var d=D[cur],a=st[cur],m=maxPts(cur);
-  var h='<a class="muted" href="#" id="home">← Andere toets kiezen</a><div class="card res fade" style="margin-top:16px"><div class="eyebrow">Je cijfer'+(d.open.length?' (voorlopig, tot je de open vragen hebt nagekeken)':'')+'</div><div class="grade" id="gr">-</div><p><b id="pp">0</b> van <b>'+m+'</b> punten'+(d.mc.length?' · meerkeuze '+mcScore()+'/'+d.mc.length:'')+'</p><p class="muted" id="gm" style="margin:0"></p><p class="muted" style="font-size:14px;margin:10px 0 0">Cijfer = punten : '+m+' × 9 + 1.'+(d.mc.length?' Meerkeuze en rekenen zijn nagekeken met het nakijkblad'+(d.open.length?'; bij de open vragen kijkt de AI mee en kun jij de vinkjes nog aanpassen':'')+'.':' Bedragen, procenten en keuzes zijn nagekeken met het nakijkblad van je docent; bij de uitlegvragen kijkt de AI mee en kun jij de vinkjes nog aanpassen.')+' Foute rekenantwoorden: geef jezelf de punten die je berekening waard is.</p></div>'+(d.mc.length?'<h2>Meerkeuze nagekeken</h2>':'');
+  var h='<a class="muted" href="#" id="home">← Andere toets kiezen</a><div class="card res fade" style="margin-top:16px"><div class="eyebrow">Je cijfer'+(d.open.length?' (voorlopig, tot je de open vragen hebt nagekeken)':'')+'</div><div class="grade" id="gr">-</div><p><b id="pp">0</b> van <b>'+m+'</b> punten'+(d.mc.length?' · meerkeuze '+mcScore()+'/'+d.mc.length:'')+'</p><p class="muted" id="gm" style="margin:0"></p><p class="muted" style="font-size:14px;margin:10px 0 0">Cijfer = punten : '+m+' × 9 + 1.'+(d.mc.length?' Meerkeuze en rekenen zijn nagekeken met het nakijkblad'+(d.open.length?'; bij de open vragen kijkt de AI mee en kun jij de vinkjes nog aanpassen':'')+'.':' Bedragen, procenten en keuzes zijn nagekeken met het nakijkblad van je docent; bij de uitlegvragen kijkt de AI mee en kun jij de vinkjes nog aanpassen.')+' Foute rekenantwoorden: geef jezelf de punten die je berekening waard is.</p></div>'+ovzHtml()+(d.mc.length?'<h2>Meerkeuze nagekeken</h2>':'');
   d.mc.forEach(function(q,i){var ok=a.mc[i]===q.j;h+='<div class="card q"><div class="n">Vraag '+(i+1)+(ok?" · goed":(a.mc[i]==null?" · niet beantwoord":" · fout"))+'</div><p>'+esc(q.v)+'</p><div class="opts">';
     a.perm[i].forEach(function(oi,pos){var c=oi===q.j?" right":(a.mc[i]===oi?" wrong":"");h+='<div class="opt'+c+'" style="cursor:default"><span class="l">'+"ABCD"[pos]+'</span><span>'+esc(q.o[oi])+'</span></div>';});
     h+='</div>'+(q.u?'<div class="fb">'+esc(q.u)+'</div>':"")+'</div>';});
@@ -268,12 +333,12 @@ function result(){
 load();"""
 j0, j1 = s.index("function result(){"), s.index("load();\nvar m=")
 s = s[:j0] + RESULT + s[j1 + len("load();"):]
-s = rep(s, "/[?&]t=(t[123])/", "/[?&]t=(t[1-4])/")
+s = rep(s, "/[?&]t=(t[123])/", "/[?&]t=(t[1-9])/")
 
 # ---------- controle ----------
 for gone in ["Geschiedenis", "gv-toets", "HF[", "data/toetsen.js"]:
     assert gone not in s, gone
-for need in ['vak:"economie"', C["key"], "../../ai.js", "../../nakijker.js", "t[1-4]"]:
+for need in ['vak:"economie"', C["key"], "../../ai.js", "../../nakijker.js", "t[1-9]"]:
     assert need in s, need
 
 os.makedirs(OUT, exist_ok=True)
