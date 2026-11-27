@@ -11,6 +11,7 @@ Digitale rondleiding voor de open dag (groep 7 en 8, iPads). Gewone HTML, CSS en
 | `js/quest.js` | Kern: router, opslag, intro, agent kiezen, 3D-kaart, stopscherm, kijk-rond, scanner, kluisje, finale, leerlingenpas, geluid en effecten. Ook de opdrachten `mc`, `zoek`, `tel`, `open`, `foto`, `koppel`, `kluis`. |
 | `js/games-a.js` | Mini-games `piano`, `lift`, `schuif`, `tegels`, `skelet`, `lab`, `teken`. |
 | `js/games-b.js` | Mini-games `scherm`, `automaat`, `getal`, `vang`, `stroom`, `typen`, `sorteer`, `woord`. |
+| `js/map3d.js`, `css/map3d.css` | De 3D-plattegrond: etages als platen met glazen buitenmuren; draaien, kantelen, schuiven en zoomen met vingers of muis. Gebruikt per etage `plan`, `p3` en `muur` uit `data/stops.js`; maken met `tools/maak-3d-kaart.py`. Zonder dit bestand valt de kaart terug op de oude gestapelde plaatjes. |
 | `js/games-c.js` | Speelhal-games `goedfout`, `memory`, `etage` (ook gebruikt voor "Welk vak?") en `winkel` (Het winkeltje: kies een prijs; velden `seconden`, `waar: [emoji, woord]`). |
 | `GAMES.md` | Het contract voor een nieuwe mini-game. |
 | `img/vloer-N.webp` | Plattegrond per etage met doorzichtige achtergrond (uit `img/kaart-N.jpg`). |

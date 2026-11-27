@@ -1,3 +1,14 @@
+## 2026-11-27 · Open dag: de plattegrond als echt 3D-model
+
+- De kaart in Missie Vellesan is nu een 3D-model van de school dat je met je vinger draait. De drie etages zweven boven elkaar, met glazen buitenmuren. De bolletjes van de stops draaien altijd naar je toe.
+- Eén vinger: draaien en kantelen (met een zachte uitloop). Twee vingers: knijpen om te zoomen, schuiven en draaien. Knoppen voor min, plus, linksom, rechtsom en terug naar het begin. Op een computer: slepen, muiswiel en pijltjestoetsen.
+- Met de knoppen "Begane grond", "1e etage" en "2e etage" komt die etage naar voren; de andere worden doorzichtig. "Alles" laat weer de hele school zien.
+- Hoe: alleen CSS 3D en gewone JavaScript (`js/map3d.js`, `css/map3d.css`), geen bibliotheken. De bovenaanzichten (`img/plan-0/1/2.webp`) en de muren zijn berekend uit de bestaande kaartplaatjes met `tools/maak-3d-kaart.py`. Lukt 3D niet, dan verschijnt de oude kaart.
+
+**Getest**: Chromium op 375 en 820 px: slepen draait het model, een etage kiezen werkt, tikken op een bolletje opent de juiste stop, na slepen opent er niet per ongeluk een stop, geen consolefouten, geen horizontaal scrollen; hele route en speelhal opnieuw; checks op 0.
+**Niet getest**: op een echte iPad in Safari (knijpen en draaien met twee vingers heb ik alleen kunnen nabootsen).
+**Controleren**: draai en knijp op een iPad. Voelt het soepel? Staan de bolletjes op de goede plek in de school?
+
 ## 2026-11-26 · Open dag: ronde 11, nieuwe QR-posters
 
 - De QR-posters (`rondleiding/qr/posters.pdf`, 23 pagina's: overzicht, 19 stops, 3 geheime) hebben nu dezelfde stijl als de app: donkere band met "Missie Vellesan", het plaatje van het kluisvoorwerp (met "AI-illustratie"), "Stop 08 van 19", de naam in Fraunces, de etage, een grote QR-code met oranje zoekerhoeken en de typcode in losse letterblokjes. Wit papier, dus zuinig met inkt.

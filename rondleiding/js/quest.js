@@ -439,31 +439,46 @@
     ambient();
     var ni = nextIdx();
     var cur = lastFloor != null ? lastFloor : (ni >= 0 ? stops[ni].etage : 0);
-    var mode = "stack"; // stack = 3D-overzicht, flat = één etage
-    var stage = el("div", { class: "map-stage" }), world = el("div", { class: "map-world" });
-    stage.appendChild(world);
-    var floors = [];
-    etages.forEach(function (e, fi) {
-      var f = el("div", { class: "floor", style: { "--i": fi, "--ar": (e.h / e.w) } });
-      f.appendChild(el("img", { src: e.kaart, alt: "", draggable: "false" }));
-      f.appendChild(el("span", { class: "floor-tag", text: e.naam }));
-      stops.forEach(function (s, si) {
-        if (s.etage !== fi) return;
-        var st = isDone(s) ? "done" : si === ni ? "next" : isOpen(s) ? "open" : "todo";
-        f.appendChild(el("button", { type: "button", class: "pin " + st, style: { left: s.x + "%", top: s.y + "%" },
-          "aria-label": "Stop " + (si + 1) + ": " + s.naam + (isDone(s) ? ", klaar" : ""),
-          onclick: function (ev) { ev.stopPropagation(); if (mode === "stack") { setFloor(fi); return; } sfx("tap"); go("#/stop/" + (si + 1)); } },
-          el("span", { class: "pin-dot", text: isDone(s) ? "✓" : String(si + 1) }),
-          el("span", { class: "pin-label", text: s.naam })));
-      });
-      f.addEventListener("click", function () { if (mode === "stack") setFloor(fi); });
-      floors.push(f); world.appendChild(f);
-    });
+    /* de plattegrond als echt 3D-model (js/map3d.js); zonder dat bestand de oude gestapelde kaart */
+    var m3 = null, stage, tabBtns, mode = "stack", floors = [];
     var tabs = el("div", { class: "floor-tabs", role: "tablist", "aria-label": "Etages" });
-    var tabBtns = [btn("3D", "tab", function () { setStack(); }, "Alle etages in 3D")];
-    etages.forEach(function (e, fi) { tabBtns.push(btn(e.naam, "tab", function () { setFloor(fi); })); });
+    function pinInfo(s, si) {
+      var st = isDone(s) ? "done" : si === ni ? "next" : isOpen(s) ? "open" : "todo";
+      return { cls: st, dot: isDone(s) ? "✓" : String(si + 1), label: s.naam, aria: "Stop " + (si + 1) + ": " + s.naam + (isDone(s) ? ", klaar" : "") };
+    }
+    if (window.Map3D && etages.every(function (e) { return e.plan && e.p3; })) {
+      m3 = window.Map3D({ el: el, etages: etages, reduced: reduced, sfx: sfx,
+        onFocus: function (fi) { cur = fi; paintTabs(); },
+        pins: stops.map(function (s, si) {
+          var t = etages[s.etage].p3, inf = pinInfo(s, si);
+          inf.fi = s.etage; inf.x = t[0] * s.x + t[1] * s.y + t[2]; inf.y = t[3] * s.x + t[4] * s.y + t[5];
+          inf.onPick = function () { sfx("tap"); go("#/stop/" + (si + 1)); };
+          return inf;
+        }) });
+      stage = m3.el; onLeave(m3.destroy); cur = null;
+      tabBtns = [btn("Alles", "tab", function () { cur = null; m3.focus(null); paintTabs(); sfx("whoosh"); }, "Alle etages")];
+      etages.forEach(function (e, fi) { tabBtns.push(btn(e.naam, "tab", function () { cur = fi; lastFloor = fi; m3.focus(fi); paintTabs(); sfx("whoosh"); })); });
+    } else {
+      stage = el("div", { class: "map-stage" }); var world = el("div", { class: "map-world" }); stage.appendChild(world);
+      etages.forEach(function (e, fi) {
+        var f = el("div", { class: "floor", style: { "--i": fi, "--ar": (e.h / e.w) } });
+        f.appendChild(el("img", { src: e.kaart, alt: "", draggable: "false" }));
+        f.appendChild(el("span", { class: "floor-tag", text: e.naam }));
+        stops.forEach(function (s, si) {
+          if (s.etage !== fi) return;
+          var inf = pinInfo(s, si);
+          f.appendChild(el("button", { type: "button", class: "pin " + inf.cls, style: { left: s.x + "%", top: s.y + "%" }, "aria-label": inf.aria,
+            onclick: function (ev) { ev.stopPropagation(); if (mode === "stack") { setFloor(fi); return; } sfx("tap"); go("#/stop/" + (si + 1)); } },
+            el("span", { class: "pin-dot", text: inf.dot }), el("span", { class: "pin-label", text: inf.label })));
+        });
+        f.addEventListener("click", function () { if (mode === "stack") setFloor(fi); });
+        floors.push(f); world.appendChild(f);
+      });
+      tabBtns = [btn("3D", "tab", function () { setStack(); }, "Alle etages in 3D")];
+      etages.forEach(function (e, fi) { tabBtns.push(btn(e.naam, "tab", function () { setFloor(fi); })); });
+    }
     tabBtns.forEach(function (b) { b.setAttribute("role", "tab"); tabs.appendChild(b); });
-    function paintTabs() { tabBtns.forEach(function (b, k) { var on = (k === 0 && mode === "stack") || (mode === "flat" && k - 1 === cur); b.classList.toggle("on", on); b.setAttribute("aria-selected", on ? "true" : "false"); }); }
+    function paintTabs() { tabBtns.forEach(function (b, k) { var on = m3 ? (k === 0 ? cur == null : k - 1 === cur) : ((k === 0 && mode === "stack") || (mode === "flat" && k - 1 === cur)); b.classList.toggle("on", on); b.setAttribute("aria-selected", on ? "true" : "false"); }); }
     function setStack() { mode = "stack"; stage.className = "map-stage stack"; floors.forEach(function (f) { f.classList.remove("active", "away"); }); paintTabs(); sfx("whoosh"); }
     function setFloor(fi) {
       cur = fi; lastFloor = fi; mode = "flat"; stage.className = "map-stage flat";
@@ -491,13 +506,14 @@
         el("div", null, el("p", { class: "eyebrow", text: "Plattegrond" }), el("h1", { class: "h-display", text: "Vellesan, Briniostraat" })),
         el("div", { class: "ring", style: { "--p": prog }, role: "img", "aria-label": Math.round(prog * 100) + " procent klaar" }, el("span", { text: Math.round(prog * 100) + "%" }))),
       tabs, stage,
-      el("p", { class: "fine center", text: "Tik op een etage om in te zoomen. Tik op een bolletje voor de plek." }),
+      el("p", { class: "fine center", text: m3 ? "Draai de school met je vinger. Tik op een bolletje voor de plek." : "Tik op een etage om in te zoomen. Tik op een bolletje voor de plek." }),
       next, prizeBar(),
       el("div", { class: "map-actions" },
         btn([icon("locker"), "Mijn kluisje"], "ghost", function () { go("#/kluisje"); }),
         btn([icon("star"), "Geheime filmpjes"], "ghost", function () { go("#/bonus"); })),
       ni >= 0 ? null : scanFab()
     ], "map");
+    if (m3) { paintTabs(); return; }
     if (lastFloor != null) setFloor(cur); else setStack();
     // licht meebewegen met kantelen of muis (parallax)
     function tilt(x, y) { stage.style.setProperty("--tx", x.toFixed(3)); stage.style.setProperty("--ty", y.toFixed(3)); }
