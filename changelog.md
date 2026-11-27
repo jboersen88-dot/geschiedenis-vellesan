@@ -1,3 +1,21 @@
+## 2026-11-27 · Economie 2 mavo H2: drie oefentoetsen over heel hoofdstuk 2, overzicht en bestand voor de docent
+
+De docent vroeg om nieuwe oefentoetsen over heel hoofdstuk 2 (1, 2 en 3 sterren, 40 minuten), duidelijke titels bij de oude toetsen, een overzicht aan het eind en een bestand dat leerlingen kunnen AirDroppen.
+
+**Oude toetsen**: heten nu "1-ster oefentoets §2.1 en §2.2" (enz.) en staan onder de kop "Oefentoetsen §2.1 en §2.2". Ook de Word-links noemen §2.1 en §2.2.
+
+**Nieuwe toetsen** (`t4`, `t5`, `t6` in `economie/j2h2/bron/toetsen.json`, kop "Oefentoetsen heel hoofdstuk 2"): 40 minuten, 47, 47 en 45 punten. Onderwerpen §2.1 t/m §2.4: inkomen en uitgaven, begroting en week naar maand, procenten, geldfuncties/sparen/rente, lenen, verzekeren. Moeilijker = meer denkstappen (twee stappen combineren, vergelijken, uitleggen), niet moeilijkere taal. Feiten komen uit de leerdoelen en vragenbank van de route (route.json), situaties zijn nieuw. Formules typt de leerling zelf (geen meerkeuze), stellingen heten "Goed of fout?".
+
+**Overzicht aan het eind** (alle zes toetsen): per onderwerp een balk met punten en "Gaat goed / Bijna / Nog oefenen", "Dit kun je al" en "Dit moet je nog doen" met een tip en de vragen die fout gingen.
+
+**Bestand voor de docent**: leerling vult naam en klas in en tikt op "Maak je bestand en deel het". Op de iPad opent het deelmenu (AirDrop). Elders wordt het een download. Het bestand is een HTML-pagina met naam, klas, datum, cijfer, punten per onderwerp, wat al goed gaat, wat nog moet en punten per vraag. Naam en klas blijven alleen op het apparaat (nieuwe sleutel `eco-leerling-v1`) en gaan niet naar de AI.
+
+**Hoe**: `bouw-toets.py` kent nu `onderwerpen` (in toetsen.json) en `ond` per opgave of deelvraag; toetsen t1 t/m t9 zijn mogelijk. `bouw-oefen.py` zet de toetskaarten per `groep` onder een kop.
+
+**Getest**: vragencheck en linkcheck op 0, a11ycheck alleen de bestaande fout in `rondleiding/qr/posters.html`. Browsertest (Chromium) op 375 en 820 px, licht en donker: alle zes toetsen inleveren, overzicht, bestand downloaden, geen horizontaal scrollen, geen consolefouten van de pagina zelf.
+**Niet getest**: het deelmenu met AirDrop op een echte iPad (de download-route wel). Of de leerlingen echt 40 minuten nodig hebben.
+**Controleren door de docent**: de vragen en antwoorden van de nieuwe toetsen, en of de grenzen kloppen (Gaat goed vanaf 80%, Bijna vanaf 55%).
+
 ## 2026-11-26 · Economie 3 mavo: dia's 6.2 hersteld en dia 4 korter, 8.3 met eigen schema's
 
 De docent vroeg om zelf te bepalen wat het beste is voor dia 4 van 6.2 (43 klikken) en voor de kale dia's van 8.3.

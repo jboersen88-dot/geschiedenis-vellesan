@@ -296,24 +296,32 @@ TJ = json.load(open(os.path.join(OUT, "bron", "toetsen.json"), encoding="utf-8")
 ov, docx = C["toetsen"]
 blk = lambda t, k: TJ["blokken"][t[k]] if t.get(k) else []
 kaart = lambda k, t: ('<a class="ovcard" href="toets.html?t=%s">%s<h3>%s</h3><p>%d punten · %d vragen · %d minuten</p><span class="btn">Maak de toets →</span></a>'
-                      % (k, '<span class="ster">%s</span>' % ("★" * t["n"]) if isinstance(docx, str) else "", t["t"][0].upper() + t["t"][1:],
+                      % (k, '<span class="ster">%s</span>' % ("★" * t.get("ster", t["n"])) if isinstance(docx, str) else "", t["t"][0].upper() + t["t"][1:],
                          len(blk(t, "mc")) + sum(o["p"] for o in blk(t, "open") + blk(t, "rek")), len(blk(t, "mc") + blk(t, "open") + blk(t, "rek")), t["min"]))
 if isinstance(docx, str):
-    papier = " · ".join('<a href="../oefentoetsen/oefentoets-%s-%d-ster.docx" download="Oefentoets %s %d-ster.docx">%d-ster (Word)</a>' % (docx, n, docx.upper(), n, n) for n in (1, 2, 3))
+    papier = " · ".join('<a href="../oefentoetsen/oefentoets-%s-%d-ster.docx" download="Oefentoets %s %d-ster.docx">%d-ster %s (Word)</a>' % (docx, n, docx.upper(), n, n, ov) for n in (1, 2, 3))
     papier += "".join(' · <a target="_blank" rel="noopener" href="https://drive.google.com/file/d/%s/view">%s (PDF)</a> met <a target="_blank" rel="noopener" href="https://drive.google.com/file/d/%s/view">nakijkblad</a>' % (v["toets"], v["t"], v["nk"]) for v in grab("VERS") if v.get("nk"))
 else:  # lijst van (bestand in oefentoetsen/, tekst)
     papier = " · ".join('<a href="../oefentoetsen/%s" download>%s</a>' % d for d in docx)
     if C.get("pdf"):  # de oefentoetsen van de docent op Drive, met nakijkblad
         papier = " · ".join('<a target="_blank" rel="noopener" href="https://drive.google.com/file/d/%s/view">%s</a> met <a target="_blank" rel="noopener" href="https://drive.google.com/file/d/%s/view">nakijkblad</a>' % (v["toets"], v["t"], v["nk"]) for v in grab("VERS") if v.get("nk"))
 papier = '<p class="muted opapier">Liever op papier? %s</p>' % papier if papier else ""
+_groepen = []
+for k, x in TJ["toetsen"].items():
+    g = x.get("groep", "")
+    if not _groepen or _groepen[-1][0] != g:
+        _groepen.append((g, []))
+    _groepen[-1][1].append(kaart(k, x))
+kaarten = "".join(('<h3 class="ogroep">%s</h3>' % g if g else "") + '<div class="ovgrid">%s</div>' % "".join(ks) for g, ks in _groepen)
+over = "" if any(g for g, _ in _groepen) else " De toetsen gaan over %s." % ov
 if ROUTE:
     s = rep(s, '<section class="panel" id="toets" hidden>', '<section class="panel" id="route" hidden><div class="card pad"><div id="routeApp"><p class="muted">De oefenroute laadt…</p></div></div></section>\n<section class="panel" id="toets" hidden>')
     s = rep(s, "</body>", '<script src="../../nakijker.js"></script>\n<script src="../route.js"></script>\n<script>EcoRoute.mount({el:document.getElementById("routeApp"),map:%s,url:"route.json",nk:window.GV_NK,onchange:function(){if(window.ecoRenderNext)ecoRenderNext();}});</script>\n</body>' % json.dumps(name))
 s = rep(s, '<section class="panel" id="toets" hidden>',
         '<section class="panel" id="toets" hidden>\n<div class="card pad otoets"><div class="eyebrow">Oefentoetsen</div><h2>Maak de toets hier, met klok en automatisch nakijken</h2>'
-        '<p class="muted">Maak de toets zonder boek en zonder hulp, je rekenmachine mag. Bedragen, procenten en keuzes worden direct nagekeken met het nakijkblad van je docent; bij de uitlegvragen kijkt de AI mee. %s Werkt ook op de iPad. De toetsen gaan over %s.</p>'
-        '<div class="ovgrid">%s</div>%s</div>\n<div hidden>'
-        % ("Kies je niveau: 1, 2 of 3 sterren." if isinstance(docx, str) else "Er zijn %d versies, met andere vragen." % len(TJ["toetsen"]), ov, "".join(kaart(k, x) for k, x in TJ["toetsen"].items()), papier))
+        '<p class="muted">Maak de toets zonder boek en zonder hulp, je rekenmachine mag. Bedragen, procenten en keuzes worden direct nagekeken met het nakijkblad van je docent; bij de uitlegvragen kijkt de AI mee. %s Werkt ook op de iPad.%s</p>'
+        '%s%s</div>\n<div hidden>'
+        % ("Kies je niveau: 1, 2 of 3 sterren." if isinstance(docx, str) else "Er zijn %d versies, met andere vragen." % len(TJ["toetsen"]), over, kaarten, papier))
 s = rex(s, r"</section>(\s*<!-- FILMPJES -->)", r"</div></section>\g<1>", groepen=True)
 s = rep(s, 'if(name==="toets")loadToets();', "")
 
@@ -403,6 +411,7 @@ nav.tabs button span{display:flex!important;flex-direction:column;line-height:1.
 .btn.ghost{background:var(--card)}
 .card{border-radius:var(--r)}
 .otoets{margin-bottom:16px}.otoets>p{max-width:720px}
+.ogroep{font-size:clamp(20px,2.6vw,26px);margin:26px 0 -4px}
 .ovgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:14px;margin:18px 0 14px}
 .ovcard{display:flex;flex-direction:column;gap:6px;padding:20px;border:1.5px solid var(--line);border-radius:22px;background:var(--card);text-decoration:none;color:var(--ink);transition:border-color .16s,transform .16s var(--ease-out)}
 .ovcard:hover{border-color:var(--berry)}.ovcard:active{transform:scale(.98)}
