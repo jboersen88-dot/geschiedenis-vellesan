@@ -217,14 +217,14 @@ function rekScore(){var s=0;D[cur].rek.forEach(function(r){r.delen.forEach(funct
 function rtbl(r){return '<table>'+r.map(function(c,i){return '<tr>'+c.map(function(x){return i?'<td>'+esc(x)+'</td>':'<th scope="col">'+esc(x)+'</th>';}).join("")+'</tr>';}).join("")+'</table>';}
 function rekBron(r){return r.tekst||r.tabel?'<div class="bron">'+(r.tekst?'<div class="t">'+esc(r.tekst)+'</div>':"")+(r.tabel?rtbl(r.tabel):"")+'</div>':"";}
 function fieldEx(r,dl,f,i){var key=r.nr+dl.id,v=((st[cur].rek||{})[key]||[])[i],lab=OPG+" "+r.nr+" "+dl.id;
-  if(f.type==="open")return '<label class="muted" style="font-size:13.5px" for="to-'+f.nr+'">'+esc(f.label)+'</label><textarea class="s" id="to-'+f.nr+'" data-o="'+f.nr+'" placeholder="Typ hier je antwoord">'+esc(st[cur].open[f.nr]||"")+'</textarea>';
+  if(f.type==="open")return '<label class="muted" style="font-size:13.5px" for="to-'+f.nr+'">'+esc(f.label)+'</label><textarea class="s" id="to-'+f.nr+'" data-o="'+f.nr+'" placeholder="'+escA(f.ph||"Typ hier je antwoord")+'">'+esc(st[cur].open[f.nr]||"")+'</textarea>';
   if(f.type==="keuze")return '<div class="stepper" role="group" aria-label="'+escA(f.label||lab)+'">'+(f.label?'<span class="muted">'+esc(f.label)+(/[.?!]$/.test(f.label)?'':':')+'</span>':"")+f.opties.map(function(o,j){return '<button class="w" data-rk="'+key+'" data-f="'+i+'" data-v="'+j+'" aria-pressed="'+(v===j)+'">'+esc(o)+'</button>';}).join("")+'</div>';
   var pre=f.eenh==="€"?"€":"",post=f.eenh&&!pre?f.eenh:"";
   return '<div class="ans">'+(f.label?'<label class="muted" for="rk-'+key+i+'">'+esc(f.label)+(/[.?!]$/.test(f.label)?'':':')+'</label>':"")+(pre?'<span>€</span>':"")+'<input class="num" type="text" inputmode="decimal" autocomplete="off" id="rk-'+key+i+'" data-r="'+key+'" data-f="'+i+'" value="'+escA(v==null?"":v)+'" aria-label="Antwoord '+lab+'">'+(post?'<span class="muted">'+esc(post)+'</span>':"")+'</div>';}
 function rekEx(r){var h='<div class="card q"><div class="n">'+OPG+' '+r.nr+' · '+r.p+' punten</div><p>'+esc(r.titel)+'</p>'+rekBron(r);
   r.delen.forEach(function(dl){h+='<div class="rk">'+(dl.tabel?rekBron(dl):"")+'<div class="rl">'+(dl.id?dl.id+') ':'')+esc(dl.v)+' <span class="muted">('+dp(dl)+' p)</span></div>';
     dl.velden.forEach(function(f,i){h+=fieldEx(r,dl,f,i);});h+='</div>';});
-  if(!r.delen.some(function(dl){return dl.velden.some(function(f){return f.type==="num";});}))return h+'</div>';/* geen rekenantwoord: geen vak voor de berekening */
+  if(r.kalc===false||!r.delen.some(function(dl){return dl.velden.some(function(f){return f.type==="num";});}))return h+'</div>';/* kalc:false = de berekening is een eigen veld dat wordt nagekeken, of er is geen berekening nodig *//* geen rekenantwoord: geen vak voor de berekening */
   return h+'<div class="rk"><label class="muted" style="font-size:13.5px" for="rc-'+r.nr+'">Je berekening (mag ook op papier; hier wordt niets mee nagekeken)</label><textarea class="s" id="rc-'+r.nr+'" data-c="'+r.nr+'">'+esc((st[cur].calc||{})[r.nr]||"")+'</textarea></div></div>';}
 function exam(){
   var d=D[cur],a=st[cur],n=0;

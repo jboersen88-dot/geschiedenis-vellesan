@@ -1,3 +1,17 @@
+## 2026-11-27 (2) · Economie 2 mavo H2: toetsen heel hoofdstuk 2 aangepast na feedback van de docent
+
+- **Formule** alleen nog bij de procentformules ((percentage : 100) × totaal, (deel : geheel) × 100, (nieuw − oud) : oud × 100), niet meer bij week naar maand of de schadevergoeding. Bij 3 sterren geen formule meer.
+- **Berekening**: na de formule schrijft de leerling de berekening op in een eigen vak. Dat vak wordt nagekeken (AI, of zelf met het vinkje als de AI niet bereikbaar is) en telt 1 punt. Bij plus- en minsommen geen berekening. Het oude vak "hier wordt niets mee nagekeken" staat niet meer bij deze toetsen (`kalc: false` per opgave).
+- **Duidelijke invulvakken**: "Schrijf hier de formule die je gaat gebruiken" en "Schrijf hier je berekening" (nieuw veld `ph` in `bouw-toets.py`).
+- **Indeelvragen** langer: 1 ster soorten inkomen 6, uitgaven 5, geldfuncties 5, spaarmotieven 6 situaties; 2 sterren inkomen 5, uitgaven 5, een nieuwe vraag geldfuncties (5) en spaarmotieven 3.
+- **Lenen met een tabel** (maandtermijnen bij €1.000, €2.500 en €5.000 voor 12, 24 en 36 maanden) bij 1 en 2 sterren. De bedragen in de tabel zijn zelf uitgerekend (8% per jaar), het is een voorbeeldtabel.
+- **Eigen risico**: 1 ster heeft een nieuwe vraag (wat is eigen risico, drie schades met €100 eigen risico, waaronder een schade kleiner dan het eigen risico).
+- **3 sterren vraag 5**: "als de korting eraf is gehaald".
+
+Punten: 1 ster 62, 2 sterren 61, 3 sterren 44 (40 minuten).
+**Getest**: vragencheck en linkcheck op 0, a11ycheck alleen de bestaande fout. Browsertest 375 en 820 px, licht en donker, alle toetsen inleveren en bestand maken, geen consolefouten.
+**Niet getest**: hoe goed de AI de berekeningen nakijkt; of 40 minuten genoeg is voor de 1-ster-toets met meer vragen.
+
 ## 2026-11-27 · Economie 2 mavo H2: drie oefentoetsen over heel hoofdstuk 2, overzicht en bestand voor de docent
 
 De docent vroeg om nieuwe oefentoetsen over heel hoofdstuk 2 (1, 2 en 3 sterren, 40 minuten), duidelijke titels bij de oude toetsen, een overzicht aan het eind en een bestand dat leerlingen kunnen AirDroppen.
